@@ -14,6 +14,9 @@ def load_data():
     with open('data/train/pos_context.txt') as f:
         pos_context = map(lambda x: x.split(), f.read().split('\n'))
 
+    with open('data/train/entity.txt') as f:
+        entity = map(lambda x: x.split(), f.read().split('\n'))
+
     with open('data/train/refex.txt') as f:
         refex = map(lambda x: x.split(), f.read().split('\n'))
 
@@ -23,6 +26,7 @@ def load_data():
     _train = {
         'pre_context':list(pre_context),
         'pos_context':list(pos_context),
+        'entity':list(entity),
         'refex':list(refex),
         'size':list(size)
     }
@@ -33,6 +37,9 @@ def load_data():
     with open('data/dev/pos_context.txt') as f:
         pos_context = f.read().split('\n')
 
+    with open('data/dev/entity.txt') as f:
+        entity = f.read().split('\n')
+
     with open('data/dev/refex.txt') as f:
         refex = f.read().split('\n')
 
@@ -42,6 +49,7 @@ def load_data():
     _dev = {
         'pre_context':list(pre_context),
         'pos_context':list(pos_context),
+        'entity':list(entity),
         'refex':list(refex),
         'size':list(size)
     }
