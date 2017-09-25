@@ -2,23 +2,23 @@ import dynet as dy
 
 def load_data():
     with open('data/input_vocab.txt') as f:
-        input_vocab = f.read().decode('utf-8').split('\n')
+        input_vocab = f.read().split('\n')
 
     with open('data/output_vocab.txt') as f:
-        output_vocab = f.read().decode('utf-8').split('\n')
+        output_vocab = f.read().split('\n')
     vocab = {'input':input_vocab, 'output':output_vocab}
 
     with open('data/train/pre_context.txt') as f:
-        pre_context = map(lambda x: x.split(), f.read().decode('utf-8').split('\n'))
+        pre_context = map(lambda x: x.split(), f.read().split('\n'))
 
     with open('data/train/pos_context.txt') as f:
-        pos_context = map(lambda x: x.split(), f.read().decode('utf-8').split('\n'))
+        pos_context = map(lambda x: x.split(), f.read().split('\n'))
 
     with open('data/train/refex.txt') as f:
-        refex = map(lambda x: x.split(), f.read().decode('utf-8').split('\n'))
+        refex = map(lambda x: x.split(), f.read().split('\n'))
 
     with open('data/train/size.txt') as f:
-        size = f.read().decode('utf-8').split('\n')
+        size = f.read().split('\n')
 
     _train = {
         'pre_context':pre_context,
@@ -28,16 +28,16 @@ def load_data():
     }
 
     with open('data/dev/pre_context.txt') as f:
-        pre_context = f.read().decode('utf-8').split('\n')
+        pre_context = f.read().split('\n')
 
     with open('data/dev/pos_context.txt') as f:
-        pos_context = f.read().decode('utf-8').split('\n')
+        pos_context = f.read().split('\n')
 
     with open('data/dev/refex.txt') as f:
-        refex = f.read().decode('utf-8').split('\n')
+        refex = f.read().split('\n')
 
     with open('data/dev/size.txt') as f:
-        size = f.read().decode('utf-8').split('\n')
+        size = f.read().split('\n')
 
     _dev = {
         'pre_context':pre_context,

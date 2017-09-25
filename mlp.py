@@ -34,17 +34,17 @@ if __name__ == '__main__':
     dy.renew_cg() # new computation graph
     W = dy.parameter(pW)
 
-    print W.value()
-    # trainer = dy.SimpleSGDTrainer(m2)
-    #
-    # questions, answers = create_xor_instances()
-    # seen_instances = 0
-    # total_loss = 0
-    # for question, answer in zip(questions, answers):
-    #     loss = create_xor_network(pW, pV, pb, question, answer)
-    #     seen_instances += 1
-    #     total_loss += loss.value()
-    #     loss.backward()
-    #     trainer.update()
-    #     if (seen_instances > 1 and seen_instances % 100 == 0):
-    #         print "average loss is:",total_loss / seen_instances
+    # print(W.value())
+    trainer = dy.SimpleSGDTrainer(m2)
+
+    questions, answers = create_xor_instances()
+    seen_instances = 0
+    total_loss = 0
+    for question, answer in zip(questions, answers):
+        loss = create_xor_network(pW, pV, pb, question, answer)
+        seen_instances += 1
+        total_loss += loss.value()
+        loss.backward()
+        trainer.update()
+        if (seen_instances > 1 and seen_instances % 100 == 0):
+            print "average loss is:",total_loss / seen_instances
