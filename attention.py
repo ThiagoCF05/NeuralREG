@@ -66,7 +66,7 @@ int2output = list(vocab['output'])
 output2int = {c:i for i, c in enumerate(vocab['output'])}
 
 INPUT_VOCAB_SIZE = len(vocab['input'])
-OUTPUT_VOCAB_SIZE = len(vocab['input'])
+OUTPUT_VOCAB_SIZE = len(vocab['output'])
 
 LSTM_NUM_OF_LAYERS = 1
 EMBEDDINGS_SIZE = 256
