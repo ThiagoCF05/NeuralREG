@@ -15,7 +15,7 @@ def load_data():
         pos_context = map(lambda x: x.split(), f.read().split('\n'))
 
     with open('data/train/entity.txt') as f:
-        entity = map(lambda x: x.split(), f.read().split('\n'))
+        entity = f.read().split('\n')
 
     with open('data/train/refex.txt') as f:
         refex = map(lambda x: x.split(), f.read().split('\n'))
@@ -32,16 +32,16 @@ def load_data():
     }
 
     with open('data/dev/pre_context.txt') as f:
-        pre_context = f.read().split('\n')
+        pre_context = map(lambda x: x.split(), f.read().split('\n'))
 
     with open('data/dev/pos_context.txt') as f:
-        pos_context = f.read().split('\n')
+        pos_context = map(lambda x: x.split(), f.read().split('\n'))
 
     with open('data/dev/entity.txt') as f:
         entity = f.read().split('\n')
 
     with open('data/dev/refex.txt') as f:
-        refex = f.read().split('\n')
+        refex = map(lambda x: x.split(), f.read().split('\n'))
 
     with open('data/dev/size.txt') as f:
         size = f.read().split('\n')
