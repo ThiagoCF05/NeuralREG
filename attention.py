@@ -68,7 +68,7 @@ output2int = {c:i for i, c in enumerate(vocab['output'])}
 INPUT_VOCAB_SIZE = len(vocab['input'])
 OUTPUT_VOCAB_SIZE = len(vocab['output'])
 
-LSTM_NUM_OF_LAYERS = 1
+LSTM_NUM_OF_LAYERS = 2
 EMBEDDINGS_SIZE = 256
 STATE_SIZE = 1024
 ATTENTION_SIZE = 1024
@@ -78,7 +78,11 @@ model = dy.Model()
 enc_fwd_lstm = dy.LSTMBuilder(LSTM_NUM_OF_LAYERS, EMBEDDINGS_SIZE, STATE_SIZE, model)
 enc_bwd_lstm = dy.LSTMBuilder(LSTM_NUM_OF_LAYERS, EMBEDDINGS_SIZE, STATE_SIZE, model)
 
+enc_fwd_lstm.set_dropout(0.2)
+enc_bwd_lstm.set_dropout(0.2)
+
 dec_lstm = dy.LSTMBuilder(LSTM_NUM_OF_LAYERS, STATE_SIZE*2+EMBEDDINGS_SIZE+EMBEDDINGS_SIZE, STATE_SIZE, model)
+dec_lstm.set_dropout(0.2)
 
 input_lookup = model.add_lookup_parameters((INPUT_VOCAB_SIZE, EMBEDDINGS_SIZE))
 attention_w1 = model.add_parameters((ATTENTION_SIZE, STATE_SIZE*2))
@@ -207,7 +211,8 @@ def get_loss(input_sentence, output_sentence, entity, enc_fwd_lstm, enc_bwd_lstm
 
 
 def train(model, trainset, devset):
-    trainer = dy.SimpleSGDTrainer(model)
+    # trainer = dy.SimpleSGDTrainer(model)
+    trainer = dy.AdadeltaTrainer(model)
     for i in range(50):
         dy.renew_cg()
         losses = []
@@ -233,7 +238,7 @@ def train(model, trainset, devset):
         num, dem = 0.0, 0.0
         for i, devinst in enumerate(devset):
             pre_context = devset['pre_context'][i]
-            refex = devset['refex'][i].replace('eos', '').strip()
+            refex = ' '.join(devset['refex'][i]).replace('eos', '').strip()
             entity = devset['entity'][i]
 
             output = generate(pre_context, entity, enc_fwd_lstm, enc_bwd_lstm, dec_lstm)
@@ -241,6 +246,8 @@ def train(model, trainset, devset):
             if refex == output:
                 num += 1
             dem += 1
+            print ("Refex: ", refex, "\t Output: ", output)
+            print(10 * '-')
         print("Dev: ", str(num/dem))
     model.save("data/tmp.model")
 
