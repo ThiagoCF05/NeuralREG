@@ -21,10 +21,10 @@ def load_data():
         size = f.read().split('\n')
 
     _train = {
-        'pre_context':pre_context,
-        'pos_context':pos_context,
-        'refex':refex,
-        'size':size
+        'pre_context':list(pre_context),
+        'pos_context':list(pos_context),
+        'refex':list(refex),
+        'size':list(size)
     }
 
     with open('data/dev/pre_context.txt') as f:
@@ -40,10 +40,10 @@ def load_data():
         size = f.read().split('\n')
 
     _dev = {
-        'pre_context':pre_context,
-        'pos_context':pos_context,
-        'refex':refex,
-        'size':size
+        'pre_context':list(pre_context),
+        'pos_context':list(pos_context),
+        'refex':list(refex),
+        'size':list(size)
     }
 
     return vocab, _train, _dev
@@ -73,9 +73,9 @@ enc_bwd_lstm = dy.LSTMBuilder(LSTM_NUM_OF_LAYERS, EMBEDDINGS_SIZE, STATE_SIZE, m
 dec_lstm = dy.LSTMBuilder(LSTM_NUM_OF_LAYERS, STATE_SIZE*2+EMBEDDINGS_SIZE+EMBEDDINGS_SIZE, STATE_SIZE, model)
 
 input_lookup = model.add_lookup_parameters((INPUT_VOCAB_SIZE, EMBEDDINGS_SIZE))
-attention_w1 = model.add_parameters( (ATTENTION_SIZE, STATE_SIZE*2))
-attention_w2 = model.add_parameters( (ATTENTION_SIZE, STATE_SIZE*LSTM_NUM_OF_LAYERS*2))
-attention_v = model.add_parameters( (1, ATTENTION_SIZE))
+attention_w1 = model.add_parameters((ATTENTION_SIZE, STATE_SIZE*2))
+attention_w2 = model.add_parameters((ATTENTION_SIZE, STATE_SIZE*LSTM_NUM_OF_LAYERS*2))
+attention_v = model.add_parameters((1, ATTENTION_SIZE))
 decoder_w = model.add_parameters((OUTPUT_VOCAB_SIZE, STATE_SIZE))
 decoder_b = model.add_parameters((OUTPUT_VOCAB_SIZE))
 output_lookup = model.add_lookup_parameters((OUTPUT_VOCAB_SIZE, EMBEDDINGS_SIZE))
@@ -183,7 +183,7 @@ def generate(in_seq, entity, enc_fwd_lstm, enc_bwd_lstm, dec_lstm):
         probs = dy.softmax(out_vector).vec_value()
         next_char = probs.index(max(probs))
         last_output_embeddings = output_lookup[next_char]
-        if int2input[next_char] == EOS:
+        if int2output[next_char] == EOS:
             count_EOS += 1
             continue
 
