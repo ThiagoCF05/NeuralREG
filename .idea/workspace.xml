@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0ea0bc8-9834-485a-926b-8fd7a4b15589" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attention.py" afterPath="$PROJECT_DIR$/attention.py" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -47,8 +46,8 @@
       <file leaf-file-name="attention.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/attention.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="297" column="24" lean-forward="false" selection-start-line="297" selection-start-column="24" selection-end-line="297" selection-end-column="24" />
+            <state relative-caret-position="357">
+              <caret line="287" column="23" lean-forward="false" selection-start-line="287" selection-start-column="23" selection-end-line="287" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -901,8 +900,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/attention.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="297" column="24" lean-forward="false" selection-start-line="297" selection-start-column="24" selection-end-line="297" selection-end-column="24" />
+        <state relative-caret-position="357">
+          <caret line="287" column="23" lean-forward="false" selection-start-line="287" selection-start-column="23" selection-end-line="287" selection-end-column="23" />
           <folding />
         </state>
       </provider>

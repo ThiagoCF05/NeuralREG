@@ -285,7 +285,7 @@ def train(model, trainset, devset):
             break
         prev_acc = round(num/dem, 2)
 
-    f = open('data/output.txt')
+    f = open('data/test/output.txt', 'w')
     for i, testinst in enumerate(testset['refex']):
         pre_context = devset['pre_context'][i]
         # refex = ' '.join(devset['refex'][i]).replace('eos', '').strip()
