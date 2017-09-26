@@ -54,10 +54,33 @@ def load_data():
         'size':list(size)
     }
 
-    return vocab, _train, _dev
+    with open('data/test/pre_context.txt') as f:
+        pre_context = map(lambda x: x.split(), f.read().split('\n'))
+
+    with open('data/test/pos_context.txt') as f:
+        pos_context = map(lambda x: x.split(), f.read().split('\n'))
+
+    with open('data/test/entity.txt') as f:
+        entity = f.read().split('\n')
+
+    with open('data/test/refex.txt') as f:
+        refex = map(lambda x: x.split(), f.read().split('\n'))
+
+    with open('data/test/size.txt') as f:
+        size = f.read().split('\n')
+
+    _test = {
+        'pre_context':list(pre_context),
+        'pos_context':list(pos_context),
+        'entity':list(entity),
+        'refex':list(refex),
+        'size':list(size)
+    }
+
+    return vocab, _train, _dev, _test
 
 EOS = "eos"
-vocab, trainset, devset = load_data()
+vocab, trainset, devset, testset = load_data()
 
 int2input = list(vocab['input'])
 input2int = {c:i for i, c in enumerate(vocab['input'])}
@@ -231,7 +254,7 @@ def train(model, trainset, devset):
                 trainer.update()
                 dy.renew_cg()
 
-                print (closs / 50)
+                print (closs / 50, end='     \r')
                 losses = []
                 closs = 0.0
 
@@ -249,6 +272,19 @@ def train(model, trainset, devset):
             print ("Refex: ", refex, "\t Output: ", output)
             print(10 * '-')
         print("Dev: ", str(num/dem))
+
+    f = open('data/output.txt')
+    for i, testinst in enumerate(testset):
+        pre_context = devset['pre_context'][i]
+        # refex = ' '.join(devset['refex'][i]).replace('eos', '').strip()
+        entity = devset['entity'][i]
+
+        output = generate(pre_context, entity, enc_fwd_lstm, enc_bwd_lstm, dec_lstm)
+        output = output.replace('eos', '').strip()
+
+        f.write(output)
+        f.write('\n')
+    f.close()
     model.save("data/tmp.model")
 
 train(model, trainset, devset)
