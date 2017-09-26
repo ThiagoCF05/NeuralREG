@@ -54,28 +54,29 @@ def load_data():
         'size':list(size)
     }
 
-    with open('data/test/pre_context.txt') as f:
-        pre_context = map(lambda x: x.split(), f.read().split('\n'))
-
-    with open('data/test/pos_context.txt') as f:
-        pos_context = map(lambda x: x.split(), f.read().split('\n'))
-
-    with open('data/test/entity.txt') as f:
-        entity = f.read().split('\n')
-
-    with open('data/test/refex.txt') as f:
-        refex = map(lambda x: x.split(), f.read().split('\n'))
-
-    with open('data/test/size.txt') as f:
-        size = f.read().split('\n')
-
-    _test = {
-        'pre_context':list(pre_context),
-        'pos_context':list(pos_context),
-        'entity':list(entity),
-        'refex':list(refex),
-        'size':list(size)
-    }
+    # with open('data/test/pre_context.txt') as f:
+    #     pre_context = map(lambda x: x.split(), f.read().split('\n'))
+    #
+    # with open('data/test/pos_context.txt') as f:
+    #     pos_context = map(lambda x: x.split(), f.read().split('\n'))
+    #
+    # with open('data/test/entity.txt') as f:
+    #     entity = f.read().split('\n')
+    #
+    # with open('data/test/refex.txt') as f:
+    #     refex = map(lambda x: x.split(), f.read().split('\n'))
+    #
+    # with open('data/test/size.txt') as f:
+    #     size = f.read().split('\n')
+    #
+    # _test = {
+    #     'pre_context':list(pre_context),
+    #     'pos_context':list(pos_context),
+    #     'entity':list(entity),
+    #     'refex':list(refex),
+    #     'size':list(size)
+    # }
+    _test = {}
 
     return vocab, _train, _dev, _test
 
@@ -209,7 +210,6 @@ def generate(in_seq, entity, enc_fwd_lstm, enc_bwd_lstm, dec_lstm):
     out = ''
     count_EOS = 0
     for i in range(len(in_seq)*2):
-        print(i)
         if count_EOS == 2: break
         # w1dt can be computed and cached once for the entire decoding phase
         w1dt = w1dt or w1 * input_mat
@@ -266,7 +266,6 @@ def train(model, trainset, devset):
             pre_context = devset['pre_context'][i]
             refex = ' '.join(devset['refex'][i]).replace('eos', '').strip()
             entity = devset['entity'][i]
-
             output = generate(pre_context, entity, enc_fwd_lstm, enc_bwd_lstm, dec_lstm)
             output = output.replace('eos', '').strip()
             if refex == output:
@@ -284,18 +283,18 @@ def train(model, trainset, devset):
             break
         prev_acc = round(num/dem, 2)
 
-    f = open('data/output.txt')
-    for i, testinst in enumerate(testset['refex']):
-        pre_context = devset['pre_context'][i]
-        # refex = ' '.join(devset['refex'][i]).replace('eos', '').strip()
-        entity = devset['entity'][i]
-
-        output = generate(pre_context, entity, enc_fwd_lstm, enc_bwd_lstm, dec_lstm)
-        output = output.replace('eos', '').strip()
-
-        f.write(output)
-        f.write('\n')
-    f.close()
+    # f = open('data/output.txt')
+    # for i, testinst in enumerate(testset['refex']):
+    #     pre_context = devset['pre_context'][i]
+    #     # refex = ' '.join(devset['refex'][i]).replace('eos', '').strip()
+    #     entity = devset['entity'][i]
+    #
+    #     output = generate(pre_context, entity, enc_fwd_lstm, enc_bwd_lstm, dec_lstm)
+    #     output = output.replace('eos', '').strip()
+    #
+    #     f.write(output)
+    #     f.write('\n')
+    # f.close()
     model.save("data/tmp.model")
 
 train(model, trainset, devset)
