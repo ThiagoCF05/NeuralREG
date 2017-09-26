@@ -46,18 +46,8 @@
       <file leaf-file-name="attention.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/attention.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="266" column="32" lean-forward="false" selection-start-line="266" selection-start-column="32" selection-end-line="266" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="output_vocab.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/output_vocab.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24615">
-              <caret line="1641" column="7" lean-forward="false" selection-start-line="1641" selection-start-column="0" selection-end-line="1641" selection-end-column="7" />
+            <state relative-caret-position="372">
+              <caret line="274" column="21" lean-forward="false" selection-start-line="274" selection-start-column="21" selection-end-line="274" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -846,10 +836,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/dev/pre_context.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1470">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/dev/entity.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2235">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/dev/pos_context.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4575">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/attention.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="266" column="32" lean-forward="false" selection-start-line="266" selection-start-column="32" selection-end-line="266" selection-end-column="32" />
+        <state relative-caret-position="372">
+          <caret line="274" column="21" lean-forward="false" selection-start-line="274" selection-start-column="21" selection-end-line="274" selection-end-column="21" />
           <folding />
         </state>
       </provider>

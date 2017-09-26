@@ -261,7 +261,7 @@ def train(model, trainset, devset):
                 closs = 0.0
 
         num, dem = 0.0, 0.0
-        for i, devinst in enumerate(devset):
+        for i, devinst in enumerate(devset['refex']):
             pre_context = devset['pre_context'][i]
             refex = ' '.join(devset['refex'][i]).replace('eos', '').strip()
             entity = devset['entity'][i]
@@ -272,7 +272,7 @@ def train(model, trainset, devset):
                 num += 1
             dem += 1
 
-            if i < 10:
+            if i < 15:
                 print ("Refex: ", refex, "\t Output: ", output)
                 print(10 * '-')
         print("Dev: ", str(num/dem))
@@ -284,7 +284,7 @@ def train(model, trainset, devset):
         prev_acc = round(num/dem, 2)
 
     f = open('data/output.txt')
-    for i, testinst in enumerate(testset):
+    for i, testinst in enumerate(testset['refex']):
         pre_context = devset['pre_context'][i]
         # refex = ' '.join(devset['refex'][i]).replace('eos', '').strip()
         entity = devset['entity'][i]
