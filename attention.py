@@ -209,6 +209,7 @@ def generate(in_seq, entity, enc_fwd_lstm, enc_bwd_lstm, dec_lstm):
     out = ''
     count_EOS = 0
     for i in range(len(in_seq)*2):
+        print(i)
         if count_EOS == 2: break
         # w1dt can be computed and cached once for the entire decoding phase
         w1dt = w1dt or w1 * input_mat
