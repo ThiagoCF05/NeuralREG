@@ -236,7 +236,9 @@ def get_loss(input_sentence, output_sentence, entity, enc_fwd_lstm, enc_bwd_lstm
 def train(model, trainset, devset):
     # trainer = dy.SimpleSGDTrainer(model)
     trainer = dy.AdadeltaTrainer(model)
-    for i in range(50):
+
+    prev_acc, repeat = 0.0, 0
+    for epoch in range(50):
         dy.renew_cg()
         losses = []
         closs = 0.0
@@ -254,7 +256,7 @@ def train(model, trainset, devset):
                 trainer.update()
                 dy.renew_cg()
 
-                print (closs / 50, end='     \r')
+                print ("Epoch: " + str(epoch), "\t Loss: " + closs / 50, end='     \r')
                 losses = []
                 closs = 0.0
 
@@ -269,9 +271,17 @@ def train(model, trainset, devset):
             if refex == output:
                 num += 1
             dem += 1
-            print ("Refex: ", refex, "\t Output: ", output)
-            print(10 * '-')
+
+            if i < 10:
+                print ("Refex: ", refex, "\t Output: ", output)
+                print(10 * '-')
         print("Dev: ", str(num/dem))
+
+        if round(num/dem, 2) == prev_acc:
+            repeat += 1
+        if repeat == 20:
+            break
+        prev_acc = round(num/dem, 2)
 
     f = open('data/output.txt')
     for i, testinst in enumerate(testset):
