@@ -256,7 +256,7 @@ def train(model, trainset, devset):
                 trainer.update()
                 dy.renew_cg()
 
-                print ("Epoch: " + str(epoch), "\t Loss: " + closs / 50, end='     \r')
+                print("Epoch: {0} \t Loss: {1}".format(epoch, (closs / 50)), end='     \r')
                 losses = []
                 closs = 0.0
 
