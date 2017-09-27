@@ -113,7 +113,7 @@ dec_lstm.set_dropout(0.2)
 
 input_lookup = model.add_lookup_parameters((INPUT_VOCAB_SIZE, EMBEDDINGS_SIZE))
 attention_w1 = model.add_parameters((ATTENTION_SIZE, STATE_SIZE*4))
-attention_w2 = model.add_parameters((ATTENTION_SIZE, STATE_SIZE*LSTM_NUM_OF_LAYERS*4))
+attention_w2 = model.add_parameters((ATTENTION_SIZE, STATE_SIZE*LSTM_NUM_OF_LAYERS*2))
 attention_v = model.add_parameters((1, ATTENTION_SIZE))
 decoder_w = model.add_parameters((OUTPUT_VOCAB_SIZE, STATE_SIZE))
 decoder_b = model.add_parameters((OUTPUT_VOCAB_SIZE))
