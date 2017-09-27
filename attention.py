@@ -98,18 +98,22 @@ ATTENTION_SIZE = 1024
 
 model = dy.Model()
 
-enc_fwd_lstm = dy.LSTMBuilder(LSTM_NUM_OF_LAYERS, EMBEDDINGS_SIZE, STATE_SIZE, model)
-enc_bwd_lstm = dy.LSTMBuilder(LSTM_NUM_OF_LAYERS, EMBEDDINGS_SIZE, STATE_SIZE, model)
+encpre_fwd_lstm = dy.LSTMBuilder(LSTM_NUM_OF_LAYERS, EMBEDDINGS_SIZE, STATE_SIZE, model)
+encpre_bwd_lstm = dy.LSTMBuilder(LSTM_NUM_OF_LAYERS, EMBEDDINGS_SIZE, STATE_SIZE, model)
+encpre_fwd_lstm.set_dropout(0.2)
+encpre_bwd_lstm.set_dropout(0.2)
 
-enc_fwd_lstm.set_dropout(0.2)
-enc_bwd_lstm.set_dropout(0.2)
+encpos_fwd_lstm = dy.LSTMBuilder(LSTM_NUM_OF_LAYERS, EMBEDDINGS_SIZE, STATE_SIZE, model)
+encpos_bwd_lstm = dy.LSTMBuilder(LSTM_NUM_OF_LAYERS, EMBEDDINGS_SIZE, STATE_SIZE, model)
+encpos_fwd_lstm.set_dropout(0.2)
+encpos_bwd_lstm.set_dropout(0.2)
 
-dec_lstm = dy.LSTMBuilder(LSTM_NUM_OF_LAYERS, STATE_SIZE*2+EMBEDDINGS_SIZE+EMBEDDINGS_SIZE, STATE_SIZE, model)
+dec_lstm = dy.LSTMBuilder(LSTM_NUM_OF_LAYERS, (STATE_SIZE*4)+(EMBEDDINGS_SIZE*2), STATE_SIZE, model)
 dec_lstm.set_dropout(0.2)
 
 input_lookup = model.add_lookup_parameters((INPUT_VOCAB_SIZE, EMBEDDINGS_SIZE))
-attention_w1 = model.add_parameters((ATTENTION_SIZE, STATE_SIZE*2))
-attention_w2 = model.add_parameters((ATTENTION_SIZE, STATE_SIZE*LSTM_NUM_OF_LAYERS*2))
+attention_w1 = model.add_parameters((ATTENTION_SIZE, STATE_SIZE*4))
+attention_w2 = model.add_parameters((ATTENTION_SIZE, STATE_SIZE*LSTM_NUM_OF_LAYERS*4))
 attention_v = model.add_parameters((1, ATTENTION_SIZE))
 decoder_w = model.add_parameters((OUTPUT_VOCAB_SIZE, STATE_SIZE))
 decoder_b = model.add_parameters((OUTPUT_VOCAB_SIZE))
@@ -176,7 +180,7 @@ def decode(dec_lstm, vectors, output, entity):
 
     last_output_embeddings = output_lookup[output2int[EOS]]
     entity_embedding = input_lookup[input2int[entity]]
-    s = dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(STATE_SIZE*2), last_output_embeddings, entity_embedding]))
+    s = dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(STATE_SIZE*4), last_output_embeddings, entity_embedding]))
     loss = []
 
     for word in output:
@@ -192,9 +196,14 @@ def decode(dec_lstm, vectors, output, entity):
     return loss
 
 
-def generate(in_seq, entity, enc_fwd_lstm, enc_bwd_lstm, dec_lstm):
-    embedded = embed_sentence(in_seq)
-    encoded = encode_sentence(enc_fwd_lstm, enc_bwd_lstm, embedded)
+def generate(pre_context, pos_context, entity, encpre_fwd_lstm, encpre_bwd_lstm, encpos_fwd_lstm, encpos_bwd_lstm, dec_lstm):
+    embedded = embed_sentence(pre_context)
+    pre_encoded = encode_sentence(encpre_fwd_lstm, encpre_bwd_lstm, embedded)
+
+    embedded = embed_sentence(pos_context)
+    pos_encoded = encode_sentence(encpos_fwd_lstm, encpos_bwd_lstm, embedded)
+
+    encoded = [dy.concatenate(list(p)) for p in zip(pre_encoded, pos_encoded)]
 
     w = dy.parameter(decoder_w)
     b = dy.parameter(decoder_b)
@@ -204,11 +213,11 @@ def generate(in_seq, entity, enc_fwd_lstm, enc_bwd_lstm, dec_lstm):
 
     last_output_embeddings = output_lookup[input2int[EOS]]
     entity_embedding = input_lookup[input2int[entity]]
-    s = dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(STATE_SIZE * 2), last_output_embeddings, entity_embedding]))
+    s = dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(STATE_SIZE*4), last_output_embeddings, entity_embedding]))
 
     out = ''
     count_EOS = 0
-    for i in range(len(in_seq)*2):
+    for i in range(len(pre_context)*2):
         if count_EOS == 2: break
         # w1dt can be computed and cached once for the entire decoding phase
         w1dt = w1dt or w1 * input_mat
@@ -216,21 +225,26 @@ def generate(in_seq, entity, enc_fwd_lstm, enc_bwd_lstm, dec_lstm):
         s = s.add_input(vector)
         out_vector = w * s.output() + b
         probs = dy.softmax(out_vector).vec_value()
-        next_char = probs.index(max(probs))
-        last_output_embeddings = output_lookup[next_char]
-        if int2output[next_char] == EOS:
+        next_word = probs.index(max(probs))
+        last_output_embeddings = output_lookup[next_word]
+        if int2output[next_word] == EOS:
             count_EOS += 1
             continue
 
-        out = out + int2output[next_char] + ' '
+        out = out + int2output[next_word] + ' '
     return out.strip()
 
 
-def get_loss(input_sentence, output_sentence, entity, enc_fwd_lstm, enc_bwd_lstm, dec_lstm):
+def get_loss(pre_context, pos_context, refex, entity, encpre_fwd_lstm, encpre_bwd_lstm, encpos_fwd_lstm, encpos_bwd_lstm, dec_lstm):
     # dy.renew_cg()
-    embedded = embed_sentence(input_sentence)
-    encoded = encode_sentence(enc_fwd_lstm, enc_bwd_lstm, embedded)
-    return decode(dec_lstm, encoded, output_sentence, entity)
+    embedded = embed_sentence(pre_context)
+    pre_encoded = encode_sentence(encpre_fwd_lstm, encpre_bwd_lstm, embedded)
+
+    embedded = embed_sentence(pos_context)
+    pos_encoded = encode_sentence(encpos_fwd_lstm, encpos_bwd_lstm, embedded)
+
+    encoded = [dy.concatenate(list(p)) for p in zip(pre_encoded, pos_encoded)]
+    return decode(dec_lstm, encoded, refex, entity)
 
 
 def train(model, trainset, devset):
@@ -244,9 +258,10 @@ def train(model, trainset, devset):
         closs = 0.0
         for i, traininst in enumerate(trainset['refex']):
             pre_context = trainset['pre_context'][i]
+            pos_context = trainset['pos_context'][i]
             refex = trainset['refex'][i]
             entity = trainset['entity'][i]
-            loss = get_loss(pre_context, refex, entity, enc_fwd_lstm, enc_bwd_lstm, dec_lstm)
+            loss = get_loss(pre_context, pos_context, refex, entity, encpre_fwd_lstm, encpre_bwd_lstm, encpos_fwd_lstm, encpos_bwd_lstm, dec_lstm)
             losses.append(loss)
 
             if len(losses) == 50:
@@ -263,9 +278,10 @@ def train(model, trainset, devset):
         num, dem = 0.0, 0.0
         for i, devinst in enumerate(devset['refex']):
             pre_context = devset['pre_context'][i]
+            pos_context = devset['pos_context'][i]
             refex = ' '.join(devset['refex'][i]).replace('eos', '').strip()
             entity = devset['entity'][i]
-            output = generate(pre_context, entity, enc_fwd_lstm, enc_bwd_lstm, dec_lstm)
+            output = generate(pre_context, pos_context, entity, encpre_fwd_lstm, encpre_bwd_lstm, encpos_fwd_lstm, encpos_bwd_lstm, dec_lstm)
             output = output.replace('eos', '').strip()
             if refex == output:
                 num += 1
@@ -287,11 +303,12 @@ def train(model, trainset, devset):
 
     f = open('data/test/output.txt', 'w')
     for i, testinst in enumerate(testset['refex']):
-        pre_context = devset['pre_context'][i]
-        # refex = ' '.join(devset['refex'][i]).replace('eos', '').strip()
-        entity = devset['entity'][i]
+        pre_context = testset['pre_context'][i]
+        pos_context = testset['pos_context'][i]
+        # refex = ' '.join(testset['refex'][i]).replace('eos', '').strip()
+        entity = testset['entity'][i]
 
-        output = generate(pre_context, entity, enc_fwd_lstm, enc_bwd_lstm, dec_lstm)
+        output = generate(pre_context, pos_context, entity, encpre_fwd_lstm, encpre_bwd_lstm, encpos_fwd_lstm, encpos_bwd_lstm, dec_lstm)
         output = output.replace('eos', '').strip()
 
         if i % 100:
