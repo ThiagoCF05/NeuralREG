@@ -246,6 +246,7 @@ class Generator():
             out = out + self.int2output[next_word] + ' '
         return out.strip()
 
+
     def get_loss(self, pre_context, pos_context, refex, entity):
         # dy.renew_cg()
         embedded = self.embed_sentence(pre_context)
@@ -260,7 +261,7 @@ class Generator():
 
     def validate(self, save=False):
         if save:
-            fname = 'dev_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT)
+            fname = 'data/results/dev_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT)
             f = open(fname, 'w')
         num, dem = 0.0, 0.0
         for i, devinst in enumerate(self.devset['refex']):
@@ -293,7 +294,7 @@ class Generator():
 
 
     def test(self):
-        fname = 'test_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT)
+        fname = 'data/results/test_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT)
         f = open(fname, 'w')
         for i, testinst in enumerate(self.testset['refex']):
             pre_context = self.testset['pre_context'][i]
@@ -318,7 +319,7 @@ class Generator():
         trainer = dy.AdadeltaTrainer(self.model)
 
         prev_acc, repeat = 0.0, 0
-        for epoch in range(50):
+        for epoch in range(40):
             dy.renew_cg()
             losses = []
             closs = 0.0
@@ -330,14 +331,14 @@ class Generator():
                 loss = self.get_loss(pre_context, pos_context, refex, entity)
                 losses.append(loss)
 
-                if len(losses) == 50:
+                if len(losses) == 40:
                     loss = dy.esum(losses)
                     closs += loss.value()
                     loss.backward()
                     trainer.update()
                     dy.renew_cg()
 
-                    print("Epoch: {0} \t Loss: {1}".format(epoch, (closs / 50)), end='     \r')
+                    print("Epoch: {0} \t Loss: {1}".format(epoch, (closs / 40)), end='     \r')
                     losses = []
                     closs = 0.0
 
@@ -351,7 +352,7 @@ class Generator():
 
         self.validate(True)
         self.test()
-        fname = 'model_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT)
+        fname = 'data/modelmodel_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT)
         self.model.save(fname)
 
 
@@ -359,13 +360,13 @@ if __name__ == '__main__':
     configs = [
         {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2},
         {'LSTM_NUM_OF_LAYERS':2, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2},
-        {'LSTM_NUM_OF_LAYERS':3, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2},
         {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
         {'LSTM_NUM_OF_LAYERS':2, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
-        {'LSTM_NUM_OF_LAYERS':3, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
         {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
         {'LSTM_NUM_OF_LAYERS':2, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
+        {'LSTM_NUM_OF_LAYERS':3, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2},
         {'LSTM_NUM_OF_LAYERS':3, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
+        {'LSTM_NUM_OF_LAYERS':3, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3}
     ]
 
     Generator(configs)
