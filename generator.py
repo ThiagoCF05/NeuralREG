@@ -284,7 +284,7 @@ class Generator():
                 f.write('\n')
 
 
-            if i % 100:
+            if i % 40:
                 dy.renew_cg()
         print("Dev: ", str(num/dem))
 
@@ -294,6 +294,7 @@ class Generator():
 
 
     def test(self):
+        dy.renew_cg()
         fname = 'data/results/test_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1]
         f = open(fname, 'w')
         for i, testinst in enumerate(self.testset['refex']):
@@ -305,7 +306,7 @@ class Generator():
             output = self.generate(pre_context, pos_context, entity)
             output = output.replace('eos', '').strip()
 
-            if i % 100:
+            if i % 40:
                 dy.renew_cg()
 
             f.write(output)
@@ -358,12 +359,12 @@ class Generator():
 
 if __name__ == '__main__':
     configs = [
-        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2},
         {'LSTM_NUM_OF_LAYERS':2, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2},
-        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2},
         {'LSTM_NUM_OF_LAYERS':2, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
-        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
         {'LSTM_NUM_OF_LAYERS':2, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
         {'LSTM_NUM_OF_LAYERS':3, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2},
         {'LSTM_NUM_OF_LAYERS':3, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
         {'LSTM_NUM_OF_LAYERS':3, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3}

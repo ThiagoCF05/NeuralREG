@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0ea0bc8-9834-485a-926b-8fd7a4b15589" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/annotation/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/annotation/annotate.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/evaluation.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generator.py" afterPath="$PROJECT_DIR$/generator.py" />
     </list>
@@ -26,8 +23,8 @@
       <file leaf-file-name="generator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="329" column="16" lean-forward="false" selection-start-line="329" selection-start-column="16" selection-end-line="329" selection-end-column="16" />
+            <state relative-caret-position="762">
+              <caret line="366" column="31" lean-forward="false" selection-start-line="366" selection-start-column="31" selection-end-line="366" selection-end-column="31" />
               <folding>
                 <element signature="e#537#3175#0" expanded="false" />
                 <element signature="e#5275#5420#0" expanded="false" />
@@ -1035,7 +1032,7 @@
         <state relative-caret-position="495">
           <caret line="33" column="31" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
-            <element signature="e#1#48#0" expanded="true" />
+            <element signature="e#1#48#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1069,8 +1066,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="329" column="16" lean-forward="false" selection-start-line="329" selection-start-column="16" selection-end-line="329" selection-end-column="16" />
+        <state relative-caret-position="762">
+          <caret line="366" column="31" lean-forward="false" selection-start-line="366" selection-start-column="31" selection-end-line="366" selection-end-column="31" />
           <folding>
             <element signature="e#537#3175#0" expanded="false" />
             <element signature="e#5275#5420#0" expanded="false" />
