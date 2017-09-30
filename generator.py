@@ -261,7 +261,7 @@ class Generator():
 
     def validate(self, save=False):
         if save:
-            fname = 'data/results/dev_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT)
+            fname = 'data/results/dev_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1]
             f = open(fname, 'w')
         num, dem = 0.0, 0.0
         for i, devinst in enumerate(self.devset['refex']):
@@ -294,7 +294,7 @@ class Generator():
 
 
     def test(self):
-        fname = 'data/results/test_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT)
+        fname = 'data/results/test_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1]
         f = open(fname, 'w')
         for i, testinst in enumerate(self.testset['refex']):
             pre_context = self.testset['pre_context'][i]
@@ -319,7 +319,7 @@ class Generator():
         trainer = dy.AdadeltaTrainer(self.model)
 
         prev_acc, repeat = 0.0, 0
-        for epoch in range(40):
+        for epoch in range(4):
             dy.renew_cg()
             losses = []
             closs = 0.0
@@ -352,7 +352,7 @@ class Generator():
 
         self.validate(True)
         self.test()
-        fname = 'data/modelmodel_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT)
+        fname = 'data/models/' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1]
         self.model.save(fname)
 
 

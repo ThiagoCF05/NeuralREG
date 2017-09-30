@@ -1,0 +1,6962 @@
+
+Entry: Id251 1 SportsTeam
+
+TRIPLES
+Superleague_Greece | champions | Olympiacos_F.C.
+
+
+ENTITY MAP
+AGENT-1 | Superleague_Greece
+PATIENT-1 | Olympiacos_F.C.
+
+
+LEX
+Id1
+TEXT: Olympiacos FC are previous champions of the Superleague Greece.
+TEMPLATE: PATIENT-1 are previous champions of AGENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Olympiacos F.C. were past champions in the Greece Superleague.
+TEMPLATE: AGENT-1 were past champions in the Greece Superleague .
+CORRECT: AGENT-1 were past champions in AGENT-1 .
+COMMENT:
+-
+Id3
+TEXT: The Superleague Greece champions are Olympiacos F.C.
+TEMPLATE: The AGENT-1 champions are PATIENT-1
+CORRECT: AGENT-1 champions are PATIENT-1
+COMMENT: determiner
+-
+
+**************************************************
+
+Entry: Id249 1 SportsTeam
+
+TRIPLES
+Stuart_Parker_(footballer) | club | Sparta_Rotterdam
+
+
+ENTITY MAP
+AGENT-1 | Stuart_Parker_(footballer)
+PATIENT-1 | Sparta_Rotterdam
+
+
+LEX
+Id1
+TEXT: Stuart Parker plays at the Sparta Rotterdam club.
+TEMPLATE: AGENT-1 plays at the PATIENT-1 club .
+CORRECT: AGENT-1 plays at the PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: Stuart Parker is in the club Sparta Rotterdam.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id3
+TEXT: Stuart Parker (footballer) plays for Sparta Rotterdam.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id248 1 SportsTeam
+
+TRIPLES
+Stuart_Parker_(footballer) | club | Runcorn_F.C._Halton
+
+
+ENTITY MAP
+AGENT-1 | Stuart_Parker_(footballer)
+PATIENT-1 | Runcorn_F.C._Halton
+
+
+LEX
+Id1
+TEXT: Stuart Parker (footballer) was a player for Runcorn FC Halton.
+TEMPLATE: AGENT-1 was a player for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Stuart Parker (footballer) plays for Runcorn F.C. Halton.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id247 1 SportsTeam
+
+TRIPLES
+Stuart_Parker_(footballer) | club | KV_Mechelen
+
+
+ENTITY MAP
+AGENT-1 | Stuart_Parker_(footballer)
+PATIENT-1 | KV_Mechelen
+
+
+LEX
+Id1
+TEXT: Stuart Parker has represented the club KV Mechelen.
+TEMPLATE: AGENT-1 has represented PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Stuart Parker the football player is part of the KV Mechelen club.
+TEMPLATE: AGENT-1 is part of the PATIENT-1 club .
+CORRECT: AGENT-1 is part of the PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: the football player Stuart Parker plays for KV Mechelen.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id246 1 SportsTeam
+
+TRIPLES
+Stuart_Parker_(footballer) | club | Irlam_Town_F.C.
+
+
+ENTITY MAP
+AGENT-1 | Stuart_Parker_(footballer)
+PATIENT-1 | Irlam_Town_F.C.
+
+
+LEX
+Id1
+TEXT: The footballer Stuart Parker is attached to Irlam Town Football Club.
+TEMPLATE: The footballer Stuart Parker is attached to AGENT-1 .
+CORRECT: AGENT-1 is attached to PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Stuart Parker is a member of the Irlam Town F.C.
+TEMPLATE: AGENT-1 is a member of PATIENT-1
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id245 1 SportsTeam
+
+TRIPLES
+Stuart_Parker_(footballer) | club | Drogheda_United_F.C.
+
+
+ENTITY MAP
+AGENT-1 | Stuart_Parker_(footballer)
+PATIENT-1 | Drogheda_United_F.C.
+
+
+LEX
+Id1
+TEXT: Stuart Parker is a footballer with the Drogheda United F.C.
+TEMPLATE: AGENT-1 is a footballer with PATIENT-1
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Stuart Parker (footballer) was at Drogheda United FC.
+TEMPLATE: AGENT-1 was at PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id244 1 SportsTeam
+
+TRIPLES
+Stuart_Parker_(footballer) | club | Chesterfield_F.C.
+
+
+ENTITY MAP
+AGENT-1 | Stuart_Parker_(footballer)
+PATIENT-1 | Chesterfield_F.C.
+
+
+LEX
+Id1
+TEXT: Stuart Parker was a footballer for Chesterfield FC.
+TEMPLATE: AGENT-1 was a footballer for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: The footballer Stuart Parker is attached to Chesterfield football club.
+TEMPLATE: The footballer Stuart Parker is attached to AGENT-1 .
+CORRECT: AGENT-1 is attached to PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: Stuart Parker is a member of the Chesterfield F.C.
+TEMPLATE: AGENT-1 is a member of PATIENT-1
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id243 1 SportsTeam
+
+TRIPLES
+Stuart_Parker_(footballer) | club | Blackpool_F.C.
+
+
+ENTITY MAP
+AGENT-1 | Stuart_Parker_(footballer)
+PATIENT-1 | Blackpool_F.C.
+
+
+LEX
+Id1
+TEXT: Stuart Parker (footballer) plays for Blackpool F.C.
+TEMPLATE: AGENT-1 plays for PATIENT-1
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id242 1 SportsTeam
+
+TRIPLES
+Stuart_Parker_(footballer) | club | Blackburn_Rovers_F.C.
+
+
+ENTITY MAP
+AGENT-1 | Stuart_Parker_(footballer)
+PATIENT-1 | Blackburn_Rovers_F.C.
+
+
+LEX
+Id1
+TEXT: Stuart Parker (footballer) was at Blackburn Rovers FC.
+TEMPLATE: AGENT-1 was at PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Stuart Parker (footballer) plays for Blackburn Rovers F.C.
+TEMPLATE: AGENT-1 plays for PATIENT-1
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id241 1 SportsTeam
+
+TRIPLES
+Stuart_Parker_(footballer) | club | A.F.C._Blackpool
+
+
+ENTITY MAP
+AGENT-1 | Stuart_Parker_(footballer)
+PATIENT-1 | A.F.C._Blackpool
+
+
+LEX
+Id1
+TEXT: Stuart Parker is a footballer in the A.F.C Blackpool club.
+TEMPLATE: AGENT-1 is a footballer in PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Stuart Parker (footballer) has represented AFC Blackpool.
+TEMPLATE: AGENT-1 has represented PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id240 1 SportsTeam
+
+TRIPLES
+St._Vincent–St._Mary_High_School | state | Ohio
+
+
+ENTITY MAP
+AGENT-1 | St._Vincent–St._Mary_High_School
+PATIENT-1 | Ohio
+
+
+LEX
+Id1
+TEXT: St Vincent-St Mary High School is located in the state of Ohio.
+TEMPLATE: AGENT-1 is located in the state of PATIENT-1 .
+CORRECT: AGENT-1 is located in PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: St. Vincent–St. Mary High School is in the state of Ohio.
+TEMPLATE: St. Vincent -- AGENT-1 is in the state of PATIENT-1 .
+CORRECT: AGENT-1 is in PATIENT-1 .
+COMMENT: modifier
+-
+Id3
+TEXT: St. Vincent-St. Mary High School is in Ohio.
+TEMPLATE: St. Vincent-St . AGENT-1 is in PATIENT-1 .
+CORRECT: AGENT-1 is in PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id239 1 SportsTeam
+
+TRIPLES
+St._Vincent–St._Mary_High_School | city | Akron,_Ohio
+
+
+ENTITY MAP
+AGENT-1 | St._Vincent–St._Mary_High_School
+PATIENT-1 | Akron,_Ohio
+
+
+LEX
+Id1
+TEXT: St. Vincent–St. Mary High School is located in the city of Akron, Ohio.
+TEMPLATE: St. Vincent -- AGENT-1 is located in the city of PATIENT-1 .
+CORRECT: AGENT-1 is located in PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: St Vincent St Mary High School is located in the city of Akron, Ohio.
+TEMPLATE: AGENT-1 is located in the city of PATIENT-1 .
+CORRECT: AGENT-1 is located in PATIENT-1 .
+COMMENT: modifier
+-
+Id3
+TEXT: St. Vincent-St. Mary High School is in Akron, Ohio.
+TEMPLATE: St. Vincent-St . AGENT-1 is in PATIENT-1 .
+CORRECT: AGENT-1 is in PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id238 1 SportsTeam
+
+TRIPLES
+Sportpark_De_Toekomst | tenant | Ajax_Youth_Academy
+
+
+ENTITY MAP
+AGENT-1 | Sportpark_De_Toekomst
+PATIENT-1 | Ajax_Youth_Academy
+
+
+LEX
+Id1
+TEXT: Ajax Youth Academy is a tenant of Sportpark De Toekomst.
+TEMPLATE: PATIENT-1 is a tenant of AGENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id237 1 SportsTeam
+
+TRIPLES
+Sportpark_De_Toekomst | owner | AFC_Ajax_N.V.
+
+
+ENTITY MAP
+AGENT-1 | Sportpark_De_Toekomst
+PATIENT-1 | AFC_Ajax_N.V.
+
+
+LEX
+Id1
+TEXT: AFC Ajax N.V. own Sportpark De Toekomst.
+TEMPLATE: PATIENT-1 own AGENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Sportpark De Toekomst is owned by AFC Ajax N.V.
+TEMPLATE: AGENT-1 is owned by PATIENT-1
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id234 1 SportsTeam
+
+TRIPLES
+Serie_B | champions | Carpi_F.C._1909
+
+
+ENTITY MAP
+AGENT-1 | Serie_B
+PATIENT-1 | Carpi_F.C._1909
+
+
+LEX
+Id1
+TEXT: Carpi FC 1909 are previous champions of Serie B.
+TEMPLATE: PATIENT-1 are previous champions of AGENT-1
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Carpi FC 1909 are the champions of Serie B.
+TEMPLATE: PATIENT-1 are the champions of AGENT-1
+CORRECT:
+COMMENT: good
+-
+Id3
+TEXT: Carpi F.C. 1909 won the Serie B championship before.
+TEMPLATE: PATIENT-1 won the AGENT-1 championship before .
+CORRECT: PATIENT-1 won AGENT-1 before .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id233 1 SportsTeam
+
+TRIPLES
+Serie_A | country | Italy
+
+
+ENTITY MAP
+AGENT-1 | Serie_A
+PATIENT-1 | Italy
+
+
+LEX
+Id1
+TEXT: Serie A is based in Italy.
+TEMPLATE: AGENT-1 is based in PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id231 1 SportsTeam
+
+TRIPLES
+Rolando_Maran | placeOfBirth | Italy
+
+
+ENTITY MAP
+AGENT-1 | Rolando_Maran
+PATIENT-1 | Italy
+
+
+LEX
+Id1
+TEXT: Rolando Maran was born in Italy.
+TEMPLATE: AGENT-1 was born in PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id230 1 SportsTeam
+
+TRIPLES
+Rolando_Maran | club | Vicenza_Calcio
+
+
+ENTITY MAP
+AGENT-1 | Rolando_Maran
+PATIENT-1 | Vicenza_Calcio
+
+
+LEX
+Id1
+TEXT: Rolando Maran plays at the Vicenza Calcio.
+TEMPLATE: AGENT-1 plays at PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Rolando Maran is in the Vicenza Calcio club.
+TEMPLATE: AGENT-1 is in the PATIENT-1 club .
+CORRECT: AGENT-1 is in the PATIENT-1 .
+COMMENT: modifier
+-
+Id3
+TEXT: Rolando Maran plays for Vicenza Calcio.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id236 1 SportsTeam
+
+TRIPLES
+Sportpark_De_Toekomst | operator | AFC_Ajax
+
+
+ENTITY MAP
+AGENT-1 | Sportpark_De_Toekomst
+PATIENT-1 | AFC_Ajax
+
+
+LEX
+Id1
+TEXT: Sportpark De Toekomst is operated by AFC Ajax.
+TEMPLATE: AGENT-1 is operated by PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: AFC Ajax operate Sportpark De Toekomst.
+TEMPLATE: PATIENT-1 operate AGENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id228 1 SportsTeam
+
+TRIPLES
+Rolando_Maran | club | Unione_Triestina_2012_S.S.D.
+
+
+ENTITY MAP
+AGENT-1 | Rolando_Maran
+PATIENT-1 | Unione_Triestina_2012_S.S.D.
+
+
+LEX
+Id1
+TEXT: Rolando Maran is in the Unione Triestina 2012 S.S.D. club.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Rolando Maran plays for Unione Triestina 2012 S.S.D.
+TEMPLATE: AGENT-1 plays for PATIENT-1 S.S.D.
+CORRECT: AGENT-1 plays for PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id227 1 SportsTeam
+
+TRIPLES
+Rolando_Maran | club | Carrarese_Calcio
+
+
+ENTITY MAP
+AGENT-1 | Rolando_Maran
+PATIENT-1 | Carrarese_Calcio
+
+
+LEX
+Id1
+TEXT: Rolando Maran plays at the Carrarese Calcio.
+TEMPLATE: AGENT-1 plays at PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Rolando Maran is in the Carrarese Calcio club.
+TEMPLATE: AGENT-1 is in the PATIENT-1 club .
+CORRECT: AGENT-1 is in the PATIENT-1 .
+COMMENT: modifier
+-
+Id3
+TEXT: Rolando Maran plays for Carrarese Calcio.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id226 1 SportsTeam
+
+TRIPLES
+Rolando_Maran | club | Calcio_Catania
+
+
+ENTITY MAP
+AGENT-1 | Rolando_Maran
+PATIENT-1 | Calcio_Catania
+
+
+LEX
+Id1
+TEXT: Rolando Maran is attached to the club Calcio Catania.
+TEMPLATE: AGENT-1 is attached to PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Rolando Maran is a member of the Calcio Cantania.
+TEMPLATE: AGENT-1 is a member of PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id225 1 SportsTeam
+
+TRIPLES
+Rolando_Maran | club | A.C._Chievo_Verona
+
+
+ENTITY MAP
+AGENT-1 | Rolando_Maran
+PATIENT-1 | A.C._Chievo_Verona
+
+
+LEX
+Id1
+TEXT: Rolando Maran is attached to AC Chievo Verona .
+TEMPLATE: AGENT-1 is attached to PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id224 1 SportsTeam
+
+TRIPLES
+Peter_Stöger | club | SK_Vorwärts_Steyr
+
+
+ENTITY MAP
+AGENT-1 | Peter_Stöger
+PATIENT-1 | SK_Vorwärts_Steyr
+
+
+LEX
+Id1
+TEXT: Peter Stöger played football for SK Vorwärts Steyr.
+TEMPLATE: AGENT-1 played football for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Peter Stöger is in the SK Vorwärts Steyr club.
+TEMPLATE: AGENT-1 is in the PATIENT-1 club .
+CORRECT: AGENT-1 is in the PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id223 1 SportsTeam
+
+TRIPLES
+Peter_Stöger | club | SK_Rapid_Wien
+
+
+ENTITY MAP
+AGENT-1 | Peter_Stöger
+PATIENT-1 | SK_Rapid_Wien
+
+
+LEX
+Id1
+TEXT: Peter Stöger was at the club SK Rapid Wien.
+TEMPLATE: AGENT-1 was at PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: PeterStöger plays for SK Rapid Wien club.
+TEMPLATE: AGENT-1 plays for PATIENT-1 club .
+CORRECT: AGENT-1 plays for PATIENT-1 .
+COMMENT: modifier
+-
+Id3
+TEXT: Peter Stoger plays for SK Rapid Wien.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id222 1 SportsTeam
+
+TRIPLES
+Peter_Stöger | club | SC_Wiener_Neustadt
+
+
+ENTITY MAP
+AGENT-1 | Peter_Stöger
+PATIENT-1 | SC_Wiener_Neustadt
+
+
+LEX
+Id1
+TEXT: Peter Stöger is affiliated with the SC Wiener Neustadt club.
+TEMPLATE: AGENT-1 is affiliated with the PATIENT-1 club .
+CORRECT: AGENT-1 is affiliated with the PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: Peter Stöger played for SC Wiener Neustadt.
+TEMPLATE: AGENT-1 played for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id3
+TEXT: Peter Stoger plays for SC Wiener Neustadt.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id221 1 SportsTeam
+
+TRIPLES
+Peter_Stöger | club | LASK_Linz
+
+
+ENTITY MAP
+AGENT-1 | Peter_Stöger
+PATIENT-1 | LASK_Linz
+
+
+LEX
+Id1
+TEXT: Peter Stöger played for the club LASK Linz.
+TEMPLATE: AGENT-1 played for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Peter Stoger plays for LASK Linz.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id220 1 SportsTeam
+
+TRIPLES
+Peter_Stöger | club | First_Vienna_FC
+
+
+ENTITY MAP
+AGENT-1 | Peter_Stöger
+PATIENT-1 | First_Vienna_FC
+
+
+LEX
+Id1
+TEXT: Peter Stoger is attached to the club First Vienna FC.
+TEMPLATE: AGENT-1 is attached to PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id219 1 SportsTeam
+
+TRIPLES
+Peter_Stöger | club | Favoritner_AC
+
+
+ENTITY MAP
+AGENT-1 | Peter_Stöger
+PATIENT-1 | Favoritner_AC
+
+
+LEX
+Id1
+TEXT: Peter Stoger plays for Favoritner AC.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id218 1 SportsTeam
+
+TRIPLES
+Peter_Stöger | club | FK_Austria_Wien
+
+
+ENTITY MAP
+AGENT-1 | Peter_Stöger
+PATIENT-1 | FK_Austria_Wien
+
+
+LEX
+Id1
+TEXT: Peter Stoger is a member of the FK Austria Wien soccer club.
+TEMPLATE: AGENT-1 is a member of the PATIENT-1 soccer club .
+CORRECT: AGENT-1 is a member of the PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: Peter Stöger is at the FK Austria Wien club.
+TEMPLATE: AGENT-1 is at the PATIENT-1 club .
+CORRECT: AGENT-1 is at the PATIENT-1 .
+COMMENT: modifier
+-
+Id3
+TEXT: Peter Stoger plays for FK Austria Wien.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id217 1 SportsTeam
+
+TRIPLES
+Peter_Stöger | club | FC_Admira_Wacker_Mödling
+
+
+ENTITY MAP
+AGENT-1 | Peter_Stöger
+PATIENT-1 | FC_Admira_Wacker_Mödling
+
+
+LEX
+Id1
+TEXT: Peter Stöger's club is the FC Admira Wacker Mödling.
+TEMPLATE: AGENT-1 's club is PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Peter Stöger is a player in FC Admira Wacker Mödling.
+TEMPLATE: AGENT-1 is a player in PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id3
+TEXT: Peter Stoger plays for FC Admira Wacker Modling.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id216 1 SportsTeam
+
+TRIPLES
+Peter_Stöger | club | Austria_national_football_team
+
+
+ENTITY MAP
+AGENT-1 | Peter_Stöger
+PATIENT-1 | Austria_national_football_team
+
+
+LEX
+Id1
+TEXT: Footballer, Peter Stöger, plays for the Austria National Football team.
+TEMPLATE: Footballer , AGENT-1 , plays for PATIENT-1 .
+CORRECT: AGENT-1 plays for PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: Peter Stoger plays for the Austria national football team.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id214 1 SportsTeam
+
+TRIPLES
+Paulo_Sousa | club | Maccabi_Tel_Aviv_F.C.
+
+
+ENTITY MAP
+AGENT-1 | Paulo_Sousa
+PATIENT-1 | Maccabi_Tel_Aviv_F.C.
+
+
+LEX
+Id1
+TEXT: Paulo Sousa played for Maccabi Tel Aviv F.C.
+TEMPLATE: AGENT-1 played for PATIENT-1
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Paulo Sousa plays for Maccabi Tel Aviv F.C.
+TEMPLATE: AGENT-1 plays for PATIENT-1
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id213 1 SportsTeam
+
+TRIPLES
+Paulo_Sousa | club | Juventus_F.C.
+
+
+ENTITY MAP
+AGENT-1 | Paulo_Sousa
+PATIENT-1 | Juventus_F.C.
+
+
+LEX
+Id1
+TEXT: Paulo Sousa played for Juventus FC.
+TEMPLATE: AGENT-1 played for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Paulo Sousa club is Juventus.
+TEMPLATE: AGENT-1 club is PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id3
+TEXT: Paulo Sousa plays for Juventus F.C.
+TEMPLATE: AGENT-1 plays for PATIENT-1
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id215 1 SportsTeam
+
+TRIPLES
+Paulo_Sousa | club | Portugal_national_football_team
+
+
+ENTITY MAP
+AGENT-1 | Paulo_Sousa
+PATIENT-1 | Portugal_national_football_team
+
+
+LEX
+Id1
+TEXT: Paulo Sousa plays for the Portugal national football team.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Paulo Sousa is a member of the Portugal National Football Team.
+TEMPLATE: AGENT-1 is a member of PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id211 1 SportsTeam
+
+TRIPLES
+Paulo_Sousa | club | ACF_Fiorentina
+
+
+ENTITY MAP
+AGENT-1 | Paulo_Sousa
+PATIENT-1 | ACF_Fiorentina
+
+
+LEX
+Id1
+TEXT: Paulo Sousa plays for ACF Fiorentina.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id210 1 SportsTeam
+
+TRIPLES
+Olympic_Stadium_(Athens) | location | Athens
+
+
+ENTITY MAP
+AGENT-1 | Olympic_Stadium_(Athens)
+PATIENT-1 | Athens
+
+
+LEX
+Id1
+TEXT: The Olympic Stadium (Athens) is located in the city of Athens.
+TEMPLATE: AGENT-1 (PATIENT-1) is located in the city of PATIENT-1 .
+CORRECT: AGENT-1 is located in PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: The Olympic Stadium (Athens) is located in Athens.
+TEMPLATE: AGENT-1 (PATIENT-1) is located in PATIENT-1 .
+CORRECT: AGENT-1 is located in PATIENT-1 .
+COMMENT: modifier
+-
+Id3
+TEXT: The Olympic Stadium is in Athens.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id209 1 SportsTeam
+
+TRIPLES
+National_League_North | champions | Barrow_A.F.C.
+
+
+ENTITY MAP
+AGENT-1 | National_League_North
+PATIENT-1 | Barrow_A.F.C.
+
+
+LEX
+Id1
+TEXT: Barrow AFC are previous champions of the National League North.
+TEMPLATE: PATIENT-1 are previous champions of AGENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Barrow A.F.C. team won the championship before in the National League North.
+TEMPLATE: PATIENT-1 won the championship before in AGENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id3
+TEXT: Barrow A.F.C. are the National League North Champions.
+TEMPLATE: PATIENT-1 are AGENT-1 Champions .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id208 1 SportsTeam
+
+TRIPLES
+Michele_Marcolini | youthclub | Torino_F.C.
+
+
+ENTITY MAP
+AGENT-1 | Michele_Marcolini
+PATIENT-1 | Torino_F.C.
+
+
+LEX
+Id1
+TEXT: Michele Marcolini played youth football for Torino FC.
+TEMPLATE: AGENT-1 played youth football for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Michele Marcolini is affiliated with the youthclub Torino F.C.
+TEMPLATE: AGENT-1 is affiliated with PATIENT-1
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id207 1 SportsTeam
+
+TRIPLES
+Michele_Marcolini | placeOfBirth | Italy
+
+
+ENTITY MAP
+AGENT-1 | Michele_Marcolini
+PATIENT-1 | Italy
+
+
+LEX
+Id1
+TEXT: Michele Marcolini was born in Italy.
+TEMPLATE: AGENT-1 was born in PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id206 1 SportsTeam
+
+TRIPLES
+Michele_Marcolini | club | Torino_F.C.
+
+
+ENTITY MAP
+AGENT-1 | Michele_Marcolini
+PATIENT-1 | Torino_F.C.
+
+
+LEX
+Id1
+TEXT: Michele Marcolini owns Torino F.C.
+TEMPLATE: AGENT-1 owns PATIENT-1
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Michele Marcolini is at the Torino F.C. club.
+TEMPLATE: AGENT-1 is at PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id3
+TEXT: Michele Marcolini plays for Torino F.C.
+TEMPLATE: AGENT-1 plays for PATIENT-1
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id205 1 SportsTeam
+
+TRIPLES
+Michele_Marcolini | club | F.C._Bari_1908
+
+
+ENTITY MAP
+AGENT-1 | Michele_Marcolini
+PATIENT-1 | F.C._Bari_1908
+
+
+LEX
+Id1
+TEXT: Michele Marcolini has been associated with F.C. Bari 1908.
+TEMPLATE: AGENT-1 has been associated with PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Michele Marcolini was at FC Bari 1908.
+TEMPLATE: AGENT-1 was at PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id3
+TEXT: Michele Marcolini plays for F.C. Bari 1908.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id204 1 SportsTeam
+
+TRIPLES
+Michele_Marcolini | club | A.C._Lumezzane
+
+
+ENTITY MAP
+AGENT-1 | Michele_Marcolini
+PATIENT-1 | A.C._Lumezzane
+
+
+LEX
+Id1
+TEXT: Michele Marcolini is attached to the club AC Lumezzane.
+TEMPLATE: AGENT-1 is attached to PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Michele Marcolini is a member of the A.C. Lumezzane club.
+TEMPLATE: AGENT-1 is a member of the PATIENT-1 club .
+CORRECT: AGENT-1 is a member of the PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id203 1 SportsTeam
+
+TRIPLES
+Michele_Marcolini | club | A.C._Chievo_Verona
+
+
+ENTITY MAP
+AGENT-1 | Michele_Marcolini
+PATIENT-1 | A.C._Chievo_Verona
+
+
+LEX
+Id1
+TEXT: Michele Marcolini plays for A.C. Chievo Verona.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Michele Marcolini club is A.C> Chievo Verona.
+TEMPLATE: AGENT-1 club is PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id202 1 SportsTeam
+
+TRIPLES
+Max_Huiberts | club | AZ_Alkmaar
+
+
+ENTITY MAP
+AGENT-1 | Max_Huiberts
+PATIENT-1 | AZ_Alkmaar
+
+
+LEX
+Id1
+TEXT: Max Huiberts is associated with the club AZ Alkmaar.
+TEMPLATE: AGENT-1 is associated with PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Max Huiberts is in the AZ Alkmaar club.
+TEMPLATE: AGENT-1 is in the PATIENT-1 club .
+CORRECT: AGENT-1 is in the PATIENT-1 .
+COMMENT: modifier
+-
+Id3
+TEXT: Max Huiberts plays for AZ Alkmaar.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id201 1 SportsTeam
+
+TRIPLES
+Massimo_Drago | club | Vigor_Lamezia
+
+
+ENTITY MAP
+AGENT-1 | Massimo_Drago
+PATIENT-1 | Vigor_Lamezia
+
+
+LEX
+Id1
+TEXT: Massimo Drago is attached to the club Vigor Lamezia.
+TEMPLATE: AGENT-1 is attached to PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id200 1 SportsTeam
+
+TRIPLES
+Massimo_Drago | club | U.S._Castrovillari_Calcio
+
+
+ENTITY MAP
+AGENT-1 | Massimo_Drago
+PATIENT-1 | U.S._Castrovillari_Calcio
+
+
+LEX
+Id1
+TEXT: Massimo Drago was once a player for US Castrovillari Calcio.
+TEMPLATE: AGENT-1 was once a player for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Massimo Drago plays for U.S Castrovillari Calcio.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id199 1 SportsTeam
+
+TRIPLES
+Massimo_Drago | club | S.S.D._Potenza_Calcio
+
+
+ENTITY MAP
+AGENT-1 | Massimo_Drago
+PATIENT-1 | S.S.D._Potenza_Calcio
+
+
+LEX
+Id1
+TEXT: Massimo Drago played for S.S.D. Potenza Calcio.
+TEMPLATE: AGENT-1 played for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Massimo Drago played for the club SSD Potenza Calcio.
+TEMPLATE: AGENT-1 played for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id198 1 SportsTeam
+
+TRIPLES
+Massimo_Drago | club | Calcio_Catania
+
+
+ENTITY MAP
+AGENT-1 | Massimo_Drago
+PATIENT-1 | Calcio_Catania
+
+
+LEX
+Id1
+TEXT: Massimo Drago is in club Calcio Catania.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Massimo Drago's club was Calcio Catania.
+TEMPLATE: AGENT-1 's club was PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id3
+TEXT: Massimo Drago plays for Calcio Catania.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id197 1 SportsTeam
+
+TRIPLES
+Massimo_Drago | club | A.S.D._Licata_1931
+
+
+ENTITY MAP
+AGENT-1 | Massimo_Drago
+PATIENT-1 | A.S.D._Licata_1931
+
+
+LEX
+Id1
+TEXT: Massimo Drago was at the club ASD Licita 1931.
+TEMPLATE: AGENT-1 was at PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Massimo Drago plays for A.S.D. Licata 1931.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id196 1 SportsTeam
+
+TRIPLES
+Massimo_Drago | club | A.C._Cesena
+
+
+ENTITY MAP
+AGENT-1 | Massimo_Drago
+PATIENT-1 | A.C._Cesena
+
+
+LEX
+Id1
+TEXT: Massimo Drago is in the A.C. Cesena club.
+TEMPLATE: AGENT-1 is in the PATIENT-1 club .
+CORRECT: AGENT-1 is in the PATIENT-1 .
+COMMENT: good
+-
+Id2
+TEXT: Massimo Drago plays for A.C. Cesena.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id195 1 SportsTeam
+
+TRIPLES
+Luciano_Spalletti | club | Virtus_Entella
+
+
+ENTITY MAP
+AGENT-1 | Luciano_Spalletti
+PATIENT-1 | Virtus_Entella
+
+
+LEX
+Id1
+TEXT: Luciano Spalletti was at the club Virtus Entella.
+TEMPLATE: AGENT-1 was at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Luciano Spalletti plays for Virtus Entella.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id194 1 SportsTeam
+
+TRIPLES
+Luciano_Spalletti | club | Empoli_F.C.
+
+
+ENTITY MAP
+AGENT-1 | Luciano_Spalletti
+PATIENT-1 | Empoli_F.C.
+
+
+LEX
+Id1
+TEXT: Luciano Spalletti plays for Empoli F.C.
+TEMPLATE: AGENT-1 plays for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id193 1 SportsTeam
+
+TRIPLES
+Luciano_Spalletti | club | A.S._Roma
+
+
+ENTITY MAP
+AGENT-1 | Luciano_Spalletti
+PATIENT-1 | A.S._Roma
+
+
+LEX
+Id1
+TEXT: Luciano Spalletti is in the A.S. Roma club.
+TEMPLATE: AGENT-1 is in the PATIENT-1 club .
+CORRECT: AGENT-1 is in the PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: Luciano Spalletti's club is A.S. Roma.
+TEMPLATE: AGENT-1 's club is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Luciano Spalletti plays for A.S. Roma.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id191 1 SportsTeam
+
+TRIPLES
+Jorge_Humberto_Rodríguez | club | C.D._Águila
+
+
+ENTITY MAP
+AGENT-1 | Jorge_Humberto_Rodríguez
+PATIENT-1 | C.D._Águila
+
+
+LEX
+Id1
+TEXT: Jorge Humberto Rodriguez is attached to the club CD Aguila.
+TEMPLATE: AGENT-1 is attached to PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Jorge Humberto Rodriguez is a member of C.D. Aguila.
+TEMPLATE: AGENT-1 is a member of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id190 1 SportsTeam
+
+TRIPLES
+Jorge_Humberto_Rodríguez | club | C.D._FAS
+
+
+ENTITY MAP
+AGENT-1 | Jorge_Humberto_Rodríguez
+PATIENT-1 | C.D._FAS
+
+
+LEX
+Id1
+TEXT: Jorge Humberto Rodriquez plays for the C.D. FAS.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Jorge Humberto Rodríguez is in C.D. FAS.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Jorge Humberto Rodriguez plays for C.D. FAS.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id192 1 SportsTeam
+
+TRIPLES
+Jorge_Humberto_Rodríguez | club | El_Salvador_national_football_team
+
+
+ENTITY MAP
+AGENT-1 | Jorge_Humberto_Rodríguez
+PATIENT-1 | El_Salvador_national_football_team
+
+
+LEX
+Id1
+TEXT: Jorge Humberto Rodríguez is a member of the El Salvador national football team.
+TEMPLATE: AGENT-1 is a member of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Jorge Humberto Rodriguez plays for the El Salvador national football team.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id188 1 SportsTeam
+
+TRIPLES
+John_van_den_Brom | club | İstanbulspor_A.Ş.
+
+
+ENTITY MAP
+AGENT-1 | John_van_den_Brom
+PATIENT-1 | İstanbulspor_A.Ş.
+
+
+LEX
+Id1
+TEXT: John van den Brom is a player in İstanbulspor A.Ş.
+TEMPLATE: AGENT-1 is a player in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: John van den Brom plays for Istanbulspor A.S.
+TEMPLATE: AGENT-1 plays for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id187 1 SportsTeam
+
+TRIPLES
+John_van_den_Brom | club | Vitesse_Arnhem
+
+
+ENTITY MAP
+AGENT-1 | John_van_den_Brom
+PATIENT-1 | Vitesse_Arnhem
+
+
+LEX
+Id1
+TEXT: John van den Brom is in Vitesse Arnhem.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: John van den Brom plays for Vitesse Arnhem.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id186 1 SportsTeam
+
+TRIPLES
+John_van_den_Brom | club | R.S.C._Anderlecht
+
+
+ENTITY MAP
+AGENT-1 | John_van_den_Brom
+PATIENT-1 | R.S.C._Anderlecht
+
+
+LEX
+Id1
+TEXT: John van den Brom plays for R.S.C. Anderlecht.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id185 1 SportsTeam
+
+TRIPLES
+John_van_den_Brom | club | Netherlands_national_football_team
+
+
+ENTITY MAP
+AGENT-1 | John_van_den_Brom
+PATIENT-1 | Netherlands_national_football_team
+
+
+LEX
+Id1
+TEXT: John van den Brom played for the Netherlands national football team.
+TEMPLATE: AGENT-1 played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: John van den Brom plays for the Netherlands national football team.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id184 1 SportsTeam
+
+TRIPLES
+John_van_den_Brom | club | Jong_Ajax
+
+
+ENTITY MAP
+AGENT-1 | John_van_den_Brom
+PATIENT-1 | Jong_Ajax
+
+
+LEX
+Id1
+TEXT: John van den Brom is in the Jong Ajax club.
+TEMPLATE: AGENT-1 is in the PATIENT-1 club .
+CORRECT: AGENT-1 is in PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: John van den Brom plays for Jong Ajax.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id183 1 SportsTeam
+
+TRIPLES
+John_van_den_Brom | club | De_Graafschap
+
+
+ENTITY MAP
+AGENT-1 | John_van_den_Brom
+PATIENT-1 | De_Graafschap
+
+
+LEX
+Id1
+TEXT: John van den Brom plays for De Graafschap.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id182 1 SportsTeam
+
+TRIPLES
+John_van_den_Brom | club | AFC_Ajax
+
+
+ENTITY MAP
+AGENT-1 | John_van_den_Brom
+PATIENT-1 | AFC_Ajax
+
+
+LEX
+Id1
+TEXT: John van den Brom plays for AFC Ajax.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id181 1 SportsTeam
+
+TRIPLES
+John_van_den_Brom | club | ADO_Den_Haag
+
+
+ENTITY MAP
+AGENT-1 | John_van_den_Brom
+PATIENT-1 | ADO_Den_Haag
+
+
+LEX
+Id1
+TEXT: John van den Brom plays for ADO Den Haag.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id180 1 SportsTeam
+
+TRIPLES
+Jens_Härtel | club | SV_Babelsberg_03
+
+
+ENTITY MAP
+AGENT-1 | Jens_Härtel
+PATIENT-1 | SV_Babelsberg_03
+
+
+LEX
+Id1
+TEXT: Jens Härtel is part of the SV Babelsberg 03 club.
+TEMPLATE: AGENT-1 is part of the PATIENT-1 club .
+CORRECT: AGENT-1 is part of the PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: Jens Hartel plays for SV Babelsberg 03.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id179 1 SportsTeam
+
+TRIPLES
+Jens_Härtel | club | RB_Leipzig
+
+
+ENTITY MAP
+AGENT-1 | Jens_Härtel
+PATIENT-1 | RB_Leipzig
+
+
+LEX
+Id1
+TEXT: Jens Härtel is in the RB Leipzig club.
+TEMPLATE: AGENT-1 is in the PATIENT-1 club .
+CORRECT: AGENT-1 is in the PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: Jens Härtel played for RB Leipzig.
+TEMPLATE: AGENT-1 played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id178 1 SportsTeam
+
+TRIPLES
+Jens_Härtel | club | FSV_Zwickau
+
+
+ENTITY MAP
+AGENT-1 | Jens_Härtel
+PATIENT-1 | FSV_Zwickau
+
+
+LEX
+Id1
+TEXT: Jens Hartel is attached to the club FSV Zwickau.
+TEMPLATE: AGENT-1 is attached to PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Jens Härtel is a member of the FSV Zwickau club.
+TEMPLATE: AGENT-1 is a member of the PATIENT-1 club .
+CORRECT: AGENT-1 is a member of the PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id177 1 SportsTeam
+
+TRIPLES
+Jens_Härtel | club | Berliner_AK_07
+
+
+ENTITY MAP
+AGENT-1 | Jens_Härtel
+PATIENT-1 | Berliner_AK_07
+
+
+LEX
+Id1
+TEXT: Jens Härtel played for Berliner AK 07.
+TEMPLATE: AGENT-1 played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Jens Hartel club is Berliner AK 07.
+TEMPLATE: AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id176 1 SportsTeam
+
+TRIPLES
+Jens_Härtel | club | 1._FC_Union_Berlin
+
+
+ENTITY MAP
+AGENT-1 | Jens_Härtel
+PATIENT-1 | 1._FC_Union_Berlin
+
+
+LEX
+Id1
+TEXT: Jens Härtel is part of the club 1. FC Union Berlin.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id175 1 SportsTeam
+
+TRIPLES
+Jens_Härtel | club | 1._FC_Magdeburg
+
+
+ENTITY MAP
+AGENT-1 | Jens_Härtel
+PATIENT-1 | 1._FC_Magdeburg
+
+
+LEX
+Id1
+TEXT: Jens Hartel is a member of the ! FC Magdeburgs.
+TEMPLATE: AGENT-1 is a member of the ! PATIENT-1 .
+CORRECT:
+COMMENT:
+-
+Id2
+TEXT: Jens Härtel is in the 1. FC Magdeburg club.
+TEMPLATE: AGENT-1 is in the PATIENT-1 club .
+CORRECT: AGENT-1 is in the PATIENT-1 .
+COMMENT: modifier
+-
+Id3
+TEXT: Jens Hartel plays for 1. FC Magdeburg.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id174 1 SportsTeam
+
+TRIPLES
+Jens_Härtel | club | 1._FC_Lokomotive_Leipzig
+
+
+ENTITY MAP
+AGENT-1 | Jens_Härtel
+PATIENT-1 | 1._FC_Lokomotive_Leipzig
+
+
+LEX
+Id1
+TEXT: The first club Jens Härtel played for was FC Lokomotive Leipzig.
+TEMPLATE: first AGENT-1 played for was PATIENT-1 .
+CORRECT: The first club AGENT-1 played for was PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Jens Hartel plays for 1. FC Lokomotive Leipzig.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id173 1 SportsTeam
+
+TRIPLES
+James_Pallotta | birthPlace | Boston
+
+
+ENTITY MAP
+AGENT-1 | James_Pallotta
+PATIENT-1 | Boston
+
+
+LEX
+Id1
+TEXT: Boston is the birthplace of James Pallotta.
+TEMPLATE: PATIENT-1 is the birthplace of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: James Pallota was born in Boston.
+TEMPLATE: AGENT-1 was born in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id172 1 SportsTeam
+
+TRIPLES
+Italy | officialLanguage | Italian_language
+
+
+ENTITY MAP
+AGENT-1 | Italy
+PATIENT-1 | Italian_language
+
+
+LEX
+Id1
+TEXT: The official language of Italy is the Italian language.
+TEMPLATE: The official language of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Italian is the official language of Italy.
+TEMPLATE: PATIENT-1 is the official language of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id171 1 SportsTeam
+
+TRIPLES
+Italy | leader | Pietro_Grasso
+
+
+ENTITY MAP
+AGENT-1 | Italy
+PATIENT-1 | Pietro_Grasso
+
+
+LEX
+Id1
+TEXT: Italy's leader is Pietro Grasso.
+TEMPLATE: AGENT-1 's leader is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Pietro Grasso is the leader in Italy.
+TEMPLATE: PATIENT-1 is the leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The leader of Italy is Pietro Grasso.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id170 1 SportsTeam
+
+TRIPLES
+Italy | language | Italian_language
+
+
+ENTITY MAP
+AGENT-1 | Italy
+PATIENT-1 | Italian_language
+
+
+LEX
+Id1
+TEXT: The language spoken in italy is Italian language.
+TEMPLATE: The language spoken in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Italian language is spoken in Italy.
+TEMPLATE: PATIENT-1 is spoken in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id169 1 SportsTeam
+
+TRIPLES
+Italy | demonym | Italians
+
+
+ENTITY MAP
+AGENT-1 | Italy
+PATIENT-1 | Italians
+
+
+LEX
+Id1
+TEXT: Italy is inhabited by Italians.
+TEMPLATE: AGENT-1 is inhabited by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Italians are the people who live in Italy.
+TEMPLATE: PATIENT-1 are the people who live in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Italians inhabit Italy.
+TEMPLATE: PATIENT-1 inhabit AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id168 1 SportsTeam
+
+TRIPLES
+Italy | capital | Rome
+
+
+ENTITY MAP
+AGENT-1 | Italy
+PATIENT-1 | Rome
+
+
+LEX
+Id1
+TEXT: Rome is the capital of Italy.
+TEMPLATE: PATIENT-1 is the capital of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The capital of Italy is Rome.
+TEMPLATE: The capital of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id167 1 SportsTeam
+
+TRIPLES
+Gus_Poyet | club | Real_Zaragoza
+
+
+ENTITY MAP
+AGENT-1 | Gus_Poyet
+PATIENT-1 | Real_Zaragoza
+
+
+LEX
+Id1
+TEXT: Gus Poyet is associated with the Real Zaragoza,a football club.
+TEMPLATE: AGENT-1 is associated with PATIENT-1 , a football club .
+CORRECT: AGENT-1 is associated with PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: Gus Poyet is in the Real Zaragoza club.
+TEMPLATE: AGENT-1 is in the PATIENT-1 club .
+CORRECT: AGENT-1 is in the PATIENT-1 .
+COMMENT: modifier
+-
+Id3
+TEXT: Gus Poyet's club is Real Zaragoza.
+TEMPLATE: AGENT-1 's club is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id166 1 SportsTeam
+
+TRIPLES
+Gus_Poyet | club | Chelsea_F.C.
+
+
+ENTITY MAP
+AGENT-1 | Gus_Poyet
+PATIENT-1 | Chelsea_F.C.
+
+
+LEX
+Id1
+TEXT: Gus Poyet played for Chelsea F.C.
+TEMPLATE: AGENT-1 played for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id165 1 SportsTeam
+
+TRIPLES
+Gubbio | leaderParty | Left_Ecology_Freedom
+
+
+ENTITY MAP
+AGENT-1 | Gubbio
+PATIENT-1 | Left_Ecology_Freedom
+
+
+LEX
+Id1
+TEXT: The Left Ecology Freedom are the leading party in Gubbio.
+TEMPLATE: PATIENT-1 are the leading party in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id164 1 SportsTeam
+
+TRIPLES
+Greece | leader | Prokopis_Pavlopoulos
+
+
+ENTITY MAP
+AGENT-1 | Greece
+PATIENT-1 | Prokopis_Pavlopoulos
+
+
+LEX
+Id1
+TEXT: Greece's leader is Prokopis Pavlopoulos.
+TEMPLATE: AGENT-1 's leader is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Prokopis Pavloopoulos is a leader of Greece.
+TEMPLATE: PATIENT-1 is a leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Prokopis Pavlopoulos is a leader in Greece.
+TEMPLATE: PATIENT-1 is a leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id163 1 SportsTeam
+
+TRIPLES
+Greece | leader | Alexis_Tsipras
+
+
+ENTITY MAP
+AGENT-1 | Greece
+PATIENT-1 | Alexis_Tsipras
+
+
+LEX
+Id1
+TEXT: Greece's leader is Alexis Tsipras.
+TEMPLATE: AGENT-1 's leader is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Alexis Tsipras heads Greece.
+TEMPLATE: PATIENT-1 heads AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The leader of Greece is Alexis Tsipras.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id162 1 SportsTeam
+
+TRIPLES
+Greece | language | Greek_language
+
+
+ENTITY MAP
+AGENT-1 | Greece
+PATIENT-1 | Greek_language
+
+
+LEX
+Id1
+TEXT: Greek is the language of Greece.
+TEMPLATE: Greek is PATIENT-1 of AGENT-1 .
+CORRECT: PATIENT-1 is the language of AGENT-1 .
+COMMENT: language
+-
+Id2
+TEXT: Greek is spoken in Greece.
+TEMPLATE: PATIENT-1 is spoken in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The language spoken in Greece is Greek.
+TEMPLATE: PATIENT-1 spoken in AGENT-1 is Greek .
+CORRECT: The language spoken in AGENT-1 is PATIENT-1 .
+COMMENT: language
+-
+
+**************************************************
+
+Entry: Id161 1 SportsTeam
+
+TRIPLES
+Greece | demonym | Greeks
+
+
+ENTITY MAP
+AGENT-1 | Greece
+PATIENT-1 | Greeks
+
+
+LEX
+Id1
+TEXT: Greece is inhabited by Greeks.
+TEMPLATE: AGENT-1 is inhabited by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The people from Greece are called Greeks.
+TEMPLATE: The people from AGENT-1 are called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Greeks inhabit Greece.
+TEMPLATE: PATIENT-1 inhabit AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id160 1 SportsTeam
+
+TRIPLES
+Greece | currency | Euro
+
+
+ENTITY MAP
+AGENT-1 | Greece
+PATIENT-1 | Euro
+
+
+LEX
+Id1
+TEXT: The currency in Greece is the euro.
+TEMPLATE: The currency in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Euro is the currency in Greece.
+TEMPLATE: PATIENT-1 is the currency in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Money used in Greece is the Euro.
+TEMPLATE: Money used in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id159 1 SportsTeam
+
+TRIPLES
+Greece | capital | Athens
+
+
+ENTITY MAP
+AGENT-1 | Greece
+PATIENT-1 | Athens
+
+
+LEX
+Id1
+TEXT: Athens is the capital of Greece.
+TEMPLATE: PATIENT-1 is the capital of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id158 1 SportsTeam
+
+TRIPLES
+Frank_de_Boer | club | Netherlands_national_football_team
+
+
+ENTITY MAP
+AGENT-1 | Frank_de_Boer
+PATIENT-1 | Netherlands_national_football_team
+
+
+LEX
+Id1
+TEXT: Frank de Boer played for the Netherlands national football team.
+TEMPLATE: AGENT-1 played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id157 1 SportsTeam
+
+TRIPLES
+Frank_de_Boer | club | Al-Shamal_Sports_Club
+
+
+ENTITY MAP
+AGENT-1 | Frank_de_Boer
+PATIENT-1 | Al-Shamal_Sports_Club
+
+
+LEX
+Id1
+TEXT: Frank de Boer played for Al-Shamal Sports Club.
+TEMPLATE: AGENT-1 played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Frank de Boer plays for Al-Shamal Sports Club.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id156 1 SportsTeam
+
+TRIPLES
+Frank_de_Boer | club | Ajax_Youth_Academy
+
+
+ENTITY MAP
+AGENT-1 | Frank_de_Boer
+PATIENT-1 | Ajax_Youth_Academy
+
+
+LEX
+Id1
+TEXT: Frank de Boer is in the Ajax Youth Academy.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Frank de Boer played for the Ajax Youth Academy.
+TEMPLATE: AGENT-1 played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id155 1 SportsTeam
+
+TRIPLES
+Frank_de_Boer | club | AFC_Ajax
+
+
+ENTITY MAP
+AGENT-1 | Frank_de_Boer
+PATIENT-1 | AFC_Ajax
+
+
+LEX
+Id1
+TEXT: Frank de Boer played for AFC Ajax.
+TEMPLATE: AGENT-1 played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Frank de Boer plays for AFC Ajax.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id154 1 SportsTeam
+
+TRIPLES
+Estádio_Municipal_Coaracy_da_Mata_Fonseca | location | Brazil
+
+
+ENTITY MAP
+AGENT-1 | Estádio_Municipal_Coaracy_da_Mata_Fonseca
+PATIENT-1 | Brazil
+
+
+LEX
+Id1
+TEXT: Estádio Municipal Coaracy da Mata Fonesca is in Brazil.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Estádio Municipal Coaracy da Mata Fonseca is located in Brazil.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id153 1 SportsTeam
+
+TRIPLES
+Estádio_Municipal_Coaracy_da_Mata_Fonseca | location | Arapiraca
+
+
+ENTITY MAP
+AGENT-1 | Estádio_Municipal_Coaracy_da_Mata_Fonseca
+PATIENT-1 | Arapiraca
+
+
+LEX
+Id1
+TEXT: Estádio Municipal Coaracy da Mata Fonseca is located in Arapiraca.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Estádio Municipal Coaracy da Mata Fonseca is located in Arapiraca.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Estadio Municipal Coaracy da Mata Fonseca is in Arapiraca.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id152 1 SportsTeam
+
+TRIPLES
+Estádio_Municipal_Coaracy_da_Mata_Fonseca | location | Alagoas
+
+
+ENTITY MAP
+AGENT-1 | Estádio_Municipal_Coaracy_da_Mata_Fonseca
+PATIENT-1 | Alagoas
+
+
+LEX
+Id1
+TEXT: Estadio Municipal Coaracy da Mata Fonseca is located in Alagoas.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Estádio Municipal Coaracy da Mata Fonseca is located in Alagoas.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Estadio Municipal Coaracy da Mata Fonseca is locatedd in Alagoas.
+TEMPLATE: AGENT-1 is locatedd in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id151 1 SportsTeam
+
+TRIPLES
+Dave_Challinor | club | Tranmere_Rovers_F.C.
+
+
+ENTITY MAP
+AGENT-1 | Dave_Challinor
+PATIENT-1 | Tranmere_Rovers_F.C.
+
+
+LEX
+Id1
+TEXT: Dave Challinor is affiliated with Tranmere Rovers F.C.
+TEMPLATE: AGENT-1 is affiliated with PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Dave Challinor plays for Tranmere Rovers F.C.
+TEMPLATE: AGENT-1 plays for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id150 1 SportsTeam
+
+TRIPLES
+Dave_Challinor | club | Stockport_County_F.C.
+
+
+ENTITY MAP
+AGENT-1 | Dave_Challinor
+PATIENT-1 | Stockport_County_F.C.
+
+
+LEX
+Id1
+TEXT: Dave Challinor plays at the Stockport County F.C.
+TEMPLATE: AGENT-1 plays at PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Dave Challinor played for Stockport County F.C.
+TEMPLATE: AGENT-1 played for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id149 1 SportsTeam
+
+TRIPLES
+Dave_Challinor | club | Colwyn_Bay_F.C.
+
+
+ENTITY MAP
+AGENT-1 | Dave_Challinor
+PATIENT-1 | Colwyn_Bay_F.C.
+
+
+LEX
+Id1
+TEXT: Dave Challinor is at Colwyn Bay FC.
+TEMPLATE: AGENT-1 is at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Dave Challinor is a player of Colwyn Bay F.C. club.
+TEMPLATE: AGENT-1 is a player of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Dave Challinor plays for Colwyn Bay F.C.
+TEMPLATE: AGENT-1 plays for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id148 1 SportsTeam
+
+TRIPLES
+Dave_Challinor | club | Bury_F.C.
+
+
+ENTITY MAP
+AGENT-1 | Dave_Challinor
+PATIENT-1 | Bury_F.C.
+
+
+LEX
+Id1
+TEXT: Dave Challinor played football for Bury FC.
+TEMPLATE: AGENT-1 played football for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Dave Challinor played for Bury F.C.
+TEMPLATE: AGENT-1 played for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id147 1 SportsTeam
+
+TRIPLES
+Dave_Challinor | club | A.F.C._Fylde
+
+
+ENTITY MAP
+AGENT-1 | Dave_Challinor
+PATIENT-1 | A.F.C._Fylde
+
+
+LEX
+Id1
+TEXT: Dave Challinor is a player at the A.F.C. Fylde .
+TEMPLATE: AGENT-1 is a player at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Dave Challinor is at the A.F.C. Flyde club.
+TEMPLATE: AGENT-1 is at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Dave Challinor plays for A.F.C. Fylde.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id146 1 SportsTeam
+
+TRIPLES
+Christian_Panucci | club | Real_Madrid_C.F.
+
+
+ENTITY MAP
+AGENT-1 | Christian_Panucci
+PATIENT-1 | Real_Madrid_C.F.
+
+
+LEX
+Id1
+TEXT: Christian Panucci was attached to the Real Madrid CF club.
+TEMPLATE: AGENT-1 was attached to PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id145 1 SportsTeam
+
+TRIPLES
+Christian_Panucci | club | Italy_national_football_team
+
+
+ENTITY MAP
+AGENT-1 | Christian_Panucci
+PATIENT-1 | Italy_national_football_team
+
+
+LEX
+Id1
+TEXT: Christian Panucci played for the Italy national football team.
+TEMPLATE: AGENT-1 played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Christian Panucci plays for the Italy national football team.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id144 1 SportsTeam
+
+TRIPLES
+Christian_Panucci | club | Genoa_C.F.C.
+
+
+ENTITY MAP
+AGENT-1 | Christian_Panucci
+PATIENT-1 | Genoa_C.F.C.
+
+
+LEX
+Id1
+TEXT: Christian Panucci played football for Genoa C.F.C.
+TEMPLATE: AGENT-1 played football for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Christian Panucci is attached to the club Genoa CFC.
+TEMPLATE: AGENT-1 is attached to PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id143 1 SportsTeam
+
+TRIPLES
+Christian_Panucci | club | A.S._Roma
+
+
+ENTITY MAP
+AGENT-1 | Christian_Panucci
+PATIENT-1 | A.S._Roma
+
+
+LEX
+Id1
+TEXT: Christian Panucci plays at the A.S. Roma.
+TEMPLATE: AGENT-1 plays at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Christian Panucci is in the A.S. Roma club.
+TEMPLATE: AGENT-1 is in the PATIENT-1 club .
+CORRECT: AGENT-1 is in the PATIENT-1 .
+COMMENT: modifier
+-
+Id3
+TEXT: Christian Panucci plays for A.S. Roma.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id142 1 SportsTeam
+
+TRIPLES
+Christian_Panucci | club | A.S._Livorno_Calcio
+
+
+ENTITY MAP
+AGENT-1 | Christian_Panucci
+PATIENT-1 | A.S._Livorno_Calcio
+
+
+LEX
+Id1
+TEXT: Christian Panucci has been manager of A S Livorno Calcio.
+TEMPLATE: AGENT-1 has been manager of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Christian Panucci plays for A.S. Livorno Calcio.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id141 1 SportsTeam
+
+TRIPLES
+Campeonato_Brasileiro_Série_C | country | Brazil
+
+
+ENTITY MAP
+AGENT-1 | Campeonato_Brasileiro_Série_C
+PATIENT-1 | Brazil
+
+
+LEX
+Id1
+TEXT: Campeonato Brasileiro Série C is from Brazil.
+TEMPLATE: AGENT-1 is from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Campeonato Brasileiro Serie C is based in Brazil.
+TEMPLATE: AGENT-1 is based in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id140 1 SportsTeam
+
+TRIPLES
+Campeonato_Brasileiro_Série_C | champions | Vila_Nova_Futebol_Clube
+
+
+ENTITY MAP
+AGENT-1 | Campeonato_Brasileiro_Série_C
+PATIENT-1 | Vila_Nova_Futebol_Clube
+
+
+LEX
+Id1
+TEXT: Vila Nova Futebol Clube have been champions of Campeonato Brasileiro Série C.
+TEMPLATE: PATIENT-1 have been champions of AGENT-1
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Vila Nova Futebol Clube are the champions of Campeonato Brasileiro Serie C.
+TEMPLATE: PATIENT-1 are the champions of AGENT-1
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Vila Nova Futebol Clube were champions at the Campeonato Brasileiro Série C.
+TEMPLATE: PATIENT-1 were champions at AGENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id139 1 SportsTeam
+
+TRIPLES
+Blackpool | leader | Labour_Party_(UK)
+
+
+ENTITY MAP
+AGENT-1 | Blackpool
+PATIENT-1 | Labour_Party_(UK)
+
+
+LEX
+Id1
+TEXT: The leader of Blackpool council is the Labour Party (UK).
+TEMPLATE: The leader of AGENT-1 council is PATIENT-1 .
+CORRECT: The leader of AGENT-1 is PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: Blackpool's council is Labour.
+TEMPLATE: AGENT-1 's council is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id138 1 SportsTeam
+
+TRIPLES
+Blackpool | leader | Gordon_Marsden
+
+
+ENTITY MAP
+AGENT-1 | Blackpool
+PATIENT-1 | Gordon_Marsden
+
+
+LEX
+Id1
+TEXT: Blackpool is lead by Gordon Marsden.
+TEMPLATE: AGENT-1 is lead by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Gordon Marsden is one of Blackpool's leaders.
+TEMPLATE: PATIENT-1 is one of AGENT-1 's leaders .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The leader of Blackpool is Gordon Marsden.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id137 1 SportsTeam
+
+TRIPLES
+Blackpool | leader | Conservative_Party_(UK)
+
+
+ENTITY MAP
+AGENT-1 | Blackpool
+PATIENT-1 | Conservative_Party_(UK)
+
+
+LEX
+Id1
+TEXT: The leader of Blackpool is the Conservative Party (UK).
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id136 1 SportsTeam
+
+TRIPLES
+Azerbaijan_Premier_League | champions | Qarabağ_FK
+
+
+ENTITY MAP
+AGENT-1 | Azerbaijan_Premier_League
+PATIENT-1 | Qarabağ_FK
+
+
+LEX
+Id1
+TEXT: The name of the championship football team in the Azerbaijan Premier League Os the Qarabag FK.
+TEMPLATE: The name of the championship football team in AGENT-1 PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Qarabağ FK are the champions of the Azerbaijan Premier League.
+TEMPLATE: PATIENT-1 are the champions of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The champions of the Azerbaijan Premier League are Qarabag FK.
+TEMPLATE: The champions of AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id135 1 SportsTeam
+
+TRIPLES
+Athens | mayor | Giorgos_Kaminis
+
+
+ENTITY MAP
+AGENT-1 | Athens
+PATIENT-1 | Giorgos_Kaminis
+
+
+LEX
+Id1
+TEXT: The mayor of Athens is Giorgos Kaminis.
+TEMPLATE: The mayor of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id134 1 SportsTeam
+
+TRIPLES
+Amsterdam | part | Amsterdam-Noord
+
+
+ENTITY MAP
+AGENT-1 | Amsterdam
+PATIENT-1 | Amsterdam-Noord
+
+
+LEX
+Id1
+TEXT: Amsterdam Noord is part of Amsterdam.
+TEMPLATE: AGENT-1 Noord is PATIENT-1 of AGENT-1 .
+CORRECT: PATIENT is part of of AGENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Amsterdam-Noord is part of Amsterdam.
+TEMPLATE: PATIENT-1 is part of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id133 1 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | season | 2011_PDL_season
+
+
+ENTITY MAP
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | 2011_PDL_season
+
+
+LEX
+Id1
+TEXT: Akron Summit Assault play in the 2011 PDL season.
+TEMPLATE: AGENT-1 play in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id132 1 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | season | 2011
+
+
+ENTITY MAP
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | 2011
+
+
+LEX
+Id1
+TEXT: Akron Summit Assault played in the 2011 season.
+TEMPLATE: AGENT-1 played in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Akron Summit Assault was in the 2011 season.
+TEMPLATE: AGENT-1 was in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Akron Summit Assault are in season 2011.
+TEMPLATE: AGENT-1 are in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id131 1 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | manager | Denzil_Antonio
+
+
+ENTITY MAP
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | Denzil_Antonio
+
+
+LEX
+Id1
+TEXT: Denzil Antonio was the manager of Akron Summit Assault.
+TEMPLATE: PATIENT-1 was the manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Denzil Antonio is the manager of Akron Summit Assault.
+TEMPLATE: PATIENT-1 is the manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id130 1 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | league | Premier_Development_League
+
+
+ENTITY MAP
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | Premier_Development_League
+
+
+LEX
+Id1
+TEXT: Akron Summit Assault play in the Premier Development League.
+TEMPLATE: AGENT-1 play in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id129 1 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | ground | Akron,_Ohio
+
+
+ENTITY MAP
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | Akron,_Ohio
+
+
+LEX
+Id1
+TEXT: The Akron Summit Assault team is based in Akron, Ohio.
+TEMPLATE: The AGENT-1 team is based in PATIENT-1 .
+CORRECT: AGENT-1 is based in PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id128 1 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | chairman | Dave_Laughlin
+
+
+ENTITY MAP
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | Dave_Laughlin
+
+
+LEX
+Id1
+TEXT: Akrons Summit Assault chairman is Dave Laughlin.
+TEMPLATE: AGENT-1 is PATIENT-1 .
+CORRECT: AGENT-1 chairman is PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: Akron Summit Assault's chairman is Dave Laughlin.
+TEMPLATE: AGENT-1 's chairman is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id127 1 SportsTeam
+
+TRIPLES
+Akron,_Ohio | location | United_States
+
+
+ENTITY MAP
+AGENT-1 | Akron,_Ohio
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Akron, Ohio is located in the United States.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id126 1 SportsTeam
+
+TRIPLES
+Akron,_Ohio | leader | Dan_Horrigan
+
+
+ENTITY MAP
+AGENT-1 | Akron,_Ohio
+PATIENT-1 | Dan_Horrigan
+
+
+LEX
+Id1
+TEXT: Akron, Ohio is led by Dan Horrigan.
+TEMPLATE: AGENT-1 is led by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Dan Horrigan is the leader of Akron, Ohio.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The leader of Akron, Ohio is Dan Horrigan.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id125 1 SportsTeam
+
+TRIPLES
+Akron,_Ohio | isPartOf | Summit_County,_Ohio
+
+
+ENTITY MAP
+AGENT-1 | Akron,_Ohio
+PATIENT-1 | Summit_County,_Ohio
+
+
+LEX
+Id1
+TEXT: Akron, Ohio is part of Summit County, Ohio.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Akron, Ohio is a part of Summit County, Ohio.
+TEMPLATE: AGENT-1 is a part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id124 1 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | season | 2015
+
+
+ENTITY MAP
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | 2015
+
+
+LEX
+Id1
+TEXT: Agremiação Sportiva Arapiraquense played in the 2015 season.
+TEMPLATE: AGENT-1 played in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Agremiacao Sportiva Arapiraquense play in 2015.
+TEMPLATE: AGENT-1 play in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id123 1 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | numberOfMembers | 17000
+
+
+ENTITY MAP
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | 17000
+
+
+LEX
+Id1
+TEXT: Agremiação Sportiva Arapiraquense has 17000 members.
+TEMPLATE: AGENT-1 has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Agremiação Sportiva Arapiraquense club has 17000 members.
+TEMPLATE: AGENT-1 club has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Agremiacao Sportiva Arapiraquense has 17000 members.
+TEMPLATE: AGENT-1 has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id122 1 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | nickname | "Asa Gigante "
+
+
+ENTITY MAP
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | "Asa Gigante "
+
+
+LEX
+Id1
+TEXT: The Agremiação Sportiva Arapiraquense is nicknamed Asa Gigante.
+TEMPLATE: AGENT-1 is nicknamed PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Agremiação Sportiva Arapiraquense nickname is Asa Gigante.
+TEMPLATE: AGENT-1 nickname is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Agremiacao Sportiva Arapiraquense have the nickname Asa Gigante.
+TEMPLATE: AGENT-1 have PATIENT-1 .
+CORRECT: AGENT-1 have the nickname PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id121 1 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | nickname | "Alvinegro"
+
+
+ENTITY MAP
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | "Alvinegro"
+
+
+LEX
+Id1
+TEXT: Alvinegro is the nickname of Agremiação Sportiva Arapiraquense.
+TEMPLATE: PATIENT-1 is the nickname of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Alvinegro is the nickname for Agremiação Sportiva Arapiraquense.
+TEMPLATE: PATIENT-1 is the nickname for AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The nickname of Agremiacao Sportiva Arapiraquense is "Alvinegro".
+TEMPLATE: The nickname of AGENT-1 is `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id120 1 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | league | Campeonato_Brasileiro_Série_C
+
+
+ENTITY MAP
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | Campeonato_Brasileiro_Série_C
+
+
+LEX
+Id1
+TEXT: Agremiação Sportiva Arapiraquense play in the Campeonato Brasileiro Série C league.
+TEMPLATE: AGENT-1 play in the PATIENT-1 league .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id119 1 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | ground | Estádio_Municipal_Coaracy_da_Mata_Fonseca
+
+
+ENTITY MAP
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | Estádio_Municipal_Coaracy_da_Mata_Fonseca
+
+
+LEX
+Id1
+TEXT: Estádio Municipal Coaracy da Mata Fonseca is the name of the ground of Agremiação Sportiva Arapiraquense.
+TEMPLATE: PATIENT-1 is the name of the ground of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Agremiacao Sportiva Arapiraquense's ground is the Estadio Minicipal Coaracy da Mata Fonseca.
+TEMPLATE: AGENT-1 ground is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id118 1 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | fullname | "Agremiação Sportiva Arapiraquense"
+
+
+ENTITY MAP
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | "Agremiação Sportiva Arapiraquense"
+
+
+LEX
+Id1
+TEXT: Agremiação Sportiva Arapiraquense's full name is "Agremiação Sportiva Arapiraquense".
+TEMPLATE: PATIENT-1 's full name is `` PATIENT-1 '' .
+CORRECT: AGENT-1 's full name is `` PATIENT-1 '' .
+COMMENT:
+-
+Id2
+TEXT: The full name of Agremiação Sportiva Arapiraquense is "Agremiação Sportiva Arapiraquense".
+TEMPLATE: AGENT-1 of PATIENT-1 is `` PATIENT-1 '' .
+CORRECT: The full name of AGENT-1 is `` PATIENT-1 '' .
+COMMENT:
+-
+Id3
+TEXT: The Agremiação Sportiva Arapiraquense's full name is"Agremiação Sportiva Arapiraquense".
+TEMPLATE: PATIENT-1 's full name is `` PATIENT-1 '' .
+CORRECT: AGENT-1 's full name is `` PATIENT-1 '' .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id117 1 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | chairmanTitle | "President"
+
+
+ENTITY MAP
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | "President"
+
+
+LEX
+Id1
+TEXT: The title of the chairman of Agremiacao Sportiva Arapiraquense is President.
+TEMPLATE: The title of the chairman of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The chairman of Agremiação Sportiva Arapiraquens has the title of 'President'.
+TEMPLATE: The chairman of AGENT-1 has the title of ` PATIENT-1 ' .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The "President" is the chairman title of the Agremiação Sportiva Arapiraquense.
+TEMPLATE: `` PATIENT-1 '' is the chairman title of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id116 1 SportsTeam
+
+TRIPLES
+AZ_Alkmaar | season | 2014
+
+
+ENTITY MAP
+AGENT-1 | AZ_Alkmaar
+PATIENT-1 | 2014
+
+
+LEX
+Id1
+TEXT: AZ Alkmaar played in the 2014 season.
+TEMPLATE: AGENT-1 played in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id115 1 SportsTeam
+
+TRIPLES
+AZ_Alkmaar | owner | Robert_Eenhoorn
+
+
+ENTITY MAP
+AGENT-1 | AZ_Alkmaar
+PATIENT-1 | Robert_Eenhoorn
+
+
+LEX
+Id1
+TEXT: AZ Alkmaar is owned by Robert Eenhoorn.
+TEMPLATE: AGENT-1 is owned by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Robert Eehoorn owns AZ Alkmaar.
+TEMPLATE: PATIENT-1 owns AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id114 1 SportsTeam
+
+TRIPLES
+AZ_Alkmaar | owner | Max_Huiberts
+
+
+ENTITY MAP
+AGENT-1 | AZ_Alkmaar
+PATIENT-1 | Max_Huiberts
+
+
+LEX
+Id1
+TEXT: Max Huiberts is the owner of AZ Alkmaar.
+TEMPLATE: PATIENT-1 is the owner of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Max Huiberts owns AZ Alkmaar.
+TEMPLATE: PATIENT-1 owns AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The owner of AZ Alkmaar is Max Huiberts.
+TEMPLATE: The owner of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id113 1 SportsTeam
+
+TRIPLES
+AZ_Alkmaar | manager | John_van_den_Brom
+
+
+ENTITY MAP
+AGENT-1 | AZ_Alkmaar
+PATIENT-1 | John_van_den_Brom
+
+
+LEX
+Id1
+TEXT: John van den Brom has been manager of AZ Alkmaar.
+TEMPLATE: PATIENT-1 has been manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: John van den Brom manages the AZ Alkmaair.
+TEMPLATE: PATIENT-1 manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: the manager of AZ Alkmaar is john van den Brom.
+TEMPLATE: the manager of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id112 1 SportsTeam
+
+TRIPLES
+AZ_Alkmaar | ground | AFAS_Stadion
+
+
+ENTITY MAP
+AGENT-1 | AZ_Alkmaar
+PATIENT-1 | AFAS_Stadion
+
+
+LEX
+Id1
+TEXT: AZ Alkmaar's ground is the AFAS Stadion.
+TEMPLATE: AGENT-1 's ground is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id111 1 SportsTeam
+
+TRIPLES
+AZ_Alkmaar | fullname | "Alkmaar Zaanstreek"
+
+
+ENTITY MAP
+AGENT-1 | AZ_Alkmaar
+PATIENT-1 | "Alkmaar Zaanstreek"
+
+
+LEX
+Id1
+TEXT: AZ Alkmaar full name is "Alkmaar Zaanstreek".
+TEMPLATE: AGENT-1 full name is `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Alkmaar Zaanstreek is the full name of AZ Alkmaar.
+TEMPLATE: PATIENT-1 is the full name of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: AZ Alkmaar's fullname is Alkmaar Zaanstreek.
+TEMPLATE: AGENT-1 's fullname is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id110 1 SportsTeam
+
+TRIPLES
+AZAL_PFK | season | 2014–15_Azerbaijan_Premier_League
+
+
+ENTITY MAP
+AGENT-1 | AZAL_PFK
+PATIENT-1 | 2014–15_Azerbaijan_Premier_League
+
+
+LEX
+Id1
+TEXT: AZAL PFK Bakou is playing Azerbaijan PremierLeague, 2014–15.
+TEMPLATE: AGENT-1 Bakou is playing PATIENT-1 , 2014 -- 15 .
+CORRECT: AGENT-1 is playing PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: AZAL PFK were in the Azerbaijan Premier League in 2014-15.
+TEMPLATE: AGENT-1 were in PATIENT-1 in 2014-15 .
+CORRECT: AGENT-1 were in PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id109 1 SportsTeam
+
+TRIPLES
+AZAL_PFK | season | 2014
+
+
+ENTITY MAP
+AGENT-1 | AZAL_PFK
+PATIENT-1 | 2014
+
+
+LEX
+Id1
+TEXT: AZAL PFK competed in the season 2014.
+TEMPLATE: AGENT-1 competed in PATIENT-1 .
+CORRECT: AGENT-1 competed in the season PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: AZAL PFK are in season 2014.
+TEMPLATE: AGENT-1 are in PATIENT-1 .
+CORRECT: AGENT-1 are in season PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id108 1 SportsTeam
+
+TRIPLES
+AZAL_PFK | numberOfMembers | 3500
+
+
+ENTITY MAP
+AGENT-1 | AZAL_PFK
+PATIENT-1 | 3500
+
+
+LEX
+Id1
+TEXT: There are 3500 members of AZAL PFK.
+TEMPLATE: There are PATIENT-1 members of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The number of members of Azal Pfk is 3500.
+TEMPLATE: The number of members of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id107 1 SportsTeam
+
+TRIPLES
+AZAL_PFK | ground | AZAL_Arena
+
+
+ENTITY MAP
+AGENT-1 | AZAL_PFK
+PATIENT-1 | AZAL_Arena
+
+
+LEX
+Id1
+TEXT: AZAL PFK play their home matches at the AZAL Arena.
+TEMPLATE: AGENT-1 play their home matches at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AZAL Arena is the ground of AZAL PFK.
+TEMPLATE: PATIENT-1 is the ground of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id106 1 SportsTeam
+
+TRIPLES
+AZAL_PFK | fullname | "AZAL Peşəkar Futbol Klubu"
+
+
+ENTITY MAP
+AGENT-1 | AZAL_PFK
+PATIENT-1 | "AZAL Peşəkar Futbol Klubu"
+
+
+LEX
+Id1
+TEXT: AZAL PFK stands for "AZAL Peşəkar Futbol Klubu".
+TEMPLATE: AGENT-1 stands for `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AZAL PFK's full name is AZAL Peşəkar Futbol Klubu.
+TEMPLATE: AGENT-1 's full name is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The fullname of AZAL PFK is AZAL Pesokar Futbol Klubu.
+TEMPLATE: The fullname of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id105 1 SportsTeam
+
+TRIPLES
+AZAL_Arena | location | Shuvalan
+
+
+ENTITY MAP
+AGENT-1 | AZAL_Arena
+PATIENT-1 | Shuvalan
+
+
+LEX
+Id1
+TEXT: The AZAL Arena is located in Shuvulan.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AZAL Arena is located in Shuvalan.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The AZAL Arena is in Shuvalan.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id104 1 SportsTeam
+
+TRIPLES
+AZAL_Arena | location | Azerbaijan
+
+
+ENTITY MAP
+AGENT-1 | AZAL_Arena
+PATIENT-1 | Azerbaijan
+
+
+LEX
+Id1
+TEXT: the AZAL Arena is located in Azerbaijan.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The AZAL arena is in Azerbaijan.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: AZAL Arena is located in Azerbaijan.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id103 1 SportsTeam
+
+TRIPLES
+AFC_Ajax_(amateurs) | season | 2014–15_Topklasse
+
+
+ENTITY MAP
+AGENT-1 | AFC_Ajax_(amateurs)
+PATIENT-1 | 2014–15_Topklasse
+
+
+LEX
+Id1
+TEXT: AFC Ajax (amateurs) played in the Topklasse in the 2014-2015 season.
+TEMPLATE: AGENT-1 played in PATIENT-1 in the 2014-2015 season .
+CORRECT: AGENT-1 played in PATIENT-1 season .
+COMMENT: modifier
+-
+Id2
+TEXT: AFC Ajax (amateurs) played in the 2014-15 Topklasse season.
+TEMPLATE: AGENT-1 played in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id102 1 SportsTeam
+
+TRIPLES
+AFC_Ajax_(amateurs) | season | 2014
+
+
+ENTITY MAP
+AGENT-1 | AFC_Ajax_(amateurs)
+PATIENT-1 | 2014
+
+
+LEX
+Id1
+TEXT: AFC Ajax (Amateurs) competed in the 2014 season.
+TEMPLATE: AGENT-1 competed in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AFC Ajax (amateurs) played in the 2014 season.
+TEMPLATE: AGENT-1 played in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id101 1 SportsTeam
+
+TRIPLES
+AFC_Ajax_(amateurs) | nickname | "Lucky Ajax"
+
+
+ENTITY MAP
+AGENT-1 | AFC_Ajax_(amateurs)
+PATIENT-1 | "Lucky Ajax"
+
+
+LEX
+Id1
+TEXT: AFC Ajax (amateurs) has the nickname "Lucky Ajax".
+TEMPLATE: AGENT-1 has `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AFC Ajax is nicknamed Lucky Ajax.
+TEMPLATE: AGENT-1 is nicknamed PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The nickname of AFC Ajax (amateurs) is Lucky Ajax.
+TEMPLATE: The nickname of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id100 1 SportsTeam
+
+TRIPLES
+AFC_Ajax_(amateurs) | league | Hoofdklasse
+
+
+ENTITY MAP
+AGENT-1 | AFC_Ajax_(amateurs)
+PATIENT-1 | Hoofdklasse
+
+
+LEX
+Id1
+TEXT: AFC Ajax (amateurs) play in the Hoofdklasse league.
+TEMPLATE: AGENT-1 play in the PATIENT-1 league .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id98 1 SportsTeam
+
+TRIPLES
+AFC_Ajax_(amateurs) | ground | Amsterdam
+
+
+ENTITY MAP
+AGENT-1 | AFC_Ajax_(amateurs)
+PATIENT-1 | Amsterdam
+
+
+LEX
+Id1
+TEXT: AFC Ajax is based in Amsterdam.
+TEMPLATE: AGENT-1 is based in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The ground of AFC Ajax (amateurs) can be found in Amsterdam.
+TEMPLATE: The ground of AGENT-1 can be found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id97 1 SportsTeam
+
+TRIPLES
+AFC_Ajax_(amateurs) | fullname | "Amsterdamsche Football Club Ajax Amateurs"
+
+
+ENTITY MAP
+AGENT-1 | AFC_Ajax_(amateurs)
+PATIENT-1 | "Amsterdamsche Football Club Ajax Amateurs"
+
+
+LEX
+Id1
+TEXT: The full name of AFC Ajax (amateurs) is "Amsterdamsche Football Club Ajax Amateurs".
+TEMPLATE: The full name of AGENT-1 is `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The full name of AFC Ajax (amateurs) is Amsterdamsche Football Club Ajax Amateurs.
+TEMPLATE: The full name of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The AFC Ajax (amateurs) complete name is the "Amsterdamsche Football Club Ajax Amateurs.
+TEMPLATE: The AFC Ajax (AGENT-1) complete name is `` PATIENT-1 .
+CORRECT: AGENT-1 complete name is `` PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id96 1 SportsTeam
+
+TRIPLES
+AFC_Ajax | season | 2014–15_Eredivisie
+
+
+ENTITY MAP
+AGENT-1 | AFC_Ajax
+PATIENT-1 | 2014–15_Eredivisie
+
+
+LEX
+Id1
+TEXT: AFC Ajax were in the Eredivisie for the season 2014-2015.
+TEMPLATE: AGENT-1 were in PATIENT-1 for the season 2014-2015 .
+CORRECT:
+COMMENT: wrong
+-
+Id2
+TEXT: AFC Ajax played in the 2014-15 Eredivisie season.
+TEMPLATE: AGENT-1 played in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id95 1 SportsTeam
+
+TRIPLES
+AFC_Ajax | season | 2014
+
+
+ENTITY MAP
+AGENT-1 | AFC_Ajax
+PATIENT-1 | 2014
+
+
+LEX
+Id1
+TEXT: AFC Ajax played in the 2014 season.
+TEMPLATE: AGENT-1 played in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AFC Ajax played in season 2014.
+TEMPLATE: AGENT-1 played in PATIENT-1 .
+CORRECT: AGENT-1 played in season PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id94 1 SportsTeam
+
+TRIPLES
+AFC_Ajax | owner | AFC_Ajax_N.V.
+
+
+ENTITY MAP
+AGENT-1 | AFC_Ajax
+PATIENT-1 | AFC_Ajax_N.V.
+
+
+LEX
+Id1
+TEXT: The owner of AFC Ajax is AFC Ajax N.V.
+TEMPLATE: PATIENT-1 of AGENT-1 is AGENT-1 N.V.
+CORRECT: The owner of AGENT-1 is PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The owner of AFC Ajax is AFC Ajax NV.
+TEMPLATE: PATIENT-1 of AGENT-1 is AGENT-1 NV .
+CORRECT: The owner of AGENT-1 is PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: AFC Ajax N.V. owns AFC Ajax.
+TEMPLATE: AGENT-1 N.V. owns AGENT-1 .
+CORRECT: PATIENT-1 owns AGENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id99 1 SportsTeam
+
+TRIPLES
+AFC_Ajax_(amateurs) | ground | Sportpark_De_Toekomst
+
+
+ENTITY MAP
+AGENT-1 | AFC_Ajax_(amateurs)
+PATIENT-1 | Sportpark_De_Toekomst
+
+
+LEX
+Id1
+TEXT: AFC Ajax (amateurs)'s ground is Sportpark De Toekomst.
+TEMPLATE: AGENT-1 's ground is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id92 1 SportsTeam
+
+TRIPLES
+AFC_Ajax | fullname | "Amsterdamsche Football Club Ajax"
+
+
+ENTITY MAP
+AGENT-1 | AFC_Ajax
+PATIENT-1 | "Amsterdamsche Football Club Ajax"
+
+
+LEX
+Id1
+TEXT: The full name of AFC Ajax is "Amsterdamsche Football Club Ajax".
+TEMPLATE: The full name of AGENT-1 is `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The full name of AFC Ajax is Amsterdamsche Football Club Ajax.
+TEMPLATE: The full name of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id93 1 SportsTeam
+
+TRIPLES
+AFC_Ajax | numberOfMembers | 53502
+
+
+ENTITY MAP
+AGENT-1 | AFC_Ajax
+PATIENT-1 | 53502
+
+
+LEX
+Id1
+TEXT: AFC Ajax has 53502 members.
+TEMPLATE: AGENT-1 has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id91 1 SportsTeam
+
+TRIPLES
+AEK_Athens_F.C. | season | 2014
+
+
+ENTITY MAP
+AGENT-1 | AEK_Athens_F.C.
+PATIENT-1 | 2014
+
+
+LEX
+Id1
+TEXT: AEK Athens FC played in the 2014 season.
+TEMPLATE: AGENT-1 played in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id89 1 SportsTeam
+
+TRIPLES
+AEK_Athens_F.C. | manager | Gus_Poyet
+
+
+ENTITY MAP
+AGENT-1 | AEK_Athens_F.C.
+PATIENT-1 | Gus_Poyet
+
+
+LEX
+Id1
+TEXT: AEK Athens FC had the manager Gus Poyet.
+TEMPLATE: AGENT-1 had PATIENT-1 .
+CORRECT: AGENT-1 had manager PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: AEK Athens F.C. manager is Gus Poyet.
+TEMPLATE: AGENT-1 is PATIENT-1 .
+CORRECT: AGENT-1 manager is PATIENT-1 .
+COMMENT: modifier
+-
+Id3
+TEXT: AEK Athens are managed by Gus Poyet.
+TEMPLATE: AGENT-1 are managed by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id88 1 SportsTeam
+
+TRIPLES
+AEK_Athens_F.C. | league | Superleague_Greece
+
+
+ENTITY MAP
+AGENT-1 | AEK_Athens_F.C.
+PATIENT-1 | Superleague_Greece
+
+
+LEX
+Id1
+TEXT: AEK Athens FC compete in the Superleague Greece.
+TEMPLATE: AGENT-1 compete in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AEK Athens F.C. is in the Superleague of Greece.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: AEK Athens F.C. play in the Superleague Greece.
+TEMPLATE: AGENT-1 play in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id87 1 SportsTeam
+
+TRIPLES
+AEK_Athens_F.C. | ground | Olympic_Stadium_(Athens)
+
+
+ENTITY MAP
+AGENT-1 | AEK_Athens_F.C.
+PATIENT-1 | Olympic_Stadium_(Athens)
+
+
+LEX
+Id1
+TEXT: The Olympic Stadium (Athens) is the home ground of AEK Athens FC.
+TEMPLATE: PATIENT-1 is the home ground of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The ground for AEK Athens FC is the Olympic Stadium (Athens).
+TEMPLATE: The ground for AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id90 1 SportsTeam
+
+TRIPLES
+AEK_Athens_F.C. | numberOfMembers | 69618
+
+
+ENTITY MAP
+AGENT-1 | AEK_Athens_F.C.
+PATIENT-1 | 69618
+
+
+LEX
+Id1
+TEXT: AEK Athens F.C. has 69618 members.
+TEMPLATE: AGENT-1 has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id85 1 SportsTeam
+
+TRIPLES
+ACF_Fiorentina | season | 2014–15_Serie_A
+
+
+ENTITY MAP
+AGENT-1 | ACF_Fiorentina
+PATIENT-1 | 2014–15_Serie_A
+
+
+LEX
+Id1
+TEXT: ACF Fiorentina played the 2014-15 season in Serie A.
+TEMPLATE: AGENT-1 played the 2014-15 season in PATIENT-1
+CORRECT: AGENT-1 played in PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: ACF Fiorentina played in the 2014-15 Serie A season.
+TEMPLATE: AGENT-1 played in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id86 1 SportsTeam
+
+TRIPLES
+AEK_Athens_F.C. | ground | Greece
+
+
+ENTITY MAP
+AGENT-1 | AEK_Athens_F.C.
+PATIENT-1 | Greece
+
+
+LEX
+Id1
+TEXT: AEK Athens's ground is in Greece.
+TEMPLATE: AGENT-1 ground is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id83 1 SportsTeam
+
+TRIPLES
+ACF_Fiorentina | numberOfMembers | 47290
+
+
+ENTITY MAP
+AGENT-1 | ACF_Fiorentina
+PATIENT-1 | 47290
+
+
+LEX
+Id1
+TEXT: ACF Fiorentina has 47290 members.
+TEMPLATE: AGENT-1 has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: ACF Fiorentina have 47290 members.
+TEMPLATE: AGENT-1 have PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id82 1 SportsTeam
+
+TRIPLES
+ACF_Fiorentina | manager | Paulo_Sousa
+
+
+ENTITY MAP
+AGENT-1 | ACF_Fiorentina
+PATIENT-1 | Paulo_Sousa
+
+
+LEX
+Id1
+TEXT: Paulo Sousa is the manager of the ACF Fiorentina.
+TEMPLATE: PATIENT-1 is the manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The manager of ACF Fiorentina is Paulo Sousa.
+TEMPLATE: The manager of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id84 1 SportsTeam
+
+TRIPLES
+ACF_Fiorentina | season | 2014
+
+
+ENTITY MAP
+AGENT-1 | ACF_Fiorentina
+PATIENT-1 | 2014
+
+
+LEX
+Id1
+TEXT: ACF Fiorentina competed in the 2014 season.
+TEMPLATE: AGENT-1 competed in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id80 1 SportsTeam
+
+TRIPLES
+ACF_Fiorentina | fullname | "ACF Fiorentina S.p.A."
+
+
+ENTITY MAP
+AGENT-1 | ACF_Fiorentina
+PATIENT-1 | "ACF Fiorentina S.p.A."
+
+
+LEX
+Id1
+TEXT: The full name of ACF Fiorentia is "ACF Fiorentina S.p.A.".
+TEMPLATE: The full name of PATIENT-1 is `` AGENT-1 S.p.A. '' .
+CORRECT: The full name of AGENT-1 is `` PATIENT-1 '' .
+COMMENT:
+-
+Id2
+TEXT: The full name of ACF Fiorentina is ACF Fiorentina S.p.A.
+TEMPLATE: PATIENT-1 of AGENT-1 is AGENT-1 S.p.A.
+CORRECT: The full name of AGENT-1 is PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: ACF Fiorentina fullname is ACF Fiorentina S.p.A.
+TEMPLATE: AGENT-1 fullname is AGENT-1 S.p.A.
+CORRECT: AGENT-1 fullname is PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id79 1 SportsTeam
+
+TRIPLES
+A.S._Roma | season | 2014
+
+
+ENTITY MAP
+AGENT-1 | A.S._Roma
+PATIENT-1 | 2014
+
+
+LEX
+Id1
+TEXT: AS Roma competed in the 2014 season.
+TEMPLATE: AGENT-1 competed in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.S. Roma was in the 2014 season.
+TEMPLATE: AGENT-1 was in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id78 1 SportsTeam
+
+TRIPLES
+A.S._Roma | numberOfMembers | 70634
+
+
+ENTITY MAP
+AGENT-1 | A.S._Roma
+PATIENT-1 | 70634
+
+
+LEX
+Id1
+TEXT: AS Roma has 70634 members.
+TEMPLATE: AGENT-1 has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.S. Roma has 70634 members.
+TEMPLATE: AGENT-1 has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id77 1 SportsTeam
+
+TRIPLES
+A.S._Roma | manager | Luciano_Spalletti
+
+
+ENTITY MAP
+AGENT-1 | A.S._Roma
+PATIENT-1 | Luciano_Spalletti
+
+
+LEX
+Id1
+TEXT: AS Roma's manager is Luciano Spalletti.
+TEMPLATE: AGENT-1 manager is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Luciano Spalletti manages A.S. Roma.
+TEMPLATE: PATIENT-1 manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The manager of A.S. Roma is Luciano Spalletti.
+TEMPLATE: The manager of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id76 1 SportsTeam
+
+TRIPLES
+A.S._Roma | league | Serie_A
+
+
+ENTITY MAP
+AGENT-1 | A.S._Roma
+PATIENT-1 | Serie_A
+
+
+LEX
+Id1
+TEXT: AS Roma play in the Serie A league.
+TEMPLATE: AGENT-1 in the PATIENT-1 league .
+CORRECT: AGENT-1 plays in the PATIENT-1 league .
+COMMENT:
+-
+Id2
+TEXT: A.S. Roma play in Serie A.
+TEMPLATE: AGENT-1 play in PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id81 1 SportsTeam
+
+TRIPLES
+ACF_Fiorentina | league | Serie_A
+
+
+ENTITY MAP
+AGENT-1 | ACF_Fiorentina
+PATIENT-1 | Serie_A
+
+
+LEX
+Id1
+TEXT: ACF Fiorentina play in Serie A.
+TEMPLATE: AGENT-1 play in PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id75 1 SportsTeam
+
+TRIPLES
+A.S._Roma | ground | Stadio_Olimpico
+
+
+ENTITY MAP
+AGENT-1 | A.S._Roma
+PATIENT-1 | Stadio_Olimpico
+
+
+LEX
+Id1
+TEXT: A.S Roma ground is Stadio Olimpico.
+TEMPLATE: AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id73 1 SportsTeam
+
+TRIPLES
+A.S._Roma | ground | "Rome, Italy"
+
+
+ENTITY MAP
+AGENT-1 | A.S._Roma
+PATIENT-1 | "Rome, Italy"
+
+
+LEX
+Id1
+TEXT: A.S. Roma's ground is in Rome, Italy.
+TEMPLATE: AGENT-1 's ground is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.S.Roma's ground is in Rome, Italy.
+TEMPLATE: AGENT-1 ground is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id72 1 SportsTeam
+
+TRIPLES
+A.S._Roma | fullname | "Associazione Sportiva Roma S.p.A."
+
+
+ENTITY MAP
+AGENT-1 | A.S._Roma
+PATIENT-1 | "Associazione Sportiva Roma S.p.A."
+
+
+LEX
+Id1
+TEXT: The "Associazione Sportiva Roma S.p.A." is the non-abbreviated name of A.S. Roma.
+TEMPLATE: PATIENT-1 is the non-abbreviated name of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.S. Roma's fullname is Associazione Sportiva Roma S.p.A.
+TEMPLATE: AGENT-1 's fullname is PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The fullname of A.S. Roma is Associazione Sportiva Roma S.p.A.
+TEMPLATE: The fullname of AGENT-1 is PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id71 1 SportsTeam
+
+TRIPLES
+A.S._Roma | chairman | James_Pallotta
+
+
+ENTITY MAP
+AGENT-1 | A.S._Roma
+PATIENT-1 | James_Pallotta
+
+
+LEX
+Id1
+TEXT: The chairman of the A.S. Roma is James Pallotta.
+TEMPLATE: The chairman of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: James Pallotta is the chairman of A.S. Roma.
+TEMPLATE: PATIENT-1 is the chairman of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: A.S. Roma's chairman is James Pallotta.
+TEMPLATE: AGENT-1 's chairman is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id70 1 SportsTeam
+
+TRIPLES
+A.S._Livorno_Calcio | season | 2014–15_Serie_B
+
+
+ENTITY MAP
+AGENT-1 | A.S._Livorno_Calcio
+PATIENT-1 | 2014–15_Serie_B
+
+
+LEX
+Id1
+TEXT: AS Livorno Calcio played season 2014-15 in Serie B.
+TEMPLATE: AGENT-1 played season 2014-15 in PATIENT-1
+CORRECT: AGENT-1 played in PATIENT-1 .
+COMMENT: modifier - punctuation
+-
+Id2
+TEXT: A.S. Livorno Calcio were in the 2014–15 Serie B season.
+TEMPLATE: AGENT-1 were in the 2014 -- PATIENT-1 .
+CORRECT: AGENT-1 were in the PATIENT-1 season .
+COMMENT:
+-
+Id3
+TEXT: A.S. Livorno Calcio were in Serie B in the 2014-15 season.
+TEMPLATE: AGENT-1 were in PATIENT-1 in the 2014-15 season .
+CORRECT: AGENT-1 were in PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id69 1 SportsTeam
+
+TRIPLES
+A.S._Livorno_Calcio | season | 2014
+
+
+ENTITY MAP
+AGENT-1 | A.S._Livorno_Calcio
+PATIENT-1 | 2014
+
+
+LEX
+Id1
+TEXT: A.S. Livorno Calcio played in the 2014 season.
+TEMPLATE: AGENT-1 played in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.S. Livorno Calcio played in season 2014.
+TEMPLATE: AGENT-1 played in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id68 1 SportsTeam
+
+TRIPLES
+A.S._Livorno_Calcio | manager | Christian_Panucci
+
+
+ENTITY MAP
+AGENT-1 | A.S._Livorno_Calcio
+PATIENT-1 | Christian_Panucci
+
+
+LEX
+Id1
+TEXT: A.S. Livorno Calcio is managed by Christian Panucci.
+TEMPLATE: AGENT-1 is managed by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.S. Livorno Calcio are managed by Christian Panucci.
+TEMPLATE: AGENT-1 are managed by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id67 1 SportsTeam
+
+TRIPLES
+A.S._Livorno_Calcio | league | Serie_B
+
+
+ENTITY MAP
+AGENT-1 | A.S._Livorno_Calcio
+PATIENT-1 | Serie_B
+
+
+LEX
+Id1
+TEXT: The league that A.S. Livorno Calcio play in is Serie B.
+TEMPLATE: The league that AGENT-1 play in is PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AS Livorno Calcio play in Serie B.
+TEMPLATE: AGENT-1 play in PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: AS Livorno club plays in Serie B.
+TEMPLATE: AGENT-1 plays in PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id66 1 SportsTeam
+
+TRIPLES
+A.S._Livorno_Calcio | ground | Stadio_Armando_Picchi
+
+
+ENTITY MAP
+AGENT-1 | A.S._Livorno_Calcio
+PATIENT-1 | Stadio_Armando_Picchi
+
+
+LEX
+Id1
+TEXT: A S Livorno Calcio's home ground is the Stadio Armando Picchi.
+TEMPLATE: AGENT-1 home ground is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.S. Livorno Calcio has the ground Stadio Armando Picchi.
+TEMPLATE: AGENT-1 has PATIENT-1 .
+CORRECT: AGENT-1 has the ground PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id74 1 SportsTeam
+
+TRIPLES
+A.S._Roma | ground | Rome
+
+
+ENTITY MAP
+AGENT-1 | A.S._Roma
+PATIENT-1 | Rome
+
+
+LEX
+Id1
+TEXT: A.S. Roma have a ground in Rome.
+TEMPLATE: AGENT-1 have a ground in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id64 1 SportsTeam
+
+TRIPLES
+A.S._Livorno_Calcio | ground | "Livorno, Italy"
+
+
+ENTITY MAP
+AGENT-1 | A.S._Livorno_Calcio
+PATIENT-1 | "Livorno, Italy"
+
+
+LEX
+Id1
+TEXT: Livorno, Italy is the location of the ground of AS Livorno Calcio.
+TEMPLATE: PATIENT-1 is the location of the ground of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.S. Livorno Calcio is based in Livorno, Italy.
+TEMPLATE: AGENT-1 is based in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: A.S. Livorno Calcio's ground is in Livorno, Italy.
+TEMPLATE: AGENT-1 's ground is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id63 1 SportsTeam
+
+TRIPLES
+A.S._Livorno_Calcio | fullname | "Livorno Calcio S.p.A."
+
+
+ENTITY MAP
+AGENT-1 | A.S._Livorno_Calcio
+PATIENT-1 | "Livorno Calcio S.p.A."
+
+
+LEX
+Id1
+TEXT: AS Livorno Calcio has the full name of "Livorno Calcio S.p.A".
+TEMPLATE: AGENT-1 has the full name of `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Livorno Calcio S.p.A. is abbreviated to A.S. Livorno Calcio.
+TEMPLATE: PATIENT-1 is abbreviated to AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The fullname of A.S. Livorno Calcio is Livorno Calcio S.p.A.
+TEMPLATE: The fullname of AGENT-1 is PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id62 1 SportsTeam
+
+TRIPLES
+A.S._Livorno_Calcio | fullname | "Associazione Sportiva"
+
+
+ENTITY MAP
+AGENT-1 | A.S._Livorno_Calcio
+PATIENT-1 | "Associazione Sportiva"
+
+
+LEX
+Id1
+TEXT: Associazione Sportiva Livorno Calcio is the fullname of A.S.Livorno Calcio.
+TEMPLATE: PATIENT-1 Livorno Calcio is the fullname of AGENT-1 .
+CORRECT: PATIENT-1 is the fullname of AGENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: The fullname of A.S. Livorno Calcio is Associazione Sportiva.
+TEMPLATE: The fullname of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id61 1 SportsTeam
+
+TRIPLES
+A.S._Gubbio_1910 | season | 2014–15_Lega_Pro
+
+
+ENTITY MAP
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | 2014–15_Lega_Pro
+
+
+LEX
+Id1
+TEXT: A.S. Gubbio 1910 was a part of the 2014–15 Lega Pro season.
+TEMPLATE: AGENT-1 was a part of the 2014 -- PATIENT-1 season .
+CORRECT: AGENT-1 was a part of the PATIENT-1 season .
+COMMENT: modifier
+-
+Id2
+TEXT: A.S. Gubbio 1910 were in the Lega Pro in the 2014-15 season.
+TEMPLATE: AGENT-1 were in PATIENT-1 Pro in the 2014-15 season .
+CORRECT: AGENT-1 were in PATIENT-1 season .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id60 1 SportsTeam
+
+TRIPLES
+A.S._Gubbio_1910 | season | 2014
+
+
+ENTITY MAP
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | 2014
+
+
+LEX
+Id1
+TEXT: AS Gubbio 1910 competed in the 2014 season.
+TEMPLATE: AGENT-1 competed in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.S Gubbio played in the 2014 season.
+TEMPLATE: AGENT-1 played in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id59 1 SportsTeam
+
+TRIPLES
+A.S._Gubbio_1910 | league | Serie_D
+
+
+ENTITY MAP
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | Serie_D
+
+
+LEX
+Id1
+TEXT: The A.S. Gubbio 1910 football club play in Serie D.
+TEMPLATE: AGENT-1 football club play in PATIENT-1
+CORRECT: AGENT-1 play in PATIENT-1
+COMMENT: modifier
+-
+Id2
+TEXT: A.S. Gubbio 1910 is in the Serie D league.
+TEMPLATE: AGENT-1 is in the PATIENT-1 league .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: A.S. Gubbio 1910 play in Serie D.
+TEMPLATE: AGENT-1 play in PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id65 1 SportsTeam
+
+TRIPLES
+A.S._Livorno_Calcio | ground | Livorno
+
+
+ENTITY MAP
+AGENT-1 | A.S._Livorno_Calcio
+PATIENT-1 | Livorno
+
+
+LEX
+Id1
+TEXT: A.S Livorno Calcio ground is in Livorno.
+TEMPLATE: A.S PATIENT-1 Calcio ground is in PATIENT-1 .
+CORRECT: AGENT-1 ground is in PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id57 1 SportsTeam
+
+TRIPLES
+A.S._Gubbio_1910 | fullname | "Associazione Sportiva Gubbio 1910 Srl"
+
+
+ENTITY MAP
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | "Associazione Sportiva Gubbio 1910 Srl"
+
+
+LEX
+Id1
+TEXT: The full name of AS Gubbio 1910 is "Associazione Sportiva Gubbio 1910 Srl".
+TEMPLATE: The full name of AGENT-1 is `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The full name of A.S. Gubbio 1910 is Associazione Sportiva Gubbio 1910 Srl.
+TEMPLATE: The full name of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The fullname of A.S. Gubbio 1910 is Associazione Sportiva Gubbio 1910 Srl.
+TEMPLATE: The fullname of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id58 1 SportsTeam
+
+TRIPLES
+A.S._Gubbio_1910 | ground | Stadio_Pietro_Barbetti
+
+
+ENTITY MAP
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | Stadio_Pietro_Barbetti
+
+
+LEX
+Id1
+TEXT: The ground of AS Gubbio 1910 is called Stadio Pietro Barbetti.
+TEMPLATE: The ground of AGENT-1 is called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id55 1 SportsTeam
+
+TRIPLES
+A.F.C._Fylde | season | 2014
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Fylde
+PATIENT-1 | 2014
+
+
+LEX
+Id1
+TEXT: AFC Fylde competed in the 2014 season.
+TEMPLATE: AGENT-1 competed in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.F.C. Fylde played in 2014.
+TEMPLATE: AGENT-1 played in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id54 1 SportsTeam
+
+TRIPLES
+A.F.C._Fylde | numberOfMembers | 3180
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Fylde
+PATIENT-1 | 3180
+
+
+LEX
+Id1
+TEXT: AFC Fylde has 3180 members.
+TEMPLATE: AGENT-1 has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.F.C. Fylde has 3180 members.
+TEMPLATE: AGENT-1 has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: A.F.C Fylde has 3180 members.
+TEMPLATE: AGENT-1 has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id53 1 SportsTeam
+
+TRIPLES
+A.F.C._Fylde | manager | Dave_Challinor
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Fylde
+PATIENT-1 | Dave_Challinor
+
+
+LEX
+Id1
+TEXT: AFC Fylde's manager is Dave Challinor.
+TEMPLATE: AGENT-1 manager is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Dave Challinor is the manager of AFC Fylde.
+TEMPLATE: PATIENT-1 is the manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Dave Challinor manages A.F.C. Fylde.
+TEMPLATE: PATIENT-1 manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id52 1 SportsTeam
+
+TRIPLES
+A.F.C._Fylde | league | National_League_North
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Fylde
+PATIENT-1 | National_League_North
+
+
+LEX
+Id1
+TEXT: A.F.C. is a member of the National League North.
+TEMPLATE: AGENT-1 is a member of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Fylde played in the National League North league.
+TEMPLATE: AGENT-1 played in the PATIENT-1 league .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: A.F.C. Fylde play in National League North.
+TEMPLATE: AGENT-1 play in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id51 1 SportsTeam
+
+TRIPLES
+A.F.C._Fylde | ground | Warton,_Fylde
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Fylde
+PATIENT-1 | Warton,_Fylde
+
+
+LEX
+Id1
+TEXT: AFC Fylde's ground is located in Warton, Fylde.
+TEMPLATE: AGENT-1 ground is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.F.C. Fylde ground is Warton Fylde.
+TEMPLATE: A.F.C. Fylde ground is PATIENT-1 .
+CORRECT: AGENT-1 ground is PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id50 1 SportsTeam
+
+TRIPLES
+A.F.C._Fylde | ground | Lancashire
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Fylde
+PATIENT-1 | Lancashire
+
+
+LEX
+Id1
+TEXT: The ground of AFC Fylde can be found in the county of Lancashire.
+TEMPLATE: The ground of AGENT-1 can be found in the county of PATIENT-1 .
+CORRECT: The ground of AGENT-1 can be found in PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: A.F.C. Fylde's ground is in Lancashire.
+TEMPLATE: AGENT-1 ground is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id49 1 SportsTeam
+
+TRIPLES
+A.F.C._Fylde | ground | "Warton, Fylde, Lancashire"
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Fylde
+PATIENT-1 | "Warton, Fylde, Lancashire"
+
+
+LEX
+Id1
+TEXT: A.F.C. Fylde are based at Warton, Fylde, Lancashire.
+TEMPLATE: AGENT-1 are based at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.F.C. Fylde's ground is in Warton, Fylde, Lancashire.
+TEMPLATE: AGENT-1 ground is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id56 1 SportsTeam
+
+TRIPLES
+A.F.C._Fylde | season | 2014–15_Football_Conference
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Fylde
+PATIENT-1 | 2014–15_Football_Conference
+
+
+LEX
+Id1
+TEXT: AFC Fylde played the 2014-15 season in the Football Conference.
+TEMPLATE: AGENT-1 played the 2014-15 season in PATIENT-1 .
+CORRECT: AGENT-1 played in PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id48 1 SportsTeam
+
+TRIPLES
+A.F.C._Fylde | ground | "Kellamergh Park"
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Fylde
+PATIENT-1 | "Kellamergh Park"
+
+
+LEX
+Id1
+TEXT: A.F.C.Fylde's ground is Kellamergh Park.
+TEMPLATE: AGENT-1 ground is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id46 1 SportsTeam
+
+TRIPLES
+A.F.C._Fylde | fullname | "Association Football Club Fylde"
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Fylde
+PATIENT-1 | "Association Football Club Fylde"
+
+
+LEX
+Id1
+TEXT: The full name of the A.F.C. Fylde is "Association Football Club Fylde.".
+TEMPLATE: The full name of AGENT-1 is `` PATIENT-1 . '' .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AFC Fylde has the full name "Association Football Club Fylde".
+TEMPLATE: AGENT-1 has the full name `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id45 1 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | season | 2014–15_North_West_Counties_Football_League
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | 2014–15_North_West_Counties_Football_League
+
+
+LEX
+Id1
+TEXT: In the season 2014-2015 Blackpool played in the North West Counties Football League.
+TEMPLATE: In 2014-2015 AGENT-1 played in PATIENT-1 .
+CORRECT: AGENT-1 played in PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: AFC Blackpool played in the 2014-15 North West Counties Football League season.
+TEMPLATE: AGENT-1 played in PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id44 1 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | season | 2014
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | 2014
+
+
+LEX
+Id1
+TEXT: AFC Blackpool competed in the 2014 season.
+TEMPLATE: AGENT-1 competed in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.F.C. Blackpool play in season 2014.
+TEMPLATE: AGENT-1 play in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id43 1 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | manager | Stuart_Parker_(footballer)
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | Stuart_Parker_(footballer)
+
+
+LEX
+Id1
+TEXT: AFC Blackpool have had Stuart Parker as their manager.
+TEMPLATE: AGENT-1 have had PATIENT-1 as their manager .
+CORRECT: AGENT-1 have had PATIENT-1 as AGENT-1 manager .
+COMMENT: coreference
+-
+Id2
+TEXT: The manager of A.F.C. Blackpool is Stuart Parker (footballer).
+TEMPLATE: The manager of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id42 1 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | league | North_West_Counties_Football_League
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | North_West_Counties_Football_League
+
+
+LEX
+Id1
+TEXT: AFC Blackpool play in the North West Counties Football League.
+TEMPLATE: AGENT-1 play in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.F.C. Blackpool is part of the North West Counties Football League.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id41 1 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | league | English_football_league_system
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | English_football_league_system
+
+
+LEX
+Id1
+TEXT: A.F.C Blackpool play in the English Football League system.
+TEMPLATE: AGENT-1 play in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.F.C. Blackpool play in the English Football League.
+TEMPLATE: AGENT-1 play in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id47 1 SportsTeam
+
+TRIPLES
+A.F.C._Fylde | ground | "Bryning Lane"
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Fylde
+PATIENT-1 | "Bryning Lane"
+
+
+LEX
+Id1
+TEXT: A.F.C. Fylde are based at Bryning Lane.
+TEMPLATE: AGENT-1 are based at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id39 1 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | numberOfMembers | 1500
+
+
+ENTITY MAP
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | 1500
+
+
+LEX
+Id1
+TEXT: AE Dimitra Efxeinoupolis has 1500 members.
+TEMPLATE: AGENT-1 has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.E. Dimitra Efxeinoupolis has 1500 members.
+TEMPLATE: AGENT-1 has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id38 1 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | location | Greece
+
+
+ENTITY MAP
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | Greece
+
+
+LEX
+Id1
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece.
+TEMPLATE: The AGENT-1 club is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.E Dimitra Efxeinoupolis is located in Greece.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id37 1 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | league | A_EPSTH_2nd_GROUP
+
+
+ENTITY MAP
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | A_EPSTH_2nd_GROUP
+
+
+LEX
+Id1
+TEXT: A.E Dimitra Efxeinoupolis is in the league, EPSTH 2nd GROUP.
+TEMPLATE: AGENT-1 is in the league , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.E Dimitra Efxeinoupolis play in the A EPSTH 2nd GROUP.
+TEMPLATE: AGENT-1 play in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id40 1 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | ground | "Jepson Way,"
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | "Jepson Way,"
+
+
+LEX
+Id1
+TEXT: Jepson Way is the grounds for A.F.C. Blackpool.
+TEMPLATE: PATIENT-1 is the grounds for AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id35 1 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | chairman | Antonis_Milionis
+
+
+ENTITY MAP
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | Antonis_Milionis
+
+
+LEX
+Id1
+TEXT: Antonis Milionis is chairman of A.E Dimitra Efxeinoupolis.
+TEMPLATE: PATIENT-1 is chairman of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Antonis Milionis is the chairman of A.E Dimitra Efxeinoupolis.
+TEMPLATE: PATIENT-1 is the chairman of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The chairman of A.E Dimitra Efxeinoupolis is Antonis Milionis.
+TEMPLATE: The chairman of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id34 1 SportsTeam
+
+TRIPLES
+A.D._Isidro_Metapán | numberOfMembers | 10000
+
+
+ENTITY MAP
+AGENT-1 | A.D._Isidro_Metapán
+PATIENT-1 | 10000
+
+
+LEX
+Id1
+TEXT: AD Isidro Metapan has 10000 members.
+TEMPLATE: AGENT-1 has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.D. Isidro Metapán has 10000 members.
+TEMPLATE: AGENT-1 has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The number of members of Isidro Metapán is 10000.
+TEMPLATE: The number of members of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id33 1 SportsTeam
+
+TRIPLES
+A.D._Isidro_Metapán | manager | Jorge_Humberto_Rodríguez
+
+
+ENTITY MAP
+AGENT-1 | A.D._Isidro_Metapán
+PATIENT-1 | Jorge_Humberto_Rodríguez
+
+
+LEX
+Id1
+TEXT: Jorge Humberto Rodriguez has been manager of A D Isidro Metapán.
+TEMPLATE: PATIENT-1 has been manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Jorge Humberto Rodríguez manages the A.D. Isidro Metapan.
+TEMPLATE: PATIENT-1 manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: A.D. Isidro Metapan's manager is Jorge Humberto Rodriguez.
+TEMPLATE: AGENT-1 manager is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id32 1 SportsTeam
+
+TRIPLES
+A.D._Isidro_Metapán | ground | Metapán
+
+
+ENTITY MAP
+AGENT-1 | A.D._Isidro_Metapán
+PATIENT-1 | Metapán
+
+
+LEX
+Id1
+TEXT: A.D. Isidro Metapán's ground is in Metapán.
+TEMPLATE: AGENT-1 's ground is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.D. Isidro Metapán is playing in it's ground at Metapán.
+TEMPLATE: AGENT-1 is playing in PATIENT-1 's ground at PATIENT-1 .
+CORRECT: AGENT-1 is playing in AGENT-1 ground at PATIENT-1 .
+COMMENT: coreference
+-
+
+**************************************************
+
+Entry: Id31 1 SportsTeam
+
+TRIPLES
+A.D._Isidro_Metapán | ground | Estadio_Jorge_Calero_Suárez
+
+
+ENTITY MAP
+AGENT-1 | A.D._Isidro_Metapán
+PATIENT-1 | Estadio_Jorge_Calero_Suárez
+
+
+LEX
+Id1
+TEXT: A.D. Isidro Metapán are at Estadio Jorge Calero Suárez.
+TEMPLATE: AGENT-1 are at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.D. Isidro Metapan play at the Estadio Jorge Calero Suarez.
+TEMPLATE: AGENT-1 play at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id30 1 SportsTeam
+
+TRIPLES
+A.D._Isidro_Metapán | ground | "Metapán, El Salvador"
+
+
+ENTITY MAP
+AGENT-1 | A.D._Isidro_Metapán
+PATIENT-1 | "Metapán, El Salvador"
+
+
+LEX
+Id1
+TEXT: The ground of AD Isidro Metapán is located in Metapán, El Salvador.
+TEMPLATE: The ground of AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.D. Isidro Metapan's ground is in Metapan, El Salvador.
+TEMPLATE: AGENT-1 ground is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id36 1 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | ground | Efxeinoupoli
+
+
+ENTITY MAP
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | Efxeinoupoli
+
+
+LEX
+Id1
+TEXT: The ground of A.E Dimitra Efxeinoupolis is located in the town of Efxeinoupoli.
+TEMPLATE: The ground of AGENT-1 is located in the town of PATIENT-1 .
+CORRECT: The ground of AGENT-1 is located in PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id28 1 SportsTeam
+
+TRIPLES
+A.C._Lumezzane | season | 2014
+
+
+ENTITY MAP
+AGENT-1 | A.C._Lumezzane
+PATIENT-1 | 2014
+
+
+LEX
+Id1
+TEXT: AC Lumezzane played in the 2014 season.
+TEMPLATE: AGENT-1 played in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: I am interested in the 2014 A.C. Lumezzane season.
+TEMPLATE: I am interested in the PATIENT-1 AGENT-1 season .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id27 1 SportsTeam
+
+TRIPLES
+A.C._Lumezzane | numberOfMembers | 4150
+
+
+ENTITY MAP
+AGENT-1 | A.C._Lumezzane
+PATIENT-1 | 4150
+
+
+LEX
+Id1
+TEXT: AC Lumezzane has 4150 members.
+TEMPLATE: AGENT-1 has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The A.C. Lumezzane has 4150 members.
+TEMPLATE: AGENT-1 has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id26 1 SportsTeam
+
+TRIPLES
+A.C._Lumezzane | manager | Michele_Marcolini
+
+
+ENTITY MAP
+AGENT-1 | A.C._Lumezzane
+PATIENT-1 | Michele_Marcolini
+
+
+LEX
+Id1
+TEXT: Michele Marcolini has been manager of AC Lumezzane.
+TEMPLATE: PATIENT-1 has been manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Michele Marcolini manages the A.C. Lumezzane.
+TEMPLATE: PATIENT-1 manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The manager of A.C. Lumezzane is Michele Marcolini.
+TEMPLATE: The manager of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id25 1 SportsTeam
+
+TRIPLES
+A.C._Lumezzane | league | Lega_Pro
+
+
+ENTITY MAP
+AGENT-1 | A.C._Lumezzane
+PATIENT-1 | Lega_Pro
+
+
+LEX
+Id1
+TEXT: AC Lumezzane play in the Lega Pro league.
+TEMPLATE: AGENT-1 in the PATIENT-1 league .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.C. Lumezzane play in the Lega Pro.
+TEMPLATE: AGENT-1 play in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id24 1 SportsTeam
+
+TRIPLES
+A.C._Lumezzane | league | "Lega Pro/A"
+
+
+ENTITY MAP
+AGENT-1 | A.C._Lumezzane
+PATIENT-1 | "Lega Pro/A"
+
+
+LEX
+Id1
+TEXT: A.C. Lumezzane is in the Lega Pro/A league.
+TEMPLATE: AGENT-1 is in the PATIENT-1 league .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.C Lumezzane play in the Lega Pro/A.
+TEMPLATE: AGENT-1 play in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: A.C. Lumezzane play in Lega Pro/A.
+TEMPLATE: AGENT-1 play in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id23 1 SportsTeam
+
+TRIPLES
+A.C._Lumezzane | ground | Italy
+
+
+ENTITY MAP
+AGENT-1 | A.C._Lumezzane
+PATIENT-1 | Italy
+
+
+LEX
+Id1
+TEXT: A.C. Lumezzane play in italy.
+TEMPLATE: AGENT-1 play in italy .
+CORRECT: AGENT-1 play in PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: A.C. Lumezzane's ground is in Italy.
+TEMPLATE: AGENT-1 's ground is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id22 1 SportsTeam
+
+TRIPLES
+A.C._Lumezzane | fullname | "Associazione Calcio Lumezzane SpA"
+
+
+ENTITY MAP
+AGENT-1 | A.C._Lumezzane
+PATIENT-1 | "Associazione Calcio Lumezzane SpA"
+
+
+LEX
+Id1
+TEXT: The "Associazione Calcio Lumezzane SpA" is the full name of A.C. Lumezzane.
+TEMPLATE: `` PATIENT-1 '' is the full name of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Associazione Calcio Lumezzane SpA is abbreviated to A.C. Lumezzane.
+TEMPLATE: PATIENT-1 is abbreviated to AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The fullname of A.C. Lumezzane is Associazione Calcio Lumezzane SpA.
+TEMPLATE: The fullname of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id21 1 SportsTeam
+
+TRIPLES
+A.C._Chievo_Verona | season | 2014–15_Serie_A
+
+
+ENTITY MAP
+AGENT-1 | A.C._Chievo_Verona
+PATIENT-1 | 2014–15_Serie_A
+
+
+LEX
+Id1
+TEXT: A.C. Chievo Verona played the 2014-15 season in Serie A.
+TEMPLATE: AGENT-1 played the 2014-15 season in PATIENT-1
+CORRECT: AGENT-1 played in PATIENT-1 .
+COMMENT: modifier - punctuation
+-
+Id2
+TEXT: A.C. Chievo Verona were in the 2014–15 Serie A season.
+TEMPLATE: AGENT-1 were in the 2014 -- PATIENT-1 .
+CORRECT: AGENT-1 were in the PATIENT-1 season .
+COMMENT: modifier
+-
+Id3
+TEXT: A.C. Chievo Verona were in Serie A in 2014-15.
+TEMPLATE: AGENT-1 were in PATIENT-1 in 2014-15 .
+CORRECT: AGENT-1 were in PATIENT-1 .
+COMMENT: season
+-
+
+**************************************************
+
+Entry: Id20 1 SportsTeam
+
+TRIPLES
+A.C._Chievo_Verona | season | 2014
+
+
+ENTITY MAP
+AGENT-1 | A.C._Chievo_Verona
+PATIENT-1 | 2014
+
+
+LEX
+Id1
+TEXT: AC Chievo Verona competed in the 2014 season.
+TEMPLATE: AGENT-1 competed in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.C. ChievoVerona played in the 2014 season.
+TEMPLATE: AGENT-1 played in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id29 1 SportsTeam
+
+TRIPLES
+A.D._Isidro_Metapán | fullname | "Isidro Metapán"
+
+
+ENTITY MAP
+AGENT-1 | A.D._Isidro_Metapán
+PATIENT-1 | "Isidro Metapán"
+
+
+LEX
+Id1
+TEXT: The full name of A.D. Isidro Metapan is Isidro Metapan.
+TEMPLATE: The full name of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id18 1 SportsTeam
+
+TRIPLES
+A.C._Chievo_Verona | league | Serie_A
+
+
+ENTITY MAP
+AGENT-1 | A.C._Chievo_Verona
+PATIENT-1 | Serie_A
+
+
+LEX
+Id1
+TEXT: AC Chievo Verona play in the Serie A league.
+TEMPLATE: AGENT-1 play in the PATIENT-1 league .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.C. Chievo Verona is in the league, Serie A.
+TEMPLATE: AGENT-1 is in the league , PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: A.C. Chievo Verona play in Serie A.
+TEMPLATE: AGENT-1 play in PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id17 1 SportsTeam
+
+TRIPLES
+A.C._Chievo_Verona | ground | Verona
+
+
+ENTITY MAP
+AGENT-1 | A.C._Chievo_Verona
+PATIENT-1 | Verona
+
+
+LEX
+Id1
+TEXT: A.C. Chievo Verona is playing in his ground at Verona.
+TEMPLATE: AGENT-1 is playing in his ground at PATIENT-1 .
+CORRECT: AGENT-1 is playing in AGENT-1 ground at PATIENT-1 .
+COMMENT: coreference
+-
+Id2
+TEXT: A.C. Chievo Verona play in Verona.
+TEMPLATE: AGENT-1 play in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id16 1 SportsTeam
+
+TRIPLES
+A.C._Chievo_Verona | ground | Stadio_MarcAntonio_Bentegodi
+
+
+ENTITY MAP
+AGENT-1 | A.C._Chievo_Verona
+PATIENT-1 | Stadio_MarcAntonio_Bentegodi
+
+
+LEX
+Id1
+TEXT: The home ground of A.C. Chievo Verona is Stadio Marc'Antonio Bentegodi.
+TEMPLATE: The home ground of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AC Chievo Verona's home ground is Stadio Marc Antonio Bentegodi.
+TEMPLATE: AGENT-1 home ground is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id19 1 SportsTeam
+
+TRIPLES
+A.C._Chievo_Verona | numberOfMembers | 39371
+
+
+ENTITY MAP
+AGENT-1 | A.C._Chievo_Verona
+PATIENT-1 | 39371
+
+
+LEX
+Id1
+TEXT: A.C. Chievo Verona has 39371 members.
+TEMPLATE: AGENT-1 has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id14 1 SportsTeam
+
+TRIPLES
+A.C._Chievo_Verona | fullname | "Associazione Calcio ChievoVerona S.r.l."
+
+
+ENTITY MAP
+AGENT-1 | A.C._Chievo_Verona
+PATIENT-1 | "Associazione Calcio ChievoVerona S.r.l."
+
+
+LEX
+Id1
+TEXT: The full name of AC Chievo Verona is "Associazione Calcio ChievoVerona S.r.l.".
+TEMPLATE: The full name of AGENT-1 is `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The fullname of A.C. Chievo Verona is Associazione Calcio ChievoVerona S.r.l.
+TEMPLATE: The fullname of AGENT-1 is PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id15 1 SportsTeam
+
+TRIPLES
+A.C._Chievo_Verona | ground | "Verona, Italy"
+
+
+ENTITY MAP
+AGENT-1 | A.C._Chievo_Verona
+PATIENT-1 | "Verona, Italy"
+
+
+LEX
+Id1
+TEXT: Verona, Italy is the home to A.C. Chievo Verona.
+TEMPLATE: PATIENT-1 is the home to AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id12 1 SportsTeam
+
+TRIPLES
+A.C._Cesena | manager | Massimo_Drago
+
+
+ENTITY MAP
+AGENT-1 | A.C._Cesena
+PATIENT-1 | Massimo_Drago
+
+
+LEX
+Id1
+TEXT: Massimo Drago has been the manager of A C Cesena.
+TEMPLATE: PATIENT-1 has been the manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Massimo Drago manages A.C. Cesena.
+TEMPLATE: PATIENT-1 manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id11 1 SportsTeam
+
+TRIPLES
+A.C._Cesena | league | Serie_B
+
+
+ENTITY MAP
+AGENT-1 | A.C._Cesena
+PATIENT-1 | Serie_B
+
+
+LEX
+Id1
+TEXT: AC Cesena are in the Serie B league.
+TEMPLATE: AGENT-1 are in the PATIENT-1 league .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.C. Cesena is in the Serie B league.
+TEMPLATE: AGENT-1 is in the PATIENT-1 league .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: A.C. Cesana play in Serie B.
+TEMPLATE: AGENT-1 play in PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id10 1 SportsTeam
+
+TRIPLES
+A.C._Cesena | ground | Stadio_Dino_Manuzzi
+
+
+ENTITY MAP
+AGENT-1 | A.C._Cesena
+PATIENT-1 | Stadio_Dino_Manuzzi
+
+
+LEX
+Id1
+TEXT: A.C. Cesena's ground is Stadio Dino Manuzzi.
+TEMPLATE: AGENT-1 's ground is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.C. Cesana's ground is the Stadio Dino Manuzzi.
+TEMPLATE: AGENT-1 ground is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id13 1 SportsTeam
+
+TRIPLES
+A.C._Cesena | numberOfMembers | 23900
+
+
+ENTITY MAP
+AGENT-1 | A.C._Cesena
+PATIENT-1 | 23900
+
+
+LEX
+Id1
+TEXT: A.C. Cesena has 23900 members.
+TEMPLATE: AGENT-1 has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id9 1 SportsTeam
+
+TRIPLES
+A.C._Cesena | ground | Italy
+
+
+ENTITY MAP
+AGENT-1 | A.C._Cesena
+PATIENT-1 | Italy
+
+
+LEX
+Id1
+TEXT: A.C. Cesena's ground is located in Italy.
+TEMPLATE: AGENT-1 's ground is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id7 1 SportsTeam
+
+TRIPLES
+1._FC_Magdeburg | season | 2014–15_Regionalliga
+
+
+ENTITY MAP
+AGENT-1 | 1._FC_Magdeburg
+PATIENT-1 | 2014–15_Regionalliga
+
+
+LEX
+Id1
+TEXT: FC Magdeburg played in the Regionalliga in 2014-15 season.
+TEMPLATE: AGENT-1 played in PATIENT-1 in 2014-15 season .
+CORRECT: AGENT-1 played in PATIENT-1 season .
+COMMENT: modifier
+-
+Id2
+TEXT: In 2014-15 season, 1 FC Magdeburg played in the Regionalliga.
+TEMPLATE: In 2014-15 season , AGENT-1 played in PATIENT-1 .
+CORRECT: AGENT-1 played in PATIENT-1 .
+COMMENT: modifier
+-
+Id3
+TEXT: FC Magedburg was in Regionalliga in 2014.
+TEMPLATE: AGENT-1 was in PATIENT-1 in 2014 .
+CORRECT: AGENT-1 was in PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id8 1 SportsTeam
+
+TRIPLES
+A.C._Cesena | ground | Cesena
+
+
+ENTITY MAP
+AGENT-1 | A.C._Cesena
+PATIENT-1 | Cesena
+
+
+LEX
+Id1
+TEXT: A>C Cesena ground is in Cesena.
+TEMPLATE: A > C PATIENT-1 ground is in PATIENT-1 .
+CORRECT: AGENT-1 ground is in PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id5 1 SportsTeam
+
+TRIPLES
+1._FC_Magdeburg | manager | Jens_Härtel
+
+
+ENTITY MAP
+AGENT-1 | 1._FC_Magdeburg
+PATIENT-1 | Jens_Härtel
+
+
+LEX
+Id1
+TEXT: The manager of FC Magdeburg is Jens Härtel.
+TEMPLATE: The manager of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Jens Härtel has been the manager of 1 FC Magdeburg.
+TEMPLATE: PATIENT-1 has been the manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id6 1 SportsTeam
+
+TRIPLES
+1._FC_Magdeburg | numberOfMembers | 27250
+
+
+ENTITY MAP
+AGENT-1 | 1._FC_Magdeburg
+PATIENT-1 | 27250
+
+
+LEX
+Id1
+TEXT: 1.FC Magdeburg has 27250 members.
+TEMPLATE: AGENT-1 has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id3 1 SportsTeam
+
+TRIPLES
+1._FC_Köln | season | 2014–15_Bundesliga
+
+
+ENTITY MAP
+AGENT-1 | 1._FC_Köln
+PATIENT-1 | 2014–15_Bundesliga
+
+
+LEX
+Id1
+TEXT: 1. FC Köln were in the 2014–15 Bundesliga season.
+TEMPLATE: AGENT-1 were in the 2014 -- PATIENT-1 .
+CORRECT: AGENT-1 were in PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: FC Köln played the 2014-15 season in the Bundesliga.
+TEMPLATE: AGENT-1 played the 2014-15 season in PATIENT-1 .
+CORRECT: AGENT-1 played in PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id2 1 SportsTeam
+
+TRIPLES
+1._FC_Köln | season | 2014
+
+
+ENTITY MAP
+AGENT-1 | 1._FC_Köln
+PATIENT-1 | 2014
+
+
+LEX
+Id1
+TEXT: 1 FC Köln played in the 2014 season.
+TEMPLATE: AGENT-1 played in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 2014 saw 1. FC Koln participating.
+TEMPLATE: PATIENT-1 saw 1 . AGENT-1 participating .
+CORRECT: PATIENT-1 saw AGENT-1 participating .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id1 1 SportsTeam
+
+TRIPLES
+1._FC_Köln | numberOfMembers | 50000
+
+
+ENTITY MAP
+AGENT-1 | 1._FC_Köln
+PATIENT-1 | 50000
+
+
+LEX
+Id1
+TEXT: 1. FC Köln has 50000 members.
+TEMPLATE: AGENT-1 has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: F.C. Koln have 50000 members.
+TEMPLATE: AGENT-1 have PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id4 1 SportsTeam
+
+TRIPLES
+1._FC_Magdeburg | league | 3._Liga
+
+
+ENTITY MAP
+AGENT-1 | 1._FC_Magdeburg
+PATIENT-1 | 3._Liga
+
+
+LEX
+Id1
+TEXT: 1 FC Magdeburg is in the 3 Liga league.
+TEMPLATE: AGENT-PATIENT-1 is in the 3 Liga league .
+CORRECT: AGENT-1 is in PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id250 1 SportsTeam
+
+TRIPLES
+Stuart_Parker_(footballer) | club | Stockport_County_F.C.
+
+
+ENTITY MAP
+AGENT-1 | Stuart_Parker_(footballer)
+PATIENT-1 | Stockport_County_F.C.
+
+
+LEX
+Id1
+TEXT: Stuart Parker (footballer) once played for Stockport County FC.
+TEMPLATE: AGENT-1 once played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Stuart Parker's football club was Stockport County F.C.
+TEMPLATE: AGENT-1 was PATIENT-1
+CORRECT: AGENT-1 football club was PATIENT-1
+COMMENT: modifier
+-
+Id3
+TEXT: Stuart Parker (footballer) plays for Stockport County F.C.
+TEMPLATE: AGENT-1 plays for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id235 1 SportsTeam
+
+TRIPLES
+Serie_D | champions | S.S._Robur_Siena
+
+
+ENTITY MAP
+AGENT-1 | Serie_D
+PATIENT-1 | S.S._Robur_Siena
+
+
+LEX
+Id1
+TEXT: Serie D champions include S S Robur Siena.
+TEMPLATE: AGENT-1 champions include PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: S.S. Robur Siena are champions of Serie D.
+TEMPLATE: PATIENT-1 are champions of AGENT-1
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The champions of Serie D are S.S. Robur Siena.
+TEMPLATE: The champions of AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id232 1 SportsTeam
+
+TRIPLES
+Serie_A | champions | Juventus_F.C.
+
+
+ENTITY MAP
+AGENT-1 | Serie_A
+PATIENT-1 | Juventus_F.C.
+
+
+LEX
+Id1
+TEXT: Juventus FC have been Serie A champions.
+TEMPLATE: PATIENT-1 have been AGENT-1 champions .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Juventus F.C. are former champions of Serie A.
+TEMPLATE: PATIENT-1 are former champions of AGENT-1
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Serie A champions are Juventus F.C.
+TEMPLATE: The AGENT-1 champions are PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id229 1 SportsTeam
+
+TRIPLES
+Rolando_Maran | club | Varese_Calcio_S.S.D.
+
+
+ENTITY MAP
+AGENT-1 | Rolando_Maran
+PATIENT-1 | Varese_Calcio_S.S.D.
+
+
+LEX
+Id1
+TEXT: Rolando Maran used to be at Varese Calcio S.S.D.
+TEMPLATE: AGENT-1 used to be at PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Rolando Maran is in Varese Calcio S.S.D. club.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Rolando Maran plays for Varese Calcio S.S.D.
+TEMPLATE: AGENT-1 plays for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id212 1 SportsTeam
+
+TRIPLES
+Paulo_Sousa | club | Inter_Milan
+
+
+ENTITY MAP
+AGENT-1 | Paulo_Sousa
+PATIENT-1 | Inter_Milan
+
+
+LEX
+Id1
+TEXT: Paulo Sousa once played for Inter Milan.
+TEMPLATE: AGENT-1 once played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Paulo Sousa is attached to the club Inter Milan.
+TEMPLATE: AGENT-1 is attached to PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Paulo Sousa plays at the Inter Milan club.
+TEMPLATE: AGENT-1 plays at the PATIENT-1 club .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id189 1 SportsTeam
+
+TRIPLES
+Jorge_Humberto_Rodríguez | club | Alianza_F.C.
+
+
+ENTITY MAP
+AGENT-1 | Jorge_Humberto_Rodríguez
+PATIENT-1 | Alianza_F.C.
+
+
+LEX
+Id1
+TEXT: Jorge Humberto Rodgriguez plays for the Alianza F.C. club.
+TEMPLATE: AGENT-1 plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Jorge Humberto Rodríguez club is Alianza F.C.
+TEMPLATE: AGENT-1 club is PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Jorge Humberto Rodriguez plays for Alianza F.C.
+TEMPLATE: AGENT-1 plays for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
