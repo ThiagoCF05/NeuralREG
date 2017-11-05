@@ -1,0 +1,896 @@
+
+Entry: Id31 1 City
+
+TRIPLES
+Washtenaw_County,_Michigan | largestCity | Ann_Arbor,_Michigan
+
+
+ENTITY MAP
+AGENT-1 | Washtenaw_County,_Michigan
+PATIENT-1 | Ann_Arbor,_Michigan
+
+
+LEX
+Id1
+TEXT: Ann Arbor is the largest city in Washtenaw County, Michigan.
+TEMPLATE: PATIENT-1 is the largest city in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The largest town in Washtenaw county Michigan is Ann Arbor.
+TEMPLATE: The largest town in AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The largest city in Washtenaw County, Michigan is Ann Arbor.
+TEMPLATE: The largest city in AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id30 1 City
+
+TRIPLES
+Tarrant_County,_Texas | country | United_States
+
+
+ENTITY MAP
+AGENT-1 | Tarrant_County,_Texas
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Tarrant County, Texas is situated in the United States.
+TEMPLATE: AGENT-1 is situated in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Tarrant County in Texas is in the U.S.
+TEMPLATE: AGENT-1 is in PATIENT-1 U.S.
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Tarrant County, Texas is located within the United States.
+TEMPLATE: AGENT-1 is located within PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id29 1 City
+
+TRIPLES
+Potter_County,_Texas | state | Texas
+
+
+ENTITY MAP
+AGENT-1 | Potter_County,_Texas
+PATIENT-1 | Texas
+
+
+LEX
+Id1
+TEXT: Potter County is in Texas.
+TEMPLATE: AGENT-1 in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Potter County is in the State of Texas.
+TEMPLATE: AGENT-1 in the State of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id28 1 City
+
+TRIPLES
+New_Jersey | capital | Trenton,_New_Jersey
+
+
+ENTITY MAP
+AGENT-1 | New_Jersey
+PATIENT-1 | Trenton,_New_Jersey
+
+
+LEX
+Id1
+TEXT: Trenton is the capital of New Jersey.
+TEMPLATE: PATIENT-1 is the capital of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The capital of the state of New Jersey is Trenton.
+TEMPLATE: The capital of the state of AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id27 1 City
+
+TRIPLES
+Lee_County,_Alabama | state | Alabama
+
+
+ENTITY MAP
+AGENT-1 | Lee_County,_Alabama
+PATIENT-1 | Alabama
+
+
+LEX
+Id1
+TEXT: Lee County is in Alabama.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Lee County is in the state of Alabama.
+TEMPLATE: AGENT-1 is in the state of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Lee County is situated within the state of Alabama.
+TEMPLATE: AGENT-1 is situated within the state of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id2 1 City
+
+TRIPLES
+Abilene,_Texas | isPartOf | Texas
+
+
+ENTITY MAP
+AGENT-1 | Abilene,_Texas
+PATIENT-1 | Texas
+
+
+LEX
+Id1
+TEXT: Abilene is a part of Texas.
+TEMPLATE: AGENT-1 is a part of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Abilene, Texas, is part of Texas.
+TEMPLATE: AGENT-1 , is part of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id1 1 City
+
+TRIPLES
+Abilene,_Texas | areaCode | 325
+
+
+ENTITY MAP
+AGENT-1 | Abilene,_Texas
+PATIENT-1 | 325
+
+
+LEX
+Id1
+TEXT: The area code of Abilene, in Texas, is 325.
+TEMPLATE: The area code of AGENT-1 , in AGENT-1 , is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: 325 is the area code for Abilene, Texas.
+TEMPLATE: PATIENT-1 is the area code for AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The area code for Abilene in Texas is 325.
+TEMPLATE: The area code for AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id26 1 City
+
+TRIPLES
+Indiana | capital | Indianapolis
+
+
+ENTITY MAP
+AGENT-1 | Indiana
+PATIENT-1 | Indianapolis
+
+
+LEX
+Id1
+TEXT: Indianapolis is the capital of Indiana.
+TEMPLATE: PATIENT-1 is the capital of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id3 1 City
+
+TRIPLES
+Albany,_Georgia | leaderTitle | Mayor
+
+
+ENTITY MAP
+AGENT-1 | Albany,_Georgia
+PATIENT-1 | Mayor
+
+
+LEX
+Id1
+TEXT: Albany, Georgia has a Mayor as leader.
+TEMPLATE: AGENT-1 has PATIENT-1 as leader .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Albany, Georgia is lead by a Mayor.
+TEMPLATE: AGENT-1 is lead by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The leader of Albany, Georgia is the Mayor.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id4 1 City
+
+TRIPLES
+Albany,_Oregon | areaTotal | 45.97 (square kilometres)
+
+
+ENTITY MAP
+AGENT-1 | Albany,_Oregon
+PATIENT-1 | 45.97 (square kilometres)
+
+
+LEX
+Id1
+TEXT: Albany, Oregon has a total area of 45.97 square kilometres.
+TEMPLATE: AGENT-1 has a total area of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The total area of Albany Oregon is 45.97 Sq K.
+TEMPLATE: The total area of AGENT-1 Oregon is PATIENT-1 Sq K.
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The total area of Albany, Oregon is 45.97 sq kms.
+TEMPLATE: The total area of AGENT-1 is PATIENT-1 sq kms .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id5 1 City
+
+TRIPLES
+Albany,_Oregon | country | United_States
+
+
+ENTITY MAP
+AGENT-1 | Albany,_Oregon
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Albany, Oregon is in the U.S.
+TEMPLATE: AGENT-1 is in PATIENT-1 U.S.
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Albany, Oregon is located within the United States.
+TEMPLATE: AGENT-1 is located within PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id6 1 City
+
+TRIPLES
+Albuquerque,_New_Mexico | leaderTitle | "State Senate"
+
+
+ENTITY MAP
+AGENT-1 | Albuquerque,_New_Mexico
+PATIENT-1 | "State Senate"
+
+
+LEX
+Id1
+TEXT: Albuquerque, New Mexico is led by the State Senate.
+TEMPLATE: AGENT-1 is led by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id7 1 City
+
+TRIPLES
+Albuquerque,_New_Mexico | leaderTitle | Albuquerque_City_Council
+
+
+ENTITY MAP
+AGENT-1 | Albuquerque,_New_Mexico
+PATIENT-1 | Albuquerque_City_Council
+
+
+LEX
+Id1
+TEXT: The Albuquerque City Council has a leadership role in Albuquerque, New Mexico.
+TEMPLATE: PATIENT-1 has a leadership role in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Albuquerque in New Mexico is led by the Albuquerque City Council.
+TEMPLATE: AGENT-1 is led by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id8 1 City
+
+TRIPLES
+Amarillo,_Texas | country | United_States
+
+
+ENTITY MAP
+AGENT-1 | Amarillo,_Texas
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Amarillo is in Texas, in the United States.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The United States is the home country to Amarillo,Texas.
+TEMPLATE: PATIENT-1 is PATIENT-1 home country to AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Amarillo, Texas is located within the United States.
+TEMPLATE: AGENT-1 is located within PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id9 1 City
+
+TRIPLES
+Amarillo,_Texas | isPartOf | Potter_County,_Texas
+
+
+ENTITY MAP
+AGENT-1 | Amarillo,_Texas
+PATIENT-1 | Potter_County,_Texas
+
+
+LEX
+Id1
+TEXT: Amarillo is part of Potter County in Texas.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Amarillo is part of Potter County, Texas.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id10 1 City
+
+TRIPLES
+Amarillo,_Texas | isPartOf | United_States
+
+
+ENTITY MAP
+AGENT-1 | Amarillo,_Texas
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Amarillo is in Texas, in the United States.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Amarillo, Texas is part of the United States.
+TEMPLATE: AGENT-1 is PATIENT-1 of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Amarillo, Texas, is part of the United States.
+TEMPLATE: AGENT-1 , is PATIENT-1 of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id11 1 City
+
+TRIPLES
+Anaheim,_California | areaCode | 657
+
+
+ENTITY MAP
+AGENT-1 | Anaheim,_California
+PATIENT-1 | 657
+
+
+LEX
+Id1
+TEXT: Anaheim, in California, has the area code 657.
+TEMPLATE: AGENT-1 has PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The area code of Anaheim, California is 657.
+TEMPLATE: The area code of AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The area code for Anaheim, California, is 657.
+TEMPLATE: The area code for AGENT-1 , is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id12 1 City
+
+TRIPLES
+Anderson,_Indiana | isPartOf | "Adams, Fall Creek, Lafayette, Richland, Union"
+
+
+ENTITY MAP
+AGENT-1 | Anderson,_Indiana
+PATIENT-1 | "Adams, Fall Creek, Lafayette, Richland, Union"
+
+
+LEX
+Id1
+TEXT: Anderson, Indiana is part of Adams Fall Creek, Lafayette, Richland, Union.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id13 1 City
+
+TRIPLES
+Angola,_Indiana | isPartOf | Pleasant_Township,_Steuben_County,_Indiana
+
+
+ENTITY MAP
+AGENT-1 | Angola,_Indiana
+PATIENT-1 | Pleasant_Township,_Steuben_County,_Indiana
+
+
+LEX
+Id1
+TEXT: Angola is in Pleasant Township which is part of Steuben County, in Indiana.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Angola, Indiana is part of Pleasant Township, which is in Steuben County.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id14 1 City
+
+TRIPLES
+Ann_Arbor,_Michigan | leaderTitle | "City Administrator"
+
+
+ENTITY MAP
+AGENT-1 | Ann_Arbor,_Michigan
+PATIENT-1 | "City Administrator"
+
+
+LEX
+Id1
+TEXT: A City Administrator leads Ann Arbor, Michigan.
+TEMPLATE: PATIENT-1 leads AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The City Administrator leads Ann Arbor in Michigan.
+TEMPLATE: PATIENT-1 leads AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id15 1 City
+
+TRIPLES
+Ann_Arbor,_Michigan | leaderTitle | Mayor
+
+
+ENTITY MAP
+AGENT-1 | Ann_Arbor,_Michigan
+PATIENT-1 | Mayor
+
+
+LEX
+Id1
+TEXT: Mayor, is the title of the leader in Ann Arbor, Michigan.
+TEMPLATE: PATIENT-1 , is the title of the leader in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Ann Arbor, Michigan is led by the Mayor.
+TEMPLATE: AGENT-1 is led by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The leader title of Ann Arbor, Michigan, is Mayor.
+TEMPLATE: The leader title of AGENT-1 , is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id16 1 City
+
+TRIPLES
+Ann_Arbor,_Michigan | populationDensity | 1580.7 (inhabitants per square kilometre)
+
+
+ENTITY MAP
+AGENT-1 | Ann_Arbor,_Michigan
+PATIENT-1 | 1580.7 (inhabitants per square kilometre)
+
+
+LEX
+Id1
+TEXT: The city of Ann Arbor, Michigan, has a population of 1580.7 as per square kilometre.
+TEMPLATE: The city of AGENT-1 , has a population of 1580.7 as per PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: AnnArbor, Michigan has a population of 1580.7 peer square kilometer.
+TEMPLATE: AnnArbor , AGENT-1 has a population of 1580.7 peer PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The population density of Ann Arbor, Michigan is 1580.7 inhabitants per sq km.
+TEMPLATE: The population density of AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id17 1 City
+
+TRIPLES
+Antioch,_California | elevationAboveTheSeaLevel | 13.0
+
+
+ENTITY MAP
+AGENT-1 | Antioch,_California
+PATIENT-1 | 13.0
+
+
+LEX
+Id1
+TEXT: Antioch, CA is 13 above sea level.
+TEMPLATE: AGENT-1 is PATIENT-1 above sea level .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Antioch, California is 13.0 metres above sea level.
+TEMPLATE: AGENT-1 is PATIENT-1 metres above sea level .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Antioch, California is located at 13.0 above sea level.
+TEMPLATE: AGENT-1 is located at PATIENT-1 above sea level .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id18 1 City
+
+TRIPLES
+Antioch,_California | leaderTitle | Californias_11th_State_Assembly_district
+
+
+ENTITY MAP
+AGENT-1 | Antioch,_California
+PATIENT-1 | Californias_11th_State_Assembly_district
+
+
+LEX
+Id1
+TEXT: The leader title of Antioch, California, is California's 11th State Assembly district.
+TEMPLATE: The leader title of AGENT-1 , is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The leader title of Antioch California is California's 11th State Assembly district.
+TEMPLATE: The leader title of AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id19 1 City
+
+TRIPLES
+Arlington,_Texas | elevationAboveTheSeaLevel | 184.0
+
+
+ENTITY MAP
+AGENT-1 | Arlington,_Texas
+PATIENT-1 | 184.0
+
+
+LEX
+Id1
+TEXT: Arlington Texas is has an elevation of 184 above sea level.
+TEMPLATE: AGENT-1 is has an elevation of PATIENT-1 above sea level .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Arlington in Texas is located at 184.0 above sea level.
+TEMPLATE: AGENT-1 is located at PATIENT-1 above sea level .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id20 1 City
+
+TRIPLES
+Atlantic_County,_New_Jersey | country | United_States
+
+
+ENTITY MAP
+AGENT-1 | Atlantic_County,_New_Jersey
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Atlantic County, New Jersey is located in the United States.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Atlantic County in New Jersey is located in the United States.
+TEMPLATE: AGENT-1 in PATIENT-1 Jersey is located in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id21 1 City
+
+TRIPLES
+Attica,_Indiana | isPartOf | Fountain_County,_Indiana
+
+
+ENTITY MAP
+AGENT-1 | Attica,_Indiana
+PATIENT-1 | Fountain_County,_Indiana
+
+
+LEX
+Id1
+TEXT: Attica is part of Fountain County Indiana.
+TEMPLATE: AGENT-1 is part of PATIENT-1 Indiana .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Attica, Indiana is in Fountain County, Indiana.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id22 1 City
+
+TRIPLES
+Auburn,_Alabama | isPartOf | Alabama
+
+
+ENTITY MAP
+AGENT-1 | Auburn,_Alabama
+PATIENT-1 | Alabama
+
+
+LEX
+Id1
+TEXT: Auburn is part of Alabama.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Auburn is located in Alabama.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id23 1 City
+
+TRIPLES
+California | country | United_States
+
+
+ENTITY MAP
+AGENT-1 | California
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: California is in the United States.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: California is in the U.S.
+TEMPLATE: AGENT-1 is in PATIENT-1 U.S.
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id24 1 City
+
+TRIPLES
+Fulton_County,_Georgia | largestCity | Atlanta
+
+
+ENTITY MAP
+AGENT-1 | Fulton_County,_Georgia
+PATIENT-1 | Atlanta
+
+
+LEX
+Id1
+TEXT: Atlanta is the largest city of Fulton County, Georgia.
+TEMPLATE: PATIENT-1 is the largest city of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Atlanta is the largest city in Fulton County, Georgia.
+TEMPLATE: PATIENT-1 is the largest city in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id25 1 City
+
+TRIPLES
+Georgia_(U.S._state) | country | United_States
+
+
+ENTITY MAP
+AGENT-1 | Georgia_(U.S._state)
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: The state of Georgia is in the U.S.
+TEMPLATE: PATIENT-1 state of AGENT-1 is in PATIENT-1 U.S.
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Georgia is in the country of United States.
+TEMPLATE: AGENT-1 is in PATIENT-1 of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The state of Georgia is located within the United States.
+TEMPLATE: PATIENT-1 state of AGENT-1 is located within PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+

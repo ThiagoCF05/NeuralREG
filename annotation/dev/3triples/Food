@@ -1,0 +1,1388 @@
+
+Entry: Id2 3 Food
+
+TRIPLES
+Ajoblanco | country | Spain
+Ajoblanco | region | Andalusia
+Ajoblanco | ingredient | Water
+
+
+ENTITY MAP
+AGENT-1 | Ajoblanco
+PATIENT-1 | Spain
+PATIENT-3 | Water
+PATIENT-2 | Andalusia
+
+
+LEX
+Id1
+TEXT: Ajoblanco is from Andalusia, in Spain. Ajoblanco contains water.
+TEMPLATE: AGENT-1 is from PATIENT-2 , in PATIENT-1 . AGENT-1 contains PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Water is an ingredient in Ajoblanco, which is a food found in Andalusia, in Spain.
+TEMPLATE: PATIENT-3 is an ingredient in AGENT-1 , which is a food found in PATIENT-2 , in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id1 3 Food
+
+TRIPLES
+Ajoblanco | country | Spain
+Ajoblanco | alternativeName | "Ajo blanco"
+Ajoblanco | ingredient | Bread
+
+
+ENTITY MAP
+AGENT-1 | Ajoblanco
+PATIENT-1 | Spain
+PATIENT-3 | Bread
+PATIENT-2 | "Ajo blanco"
+
+
+LEX
+Id1
+TEXT: From Spain, Ajoblanco (alternatively known as Ajo blanco) has bread as an ingredient.
+TEMPLATE: From PATIENT-1 , AGENT-1 ( alternatively known as PATIENT-2 ) has PATIENT-3 as an ingredient .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Ajoblanco, also known as "Ajo blanco", comes from Spain. Bread is one of the ingredients.
+TEMPLATE: AGENT-1 , also known as `` PATIENT-2 '' , comes from PATIENT-1 . PATIENT-3 is one of the ingredients .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Bread is an ingredient of Ajoblanco, which is from Spain and an alternative name to Ajo blanco.
+TEMPLATE: PATIENT-3 is an ingredient of AGENT-1 , which is from PATIENT-1 and an alternative name to PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id3 3 Food
+
+TRIPLES
+Arem-arem | country | Indonesia
+Indonesia | leaderName | Joko_Widodo
+Indonesia | leaderName | Jusuf_Kalla
+
+
+ENTITY MAP
+BRIDGE-1 | Indonesia
+AGENT-1 | Arem-arem
+PATIENT-1 | Joko_Widodo
+PATIENT-2 | Jusuf_Kalla
+
+
+LEX
+Id1
+TEXT: Arem arem originates from the country of Indonesia, where two of the leaders are, Joko Widodo and Jusuf Kalla.
+TEMPLATE: AGENT-1 originates from BRIDGE-1 , where two of BRIDGE-1 leaders are , PATIENT-1 and PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Arem arem originates from Indonesia where two of the leaders are Joko Widodo and Jusef Kalla.
+TEMPLATE: AGENT-1 originates from BRIDGE-1 where two of BRIDGE-1 leaders are PATIENT-1 and PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id12 3 Food
+
+TRIPLES
+Bacon_Explosion | country | United_States
+Bacon_Explosion | ingredient | Bacon
+Bacon_Explosion | mainIngredients | Sausage
+
+
+ENTITY MAP
+AGENT-1 | Bacon_Explosion
+PATIENT-1 | United_States
+PATIENT-3 | Sausage
+PATIENT-2 | Bacon
+
+
+LEX
+Id1
+TEXT: Bacon and sausage are the main ingredients in a Bacon Explosion, which comes from the United States.
+TEMPLATE: PATIENT-2 and PATIENT-3 are PATIENT-1 PATIENT-3 in AGENT-1 , which comes from PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Bacon Explosion, whose name comes from the United States, has bacon and sausage.
+TEMPLATE: AGENT-1 , whose name comes from PATIENT-1 has PATIENT-2 and PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id4 3 Food
+
+TRIPLES
+Arem-arem | country | Indonesia
+Indonesia | leaderName | Jusuf_Kalla
+Arem-arem | region | "Nationwide in Indonesia, but more specific to Java"
+
+
+ENTITY MAP
+BRIDGE-1 | Indonesia
+AGENT-1 | Arem-arem
+PATIENT-1 | Jusuf_Kalla
+PATIENT-2 | "Nationwide in Indonesia, but more specific to Java"
+
+
+LEX
+Id1
+TEXT: Arem-arem is a food found nationwide in Indonesia, but is more specific to Java. Jusuf Kalla is the leader of Indonesia.
+TEMPLATE: AGENT-1 is a food found PATIENT-2 . PATIENT-1 is BRIDGE-1 leader of BRIDGE-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Jusuf Kalla is the leader of Indonesia, the country which serves Arem-arem. While Arem-arem is nationwide in Indonesia, it is more specific to Java.
+TEMPLATE: PATIENT-1 is BRIDGE-1 leader of BRIDGE-1 , BRIDGE-1 which serves AGENT-1 . While AGENT-1 is nationwide in BRIDGE-1 , BRIDGE-1 is more specific to PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Jusuf Kalla is a leader in Indonesia, where the dish arem-arem is found nationwide, though it is more specific to Java.
+TEMPLATE: PATIENT-1 is AGENT-1 in BRIDGE-1 , where BRIDGE-1 AGENT-1 is found nationwide , though AGENT-1 is more specific to PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id5 3 Food
+
+TRIPLES
+Arrabbiata_sauce | country | Italy
+Italy | language | Italian_language
+Italy | leaderName | Sergio_Mattarella
+
+
+ENTITY MAP
+BRIDGE-1 | Italy
+AGENT-1 | Arrabbiata_sauce
+PATIENT-1 | Italian_language
+PATIENT-2 | Sergio_Mattarella
+
+
+LEX
+Id1
+TEXT: The leader of Italy is Sergio Mattarella, it is also where Italian is spoken and the arrabbiata sauce is from.
+TEMPLATE: BRIDGE-1 PATIENT-1 of BRIDGE-1 is PATIENT-2 , BRIDGE-1 is also where PATIENT-1 is spoken and AGENT-1 is from .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Sergio Mattarella is a leader of Italy where the Italian language is spoken and Arrabbiata sauce can be found.
+TEMPLATE: PATIENT-2 is PATIENT-1 of BRIDGE-1 where PATIENT-1 is spoken and AGENT-1 can be found .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Arrabbiata sauce is from Italy, where the spoken language is Italian and a leader is Sergio Mattarella.
+TEMPLATE: AGENT-1 is from BRIDGE-1 , where PATIENT-1 is PATIENT-1 and PATIENT-1 is PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id6 3 Food
+
+TRIPLES
+Arrabbiata_sauce | ingredient | Chili_pepper
+Arrabbiata_sauce | country | Italy
+Arrabbiata_sauce | region | Rome
+
+
+ENTITY MAP
+AGENT-1 | Arrabbiata_sauce
+PATIENT-1 | Chili_pepper
+PATIENT-3 | Rome
+PATIENT-2 | Italy
+
+
+LEX
+Id1
+TEXT: Arrabbiata sauce, a traditional dish from Rome in Italy, has chili pepper as one of its important ingredients.
+TEMPLATE: AGENT-1 , a traditional dish from PATIENT-3 in PATIENT-2 , has PATIENT-1 as one of its important ingredients .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Arrabbiata sauce from Rome in Italy contains chili pepper.
+TEMPLATE: AGENT-1 from PATIENT-3 in PATIENT-2 contains PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Arrabbiata sauce is from the region of Rome in Italy and one of the main ingredients is chili pepper.
+TEMPLATE: AGENT-1 is from the region of PATIENT-3 in PATIENT-2 and one of the main ingredients is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id7 3 Food
+
+TRIPLES
+Arrabbiata_sauce | ingredient | Garlic
+Arrabbiata_sauce | country | Italy
+Arrabbiata_sauce | region | Rome
+
+
+ENTITY MAP
+AGENT-1 | Arrabbiata_sauce
+PATIENT-1 | Garlic
+PATIENT-3 | Rome
+PATIENT-2 | Italy
+
+
+LEX
+Id1
+TEXT: Garlic is an ingredient in arrabbiata sauce which originates from the region of Rome, in Italy.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 which originates from the region of PATIENT-1 , in PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Arrabbiata sauce contains garlic and comes from the Rome region of italy.
+TEMPLATE: AGENT-1 contains PATIENT-1 and comes from the PATIENT-1 region of PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Garlic is an ingredient in arrabbiata sauce, which is a traditional dish from Rome, Italy.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 , which is a traditional dish from PATIENT-1 , PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id8 3 Food
+
+TRIPLES
+Arròs_negre | country | Spain
+Arròs_negre | region | Catalonia
+Arròs_negre | ingredient | Squid
+
+
+ENTITY MAP
+AGENT-1 | Arròs_negre
+PATIENT-1 | Spain
+PATIENT-3 | Squid
+PATIENT-2 | Catalonia
+
+
+LEX
+Id1
+TEXT: Arros negre contains Squid and comes from the Catalonia region of Spain.
+TEMPLATE: AGENT-1 contains PATIENT-3 and comes from PATIENT-2 AGENT-1 of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Squid is an ingredient of arros negre which is from the region of Catalonia in Spain.
+TEMPLATE: PATIENT-3 is an ingredient of AGENT-1 which is from AGENT-1 of PATIENT-2 in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Arros negre is from the region of Catalonia, Spain, and one of its ingredients is Squid.
+TEMPLATE: AGENT-1 is from AGENT-1 of PATIENT-2 , PATIENT-1 , and PATIENT-3 of its ingredients is PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id9 3 Food
+
+TRIPLES
+Arròs_negre | region | Valencian_Community
+Arròs_negre | country | Spain
+Arròs_negre | ingredient | Cuttlefish
+
+
+ENTITY MAP
+AGENT-1 | Arròs_negre
+PATIENT-1 | Valencian_Community
+PATIENT-3 | Cuttlefish
+PATIENT-2 | Spain
+
+
+LEX
+Id1
+TEXT: Cuttlefish is an ingredient in Arròs negre which comes from the region of the Valencian Community, in Spain.
+TEMPLATE: PATIENT-3 is an ingredient in AGENT-1 which comes from AGENT-1 of PATIENT-1 , in PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Cuttlefish is an ingredient of the dish Arròs negre, which is a dish that comes from the Valencian community in Spain.
+TEMPLATE: PATIENT-3 is an ingredient of AGENT-1 , which is a dish that comes from PATIENT-1 in PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Cuttlefish is an ingredient in Arròs negre, which is a traditional dish from the Valencian community in Spain.
+TEMPLATE: PATIENT-3 is an ingredient in AGENT-1 , which is a traditional dish from PATIENT-1 in PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id10 3 Food
+
+TRIPLES
+Asam_pedas | country | Malaysia
+Asam_pedas | region | "Sumatra and Malay Peninsula"
+Asam_pedas | mainIngredients | "Fish cooked in sour and hot sauce"
+
+
+ENTITY MAP
+AGENT-1 | Asam_pedas
+PATIENT-1 | Malaysia
+PATIENT-3 | "Fish cooked in sour and hot sauce"
+PATIENT-2 | "Sumatra and Malay Peninsula"
+
+
+LEX
+Id1
+TEXT: The main ingredients of asam pedas , a food from the Sumatra and Malay Peninsula regions of Malaysia, consist of fish cooked in a sour and hot sauce.
+TEMPLATE: The main ingredients of AGENT-1 , a food from the PATIENT-2 regions of PATIENT-1 , consist of PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Asam pedas is made from fish cooked in a sour and hot sauce and comes from the Sumatra and Malay Peninsula regions in Malaysia.
+TEMPLATE: AGENT-1 is made from PATIENT-3 and comes from the PATIENT-2 regions in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The dish Asam pedas comes from the region of Sumatra and the Malay Peninsula. Malaysia and the main ingredients are fish cooked in sour and hot sauce.
+TEMPLATE: AGENT-1 comes from the region of PATIENT-2 . PATIENT-1 and the main ingredients are PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id11 3 Food
+
+TRIPLES
+Ayam_penyet | region | Malaysia
+Ayam_penyet | country | Java
+Ayam_penyet | mainIngredients | "Squeezed" or "smashed" fried chicken served with sambal
+
+
+ENTITY MAP
+AGENT-1 | Ayam_penyet
+PATIENT-1 | Malaysia
+PATIENT-3 | "Squeezed" or "smashed" fried chicken served with sambal
+PATIENT-2 | Java
+
+
+LEX
+Id1
+TEXT: Ayam penyet is made from squeezed or squashed chicken served with sambla and is a popular dish in Java, Malaysia.
+TEMPLATE: AGENT-1 is made from squeezed or squashed PATIENT-3 served with sambla and is a popular dish in PATIENT-2 , PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Ayam penyet's main ingredients are squeezed or smashed fried chicken served with sambal. It is a popular dish in Malaysia and also found in Java.
+TEMPLATE: AGENT-1 's main ingredients are PATIENT-3 . AGENT-1 is a popular dish in PATIENT-1 and also found in PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Ayam penyet originates from Malaysia and Java. The main ingredients are squeezed or smashed fried chicken served with sambal.
+TEMPLATE: AGENT-1 originates from PATIENT-1 and PATIENT-2 . The main ingredients are PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id15 3 Food
+
+TRIPLES
+Bacon_Explosion | country | United_States
+United_States | leaderName | John_Roberts
+United_States | ethnicGroup | African_Americans
+
+
+ENTITY MAP
+BRIDGE-1 | United_States
+AGENT-1 | Bacon_Explosion
+PATIENT-1 | John_Roberts
+PATIENT-2 | African_Americans
+
+
+LEX
+Id1
+TEXT: The Bacon Explosion originated in the United States, where African Americans are an ethnic group and John Roberts is a leader.
+TEMPLATE: AGENT-1 originated in BRIDGE-1 wBRIDGE-1 PATIENT-2 are an ethnic group and PATIENT-1 is BRIDGE-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Bacon Explosion comes from the United States where African Americans are an ethnic group and John Roberts is a leader.
+TEMPLATE: AGENT-1 comes from BRIDGE-1 wBRIDGE-1 PATIENT-2 are an ethnic group and PATIENT-1 is BRIDGE-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id13 3 Food
+
+TRIPLES
+Bacon_Explosion | country | United_States
+United_States | ethnicGroup | Native_Americans_in_the_United_States
+United_States | capital | Washington,_D.C.
+
+
+ENTITY MAP
+BRIDGE-1 | United_States
+AGENT-1 | Bacon_Explosion
+PATIENT-1 | Native_Americans_in_the_United_States
+PATIENT-2 | Washington,_D.C.
+
+
+LEX
+Id1
+TEXT: One of the ethnic groups in the United States are native Americans, the country is also the home of the dish bacon explosion and has Wasington D.C. as it's capitol city.
+TEMPLATE: One of BRIDGE-1 ethnic groups in BRIDGE-1 are native BRIDGE-1 , BRIDGE-1 is also BRIDGE-1 home of BRIDGE-1 AGENT-1 and has Wasington D.C. as BRIDGE-1 capitol city .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Bacon Explosion originated in the United States, where the capital is Washington DC and Native Americans are an ethnic group.
+TEMPLATE: AGENT-1 originated in BRIDGE-1 wBRIDGE-1 BRIDGE-1 capital is PATIENT-2 and PATIENT-1 are an ethnic group .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Bacon Explosion comes from the United States where Washington D.C. is the capital and Native Americans are an ethnic group.
+TEMPLATE: AGENT-1 comes from BRIDGE-1 wBRIDGE-1 PATIENT-2 is BRIDGE-1 capital and PATIENT-1 are an ethnic group .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id14 3 Food
+
+TRIPLES
+Bacon_Explosion | country | United_States
+United_States | leaderName | Barack_Obama
+United_States | capital | Washington,_D.C.
+
+
+ENTITY MAP
+BRIDGE-1 | United_States
+AGENT-1 | Bacon_Explosion
+PATIENT-1 | Barack_Obama
+PATIENT-2 | Washington,_D.C.
+
+
+LEX
+Id1
+TEXT: The United States is the country of Bacon Explosion. Barack Obama is the leader and Washington D.C. is the capital.
+TEMPLATE: BRIDGE-1 is BRIDGE-1 of AGENT-1 . PATIENT-1 is BRIDGE-1 leader and PATIENT-2 is BRIDGE-1 capital .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The Bacon Explosion comes from the United States where Barack Obama is a leader and the capital city is Washington DC.
+TEMPLATE: AGENT-1 comes from BRIDGE-1 wBRIDGE-1 PATIENT-1 is BRIDGE-1 and BRIDGE-1 capital city is PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The Bacon Explosion originates from the United States where the leader is Barack Obama and the capital is Washington DC.
+TEMPLATE: AGENT-1 originates from BRIDGE-1 wBRIDGE-1 BRIDGE-1 leader is PATIENT-1 and BRIDGE-1 capital is PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id24 3 Food
+
+TRIPLES
+Beef_kway_teow | country | Singapore
+Singapore | currency | Singapore_dollar
+Singapore | leaderName | Halimah_Yacob
+
+
+ENTITY MAP
+BRIDGE-1 | Singapore
+AGENT-1 | Beef_kway_teow
+PATIENT-1 | Singapore_dollar
+PATIENT-2 | Halimah_Yacob
+
+
+LEX
+Id1
+TEXT: Beef kway teow is a dish from the country of Singapore, where the leader is Halimah Yacob and the currency is the Singapore dollar.
+TEMPLATE: AGENT-1 is BRIDGE-1 from BRIDGE-1 , where PATIENT-1 is PATIENT-2 and the currency is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Beef kway teow is a popular dish in Singapore, where the Singapore dollar is the currency and the leader is Halimah Yacob.
+TEMPLATE: AGENT-1 is a popular dish in BRIDGE-1 , where PATIENT-1 is the currency and PATIENT-1 is PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id16 3 Food
+
+TRIPLES
+Bacon_sandwich | dishVariation | BLT
+Bacon_sandwich | country | United_Kingdom
+Bacon_sandwich | ingredient | Condiment
+
+
+ENTITY MAP
+AGENT-1 | Bacon_sandwich
+PATIENT-1 | BLT
+PATIENT-3 | Condiment
+PATIENT-2 | United_Kingdom
+
+
+LEX
+Id1
+TEXT: Bacon sandwiches are variations of BLT and come from the U.K. Condiments are found in these sandwiches.
+TEMPLATE: AGENT-1 are variations of PATIENT-1 and come from PATIENT-2 PATIENT-3 are found in these sandwiches .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The UK dish, the bacon sandwich uses condiments as an ingredient and has the variation BLT.
+TEMPLATE: PATIENT-2 dish , AGENT-1 uses PATIENT-3 as an ingredient and has PATIENT-2 PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The bacon sandwich, a variation of the BLT, comes from the UK and contains condiments.
+TEMPLATE: AGENT-1 , AGENT-1 variation of PATIENT-1 , comes from PATIENT-2 and contains PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id17 3 Food
+
+TRIPLES
+Baked_Alaska | country | France
+Baked_Alaska | region | New_York
+Baked_Alaska | ingredient | Meringue
+
+
+ENTITY MAP
+AGENT-1 | Baked_Alaska
+PATIENT-1 | France
+PATIENT-3 | Meringue
+PATIENT-2 | New_York
+
+
+LEX
+Id1
+TEXT: Meringue is an ingredient of a Baked Alaska, which is from the New York region and France.
+TEMPLATE: PATIENT-3 is an ingredient of AGENT-1 , which is from the PATIENT-2 region and PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Meringue is an ingredient of a Baked Alaska, which is reputed to come from both France and New York.
+TEMPLATE: PATIENT-3 is an ingredient of AGENT-1 , which is reputed to come from both PATIENT-1 and PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: An ingredient of baked Alaska is meringue which originates in France and the New York regions.
+TEMPLATE: An ingredient of AGENT-1 is PATIENT-3 which originates in PATIENT-1 and the PATIENT-2 regions .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id18 3 Food
+
+TRIPLES
+Baked_Alaska | country | United_States
+Baked_Alaska | region | New_York
+Baked_Alaska | ingredient | Sponge_cake
+
+
+ENTITY MAP
+AGENT-1 | Baked_Alaska
+PATIENT-1 | United_States
+PATIENT-3 | Sponge_cake
+PATIENT-2 | New_York
+
+
+LEX
+Id1
+TEXT: Sponge cake is one of the ingredients in Baked Alaska, a dish from the New York region and found in the United States.
+TEMPLATE: PATIENT-3 is one of PATIENT-1 ingredients in AGENT-1 , a dish from PATIENT-1 PATIENT-2 region and found in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Sponge cake is an ingredient of Baked Alaska, which comes from the region of New York and can be found in the U.S.
+TEMPLATE: PATIENT-3 is an ingredient of AGENT-1 , which comes from PATIENT-1 region of PATIENT-2 and can be found in PATIENT-1 U.S.
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: An ingredient of baked Alaska is sponge cake, the dish originates from New York, USA.
+TEMPLATE: An ingredient of AGENT-1 is PATIENT-3 , PATIENT-3 originates from PATIENT-2 , PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id19 3 Food
+
+TRIPLES
+Baked_Alaska | course | Dessert
+Dessert | dishVariation | Cookie
+Baked_Alaska | ingredient | Christmas_pudding
+
+
+ENTITY MAP
+BRIDGE-1 | Dessert
+AGENT-1 | Baked_Alaska
+PATIENT-1 | Cookie
+PATIENT-2 | Christmas_pudding
+
+
+LEX
+Id1
+TEXT: Christmas pudding is an ingredient in the dessert Baked Alaska. Cookie is also a dessert.
+TEMPLATE: PATIENT-2 is an ingredient in BRIDGE-1 AGENT-1 . PATIENT-1 is also BRIDGE-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: A cookie can be a dessert, as can baked alaska which has christmas pudding as an ingredient.
+TEMPLATE: PATIENT-1 can be BRIDGE-1 , as can AGENT-1 which has PATIENT-2 as an ingredient .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Cookies are a dessert item, as is Baked Alaska that has Christmas pudding as one of its ingredients.
+TEMPLATE: PATIENT-1 are BRIDGE-1 item , as is AGENT-1 that has PATIENT-2 as one of its ingredients .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id20 3 Food
+
+TRIPLES
+Baked_Alaska | course | Dessert
+Dessert | dishVariation | Sandesh_(confectionery)
+Baked_Alaska | ingredient | Christmas_pudding
+
+
+ENTITY MAP
+BRIDGE-1 | Dessert
+AGENT-1 | Baked_Alaska
+PATIENT-1 | Sandesh_(confectionery)
+PATIENT-2 | Christmas_pudding
+
+
+LEX
+Id1
+TEXT: Sandesh (confectionery) is a dish that can be served as a dessert. Another dish that is a dessert is Baked Alaska which has Christmas pudding as an ingredient.
+TEMPLATE: BRIDGE-1 ( confectionery ) is a dish that can be served as BRIDGE-1 . Another dish that is BRIDGE-1 is AGENT-1 which has PATIENT-2 as an ingredient .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Sandesh and Baked Alaska are desserts. Baked Alaska uses Christmas pudding as an ingredient.
+TEMPLATE: BRIDGE-1 and AGENT-1 are BRIDGE-1 . AGENT-1 uses PATIENT-2 as an ingredient .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Christmas pudding is an ingredient in Baked Alaska, which is a dessert, same as sandesh.
+TEMPLATE: PATIENT-2 is an ingredient in AGENT-1 , which is BRIDGE-1 , same as PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id21 3 Food
+
+TRIPLES
+Bandeja_paisa | country | Colombian_cuisine
+Bandeja_paisa | ingredient | Kidney_bean
+Bandeja_paisa | region | Antioquia_Department
+
+
+ENTITY MAP
+AGENT-1 | Bandeja_paisa
+PATIENT-1 | Colombian_cuisine
+PATIENT-3 | Antioquia_Department
+PATIENT-2 | Kidney_bean
+
+
+LEX
+Id1
+TEXT: Part of Columbian cuisine, Bandeja paisa (which has kidney beans as one of the ingredients), comes from Antioquia Department area.
+TEMPLATE: Part of PATIENT-1 , AGENT-1 ( which has PATIENT-2 as one of PATIENT-1 ingredients ) , comes from PATIENT-3 area .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Bandeja paisa, which contains kidney beans, is a traditional dish found in the Antioquia Department of Colombia.
+TEMPLATE: AGENT-1 , which contains PATIENT-2 , is a traditional dish found in PATIENT-3 of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Kidney beans are an ingredient of Bandeja paisa which is a Colombian dish from the Antioquia department.
+TEMPLATE: PATIENT-2 are PATIENT-3 of AGENT-1 which is PATIENT-1 from PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id22 3 Food
+
+TRIPLES
+Barny_Cakes | country | France
+France | leaderName | Gérard_Larcher
+France | leaderName | Claude_Bartolone
+
+
+ENTITY MAP
+BRIDGE-1 | France
+AGENT-1 | Barny_Cakes
+PATIENT-1 | Gérard_Larcher
+PATIENT-2 | Claude_Bartolone
+
+
+LEX
+Id1
+TEXT: Barny Cakes come from France where Gerard Larcher and Claude Bartolone are leaders.
+TEMPLATE: AGENT-1 come from BRIDGE-1 where PATIENT-1 and PATIENT-2 are leaders .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Barny cakes are found in France where Gerard Larcher and Claude Bartolone are leaders.
+TEMPLATE: AGENT-1 are found in BRIDGE-1 where PATIENT-1 and PATIENT-2 are leaders .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Barny cakes are found in France where both Gerard Larcher and Claude Bartolone are leaders.
+TEMPLATE: AGENT-1 are found in BRIDGE-1 where both PATIENT-1 and PATIENT-2 are leaders .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id23 3 Food
+
+TRIPLES
+Barny_Cakes | dishVariation | Apple
+Barny_Cakes | carbohydrate | 18.0 g
+Barny_Cakes | protein | 1.8 g
+
+
+ENTITY MAP
+AGENT-1 | Barny_Cakes
+PATIENT-1 | Apple
+PATIENT-3 | 1.8 g
+PATIENT-2 | 18.0 g
+
+
+LEX
+Id1
+TEXT: Barny cakes can be made with apple and have 18 grams of carbs and 1.8 g of protein.
+TEMPLATE: AGENT-1 can be made with PATIENT-1 and have PATIENT-2 of carbs and PATIENT-3 of protein .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Barny cakes can be made with apple and contain 1.8g protein and 18g of carbs.
+TEMPLATE: AGENT-1 can be made with PATIENT-1 and contain PATIENT-3 protein and PATIENT-2 of carbs .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Barny cakes may be made with apple and have 1.8g of protein and 18g of carbohydrates.
+TEMPLATE: AGENT-1 may be made with PATIENT-1 and have PATIENT-3 of protein and PATIENT-2 of carbohydrates .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id25 3 Food
+
+TRIPLES
+Beef_kway_teow | ingredient | Oyster_sauce
+Beef_kway_teow | region | Indonesia
+Beef_kway_teow | country | "Singapore and Indonesia"
+
+
+ENTITY MAP
+AGENT-1 | Beef_kway_teow
+PATIENT-1 | Oyster_sauce
+PATIENT-3 | "Singapore and Indonesia"
+PATIENT-2 | Indonesia
+
+
+LEX
+Id1
+TEXT: A dish commonly found in Singapore and Indonesia is beef kway teow which has oyster sauce as a main ingredient.
+TEMPLATE: PATIENT-2 commonly found in PATIENT-3 is AGENT-1 which has PATIENT-1 as a main ingredient .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Beef kway teow contains oyster sauce and is found in Indonesia and Singapore.
+TEMPLATE: AGENT-1 contains PATIENT-1 and is found in PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id26 3 Food
+
+TRIPLES
+Beef_kway_teow | region | Singapore
+Beef_kway_teow | country | Indonesia
+Singapore | leaderName | Tony_Tan
+
+
+ENTITY MAP
+BRIDGE-1 | Singapore
+AGENT-1 | Beef_kway_teow
+PATIENT-1 | Indonesia
+PATIENT-2 | Tony_Tan
+
+
+LEX
+Id1
+TEXT: A popular food in Indonesia, Beef kway teow originates from Singapore. The country where Tony Tan is the leader.
+TEMPLATE: A popular food in PATIENT-1 , AGENT-1 originates from BRIDGE-1 . The country where PATIENT-2 is PATIENT-1 leader .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Tony Tan is a leader in Singapore where the dish Beef kway teow originates from. It is also found in Indonesia.
+TEMPLATE: PATIENT-2 is a leader in BRIDGE-1 where AGENT-1 AGENT-1 originates from . BRIDGE-1 is also found in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id35 3 Food
+
+TRIPLES
+Dessert | dishVariation | Cake
+Bionico | ingredient | Granola
+Bionico | course | Dessert
+
+
+ENTITY MAP
+BRIDGE-1 | Dessert
+AGENT-1 | Bionico
+PATIENT-1 | Cake
+PATIENT-2 | Granola
+
+
+LEX
+Id1
+TEXT: Bionico is a dessert that requires granola as one of its ingredients; it can be eaten as an alternative to cake.
+TEMPLATE: AGENT-1 is BRIDGE-1 that requires PATIENT-2 as one of AGENT-1s ingredients ; PATIENT-2 can be eaten as an alternative to PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Bionico requires granola as one of its ingredients, it is served at the dessert course, like cake.
+TEMPLATE: AGENT-1 requires PATIENT-2 as one of AGENT-1s ingredients , PATIENT-2 is served at BRIDGE-1 , like PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id27 3 Food
+
+TRIPLES
+Bhajji | country | India
+Bhajji | mainIngredients | "Gram flour, vegetables"
+Bhajji | ingredient | Gram_flour
+
+
+ENTITY MAP
+AGENT-1 | Bhajji
+PATIENT-1 | India
+PATIENT-3 | Gram_flour
+PATIENT-2 | "Gram flour, vegetables"
+
+
+LEX
+Id1
+TEXT: Bhajji originates from India, it's main ingredients are gram flour and vegetables.
+TEMPLATE: AGENT-1 originates from PATIENT-1 , PATIENT-3 's main ingredients are PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The key ingredients of a Bhajji from India are gram flour and vegetables.
+TEMPLATE: PATIENT-3 of AGENT-1 from PATIENT-1 are PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The main ingredients in Bhajji, which originates from Indiam are gram flour and vegetables.
+TEMPLATE: The main ingredients in AGENT-1 , which originates from PATIENT-3 are PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id28 3 Food
+
+TRIPLES
+Bhajji | country | India
+India | demonym | Indian_people
+India | leaderName | T._S._Thakur
+
+
+ENTITY MAP
+BRIDGE-1 | India
+AGENT-1 | Bhajji
+PATIENT-1 | Indian_people
+PATIENT-2 | T._S._Thakur
+
+
+LEX
+Id1
+TEXT: Bhajji originates from India, country of Indians where the leader is T. S. Thakur.
+TEMPLATE: AGENT-1 originates from BRIDGE-1 , country of PATIENT-1 where the leader is PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Bhajji originates from India, where the leader is called T S Thakur and the people who live there are called Indians.
+TEMPLATE: AGENT-1 originates from BRIDGE-1 , where the leader is called PATIENT-2 and PATIENT-1 who live there are called PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Bhajji originate from India where T S Thakur leads the Indian people.
+TEMPLATE: AGENT-1 originate from BRIDGE-1 where PATIENT-2 leads PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id29 3 Food
+
+TRIPLES
+Bhajji | country | India
+India | leaderName | T._S._Thakur
+India | leaderName | Narendra_Modi
+
+
+ENTITY MAP
+BRIDGE-1 | India
+AGENT-1 | Bhajji
+PATIENT-1 | T._S._Thakur
+PATIENT-2 | Narendra_Modi
+
+
+LEX
+Id1
+TEXT: Bhajji comes from the country of India, where two of the leaders are, T. S. Thakur and Narendra Modi.
+TEMPLATE: AGENT-1 comes from BRIDGE-1 of BRIDGE-1 , where two of the leaders are , PATIENT-1 and PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Bhajji originates from India, where two of the leaders are Narendra Modi and T.S. Thakur.
+TEMPLATE: AGENT-1 originates from BRIDGE-1 , where two of the leaders are PATIENT-2 and PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The dish bhajji originates in India where T.S. Thakur and Narendra Modi are leaders.
+TEMPLATE: AGENT-1 originates in BRIDGE-1 where PATIENT-1 and PATIENT-2 are leaders .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id30 3 Food
+
+TRIPLES
+Bhajji | region | Karnataka
+Bhajji | mainIngredients | "Gram flour, vegetables"
+Bhajji | ingredient | Gram_flour
+
+
+ENTITY MAP
+AGENT-1 | Bhajji
+PATIENT-1 | Karnataka
+PATIENT-3 | Gram_flour
+PATIENT-2 | "Gram flour, vegetables"
+
+
+LEX
+Id1
+TEXT: Bhajji originates from the Karnataka region and the main ingredients are vegetables and gram flour.
+TEMPLATE: AGENT-1 originates from the PATIENT-1 region and PATIENT-2 are vegetables and PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The main ingredients in Bhajji are gram flour and vegetables, this comes from the Karnataka region.
+TEMPLATE: The main ingredients in AGENT-1 are PATIENT-2 , PATIENT-3 comes from the PATIENT-1 region .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Bhajji are found in the region of Karnataka, its main ingredients are gram flour and vegetables.
+TEMPLATE: AGENT-1 are found in PATIENT-2 of PATIENT-1 , AGENT-1 main ingredients are PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id31 3 Food
+
+TRIPLES
+Binignit | ingredient | Sweet_potato
+Binignit | mainIngredients | Banana
+Binignit | country | Philippines
+
+
+ENTITY MAP
+AGENT-1 | Binignit
+PATIENT-1 | Sweet_potato
+PATIENT-3 | Philippines
+PATIENT-2 | Banana
+
+
+LEX
+Id1
+TEXT: The binignit dish can be found in the Philippines. Two of the main ingredients in it are banana and sweet potato.
+TEMPLATE: AGENT-1 can be found in PATIENT-3 . Two of PATIENT-3 main ingredients in AGENT-1 are PATIENT-2 and PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The main ingredients of Binignit are banana and sweet potatoes, and it can be found in the Philippines.
+TEMPLATE: The main ingredients of AGENT-1 are PATIENT-2 and PATIENT-1 , and AGENT-1 can be found in PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Binignit is a dish from the Philippines made from banana and sweet potato.
+TEMPLATE: AGENT-1 is a dish from PATIENT-3 made from PATIENT-2 and PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id32 3 Food
+
+TRIPLES
+Bionico | country | Mexico
+Bionico | course | Dessert
+Bionico | ingredient | Sour_cream
+
+
+ENTITY MAP
+AGENT-1 | Bionico
+PATIENT-1 | Mexico
+PATIENT-3 | Sour_cream
+PATIENT-2 | Dessert
+
+
+LEX
+Id1
+TEXT: Bionico is a dessert containing sour cream from Mexico.
+TEMPLATE: AGENT-1 is PATIENT-2 containing PATIENT-3 from PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Sour cream is an ingredient of Bionico, that is a dessert course found in Mexico.
+TEMPLATE: PATIENT-3 is an ingredient of AGENT-1 , that is PATIENT-2 found in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Sour cream is used to serve Bionico, a dessert food found in Mexico.
+TEMPLATE: PATIENT-3 is used to serve AGENT-1 , PATIENT-2 food found in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id33 3 Food
+
+TRIPLES
+Bionico | country | Mexico
+Bionico | region | Jalisco
+Bionico | ingredient | Raisin
+
+
+ENTITY MAP
+AGENT-1 | Bionico
+PATIENT-1 | Mexico
+PATIENT-3 | Raisin
+PATIENT-2 | Jalisco
+
+
+LEX
+Id1
+TEXT: Containing raisins, Bionico is found in the region of Jalisco, in Mexico.
+TEMPLATE: Containing PATIENT-3 , AGENT-1 is found in PATIENT-3 of PATIENT-2 , in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Raisins are found in bionico which comes from the region of Jalisco in Mexico.
+TEMPLATE: PATIENT-3 are found in AGENT-1 which comes from PATIENT-3 of PATIENT-2 in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Raisins are an ingredient of Bionico which is from the region Jalisco, Mexico.
+TEMPLATE: PATIENT-3 are an ingredient of AGENT-1 which is from PATIENT-3 PATIENT-2 , PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id34 3 Food
+
+TRIPLES
+Celery | genus | Apium
+Bakso | ingredient | Celery
+Celery | family | Apiaceae
+
+
+ENTITY MAP
+BRIDGE-1 | Celery
+AGENT-1 | Bakso
+PATIENT-1 | Apium
+PATIENT-2 | Apiaceae
+
+
+LEX
+Id1
+TEXT: One ingredient in Bakso is celery, which is a member of the genus Apium in the family Apiaceae.
+TEMPLATE: One ingredient in AGENT-1 is BRIDGE-1 , which is a member of PATIENT-1 in PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Celery is from the genus apium and the family Apiaceae. It is an ingredient of Bakso.
+TEMPLATE: BRIDGE-1 is from PATIENT-1 and PATIENT-2 . BRIDGE-1 is an ingredient of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Celery is a member of the family Apiaceae, it is from the genus apium and is an ingredient of Bakso.
+TEMPLATE: BRIDGE-1 is a member of PATIENT-2 , BRIDGE-1 is from PATIENT-1 and is an ingredient of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id38 3 Food
+
+TRIPLES
+Java | ethnicGroup | Banyumasan_people
+Ayam_penyet | region | "Nationwide, also can be found in Malaysia and Singapore"
+Ayam_penyet | country | Java
+
+
+ENTITY MAP
+BRIDGE-1 | Java
+AGENT-1 | Ayam_penyet
+PATIENT-1 | Banyumasan_people
+PATIENT-2 | "Nationwide, also can be found in Malaysia and Singapore"
+
+
+LEX
+Id1
+TEXT: Ayam penyet originates from Java where the Banyumasan are an ethnic group. It can be found nationwide and also in Singapore and Malaysia.
+TEMPLATE: AGENT-1 originates from BRIDGE-1 where PATIENT-1 are an ethnic group . AGENT-1 can be found nationwide and also in PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The dish Ayam penyet originates from Java where the Banyumasan people are an ethnic group. The dish can also be found in Malaysia and Singapore.
+TEMPLATE: AGENT-1 AGENT-1 originates from BRIDGE-1 where PATIENT-1 are an ethnic group . AGENT-1 can also be found in PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id36 3 Food
+
+TRIPLES
+Indonesia | capital | Jakarta
+Indonesia | leaderName | Jusuf_Kalla
+Bakso | country | Indonesia
+
+
+ENTITY MAP
+BRIDGE-1 | Indonesia
+AGENT-1 | Bakso
+PATIENT-1 | Jakarta
+PATIENT-2 | Jusuf_Kalla
+
+
+LEX
+Id1
+TEXT: Bakso is a dish from the country of Indonesia, where the capital is Jakarta and one of the leaders is Jusuf Kalla.
+TEMPLATE: AGENT-1 is BRIDGE-1 from BRIDGE-1 , where BRIDGE-1 capital is PATIENT-1 and one of BRIDGE-1 leaders is PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The dish bakso comes from Indonesia where Jusuf Kalla is the leader and Jakarta is the capitol city.
+TEMPLATE: AGENT-1 comes from BRIDGE-1 where PATIENT-2 is BRIDGE-1 leader and PATIENT-1 is BRIDGE-1 capitol city .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Bakso is a dish from the country of Indonesia, where the capital is Jakarta and the leader is Jusuf Kalla.
+TEMPLATE: AGENT-1 is BRIDGE-1 from BRIDGE-1 , where BRIDGE-1 capital is PATIENT-1 and BRIDGE-1 leader is PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id37 3 Food
+
+TRIPLES
+Java | ethnicGroup | Baduy
+Ayam_penyet | region | Singapore
+Ayam_penyet | country | Java
+
+
+ENTITY MAP
+BRIDGE-1 | Java
+AGENT-1 | Ayam_penyet
+PATIENT-1 | Baduy
+PATIENT-2 | Singapore
+
+
+LEX
+Id1
+TEXT: From the Singapore region, Ayam penyet, is a food found in Java where an ethic group is the Baduy.
+TEMPLATE: From PATIENT-2 , AGENT-1 , is a food found in BRIDGE-1 where an ethic group is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Ayam penyet is a dish from the region of Singapore and is also found in Java where the Baduy are an ethnic group.
+TEMPLATE: AGENT-1 is PATIENT-2 from PATIENT-2 and is also found in BRIDGE-1 where PATIENT-1 are an ethnic group .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Ayam penyet is from Singapore and also Java, where the Baduy are an ethnic group.
+TEMPLATE: AGENT-1 is from PATIENT-2 and also BRIDGE-1 , where PATIENT-1 are an ethnic group .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id39 3 Food
+
+TRIPLES
+Spain | language | Spanish_language
+Arròs_negre | country | Spain
+Spain | leaderName | Felipe_VI_of_Spain
+
+
+ENTITY MAP
+BRIDGE-1 | Spain
+AGENT-1 | Arròs_negre
+PATIENT-1 | Spanish_language
+PATIENT-2 | Felipe_VI_of_Spain
+
+
+LEX
+Id1
+TEXT: The leader of Spain is Felipe VI and it is also where Spanish is spoken and the dish arros negre is from.
+TEMPLATE: The leader of BRIDGE-1 is PATIENT-2 and BRIDGE-1 is also where BRIDGE-1 is spoken and AGENT-1 is from .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Arros Negre is a traditional dish from Spain where they speak Spanish and the leader is Felipe VI.
+TEMPLATE: AGENT-1 is a traditional dish from BRIDGE-1 where they speak BRIDGE-1 and the leader is PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Arros negre comes from Spain where Felipe VI is the leader and the Spanish language is spoken.
+TEMPLATE: AGENT-1 comes from BRIDGE-1 where PATIENT-2 is the leader and PATIENT-1 is spoken .
+CORRECT: 
+COMMENT: 
+-
+

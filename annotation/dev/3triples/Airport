@@ -1,0 +1,785 @@
+
+Entry: Id2 3 Airport
+
+TRIPLES
+Adirondack_Regional_Airport | runwayLength | 1219.0
+Adirondack_Regional_Airport | cityServed | Lake_Placid,_New_York
+Adirondack_Regional_Airport | cityServed | Saranac_Lake,_New_York
+
+
+ENTITY MAP
+AGENT-1 | Adirondack_Regional_Airport
+PATIENT-1 | 1219.0
+PATIENT-3 | Saranac_Lake,_New_York
+PATIENT-2 | Lake_Placid,_New_York
+
+
+LEX
+Id1
+TEXT: Adirondack Regional Airport has a runway length of 1219.0 and serves the cities of Saranac Lake and Lake Placid, New York.
+TEMPLATE: AGENT-1 has a runway length of PATIENT-1 and serves the cities of PATIENT-3 and PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Adirondack Regional Airport serves the city of Saranac Lake, New York and the residents of Lake Placid and has a runway that's 1,219 long.
+TEMPLATE: AGENT-1 serves the city of PATIENT-3 and the residents of PATIENT-2 and has a runway that 's PATIENT-1 long .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id1 3 Airport
+
+TRIPLES
+Abilene_Regional_Airport | cityServed | Abilene,_Texas
+Abilene,_Texas | isPartOf | Taylor_County,_Texas
+Abilene,_Texas | country | United_States
+
+
+ENTITY MAP
+BRIDGE-1 | Abilene,_Texas
+AGENT-1 | Abilene_Regional_Airport
+PATIENT-1 | Taylor_County,_Texas
+PATIENT-2 | United_States
+
+
+LEX
+Id1
+TEXT: Abilene Regional Airport serves the city of Abilene which is part of Taylor County,Texas, in the United States.
+TEMPLATE: AGENT-1 serves PATIENT-2 of BRIDGE-1 which is PATIENT-2 of PATIENT-1 , PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Abilene Regional Airport serves the city of Abilene which is part of Taylor County, Texas, in the United States.
+TEMPLATE: AGENT-1 serves PATIENT-2 of BRIDGE-1 which is PATIENT-2 of PATIENT-1 , PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The Abilene regional airport serves Abilene, Texas, which is a part of Taylor County, Texas in the United States.
+TEMPLATE: AGENT-1 serves BRIDGE-1 , which is PATIENT-2 of PATIENT-1 in PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id4 3 Airport
+
+TRIPLES
+Agra_Airport | location | India
+Agra_Airport | operatingOrganisation | Indian_Air_Force
+Agra_Airport | ICAO_Location_Identifier | "VIAG"
+
+
+ENTITY MAP
+AGENT-1 | Agra_Airport
+PATIENT-1 | India
+PATIENT-3 | "VIAG"
+PATIENT-2 | Indian_Air_Force
+
+
+LEX
+Id1
+TEXT: The Indian Air Force in India, operates Agra Airport which uses VIAG as its ICAO location identifier.
+TEMPLATE: PATIENT-2 in PATIENT-1 , operates AGENT-1 which uses PATIENT-3 as PATIENT-2 ICAO location identifier .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Agra Airport, located in India, is operated by the Indian Air Force, and has an ICAO identifier is VIAG.
+TEMPLATE: AGENT-1 , located in PATIENT-1 , is operated by PATIENT-2 , and has an ICAO identifier is PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id3 3 Airport
+
+TRIPLES
+Adolfo_Suárez_Madrid–Barajas_Airport | runwayLength | 4100.0
+Adolfo_Suárez_Madrid–Barajas_Airport | location | Madrid
+Adolfo_Suárez_Madrid–Barajas_Airport | runwayName | "14L/32R"
+
+
+ENTITY MAP
+AGENT-1 | Adolfo_Suárez_Madrid–Barajas_Airport
+PATIENT-1 | 4100.0
+PATIENT-3 | "14L/32R"
+PATIENT-2 | Madrid
+
+
+LEX
+Id1
+TEXT: The 14L/32R runway of the Adolfo Suarez Madrid - Barajas Airport in Madrid has a length of 4100.0.
+TEMPLATE: The PATIENT-3 runway of AGENT-1 in PATIENT-2 has a length of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Adolfo Suarez Madrid-Barajas Airport is in Madrid; its runway name is 14L/32R and its runway length is 4100.
+TEMPLATE: AGENT-1 is in PATIENT-2 ; PATIENT-2 runway name is PATIENT-3 and PATIENT-2 runway length is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The Adolfo Suarez Madrid-Barajas Airport is in Madrid. Its runway, called 14L/32R has length of 4100.
+TEMPLATE: AGENT-1 is in PATIENT-2 . PATIENT-2 runway , called PATIENT-3 has length of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id5 3 Airport
+
+TRIPLES
+Al_Asad_Airbase | operatingOrganisation | United_States_Air_Force
+Al_Asad_Airbase | location | Iraq
+Al_Asad_Airbase | runwayLength | 3078.48
+
+
+ENTITY MAP
+AGENT-1 | Al_Asad_Airbase
+PATIENT-1 | United_States_Air_Force
+PATIENT-3 | 3078.48
+PATIENT-2 | Iraq
+
+
+LEX
+Id1
+TEXT: Operated by the United States Air Force, Al Asad Airbase, in Iraq, has a runway length of 3078.48 metres.
+TEMPLATE: Operated by PATIENT-1 , AGENT-1 , in PATIENT-2 , has a runway length of PATIENT-3 metres .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The USAF operated the Al Asad Airbase, located in iraq, with a length of 3078.48.
+TEMPLATE: PATIENT-1 operated AGENT-1 , located in PATIENT-2 , with a length of PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id6 3 Airport
+
+TRIPLES
+Al_Asad_Airbase | operatingOrganisation | United_States_Air_Force
+United_States_Air_Force | battles | Invasion_of_Grenada
+United_States_Air_Force | battles | Korean_War
+
+
+ENTITY MAP
+BRIDGE-1 | United_States_Air_Force
+AGENT-1 | Al_Asad_Airbase
+PATIENT-1 | Invasion_of_Grenada
+PATIENT-2 | Korean_War
+
+
+LEX
+Id1
+TEXT: Al Asad airbase is operated by the United States Air Force which was involved in the Invasion of Grenada and the Korean war.
+TEMPLATE: BRIDGE-1 is operated by BRIDGE-1 which was involved in PATIENT-1 and PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id8 3 Airport
+
+TRIPLES
+Al_Asad_Airbase | operatingOrganisation | United_States_Air_Force
+United_States_Air_Force | battles | Korean_War
+United_States_Air_Force | battles | Operation_Enduring_Freedom
+
+
+ENTITY MAP
+BRIDGE-1 | United_States_Air_Force
+AGENT-1 | Al_Asad_Airbase
+PATIENT-1 | Korean_War
+PATIENT-2 | Operation_Enduring_Freedom
+
+
+LEX
+Id1
+TEXT: The United States Air Force who is the operating organisation for Al Asad airbase fought battles in the Korean war and also in Operation Enduring Freedom.
+TEMPLATE: BRIDGE-1 who is the operating organisation for BRIDGE-1 fought battles in PATIENT-1 and also in PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The US Air Force, veteran of the Korean war and Operation Enduring Freedom, operated Al Asad Airbase,.
+TEMPLATE: BRIDGE-1 , veteran of PATIENT-1 and PATIENT-2 , operated AGENT-1 , .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id7 3 Airport
+
+TRIPLES
+Al_Asad_Airbase | operatingOrganisation | United_States_Air_Force
+United_States_Air_Force | battles | Invasion_of_Grenada
+United_States_Air_Force | battles | Operation_Enduring_Freedom
+
+
+ENTITY MAP
+BRIDGE-1 | United_States_Air_Force
+AGENT-1 | Al_Asad_Airbase
+PATIENT-1 | Invasion_of_Grenada
+PATIENT-2 | Operation_Enduring_Freedom
+
+
+LEX
+Id1
+TEXT: Al Asad Airbase is operated by the United States Air Force which has the Invasion of Grenada as one of its noted battles as well as The Operation Enduring Freedom.
+TEMPLATE: AGENT-1 is operated by BRIDGE-1 which has PATIENT-1 as one of its noted battles as well as PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The USAF operates Al Asad Airbase. They fought in the Invasion of Grenada and The Operation Enduring Freedom.
+TEMPLATE: BRIDGE-1 operates AGENT-1 . They fought in PATIENT-1 and PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The US Air Force is the operating organisation for Al Asad Airbase, used in battles such as Invasion of Grenada and the operation enduring freedom.
+TEMPLATE: BRIDGE-1 is the operating organisation for AGENT-1 , used in battles such as Invasion of PATIENT-1 and PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id9 3 Airport
+
+TRIPLES
+Alderney_Airport | 1st_runway_SurfaceType | Poaceae
+Alderney_Airport | runwayLength | 733.0
+Alderney_Airport | cityServed | Alderney
+
+
+ENTITY MAP
+AGENT-1 | Alderney_Airport
+PATIENT-1 | Poaceae
+PATIENT-3 | Alderney
+PATIENT-2 | 733.0
+
+
+LEX
+Id1
+TEXT: The 1st runway at Alderney Airport is made from Poaceae and has a length of 733.0.
+TEMPLATE: The 1st runway at AGENT-1 is made from PATIENT-1 and has PATIENT-3 of PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id11 3 Airport
+
+TRIPLES
+Amsterdam_Airport_Schiphol | cityServed | Amsterdam
+Amsterdam_Airport_Schiphol | runwayLength | 3500.0
+Amsterdam_Airport_Schiphol | elevationAboveTheSeaLevel_(in_metres) | -3.3528
+
+
+ENTITY MAP
+AGENT-1 | Amsterdam_Airport_Schiphol
+PATIENT-1 | Amsterdam
+PATIENT-3 | -3.3528
+PATIENT-2 | 3500.0
+
+
+LEX
+Id1
+TEXT: Amsterdam airport, Schipol which serves the city of Amsterdam is located at -3.3528 metres above sea level and has a runway length of 3500.
+TEMPLATE: AGENT-1 which serves the city of PATIENT-1 is located at PATIENT-3 metres above sea level and has a runway length of PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id10 3 Airport
+
+TRIPLES
+Alpena_County_Regional_Airport | location | Wilson_Township,_Alpena_County,_Michigan
+Alpena_County_Regional_Airport | runwayLength | 1533.0
+Alpena_County_Regional_Airport | elevationAboveTheSeaLevel_(in_metres) | 210
+
+
+ENTITY MAP
+AGENT-1 | Alpena_County_Regional_Airport
+PATIENT-1 | Wilson_Township,_Alpena_County,_Michigan
+PATIENT-3 | 210
+PATIENT-2 | 1533.0
+
+
+LEX
+Id1
+TEXT: Located in Wilson Township, Alpena County, Michigan, Alpena County Regional Airport has an elevation of 210 metres above sea level and a runway length of 1,533 metres.
+TEMPLATE: Located in PATIENT-1 , AGENT-1 has an elevation of PATIENT-3 metres above sea level and a runway length of PATIENT-2 metres .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Aplena County Regional Airport; is elevated 210 metres above sea level, has a runway length of 1,533 metres and is located in Wilson Township, Alpena County, Michigan.
+TEMPLATE: AGENT-1 ; is elevated PATIENT-3 metres above sea level , has a runway length of PATIENT-2 metres and is located in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Alpena County Regional Airport is located in the Wilson Township, Alpena County, Michigan. It is 210 m above sea level and its runway length is 1533 feet.
+TEMPLATE: AGENT-1 is located in PATIENT-1 . AGENT-1 is PATIENT-3 m above sea level and AGENT-1 runway length is PATIENT-2 feet .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id14 3 Airport
+
+TRIPLES
+Angola_International_Airport | location | Ícolo_e_Bengo
+Ícolo_e_Bengo | country | Angola
+Angola_International_Airport | runwayName | "South Runway"
+
+
+ENTITY MAP
+BRIDGE-1 | Ícolo_e_Bengo
+AGENT-1 | Angola_International_Airport
+PATIENT-1 | Angola
+PATIENT-2 | "South Runway"
+
+
+LEX
+Id1
+TEXT: Angola International Airport is located at Ícolo e Bengo in Angola and the runway is named "south runway".
+TEMPLATE: AGENT-1 is located at BRIDGE-1 in PATIENT-1 and the runway is named `` PATIENT-2 '' .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Angola International Airport is located at Ícolo e Bengo, Angola and the runway is known as "South Runway".
+TEMPLATE: AGENT-1 is located at BRIDGE-1 , PATIENT-1 and the runway is known as `` PATIENT-2 '' .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id12 3 Airport
+
+TRIPLES
+Andrews_County_Airport | location | Texas
+Texas | largestCity | Houston
+Texas | country | United_States
+
+
+ENTITY MAP
+BRIDGE-1 | Texas
+AGENT-1 | Andrews_County_Airport
+PATIENT-1 | Houston
+PATIENT-2 | United_States
+
+
+LEX
+Id1
+TEXT: Andrews County Airport is located in Texas (United States), where Houston is the largest city.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 ( PATIENT-2 ) , wPATIENT-2 PATIENT-1 is PATIENT-2 largest city .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Andrews County Airport is in Texas, United States. Houston is the largest city in Texas.
+TEMPLATE: AGENT-1 is in PATIENT-2 . PATIENT-1 is PATIENT-2 largest city in BRIDGE-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The United States Andrews County Airport is located in Texas, whose largest city is Houston.
+TEMPLATE: PATIENT-2 AGENT-1 is located in BRIDGE-1 , whose largest city is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id13 3 Airport
+
+TRIPLES
+Angola_International_Airport | location | Ícolo_e_Bengo
+Ícolo_e_Bengo | country | Angola
+Angola_International_Airport | runwayLength | 4000.0
+
+
+ENTITY MAP
+BRIDGE-1 | Ícolo_e_Bengo
+AGENT-1 | Angola_International_Airport
+PATIENT-1 | Angola
+PATIENT-2 | 4000.0
+
+
+LEX
+Id1
+TEXT: Angola International airport is located in Icolo e Bengo Angola, it has a runway length of 4000ft.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 PATIENT-1 , it has a runway length of PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Angola International Airport is located at Ícolo e Bengo, Angola and is 4000 in length.
+TEMPLATE: AGENT-1 is located at BRIDGE-1 , PATIENT-1 and is PATIENT-2 in length .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Angola International Airport, located in Icolo e Bengo, Angola has a runway length of 4000.
+TEMPLATE: AGENT-1 , located in BRIDGE-1 , PATIENT-1 has a runway length of PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id15 3 Airport
+
+TRIPLES
+Antwerp_International_Airport | operatingOrganisation | Flemish_Government
+Antwerp_International_Airport | owner | Flemish_Region
+Antwerp_International_Airport | elevationAboveTheSeaLevel_(in_metres) | 12.0
+
+
+ENTITY MAP
+AGENT-1 | Antwerp_International_Airport
+PATIENT-1 | Flemish_Government
+PATIENT-3 | 12.0
+PATIENT-2 | Flemish_Region
+
+
+LEX
+Id1
+TEXT: Antwerp International Airport which has an elevation of 12.0 metres above sea level is owned and operated by the Flemish government.
+TEMPLATE: AGENT-1 which has PATIENT-2 of PATIENT-3 metres above sea level is owned and operated by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Antwerp International Airport which is 12 meters above sea level is owned by Flemish Region and operated by the Flemish government.
+TEMPLATE: AGENT-1 which is PATIENT-3 above sea level is owned by PATIENT-2 and operated by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id17 3 Airport
+
+TRIPLES
+Appleton,_Wisconsin | isPartOf | Kimberly,_Wisconsin
+Appleton,_Wisconsin | isPartOf | Little_Chute,_Wisconsin
+Appleton_International_Airport | cityServed | Appleton,_Wisconsin
+
+
+ENTITY MAP
+BRIDGE-1 | Appleton,_Wisconsin
+AGENT-1 | Appleton_International_Airport
+PATIENT-1 | Kimberly,_Wisconsin
+PATIENT-2 | Little_Chute,_Wisconsin
+
+
+LEX
+Id1
+TEXT: Appleton International airport serves the city of Appleton which is part of Kimberly, Wisconsin, as is Little Chute.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 which is BRIDGE-1 of PATIENT-1 , as is PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Appletone International Airport served the city of Appleton, which is part of a little chute in Kimberly, Wisconsin.
+TEMPLATE: AGENT-1 served the city of BRIDGE-1 , which is BRIDGE-1 of PATIENT-2 in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id16 3 Airport
+
+TRIPLES
+Antwerp_International_Airport | owner | Flemish_Region
+Antwerp_International_Airport | operatingOrganisation | "Flemish department of Mobility and Public Works"
+Antwerp_International_Airport | cityServed | Antwerp
+
+
+ENTITY MAP
+AGENT-1 | Antwerp_International_Airport
+PATIENT-1 | Flemish_Region
+PATIENT-3 | Antwerp
+PATIENT-2 | "Flemish department of Mobility and Public Works"
+
+
+LEX
+Id1
+TEXT: The Flemish department of Mobility and Public Works is the operating organisation and owner of Antwerp International Airport that serves the city of Antwerp.
+TEMPLATE: PATIENT-2 is the operating organisation and owner of AGENT-1 that serves PATIENT-1 of PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Antwerp International Airport; serves the city of Antwerp, is in the Flemish region and is operated by the Flemish department of mobility and public works.
+TEMPLATE: AGENT-1 ; serves PATIENT-1 of PATIENT-3 , is in PATIENT-1 and is operated by PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Antwerp International Airport serves Antwerp. It is owned by the Flemish Region and operated by the Flemish department of Mobility and Public Works.
+TEMPLATE: AGENT-1 serves PATIENT-3 . PATIENT-3 is owned by PATIENT-1 and operated by PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id19 3 Airport
+
+TRIPLES
+Ardmore_Airport_(New_Zealand) | 3rd_runway_SurfaceType | Poaceae
+Poaceae | division | Flowering_plant
+Poaceae | order | Poales
+
+
+ENTITY MAP
+BRIDGE-1 | Poaceae
+AGENT-1 | Ardmore_Airport_(New_Zealand)
+PATIENT-1 | Flowering_plant
+PATIENT-2 | Poales
+
+
+LEX
+Id1
+TEXT: The 3rd runway at Ardmore Airport (New Zealand) is made of Poaceae which is of the order Poales and belongs to the division of flowering plants.
+TEMPLATE: The 3rd runway at AGENT-1 ( AGENT-1 ) is made of BRIDGE-1 which is of PATIENT-2 and belongs to PATIENT-2 of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The 3rd runway at Ardmore Airport (New Zealand) is made of Poaceae which is part of the Poales order and is in the division of flowering plants.
+TEMPLATE: The 3rd runway at AGENT-1 ( AGENT-1 ) is made of BRIDGE-1 which is part of the PATIENT-2 order and is in PATIENT-2 of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id18 3 Airport
+
+TRIPLES
+Appleton_International_Airport | location | Greenville,_Wisconsin
+Greenville,_Wisconsin | country | United_States
+Greenville,_Wisconsin | isPartOf | Clayton,_Winnebago_County,_Wisconsin
+
+
+ENTITY MAP
+BRIDGE-1 | Greenville,_Wisconsin
+AGENT-1 | Appleton_International_Airport
+PATIENT-1 | United_States
+PATIENT-2 | Clayton,_Winnebago_County,_Wisconsin
+
+
+LEX
+Id1
+TEXT: The Appleton International Airport is in Greenville which is part of Clayton Winnebago County, Wisconsin, in the United States.
+TEMPLATE: AGENT-1 is in BRIDGE-1 which is PATIENT-1 of PATIENT-2 , in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Appleton International Airport is located in Greenville, Wisconsin, USA, which is part of Clayton, Winnebago county.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 PATIENT-1 , which is PATIENT-1 of Clayton , Winnebago county .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The Appleton International Airport is in Greenville, Clayton, Winnebago County, Wisconsin, United States.
+TEMPLATE: AGENT-1 is in BRIDGE-1 , PATIENT-2 , PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id22 3 Airport
+
+TRIPLES
+Atlantic_City_International_Airport | runwayName | "4/22"
+Atlantic_City_International_Airport | location | Egg_Harbor_Township,_New_Jersey
+Egg_Harbor_Township,_New_Jersey | country | United_States
+
+
+ENTITY MAP
+BRIDGE-1 | Egg_Harbor_Township,_New_Jersey
+AGENT-1 | Atlantic_City_International_Airport
+PATIENT-1 | "4/22"
+PATIENT-2 | United_States
+
+
+LEX
+Id1
+TEXT: Atlantic City International Airport, which has a runway with the name is 4/22, is located in Egg Harbor Township, in New Jersey, United States.
+TEMPLATE: AGENT-1 , which has a runway with PATIENT-2 name is PATIENT-1 , is located in BRIDGE-1 , in PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Atlantic City International Airport is in Egg Harbor Township, New Jersey, United States and has the runway name 4/22.
+TEMPLATE: AGENT-1 is in BRIDGE-1 PATIENT-2 and has PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id20 3 Airport
+
+TRIPLES
+Ashgabat_International_Airport | location | Ashgabat
+Ashgabat_International_Airport | runwayLength | 3800.0
+Ashgabat_International_Airport | elevationAboveTheSeaLevel_(in_metres) | 211
+
+
+ENTITY MAP
+AGENT-1 | Ashgabat_International_Airport
+PATIENT-1 | Ashgabat
+PATIENT-3 | 211
+PATIENT-2 | 3800.0
+
+
+LEX
+Id1
+TEXT: Ashgabat International Airport (located in Ashgabat) is elevated 211 metres above sea level and has a runway length of 3800.
+TEMPLATE: AGENT-1 ( located in PATIENT-1 ) is elevated PATIENT-3 metres above sea level and has AGENT-1 of PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Ashgabat is the location of Ashgabat International Airport which has a runway length of 3800.0 and is 211 metres above sea level.
+TEMPLATE: PATIENT-1 is the location of AGENT-1 which has AGENT-1 of PATIENT-2 and is PATIENT-3 metres above sea level .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Ashgabat International airport is located in Ashgabat at 211 metres above sea level and has a runway length of 3800.0.
+TEMPLATE: AGENT-1 is located in PATIENT-1 at PATIENT-3 metres above sea level and has AGENT-1 of PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id21 3 Airport
+
+TRIPLES
+Athens_International_Airport | cityServed | Athens
+Athens | country | Greece
+Greece | leaderName | Alexis_Tsipras
+
+
+ENTITY MAP
+BRIDGE-1 | Athens
+AGENT-1 | Athens_International_Airport
+PATIENT-1 | Alexis_Tsipras
+BRIDGE-2 | Greece
+
+
+LEX
+Id1
+TEXT: The Athens International Airport serves the city of Athens, in Greece where Alexis Tsipras is the leader.
+TEMPLATE: AGENT-1 serves BRIDGE-1 , in BRIDGE-2 where PATIENT-1 is BRIDGE-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Athens International Airport serves the city of Athens in Greece where Alexis Tsipras is the leader.
+TEMPLATE: AGENT-1 serves BRIDGE-1 in BRIDGE-2 where PATIENT-1 is BRIDGE-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Athens International Airport serves the city of Athens in Greece, a country led by Alexis Tsipras.
+TEMPLATE: AGENT-1 serves BRIDGE-1 in BRIDGE-2 , a country led by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id23 3 Airport
+
+TRIPLES
+Belgium | leaderName | Philippe_of_Belgium
+Antwerp_International_Airport | cityServed | Antwerp
+Antwerp | country | Belgium
+
+
+ENTITY MAP
+BRIDGE-1 | Antwerp
+AGENT-1 | Antwerp_International_Airport
+PATIENT-1 | Philippe_of_Belgium
+BRIDGE-2 | Belgium
+
+
+LEX
+Id1
+TEXT: Antwerp International Airport serves the city of Antwerp in Belgium where the leader is Phillipe of Belgium.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 in BRIDGE-2 where the leader is PATIENT-1 of BRIDGE-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Antwerp, Belgium, is led by Philippe of Belgium and served by Antwerp International Airport.
+TEMPLATE: BRIDGE-1 , BRIDGE-2 , is led by PATIENT-1 of BRIDGE-2 and served by AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id24 3 Airport
+
+TRIPLES
+Poaceae | class | Monocotyledon
+Poaceae | order | Commelinids
+Ardmore_Airport_(New_Zealand) | 2nd_runway_SurfaceType | Poaceae
+
+
+ENTITY MAP
+BRIDGE-1 | Poaceae
+AGENT-1 | Ardmore_Airport_(New_Zealand)
+PATIENT-1 | Monocotyledon
+PATIENT-2 | Commelinids
+
+
+LEX
+Id1
+TEXT: Poaceae is in the class Monocotyledon and the order of Commelinids. It is also the surface type of the second runway of Ardmore Airport, New Zealand.
+TEMPLATE: BRIDGE-1 is in PATIENT-1 and the order of PATIENT-2 . BRIDGE-1 is also the surface type of the second runway of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The 2nd runway at Ardmore Airport (New Zealand) is made of Poaceae which belongs to the order of Commelinids and the class of Monocotyledon.
+TEMPLATE: The 2nd runway at AGENT-1 ( AGENT-1 ) is made of BRIDGE-1 which belongs to the order of PATIENT-2 and the class of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+

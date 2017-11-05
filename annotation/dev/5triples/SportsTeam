@@ -1,0 +1,198 @@
+
+Entry: Id1 5 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | manager | Stuart_Parker_(footballer)
+Stuart_Parker_(footballer) | club | KV_Mechelen
+Stuart_Parker_(footballer) | club | Chesterfield_F.C.
+Blackpool | leader | Gordon_Marsden
+A.F.C._Blackpool | ground | Blackpool
+
+
+ENTITY MAP
+BRIDGE-2 | Blackpool
+BRIDGE-1 | Stuart_Parker_(footballer)
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | KV_Mechelen
+PATIENT-3 | Gordon_Marsden
+PATIENT-2 | Chesterfield_F.C.
+
+
+LEX
+Id1
+TEXT: Gordon Marsden is the leader of Blackpool where AFC Blackpool are located. Their manager is Stuart Parker who is a member of Chesterfield FC and plays for KV Mechelen.
+TEMPLATE: PATIENT-3 is PATIENT-2 leader of BRIDGE-2 where AGENT-1 are located . AGENT-1 manager is BRIDGE-1 who is a member of PATIENT-2 and plays for PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Gordon Marsden is the leader of Blackpool where AFC Blackpool is located. The club is managed by Stuart Parker who is part of the KV Mechelen club and a member of Chesterfield FC.
+TEMPLATE: PATIENT-3 is PATIENT-2 leader of BRIDGE-2 where AGENT-1 is located . The club is managed by BRIDGE-1 who is part of PATIENT-2 PATIENT-1 and a member of PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id2 5 SportsTeam
+
+TRIPLES
+AEK_Athens_F.C. | league | Superleague_Greece
+Superleague_Greece | champions | Olympiacos_F.C.
+AEK_Athens_F.C. | manager | Gus_Poyet
+Gus_Poyet | club | Real_Zaragoza
+Gus_Poyet | club | Chelsea_F.C.
+
+
+ENTITY MAP
+BRIDGE-2 | Gus_Poyet
+BRIDGE-1 | Superleague_Greece
+AGENT-1 | AEK_Athens_F.C.
+PATIENT-1 | Olympiacos_F.C.
+PATIENT-3 | Chelsea_F.C.
+PATIENT-2 | Real_Zaragoza
+
+
+LEX
+Id1
+TEXT: Olympiacos F.C. were past champions in the Greece Superleague, the league AEK Athens FC compete in. Their manager is Gus Poyet, whose club is Real Zaragoza even though he played for Chelsea F.C.
+TEMPLATE: BRIDGE-1 were past champions in BRIDGE-1 , BRIDGE-1 AGENT-1 compete in . AGENT-1 manager is BRIDGE-2 , whose club is PATIENT-2 even though BRIDGE-2 played for PATIENT-3 F.C.
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Gus Poyet is the manager of AEK Athens F.C. who play in the Superleague of Greece ( which has Olympiacos FC as previous champions). Poyet previously played for Chelsea FC and is in the Real Zaragoza club.
+TEMPLATE: BRIDGE-2 is the manager of AGENT-1 who play in BRIDGE-1 ( which has PATIENT-1 as previous champions ) . Poyet previously played for PATIENT-3 and is in PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Previous champions of the Superleague Greece are Olympiacos FC. AEK Athens FC also compete in the league and they are managed by Gus Poyet who previously played for Chelsea FC and whose club is Real Zaragoza.
+TEMPLATE: Previous champions of BRIDGE-1 are PATIENT-1 . AGENT-1 also compete in BRIDGE-1 and BRIDGE-1 are managed by BRIDGE-2 who previously played for PATIENT-3 and whose club is PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id3 5 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | league | Campeonato_Brasileiro_Série_C
+Campeonato_Brasileiro_Série_C | country | Brazil
+Agremiação_Sportiva_Arapiraquense | ground | Estádio_Municipal_Coaracy_da_Mata_Fonseca
+Estádio_Municipal_Coaracy_da_Mata_Fonseca | location | Alagoas
+Campeonato_Brasileiro_Série_C | champions | Vila_Nova_Futebol_Clube
+
+
+ENTITY MAP
+BRIDGE-2 | Estádio_Municipal_Coaracy_da_Mata_Fonseca
+BRIDGE-1 | Campeonato_Brasileiro_Série_C
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | Brazil
+PATIENT-3 | Vila_Nova_Futebol_Clube
+PATIENT-2 | Alagoas
+
+
+LEX
+Id1
+TEXT: Estádio Municipal Coaracy da Mata Fonseca is the name of the ground of Agremiação Sportiva Arapiraquense. It is located in Alagoas. Agremiação Sportiva Arapiraquense play in the Campeonato Brasileiro Série C league from Brazil. The Vila Nova Futebol Clube were champions at the Série C.
+TEMPLATE: BRIDGE-2 is BRIDGE-1 name of BRIDGE-1 ground of AGENT-1 . BRIDGE-2 is located in PATIENT-2 . AGENT-1 play in BRIDGE-1 BRIDGE-1 league from PATIENT-1 . PATIENT-3 were champions at BRIDGE-1 Série C.
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Vila Nova Futebol Clube have been champions of Campeonato Brasileiro Série C. from Brazil in which Agremiação Sportiva Arapiraquense also play. This latter team have their ground at Estádio Municipal Coaracy da Mata Fonseca which is located in Alagoas.
+TEMPLATE: PATIENT-3 have been champions of BRIDGE-1 Brasileiro Série C. from PATIENT-1 in which AGENT-1 also play . This latter team have AGENT-1 ground at BRIDGE-2 which is located in PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Llocated in Alagoas, Estádio Municipal Coaracy da Mata Fonseca is the name of the ground of Agremiação Sportiva Arapiraquense. They play in the Campeonato Brasileiro Série C league, which is from Brazil, and the champions of which have been Vila Nova Futebol Clube.
+TEMPLATE: Llocated in PATIENT-2 , BRIDGE-2 is BRIDGE-1 name of BRIDGE-1 ground of AGENT-1 . They play in BRIDGE-1 BRIDGE-1 league , which is from PATIENT-1 , and BRIDGE-1 champions of which have been PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id4 5 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | league | Campeonato_Brasileiro_Série_C
+Campeonato_Brasileiro_Série_C | country | Brazil
+Agremiação_Sportiva_Arapiraquense | ground | Estádio_Municipal_Coaracy_da_Mata_Fonseca
+Estádio_Municipal_Coaracy_da_Mata_Fonseca | location | Arapiraca
+Campeonato_Brasileiro_Série_C | champions | Vila_Nova_Futebol_Clube
+
+
+ENTITY MAP
+BRIDGE-2 | Estádio_Municipal_Coaracy_da_Mata_Fonseca
+BRIDGE-1 | Campeonato_Brasileiro_Série_C
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | Brazil
+PATIENT-3 | Vila_Nova_Futebol_Clube
+PATIENT-2 | Arapiraca
+
+
+LEX
+Id1
+TEXT: Vila Nova Futebol Clube have been champions of Campeonato Brasileiro Série C. league in Brazil. Agremiação Sportiva Arapiraquense also play in the league and have their home ground at Estádio Municipal Coaracy da Mata Fonseca in Arapiraca.
+TEMPLATE: PATIENT-3 have been champions of BRIDGE-1 Brasileiro Série C. league in PATIENT-1 . AGENT-1 also play in BRIDGE-1 and have AGENT-1 home ground at BRIDGE-2 in PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Agremiação Sportiva Arapiraquense play in the Campeonato Brasileiro Série C league (in Brazil), which has been won by Vila Nova Futebol Clube. Agremiacao Sportiva Arapiraquense's ground is the Estadio Minicipal Coaracy da Mata Fonseca, which is located in Arapiraca.
+TEMPLATE: AGENT-1 play in BRIDGE-1 BRIDGE-1 league ( in PATIENT-1 ) , which has been won by PATIENT-3 . AGENT-1 ground is BRIDGE-2 , which is located in PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Agremiação Sportiva Arapiraquense play in the Campeonato Brasileiro Série C league in Brazil. Vila Nova Futebol Clube are the champions of Serie C. Estádio Municipal Coaracy da Mata Fonseca (Arapiraca)is the name of the ground of Agremiação Sportiva Arapiraquense.
+TEMPLATE: AGENT-1 play in BRIDGE-1 BRIDGE-1 league in PATIENT-1 . PATIENT-3 are BRIDGE-1 champions of BRIDGE-2 ( PATIENT-2 ) is BRIDGE-1 name of BRIDGE-1 ground of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id5 5 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | league | Campeonato_Brasileiro_Série_C
+Campeonato_Brasileiro_Série_C | country | Brazil
+Agremiação_Sportiva_Arapiraquense | manager | Vica
+Agremiação_Sportiva_Arapiraquense | numberOfMembers | 17000
+Campeonato_Brasileiro_Série_C | champions | Vila_Nova_Futebol_Clube
+
+
+ENTITY MAP
+PATIENT-4 | Vila_Nova_Futebol_Clube
+BRIDGE-1 | Campeonato_Brasileiro_Série_C
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | Brazil
+PATIENT-3 | 17000
+PATIENT-2 | Vica
+
+
+LEX
+Id1
+TEXT: The Vila Nova Futebol Clube were champions at the Campeonato Brasileiro Série C. in Brazil. Agremiação Sportiva Arapiraquense who also play in the league have 17000 members and are managed by Vica.
+TEMPLATE: PATIENT-4 were champions at BRIDGE-1 BRIDGE-1 Brasileiro Série C. in PATIENT-1 . AGENT-1 who also play in BRIDGE-1 have PATIENT-3 members and are managed by PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Agremiação Sportiva Arapiraquense play in the Campeonato Brasileiro Série C league in Brazil, which has been won by Vila Nova Futebol Clube. Agremiacao Sportiva Arapiraquense's ground can hold 17000 fans and the team is managed by Vica.
+TEMPLATE: AGENT-1 play in BRIDGE-1 BRIDGE-1 league in PATIENT-1 , which has been won by PATIENT-4 . AGENT-1 ground can hold PATIENT-3 fans and BRIDGE-1 team is managed by PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Vila Nova Futebol Clube have been champions of Campeonato Brasileiro Série C, which is from Brazil. It is in this league that Agremiação Sportiva Arapiraquense play in. They are managed by Vica, and have17000 members.
+TEMPLATE: PATIENT-4 have been champions of BRIDGE-1 , which is from PATIENT-1 . BRIDGE-1 is in BRIDGE-1 that AGENT-1 play in . BRIDGE-1 are managed by PATIENT-2 , and havePATIENT-3 members .
+CORRECT: 
+COMMENT: 
+-
+

@@ -1,0 +1,398 @@
+
+Entry: Id7 1 ComicsCharacter
+
+TRIPLES
+Baymax | series | Big_Hero_6_(film)
+
+
+ENTITY MAP
+AGENT-1 | Baymax
+PATIENT-1 | Big_Hero_6_(film)
+
+
+LEX
+Id1
+TEXT: Baymax is a character in Big Hero 6.
+TEMPLATE: AGENT-1 is a character in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id1 1 ComicsCharacter
+
+TRIPLES
+Asterix_(comicsCharacter) | creator | René_Goscinny
+
+
+ENTITY MAP
+AGENT-1 | Asterix_(comicsCharacter)
+PATIENT-1 | René_Goscinny
+
+
+LEX
+Id1
+TEXT: Asterix was created by Rene Goscinny.
+TEMPLATE: AGENT-1 was created by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The creator of Asterix (comics character) is René Goscinny.
+TEMPLATE: The creator of AGENT-1 ( comics character ) is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The comic character Asterix, was created by René Goscinny.
+TEMPLATE: AGENT-1 , was created by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id2 1 ComicsCharacter
+
+TRIPLES
+Auron_(comicsCharacter) | creator | Marv_Wolfman
+
+
+ENTITY MAP
+AGENT-1 | Auron_(comicsCharacter)
+PATIENT-1 | Marv_Wolfman
+
+
+LEX
+Id1
+TEXT: The comic character Auron was created by Marv Wolfman.
+TEMPLATE: AGENT-1 was created by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Auron was created by Marv Wolfman.
+TEMPLATE: AGENT-1 was created by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The comic book character Auron was created by Marv Wolfman.
+TEMPLATE: AGENT-1 was created by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id3 1 ComicsCharacter
+
+TRIPLES
+Balder_(comicsCharacter) | creator | Jack_Kirby
+
+
+ENTITY MAP
+AGENT-1 | Balder_(comicsCharacter)
+PATIENT-1 | Jack_Kirby
+
+
+LEX
+Id1
+TEXT: The comic character, Balder, was created by Jack Kirby.
+TEMPLATE: AGENT-1 was created by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The comic character Balder was created by Jack Kirby.
+TEMPLATE: AGENT-1 was created by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Jack Kirby created the comic character Balder.
+TEMPLATE: PATIENT-1 created AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id4 1 ComicsCharacter
+
+TRIPLES
+Bananaman | broadcastedBy | "STV"
+
+
+ENTITY MAP
+AGENT-1 | Bananaman
+PATIENT-1 | "STV"
+
+
+LEX
+Id1
+TEXT: Bananaman is broadcast by STV.
+TEMPLATE: AGENT-1 is broadcast by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Bananaman is broadcasted by "STV".
+TEMPLATE: AGENT-1 is broadcasted by `` PATIENT-1 '' .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Bananaman was broadcasted by STV.
+TEMPLATE: AGENT-1 was broadcasted by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id5 1 ComicsCharacter
+
+TRIPLES
+Bananaman | firstAired | "1983-10-03"
+
+
+ENTITY MAP
+AGENT-1 | Bananaman
+PATIENT-1 | "1983-10-03"
+
+
+LEX
+Id1
+TEXT: Bananaman first aired on 3rd October 1983.
+TEMPLATE: AGENT-1 first aired on PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Bananaman first aired on the 3rd of October, 1983.
+TEMPLATE: AGENT-1 first aired on PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Bananaman was first aired on 10/03/1983.
+TEMPLATE: AGENT-1 was first aired on PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id6 1 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Bill_Oddie
+
+
+ENTITY MAP
+AGENT-1 | Bananaman
+PATIENT-1 | Bill_Oddie
+
+
+LEX
+Id1
+TEXT: Bill Oddie stars in Bananaman.
+TEMPLATE: PATIENT-1 stars in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Bananaman starred Bill Oddie.
+TEMPLATE: AGENT-1 starred PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Bill Oddie starred in Bananaman.
+TEMPLATE: PATIENT-1 starred in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id8 1 ComicsCharacter
+
+TRIPLES
+Bill_Everett | award | Eisner_Award
+
+
+ENTITY MAP
+AGENT-1 | Bill_Everett
+PATIENT-1 | Eisner_Award
+
+
+LEX
+Id1
+TEXT: Bill Everett has won the Eisner Award.
+TEMPLATE: AGENT-1 has won PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Bill Everett has been awarded the Eisner award.
+TEMPLATE: AGENT-1 has been awarded PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id9 1 ComicsCharacter
+
+TRIPLES
+Bill_Oddie | child | Kate_Hardie
+
+
+ENTITY MAP
+AGENT-1 | Bill_Oddie
+PATIENT-1 | Kate_Hardie
+
+
+LEX
+Id1
+TEXT: Bill Oddie's daughter is Kate Hardie.
+TEMPLATE: AGENT-1 's daughter is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Kate Hardie is Bill Oddie's child.
+TEMPLATE: PATIENT-1 is AGENT-1 's child .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id10 1 ComicsCharacter
+
+TRIPLES
+Bolt_(comicsCharacter) | creator | Dan_Mishkin
+
+
+ENTITY MAP
+AGENT-1 | Bolt_(comicsCharacter)
+PATIENT-1 | Dan_Mishkin
+
+
+LEX
+Id1
+TEXT: Dan Mishkin is one of the creators of the comic character, Bolt.
+TEMPLATE: PATIENT-1 is one of the creators of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The comic book character Bolt was created by Dan Mishkin.
+TEMPLATE: AGENT-1 was created by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The comic character Bolt was created by Dan Mishkin.
+TEMPLATE: AGENT-1 was created by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id11 1 ComicsCharacter
+
+TRIPLES
+Bozo_the_Iron_Man | fullName | "Hugh Hazzard"
+
+
+ENTITY MAP
+AGENT-1 | Bozo_the_Iron_Man
+PATIENT-1 | "Hugh Hazzard"
+
+
+LEX
+Id1
+TEXT: Bozo the Iron Man’s full name is Hugh Hazzard.
+TEMPLATE: AGENT-1 's full name is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The full name of Bozo the Iron Man is "Hugh Hazzard".
+TEMPLATE: The full name of AGENT-1 is `` PATIENT-1 '' .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The comic book character Bozo the Iron Man's alter ego is Hugh Hazzard.
+TEMPLATE: comic AGENT-1 's alter ego is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id12 1 ComicsCharacter
+
+TRIPLES
+John_Buscema | award | Eagle_Award_(comics)
+
+
+ENTITY MAP
+AGENT-1 | John_Buscema
+PATIENT-1 | Eagle_Award_(comics)
+
+
+LEX
+Id1
+TEXT: John Buscema has won the comic book award, Eagle Award.
+TEMPLATE: AGENT-1 has won the comic book award , PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: John Buscema received the Eagle Award for his work in comics.
+TEMPLATE: AGENT-1 received PATIENT-1 for AGENT-1 work in comics .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id13 1 ComicsCharacter
+
+TRIPLES
+Marv_Wolfman | award | Eagle_Award_(comics)
+
+
+ENTITY MAP
+AGENT-1 | Marv_Wolfman
+PATIENT-1 | Eagle_Award_(comics)
+
+
+LEX
+Id1
+TEXT: Marv Wolfman is a recipient of the Eagle Award.
+TEMPLATE: AGENT-1 is a recipient of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Marv Wolfman won the Eagle Award for comics.
+TEMPLATE: AGENT-1 won PATIENT-1 for comics .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Marv Wolfman has received the Eagle Award for comics.
+TEMPLATE: AGENT-1 has received PATIENT-1 for comics .
+CORRECT: 
+COMMENT: 
+-
+

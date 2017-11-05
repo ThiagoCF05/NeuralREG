@@ -1,0 +1,81 @@
+
+Entry: Id1 5 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Tim_Brooke-Taylor
+Bananaman | broadcastedBy | BBC
+Bananaman | creator | John_Geering
+Bananaman | firstAired | "1983-10-03"
+Bananaman | lastAired | "1986-04-15"
+
+
+ENTITY MAP
+PATIENT-5 | "1986-04-15"
+PATIENT-4 | "1983-10-03"
+AGENT-1 | Bananaman
+PATIENT-1 | Tim_Brooke-Taylor
+PATIENT-3 | John_Geering
+PATIENT-2 | BBC
+
+
+LEX
+Id1
+TEXT: Bananaman was shown on the BBC, first airing on 3 October 1983 and the final broadcast being 15 April 1986. It was created by John Geering and starred Tim Brooke Taylor.
+TEMPLATE: AGENT-1 was shown on PATIENT-2 , first airing on PATIENT-4 and the final broadcast being PATIENT-5 . PATIENT-2 was created by PATIENT-3 and starred PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The BBC began airing Bananaman October 3rd, 1983 and the last episode was broadcast on April 15th, 1986. John Geering is one of the creators of Bananaman which also starred Tim Brooke-Taylor.
+TEMPLATE: PATIENT-2 began airing AGENT-1 PATIENT-4 and the last episode was broadcast on PATIENT-5 . PATIENT-3 is one of the creators of AGENT-1 which also starred PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The TV character Bananaman was created by John Geering. The programme was broadcast by the BBC and starred Tim Brooke-Taylor. It first aired on the 10th March 1983 and was last shown on April 15th 1986.
+TEMPLATE: AGENT-1 was created by PATIENT-3 . PATIENT-2 programme was broadcast by PATIENT-2 and starred PATIENT-1 . AGENT-1 first aired on the 10th March 1983 and was last shown on PATIENT-5 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id2 5 ComicsCharacter
+
+TRIPLES
+Duncan_Rouleau | nationality | Americans
+Baymax | creator | Duncan_Rouleau
+Baymax | creator | Steven_T._Seagle
+Baymax | series | Big_Hero_6_(film)
+Big_Hero_6_(film) | starring | Scott_Adsit
+
+
+ENTITY MAP
+AGENT-1 | Baymax
+BRIDGE-1 | Duncan_Rouleau
+BRIDGE-2 | Big_Hero_6_(film)
+PATIENT-1 | Americans
+PATIENT-3 | Scott_Adsit
+PATIENT-2 | Steven_T._Seagle
+
+
+LEX
+Id1
+TEXT: Baymax is a character from the film Big Hero 6 starring Scott Adsit. He was created by Steven T Seagle and the American, Duncan Rouleau.
+TEMPLATE: AGENT-1 is PATIENT-1 from BRIDGE-2 starring PATIENT-3 . AGENT-1 was created by PATIENT-2 and PATIENT-1 , BRIDGE-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: American Duncan Rouleau and Steve T. Seagle created Baymax. Baymax is a character in Big Hero 6 which starred Scott Adsit.
+TEMPLATE: BRIDGE-1 and PATIENT-2 created AGENT-1 . AGENT-1 is PATIENT-1 in BRIDGE-2 which starred PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Baymax was created by American Duncan Rouleau and Steven T. Seagle. Baymax is a character in Big Hero 6 which stars Scott Adsit.
+TEMPLATE: AGENT-1 was created by BRIDGE-1 and PATIENT-2 . AGENT-1 is PATIENT-1 in BRIDGE-2 which stars PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+

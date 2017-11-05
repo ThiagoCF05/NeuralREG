@@ -1,0 +1,148 @@
+
+Entry: Id1 3 Monument
+
+TRIPLES
+Adams_County,_Pennsylvania | has to its west | Franklin_County,_Pennsylvania
+Adams_County,_Pennsylvania | has to its southwest | Frederick_County,_Maryland
+11th_Mississippi_Infantry_Monument | location | Adams_County,_Pennsylvania
+
+
+ENTITY MAP
+BRIDGE-1 | Adams_County,_Pennsylvania
+AGENT-1 | 11th_Mississippi_Infantry_Monument
+PATIENT-1 | Franklin_County,_Pennsylvania
+PATIENT-2 | Frederick_County,_Maryland
+
+
+LEX
+Id1
+TEXT: Adams County, Pennsylvania is the location of the 11th Mississippi Infantry monument. Franklin County Pennsylvania is to the west and Frederick County to the south west.
+TEMPLATE: BRIDGE-1 is the location of AGENT-1 . PATIENT-1 BRIDGE-1 is to the west and PATIENT-2 to the south west .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The 11th Mississippi Infantry Monument is located in Adams County Pennsylvania, between Franklin County to the west and Frederick County to the southwest.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , between PATIENT-1 to the west and PATIENT-2 to the southwest .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id2 3 Monument
+
+TRIPLES
+Azerbaijan | leader | Artur_Rasizade
+Baku_Turkish_Martyrs_Memorial | dedicatedTo | "Ottoman Army soldiers killed in the Battle of Baku"
+Baku_Turkish_Martyrs_Memorial | location | Azerbaijan
+
+
+ENTITY MAP
+BRIDGE-1 | Azerbaijan
+AGENT-1 | Baku_Turkish_Martyrs_Memorial
+PATIENT-1 | Artur_Rasizade
+PATIENT-2 | "Ottoman Army soldiers killed in the Battle of Baku"
+
+
+LEX
+Id1
+TEXT: The Baku Turkish Martyr's memorial which is dedicated to the soldiers of the Ottoman army who were killed in the Battle of Baku is located in Azerbaijan. At present Artur Rasizade is the leader of the country.
+TEMPLATE: AGENT-1 which is dedicated to PATIENT-2 of the Ottoman army who were killed in the Battle of Baku is located in BRIDGE-1 . At present PATIENT-1 is the leader of the country .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id3 3 Monument
+
+TRIPLES
+Baku_Turkish_Martyrs_Memorial | dedicatedTo | "Ottoman Army soldiers killed in the Battle of Baku"
+Baku_Turkish_Martyrs_Memorial | location | Azerbaijan
+Baku_Turkish_Martyrs_Memorial | designer | "Hüseyin Bütüner and Hilmi Güner"
+
+
+ENTITY MAP
+AGENT-1 | Baku_Turkish_Martyrs_Memorial
+PATIENT-1 | "Ottoman Army soldiers killed in the Battle of Baku"
+PATIENT-3 | "Hüseyin Bütüner and Hilmi Güner"
+PATIENT-2 | Azerbaijan
+
+
+LEX
+Id1
+TEXT: The Baku Turkish Martyrs Memorial in Azerbaijan was designed by Hüseyin Bütüner and Hilmi Güner and is dedicated to Ottoman Army soldiers killed in the Battle of Baku.
+TEMPLATE: AGENT-1 in PATIENT-2 was designed by PATIENT-3 and is dedicated to PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The Baku Turkish Martyrs' Memorial in Azerbaijan was designed by Hüseyin Bütüner and Hilmi Güner and is dedicated to the Ottoman Army Soldiers killed in the Battle of Baku.
+TEMPLATE: AGENT-1 in PATIENT-2 was designed by PATIENT-3 and is dedicated to PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The Baku Turkish Martyr's Memorial in Azerbaijan, designed by Hüseyin Bütüner and Hilmi Güner, is dedicated to the Ottoman Army soldiers killed in the Battle of Baku.
+TEMPLATE: AGENT-1 in PATIENT-2 , designed by PATIENT-3 , is dedicated to PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id4 3 Monument
+
+TRIPLES
+Baku_Turkish_Martyrs_Memorial | location | Azerbaijan
+Azerbaijan | leaderName | Artur_Rasizade
+Baku_Turkish_Martyrs_Memorial | designer | "Hüseyin Bütüner and Hilmi Güner"
+
+
+ENTITY MAP
+BRIDGE-1 | Azerbaijan
+AGENT-1 | Baku_Turkish_Martyrs_Memorial
+PATIENT-1 | Artur_Rasizade
+PATIENT-2 | "Hüseyin Bütüner and Hilmi Güner"
+
+
+LEX
+Id1
+TEXT: Azerbaijan, where the leader is Artur Rasizade, is the location of the Baku Turkish Martyrs Memorial. The memorial was designed by Huseyin Butuner and Hilmi Guner.
+TEMPLATE: BRIDGE-1 , where the leader is PATIENT-1 , is the location of AGENT-1 . AGENT-1 was designed by PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The Baku Turkish Martyrs' Memorial, designed by Huseyin Butuner and Hilmi Guner, is located in Azerbaijan, where the leader is Artur Rasizade.
+TEMPLATE: AGENT-1 , designed by PATIENT-2 , is located in BRIDGE-1 , where the leader is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id5 3 Monument
+
+TRIPLES
+Baku_Turkish_Martyrs_Memorial | location | Azerbaijan
+Baku_Turkish_Martyrs_Memorial | nativeName | "Türk Şehitleri Anıtı"
+Baku_Turkish_Martyrs_Memorial | designer | "Hüseyin Bütüner and Hilmi Güner"
+
+
+ENTITY MAP
+AGENT-1 | Baku_Turkish_Martyrs_Memorial
+PATIENT-1 | Azerbaijan
+PATIENT-3 | "Hüseyin Bütüner and Hilmi Güner"
+PATIENT-2 | "Türk Şehitleri Anıtı"
+
+
+LEX
+Id1
+TEXT: The Baku Turkish Martyrs' Memorial was designed by Huseyin Butuner and Hilmi Guner, and is located in Azerbaijan, where it is called Turk Sehitleri Aniti.
+TEMPLATE: AGENT-1 was designed by PATIENT-3 , and is located in PATIENT-1 , where AGENT-1 is called PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+

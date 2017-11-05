@@ -31,10 +31,19 @@ def evaluate(y_real, y_pred):
     print('PRONOUN ACCURACY: ', str(round(pronoun_num/pronoun_dem, 4)))
 
 if __name__ == '__main__':
+    with open('data/results/baseline_names.txt') as f:
+        y_pred = f.read().split('\n')
+
+    with open('data/dev/refex.txt') as f:
+        y_real = f.read().split('\n')
+    print 'BASELINE: '
+    evaluate(y_real, y_pred)
+
+
     with open('data/results/dev_1_256_1024_1024_0.2') as f:
         y_pred = f.read().split('\n')
 
     with open('data/dev/refex.txt') as f:
         y_real = f.read().split('\n')
-
+    print 'MODEL: '
     evaluate(y_real, y_pred)

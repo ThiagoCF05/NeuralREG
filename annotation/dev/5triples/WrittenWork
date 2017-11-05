@@ -1,0 +1,461 @@
+
+Entry: Id1 5 WrittenWork
+
+TRIPLES
+A_Long_Long_Way | country | Ireland
+Ireland | ethnicGroup | White_people
+The_Secret_Scripture | publisher | Faber_and_Faber
+Ireland | location | Europe
+A_Long_Long_Way | followedBy | The_Secret_Scripture
+
+
+ENTITY MAP
+BRIDGE-2 | The_Secret_Scripture
+BRIDGE-1 | Ireland
+AGENT-1 | A_Long_Long_Way
+PATIENT-1 | White_people
+PATIENT-3 | Europe
+PATIENT-2 | Faber_and_Faber
+
+
+LEX
+Id1
+TEXT: Faber and Faber are the publishers of The Secret Scripture, a sequel to A Long Long Way. That book comes from Ireland which is located in Europe and where there is an ethnic group of white people.
+TEMPLATE: PATIENT-2 are the publishers of BRIDGE-2 , PATIENT-1 to AGENT-1 . That book comes from BRIDGE-1 which is located in PATIENT-3 and where there is an ethnic group of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Ireland, where the white people are an ethnic group, is situated within Europe. The book A Long Long Way was written in Ireland and published by Faber and Faber. The sequel to the book is known as The Secret Scripture.
+TEMPLATE: BRIDGE-1 , where PATIENT-1 are an ethnic group , is situated within PATIENT-3 . AGENT-1 was written in BRIDGE-1 and published by PATIENT-2 . The sequel to the book is known as BRIDGE-2 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Ireland is a country within Europe and the ethnic group are white people. The novel A Long Long Way was written in Ireland and was followed by The Secret Scripture which was published by Faber and Faber.
+TEMPLATE: BRIDGE-1 is a country within PATIENT-3 and the ethnic group are PATIENT-1 . AGENT-1 was written in BRIDGE-1 and was followed by BRIDGE-2 which was published by PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id2 5 WrittenWork
+
+TRIPLES
+A_Long_Long_Way | precededBy | Annie_Dunne
+A_Long_Long_Way | country | Ireland
+Ireland | ethnicGroup | White_people
+The_Secret_Scripture | publisher | Faber_and_Faber
+A_Long_Long_Way | followedBy | The_Secret_Scripture
+
+
+ENTITY MAP
+BRIDGE-2 | The_Secret_Scripture
+BRIDGE-1 | Ireland
+AGENT-1 | A_Long_Long_Way
+PATIENT-1 | Annie_Dunne
+PATIENT-3 | Faber_and_Faber
+PATIENT-2 | White_people
+
+
+LEX
+Id1
+TEXT: The ethnic group of Ireland is White people and is where A Long Long Way comes from. It was preceded by Annie Dunne and followed by The Secret Scripture which is published by Faber and Faber.
+TEMPLATE: The ethnic group of BRIDGE-1 is PATIENT-2 and is where AGENT-1 comes from . BRIDGE-1 was preceded by PATIENT-1 and followed by BRIDGE-2 which is published by PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: An ethnic group of Ireland is white people where A Long Long Way comes from. It was preceded by Annie Dunne preceded and followed by The Secret Scripture which is published by Faber and Faber.
+TEMPLATE: An ethnic group of BRIDGE-1 is PATIENT-2 where AGENT-1 comes from . BRIDGE-1 was preceded by PATIENT-1 preceded and followed by BRIDGE-2 which is published by PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id3 5 WrittenWork
+
+TRIPLES
+Above_the_Veil | country | Australians
+Into_Battle_(novel) | followedBy | The_Violet_Keystone
+Above_the_Veil | followedBy | Into_Battle_(novel)
+Above_the_Veil | precededBy | Aenir
+Aenir | precededBy | Castle_(novel)
+
+
+ENTITY MAP
+AGENT-1 | Above_the_Veil
+BRIDGE-1 | Into_Battle_(novel)
+BRIDGE-2 | Aenir
+PATIENT-1 | Australians
+PATIENT-3 | Castle_(novel)
+PATIENT-2 | The_Violet_Keystone
+
+
+LEX
+Id1
+TEXT: Above the Veil is an Australian novel and the sequel to Aenir and Castle. It was later followed by Into Battle and The Violet Keystone.
+TEMPLATE: AGENT-1 is PATIENT-1 novel and the sequel to BRIDGE-2 and PATIENT-3 . PATIENT-1 was later followed by BRIDGE-1 and PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Above the Viel is an Austrlian novel and the sequel to Aenir and Castle. It was followed by Into Battle and The Violet Keystone.
+TEMPLATE: AGENT-1 is an BRIDGE-2 novel and the sequel to BRIDGE-2 and PATIENT-3 . PATIENT-1 was followed by BRIDGE-1 and PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Above the Veil is an Austrlian novel and the sequel to Aenir and Castle. It was followed by Into the Battle and The Violet Keystone.
+TEMPLATE: AGENT-1 is an BRIDGE-2 novel and the sequel to BRIDGE-2 and PATIENT-3 . PATIENT-1 was followed by Into BRIDGE-1 and PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id4 5 WrittenWork
+
+TRIPLES
+Administrative_Science_Quarterly | publisher | Cornell_University
+Cornell_University | nickname | Cornell_Big_Red
+Cornell_University | affiliation | Association_of_American_Universities
+Cornell_University | state | New_York
+Cornell_University | city | Ithaca,_New_York
+
+
+ENTITY MAP
+PATIENT-4 | Ithaca,_New_York
+BRIDGE-1 | Cornell_University
+AGENT-1 | Administrative_Science_Quarterly
+PATIENT-1 | Cornell_Big_Red
+PATIENT-3 | New_York
+PATIENT-2 | Association_of_American_Universities
+
+
+LEX
+Id1
+TEXT: Cornell University is in Ithaca, New York and is nicknamed Cornell Big Red. They are the publisher of Administrative Science Quarterly and are affiliated with the Association of American Universities.
+TEMPLATE: BRIDGE-1 is in PATIENT-4 and is nicknamed PATIENT-1 . PATIENT-3 are the publisher of AGENT-1 and are affiliated with PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Cornell University is in Ithaca, New York and their nickname is Cornell Big Red. They are the publisher of Administrative Science Quarterly and are affiliated with the Association of American Universities.
+TEMPLATE: BRIDGE-1 is in PATIENT-4 and BRIDGE-1 nickname is PATIENT-1 . PATIENT-3 are the publisher of AGENT-1 and are affiliated with PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Cornell Unversity is in Ithaca, New York and their nickname is Cornell Big Red. They are the publisher of the Administrative Science Quarterly and are affiliated with the Association of American Universities.
+TEMPLATE: BRIDGE-1 is in PATIENT-4 and BRIDGE-1 nickname is PATIENT-1 . PATIENT-3 are the publisher of AGENT-1 and are affiliated with PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id5 5 WrittenWork
+
+TRIPLES
+Administrative_Science_Quarterly | publisher | Cornell_University
+Cornell_University | nickname | Cornell_Big_Red
+Cornell_University | affiliation | Association_of_Public_and_Land-grant_Universities
+Cornell_University | state | New_York
+Cornell_University | city | Ithaca,_New_York
+
+
+ENTITY MAP
+PATIENT-4 | Ithaca,_New_York
+BRIDGE-1 | Cornell_University
+AGENT-1 | Administrative_Science_Quarterly
+PATIENT-1 | Cornell_Big_Red
+PATIENT-3 | New_York
+PATIENT-2 | Association_of_Public_and_Land-grant_Universities
+
+
+LEX
+Id1
+TEXT: The Administrative Science Quarterly is published by Cornell University, Ithaca, in the state of New York. Cornell University (nicknamed 'Cornell Big Red') is affiliated with the Association of Public and Land Grant Universities.
+TEMPLATE: AGENT-1 is published by BRIDGE-1 , PATIENT-3 , in the state of PATIENT-4 . BRIDGE-1 ( nicknamed ` PATIENT-1 ' ) is affiliated with PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Cornell Big Red is the nickname of Cornell University which is affiliated with the Association of Public and Land grant Universities. The University is in the city of Ithaca, New York, New York State and publishes the Administrative Science Quarterly.
+TEMPLATE: PATIENT-1 is the nickname of BRIDGE-1 which is affiliated with PATIENT-2 . The University is in PATIENT-3 of PATIENT-3 , PATIENT-3 and publishes AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Cornell University, of Ithaca, New York, is the publisher of the Administrative Science Quarterly. The University, which has the nickname Cornell Big Red , is affiliated with the Association of Public and Land grant Universities.
+TEMPLATE: BRIDGE-1 , of PATIENT-4 , is the publisher of AGENT-1 . PATIENT-3 , which has PATIENT-1 , is affiliated with PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id6 5 WrittenWork
+
+TRIPLES
+Alcatraz_Versus_the_Evil_Librarians | language | English_language
+English_language | spokenIn | Great_Britain
+United_States | leaderName | Barack_Obama
+Alcatraz_Versus_the_Evil_Librarians | country | United_States
+United_States | ethnicGroup | African_Americans
+
+
+ENTITY MAP
+AGENT-1 | Alcatraz_Versus_the_Evil_Librarians
+BRIDGE-1 | English_language
+BRIDGE-2 | United_States
+PATIENT-1 | Great_Britain
+PATIENT-3 | African_Americans
+PATIENT-2 | Barack_Obama
+
+
+LEX
+Id1
+TEXT: The United States is home to the ethnic group of African Americans and is lead by Barack Obama. The country is the origin of the book Alcatraz Versus the Evil Librarians. This book was written in English, as spoken in Great Britain.
+TEMPLATE: BRIDGE-2 is home to BRIDGE-2 ethnic group of PATIENT-3 and is lead by PATIENT-2 . BRIDGE-2 is BRIDGE-2 origin of AGENT-1 . This book was written in BRIDGE-1 , as spoken in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Alcatraz Versus the Evil Librarians is from the United States and is written in English which is also spoken in Great Britain. The leader of the US is Barack Obama and African Americans are one of the ethnic groups.
+TEMPLATE: AGENT-1 is from BRIDGE-2 and is written in BRIDGE-1 which is also spoken in PATIENT-1 . BRIDGE-2 leader of BRIDGE-2 is PATIENT-2 and PATIENT-3 are one of BRIDGE-2 ethnic groups .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id7 5 WrittenWork
+
+TRIPLES
+English_language | spokenIn | Great_Britain
+United_States | language | English_language
+United_States | capital | Washington,_D.C.
+A_Severed_Wasp | country | United_States
+United_States | ethnicGroup | African_Americans
+
+
+ENTITY MAP
+BRIDGE-2 | United_States
+BRIDGE-1 | English_language
+AGENT-1 | A_Severed_Wasp
+PATIENT-1 | Great_Britain
+PATIENT-3 | African_Americans
+PATIENT-2 | Washington,_D.C.
+
+
+LEX
+Id1
+TEXT: A Severed Wasp is from the United States which like Great Britain speaks English. The capital of the US is Washington D.C and one ethnic group is the African Americans.
+TEMPLATE: AGENT-1 is from BRIDGE-2 which like PATIENT-1 speaks BRIDGE-1 . BRIDGE-2 capital of BRIDGE-2 is PATIENT-2 and one ethnic group is PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: A Severed Wasp originates in the United States where like in Great Britain, English is also spoken. Washington DC is the capital of the US and one ethnic group is the African Americans.
+TEMPLATE: AGENT-1 originates in BRIDGE-2 wBRIDGE-2 like in PATIENT-1 , BRIDGE-1 is also spoken . PATIENT-2 is BRIDGE-2 capital of BRIDGE-2 and one ethnic group is PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: A severed Wasp is a novel from the United States where English is largely spoken (as in Great Britain). The capital of the US is Washington D.C. and African Americans are an ethnic group there.
+TEMPLATE: AGENT-1 novel from BRIDGE-2 wBRIDGE-2 BRIDGE-1 is largely spoken ( as in PATIENT-1 ) . BRIDGE-2 capital of BRIDGE-2 is PATIENT-2 and PATIENT-3 are ethnic BRIDGE-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id8 5 WrittenWork
+
+TRIPLES
+English_language | spokenIn | Great_Britain
+United_States | language | English_language
+United_States | leaderName | Joe_Biden
+Alcatraz_Versus_the_Evil_Librarians | country | United_States
+United_States | ethnicGroup | African_Americans
+
+
+ENTITY MAP
+BRIDGE-2 | United_States
+BRIDGE-1 | English_language
+AGENT-1 | Alcatraz_Versus_the_Evil_Librarians
+PATIENT-1 | Great_Britain
+PATIENT-3 | African_Americans
+PATIENT-2 | Joe_Biden
+
+
+LEX
+Id1
+TEXT: English is spoken in Great Britain and the United States where Joe Biden is leader, African Americans are an ethnic group and Alcatraz Versus the Evil Librarians is from there.
+TEMPLATE: BRIDGE-1 is spoken in PATIENT-1 and BRIDGE-2 wBRIDGE-2 PATIENT-2 is leader , PATIENT-3 are an ethnic group and AGENT-1 is from BRIDGE-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Alcatraz Versus the Evil Librarians is a book from The United States. In that country the majority language is English (as in Great Britain). A leading politician of the US is Joe Biden and African Americans are an ethnic group there.
+TEMPLATE: AGENT-1 is a book from BRIDGE-2 . In BRIDGE-2 BRIDGE-2 majority language is BRIDGE-1 ( as in PATIENT-1 ) . A leading politician of BRIDGE-2 is PATIENT-2 and PATIENT-3 are ethnic BRIDGE-2 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Alcatraz Versus the Evil Librarians is from The United States. English is spoken there (as in Great Britain) and Joe Biden is a leading politician there. African Americans are an ethnic group in the US.
+TEMPLATE: AGENT-1 is from BRIDGE-2 . BRIDGE-1 is spoken BRIDGE-2 ( as in PATIENT-1 ) and PATIENT-2 is leading BRIDGE-2 . PATIENT-3 are an ethnic group in BRIDGE-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id9 5 WrittenWork
+
+TRIPLES
+United_Kingdom | language | English_language
+United_Kingdom | leaderName | David_Cameron
+AIDS_(journal) | country | United_Kingdom
+United_Kingdom | capital | London
+United_Kingdom | leaderName | Elizabeth_II
+
+
+ENTITY MAP
+PATIENT-4 | Elizabeth_II
+BRIDGE-1 | United_Kingdom
+AGENT-1 | AIDS_(journal)
+PATIENT-1 | English_language
+PATIENT-3 | London
+PATIENT-2 | David_Cameron
+
+
+LEX
+Id1
+TEXT: David Cameron and Elizabeth II are leaders in the United Kingdom. The country, which uses the English language has the capital city of London and is where the AIDS journal originates.
+TEMPLATE: PATIENT-2 and PATIENT-4 are leaders in BRIDGE-1 . BRIDGE-1 , which uses PATIENT-1 has BRIDGE-1 capital city of PATIENT-3 and is where AGENT-1 originates .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The AIDS journal was published in the United Kingdom, where English is spoken. The leader of the UK is Elizabeth II, and another leader is David Cameron. English is spoken in the United Kingdom, where the capital is London.
+TEMPLATE: AGENT-1 was published in BRIDGE-1 , where PATIENT-1 is spoken . The leader of BRIDGE-1 is PATIENT-4 , and another leader is PATIENT-2 . PATIENT-1 is spoken in BRIDGE-1 , where BRIDGE-1 capital is PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: AIDS journal is from the United Kingdom, which capital is London and the language is English. The leaders of that country are David Cameron and Elizabeth II.
+TEMPLATE: AGENT-1 is from BRIDGE-1 , which capital is PATIENT-3 and BRIDGE-1 language is PATIENT-1 . The leaders of that country are PATIENT-2 and PATIENT-4 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id10 5 WrittenWork
+
+TRIPLES
+United_Kingdom | leaderName | Elizabeth_II
+United_Kingdom | leaderName | David_Cameron
+AIDS_(journal) | country | United_Kingdom
+AIDS_(journal) | publisher | Lippincott_Williams_&_Wilkins
+Lippincott_Williams_&_Wilkins | parentCompany | Wolters_Kluwer
+
+
+ENTITY MAP
+AGENT-1 | AIDS_(journal)
+BRIDGE-1 | United_Kingdom
+BRIDGE-2 | Lippincott_Williams_&_Wilkins
+PATIENT-1 | Elizabeth_II
+PATIENT-3 | Wolters_Kluwer
+PATIENT-2 | David_Cameron
+
+
+LEX
+Id1
+TEXT: The leaders of the United Kingdom are Elizabeth II and David Cameron. The AIDS journal is published in the United Kingdom by Lippincott, Williams & Wilkins, whose parent company is Wolters Kluwer.
+TEMPLATE: The leaders of BRIDGE-1 are PATIENT-1 and PATIENT-2 . AGENT-1 is published in BRIDGE-1 by BRIDGE-2 , whose parent company is PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The AIDS journal was published in the United Kingdom where Elizabeth II and David Cameron are leaders. The journal was published by Lippincott Williams & Wilkins whose parent company is Wolters Kluwer.
+TEMPLATE: AGENT-1 was published in BRIDGE-1 where PATIENT-1 and PATIENT-2 are leaders . AGENT-1 was published by BRIDGE-2 whose parent company is PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id11 5 WrittenWork
+
+TRIPLES
+United_States | leaderName | Barack_Obama
+A_Severed_Wasp | language | English_language
+English_language | spokenIn | Great_Britain
+A_Severed_Wasp | country | United_States
+United_States | ethnicGroup | Native_Americans_in_the_United_States
+
+
+ENTITY MAP
+AGENT-1 | A_Severed_Wasp
+BRIDGE-1 | English_language
+BRIDGE-2 | United_States
+PATIENT-1 | Barack_Obama
+PATIENT-3 | Native_Americans_in_the_United_States
+PATIENT-2 | Great_Britain
+
+
+LEX
+Id1
+TEXT: The English language is spoken in Great Britain and A Severed Wasp was written in it even though it comes from the United States. Barack Obama is the leader of the United States where Native Americans are an ethnic group.
+TEMPLATE: BRIDGE-1 is spoken in PATIENT-2 and AGENT-1 was written in AGENT-1 even though BRIDGE-1 comes from BRIDGE-2 . PATIENT-1 is BRIDGE-2 leader of BRIDGE-2 wBRIDGE-2 PATIENT-3 are an ethnic group .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: A Severed Wasp is written in English, the language spoken in Great Britain. However, it originates from the United States where the President is Barack Obama and the Native Americans are an ethnic group.
+TEMPLATE: AGENT-1 is written in BRIDGE-1 , BRIDGE-2 language spoken in PATIENT-2 . However , AGENT-1 originates from BRIDGE-2 wBRIDGE-2 BRIDGE-2 President is PATIENT-1 and PATIENT-3 are an ethnic group .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id12 5 WrittenWork
+
+TRIPLES
+United_States | leaderName | Barack_Obama
+English_language | spokenIn | Great_Britain
+United_States | language | English_language
+A_Severed_Wasp | country | United_States
+United_States | ethnicGroup | Native_Americans_in_the_United_States
+
+
+ENTITY MAP
+BRIDGE-2 | United_States
+BRIDGE-1 | English_language
+AGENT-1 | A_Severed_Wasp
+PATIENT-1 | Barack_Obama
+PATIENT-3 | Native_Americans_in_the_United_States
+PATIENT-2 | Great_Britain
+
+
+LEX
+Id1
+TEXT: A Severed Wasp is from the United States, where Barack Obama is the president. English is the main language of the U.S., and is also spoken in Great Britain. Native Americans are one of the national ethnic groups.
+TEMPLATE: AGENT-1 is from BRIDGE-2 wBRIDGE-2 PATIENT-1 is BRIDGE-2 president . BRIDGE-1 is BRIDGE-2 main language of BRIDGE-2 , and is also spoken in PATIENT-2 . PATIENT-3 are one of BRIDGE-2 national ethnic groups .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: A Severed Wasp is from the United States, where English is spoken (as in Great Britain), and Barack Obama is President. Native Americans are one of the ethnic groups in the U.S.
+TEMPLATE: AGENT-1 is from BRIDGE-2 wBRIDGE-2 BRIDGE-1 is spoken ( as in PATIENT-2 ) , and PATIENT-1 is President . PATIENT-3 are one of BRIDGE-2 ethnic groups in BRIDGE-2 U.S.
+CORRECT: 
+COMMENT: 
+-
+

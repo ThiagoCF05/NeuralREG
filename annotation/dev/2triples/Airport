@@ -1,0 +1,773 @@
+
+Entry: Id1 2 Airport
+
+TRIPLES
+Abilene_Regional_Airport | cityServed | Abilene,_Texas
+Abilene,_Texas | isPartOf | Texas
+
+
+ENTITY MAP
+BRIDGE-1 | Abilene,_Texas
+AGENT-1 | Abilene_Regional_Airport
+PATIENT-1 | Texas
+
+
+LEX
+Id1
+TEXT: Abilene is in Texas and is served by the Abilene regional airport.
+TEMPLATE: BRIDGE-1 is in BRIDGE-1 and is served by AGENT-1 .
+CORRECT: BRIDGE-1 is in PATIENT-1 and is served by AGENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: Abilene, part of Texas, is served by the Abilene regional airport.
+TEMPLATE: BRIDGE-1 , part of BRIDGE-1 , is served by AGENT-1 .
+CORRECT: BRIDGE-1 , part of PATIENT-1 , is served by AGENT-1 .
+COMMENT: 
+-
+Id3
+TEXT: Abilene regional airport serves the city of Abilene which is in Texas.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 which is in BRIDGE-1 .
+CORRECT: AGENT-1 serves the city of BRIDGE-1 which is in PATIENT-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id2 2 Airport
+
+TRIPLES
+Adolfo_Suárez_Madrid–Barajas_Airport | location | Alcobendas
+Adolfo_Suárez_Madrid–Barajas_Airport | runwayLength | 3500.0
+
+
+ENTITY MAP
+AGENT-1 | Adolfo_Suárez_Madrid–Barajas_Airport
+PATIENT-1 | Alcobendas
+PATIENT-2 | 3500.0
+
+
+LEX
+Id1
+TEXT: Adolfo Suárez Madrid–Barajas Airport is in Alcobendas and has a runway length of 3500.
+TEMPLATE: AGENT-1 is in PATIENT-1 and has a runway length of PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Located in Alcobendas, Adolfo Suarez Madrid-Barajas Airport has a runway with the length of 3500.0 metres.
+TEMPLATE: Located in PATIENT-1 , AGENT-1 has a runway with the length of PATIENT-2 metres .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id3 2 Airport
+
+TRIPLES
+Adolfo_Suárez_Madrid–Barajas_Airport | runwayLength | 3500.0
+Adolfo_Suárez_Madrid–Barajas_Airport | location | San_Sebastián_de_los_Reyes
+
+
+ENTITY MAP
+AGENT-1 | Adolfo_Suárez_Madrid–Barajas_Airport
+PATIENT-1 | 3500.0
+PATIENT-2 | San_Sebastián_de_los_Reyes
+
+
+LEX
+Id1
+TEXT: The Adolfo Suárez Madrid–Barajas Airport located at San Sebastian de los Reye has a runway length of 3500.
+TEMPLATE: AGENT-1 located at PATIENT-2 has a runway length of PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: The Adolfo Suárez Madrid–Barajas Airport is in San Sebastián de los Reyes and has a runway length of 3500.0 metres.
+TEMPLATE: AGENT-1 is iPATIENT-2 and has a runway length of PATIENT-1 metres .
+CORRECT: AGENT-1 is in PATIENT-2 and has a runway length of PATIENT-1 metres .
+COMMENT: 
+-
+Id3
+TEXT: Adolfo Suarez Madrid-Barajas airport is located at San Sebastian de los Reyes and has a runway length of 3500.
+TEMPLATE: AGENT-1 is located at PATIENT-2 and has a runway length of PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id4 2 Airport
+
+TRIPLES
+Agra_Airport | location | India
+India | leaderName | T._S._Thakur
+
+
+ENTITY MAP
+BRIDGE-1 | India
+AGENT-1 | Agra_Airport
+PATIENT-1 | T._S._Thakur
+
+
+LEX
+Id1
+TEXT: Agra Airport is in India where one of its leaders is T.S. Thakur.
+TEMPLATE: AGENT-1 is in BRIDGE-1 where one of its leaders is PATIENT-1 .
+CORRECT: AGENT-1 is in BRIDGE-1 where one of BRIDGE-1 leaders is PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: Agra Airport is in India, where the leader is TS Thakur.
+TEMPLATE: AGENT-1 is in BRIDGE-1 , where the leader is PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Agra Airport is located in India, where the leader is T S Thakur.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , where the leader is PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id5 2 Airport
+
+TRIPLES
+Al_Asad_Airbase | elevationAboveTheSeaLevel_(in_feet) | 618
+Al_Asad_Airbase | location | "Al Anbar Province, Iraq"
+
+
+ENTITY MAP
+AGENT-1 | Al_Asad_Airbase
+PATIENT-1 | 618
+PATIENT-2 | "Al Anbar Province, Iraq"
+
+
+LEX
+Id1
+TEXT: Al Asad Airbase is 618 ft above sea level and is located in Al Anbar Province, Iraq.
+TEMPLATE: AGENT-1 is PATIENT-1 ft above sea level and is located in PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: The Al Asad Airbase which is elevated 618 feet above sea level, is located in the Al Anbar Province in Iraq.
+TEMPLATE: AGENT-1 which is elevated PATIENT-1 feet above sea level , is located in PATIENT-2 in Iraq .
+CORRECT: AGENT-1 which is elevated PATIENT-1 feet above sea level , is located in PATIENT-2 .
+COMMENT: 
+-
+Id3
+TEXT: The Al Asad Airbase, which is 618 ft above sea level, is located in Al Anbar Province, Iraq.
+TEMPLATE: AGENT-1 , which is PATIENT-1 ft above sea level , is located in PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id6 2 Airport
+
+TRIPLES
+Al_Asad_Airbase | operatingOrganisation | United_States_Air_Force
+United_States_Air_Force | battles | Operation_Enduring_Freedom
+
+
+ENTITY MAP
+BRIDGE-1 | United_States_Air_Force
+AGENT-1 | Al_Asad_Airbase
+PATIENT-1 | Operation_Enduring_Freedom
+
+
+LEX
+Id1
+TEXT: Al Asad Airbase is operated by the United States Air Force who fought in The Operation of Enduring Freedom battle.
+TEMPLATE: AGENT-1 is operated by BRIDGE-1 who fought in PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Operation Enduring Freedom was a battle involving the United States Air Force who operate Al Asad airbase.
+TEMPLATE: PATIENT-1 was a battle involving BRIDGE-1 who operate BRIDGE-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id7 2 Airport
+
+TRIPLES
+Al_Asad_Airbase | operatingOrganisation | United_States_Air_Force
+United_States_Air_Force | battles | United_States_invasion_of_Panama
+
+
+ENTITY MAP
+BRIDGE-1 | United_States_Air_Force
+AGENT-1 | Al_Asad_Airbase
+PATIENT-1 | United_States_invasion_of_Panama
+
+
+LEX
+Id1
+TEXT: The United States invasion of Panama was a battle involving the United States Air Force who operate the Al Asad Airbase.
+TEMPLATE: PATIENT-1 was a battle involving BRIDGE-1 who operate AGENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: The United States invasion of Panama was a battle involving the United States Air Force who are the operating organisation for Al Asad airbase.
+TEMPLATE: PATIENT-1 was a battle involving BRIDGE-1 who are the operating organisation for BRIDGE-1 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: The United States Air Force was involved in the invasion of Panama and is also the operating organisation for Al Asad air base.
+TEMPLATE: BRIDGE-1 was involved in PATIENT-1 and is also the operating organisation for AGENT-1 air base .
+CORRECT: BRIDGE-1 was involved in PATIENT-1 and is also the operating organisation for AGENT-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id8 2 Airport
+
+TRIPLES
+Alcobendas | isPartOf | Community_of_Madrid
+Adolfo_Suárez_Madrid–Barajas_Airport | location | Alcobendas
+
+
+ENTITY MAP
+BRIDGE-1 | Alcobendas
+AGENT-1 | Adolfo_Suárez_Madrid–Barajas_Airport
+PATIENT-1 | Community_of_Madrid
+
+
+LEX
+Id1
+TEXT: Adolfo Suárez Madrid–Barajas Airport is located in Alcobendas which is part of the Community of Madrid.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 which is part of PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Adolfo Suárez Madrid–Barajas Airport is in Alcobendas which is part of the community of Madrid.
+TEMPLATE: AGENT-1 is in BRIDGE-1 which is part of PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id9 2 Airport
+
+TRIPLES
+Alderney_Airport | 1st_runway_SurfaceType | Poaceae
+Alderney_Airport | runwayLength | 877.0
+
+
+ENTITY MAP
+AGENT-1 | Alderney_Airport
+PATIENT-1 | Poaceae
+PATIENT-2 | 877.0
+
+
+LEX
+Id1
+TEXT: Poaceae is the surface of the 1st runway at Alderney Airport which has a runway with the length of 877.0 metres.
+TEMPLATE: PATIENT-1 is the surface of the 1st runway at AGENT-1 which has a runway with the length of PATIENT-2 metres .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: The 1st runway length of Alderney Airport is 877.0 and the surface is poaceae.
+TEMPLATE: The 1st runway length of AGENT-1 is PATIENT-2 and the surface is PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id10 2 Airport
+
+TRIPLES
+Allama_Iqbal_International_Airport | operatingOrganisation | Pakistan_Civil_Aviation_Authority
+Pakistan_Civil_Aviation_Authority | headquarter | Jinnah_International_Airport
+
+
+ENTITY MAP
+BRIDGE-1 | Pakistan_Civil_Aviation_Authority
+AGENT-1 | Allama_Iqbal_International_Airport
+PATIENT-1 | Jinnah_International_Airport
+
+
+LEX
+Id1
+TEXT: Allama Iqbal International Airport is operated by Pakistan Civil Aviation Authority, the HQ of which is at Jinnah International Airport.
+TEMPLATE: AGENT-1 is operated by BRIDGE-1 , the HQ of which is at PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: The Pakistan Civil Aviation Authority, which has its HQ at Jinnah International Airport, governs Allama Iqbal International Airport.
+TEMPLATE: BRIDGE-1 , which has BRIDGE-1 HQ at PATIENT-1 , governs AGENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Allama Iqbal International Airport is operated by the Pakistan Civil Aviation Authority, which is headquartered at Jinnah International Airport.
+TEMPLATE: AGENT-1 is operated by BRIDGE-1 , which is headquartered at PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id11 2 Airport
+
+TRIPLES
+Alpena_County_Regional_Airport | location | Wilson_Township,_Alpena_County,_Michigan
+Wilson_Township,_Alpena_County,_Michigan | isPartOf | United_States
+
+
+ENTITY MAP
+BRIDGE-1 | Wilson_Township,_Alpena_County,_Michigan
+AGENT-1 | Alpena_County_Regional_Airport
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: The location of Alpena County Regional Airport is Wilson Township, Alpena County, Michigan, United States.
+TEMPLATE: PATIENT-1 location of AGENT-1 is BRIDGE-1 , PATIENT-1 .
+CORRECT: The location of AGENT-1 is BRIDGE-1 , PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: Alpena County Regional Airport is located in Wilson Township, Alpena County, Michigan, United States.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Alpena County Regional Airport is located in the Wilson Township, Alpena County, Michigan, USA.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id12 2 Airport
+
+TRIPLES
+Amsterdam_Airport_Schiphol | elevationAboveTheSeaLevel_(in_metres) | -3.3528
+Amsterdam_Airport_Schiphol | operatingOrganisation | Schiphol_Group
+
+
+ENTITY MAP
+AGENT-1 | Amsterdam_Airport_Schiphol
+PATIENT-1 | -3.3528
+PATIENT-2 | Schiphol_Group
+
+
+LEX
+Id1
+TEXT: The Schipol Group are the operators of Amsterdam Airport Schiphol, which is -3.3528 above sea level.
+TEMPLATE: PATIENT-2 are the operators of AGENT-1 , which is PATIENT-1 above sea level .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Schiphol Group operates the Amsterdam Airport Schiphol which is -3.3528m a.s.l.
+TEMPLATE: PATIENT-2 operates AGENT-1 which is PATIENT-1 m a.s.l.
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Amsterdam airport Schipol is operated by the Schipol group and is -3.3528 above sea level.
+TEMPLATE: AGENT-1 is operated by PATIENT-2 and is PATIENT-1 above sea level .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id13 2 Airport
+
+TRIPLES
+Andrews_County_Airport | 4th_runway_SurfaceType | "Asphalt"
+Andrews_County_Airport | elevationAboveTheSeaLevel_(in_metres) | 973.0
+
+
+ENTITY MAP
+AGENT-1 | Andrews_County_Airport
+PATIENT-1 | "Asphalt"
+PATIENT-2 | 973.0
+
+
+LEX
+Id1
+TEXT: Andrews County Airport is 973 metres above sea level and The 4th runway is made of Asphalt.
+TEMPLATE: AGENT-1 is PATIENT-2 above sea level and The 4th runway is made of PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: The fourth runway at Andrews County Airport is made of asphalt and the airport is 973 below sea level.
+TEMPLATE: The fourth runway at AGENT-1 is made of PATIENT-1 and the airport is PATIENT-2 below sea level .
+CORRECT: The fourth runway at AGENT-1 is made of PATIENT-1 and AGENT-1 is PATIENT-2 below sea level .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id14 2 Airport
+
+TRIPLES
+Andrews_County_Airport | location | Texas
+Texas | capital | Austin,_Texas
+
+
+ENTITY MAP
+BRIDGE-1 | Texas
+AGENT-1 | Andrews_County_Airport
+PATIENT-1 | Austin,_Texas
+
+
+LEX
+Id1
+TEXT: Andrews County Airport is located in Texas, the capital of which is Austin.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , the capital of which is PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Andrews County Airport is located in Texas which has the capital of Austin.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 which has the capital of PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Andrews County Airport is located in Texas, where Austin is the capital.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , where PATIENT-1 is the capital .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id15 2 Airport
+
+TRIPLES
+Angola_International_Airport | cityServed | Luanda
+Angola_International_Airport | elevationAboveTheSeaLevel_(in_metres) | 159
+
+
+ENTITY MAP
+AGENT-1 | Angola_International_Airport
+PATIENT-1 | Luanda
+PATIENT-2 | 159
+
+
+LEX
+Id1
+TEXT: Angola International Airport serves the city of Luanda, it is 159m above sea level.
+TEMPLATE: AGENT-1 serves PATIENT-1 of PATIENT-1 , AGENT-1 is PATIENT-2 above sea level .
+CORRECT: AGENT-1 serves the city of PATIENT-1 , AGENT-1 is PATIENT-2 above sea level .
+COMMENT: 
+-
+Id2
+TEXT: The Angola International Airport, 159 m above sea level serves Luanda.
+TEMPLATE: AGENT-1 , PATIENT-2 m above sea level serves PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id16 2 Airport
+
+TRIPLES
+Angola_International_Airport | location | Ícolo_e_Bengo
+Ícolo_e_Bengo | country | Angola
+
+
+ENTITY MAP
+BRIDGE-1 | Ícolo_e_Bengo
+AGENT-1 | Angola_International_Airport
+PATIENT-1 | Angola
+
+
+LEX
+Id1
+TEXT: Angola International Airport is located in Ícolo e Bengo, Angola.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id17 2 Airport
+
+TRIPLES
+Antwerp_International_Airport | operatingOrganisation | "Flemish department of Mobility and Public Works"
+Antwerp_International_Airport | elevationAboveTheSeaLevel_(in_metres) | 12.0
+
+
+ENTITY MAP
+AGENT-1 | Antwerp_International_Airport
+PATIENT-1 | "Flemish department of Mobility and Public Works"
+PATIENT-2 | 12.0
+
+
+LEX
+Id1
+TEXT: Antwerp International Airport, operated by The Flemish department of Mobility and Public Works, is 12 metres above sea level.
+TEMPLATE: AGENT-1 , operated by PATIENT-1 , is PATIENT-2 above sea level .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id18 2 Airport
+
+TRIPLES
+Appleton_International_Airport | cityServed | Appleton,_Wisconsin
+Appleton,_Wisconsin | isPartOf | Grand_Chute,_Wisconsin
+
+
+ENTITY MAP
+BRIDGE-1 | Appleton,_Wisconsin
+AGENT-1 | Appleton_International_Airport
+PATIENT-1 | Grand_Chute,_Wisconsin
+
+
+LEX
+Id1
+TEXT: Appleton, Grand Chute, Wisconsin is a city which is served by Appleton International Airport.
+TEMPLATE: BRIDGE-1 , PATIENT-1 is a city which is served by AGENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Appleton, Wisconsin is part of Grand Chute, Wisconsin and is served by Appletone International Airport.
+TEMPLATE: BRIDGE-1 is BRIDGE-1 of PATIENT-1 and is served by AGENT-1 .
+CORRECT: BRIDGE-1 is part of PATIENT-1 and is served by AGENT-1 .
+COMMENT: 
+-
+Id3
+TEXT: Appleton International Airport serves the city of Appleton which is part of Grand Chute, Wisconsin.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 which is BRIDGE-1 of PATIENT-1 .
+CORRECT: AGENT-1 serves the city of BRIDGE-1 which is part of PATIENT-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id19 2 Airport
+
+TRIPLES
+Ardmore_Airport_(New_Zealand) | 2nd_runway_SurfaceType | Poaceae
+Poaceae | order | Poales
+
+
+ENTITY MAP
+BRIDGE-1 | Poaceae
+AGENT-1 | Ardmore_Airport_(New_Zealand)
+PATIENT-1 | Poales
+
+
+LEX
+Id1
+TEXT: New Zealand's Ardmore Airport's second runway has the surface type Poaceae which is part of the Poales order.
+TEMPLATE: AGENT-1 's second runway has PATIENT-1 BRIDGE-1 which is part of the PATIENT-1 order .
+CORRECT: AGENT-1 second runway has the surface type BRIDGE-1 which is part of the PATIENT-1 order .
+COMMENT: 
+-
+Id2
+TEXT: The 2nd runway at Ardmore Airport (New Zealand) is made of Poaceae, which is a member of the order of Poales.
+TEMPLATE: The 2nd runway at AGENT-1 ( AGENT-1 ) is made of BRIDGE-1 , which is a member of PATIENT-1 of PATIENT-1 .
+CORRECT: The 2nd runway at AGENT-1 is made of BRIDGE-1 , which is a member of the order of PATIENT-1 .
+COMMENT: 
+-
+Id3
+TEXT: Poaceae (part of the Poales order) is the surface type of the second runway of Ardmore Airport, New Zealand.
+TEMPLATE: BRIDGE-1 ( part of the PATIENT-1 order ) is PATIENT-1 of the second runway of AGENT-1 .
+CORRECT: BRIDGE-1 ( part of the PATIENT-1 order ) is the surface type of the second runway of AGENT-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id20 2 Airport
+
+TRIPLES
+Ardmore_Airport_(New_Zealand) | 3rd_runway_SurfaceType | Poaceae
+Poaceae | class | Monocotyledon
+
+
+ENTITY MAP
+BRIDGE-1 | Poaceae
+AGENT-1 | Ardmore_Airport_(New_Zealand)
+PATIENT-1 | Monocotyledon
+
+
+LEX
+Id1
+TEXT: Ardmore Airport (New Zealand)'s 3rd runway surface type is Poaceae of the class Monocotyledon.
+TEMPLATE: AGENT-1 ( AGENT-1 ) 's 3rd runway surface type is BRIDGE-1 of PATIENT-1 .
+CORRECT: AGENT-1 3rd runway surface type is BRIDGE-1 of the class PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: The 3rd runway at Ardmore Airport (New Zealand) is made of Poaceae which is included in the class Monocotyledon.
+TEMPLATE: The 3rd runway at AGENT-1 ( AGENT-1 ) is made of BRIDGE-1 which is included in PATIENT-1 .
+CORRECT: The 3rd runway at AGENT-1 is made of BRIDGE-1 which is included in the class PATIENT-1 .
+COMMENT: 
+-
+Id3
+TEXT: Ardmore Airport (New Zealand)'s 3rd runway surface type is Poaceae which is included in the class of Monocotyledon.
+TEMPLATE: AGENT-1 ( AGENT-1 ) 's 3rd runway surface type is BRIDGE-1 which is included in the class of PATIENT-1 .
+CORRECT: AGENT-1 3rd runway surface type is BRIDGE-1 which is included in the class of PATIENT-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id21 2 Airport
+
+TRIPLES
+Ashgabat_International_Airport | runwayLength | 3800.0
+Ashgabat_International_Airport | location | Ashgabat
+
+
+ENTITY MAP
+AGENT-1 | Ashgabat_International_Airport
+PATIENT-1 | 3800.0
+PATIENT-2 | Ashgabat
+
+
+LEX
+Id1
+TEXT: The runway length at Ashgabat International airport, located in Ashgabat, is 3800.0.
+TEMPLATE: The runway length at AGENT-1 , located in PATIENT-2 , is PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Ashgabat International Airport is located in Ashgabat and its runway length is 3800.
+TEMPLATE: AGENT-1 is located in PATIENT-2 and PATIENT-2 runway length is PATIENT-1 .
+CORRECT: AGENT-1 is located in PATIENT-2 and AGENT-1 runway length is PATIENT-1 .
+COMMENT: 
+-
+Id3
+TEXT: The runway length of Ashgabat International Airport in Ashgabat is 3800.0.
+TEMPLATE: The runway length of AGENT-1 in PATIENT-2 is PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id22 2 Airport
+
+TRIPLES
+Athens_International_Airport | cityServed | Athens
+Athens_International_Airport | location | Spata
+
+
+ENTITY MAP
+AGENT-1 | Athens_International_Airport
+PATIENT-1 | Athens
+PATIENT-2 | Spata
+
+
+LEX
+Id1
+TEXT: Athens International Airport is in Spata and serves the city of Athens.
+TEMPLATE: AGENT-1 is in PATIENT-2 and serves PATIENT-1 .
+CORRECT: AGENT-1 is in PATIENT-2 and serves the city of PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: Athens International Airport, which is located in Spata, serves the city of Athens.
+TEMPLATE: AGENT-1 , which is located in PATIENT-2 , serves PATIENT-1 .
+CORRECT: AGENT-1 , which is located in PATIENT-2 , serves the city of PATIENT-1 .
+COMMENT: 
+-
+Id3
+TEXT: Athens International Airport in Spata serves the city of Athens.
+TEMPLATE: AGENT-1 in PATIENT-2 serves PATIENT-1 .
+CORRECT: AGENT-1 in PATIENT-2 serves the city of PATIENT-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id23 2 Airport
+
+TRIPLES
+Athens_International_Airport | cityServed | Athens
+Athens_International_Airport | runwayLength | 3800.0
+
+
+ENTITY MAP
+AGENT-1 | Athens_International_Airport
+PATIENT-1 | Athens
+PATIENT-2 | 3800.0
+
+
+LEX
+Id1
+TEXT: Athens International Airport serves the city of Athens and has a runway length of 3800.0.
+TEMPLATE: AGENT-1 serves PATIENT-1 and has a runway length of PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Athens International Airport serves the city of Athens and has a runway length of 3.800 metres.
+TEMPLATE: AGENT-1 serves PATIENT-1 and has a runway length of PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id24 2 Airport
+
+TRIPLES
+San_Sebastián_de_los_Reyes | isPartOf | Community_of_Madrid
+Adolfo_Suárez_Madrid–Barajas_Airport | location | San_Sebastián_de_los_Reyes
+
+
+ENTITY MAP
+BRIDGE-1 | San_Sebastián_de_los_Reyes
+AGENT-1 | Adolfo_Suárez_Madrid–Barajas_Airport
+PATIENT-1 | Community_of_Madrid
+
+
+LEX
+Id1
+TEXT: San Sebastian de los Reyes is part of the Community of Madrid and is also the location of Adolfo Suárez Madrid–Barajas Airport.
+TEMPLATE: BRIDGE-1 is part of PATIENT-1 and is also the location of AGENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Adolfo Suárez Madrid–Barajas Airport is found in San Sebastián de los Reyes, part of the Community of Madrid.
+TEMPLATE: AGENT-1 is found iBRIDGE-1 , part of PATIENT-1 .
+CORRECT: AGENT-1 is found in BRIDGE-1 , part of PATIENT-1 .
+COMMENT: 
+-
+Id3
+TEXT: The Adolfo Suárez Madrid–Barajas Airport is in San Sebastián de los Reyes which is part of the Community of Madrid.
+TEMPLATE: AGENT-1 is iBRIDGE-1 which is part of PATIENT-1 .
+CORRECT: AGENT-1 is in BRIDGE-1 which is part of PATIENT-1 .
+COMMENT: 
+-
+

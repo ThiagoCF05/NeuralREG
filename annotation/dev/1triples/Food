@@ -1,0 +1,953 @@
+
+Entry: Id34 1 Food
+
+TRIPLES
+United_States | ethnicGroup | Native_Americans_in_the_United_States
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | Native_Americans_in_the_United_States
+
+
+LEX
+Id1
+TEXT: Native Americans in the United States are one of the ethnic groups of the country.
+TEMPLATE: PATIENT-1 in AGENT-1 are one of AGENT-1 ethnic groups of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id25 1 Food
+
+TRIPLES
+Dessert | dishVariation | Ice_cream
+
+
+ENTITY MAP
+AGENT-1 | Dessert
+PATIENT-1 | Ice_cream
+
+
+LEX
+Id1
+TEXT: Ice cream is a type of dessert.
+TEMPLATE: PATIENT-1 is a type of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: A type of dessert is an ice cream.
+TEMPLATE: A type of AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Ice cream is a dessert.
+TEMPLATE: PATIENT-1 is AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id23 1 Food
+
+TRIPLES
+Derbyshire_Dales | leaderName | Patrick_McLoughlin
+
+
+ENTITY MAP
+AGENT-1 | Derbyshire_Dales
+PATIENT-1 | Patrick_McLoughlin
+
+
+LEX
+Id1
+TEXT: Patrick McLoughlin is a leader in the Derbyshire Dales.
+TEMPLATE: PATIENT-1 is a leader in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Patrick McLoughlin is a leader in Derbyshire Dales.
+TEMPLATE: PATIENT-1 is a leader in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Patrick McLoughlin is the leader of Derbyshire Dales.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id24 1 Food
+
+TRIPLES
+Dessert | dishVariation | Cake
+
+
+ENTITY MAP
+AGENT-1 | Dessert
+PATIENT-1 | Cake
+
+
+LEX
+Id1
+TEXT: A variation on dessert is cake.
+TEMPLATE: A variation on AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id16 1 Food
+
+TRIPLES
+Barny_Cakes | creator | Mondelez_International
+
+
+ENTITY MAP
+AGENT-1 | Barny_Cakes
+PATIENT-1 | Mondelez_International
+
+
+LEX
+Id1
+TEXT: Mondelez International is the creator of Barny cakes.
+TEMPLATE: PATIENT-1 is the creator of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Barny cakes were created by Mondelez International.
+TEMPLATE: AGENT-1 were created by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Barny cakes is created by Mondelez International.
+TEMPLATE: AGENT-1 is created by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id15 1 Food
+
+TRIPLES
+Bandeja_paisa | ingredient | Chorizo
+
+
+ENTITY MAP
+AGENT-1 | Bandeja_paisa
+PATIENT-1 | Chorizo
+
+
+LEX
+Id1
+TEXT: Chorizo is an ingredient in the dish Bandeja paisa.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Chorizo is an ingredient in Bandeja paisa.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id14 1 Food
+
+TRIPLES
+Bakso | ingredient | Vermicelli
+
+
+ENTITY MAP
+AGENT-1 | Bakso
+PATIENT-1 | Vermicelli
+
+
+LEX
+Id1
+TEXT: Vermicelli is an ingredient in Bakso.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Vermicelli is an ingredient of the dish Bakso.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Vermicelli is included in bakso.
+TEMPLATE: PATIENT-1 is included in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id13 1 Food
+
+TRIPLES
+Bakso | ingredient | Noodle
+
+
+ENTITY MAP
+AGENT-1 | Bakso
+PATIENT-1 | Noodle
+
+
+LEX
+Id1
+TEXT: The dish Bakso contains noodles.
+TEMPLATE: AGENT-1 contains PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Noodle is an ingredient in Bakso.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: bakso contains noodles.
+TEMPLATE: AGENT-1 contains PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id12 1 Food
+
+TRIPLES
+Bakewell_tart | ingredient | Frangipane
+
+
+ENTITY MAP
+AGENT-1 | Bakewell_tart
+PATIENT-1 | Frangipane
+
+
+LEX
+Id1
+TEXT: An ingredient of bakewell tart is frangipane.
+TEMPLATE: An ingredient of AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Frangipane is an ingredient in a Bakewell tart.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Frangipane is an ingredient of Bakewell tart.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id22 1 Food
+
+TRIPLES
+Binignit | region | Visayas
+
+
+ENTITY MAP
+AGENT-1 | Binignit
+PATIENT-1 | Visayas
+
+
+LEX
+Id1
+TEXT: Binignit is a dish from the region of Visayas.
+TEMPLATE: AGENT-1 is a dish from the region of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id10 1 Food
+
+TRIPLES
+Ayam_penyet | servingTemperature | "Hot"
+
+
+ENTITY MAP
+AGENT-1 | Ayam_penyet
+PATIENT-1 | "Hot"
+
+
+LEX
+Id1
+TEXT: Ayam penyet should be served hot.
+TEMPLATE: AGENT-1 should be served hot .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Ayam penyet is a dish that should be served hot.
+TEMPLATE: AGENT-1 is PATIENT-1 that should be served hot .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: ayam penyet is served hot.
+TEMPLATE: AGENT-1 is served hot .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id11 1 Food
+
+TRIPLES
+Baked_Alaska | course | Dessert
+
+
+ENTITY MAP
+AGENT-1 | Baked_Alaska
+PATIENT-1 | Dessert
+
+
+LEX
+Id1
+TEXT: Baked Alaska is a dessert.
+TEMPLATE: AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id9 1 Food
+
+TRIPLES
+Avocado | genus | Persea
+
+
+ENTITY MAP
+AGENT-1 | Avocado
+PATIENT-1 | Persea
+
+
+LEX
+Id1
+TEXT: The genus of the avocado is persea.
+TEMPLATE: The genus of AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The genus of Avocado is Persea.
+TEMPLATE: The genus of AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id8 1 Food
+
+TRIPLES
+Asam_pedas | country | Malaysia
+
+
+ENTITY MAP
+AGENT-1 | Asam_pedas
+PATIENT-1 | Malaysia
+
+
+LEX
+Id1
+TEXT: Asam pedas is a food found in Malaysia.
+TEMPLATE: AGENT-1 is a food found in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id7 1 Food
+
+TRIPLES
+Arròs_negre | ingredient | Squid
+
+
+ENTITY MAP
+AGENT-1 | Arròs_negre
+PATIENT-1 | Squid
+
+
+LEX
+Id1
+TEXT: Squid is an ingredient of Arros negre.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id6 1 Food
+
+TRIPLES
+Arròs_negre | ingredient | Cuttlefish
+
+
+ENTITY MAP
+AGENT-1 | Arròs_negre
+PATIENT-1 | Cuttlefish
+
+
+LEX
+Id1
+TEXT: Cuttlefish is an ingredient in Arros negre.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Cuttlefish is an ingredient of the dish Arròs negre.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id5 1 Food
+
+TRIPLES
+Arrabbiata_sauce | mainIngredients | "Tomatoes, red chili, garlic, olive oil"
+
+
+ENTITY MAP
+AGENT-1 | Arrabbiata_sauce
+PATIENT-1 | "Tomatoes, red chili, garlic, olive oil"
+
+
+LEX
+Id1
+TEXT: Arrabbiata sauce is made with tomatoes, red chili, garlic and olive oil.
+TEMPLATE: AGENT-1 is made with tomatoes , red chili , garlic and PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: the main ingredients in Arrabbiata sauce are Tomatoes, red chili, garlic and olive oil.
+TEMPLATE: the main ingredients in AGENT-1 are Tomatoes , red chili , garlic and PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id3 1 Food
+
+TRIPLES
+Arem-arem | region | "Nationwide in Indonesia, but more specific to Java"
+
+
+ENTITY MAP
+AGENT-1 | Arem-arem
+PATIENT-1 | "Nationwide in Indonesia, but more specific to Java"
+
+
+LEX
+Id1
+TEXT: Arem-arem is found nationwide in Indonesia, but is more specific to Java.
+TEMPLATE: AGENT-1 is found PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Arem-arem is nationwide in Indonesia, but more specific to Java.
+TEMPLATE: AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id2 1 Food
+
+TRIPLES
+Ajoblanco | mainIngredients | "Bread, almonds, garlic, water, olive oil"
+
+
+ENTITY MAP
+AGENT-1 | Ajoblanco
+PATIENT-1 | "Bread, almonds, garlic, water, olive oil"
+
+
+LEX
+Id1
+TEXT: The main ingredients in ajoblanco are bread, almonds, garlic, water and olive oil.
+TEMPLATE: PATIENT-1 in AGENT-1 are bread , AGENT-1 , garlic , water and olive oil .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Bread, almonds, garlic, water, and olive oil are the main ingredients in Ajoblanco.
+TEMPLATE: Bread , AGENT-1 , garlic , water , and olive oil are PATIENT-1 in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The main ingredients of Ajoblanco are bread, almonds, garlic, water, olive oil.
+TEMPLATE: PATIENT-1 of AGENT-1 are bread , AGENT-1 , garlic , water , olive oil .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id1 1 Food
+
+TRIPLES
+Ajoblanco | alternativeName | "Ajo blanco"
+
+
+ENTITY MAP
+AGENT-1 | Ajoblanco
+PATIENT-1 | "Ajo blanco"
+
+
+LEX
+Id1
+TEXT: The alternative name for Ajoblanco is "Ajo blanco".
+TEMPLATE: The alternative name for AGENT-1 is `` PATIENT-1 '' .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Ajo blanco is an alternative name to Ajoblanco.
+TEMPLATE: PATIENT-1 is an alternative name to AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Ajo blanco is an alternative name of Ajoblanco.
+TEMPLATE: PATIENT-1 is an alternative name of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id4 1 Food
+
+TRIPLES
+Arem-arem | region | Indonesia
+
+
+ENTITY MAP
+AGENT-1 | Arem-arem
+PATIENT-1 | Indonesia
+
+
+LEX
+Id1
+TEXT: Arem arem comes from Indonesia.
+TEMPLATE: AGENT-1 comes from PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id17 1 Food
+
+TRIPLES
+Barny_Cakes | dishVariation | Chocolate
+
+
+ENTITY MAP
+AGENT-1 | Barny_Cakes
+PATIENT-1 | Chocolate
+
+
+LEX
+Id1
+TEXT: Barny Cakes can be chocolate flavoured.
+TEMPLATE: AGENT-1 can be chocolate flavoured .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Chocolate is one variation of the Barny Cakes dish.
+TEMPLATE: PATIENT-1 is one variation of the AGENT-1 dish .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id18 1 Food
+
+TRIPLES
+Barny_Cakes | protein | 1.8 g
+
+
+ENTITY MAP
+AGENT-1 | Barny_Cakes
+PATIENT-1 | 1.8 g
+
+
+LEX
+Id1
+TEXT: Barny cakes contain 1.8 g of protein.
+TEMPLATE: AGENT-1 contain PATIENT-1 of protein .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Barny cakes contain 1.8g of protein.
+TEMPLATE: AGENT-1 contain PATIENT-1 of protein .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id19 1 Food
+
+TRIPLES
+Batchoy | country | Philippines
+
+
+ENTITY MAP
+AGENT-1 | Batchoy
+PATIENT-1 | Philippines
+
+
+LEX
+Id1
+TEXT: Batchoy is eaten in the Philippines.
+TEMPLATE: AGENT-1 is eaten in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Philippines is the country Batchoy comes from.
+TEMPLATE: PATIENT-1 is AGENT-1 comes from .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id20 1 Food
+
+TRIPLES
+Batchoy | ingredient | Chicken
+
+
+ENTITY MAP
+AGENT-1 | Batchoy
+PATIENT-1 | Chicken
+
+
+LEX
+Id1
+TEXT: Chicken is an ingredient in Batchoy.
+TEMPLATE: PATIENT-1 is PATIENT-1 in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Batchoy includes chicken.
+TEMPLATE: AGENT-1 includes PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id21 1 Food
+
+TRIPLES
+Batchoy | ingredient | Vegetable
+
+
+ENTITY MAP
+AGENT-1 | Batchoy
+PATIENT-1 | Vegetable
+
+
+LEX
+Id1
+TEXT: Vegetable are used in the preparation of Batchoy.
+TEMPLATE: PATIENT-1 are used in the preparation of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Vegetables are an ingredient in Batchoy.
+TEMPLATE: PATIENT-1 are an ingredient in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id26 1 Food
+
+TRIPLES
+Indonesia | leaderName | Jusuf_Kalla
+
+
+ENTITY MAP
+AGENT-1 | Indonesia
+PATIENT-1 | Jusuf_Kalla
+
+
+LEX
+Id1
+TEXT: Jusuf Kalla is a leader in Indonesia.
+TEMPLATE: PATIENT-1 is a leader in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Jusuf Kalla is the leader of Indonesia.
+TEMPLATE: PATIENT-1 is AGENT-1 leader of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id27 1 Food
+
+TRIPLES
+Italy | demonym | Italians
+
+
+ENTITY MAP
+AGENT-1 | Italy
+PATIENT-1 | Italians
+
+
+LEX
+Id1
+TEXT: Italians are from Italy.
+TEMPLATE: PATIENT-1 are from AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Italians is the name given to people from Italy.
+TEMPLATE: PATIENT-1 is the name given to people from AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id28 1 Food
+
+TRIPLES
+Java | ethnicGroup | Baduy
+
+
+ENTITY MAP
+AGENT-1 | Java
+PATIENT-1 | Baduy
+
+
+LEX
+Id1
+TEXT: Baduy is the ethnic group of Java.
+TEMPLATE: PATIENT-1 is the ethnic group of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The Baduy is an ethnic group in Java.
+TEMPLATE: PATIENT-1 is an ethnic group in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Baduy is an ethnic group of Java.
+TEMPLATE: PATIENT-1 is an ethnic group of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id29 1 Food
+
+TRIPLES
+Lemon | order | Rosids
+
+
+ENTITY MAP
+AGENT-1 | Lemon
+PATIENT-1 | Rosids
+
+
+LEX
+Id1
+TEXT: Lemon is under the order of Rosids.
+TEMPLATE: AGENT-1 is under the order of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: the order of lemons is Rosids.
+TEMPLATE: the order of AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id30 1 Food
+
+TRIPLES
+Mexico | demonym | Mexicans
+
+
+ENTITY MAP
+AGENT-1 | Mexico
+PATIENT-1 | Mexicans
+
+
+LEX
+Id1
+TEXT: Mexico is inhabited by Mexicans.
+TEMPLATE: AGENT-1 is inhabited by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Mexicans are people from Mexico.
+TEMPLATE: PATIENT-1 are people from AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id31 1 Food
+
+TRIPLES
+Mexico | language | Spanish_language
+
+
+ENTITY MAP
+AGENT-1 | Mexico
+PATIENT-1 | Spanish_language
+
+
+LEX
+Id1
+TEXT: In Mexico, the spoken language is Spanish.
+TEMPLATE: In AGENT-1 , the spoken language is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Spanish is the language spoken in Mexico.
+TEMPLATE: PATIENT-1 is PATIENT-1 spoken in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The language of Mexico is Spanish.
+TEMPLATE: The language of AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id32 1 Food
+
+TRIPLES
+Philippines | language | Arabic
+
+
+ENTITY MAP
+AGENT-1 | Philippines
+PATIENT-1 | Arabic
+
+
+LEX
+Id1
+TEXT: One of the languages used in the Philippines is Arabic.
+TEMPLATE: One of AGENT-1 languages used in AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Arabic is a language spoken in the Philippines.
+TEMPLATE: PATIENT-1 is a language spoken in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: One of the languages in Philippines is Arabic.
+TEMPLATE: One of AGENT-1 languages in AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id4
+TEXT: Arabic is one of the languages spoken in the Philippines.
+TEMPLATE: PATIENT-1 is one of AGENT-1 languages spoken in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id33 1 Food
+
+TRIPLES
+Siomay | dishVariation | Shumai
+
+
+ENTITY MAP
+AGENT-1 | Siomay
+PATIENT-1 | Shumai
+
+
+LEX
+Id1
+TEXT: Shumai is a variation of the dish Siomay.
+TEMPLATE: PATIENT-1 is a variation of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Siomay and Shumai are variations of the same dish.
+TEMPLATE: AGENT-1 and PATIENT-1 are variations of the same dish .
+CORRECT: 
+COMMENT: 
+-
+

@@ -1,0 +1,230 @@
+
+Entry: Id1 1 University
+
+TRIPLES
+Accademia_di_Architettura_di_Mendrisio | academicStaffSize | 100
+
+
+ENTITY MAP
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | 100
+
+
+LEX
+Id1
+TEXT: The academic staff size of Accademia di Architettura di Mendrisio is 100.
+TEMPLATE: The academic staff size of AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The academic staff number 100 at the Accademia di Architettura di Mendrisio.
+TEMPLATE: academic PATIENT-1 at AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The Accademia di Architettura di Mendrisio has an academic staff of 100.
+TEMPLATE: AGENT-1 has an academic staff of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id2 1 University
+
+TRIPLES
+Acharya_Institute_of_Technology | campus | "In Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090."
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | "In Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090."
+
+
+LEX
+Id1
+TEXT: The campus address for the Acharya Institue of Technology is: Soldenvanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore - 560090.
+TEMPLATE: The campus address for AGENT-1 is : PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The Acharya Institute of Technology campus is located in Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090.
+TEMPLATE: AGENT-1 campus is located in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The campus of the Acharya Institute of Technology is located at Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090.
+TEMPLATE: The campus of AGENT-1 is located at PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id3 1 University
+
+TRIPLES
+Alba_Iulia | country | Romania
+
+
+ENTITY MAP
+AGENT-1 | Alba_Iulia
+PATIENT-1 | Romania
+
+
+LEX
+Id1
+TEXT: Alba Iulia is located in Romania.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Alba Iulia is in the country of Romania.
+TEMPLATE: AGENT-1 is in PATIENT-1 of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Alba Iulia is in Romania.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id4 1 University
+
+TRIPLES
+Alba_Iulia | isPartOf | Alba_County
+
+
+ENTITY MAP
+AGENT-1 | Alba_Iulia
+PATIENT-1 | Alba_County
+
+
+LEX
+Id1
+TEXT: Alba Iulia os part of the county of Alba.
+TEMPLATE: AGENT-1 os part of PATIENT-1 of Alba .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Alba lulia is part of Alba County.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Alba Iulia is part of Alba County.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id5 1 University
+
+TRIPLES
+Romania | patronSaint | Andrew_the_Apostle
+
+
+ENTITY MAP
+AGENT-1 | Romania
+PATIENT-1 | Andrew_the_Apostle
+
+
+LEX
+Id1
+TEXT: The patron Saint of Romania is Andrew the Apostle.
+TEMPLATE: The patron Saint of AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Andrew the Apostle is the patron saint of Romania.
+TEMPLATE: PATIENT-1 is the patron saint of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id6 1 University
+
+TRIPLES
+School of Business and Social Sciences at the Aarhus University | academicStaffSize | 737
+
+
+ENTITY MAP
+AGENT-1 | School of Business and Social Sciences at the Aarhus University
+PATIENT-1 | 737
+
+
+LEX
+Id1
+TEXT: The academic staff of the School of Business and Social Sciences at the Aarhus University number 737.
+TEMPLATE: The academic staff of AGENT-1 PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The School of Business and Social Sciences at the Aarhus University has academic staff size of 737.
+TEMPLATE: AGENT-1 has academic staff size of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The School of Business and Social Sciences at the Aarhus University has an academic staff of 737.
+TEMPLATE: AGENT-1 has an academic staff of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id7 1 University
+
+TRIPLES
+School of Business and Social Sciences at the Aarhus University | country | Denmark
+
+
+ENTITY MAP
+AGENT-1 | School of Business and Social Sciences at the Aarhus University
+PATIENT-1 | Denmark
+
+
+LEX
+Id1
+TEXT: The Aarhus University School of Business and Social Sciences is in the country of Denmark.
+TEMPLATE: AGENT-1 is in PATIENT-1 of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The School of Business and Social Sciences at the Aarhus University is situated in Denmark.
+TEMPLATE: AGENT-1 is situated in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The School of Business and Social Sciences at the Aarhus University is located in Denmark.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id4
+TEXT: The School of Business and Social Sciences at the Aarhus University is in Denmark.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+

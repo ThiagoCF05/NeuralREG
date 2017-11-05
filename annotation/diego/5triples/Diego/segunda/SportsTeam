@@ -1,0 +1,1778 @@
+
+Entry: Id44 5 SportsTeam
+
+TRIPLES
+Italy | leader | Pietro_Grasso
+Italy | officialLanguage | Italian_language
+Italy | demonym | Italians
+Italy | leader | Sergio_Mattarella
+A.S._Gubbio_1910 | ground | Italy
+
+
+ENTITY MAP
+BRIDGE-1 | Italy
+PATIENT-4 | Sergio_Mattarella
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | Pietro_Grasso
+PATIENT-3 | Italians
+PATIENT-2 | Italian_language
+
+
+LEX
+Id1
+TEXT: AS Gubbio have their home ground in Italy where Pietro Grasso and Sergio Mattarella are leaders. The official language of the Italian people is Italian.
+TEMPLATE: AGENT-1 have their home ground in BRIDGE-1 where PATIENT-1 and PATIENT-4 are PATIENT-3 . PATIENT-2 of the Italian people is Italian .
+CORRECT: AGENT-1 have their home ground in BRIDGE-1 where PATIENT-1 and PATIENT-4 are leaders . PATIENT-2 of PATIENT-3 is PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id38 5 SportsTeam
+
+TRIPLES
+Italy | demonym | Italians
+Italy | capital | Rome
+Italy | leader | Sergio_Mattarella
+A.S._Gubbio_1910 | ground | Italy
+Italy | language | Italian_language
+
+
+ENTITY MAP
+PATIENT-4 | Italian_language
+BRIDGE-1 | Italy
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | Italians
+PATIENT-3 | Sergio_Mattarella
+PATIENT-2 | Rome
+
+
+LEX
+Id1
+TEXT: AS Gubbio have their ground in Italy where the leader is Sergio Mattarella. The Italian people speak the Italian language and their capital city is Rome.
+TEMPLATE: AGENT-1 have PATIENT-1 ground in BRIDGE-1 where PATIENT-1 is PATIENT-3 . The Italian people speak PATIENT-4 and their capital city is PATIENT-2 .
+CORRECT: AGENT-1 have AGENT-1 ground in BRIDGE-1 where PATIENT-3 is PATIENT-3 . PATIENT-1 speak PATIENT-4 and PATIENT-1 PATIENT-2 is PATIENT-2 .
+COMMENT:
+-
+Id2
+TEXT: Italians are the people who live in Italy, where the language is Italian and Sergio Mattarella is the leader. It is also where the capital is Rome and the ground of A.S. Gubbio 1910 is located.
+TEMPLATE: PATIENT-1 are the people who live in BRIDGE-1 , where PATIENT-4 is BRIDGE-1alian and PATIENT-3 is the leader . It is also where the capital is PATIENT-2 and the ground of AGENT-1 is located .
+CORRECT: PATIENT-1 are the people who live in BRIDGE-1 , where PATIENT-4 is PATIENT-4 and PATIENT-3 is PATIENT-3 . BRIDGE-1 is also where PATIENT-2 is PATIENT-2 and the ground of AGENT-1 is located .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id35 5 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | ground | St._Vincent–St._Mary_High_School
+St._Vincent–St._Mary_High_School | state | Ohio
+Akron,_Ohio | leader | Dan_Horrigan
+Akron,_Ohio | country | United_States
+St._Vincent–St._Mary_High_School | city | Akron,_Ohio
+
+
+ENTITY MAP
+BRIDGE-2 | Akron,_Ohio
+BRIDGE-1 | St._Vincent–St._Mary_High_School
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | Ohio
+PATIENT-3 | United_States
+PATIENT-2 | Dan_Horrigan
+
+
+LEX
+Id1
+TEXT: Akron Summit Assault's ground is at St. Vincent-St. Mary High School in Akron, Ohio, U.S.A. Dan Horrigan is the leader of that city.
+TEMPLATE: AGENT-1 's ground is at St. Vincent-St . BRIDGE-1 in BRIDGE-2 , PATIENT-2 is PATIENT-3 of PATIENT-1 .
+CORRECT: AGENT-1 's ground is at St. Vincent-St . BRIDGE-1 in BRIDGE-2 , PATIENT-2 is PATIENT-3 of PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Akron Summit Assault's ground is St. Vincent-St.Mary High School which is located in the city of Akron, Ohio (USA). This state is currently led by Dan Horrigan.
+TEMPLATE: AGENT-1 's ground is BRIDGE-1 . Mary High School which is located in the city of BRIDGE-2 (PATIENT-1) . PATIENT-3 is currently led by PATIENT-2 .
+CORRECT: BRIDGE-1 is BRIDGE-1 . BRIDGE-1 which is located in the city of BRIDGE-2 (PATIENT-3) . PATIENT-1 is currently led by PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id24 5 SportsTeam
+
+TRIPLES
+AZAL_PFK | league | Azerbaijan_Premier_League
+Azerbaijan_Premier_League | champions | Qarabağ_FK
+AZAL_PFK | season | 2014–15_Azerbaijan_Premier_League
+AZAL_PFK | numberOfMembers | 3500
+AZAL_PFK | ground | AZAL_Arena
+
+
+ENTITY MAP
+PATIENT-4 | AZAL_Arena
+BRIDGE-1 | Azerbaijan_Premier_League
+AGENT-1 | AZAL_PFK
+PATIENT-1 | Qarabağ_FK
+PATIENT-3 | 3500
+PATIENT-2 | 2014–15_Azerbaijan_Premier_League
+
+
+LEX
+Id1
+TEXT: AZAL Arena, which holds 3500 fans, is the ground of AZAL PFK who played in the Azerbaijan Premier League in 2014-15. Qarabag FK have been champions of this league.
+TEMPLATE: PATIENT-4 , which holds PATIENT-3 fans , is the ground of AGENT-1 who played in BRIDGE-1 in 2014-15 . PATIENT-1 have been PATIENT-2 .
+CORRECT: PATIENT-4 , which holds PATIENT-3 fans , is the ground of AGENT-1 who played in PATIENT-2 . PATIENT-1 have been BRIDGE-1 .
+COMMENT:
+-
+Id2
+TEXT: Qarabağ FK are the champions of the Azerbaijan Premier League in which AZAL PFK also competed in 2014-15. AZAL PFK have 3500 memberrs and play their home matches at the AZAL Arena.
+TEMPLATE: PATIENT-1 are the champions of BRIDGE-1 in which AGENT-1 also competed in 2014-15 . AGENT-1 have PATIENT-3 memberrs and play PATIENT-2 at PATIENT-4 .
+CORRECT: PATIENT-1 are the champions of BRIDGE-1 in which AGENT-1 also competed in 2014-15 . AGENT-1 have PATIENT-3 memberrs and play home matches at PATIENT-4 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id21 5 SportsTeam
+
+TRIPLES
+A.S._Gubbio_1910 | league | Serie_D
+Italy | leader | Pietro_Grasso
+Italy | capital | Rome
+A.S._Gubbio_1910 | ground | Italy
+Serie_D | champions | S.S._Robur_Siena
+
+
+ENTITY MAP
+AGENT-1 | A.S._Gubbio_1910
+BRIDGE-1 | Italy
+BRIDGE-2 | Serie_D
+PATIENT-1 | Pietro_Grasso
+PATIENT-3 | S.S._Robur_Siena
+PATIENT-2 | Rome
+
+
+LEX
+Id1
+TEXT: S.S. Robur Siena are champions of Serie D in which AS Gubbio 1910 also play. This latter club have their home ground in Italy where the capital city is Rome and the leader is Pietro Grasso.
+TEMPLATE: PATIENT-3 are champions of BRIDGE-2 in which AS AGENT-1 also play . This latter club have AGENT-1 home ground in BRIDGE-1 where the capital city is PATIENT-2 and the leader is PATIENT-1 .
+CORRECT: PATIENT-3 are champions of BRIDGE-2 in which AGENT-1 also play . AGENT-1 have AGENT-1 home ground in BRIDGE-1 where PATIENT-2 is PATIENT-2 and PATIENT-1 is PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy, where the leader is Pietro Grasso and Rome is the capital. A.S. Gubbio 1910 play in Serie D, of which S.S. Robur Siena are champions.
+TEMPLATE: The ground of AGENT-1 is located in BRIDGE-1 , where the leader is PATIENT-1 and PATIENT-2 is the capital . AGENT-1 play in BRIDGE-2 , of which PATIENT-3 are champions .
+CORRECT: The ground of AGENT-1 is located in BRIDGE-1 , where PATIENT-1 is PATIENT-1 and PATIENT-2 is PATIENT-2 . AGENT-1 play in BRIDGE-2 , of which PATIENT-3 are champions .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id18 5 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | manager | Stuart_Parker_(footballer)
+Stuart_Parker_(footballer) | club | KV_Mechelen
+Stuart_Parker_(footballer) | club | Drogheda_United_F.C.
+A.F.C._Blackpool | ground | Blackpool
+Blackpool | leader | Labour_Party_(UK)
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Blackpool
+BRIDGE-1 | Stuart_Parker_(footballer)
+BRIDGE-2 | Blackpool
+PATIENT-1 | KV_Mechelen
+PATIENT-3 | Labour_Party_(UK)
+PATIENT-2 | Drogheda_United_F.C.
+
+
+LEX
+Id1
+TEXT: AFC Blackpool have their ground in Blackpool where the leader of the council is Labour. Stuart Parker, who has played at Drogheda United FC and KV Mechelen, has been manager of AFC Blackpool.
+TEMPLATE: BRIDGE-2 have their ground in BRIDGE-2 where the leader of the council is PATIENT-3 . BRIDGE-1 , who has played at PATIENT-2 and PATIENT-1 , has been manager of BRIDGE-2 .
+CORRECT: AGENT-1 have AGENT-1 ground in BRIDGE-2 where PATIENT-3 of the council is PATIENT-3 . BRIDGE-1 , who has played at PATIENT-2 and PATIENT-1 , has been manager of AGENT-1 .
+COMMENT:
+-
+Id2
+TEXT: AFC Blackpool is located in the town of Blackpool, where the leader of the Council is the Labour Party (UK). The manager of AFC Blackpool is Stuart Parker who has previously played football for Drogheda United FC and KV Mechelen.
+TEMPLATE: BRIDGE-2 is located in the town of BRIDGE-2 , where the leader of AGENT-1 is PATIENT-3 . The manager of BRIDGE-2 is BRIDGE-1 who has previously played football for PATIENT-2 and PATIENT-1 .
+CORRECT: AGENT-1 is located in the town of BRIDGE-2 , where PATIENT-3 of AGENT-1 is PATIENT-3 . BRIDGE-1 of BRIDGE-2 is BRIDGE-1 who has previously played football for PATIENT-2 and PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id16 5 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | manager | Stuart_Parker_(footballer)
+Stuart_Parker_(footballer) | club | KV_Mechelen
+Blackpool | leader | Conservative_Party_(UK)
+Stuart_Parker_(footballer) | club | Blackburn_Rovers_F.C.
+A.F.C._Blackpool | ground | Blackpool
+
+
+ENTITY MAP
+BRIDGE-2 | Blackpool
+BRIDGE-1 | Stuart_Parker_(footballer)
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | KV_Mechelen
+PATIENT-3 | Blackburn_Rovers_F.C.
+PATIENT-2 | Conservative_Party_(UK)
+
+
+LEX
+Id1
+TEXT: Blackpool is where AFC Blackpool's ground is located and where the leader is the Conservative Party (UK). AFC Blackpool has been managed by Stuart Parker who has previous played for Blackburn Rovers FC and KV Mechelen.
+TEMPLATE: BRIDGE-2 is where BRIDGE-2 's ground is located and where the leader is PATIENT-2 . BRIDGE-2 has been managed by BRIDGE-1 who has previous played for Blackburn Rovers FC and PATIENT-1 .
+CORRECT: BRIDGE-2 is where AGENT-1 ground is located and where PATIENT-2 is PATIENT-2 . AGENT-1 has been managed by BRIDGE-1 who has previous played for PATIENT-3 and PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Stuart Parker plays for KV Mechelen and the Blackburn Rovers F.C. AFC Blackpool(Blackpool) had Stuart Parker as their manager. The Conservative Party U.K. is the leader of Blackpool.
+TEMPLATE: BRIDGE-1 plays for PATIENT-1 and BRIDGE-2 (BRIDGE-2) had BRIDGE-1 as PATIENT-3 . PATIENT-2 is the leader of BRIDGE-2 .
+CORRECT: BRIDGE-1 plays for PATIENT-1 and PATIENT-3 AGENT-1 (BRIDGE-2) had BRIDGE-1 as AGENT-1 BRIDGE-1 . PATIENT-2 is PATIENT-2 of AGENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id14 5 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | manager | Stuart_Parker_(footballer)
+Stuart_Parker_(footballer) | club | Chesterfield_F.C.
+Blackpool | leader | Gordon_Marsden
+Stuart_Parker_(footballer) | club | Stockport_County_F.C.
+A.F.C._Blackpool | ground | Blackpool
+
+
+ENTITY MAP
+BRIDGE-2 | Blackpool
+BRIDGE-1 | Stuart_Parker_(footballer)
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | Chesterfield_F.C.
+PATIENT-3 | Stockport_County_F.C.
+PATIENT-2 | Gordon_Marsden
+
+
+LEX
+Id1
+TEXT: Stuart Parker is the manager of the A.F.C Blackpool club, which has its ground in Blackpool. The local leader is Gordon Marsden. Parker is also a member of the Chesterfield F.C. and plays for Stockport County F.C.
+TEMPLATE: BRIDGE-1 is the manager of the A.F.C BRIDGE-2 club , which has AGENT-1 ground in BRIDGE-2 . The local leader is PATIENT-2 . Parker is also a member of PATIENT-1 and plays for PATIENT-3
+CORRECT: BRIDGE-1 is BRIDGE-1 of AGENT-1 , which has AGENT-1 ground in BRIDGE-2 . PATIENT-2 is PATIENT-2 . BRIDGE-1 is also a member of PATIENT-1 and plays for PATIENT-3
+COMMENT:
+-
+Id2
+TEXT: The leader of Blackpool is Gordon Marsden. Stuart Parker, who once played football for Chesterfield FC and Stockport County FC is the manager of AFC Blackpool, whose ground is located in Blackpool.
+TEMPLATE: The leader of BRIDGE-2 is PATIENT-2 . BRIDGE-1 , who once played football for PATIENT-1 and PATIENT-3 is the manager of BRIDGE-2 , whose ground is located in BRIDGE-2 .
+CORRECT:  PATIENT-2 of AGENT-1 is PATIENT-2 . BRIDGE-1 , who once played football for PATIENT-1 and PATIENT-3 is BRIDGE-1 of AGENT-1 , whose ground is located in BRIDGE-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id1 5 SportsTeam
+
+TRIPLES
+A.C._Lumezzane | ground | Italy
+Italy | capital | Rome
+Italy | language | Italian_language
+Italy | leader | Pietro_Grasso
+Italy | demonym | Italians
+
+
+ENTITY MAP
+PATIENT-4 | Italians
+BRIDGE-1 | Italy
+AGENT-1 | A.C._Lumezzane
+PATIENT-1 | Rome
+PATIENT-3 | Pietro_Grasso
+PATIENT-2 | Italian_language
+
+
+LEX
+Id1
+TEXT: A.C. Lumezzane's ground is in Italy where Pietro Grasso leads the Italian people. The capital of the country is Rome and the Italian language is spoken.
+TEMPLATE: AGENT-1 's ground is in BRIDGE-1 where PATIENT-3 leads the Italian people . PATIENT-4 of the country is PATIENT-1 and PATIENT-2 is spoken .
+CORRECT: AGENT-1 ground is in BRIDGE-1 where PATIENT-3 leads PATIENT-4 . PATIENT-1 is PATIENT-1 and PATIENT-2 is spoken .
+COMMENT:
+-
+Id2
+TEXT: A.C. Lumezzane's ground is in Italy where the Italian language is spoken by the inhabitants who are known as Italians. The leader of the country is Pietro Grasso and the capital city is Rome.
+TEMPLATE: AGENT-1 's ground is in BRIDGE-1 where PATIENT-2 is spoken by the inhabitants who are known as PATIENT-4 . The leader of the country is PATIENT-3 and the capital city is PATIENT-1 .
+CORRECT: AGENT-1 ground is in BRIDGE-1 where PATIENT-2 is spoken by PATIENT-4 who are known as PATIENT-4 . PATIENT-3 is PATIENT-3 and PATIENT-1 is PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: The Italian people are lead by Pietro Grasso and speak the Italian language. The capital city is Rome and the AC Lumezzane club play in the country.
+TEMPLATE: The Italian people are lead by PATIENT-3 and speak PATIENT-2 . The capital city is PATIENT-1 and the AC Lumezzane club play in AGENT-1 .
+CORRECT:  PATIENT-4 are lead by PATIENT-3 and speak PATIENT-2 . PATIENT-1 is PATIENT-1 and AGENT-1 play in BRIDGE-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id2 5 SportsTeam
+
+TRIPLES
+A.C._Lumezzane | ground | Italy
+Italy | capital | Rome
+Italy | officialLanguage | Italian_language
+Italy | leader | Pietro_Grasso
+Italy | demonym | Italians
+
+
+ENTITY MAP
+PATIENT-4 | Italians
+BRIDGE-1 | Italy
+AGENT-1 | A.C._Lumezzane
+PATIENT-1 | Rome
+PATIENT-3 | Pietro_Grasso
+PATIENT-2 | Italian_language
+
+
+LEX
+Id1
+TEXT: A.C. Lumezzane play in Italy, where Rome is the capital and Italians live. It is also where Pietro Grasso is the leader and Italian is the official language.
+TEMPLATE: AGENT-1 play in BRIDGE-1 , where PATIENT-1 is the capital and PATIENT-4 live . BRIDGE-1 is also where PATIENT-3 is the leader and PATIENT-2 is the official language .
+CORRECT: AGENT-1 play in BRIDGE-1 , where PATIENT-1 is PATIENT-1 and PATIENT-4 live . BRIDGE-1 is also where PATIENT-3 is the leader and PATIENT-2 is PATIENT-2 .
+COMMENT:
+-
+Id2
+TEXT: AC Lumezzane play in Italy where the capital city is Rome and the official language is Italian. The leader of the Italian people is Pietro Grasso,.
+TEMPLATE: AGENT-1 in BRIDGE-1 where the capital city is PATIENT-1 and PATIENT-2 is Italian . PATIENT-4 of the Italian people is PATIENT-3 , .
+CORRECT: AGENT-1 play in BRIDGE-1 where PATIENT-1 is PATIENT-1 and PATIENT-2 is PATIENT-2 . PATIENT-3 of PATIENT-4 is PATIENT-3 , .
+COMMENT:
+-
+Id3
+TEXT: Pietro Grasso leads Italy whose capital is Rome. The language there is Italian and its people are known as Italians. A.C. Lumezzane play in that country.
+TEMPLATE: PATIENT-3 leads BRIDGE-1 whose capital is PATIENT-1 . PATIENT-2 there is Italian and PATIENT-4 people are known as PATIENT-4 . AGENT-1 play in that country .
+CORRECT: PATIENT-3 leads BRIDGE-1 whose capital is PATIENT-1 . PATIENT-2 there is PATIENT-2 and PATIENT-4 are known as PATIENT-4 . AGENT-1 play in BRIDGE-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id3 5 SportsTeam
+
+TRIPLES
+A.C._Lumezzane | manager | Michele_Marcolini
+Michele_Marcolini | club | A.C._Chievo_Verona
+A.C._Lumezzane | ground | Italy
+Italy | leader | Pietro_Grasso
+Michele_Marcolini | club | Vicenza_Calcio
+
+
+ENTITY MAP
+BRIDGE-2 | Italy
+BRIDGE-1 | Michele_Marcolini
+AGENT-1 | A.C._Lumezzane
+PATIENT-1 | A.C._Chievo_Verona
+PATIENT-3 | Vicenza_Calcio
+PATIENT-2 | Pietro_Grasso
+
+
+LEX
+Id1
+TEXT: Michele Marcolini has been manager of AC Lumezzane which is located in Italy. He played for Vicenza Calcio, A.C. Chievo Verona. An Italian leader is Pietro Grasso.
+TEMPLATE: BRIDGE-1 has been manager of AGENT-1 which is located in BRIDGE-2 . AGENT-1 played for PATIENT-3 , PATIENT-1 . An Italian leader is PATIENT-2 .
+CORRECT: BRIDGE-1 has been manager of AGENT-1 which is located in BRIDGE-2 . BRIDGE-1 played for PATIENT-3 , PATIENT-1 . PATIENT-2 is PATIENT-2 .
+COMMENT:
+-
+Id2
+TEXT: Michele Marcolini previously played for Vicenza Calcio but now plays for AC Chievo Verona. He is also the manager of AC Lumezzane who have their ground in Italy where Pietro Grasso is the leader.
+TEMPLATE: BRIDGE-1 previously played for PATIENT-3 but now plays for PATIENT-1 . PATIENT-2 is also the manager of AGENT-1 who have their ground in BRIDGE-2 where PATIENT-2 is the leader .
+CORRECT: BRIDGE-1 previously played for PATIENT-3 but now plays for PATIENT-1 . BRIDGE-1 is also BRIDGE-1 of AGENT-1 who have AGENT-1 in BRIDGE-2 where PATIENT-2 is PATIENT-2 .
+COMMENT:
+-
+Id3
+TEXT: AC Lumezzane's ground is in Italy and their manager is Michele Marcolini who plays for A.C. Chievo Verona and is in the Vicenza Calcio Club. The leader of Italy is Pietro Grasso.
+TEMPLATE: AGENT-1 ground is in BRIDGE-2 and their manager is BRIDGE-1 who plays for PATIENT-1 and is in the PATIENT-3 Club . The leader of BRIDGE-2 is PATIENT-2 .
+CORRECT: AGENT-1 ground is in BRIDGE-2 and AGENT-1 BRIDGE-1 is BRIDGE-1 who plays for PATIENT-1 and is in the PATIENT-3 . PATIENT-2 of BRIDGE-2 is PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id4 5 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | location | Greece
+Greece | capital | Athens
+Greece | leader | Nikos_Voutsis
+Greece | leader | Prokopis_Pavlopoulos
+Greece | language | Greek_language
+
+
+ENTITY MAP
+PATIENT-4 | Greek_language
+BRIDGE-1 | Greece
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | Athens
+PATIENT-3 | Prokopis_Pavlopoulos
+PATIENT-2 | Nikos_Voutsis
+
+
+LEX
+Id1
+TEXT: Nikos Voutsis and Prokopis Pavlopoulos are leaders in Greece where the capital city is Athens and the Greek language is spoken. The country is also the location of the A.E Dimitra Efxeinoupolis club.
+TEMPLATE: PATIENT-2 and PATIENT-3 are leaders in BRIDGE-1 where the capital city is PATIENT-1 and PATIENT-4 is spoken . The country is also the location of the AGENT-1 club .
+CORRECT: PATIENT-2 and PATIENT-3 are leaders in BRIDGE-1 where PATIENT-1 is PATIENT-1 and PATIENT-4 is spoken . BRIDGE-1 is also the location of the AGENT-1.
+COMMENT:
+-
+Id2
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece, where the language is Greek. Athens is the capital of Greece, and two of the leaders are Prokopis Pavlopoulos, and Nikos Voutsis.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 , where PATIENT-4 is Greek . PATIENT-1 is the capital of BRIDGE-1 , and two of the leaders are PATIENT-3 , and PATIENT-2 .
+CORRECT: AGENT-1 is located in BRIDGE-1 , where PATIENT-4 is PATIENT-4 . PATIENT-1 is PATIENT-1 , and two of the leaders are PATIENT-3 , and PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id5 5 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | location | Greece
+Greece | currency | Euro
+Greece | capital | Athens
+Greece | leader | Nikos_Voutsis
+Greece | leader | Prokopis_Pavlopoulos
+
+
+ENTITY MAP
+PATIENT-4 | Prokopis_Pavlopoulos
+BRIDGE-1 | Greece
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | Euro
+PATIENT-3 | Nikos_Voutsis
+PATIENT-2 | Athens
+
+
+LEX
+Id1
+TEXT: A.E Dimitra Efxeinoupolis is located in Greece where the leaders are Nikos Voutsis and Prokopis Pavloopoulos. The country's capital is Athens and their currency is the euro.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 where the leaders are PATIENT-3 and PATIENT-4 . The country 's capital is PATIENT-2 and PATIENT-3 currency is PATIENT-1 .
+CORRECT: AGENT-1 is located in BRIDGE-1 where the leaders are PATIENT-3 and PATIENT-4 . PATIENT-2 is PATIENT-2 and BRIDGE-1 currency is PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Greece is lead by Nikos Voutsis and Prokopis Pavlopoulos, the capital city is Athens and the country uses the euro as their currency. It is also the location of the A.E Dimitra Efxeinoupolis club.
+TEMPLATE: BRIDGE-1 is lead by PATIENT-3 and PATIENT-4 , the capital city is PATIENT-2 and the country uses the euro as PATIENT-4 currency . PATIENT-1 is also the location of the AGENT-1 club .
+CORRECT: BRIDGE-1 is lead by PATIENT-3 and PATIENT-4 , PATIENT-2 is PATIENT-2 and BRIDGE-1 uses PATIENT-1 as BRIDGE-1 PATIENT-1 . BRIDGE-1 is also the location of the AGENT-1.
+COMMENT:
+-
+Id3
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece which is lead by Nikos Voutsis and Prokopis Pavlopoulos. The capital of the country is Athens and the currency used is the euro.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 which is lead by PATIENT-3 and PATIENT-4 . The capital of the country is PATIENT-2 and the currency used is PATIENT-1 .
+CORRECT: AGENT-1 is located in BRIDGE-1 which is lead by PATIENT-3 and PATIENT-4 . PATIENT-2 is PATIENT-2 and PATIENT-1 used is PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id6 5 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | location | Greece
+Greece | currency | Euro
+Greece | leader | Alexis_Tsipras
+Greece | capital | Athens
+Greece | leader | Nikos_Voutsis
+
+
+ENTITY MAP
+PATIENT-4 | Nikos_Voutsis
+BRIDGE-1 | Greece
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | Euro
+PATIENT-3 | Athens
+PATIENT-2 | Alexis_Tsipras
+
+
+LEX
+Id1
+TEXT: Two leaders of Greece are Alexis Tsipras and Nikos Voutsis. Athens is its capital and its currency is the euro. A.E Dimitra Efxeinoupolis is located in Greece.
+TEMPLATE: Two leaders of BRIDGE-1 are PATIENT-2 and PATIENT-4 . PATIENT-3 is PATIENT-3 capital and PATIENT-3 currency is PATIENT-1 . AGENT-1 is located in BRIDGE-1 .
+CORRECT: Two leaders of BRIDGE-1 are PATIENT-2 and PATIENT-4 . PATIENT-3 is BRIDGE-1 capital and BRIDGE-1 currency is PATIENT-1 . AGENT-1 is located in BRIDGE-1 .
+COMMENT:
+-
+Id2
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece whose leader is Nikos Voutsis. Athens is the capital of Greece whose currency is the euro. Another leader there is Alexis Tsipras.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 whose leader is PATIENT-4 . PATIENT-3 is the capital of BRIDGE-1 whose currency is the euro . PATIENT-1 is PATIENT-2 .
+CORRECT: AGENT-1 is located in BRIDGE-1 whose leader is PATIENT-4 . PATIENT-3 is PATIENT-3 of BRIDGE-1 whose currency is PATIENT-1 . Another leader there is PATIENT-2 .
+COMMENT:
+-
+Id3
+TEXT: A.E Dimitra Efxeinoupolis is located in Greece where the leaders are Alexis Tsipras and Nikos Voutsis. The capital of the country is Athens and the currency used is the euro. .
+TEMPLATE: AGENT-1 is located in BRIDGE-1 where the leaders are PATIENT-2 and PATIENT-4 PATIENT-1 The capital of the country is PATIENT-3 and the currency used is PATIENT-1 PATIENT-1
+CORRECT: AGENT-1 is located in BRIDGE-1 where the leaders are PATIENT-2 and PATIENT-4. PATIENT-3 is PATIENT-3 and PATIENT-1 used is PATIENT-1
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id7 5 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | location | Greece
+Greece | currency | Euro
+Greece | leader | Alexis_Tsipras
+Greece | capital | Athens
+Greece | leader | Prokopis_Pavlopoulos
+
+
+ENTITY MAP
+PATIENT-4 | Prokopis_Pavlopoulos
+BRIDGE-1 | Greece
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | Euro
+PATIENT-3 | Athens
+PATIENT-2 | Alexis_Tsipras
+
+
+LEX
+Id1
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece, where the money used is the Euro. Athens is the capital of Greece, and two of the leaders are Alexis Tsipras and Prokopis Pavlopoulos.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 , where the money used is PATIENT-1 . PATIENT-3 is the capital of BRIDGE-1 , and two of the leaders are PATIENT-2 and PATIENT-4 .
+CORRECT: AGENT-1 is located in BRIDGE-1 , where PATIENT-1 used is PATIENT-1 . PATIENT-3 is PATIENT-3 , and two of the leaders are PATIENT-2 and PATIENT-4 .
+COMMENT:
+-
+Id2
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece where Alexis Tsipras and Prokopis Pavlopoulos are leaders. The currency used in the country is the euro and the capital is Athens.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 where PATIENT-2 and PATIENT-4 are leaders . The currency used in the country is PATIENT-1 and the capital is PATIENT-3 .
+CORRECT: AGENT-1 is located in BRIDGE-1 where PATIENT-2 and PATIENT-4 are leaders . PATIENT-1 used in BRIDGE-1 is PATIENT-1 and PATIENT-3 is PATIENT-3 .
+COMMENT:
+-
+Id3
+TEXT: Alexis Tsipras heads Greece where Prokopis Pavlopoulos is also a leader. Athens is the capital of Greece and the currency is the Euro. A.E Dimitra Efxeinoupolis is located in Greece.
+TEMPLATE: PATIENT-2 BRIDGE-1 where PATIENT-4 is also a leader . PATIENT-3 is the capital of BRIDGE-1 and the currency is PATIENT-1 . AGENT-1 is located in BRIDGE-1 .
+CORRECT: PATIENT-2 heads BRIDGE-1 where PATIENT-4 is also a leader . PATIENT-3 is PATIENT-3 and PATIENT-1 is PATIENT-1 . AGENT-1 is located in BRIDGE-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id8 5 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | location | Greece
+Greece | currency | Euro
+Greece | leader | Alexis_Tsipras
+Greece | leader | Nikos_Voutsis
+Greece | language | Greek_language
+
+
+ENTITY MAP
+PATIENT-4 | Greek_language
+BRIDGE-1 | Greece
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | Euro
+PATIENT-3 | Nikos_Voutsis
+PATIENT-2 | Alexis_Tsipras
+
+
+LEX
+Id1
+TEXT: A.E Dimitra Efxeinoupolis is located in Greece which is lead by Alexis Tsipras and Nikos Voutsis. The language of the country is Greek and the currency is the euro.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 which is lead by PATIENT-2 and PATIENT-3 . PATIENT-4 of the country is Greek and the currency is PATIENT-1 .
+CORRECT: AGENT-1 is located in BRIDGE-1 which is lead by PATIENT-2 and PATIENT-3 . PATIENT-4 of BRIDGE-1 is PATIENT-4 and PATIENT-1 is PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece which currently has Alexis Tsipras and Nikos Voutsis as leaders. Here the currency used is the Euro and the main language is Greek.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 which currently has PATIENT-2 and PATIENT-3 as leaders . Here the currency used is PATIENT-1 and PATIENT-4 is Greek .
+CORRECT: AGENT-1 is located in BRIDGE-1 which currently has PATIENT-2 and PATIENT-3 as leaders . Here PATIENT-1 used is PATIENT-1 and PATIENT-4 is PATIENT-4 .
+COMMENT:
+-
+Id3
+TEXT: Nikos Voutsis and Alexis Tsipras, are leaders in Greece, where Greek is spoken and the money used is the Euro. A.E Dimitra Efxeinoupolis is located in Greece.
+TEMPLATE: PATIENT-3 and PATIENT-2 , are leaders in BRIDGE-1 , where PATIENT-4 is spoken and the money used is PATIENT-1 . AGENT-1 is located in BRIDGE-1 .
+CORRECT: PATIENT-3 and PATIENT-2 , are leaders in BRIDGE-1 , where PATIENT-4 is spoken and PATIENT-1 used is PATIENT-1 . AGENT-1 is located in BRIDGE-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id9 5 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | location | Greece
+Greece | currency | Euro
+Greece | leader | Alexis_Tsipras
+Greece | leader | Prokopis_Pavlopoulos
+Greece | language | Greek_language
+
+
+ENTITY MAP
+PATIENT-4 | Greek_language
+BRIDGE-1 | Greece
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | Euro
+PATIENT-3 | Prokopis_Pavlopoulos
+PATIENT-2 | Alexis_Tsipras
+
+
+LEX
+Id1
+TEXT: A.E Dimitra Efxeinoupolis is located in Greece, the leader of which is Alexis Tsipras. Another leader is Prokopis Pavloopoulos. In Greece, the currency is the euro and the language is Greek.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , the leader of which is PATIENT-2 . Another leader is PATIENT-3 . In BRIDGE-1 , the currency is PATIENT-1 and PATIENT-4 is Greek .
+CORRECT: AGENT-1 is located in BRIDGE-1 , the leader of which is PATIENT-2 . Another leader is PATIENT-3 . In BRIDGE-1 , the currency is PATIENT-1 and PATIENT-4 is PATIENT-4.
+COMMENT:
+-
+Id2
+TEXT: Alexis Tsipras heads Greece where Prokopis Pavlopoulos is also a leader. The currency in Greece is the Euro and Greek is spoken. The A.E Dimitra Efxeinoupolis club is located in Greece.
+TEMPLATE: PATIENT-2 BRIDGE-1 where PATIENT-3 is also a leader . The currency in BRIDGE-1 is PATIENT-1 and PATIENT-4 is spoken . The AGENT-1 club is located in BRIDGE-1 .
+CORRECT: PATIENT-2 BRIDGE-1 where PATIENT-3 is also a leader . The currency in BRIDGE-1 is PATIENT-1 and PATIENT-4 is spoken . AGENT-1 is located in BRIDGE-1 .
+COMMENT:
+-
+Id3
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece, where Greek is spoken and the currency is the euro. It is also where two of the leaders are, Prokopis Pavlopoulos and Alexis Tsipras.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 , where PATIENT-4 is spoken and the currency is the euro . AGENT-1 is also where PATIENT-1 of the leaders are , PATIENT-3 and PATIENT-2 .
+CORRECT: AGENT-1 is located in BRIDGE-1 , where PATIENT-4 is spoken and PATIENT-1 is PATIENT-1 . BRIDGE-1 is also where two of the leaders are , PATIENT-3 and PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id10 5 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | location | Greece
+Greece | currency | Euro
+Greece | leader | Nikos_Voutsis
+Greece | leader | Prokopis_Pavlopoulos
+Greece | language | Greek_language
+
+
+ENTITY MAP
+PATIENT-4 | Greek_language
+BRIDGE-1 | Greece
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | Euro
+PATIENT-3 | Prokopis_Pavlopoulos
+PATIENT-2 | Nikos_Voutsis
+
+
+LEX
+Id1
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece where the leaders are Nikos Voutsis and Prokopis Pavlopoulos. The currency used is the euro and the Greek language is spoken in the country.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 where the leaders are PATIENT-2 and PATIENT-3 . The currency used is the euro and PATIENT-4 is spoken in PATIENT-1 .
+CORRECT: AGENT-1 is located in BRIDGE-1 where the leaders are PATIENT-2 and PATIENT-3 . PATIENT-1 used is PATIENT-1 and PATIENT-4 is spoken in BRIDGE-1 .
+COMMENT:
+-
+Id2
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece. The country which has the leaders, Nikos Voutsis and Prokopis Pavlopoulos. It is also, where Greek is spoken, and the Euro is used.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 . The country which has the leaders , PATIENT-2 and PATIENT-3 . PATIENT-3 is also , where PATIENT-4 is spoken , and PATIENT-1 is used .
+CORRECT: AGENT-1 is located in BRIDGE-1 . BRIDGE-1 which has the leaders , PATIENT-2 and PATIENT-3 . BRIDGE-1 is also , where PATIENT-4 is spoken , and PATIENT-1 is used .
+COMMENT:
+-
+Id3
+TEXT: A.E Dimitra Efxeinoupolis is located in Greece, where the language is Greek, the currency is the euro and its leaders are Nikos Voutsis and Prokopis Pavlopoulos.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , where PATIENT-4 is Greek , the currency is PATIENT-1 and AGENT-1 leaders are PATIENT-2 and PATIENT-3 .
+CORRECT: AGENT-1 is located in BRIDGE-1 , where PATIENT-4 is PATIENT-4 , PATIENT-1 is PATIENT-1 and BRIDGE-1 leaders are PATIENT-2 and PATIENT-3 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id11 5 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | location | Greece
+Greece | leader | Alexis_Tsipras
+Greece | capital | Athens
+Greece | leader | Nikos_Voutsis
+Greece | language | Greek_language
+
+
+ENTITY MAP
+PATIENT-4 | Greek_language
+BRIDGE-1 | Greece
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | Alexis_Tsipras
+PATIENT-3 | Nikos_Voutsis
+PATIENT-2 | Athens
+
+
+LEX
+Id1
+TEXT: Alexis Tsipras and Nikos Voutsis are leaders in Greece, where Athens is the capital, Greek is spoken and where A.E Dimitra Efxeinoupolis is located.
+TEMPLATE: PATIENT-1 and PATIENT-3 are leaders in BRIDGE-1 , where PATIENT-2 is the capital , PATIENT-4 is spoken and where AGENT-1 is located .
+CORRECT: PATIENT-1 and PATIENT-3 are leaders in BRIDGE-1 , where PATIENT-2 is PATIENT-2 , PATIENT-4 is spoken and where AGENT-1 is located .
+COMMENT:
+-
+Id2
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece which is lead by Alexis Tsipras and Nikos Voutsis. The capital city of the country is Athens and the Greek language is spoken.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 which is lead by PATIENT-1 and PATIENT-3 . The capital city of the country is PATIENT-2 and PATIENT-4 is spoken .
+CORRECT: AGENT-1 is located in BRIDGE-1 which is lead by PATIENT-1 and PATIENT-3 . PATIENT-2 is PATIENT-2 and PATIENT-4 is spoken .
+COMMENT:
+-
+Id3
+TEXT: A.E Dimitra Efxeinoupolis is located in Greece, where the leaders are Alexis Tsipras and Nikos Voutsis. Greek is spoken in Greece and the capital is Athens.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , where the leaders are PATIENT-1 and PATIENT-3 . PATIENT-4 is spoken in BRIDGE-1 and the capital is PATIENT-2 .
+CORRECT: AGENT-1 is located in BRIDGE-1 , where the leaders are PATIENT-1 and PATIENT-3 . PATIENT-4 is spoken in BRIDGE-1 and PATIENT-2 is PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id12 5 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | location | Greece
+Greece | leader | Alexis_Tsipras
+Greece | capital | Athens
+Greece | leader | Prokopis_Pavlopoulos
+Greece | language | Greek_language
+
+
+ENTITY MAP
+PATIENT-4 | Greek_language
+BRIDGE-1 | Greece
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | Alexis_Tsipras
+PATIENT-3 | Prokopis_Pavlopoulos
+PATIENT-2 | Athens
+
+
+LEX
+Id1
+TEXT: A.E Dimitra Efxeinoupolis is located in Greece which currently has Alexis Tsipras as head and Prokopis Pavlopoulos as a leader. The capital city here is Athens and the language spoken is Greek.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 which currently has PATIENT-1 as head and PATIENT-3 as a leader . The capital city here is PATIENT-2 and PATIENT-4 spoken is Greek .
+CORRECT: AGENT-1 is located in BRIDGE-1 which currently has PATIENT-1 as head and PATIENT-3 as a leader . PATIENT-2 here is PATIENT-2 and PATIENT-4 is PATIENT-4 .
+COMMENT:
+-
+Id2
+TEXT: Prokopis Pavlopoulos and Alexis Tsipras are a leaders in Greece where Athens is the capital and Greek is spoken. A.E Dimitra Efxeinoupolis is located in Greece.
+TEMPLATE: PATIENT-3 and PATIENT-1 are a leaders in BRIDGE-1 where PATIENT-2 is the capital and PATIENT-4 is spoken . AGENT-1 is located in BRIDGE-1 .
+CORRECT: PATIENT-3 and PATIENT-1 are a leaders in BRIDGE-1 where PATIENT-2 is PATIENT-2 and PATIENT-4 is spoken . AGENT-1 is located in BRIDGE-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id13 5 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | manager | Stuart_Parker_(footballer)
+Blackpool | leader | Gordon_Marsden
+Stuart_Parker_(footballer) | club | Stockport_County_F.C.
+Stuart_Parker_(footballer) | club | Runcorn_F.C._Halton
+A.F.C._Blackpool | ground | Blackpool
+
+
+ENTITY MAP
+BRIDGE-2 | Blackpool
+BRIDGE-1 | Stuart_Parker_(footballer)
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | Gordon_Marsden
+PATIENT-3 | Runcorn_F.C._Halton
+PATIENT-2 | Stockport_County_F.C.
+
+
+LEX
+Id1
+TEXT: Gordon Marsden is a leader in Blackpool where AFC Blackpool is located. The club is managed by Stuart Parker whose club was Stockport County but he now plays for Runcorn FC Halton.
+TEMPLATE: PATIENT-1 is a leader in BRIDGE-2 where BRIDGE-2 is located . The club is managed by BRIDGE-1 whose club was PATIENT-2 but PATIENT-1 now plays for PATIENT-3 .
+CORRECT: PATIENT-1 is PATIENT-1 in BRIDGE-2 where AGENT-1 is located . AGENT-1 is managed by BRIDGE-1 whose club was PATIENT-2 but BRIDGE-1 now plays for PATIENT-3 .
+COMMENT:
+-
+Id2
+TEXT: Gordon Marsden is the leader in Blackpool which is the location of AFC Blackpool. The club is managed by Stuart Parker who plays for both Runcorn FC Halton and Stockport County FC.
+TEMPLATE: PATIENT-1 is the leader in BRIDGE-2 which is AGENT-1 of BRIDGE-2 . The club is managed by BRIDGE-1 who plays for PATIENT-3 and PATIENT-2 .
+CORRECT: PATIENT-1 is PATIENT-1 in BRIDGE-2 which is the location AGENT-1. AGENT-1 is managed by BRIDGE-1 who plays for PATIENT-3 and PATIENT-2 .
+COMMENT:
+-
+Id3
+TEXT: Gordon Marsden is the leader in Blackpool where AFC Blackpool is located. The club is managed by Stuart Parker who was at Stockport County FC but now plays for Runcorn FC Halton.
+TEMPLATE: PATIENT-1 is the leader in BRIDGE-2 where BRIDGE-2 is located . The club is managed by BRIDGE-1 who was at PATIENT-2 but now plays for PATIENT-3 .
+CORRECT: PATIENT-1 is PATIENT-1 in BRIDGE-2 where AGENT-1 is located . AGENT-1 is managed by BRIDGE-1 who was at PATIENT-2 but now plays for PATIENT-3 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id15 5 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | manager | Stuart_Parker_(footballer)
+Stuart_Parker_(footballer) | club | Chesterfield_F.C.
+Stuart_Parker_(footballer) | club | Blackburn_Rovers_F.C.
+Blackpool | leader | Gordon_Marsden
+A.F.C._Blackpool | ground | Blackpool
+
+
+ENTITY MAP
+BRIDGE-2 | Blackpool
+BRIDGE-1 | Stuart_Parker_(footballer)
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | Chesterfield_F.C.
+PATIENT-3 | Gordon_Marsden
+PATIENT-2 | Blackburn_Rovers_F.C.
+
+
+LEX
+Id1
+TEXT: Gordon Marsden is the leader in Blackpool where AFC Blackpool have their ground. The club is managed by Stuart Parker who was a footballer for Chesterfield FC and Blackburn Rovers FC.
+TEMPLATE: PATIENT-3 is the leader in BRIDGE-2 where BRIDGE-2 have their ground . The club is managed by BRIDGE-1 who was a footballer for PATIENT-1 and PATIENT-2 .
+CORRECT: PATIENT-3 is PATIENT-3 in BRIDGE-2 where AGENT-1 have AGENT-1 ground . AGENT-1 is managed by BRIDGE-1 who was BRIDGE-1 for PATIENT-1 and PATIENT-2 .
+COMMENT:
+-
+Id2
+TEXT: Stuart Parker is the manager at AFC Blackpool who have their ground in Blackpool which is currently lead by Gordon Marsden. He also plays for Blackburn Rovers FC and is attached to Chesterfield FC.
+TEMPLATE: BRIDGE-1 is the manager at BRIDGE-2 who have their ground in BRIDGE-2 which is currently lead by PATIENT-3 . PATIENT-3 also plays for PATIENT-2 and is attached to PATIENT-1 .
+CORRECT: BRIDGE-1 is BRIDGE-1 at AGENT-1 who have AGENT-1 ground in BRIDGE-2 which is currently lead by PATIENT-3 . BRIDGE-1 also plays for PATIENT-2 and is attached to PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: Gordon Marsden is the leader of Blackpool where the ground of AFC Blackpool is located. The club have had Stuart Parker as their manager who has also been at Blackburn Rovers FC and is a member of Chesterfield FC.
+TEMPLATE: PATIENT-3 is the leader of BRIDGE-2 where the ground of BRIDGE-2 is located . The club have had BRIDGE-1 as their manager who has also been at PATIENT-2 and is a member of PATIENT-1 .
+CORRECT: PATIENT-3 is PATIENT-3 of BRIDGE-2 where the ground of AGENT-1 is located . AGENT-1 have had BRIDGE-1 as AGENT-1manager who has also been at PATIENT-2 and is a member of PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id17 5 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | manager | Stuart_Parker_(footballer)
+Stuart_Parker_(footballer) | club | KV_Mechelen
+Blackpool | leader | Conservative_Party_(UK)
+Stuart_Parker_(footballer) | club | Drogheda_United_F.C.
+A.F.C._Blackpool | ground | Blackpool
+
+
+ENTITY MAP
+BRIDGE-2 | Blackpool
+BRIDGE-1 | Stuart_Parker_(footballer)
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | KV_Mechelen
+PATIENT-3 | Drogheda_United_F.C.
+PATIENT-2 | Conservative_Party_(UK)
+
+
+LEX
+Id1
+TEXT: The Conservative Party UK are the leaders in Blackpool which is the location of the AFC Blackpool home ground. Their manager is Stuart Parker who has represented KV Mechelen FC and also Drogheda United FC.
+TEMPLATE: PATIENT-2 are the leaders in BRIDGE-2 which is AGENT-1 of the AFC BRIDGE-2 home ground . BRIDGE-1 manager is BRIDGE-1 who has represented PATIENT-1 FC and also PATIENT-3 .
+CORRECT: PATIENT-2 are the leaders in BRIDGE-2 which is the location of AGENT-1 home ground . AGENT-1 manager is BRIDGE-1 who has represented PATIENT-1 and also PATIENT-3 .
+COMMENT: 
+-
+Id2
+TEXT: AFC Blackpool is located in Blackpool where the leader is the Conservative Party (UK). Stuart Parker, who has played at Drogheda FC and KV Mechelen, has been the manager of AFC Blackpool.
+TEMPLATE: BRIDGE-2 is located in BRIDGE-2 where the leader is PATIENT-2 . BRIDGE-1 , who has played at Drogheda FC and PATIENT-1 , has been PATIENT-3 of BRIDGE-2 .
+CORRECT: AGENT-1 is located in BRIDGE-2 where PATIENT-2 is PATIENT-2 . BRIDGE-1 , who has played at PATIENT-3 and PATIENT-1 , has been AGENT-1 of AGENT-1 .
+COMMENT:
+-
+Id3
+TEXT: AFC Blackpool (Blackpool)have had Stuart Parker as their manager. Parker(with the Drogheda United F.C.) plays for KV Mechelen. The Conservative Party U.K. is the leader of Blackpool.
+TEMPLATE: BRIDGE-2 (BRIDGE-2) have had BRIDGE-1 as their manager . Parker (with PATIENT-3) plays for PATIENT-1 . PATIENT-2 is the leader of BRIDGE-2 .
+CORRECT: AGENT-1 (BRIDGE-2) have had BRIDGE-1 as AGENT-1 manager . BRIDGE-1 (with PATIENT-3) plays for PATIENT-1 . PATIENT-2 is the leader of BRIDGE-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id19 5 SportsTeam
+
+TRIPLES
+A.S._Gubbio_1910 | league | Serie_D
+Italy | capital | Rome
+Italy | leader | Sergio_Mattarella
+A.S._Gubbio_1910 | ground | Italy
+Serie_D | champions | S.S._Robur_Siena
+
+
+ENTITY MAP
+AGENT-1 | A.S._Gubbio_1910
+BRIDGE-1 | Italy
+BRIDGE-2 | Serie_D
+PATIENT-1 | Rome
+PATIENT-3 | S.S._Robur_Siena
+PATIENT-2 | Sergio_Mattarella
+
+
+LEX
+Id1
+TEXT: AS Gubbio 1910 are located in Italy and play in Serie D whose champions are currently SS Robur Siena. The leader of Italy is Sergio Mattarella and the capital city is Rome.
+TEMPLATE: AS AGENT-1 are located in BRIDGE-1 and play in BRIDGE-2 whose champions are currently SS PATIENT-3 . The leader of BRIDGE-1 is PATIENT-2 and the capital city is PATIENT-1 .
+CORRECT: AGENT-1 are located in BRIDGE-1 and play in BRIDGE-2 whose champions are currently PATIENT-3 . PATIENT-2 of BRIDGE-1 is PATIENT-2 and PATIENT-1 is PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The champions of Serie D are S.S. Robur Siena in which AS Gubbio 1910 also play. This latter club has their ground in Italy where the leader is Sergio Mattarella and the capital is the city of Rome.
+TEMPLATE: The champions of BRIDGE-2 are PATIENT-3 in which AS AGENT-1 also play . This latter club has BRIDGE-2 ground in BRIDGE-1 where the leader is PATIENT-2 and the capital is the city of PATIENT-1 .
+CORRECT: The champions of BRIDGE-2 are PATIENT-3 in which AGENT-1 also play . AGENT-1 has AGENT-1 ground in BRIDGE-1 where PATIENT-2 is PATIENT-2 and PATIENT-1 is PATIENT-1 of PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: A.S. Gubbio 1910 is in the Serie D league who's previous champions include S S Robur Siena. The grounds of the A.S. Gubbio 1910 are located in Italy which currently has Sergio Mattarella as a leader and Rome is the capital city.
+TEMPLATE: AGENT-1 is in the BRIDGE-2 league who 's previous champions include PATIENT-3 . The grounds of AGENT-1 are located in BRIDGE-1 which currently has PATIENT-2 as a leader and PATIENT-1 is the capital city .
+CORRECT: AGENT-1 is in the BRIDGE-2 league whose previous champions include PATIENT-3 . The grounds of AGENT-1 are located in BRIDGE-1 which currently has PATIENT-2 as a leader and PATIENT-1 is the capital city .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id20 5 SportsTeam
+
+TRIPLES
+A.S._Gubbio_1910 | league | Serie_D
+Italy | leader | Pietro_Grasso
+A.S._Gubbio_1910 | ground | Italy
+Italy | language | Italian_language
+Serie_D | champions | S.S._Robur_Siena
+
+
+ENTITY MAP
+AGENT-1 | A.S._Gubbio_1910
+BRIDGE-1 | Italy
+BRIDGE-2 | Serie_D
+PATIENT-1 | Pietro_Grasso
+PATIENT-3 | S.S._Robur_Siena
+PATIENT-2 | Italian_language
+
+
+LEX
+Id1
+TEXT: S.S. Robur Siena are champions of Serie D. in which AS Gubbio 1910 also play. The latter club have their home ground located in Italy which is lead by Pietro Grasso and uses the Italian language.
+TEMPLATE: PATIENT-3 are champions of BRIDGE-2 in which AS AGENT-1 also play . The latter club have AGENT-1 home ground located in BRIDGE-1 which is lead by PATIENT-1 and uses PATIENT-2 .
+CORRECT: PATIENT-3 are champions of BRIDGE-2 in which AGENT-1 also play . AGENT-1 have AGENT-1 home ground located in BRIDGE-1 which is lead by PATIENT-1 and uses PATIENT-2 .
+COMMENT: 
+-
+Id2
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy. The football club play in Serie D, the champions of which are S.S. Robur Siena. Italy is led by Pietro Grasso and the language spoken is Italian.
+TEMPLATE: The ground of AGENT-1 is located in BRIDGE-1 . The football club play in BRIDGE-2 , the champions of which are PATIENT-3 . BRIDGE-1 is led by PATIENT-1 and PATIENT-2 spoken is Italian .
+CORRECT: The ground of AGENT-1 is located in BRIDGE-1 . AGENT-1 play in BRIDGE-2 , the champions of which are PATIENT-3 . BRIDGE-1 is led by PATIENT-1 and PATIENT-2 is PATIENT-2 .
+COMMENT:
+-
+Id3
+TEXT: A.S. Gubbio 1910 (Italy) play in Serie D. S.S. Robur Siena are champions of that serie. Pietro Grasso leads Italy. Italian is the language spoken in Italy.
+TEMPLATE: AGENT-1 (BRIDGE-1) play in PATIENT-3 are champions of that serie . PATIENT-1 leads BRIDGE-1 . BRIDGE-2 is PATIENT-2 spoken in BRIDGE-1 .
+CORRECT: AGENT-1 (BRIDGE-1) play in PATIENT-3 are champions of that serie . PATIENT-1 leads BRIDGE-1 . PATIENT-2 is PATIENT-2 in BRIDGE-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id22 5 SportsTeam
+
+TRIPLES
+AFC_Ajax_(amateurs) | ground | Sportpark_De_Toekomst
+Sportpark_De_Toekomst | operator | AFC_Ajax
+Sportpark_De_Toekomst | tenant | Ajax_Youth_Academy
+Sportpark_De_Toekomst | owner | AFC_Ajax_N.V.
+Sportpark_De_Toekomst | tenant | Jong_Ajax
+
+
+ENTITY MAP
+PATIENT-4 | Jong_Ajax
+BRIDGE-1 | Sportpark_De_Toekomst
+AGENT-1 | AFC_Ajax_(amateurs)
+PATIENT-1 | AFC_Ajax
+PATIENT-3 | AFC_Ajax_N.V.
+PATIENT-2 | Ajax_Youth_Academy
+
+
+LEX
+Id1
+TEXT: Jong Ajax and Ajax Youth Academy are tenants of Sportpark De Toekomst. the home ground of AFC Ajax (amateurs). The ground is operated by AFC Ajax and owned by AFC Ajax NV.
+TEMPLATE: PATIENT-4 and PATIENT-2 are tenants of BRIDGE-1 . the home ground of PATIENT-1 (AGENT-1) . The ground is operated by PATIENT-1 and owned by PATIENT-1 NV .
+CORRECT: PATIENT-4 and PATIENT-2 are tenants of BRIDGE-1 . the home ground of AGENT-1 . The ground is operated by PATIENT-1 and owned by PATIENT-1.
+COMMENT:
+-
+Id2
+TEXT: AFC Ajax (amateurs)'s ground is Sportpark De Toekomst which is operated by AFC Ajax and owned by AFC Ajax NV. Jong Ajax and Ajax Youth Academy are both tenants.
+TEMPLATE: PATIENT-1 (AGENT-1) 's ground is BRIDGE-1 which is operated by PATIENT-1 and owned by PATIENT-1 NV . PATIENT-4 and PATIENT-2 are both tenants .
+CORRECT: PATIENT-1 (AGENT-1) 's ground is BRIDGE-1 which is operated by PATIENT-1 and owned by PATIENT-1 NV . PATIENT-4 and PATIENT-2 are both tenants .
+COMMENT:
+-
+Id3
+TEXT: AFC Ajax (amateurs)'s ground is Sportpark De Toekomst. It is owned and operated by AFC Ajax N.V. and tenanted by Ajax Youth Academy (Jon Ajax).
+TEMPLATE: PATIENT-1 (AGENT-1) 's ground is BRIDGE-1 . BRIDGE-1 is owned and operated by PATIENT-1 N.V. and tenanted by PATIENT-2 (PATIENT-3) .
+CORRECT: AGENT-1 ground is BRIDGE-1 . AGENT-1 is owned and operated by PATIENT-1 and tenanted by PATIENT-2 (PATIENT-4) .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id23 5 SportsTeam
+
+TRIPLES
+AZAL_PFK | league | Azerbaijan_Premier_League
+Azerbaijan_Premier_League | champions | Qarabağ_FK
+AZAL_PFK | numberOfMembers | 3500
+AZAL_PFK | ground | AZAL_Arena
+AZAL_PFK | season | 2014
+
+
+ENTITY MAP
+PATIENT-4 | 2014
+BRIDGE-1 | Azerbaijan_Premier_League
+AGENT-1 | AZAL_PFK
+PATIENT-1 | Qarabağ_FK
+PATIENT-3 | AZAL_Arena
+PATIENT-2 | 3500
+
+
+LEX
+Id1
+TEXT: Qarabağ FK are the champions of the Azerbaijan Premier League, which AZAL PFK play in. AZAL Arena, is where home matches of AZAL PFK are played. The club has3500 members, and are in the 2014 season .
+TEMPLATE: PATIENT-1 are the champions of BRIDGE-1 , which AGENT-1 play in . PATIENT-3 , is where home matches of AGENT-1 are played . The club hasPATIENT-2 members , and are in the PATIENT-4 season .
+CORRECT: 
+COMMENT:g
+-
+Id2
+TEXT: AZAL PFK, who play at the AZAL Arena and have a membership of 3500, are in the Azerbaijan Premier League where they competed in 2014. The name of the championship football team in the Azerbaijan Premier League Os the Qarabag FK.
+TEMPLATE: AGENT-1 , who play at PATIENT-3 and have a membership of PATIENT-2 , are in BRIDGE-1 where they competed in PATIENT-4 . The name of the championship football team in BRIDGE-1 PATIENT-1 .
+CORRECT: AGENT-1 , who play at PATIENT-3 and have a membership of PATIENT-2 , are in BRIDGE-1 where AGENT-1 competed in PATIENT-4 . The name of the championship football team in BRIDGE-1 PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: The AZAL PFK, with 3500 members, competes in The Azerbaijan Premier League, with championship team being Qarabag FK. AZAL PFK competed in the 2014 season and play their home matches at the AZAL Arena.
+TEMPLATE: AGENT-1 , with PATIENT-2 members , competes in BRIDGE-1 , with championship team being PATIENT-1 . AGENT-1 competed in the PATIENT-4 season and play PATIENT-2 home matches at PATIENT-3 .
+CORRECT: AGENT-1 , with PATIENT-2 members , competes in BRIDGE-1 , with championship team being PATIENT-1 . AGENT-1 competed in the PATIENT-4 season and play AGENT-1 home matches at PATIENT-3 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id25 5 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | league | Campeonato_Brasileiro_Série_C
+Campeonato_Brasileiro_Série_C | country | Brazil
+Agremiação_Sportiva_Arapiraquense | numberOfMembers | 17000
+Agremiação_Sportiva_Arapiraquense | ground | Estádio_Municipal_Coaracy_da_Mata_Fonseca
+Campeonato_Brasileiro_Série_C | champions | Vila_Nova_Futebol_Clube
+
+
+ENTITY MAP
+PATIENT-4 | Vila_Nova_Futebol_Clube
+BRIDGE-1 | Campeonato_Brasileiro_Série_C
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | Brazil
+PATIENT-3 | Estádio_Municipal_Coaracy_da_Mata_Fonseca
+PATIENT-2 | 17000
+
+
+LEX
+Id1
+TEXT: Agremiação Sportiva Arapiraquense, whose ground is Estádio Municipal Coaracy da Mata Fonseca, play in the Campeonato Brasileiro Série C league in Brazil. Agremiacao Sportiva Arapiraquense has 17000 members and Vila Nova Futebol Clube have been champions of Campeonato Brasileiro Série C.
+TEMPLATE: AGENT-1 , whose ground is PATIENT-3 , play in the BRIDGE-1 league in PATIENT-1 . Agremiacao Sportiva Arapiraquense has PATIENT-2 members and PATIENT-4 have been champions of Campeonato Brasileiro Série C.
+CORRECT: AGENT-1 , whose ground is PATIENT-3 , play in the BRIDGE-1 league in PATIENT-1 . AGENT-1 has PATIENT-2 members and PATIENT-4 have been champions of BRIDGE-1.
+COMMENT:
+-
+Id2
+TEXT: Agremiacao Sportiva Arapiraquense's ground is the Estadio Minicipal Coaracy da Mata Fonseca, it has 17000 members and play in the Campeonato Brasileiro Série C league, which is based in Brazil and the current champions are Vila Nova Futebol Clube.
+TEMPLATE: AGENT-1 ground is PATIENT-3 , AGENT-1 has PATIENT-2 members and play in the BRIDGE-1 league , which is based in PATIENT-1 and the current champions are PATIENT-4 .
+CORRECT: 
+COMMENT:g
+-
+Id3
+TEXT: Vila Nova Futebol Clube have been champions of Campeonato Brasileiro Série C. league in Brazil. Agremiação Sportiva Arapiraquense, who have 17000 members, also play in the league and have their home ground at Estádio Municipal Coaracy da Mata Fonseca.
+TEMPLATE: PATIENT-4 have been champions of BRIDGE-1 in PATIENT-1 . AGENT-1 , who have PATIENT-2 members , also play in the league and have PATIENT-2 home ground at PATIENT-3 .
+CORRECT: PATIENT-4 have been champions of BRIDGE-1 in PATIENT-1 . AGENT-1 , who have PATIENT-2 members , also play in BRIDGE-1 and have AGENT-1 home ground at PATIENT-3 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id26 5 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | league | Campeonato_Brasileiro_Série_C
+Campeonato_Brasileiro_Série_C | country | Brazil
+Agremiação_Sportiva_Arapiraquense | numberOfMembers | 17000
+Agremiação_Sportiva_Arapiraquense | season | 2015
+Campeonato_Brasileiro_Série_C | champions | Vila_Nova_Futebol_Clube
+
+
+ENTITY MAP
+PATIENT-4 | Vila_Nova_Futebol_Clube
+BRIDGE-1 | Campeonato_Brasileiro_Série_C
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | Brazil
+PATIENT-3 | 2015
+PATIENT-2 | 17000
+
+
+LEX
+Id1
+TEXT: The Vila Nova Futebol Clube were champions at the Campeonato Brasileiro Série C league in Brazil. The Agremiação Sportiva Arapiraquense, who have 17000 members, also played in the league in 2015.
+TEMPLATE: PATIENT-4 were champions at the BRIDGE-1 league in PATIENT-1 . AGENT-1 , who have PATIENT-2 members , also played in the league in PATIENT-3 .
+CORRECT: PATIENT-4 were champions at the BRIDGE-1 league in PATIENT-1 . AGENT-1 , who have PATIENT-2 members , also played in BRIDGE-1 in PATIENT-3 .
+COMMENT:
+-
+Id2
+TEXT: Vila Nova Futebol Clube are the champions of Campeonato Brasileiro Serie C. league in Brazil. Agremiação Sportiva Arapiraquense, who have 17000 members also played in the league in 2015.
+TEMPLATE: PATIENT-4 are the champions of BRIDGE-1 in PATIENT-1 . AGENT-1 , who have PATIENT-2 members also played in the league in PATIENT-3 .
+CORRECT: PATIENT-4 are the champions of BRIDGE-1 in PATIENT-1 . AGENT-1 , who have PATIENT-2 members also played in BRIDGE-1 in PATIENT-3 .
+COMMENT:
+-
+Id3
+TEXT: The Vila Nova Futebol Clube were champions at the Campeonato Brasileiro Série C. based in Brazil. Agremiação Sportiva Arapiraquense, who have 17000 members, also played in the league in 2015.
+TEMPLATE: PATIENT-4 were champions at BRIDGE-1 based in PATIENT-1 . AGENT-1 , who have PATIENT-2 members , also played in the league in PATIENT-3 .
+CORRECT: PATIENT-4 were champions at BRIDGE-1 based in PATIENT-1 . AGENT-1 , who have PATIENT-2 members , also played in BRIDGE-1 in PATIENT-3 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id27 5 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | league | Campeonato_Brasileiro_Série_C
+Campeonato_Brasileiro_Série_C | country | Brazil
+Agremiação_Sportiva_Arapiraquense | numberOfMembers | 17000
+Agremiação_Sportiva_Arapiraquense | season | 2015_Campeonato_Brasileiro_Série_C
+Campeonato_Brasileiro_Série_C | champions | Vila_Nova_Futebol_Clube
+
+
+ENTITY MAP
+PATIENT-4 | Vila_Nova_Futebol_Clube
+BRIDGE-1 | Campeonato_Brasileiro_Série_C
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | Brazil
+PATIENT-3 | 2015_Campeonato_Brasileiro_Série_C
+PATIENT-2 | 17000
+
+
+LEX
+Id1
+TEXT: Agremiação Sportiva Arapiraquense (with 17000 members) play in Brazil's Campeonato Brasileiro Série C league and competed in the 2015 event. Vila Nova Futebol Clube are the champions of Série C.
+TEMPLATE: AGENT-1 (with PATIENT-2 members) play in PATIENT-1 's BRIDGE-1 league and competed in the 2015 event . PATIENT-4 are PATIENT-3
+CORRECT: AGENT-1 (with PATIENT-2 members) play in PATIENT-1 BRIDGE-1 league and competed in the 2015 event . PATIENT-4 are PATIENT-3
+COMMENT: wrong
+-
+Id2
+TEXT: Agremiação Sportiva Arapiraquense play in the Campeonato Brasileiro Série C league based in Brazil. It has 17000 members. Champions of the Serie C league is the Vila Nova Futebol Clube.
+TEMPLATE: AGENT-1 play in the BRIDGE-1 league based in PATIENT-1 . AGENT-1 has PATIENT-2 members . PATIENT-3 is PATIENT-4 .
+CORRECT: AGENT-1 play in the BRIDGE-1 league based in PATIENT-1 . AGENT-1 has PATIENT-2 members . Champions of PATIENT-3 is PATIENT-4 .
+COMMENT:
+-
+Id3
+TEXT: The Vila Nova Futebol Clube were champions at the Campeonato Brasileiro Série C from Brazil. Agremiação Sportiva Arapiraquense, who have 17000 members, also competed in the league in 2015.
+TEMPLATE: PATIENT-4 were PATIENT-3 at BRIDGE-1 from PATIENT-1 . AGENT-1 , who have PATIENT-2 members , also competed in the league in 2015 .
+CORRECT: PATIENT-4 were champions at BRIDGE-1 from PATIENT-1 . AGENT-1 , who have PATIENT-2 members , also competed in PATIENT-3 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id28 5 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | ground | St._Vincent–St._Mary_High_School
+Akron,_Ohio | country | United_States
+Akron_Summit_Assault | league | Premier_Development_League
+Premier_Development_League | champions | K-W_United_FC
+St._Vincent–St._Mary_High_School | city | Akron,_Ohio
+
+
+ENTITY MAP
+BRIDGE-2 | St._Vincent–St._Mary_High_School
+BRIDGE-1 | Premier_Development_League
+AGENT-1 | Akron_Summit_Assault
+BRIDGE-3 | Akron,_Ohio
+PATIENT-1 | United_States
+PATIENT-2 | K-W_United_FC
+
+
+LEX
+Id1
+TEXT: St. Vincent-St. Mary High School, which is in Akron, Ohio, in the United States, is the ground of Akron Summit Assault. They play in the Premier Development League, where the champions have been K-W United FC.
+TEMPLATE: St. Vincent-St . BRIDGE-2 , which is in BRIDGE-3 , in PATIENT-1 , is the ground of AGENT-1 . They play in BRIDGE-1 , where the champions have been PATIENT-2 .
+CORRECT: BRIDGE-2 , which is in BRIDGE-3 , in PATIENT-1 , is the ground of AGENT-1 . AGENT-1 play in BRIDGE-1 , where PATIENT-2 have been PATIENT-2 .
+COMMENT:
+-
+Id2
+TEXT: St Vincent-St Mary High School, located in Akron, Ohio, US is the home of Akron Summit Assault. They play football in the Premier Development League, of which K-W United FC were champions.
+TEMPLATE: BRIDGE-2 , located in BRIDGE-3 , US is PATIENT-1 of AGENT-1 . They play football in BRIDGE-1 , of which PATIENT-2 were champions .
+CORRECT: BRIDGE-2 , located in BRIDGE-3 , PATIENT-1 is the home of AGENT-1 . AGENT-1 play football in BRIDGE-1 , of which PATIENT-2 were champions .
+COMMENT:
+-
+Id3
+TEXT: K-W United FC have been champions of the Premier Development League, which Akron Summit Assault play in. their ground is St. Vincent-St. Mary High School in Akron, Ohio, in the U.S.
+TEMPLATE: PATIENT-2 have been champions of BRIDGE-1 , which AGENT-1 play in . BRIDGE-1 ground is St. Vincent-St . BRIDGE-2 in BRIDGE-3 , in PATIENT-1
+CORRECT: PATIENT-2 have been champions of BRIDGE-1 , which AGENT-1 play in . AGENT-1 ground is BRIDGE-2 in BRIDGE-3 , in PATIENT-1
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id29 5 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | ground | St._Vincent–St._Mary_High_School
+Akron,_Ohio | leader | Dan_Horrigan
+Akron,_Ohio | country | United_States
+Akron,_Ohio | isPartOf | Summit_County,_Ohio
+St._Vincent–St._Mary_High_School | city | Akron,_Ohio
+
+
+ENTITY MAP
+BRIDGE-2 | Akron,_Ohio
+BRIDGE-1 | St._Vincent–St._Mary_High_School
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | Dan_Horrigan
+PATIENT-3 | Summit_County,_Ohio
+PATIENT-2 | United_States
+
+
+LEX
+Id1
+TEXT: Akron, Ohio is located in the United States, is part of the Summit County and has Dan Horrigan as a leader. Akron is also home to St Vincent-St Mary High School which is the ground of Akron Summit Assault.
+TEMPLATE: BRIDGE-2 is located in PATIENT-2 , is part of PATIENT-3 and has PATIENT-1 as a leader . Akron is also home to BRIDGE-1 which is the ground of AGENT-1 .
+CORRECT: BRIDGE-2 is located in PATIENT-2 , is part of PATIENT-3 and has PATIENT-1 as PATIENT-1 . BRIDGE-2 is also home to BRIDGE-1 which is the ground of AGENT-1 .
+COMMENT:
+-
+Id2
+TEXT: St. Vincent–St. Mary High School is located in the city of Akron, Ohio, USA. The school is the ground of Akron Summit Assault. The city is part of Summit County, Ohio. It is led by Dan Horrigan.
+TEMPLATE: St. Vincent -- BRIDGE-1 is located in PATIENT-2 of BRIDGE-2 , USA . The school is the ground of AGENT-1 . The city is part of PATIENT-3 . PATIENT-3 is led by PATIENT-1 .
+CORRECT: BRIDGE-1 is located in BRIDGE-2 PATIENT-2. BRIDGE-1 is the ground of AGENT-1 . BRIDGE-2 is part of PATIENT-3 . PATIENT-3 is led by PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: Dan Horrigan is the leader in Akron, Summit County, Ohio, United States, where St Vincent-St Mary High School is located. The school is the location for the home ground of Akron Summit Assault.
+TEMPLATE: PATIENT-1 is the leader in BRIDGE-2 , PATIENT-3 , PATIENT-2 , where BRIDGE-1 is located . The school is the location for the home ground of AGENT-1 .
+CORRECT: PATIENT-1 is the leader in BRIDGE-2 , PATIENT-3 , PATIENT-2 , where BRIDGE-1 is located . BRIDGE-1 is the location for the home ground of AGENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id30 5 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | ground | St._Vincent–St._Mary_High_School
+Akron,_Ohio | leader | Dan_Horrigan
+St._Vincent–St._Mary_High_School | country | United_States
+Akron,_Ohio | isPartOf | Summit_County,_Ohio
+St._Vincent–St._Mary_High_School | city | Akron,_Ohio
+
+
+ENTITY MAP
+BRIDGE-2 | Akron,_Ohio
+BRIDGE-1 | St._Vincent–St._Mary_High_School
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | Dan_Horrigan
+PATIENT-3 | Summit_County,_Ohio
+PATIENT-2 | United_States
+
+
+LEX
+Id1
+TEXT: The ground of Akron Summit Assault is located at St Vincent St Mary High School in the city of Akron, Summit County, Ohio, United States, where the leader is Dan Horrigan.
+TEMPLATE: The ground of AGENT-1 is located at BRIDGE-1 in the city of BRIDGE-2 , PATIENT-3 , PATIENT-2 , where the leader is PATIENT-1 .
+CORRECT: The ground of AGENT-1 is located at BRIDGE-1 in BRIDGE-2 of BRIDGE-2 , PATIENT-3 , PATIENT-2 , where PATIENT-1 is PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Akron Summit Assault have their ground at St Vincent St Mary High School which is based in Akron, Summit County, Ohio in the United States. Dan Horrigan is the leader of Akron.
+TEMPLATE: AGENT-1 have their ground at BRIDGE-1 which is based in BRIDGE-2 , PATIENT-3 in PATIENT-2 . PATIENT-1 is the leader of BRIDGE-2 .
+CORRECT: AGENT-1 have AGENT-1 ground at BRIDGE-1 which is based in BRIDGE-2 , PATIENT-3 in PATIENT-2 . PATIENT-1 is PATIENT-1 of BRIDGE-2 .
+COMMENT:
+-
+Id3
+TEXT: Dan Horrigan is the leader of Akron where the home ground of Akron Summit Assault is located at St Vincent St Mary High School in the city of Akron, Summit County, Ohio, United States.
+TEMPLATE: PATIENT-1 is the leader of BRIDGE-2 where the home ground of AGENT-1 is located at BRIDGE-1 in the city of BRIDGE-2 , PATIENT-3 , PATIENT-2 .
+CORRECT: PATIENT-1 is PATIENT-1 of BRIDGE-2 where the home ground of AGENT-1 is located at BRIDGE-1 in BRIDGE-2 , PATIENT-3 , PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id31 5 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | ground | St._Vincent–St._Mary_High_School
+Akron,_Ohio | location | Summit_County,_Ohio
+Akron,_Ohio | leader | Dan_Horrigan
+Akron,_Ohio | country | United_States
+St._Vincent–St._Mary_High_School | city | Akron,_Ohio
+
+
+ENTITY MAP
+BRIDGE-2 | Akron,_Ohio
+BRIDGE-1 | St._Vincent–St._Mary_High_School
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | Summit_County,_Ohio
+PATIENT-3 | United_States
+PATIENT-2 | Dan_Horrigan
+
+
+LEX
+Id1
+TEXT: St. Vincent-St. Mary High School is located in Akron, Summit County, Ohio USA. St Vincent-St Mary High School is the ground of Akron Summit Assault. The leader of Akron, Ohio is a one Dan Horrigan.
+TEMPLATE: St. Vincent-St . Mary High School is located in Akron , PATIENT-1 USA . BRIDGE-1 is the ground of AGENT-1 . PATIENT-3 of BRIDGE-2 is one PATIENT-2 .
+CORRECT: BRIDGE-1 is located in BRIDGE-2 , PATIENT-1 PATIENT-3 . BRIDGE-1 is the ground of AGENT-1 . PATIENT-2 of BRIDGE-2 is a one PATIENT-2 .
+COMMENT:
+-
+Id2
+TEXT: Akron Summit Assault's ground is St. Vincent-St. Mary High School, which is located in the city of Akron, Ohio, (where the leader is Dan Horrigan), in the United States.
+TEMPLATE: AGENT-1 's ground is St. Vincent-St . BRIDGE-1 , which is located in PATIENT-1 of BRIDGE-2 , (where the leader is PATIENT-2) , in PATIENT-3 .
+CORRECT: AGENT-1 ground is BRIDGE-1 , which is located in BRIDGE-2 (where the leader is PATIENT-2) , in PATIENT-3 .
+COMMENT:
+-
+Id3
+TEXT: Akron Summit Assault's ground is St. Vincent-St. Mary High School. Which is in the United States in Summit County, in Akron, Ohio where Dan Horrigan is the leader.
+TEMPLATE: AGENT-1 's ground is St. Vincent-St . BRIDGE-1 BRIDGE-2 is in PATIENT-3 in PATIENT-1 , in BRIDGE-2 where PATIENT-2 is the leader .
+CORRECT: AGENT-1 ground is BRIDGE-1. Which is in PATIENT-3 in PATIENT-1 , in BRIDGE-2 where PATIENT-2 is PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id32 5 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | ground | St._Vincent–St._Mary_High_School
+Akron,_Ohio | location | Summit_County,_Ohio
+Akron,_Ohio | leader | Dan_Horrigan
+St._Vincent–St._Mary_High_School | country | United_States
+St._Vincent–St._Mary_High_School | city | Akron,_Ohio
+
+
+ENTITY MAP
+BRIDGE-2 | Akron,_Ohio
+BRIDGE-1 | St._Vincent–St._Mary_High_School
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | Summit_County,_Ohio
+PATIENT-3 | United_States
+PATIENT-2 | Dan_Horrigan
+
+
+LEX
+Id1
+TEXT: Akron Summit Assault's ground is at St. Vincent-St. Mary High School in Akron, Summit County, Ohio in the U.S. Dan Horrigan is the leader of Akron, Ohio.
+TEMPLATE: AGENT-1 's ground is at St. Vincent-St . BRIDGE-1 in Akron , PATIENT-1 in PATIENT-2 is PATIENT-3 of BRIDGE-2 .
+CORRECT: AGENT-1 ground is at BRIDGE-1 in BRIDGE-2 , PATIENT-1 in PATIENT-3. PATIENT-2 is PATIENT-2 of BRIDGE-2 .
+COMMENT:
+-
+Id2
+TEXT: Dan Horrigan is the leader of Akron, Summit County, Ohio in the United States. Akron is the location of the home ground of Akron Summit Assault at St Vincent St Mary High School.
+TEMPLATE: PATIENT-2 is the leader of BRIDGE-2 , PATIENT-1 in PATIENT-3 . BRIDGE-2 is the location of the home ground of AGENT-1 at BRIDGE-1 .
+CORRECT: PATIENT-2 is PATIENT-2 of BRIDGE-2 , PATIENT-1 in PATIENT-3 . BRIDGE-2 is the location of the home ground of AGENT-1 at BRIDGE-1 .
+COMMENT:
+-
+Id3
+TEXT: St. Vincent St.Mary High School is located in Summit County, Ohio, Akron, Ohio, United States. Its leader is Dan Horrigan and it is the ground of Akron Summit Assault.
+TEMPLATE: BRIDGE-1 is located in PATIENT-1 , BRIDGE-2 , PATIENT-3 . BRIDGE-1 leader is PATIENT-2 and BRIDGE-1 is the ground of AGENT-1 .
+CORRECT: BRIDGE-1 is located in PATIENT-1 , BRIDGE-2 , PATIENT-3 . BRIDGE-2 leader is PATIENT-2 and BRIDGE-2 is the ground of AGENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id33 5 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | ground | St._Vincent–St._Mary_High_School
+St._Vincent–St._Mary_High_School | country | United_States
+Akron_Summit_Assault | league | Premier_Development_League
+Premier_Development_League | champions | K-W_United_FC
+St._Vincent–St._Mary_High_School | city | Akron,_Ohio
+
+
+ENTITY MAP
+BRIDGE-2 | Premier_Development_League
+BRIDGE-1 | St._Vincent–St._Mary_High_School
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | United_States
+PATIENT-3 | Akron,_Ohio
+PATIENT-2 | K-W_United_FC
+
+
+LEX
+Id1
+TEXT: Akron Summit Assault play in the Premier Development League( where K-W United FC were previously champions). The team has their ground at St Vincent-St Mary High School in Akron, Ohio, United States.
+TEMPLATE: AGENT-1 play in BRIDGE-2 (where PATIENT-2 were previously champions) . The team has PATIENT-3 ground at BRIDGE-1 in PATIENT-3 , PATIENT-1 .
+CORRECT: AGENT-1 play in BRIDGE-2 (where PATIENT-2 were previously champions) . AGENT-1 has AGENT-1 ground at BRIDGE-1 in PATIENT-3 , PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: K-W United FC have been champions of the Premier Development League, which is the league Akron Summit Assault play in. Akron Summit Assault's ground is St. Vincent-St. Mary High School, in Akron, Ohio, in the United States.
+TEMPLATE: PATIENT-2 have been champions of BRIDGE-2 , which is the league AGENT-1 play in . AGENT-1 's ground is St. Vincent-St . BRIDGE-1 , in PATIENT-3 , in PATIENT-1 .
+CORRECT: PATIENT-2 have been champions of BRIDGE-2 , which is the league AGENT-1 play in . AGENT-1 ground is BRIDGE-1 , in PATIENT-3 , in PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: Akron Summit Assault's ground is St. Vincent-St. Mary High School, Akron, Ohio, United States. The team play in the Premier Development League, which has previously been won by K-W United FC.
+TEMPLATE: AGENT-1 's ground is St. Vincent-St . BRIDGE-1 , PATIENT-3 , PATIENT-1 . The team play in BRIDGE-2 , which has previously been won by PATIENT-2 .
+CORRECT: AGENT-1 ground is BRIDGE-1 , PATIENT-3 , PATIENT-1 . AGENT-1 play in BRIDGE-2 , which has previously been won by PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id34 5 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | ground | St._Vincent–St._Mary_High_School
+St._Vincent–St._Mary_High_School | state | Ohio
+Akron,_Ohio | country | United_States
+Akron,_Ohio | isPartOf | Summit_County,_Ohio
+St._Vincent–St._Mary_High_School | city | Akron,_Ohio
+
+
+ENTITY MAP
+BRIDGE-2 | Akron,_Ohio
+BRIDGE-1 | St._Vincent–St._Mary_High_School
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | Ohio
+PATIENT-3 | Summit_County,_Ohio
+PATIENT-2 | United_States
+
+
+LEX
+Id1
+TEXT: St Vincent-St Mary High School in Akron, Summit County, Ohio, USA is the location for the home ground of Akron Summit Assault.
+TEMPLATE: BRIDGE-1 in BRIDGE-2 , PATIENT-3 , USA is PATIENT-2 for the home ground of AGENT-1 .
+CORRECT: BRIDGE-1 in BRIDGE-2 , PATIENT-3 , PATIENT-2 is the location for the home ground of AGENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The ground of Akron Summit Assault is located at St. Vincent–St. Mary High School in the city of Akron, Summit County, Ohio, US.
+TEMPLATE: The ground of AGENT-1 is located at St. Vincent -- BRIDGE-1 in PATIENT-2 of BRIDGE-2 , PATIENT-3 , PATIENT-1 .
+CORRECT: The ground of AGENT-1 is located at BRIDGE-1 in BRIDGE-2 , PATIENT-3 , PATIENT-2 .
+COMMENT:
+-
+Id3
+TEXT: Akron Summit Assault have their ground at St Vincent St Mary High School in the city of Akron, Summit County, Ohio, USA.
+TEMPLATE: AGENT-1 have their ground at BRIDGE-1 in PATIENT-2 of BRIDGE-2 , PATIENT-3 , PATIENT-1 .
+CORRECT: AGENT-1 have AGENT-1 ground at BRIDGE-1 in BRIDGE-2 PATIENT-3 PATIENT-2.
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id36 5 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | ground | St._Vincent–St._Mary_High_School
+St._Vincent–St._Mary_High_School | state | Ohio
+Akron,_Ohio | leader | Dan_Horrigan
+St._Vincent–St._Mary_High_School | country | United_States
+St._Vincent–St._Mary_High_School | city | Akron,_Ohio
+
+
+ENTITY MAP
+BRIDGE-2 | Akron,_Ohio
+BRIDGE-1 | St._Vincent–St._Mary_High_School
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | Ohio
+PATIENT-3 | United_States
+PATIENT-2 | Dan_Horrigan
+
+
+LEX
+Id1
+TEXT: St. Vincent-St. Mary High School is in Akron, Ohio U.S and is the home ground for Akron Summit Assault. Dan Horrigan is the leader of Akron, Ohio.
+TEMPLATE: St. Vincent-St . BRIDGE-1 is in BRIDGE-2 U.S and is the home ground for AGENT-1 . PATIENT-2 is PATIENT-3 of BRIDGE-2 .
+CORRECT: BRIDGE-1 is in BRIDGE-2 PATIENT-3 and is the home ground for AGENT-1 . PATIENT-2 is PATIENT-2 of BRIDGE-2 .
+COMMENT:
+-
+Id2
+TEXT: The Akron Summit Assault's ground is St. Vincent-St.Mary High School. The School is located in Akron, Ohio, United States which currently has Dan Horrigan as a leader.
+TEMPLATE: AGENT-1 's ground is St. Vincent-St . BRIDGE-1 The School is located in BRIDGE-2 , PATIENT-3 which currently has PATIENT-2 as PATIENT-1 .
+CORRECT: AGENT-1 ground is BRIDGE-1. AGENT-1 is located in BRIDGE-2 , PATIENT-3 which currently has PATIENT-2 as PATIENT-2 .
+COMMENT:
+-
+Id3
+TEXT: Dan Horrigan is the leader of Akron where Akron Summit Assault have their ground at St Vincent St Mary High School in Ohio, United States.
+TEMPLATE: PATIENT-2 is the leader of BRIDGE-2 where AGENT-1 have their ground at BRIDGE-1 in PATIENT-1 , PATIENT-3 .
+CORRECT: PATIENT-2 is PATIENT-2 where AGENT-1 have AGENT-1 ground at BRIDGE-1 in PATIENT-1 , PATIENT-3 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id37 5 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | ground | St._Vincent–St._Mary_High_School
+St._Vincent–St._Mary_High_School | state | Ohio
+St._Vincent–St._Mary_High_School | country | United_States
+Akron,_Ohio | isPartOf | Summit_County,_Ohio
+St._Vincent–St._Mary_High_School | city | Akron,_Ohio
+
+
+ENTITY MAP
+BRIDGE-2 | Akron,_Ohio
+BRIDGE-1 | St._Vincent–St._Mary_High_School
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | Ohio
+PATIENT-3 | Summit_County,_Ohio
+PATIENT-2 | United_States
+
+
+LEX
+Id1
+TEXT: St. Vincent St.Mary High School is located in Summit County, Ohio in the United States. The Akron Summit Assault ground is at this high school.
+TEMPLATE: BRIDGE-1 is located in PATIENT-3 in PATIENT-2 . The AGENT-1 ground is at BRIDGE-2 .
+CORRECT: BRIDGE-1 is located in PATIENT-3 in PATIENT-2 . AGENT-1 ground is at BRIDGE-2 .
+COMMENT:
+-
+Id2
+TEXT: Akron Summit Assault have their home ground at St Vincent St Mary High School which is located in the city of Akron, Summit County, Ohio, United States.
+TEMPLATE: AGENT-1 have their home ground at BRIDGE-1 which is located in the city of BRIDGE-2 , PATIENT-3 , PATIENT-2 .
+CORRECT: AGENT-1 have their home ground at BRIDGE-1 which is located in BRIDGE-2 of BRIDGE-2 , PATIENT-3 , PATIENT-2 .
+COMMENT:
+-
+Id3
+TEXT: St. Vincent–St. Mary High School is located in the city of Akron, Summit County, Ohio, United States and is the location for the home ground of Akron Summit Assault.
+TEMPLATE: St. Vincent -- BRIDGE-1 is located in the city of BRIDGE-2 , PATIENT-3 , PATIENT-2 and is the location for the home ground of AGENT-1 .
+CORRECT: BRIDGE-1 is located in BRIDGE-2 of BRIDGE-2 , PATIENT-3 , PATIENT-2 and is the location for the home ground of AGENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id39 5 SportsTeam
+
+TRIPLES
+Italy | leader | Pietro_Grasso
+Italy | capital | Rome
+Italy | leader | Sergio_Mattarella
+A.S._Gubbio_1910 | ground | Italy
+Italy | language | Italian_language
+
+
+ENTITY MAP
+PATIENT-4 | Italian_language
+BRIDGE-1 | Italy
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | Pietro_Grasso
+PATIENT-3 | Sergio_Mattarella
+PATIENT-2 | Rome
+
+
+LEX
+Id1
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy, where there are leaders called Pietro Grasso and Sergio Mattarella. Italy's capital is Rome and the language spoken in the country is Italian.
+TEMPLATE: The ground of AGENT-1 is located in BRIDGE-1 , where there are leaders called PATIENT-1 and PATIENT-3 . BRIDGE-1 's capital is PATIENT-2 and PATIENT-4 spoken in the country is Italian .
+CORRECT: The ground of AGENT-1 is located in BRIDGE-1 , where there are leaders called PATIENT-1 and PATIENT-3 . PATIENT-2 is PATIENT-2 and PATIENT-4 spoken in BRIDGE-1 is PATIENT-4 .
+COMMENT:
+-
+Id2
+TEXT: Rome is the capital of Italy, where leaders include, Pietro Grasso and Sergio Mattarella. Italian is spoken there and it is also where the ground of A.S. Gubbio 1910 is located.
+TEMPLATE: PATIENT-2 is the capital of BRIDGE-1 , where leaders include , PATIENT-1 and PATIENT-3 . PATIENT-4 is spoken there and PATIENT-2 is also where the ground of AGENT-1 is located .
+CORRECT: PATIENT-2 is PATIENT-2 , where leaders include , PATIENT-1 and PATIENT-3 . PATIENT-4 is spoken there and PATIENT-2 is also where the ground of AGENT-1 is located .
+COMMENT:
+-
+Id3
+TEXT: Pietro Grasso and Sergio Mattarella are two leaders in Italy. Italy's capital is Rome and the language spoken there is Italian. A.S. Gubbio 1910 play in that country.
+TEMPLATE: PATIENT-1 and PATIENT-3 are two leaders in BRIDGE-1 . BRIDGE-1 's capital is PATIENT-2 and PATIENT-4 spoken there is Italian . AGENT-1 play in that country .
+CORRECT: PATIENT-1 and PATIENT-3 are two leaders in BRIDGE-1 . PATIENT-2 is PATIENT-2 and PATIENT-4 spoken there is PATIENT-4 . AGENT-1 play in BRIDGE-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id40 5 SportsTeam
+
+TRIPLES
+Italy | leader | Pietro_Grasso
+Italy | demonym | Italians
+Italy | capital | Rome
+Italy | leader | Sergio_Mattarella
+A.S._Gubbio_1910 | ground | Italy
+
+
+ENTITY MAP
+BRIDGE-1 | Italy
+PATIENT-4 | Sergio_Mattarella
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | Pietro_Grasso
+PATIENT-3 | Rome
+PATIENT-2 | Italians
+
+
+LEX
+Id1
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy, where Italians live. The capital is Rome and two of the leaders are Pietro Grasso, and Sergio Mattarella.
+TEMPLATE: The ground of AGENT-1 is located in BRIDGE-1 , where PATIENT-2 live . The capital is PATIENT-3 and two of the leaders are PATIENT-1 , and PATIENT-4 .
+CORRECT: The ground of AGENT-1 is located in BRIDGE-1 , where PATIENT-2 live . PATIENT-3 is PATIENT-3 and two of the leaders are PATIENT-1 , and PATIENT-4 .
+COMMENT:
+-
+Id2
+TEXT: Italy is the location of the home ground of AS Gubbio 1910. The country's leaders are Sergio Mattarella and Pietro Grasso. The inhabitants are known as Italian and the capital city is Rome.
+TEMPLATE: BRIDGE-1 is PATIENT-2 of the home ground of AGENT-1 . The country 's leaders are PATIENT-4 and PATIENT-1 . The inhabitants are known as Italian and the capital city is PATIENT-3 .
+CORRECT: BRIDGE-1 is the location of the home ground of AGENT-1 . The country 's leaders are PATIENT-4 and PATIENT-1 . PATIENT-2 are known as PATIENT-2 and PATIENT-3 is PATIENT-3 .
+COMMENT:
+-
+Id3
+TEXT: Pietro Grasso and Sergio Mattarella are Italian leaders in Italy. The ground of A.S. Gubbio 1910 is located in Italy where Rome is the capital.
+TEMPLATE: PATIENT-1 and PATIENT-4 are PATIENT-2 in BRIDGE-1 . The ground of AGENT-1 is located in BRIDGE-1 where PATIENT-3 is the capital .
+CORRECT: PATIENT-1 and PATIENT-4 are PATIENT-2 leaders in BRIDGE-1 . The ground of AGENT-1 is located in BRIDGE-1 where PATIENT-3 is PATIENT-3 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id41 5 SportsTeam
+
+TRIPLES
+Italy | leader | Pietro_Grasso
+Italy | demonym | Italians
+Italy | leader | Sergio_Mattarella
+A.S._Gubbio_1910 | ground | Italy
+Italy | language | Italian_language
+
+
+ENTITY MAP
+PATIENT-4 | Italian_language
+BRIDGE-1 | Italy
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | Pietro_Grasso
+PATIENT-3 | Sergio_Mattarella
+PATIENT-2 | Italians
+
+
+LEX
+Id1
+TEXT: Italians are the people who live in Italy, where Italian is the language. Two of the leaders there are Pietro Grasso and Sergio Mattarella. Also in Italy, is the ground of A.S. Gubbio 1910.
+TEMPLATE: PATIENT-2 are the people who live in BRIDGE-1 , where Italian is PATIENT-4 . Two of the leaders there are PATIENT-1 and PATIENT-3 . Also in BRIDGE-1 , is the ground of AGENT-1 .
+CORRECT: PATIENT-2 are PATIENT-2 who live in BRIDGE-1 , where PATIENT-4 is PATIENT-4 . Two of the leaders there are PATIENT-1 and PATIENT-3 . Also in BRIDGE-1 , is the ground of AGENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy, where Italians live and where the language spoken is Italian. Pietro Grasso and Sergio Mattarella are leaders in Italy.
+TEMPLATE: The ground of AGENT-1 is located in BRIDGE-1 , where PATIENT-2 live and where PATIENT-4 spoken is Italian . PATIENT-1 and PATIENT-3 are leaders in BRIDGE-1 .
+CORRECT: The ground of AGENT-1 is located in BRIDGE-1 , where PATIENT-2 live and where PATIENT-4 spoken is PATIENT-4 . PATIENT-1 and PATIENT-3 are leaders in BRIDGE-1 .
+COMMENT:
+-
+Id3
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy where Pietro Grasso and Sergio Mattarella lead the Italian people and the Italian language is spoken.
+TEMPLATE: PATIENT-2 of AGENT-1 is located in BRIDGE-1 where PATIENT-1 and PATIENT-3 lead the Italian people and PATIENT-4 is spoken .
+CORRECT: The ground of AGENT-1 is located in BRIDGE-1 where PATIENT-1 and PATIENT-3 lead PATIENT-2 and PATIENT-4 is spoken .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id42 5 SportsTeam
+
+TRIPLES
+Italy | leader | Pietro_Grasso
+Italy | officialLanguage | Italian_language
+Italy | capital | Rome
+Italy | leader | Sergio_Mattarella
+A.S._Gubbio_1910 | ground | Italy
+
+
+ENTITY MAP
+BRIDGE-1 | Italy
+PATIENT-4 | Sergio_Mattarella
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | Pietro_Grasso
+PATIENT-3 | Rome
+PATIENT-2 | Italian_language
+
+
+LEX
+Id1
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy, where Rome is the capital, Italian is the official language and where there are leaders called Pietro Grasso and Sergio Mattarella.
+TEMPLATE: The ground of AGENT-1 is located in BRIDGE-1 , where PATIENT-3 is the capital , PATIENT-2 is the official language and where there are leaders called PATIENT-1 and PATIENT-4 .
+CORRECT: The ground of AGENT-1 is located in BRIDGE-1 , where PATIENT-3 is PATIENT-3 , PATIENT-2 is PATIENT-2 and where there are leaders called PATIENT-1 and PATIENT-4 .
+COMMENT:
+-
+Id2
+TEXT: Pietro Grasso and Sergio Mattarella are both leaders of Italy where Rome is the capital city and the language spoken is Italian. In this country the ground of A.S. Gubbio 1910 is also located.
+TEMPLATE: PATIENT-1 and PATIENT-4 are both leaders of BRIDGE-1 where PATIENT-3 is the capital city and PATIENT-2 spoken is Italian . In this country the ground of AGENT-1 is also located .
+CORRECT: PATIENT-1 and PATIENT-4 are both leaders of BRIDGE-1 where PATIENT-3 is PATIENT-3 and PATIENT-2 spoken is PATIENT-2 . In BRIDGE-1 the ground of AGENT-1 is also located .
+COMMENT:
+-
+Id3
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy, where Pietro Grasso and Sergio Mattarella are leaders. Italy's capital is Rome, and Italian is the official language.
+TEMPLATE: The ground of AGENT-1 is located in BRIDGE-1 , where PATIENT-1 and PATIENT-4 are leaders . BRIDGE-1 's capital is PATIENT-3 , and PATIENT-2 is the official language .
+CORRECT: The ground of AGENT-1 is located in BRIDGE-1 , where PATIENT-1 and PATIENT-4 are leaders . PATIENT-3 is PATIENT-3 , and PATIENT-2 is PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id43 5 SportsTeam
+
+TRIPLES
+Italy | leader | Pietro_Grasso
+Italy | officialLanguage | Italian_language
+Italy | demonym | Italians
+Italy | capital | Rome
+A.S._Gubbio_1910 | ground | Italy
+
+
+ENTITY MAP
+BRIDGE-1 | Italy
+PATIENT-4 | Rome
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | Pietro_Grasso
+PATIENT-3 | Italians
+PATIENT-2 | Italian_language
+
+
+LEX
+Id1
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy, the country which is inhabited by Italians. The capital of Italy is Rome, the official language is Italian and the leader is Pietro Grasso.
+TEMPLATE: The ground of AGENT-1 is located in BRIDGE-1 , the country which is inhabited by PATIENT-3 . The capital of BRIDGE-1 is PATIENT-4 , PATIENT-2 is Italian and the leader is PATIENT-1 .
+CORRECT: The ground of AGENT-1 is located in BRIDGE-1 , BRIDGE-1 which is inhabited by PATIENT-3 . PATIENT-4 of BRIDGE-1 is PATIENT-4 , PATIENT-2 is PATIENT-2 and PATIENT-1 is PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy, where the people who live there are called Italians. The official language is Italian and the country's leader is Pietro Grasso.
+TEMPLATE: The ground of AGENT-1 is located in BRIDGE-1 , where the people who live PATIENT-4 are called PATIENT-3 . PATIENT-2 is Italian and the country 's leader is PATIENT-1 .
+CORRECT: The ground of AGENT-1 is located in BRIDGE-1 , where PATIENT-3 who live PATIENT-4 are called PATIENT-3 . PATIENT-2 is PATIENT-2 and PATIENT-1 is PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: Italians inhabit Italy, where the capital is Rome. It is also where Italian is the official language and Pietro Grasso is the leader. The ground of A.S. Gubbio 1910 is located in Italy.
+TEMPLATE: PATIENT-3 inhabit BRIDGE-1 , where the capital is PATIENT-4 . BRIDGE-1 is also where PATIENT-2 is the official language and PATIENT-1 is the leader . The ground of AGENT-1 is located in BRIDGE-1 .
+CORRECT: PATIENT-3 inhabit BRIDGE-1 , where PATIENT-4 is PATIENT-4 . BRIDGE-1 is also where PATIENT-2 is PATIENT-2 and PATIENT-1 is PATIENT-1 . The ground of AGENT-1 is located in BRIDGE-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id45 5 SportsTeam
+
+TRIPLES
+Olympic_Stadium_(Athens) | location | Athens
+AEK_Athens_F.C. | manager | Gus_Poyet
+Gus_Poyet | club | Real_Zaragoza
+AEK_Athens_F.C. | ground | Olympic_Stadium_(Athens)
+Gus_Poyet | club | Chelsea_F.C.
+
+
+ENTITY MAP
+AGENT-1 | AEK_Athens_F.C.
+BRIDGE-1 | Gus_Poyet
+BRIDGE-2 | Olympic_Stadium_(Athens)
+PATIENT-1 | Athens
+PATIENT-3 | Chelsea_F.C.
+PATIENT-2 | Real_Zaragoza
+
+
+LEX
+Id1
+TEXT: The Olympic Stadium (Athens) is the home ground of AEK Athens FC who have been managed by Gus Poyet. His own club is Real Zaragoza and he has played for Chelsea FC.
+TEMPLATE: BRIDGE-2 (PATIENT-1) is the home ground of AEK PATIENT-1 FC who have been managed by BRIDGE-1 . BRIDGE-1 own club is PATIENT-2 and BRIDGE-1 has played for AGENT-1 .
+CORRECT: BRIDGE-2 is the home ground of AGENT-1 who have been managed by BRIDGE-1 . BRIDGE-1 own club is PATIENT-2 and BRIDGE-1 has played for PATIENT-3 .
+COMMENT:
+-
+Id2
+TEXT: Located in Athens, the Olympic Stadium is the ground for AEK Athens FC. The manager of which is Gus Poyet, whose club is Real Zaragoza, and who has played for Chelsea F.C.
+TEMPLATE: Located in PATIENT-1 , BRIDGE-2 is the ground for AEK PATIENT-1 FC . The manager of which is BRIDGE-1 , whose club is PATIENT-2 , and who has played for AGENT-1
+CORRECT: Located in PATIENT-1 , BRIDGE-2 is the ground for AGENT-1 . BRIDGE-1 of AGENT-1  is BRIDGE-1 , whose club is PATIENT-2 , and who has played for PATIENT-3 .
+COMMENT:
+-
+Id3
+TEXT: The Olympic Stadium (in Athens) is the home ground of AEK Athens FC. That football team is managed by Gus Poyet who played for Chelsea F.C. Gus Poyet is also associated with the Real Zaragoza football club.
+TEMPLATE: BRIDGE-2 (in PATIENT-1) is AGENT-1 of AEK PATIENT-1 FC . That football team is managed by BRIDGE-1 who played for BRIDGE-1 is also associated with the PATIENT-2 football club .
+CORRECT: BRIDGE-2 is the home ground of AGENT-1 . AGENT-1 is managed by BRIDGE-1 who played for PATIENT-3. BRIDGE-1 is also associated with the PATIENT-2 .
+COMMENT:
+-
+

@@ -1,0 +1,779 @@
+
+Entry: Id30 1 Building
+
+TRIPLES
+United_States | leaderName | Paul_Ryan
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | Paul_Ryan
+
+
+LEX
+Id1
+TEXT: Paul Ryan is the leader of the United States.
+TEMPLATE: PATIENT-1 is AGENT-1 leader of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The leader of the United States is Paul Ryan.
+TEMPLATE: AGENT-1 leader of AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id28 1 Building
+
+TRIPLES
+United_Kingdom | capital | London
+
+
+ENTITY MAP
+AGENT-1 | United_Kingdom
+PATIENT-1 | London
+
+
+LEX
+Id1
+TEXT: The capital of the United Kingdom is London.
+TEMPLATE: The capital of AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: London is the capital of the United Kingdom.
+TEMPLATE: PATIENT-1 is AGENT-1 capital of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id27 1 Building
+
+TRIPLES
+South_Africa | capital | Cape_Town
+
+
+ENTITY MAP
+AGENT-1 | South_Africa
+PATIENT-1 | Cape_Town
+
+
+LEX
+Id1
+TEXT: Cape Town is the capital of South Africa.
+TEMPLATE: PATIENT-1 is the capital of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The capital of South Africa is Cape Town.
+TEMPLATE: The capital of AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id26 1 Building
+
+TRIPLES
+Republic_of_Ireland | language | English_language
+
+
+ENTITY MAP
+AGENT-1 | Republic_of_Ireland
+PATIENT-1 | English_language
+
+
+LEX
+Id1
+TEXT: Ireland official language is Irish English.
+TEMPLATE: AGENT-1 official language is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: English language is the main language of the Republic of Ireland.
+TEMPLATE: PATIENT-1 language is the main language of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: One language used in the Republic of Ireland is English.
+TEMPLATE: One language used in AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id25 1 Building
+
+TRIPLES
+Marriott_International | keyPerson | Bill_Marriott
+
+
+ENTITY MAP
+AGENT-1 | Marriott_International
+PATIENT-1 | Bill_Marriott
+
+
+LEX
+Id1
+TEXT: Bill Marriott is the key person at Marriott International.
+TEMPLATE: PATIENT-1 is the key person at AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: One of the key people in Marriott International is Bill Marriott.
+TEMPLATE: One of the key people in AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id29 1 Building
+
+TRIPLES
+United_States | ethnicGroup | Native_Americans_in_the_United_States
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | Native_Americans_in_the_United_States
+
+
+LEX
+Id1
+TEXT: Native Americans are an ethnic group in the United States.
+TEMPLATE: PATIENT-1 are an ethnic group in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id23 1 Building
+
+TRIPLES
+Japan | ethnicGroup | Brazilians_in_Japan
+
+
+ENTITY MAP
+AGENT-1 | Japan
+PATIENT-1 | Brazilians_in_Japan
+
+
+LEX
+Id1
+TEXT: One of the ethnic groups in Japan in the Brazilians.
+TEMPLATE: One of the ethnic groups in AGENT-1 in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The Brazilians in Japan are an ethnic group found in Japan.
+TEMPLATE: PATIENT-1 in AGENT-1 are an ethnic group found in AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id22 1 Building
+
+TRIPLES
+India | leaderName | Sumitra_Mahajan
+
+
+ENTITY MAP
+AGENT-1 | India
+PATIENT-1 | Sumitra_Mahajan
+
+
+LEX
+Id1
+TEXT: Sumitra Mahajan is an Indian leader.
+TEMPLATE: PATIENT-1 is AGENT-1 leader .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The name of the leader in India is Sumitra Mahajan.
+TEMPLATE: The name of the leader in AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id24 1 Building
+
+TRIPLES
+Japan | leaderName | Tarō_Asō
+
+
+ENTITY MAP
+AGENT-1 | Japan
+PATIENT-1 | Tarō_Asō
+
+
+LEX
+Id1
+TEXT: The leader of Japan is Tarō Asō.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id21 1 Building
+
+TRIPLES
+Dublin | isPartOf | Leinster
+
+
+ENTITY MAP
+AGENT-1 | Dublin
+PATIENT-1 | Leinster
+
+
+LEX
+Id1
+TEXT: Dublin is part of Leinster.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id19 1 Building
+
+TRIPLES
+Chicago | isPartOf | DuPage_County,_Illinois
+
+
+ENTITY MAP
+AGENT-1 | Chicago
+PATIENT-1 | DuPage_County,_Illinois
+
+
+LEX
+Id1
+TEXT: Chicago is part of DuPage County in Illinois.
+TEMPLATE: AGENT-1 is part of PATIENT-1 in Illinois .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Chicago is part of DuPage County Illinois.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id18 1 Building
+
+TRIPLES
+Birmingham | postalCode | B_postcode_area
+
+
+ENTITY MAP
+AGENT-1 | Birmingham
+PATIENT-1 | B_postcode_area
+
+
+LEX
+Id1
+TEXT: Birmingham has the postcode area 'B'.
+TEMPLATE: AGENT-1 has PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The B postcode area is the postal code of Birmingham.
+TEMPLATE: PATIENT-1 is AGENT-1 postal code of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id17 1 Building
+
+TRIPLES
+Asser_Levy_Public_Baths | yearOfConstruction | 1904
+
+
+ENTITY MAP
+AGENT-1 | Asser_Levy_Public_Baths
+PATIENT-1 | 1904
+
+
+LEX
+Id1
+TEXT: The Asser Levy Public Baths was built in 1904.
+TEMPLATE: AGENT-1 was built in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Asser Levy Public Baths were constructed in 1904.
+TEMPLATE: AGENT-1 were constructed in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id16 1 Building
+
+TRIPLES
+Asher_and_Mary_Isabelle_Richardson_House | added to the National Register of Historic Places | "1988-11-22"
+
+
+ENTITY MAP
+AGENT-1 | Asher_and_Mary_Isabelle_Richardson_House
+PATIENT-1 | "1988-11-22"
+
+
+LEX
+Id1
+TEXT: Asher and Mary Isabelle Richardson House was added to the National Register of Historic Places on "1988-11-22".
+TEMPLATE: AGENT-1 was added to the National Register of Historic Places on `` PATIENT-1 '' .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The Asher and Mary Isabelle Richardson House was added to the National Register of Historic Places, on 22nd November 1988.
+TEMPLATE: AGENT-1 was added to the National Register of Historic Places , on PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id15 1 Building
+
+TRIPLES
+Ampara_Hospital | country | Sri_Lanka
+
+
+ENTITY MAP
+AGENT-1 | Ampara_Hospital
+PATIENT-1 | Sri_Lanka
+
+
+LEX
+Id1
+TEXT: Ampara Hospital is located in Sri Lanka.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Ampara Hospital is in Sri Lanka.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id14 1 Building
+
+TRIPLES
+Amdavad_ni_Gufa | architect | B._V._Doshi
+
+
+ENTITY MAP
+AGENT-1 | Amdavad_ni_Gufa
+PATIENT-1 | B._V._Doshi
+
+
+LEX
+Id1
+TEXT: The architecct B V Doshi designed Amdavad Ni Gufa.
+TEMPLATE: PATIENT-1 designed AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: B V Doshi is the architect who designed Amdavad ni Gufa.
+TEMPLATE: PATIENT-1 is the architect who designed AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id20 1 Building
+
+TRIPLES
+Dublin | country | Republic_of_Ireland
+
+
+ENTITY MAP
+AGENT-1 | Dublin
+PATIENT-1 | Republic_of_Ireland
+
+
+LEX
+Id1
+TEXT: Dublin is in the Republic of Ireland.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id13 1 Building
+
+TRIPLES
+Alan_B._Miller_Hall | currentTenants | Mason_School_of_Business
+
+
+ENTITY MAP
+AGENT-1 | Alan_B._Miller_Hall
+PATIENT-1 | Mason_School_of_Business
+
+
+LEX
+Id1
+TEXT: The Mason School of Business are the current tenants of Alan B Miller Hall.
+TEMPLATE: PATIENT-1 are the current tenants of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id11 1 Building
+
+TRIPLES
+Adare_Manor | country | Republic_of_Ireland
+
+
+ENTITY MAP
+AGENT-1 | Adare_Manor
+PATIENT-1 | Republic_of_Ireland
+
+
+LEX
+Id1
+TEXT: Adare Manor is located in the Republic of Ireland.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The Adare Manor is in the Republic of Ireland.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id10 1 Building
+
+TRIPLES
+Adare_Manor | buildingStartDate | "1700"
+
+
+ENTITY MAP
+AGENT-1 | Adare_Manor
+PATIENT-1 | "1700"
+
+
+LEX
+Id1
+TEXT: Adare Manor's building start was in 1700.
+TEMPLATE: AGENT-1 's building start was in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The building of the Adare Manor was started in 1700.
+TEMPLATE: The building of AGENT-1 was started in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id9 1 Building
+
+TRIPLES
+3Arena | location | "East Link Bridge"
+
+
+ENTITY MAP
+AGENT-1 | 3Arena
+PATIENT-1 | "East Link Bridge"
+
+
+LEX
+Id1
+TEXT: The 3Arena is located at East Link Bridge.
+TEMPLATE: AGENT-1 is located at PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The 3Arena is located on the East Link Bridge.
+TEMPLATE: AGENT-1 is located on PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: 3 Arena is located at East Link Bridge.
+TEMPLATE: AGENT-1 is located at PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id8 1 Building
+
+TRIPLES
+3Arena | architect | "HOK SVE"
+
+
+ENTITY MAP
+AGENT-1 | 3Arena
+PATIENT-1 | "HOK SVE"
+
+
+LEX
+Id1
+TEXT: HOK SVE was the architect of 3Arena.
+TEMPLATE: PATIENT-1 was the architect of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: HOK SVE was the architect of the 3Arena.
+TEMPLATE: PATIENT-1 was the architect of AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id7 1 Building
+
+TRIPLES
+300_North_LaSalle | floorCount | 60
+
+
+ENTITY MAP
+AGENT-1 | 300_North_LaSalle
+PATIENT-1 | 60
+
+
+LEX
+Id1
+TEXT: There are 60 floors at 300 North LaSalle.
+TEMPLATE: There are PATIENT-1 floors at AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: 300 North LaSalle has 60 floors.
+TEMPLATE: AGENT-1 has PATIENT-1 floors .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id6 1 Building
+
+TRIPLES
+20_Fenchurch_Street | location | United_Kingdom
+
+
+ENTITY MAP
+AGENT-1 | 20_Fenchurch_Street
+PATIENT-1 | United_Kingdom
+
+
+LEX
+Id1
+TEXT: 20 Fenchurch Street is located in the United Kingdom.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: 20 Fenchurch Street is located within the United Kingdom.
+TEMPLATE: AGENT-1 is located within PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id5 1 Building
+
+TRIPLES
+20_Fenchurch_Street | buildingStartDate | "January 2009"
+
+
+ENTITY MAP
+AGENT-1 | 20_Fenchurch_Street
+PATIENT-1 | "January 2009"
+
+
+LEX
+Id1
+TEXT: The building at 20 Fenchurch Street was started in January 2009.
+TEMPLATE: The building at AGENT-1 was started in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The construction of 20 Fenchurch Street began in January 2009.
+TEMPLATE: The construction of AGENT-1 began in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id4 1 Building
+
+TRIPLES
+200_Public_Square | completionDate | 1985
+
+
+ENTITY MAP
+AGENT-1 | 200_Public_Square
+PATIENT-1 | 1985
+
+
+LEX
+Id1
+TEXT: The 200 Public Square was completed in 1985.
+TEMPLATE: AGENT-1 was completed in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: 200 Public Square was completed in 1985.
+TEMPLATE: AGENT-1 was completed in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id12 1 Building
+
+TRIPLES
+Akita_Museum_of_Art | inaugurationDate | "2013-09-28"
+
+
+ENTITY MAP
+AGENT-1 | Akita_Museum_of_Art
+PATIENT-1 | "2013-09-28"
+
+
+LEX
+Id1
+TEXT: The Akita Museum of Art was inaugurated on 28th September 2013.
+TEMPLATE: AGENT-1 was inaugurated on PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id2 1 Building
+
+TRIPLES
+103_Colmore_Row | location | Colmore_Row
+
+
+ENTITY MAP
+AGENT-1 | 103_Colmore_Row
+PATIENT-1 | Colmore_Row
+
+
+LEX
+Id1
+TEXT: 103 Colmore Row is located at Colmore Row.
+TEMPLATE: AGENT-1 is located at PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: 103 Colmore Row is located in Colmore Row.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id1 1 Building
+
+TRIPLES
+103_Colmore_Row | architect | John_Madin
+
+
+ENTITY MAP
+AGENT-1 | 103_Colmore_Row
+PATIENT-1 | John_Madin
+
+
+LEX
+Id1
+TEXT: 103 Colmore Row was designed by the architect, John Madin.
+TEMPLATE: AGENT-1 was designed by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: 103 Colmore Row was designed by the architect John Madin.
+TEMPLATE: AGENT-1 was designed by PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id3 1 Building
+
+TRIPLES
+11_Diagonal_Street | completionDate | 1983
+
+
+ENTITY MAP
+AGENT-1 | 11_Diagonal_Street
+PATIENT-1 | 1983
+
+
+LEX
+Id1
+TEXT: 11 Diagonal Street was completed in 1983.
+TEMPLATE: AGENT-1 was completed in PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+

@@ -1,0 +1,1315 @@
+
+Entry: Id35 4 ComicsCharacter
+
+TRIPLES
+Sheldon_Moldoff | nationality | Americans
+Black_Pirate | creator | Sheldon_Moldoff
+Sheldon_Moldoff | award | Inkpot_Award
+Black_Pirate | alternativeName | "Jon Valor"
+
+
+ENTITY MAP
+BRIDGE-1 | Sheldon_Moldoff
+AGENT-1 | Black_Pirate
+PATIENT-1 | Americans
+PATIENT-3 | "Jon Valor"
+PATIENT-2 | Inkpot_Award
+
+
+LEX
+Id1
+TEXT: The Black Pirate, also know as Jon Valor, was created by the Inkpot Award winning American, Sheldon Moldoff.
+TEMPLATE: AGENT-1 , also know as PATIENT-3 , was created by PATIENT-2 winning PATIENT-1 , BRIDGE-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: American Sheldon Moldoff, who has won the Inkpot Award, created The Black Pirate, whose alternative name is Jon Valor.
+TEMPLATE: American BRIDGE-1 , who has won PATIENT-2 , created AGENT-1 , whose alternative name is PATIENT-3 .
+CORRECT: PATIENT-1 BRIDGE-1 , who has won PATIENT-2 , created AGENT-1 , whose alternative name is PATIENT-3 .
+COMMENT:
+-
+Id3
+TEXT: The black pirate, also known as Jon Valor, was created by Sheldon Moldoff, an American who has won the Inkpot award.
+TEMPLATE: AGENT-1 , also known as PATIENT-3 , was created by BRIDGE-1 , PATIENT-1 who has won PATIENT-2 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id34 4 ComicsCharacter
+
+TRIPLES
+Roger_McKenzie_(comic_book_writer) | nationality | United_States
+Ben_Urich | creator | Roger_McKenzie_(comic_book_writer)
+Ben_Urich | creator | Gene_Colan
+Ben_Urich | fullName | "Benjamin Urich"
+
+
+ENTITY MAP
+BRIDGE-1 | Roger_McKenzie_(comic_book_writer)
+AGENT-1 | Ben_Urich
+PATIENT-1 | United_States
+PATIENT-3 | "Benjamin Urich"
+PATIENT-2 | Gene_Colan
+
+
+LEX
+Id1
+TEXT: The American comic book writer Roger McKenzie and Gene Colan created the character Ben Urich, who has the full name Benjamin Urich.
+TEMPLATE: BRIDGE-1 and PATIENT-2 created AGENT-1 , who has full PATIENT-3 .
+CORRECT: BRIDGE-1 and PATIENT-2 created AGENT-1 , who has full name PATIENT-3 .
+COMMENT:
+-
+Id2
+TEXT: The comic book writer, Roger McKenzie is an American and along with Gene Colan created Ben (Benjamin) Urich.
+TEMPLATE: BRIDGE-1 , Roger McKenzie is an American and along with PATIENT-2 created (PATIENT-3) AGENT-1 .
+CORRECT: BRIDGE-1 is PATIENT-1 and along with PATIENT-2 created (PATIENT-3) AGENT-1 .
+COMMENT:
+-
+Id3
+TEXT: The character of Ben Urich, whose full name is Benjamin Urich, was created by Gene Colan and the comic book writer Roger Mckenzie who is American.
+TEMPLATE: BRIDGE-1 of AGENT-1 , whose full name is PATIENT-3 , was created by PATIENT-2 and the comic book writer Roger Mckenzie who is American .
+CORRECT: AGENT-1 , whose full name is PATIENT-3 , was created by PATIENT-2 and BRIDGE-1 who is PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id33 4 ComicsCharacter
+
+TRIPLES
+René_Goscinny | nationality | French_people
+Asterix_(comicsCharacter) | creator | René_Goscinny
+Asterix_(comicsCharacter) | alternativeName | "Astérix"
+Asterix_(comicsCharacter) | creator | Albert_Uderzo
+
+
+ENTITY MAP
+BRIDGE-1 | René_Goscinny
+AGENT-1 | Asterix_(comicsCharacter)
+PATIENT-1 | French_people
+PATIENT-3 | Albert_Uderzo
+PATIENT-2 | "Astérix"
+
+
+LEX
+Id1
+TEXT: The comic character Asterix is sometimes called "Astérix" and was created by Albert Uderzo and the French national, Rene Goscinny.
+TEMPLATE: AGENT-1 is sometimes called `` PATIENT-2 '' and was created by PATIENT-3 and BRIDGE-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Albert Uderzo and French born René Goscinny, are the creators of the comic character Asterix, also know as Astérix.
+TEMPLATE: PATIENT-3 and French born BRIDGE-1 , are PATIENT-1 of AGENT-1 Asterix , also know as PATIENT-2 .
+CORRECT: PATIENT-3 and PATIENT-1 BRIDGE-1 , are the creators of AGENT-1 , also know as PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id32 4 ComicsCharacter
+
+TRIPLES
+Paris_Cullins | nationality | United_States
+Bolt_(comicsCharacter) | creator | Paris_Cullins
+Bolt_(comicsCharacter) | creator | Ernie_Colón
+Bolt_(comicsCharacter) | alternativeName | "Larry Bolatinsky"
+
+
+ENTITY MAP
+BRIDGE-1 | Paris_Cullins
+AGENT-1 | Bolt_(comicsCharacter)
+PATIENT-1 | United_States
+PATIENT-3 | "Larry Bolatinsky"
+PATIENT-2 | Ernie_Colón
+
+
+LEX
+Id1
+TEXT: Larry Bolatinsky is the alternative name for the comic book character Bolt, which was created by Ernie Colon and the American Paris Cullins.
+TEMPLATE: PATIENT-3 is the alternative name for AGENT-1 , which was created by PATIENT-1 and American BRIDGE-1 .
+CORRECT: PATIENT-3 is the alternative name for AGENT-1 , which was created by PATIENT-2 and PATIENT-1 BRIDGE-1 .
+COMMENT:
+-
+Id2
+TEXT: Ernie Colon and the US national Paris Cullins created the comic character of Bolt, who has the alternative name of Larry Bolatinsky.
+TEMPLATE: PATIENT-1 and national BRIDGE-1 created AGENT-1 of Bolt , who has the alternative name of PATIENT-3 .
+CORRECT:
+COMMENT: wrong
+-
+Id3
+TEXT: Ernie Colón and the American Paris Cullins were among the creators of the comic book character Bolt, also known as Larry Bolatinsky.
+TEMPLATE: PATIENT-2 and American BRIDGE-1 were among PATIENT-1 of AGENT-1 , also known as PATIENT-3 .
+CORRECT: PATIENT-2 and PATIENT-1 BRIDGE-1 were among the creators of AGENT-1 , also known as PATIENT-3 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id31 4 ComicsCharacter
+
+TRIPLES
+Paris_Cullins | nationality | United_States
+Bolt_(comicsCharacter) | creator | Gary_Cohn_(comics)
+Bolt_(comicsCharacter) | creator | Paris_Cullins
+Bolt_(comicsCharacter) | alternativeName | "Larry Bolatinsky"
+
+
+ENTITY MAP
+BRIDGE-1 | Paris_Cullins
+AGENT-1 | Bolt_(comicsCharacter)
+PATIENT-1 | United_States
+PATIENT-3 | "Larry Bolatinsky"
+PATIENT-2 | Gary_Cohn_(comics)
+
+
+LEX
+Id1
+TEXT: The US national, Paris Cullins along with comic book writer, Gary Cohn created the comic character of Bolt. The character has the alternative name of Larry Bolatinsky,.
+TEMPLATE: PATIENT-1 , BRIDGE-1 along with comic book writer , PATIENT-2 created AGENT-1 of Bolt . The character has the alternative name of PATIENT-3 , .
+CORRECT: PATIENT-1 , BRIDGE-1 along with PATIENT-2 created AGENT-1 . AGENT-1 has the alternative name of PATIENT-3 , .
+COMMENT: prepositional phrase
+-
+Id2
+TEXT: The comic character Bolt , or otherwise known as Larry Bolatinsky, was created by both Gary Cohn and U.S national Paris Cullins.
+TEMPLATE: AGENT-1 , or otherwise known as PATIENT-3 , was created by both PATIENT-2 and national BRIDGE-1 .
+CORRECT: AGENT-1 , or otherwise known as PATIENT-3 , was created by both PATIENT-2 and PATIENT-1 BRIDGE-1 .
+COMMENT:
+-
+Id3
+TEXT: Bolt, also known as Larry Bolatinsky, is a comic book character created by Gary Cohn and the United States national Paris Cullins.
+TEMPLATE: Bolt , also known as PATIENT-3 , is AGENT-1 created by PATIENT-2 and PATIENT-1 national BRIDGE-1 .
+CORRECT: AGENT-1 , also known as PATIENT-3 , is a comic book character created by PATIENT-2 and PATIENT-1 national BRIDGE-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id30 4 ComicsCharacter
+
+TRIPLES
+Paris_Cullins | nationality | United_States
+Bolt_(comicsCharacter) | creator | Dan_Mishkin
+Bolt_(comicsCharacter) | creator | Paris_Cullins
+Bolt_(comicsCharacter) | alternativeName | "Larry Bolatinsky"
+
+
+ENTITY MAP
+BRIDGE-1 | Paris_Cullins
+AGENT-1 | Bolt_(comicsCharacter)
+PATIENT-1 | United_States
+PATIENT-3 | "Larry Bolatinsky"
+PATIENT-2 | Dan_Mishkin
+
+
+LEX
+Id1
+TEXT: Bolt is a comic character with the alternative name of Larry Bolatinsky. He was created by Dan Mishkin and the US national, Paris Cullins.
+TEMPLATE: Bolt is AGENT-1 with the alternative name of PATIENT-3 . PATIENT-3 was created by PATIENT-2 and PATIENT-1 national , BRIDGE-1 .
+CORRECT: AGENT-1 is a comic character with the alternative name of PATIENT-3 . AGENT-1 was created by PATIENT-2 and PATIENT-1 national , BRIDGE-1 .
+COMMENT: nationality
+-
+Id2
+TEXT: Bolt ( Larry Bolatinsky ) is a comic character which was created by both Dan Mishkin and U.S. national Paris Cullins.
+TEMPLATE: PATIENT-1 (PATIENT-3) is AGENT-1 which was created by both PATIENT-2 and national BRIDGE-1 .
+CORRECT: AGENT-1 (PATIENT-3) is a comic character which was created by both PATIENT-2 and PATIENT-1 BRIDGE-1 .
+COMMENT: nationality
+-
+Id3
+TEXT: The comic book character Bolt also known as Larry Bolatinsky was created by Dan Mishkin and the American Paris Cullins.
+TEMPLATE: AGENT-1 also known as PATIENT-3 was created by PATIENT-2 and American BRIDGE-1 .
+CORRECT: AGENT-1 also known as PATIENT-3 was created by PATIENT-2 and PATIENT-1 BRIDGE-1 .
+COMMENT: nationality
+-
+
+**************************************************
+
+Entry: Id29 4 ComicsCharacter
+
+TRIPLES
+Karl_Kesel | nationality | Americans
+Auron_(comicsCharacter) | fullName | "Lambien"
+Auron_(comicsCharacter) | creator | Karl_Kesel
+Auron_(comicsCharacter) | creator | Walt_Simonson
+
+
+ENTITY MAP
+BRIDGE-1 | Karl_Kesel
+AGENT-1 | Auron_(comicsCharacter)
+PATIENT-1 | Americans
+PATIENT-3 | Walt_Simonson
+PATIENT-2 | "Lambien"
+
+
+LEX
+Id1
+TEXT: The comic character of Auron (whose full name is Lambien) was created by Walt Simonson and the American, Karl Kesel.
+TEMPLATE: AGENT-1 of PATIENT-1 (whose full name is PATIENT-2) was created by PATIENT-3 and , BRIDGE-1 .
+CORRECT: AGENT-1 (whose full name is PATIENT-2) was created by PATIENT-3 and PATIENT-1 , BRIDGE-1 .
+COMMENT: nationality
+-
+Id2
+TEXT: The comic character of Auron has the full name Lambien. He was created by Walt Simonson and the American, Karl Kesel.
+TEMPLATE: AGENT-1 of PATIENT-1 has full PATIENT-2 . AGENT-1 was created by PATIENT-3 and , BRIDGE-1 .
+CORRECT: AGENT-1 has full name PATIENT-2 . AGENT-1 was created by PATIENT-3 and PATIENT-1 , BRIDGE-1 .
+COMMENT: nationality
+-
+Id3
+TEXT: The comic book character Auron, with the full name Lambien, was created by Walt Simonson and Karl Kesel, who is from the United States.
+TEMPLATE: The comic book character Auron , with full PATIENT-2 , was created by PATIENT-3 and BRIDGE-1 , who is from AGENT-1 .
+CORRECT: AGENT-1 , with full name PATIENT-2 , was created by PATIENT-3 and BRIDGE-1 , who is from PATIENT-1 .
+COMMENT: nationality
+-
+
+**************************************************
+
+Entry: Id28 4 ComicsCharacter
+
+TRIPLES
+Karl_Kesel | nationality | Americans
+Auron_(comicsCharacter) | fullName | "Lambien"
+Auron_(comicsCharacter) | creator | Karl_Kesel
+Auron_(comicsCharacter) | creator | Marv_Wolfman
+
+
+ENTITY MAP
+BRIDGE-1 | Karl_Kesel
+AGENT-1 | Auron_(comicsCharacter)
+PATIENT-1 | Americans
+PATIENT-3 | Marv_Wolfman
+PATIENT-2 | "Lambien"
+
+
+LEX
+Id1
+TEXT: The comic character Auron ( Lambien ) was created by both Marv Wolfman and American national Karl Kesel.
+TEMPLATE: AGENT-1 (PATIENT-2) was created by both PATIENT-3 and American national BRIDGE-1 .
+CORRECT: AGENT-1 (PATIENT-2) was created by both PATIENT-3 and PATIENT-1 national BRIDGE-1 .
+COMMENT: nationality
+-
+Id2
+TEXT: Auron ( Lambien ) is a comic character that was created by both Marv Wolfman and American national Karl Kesel.
+TEMPLATE: PATIENT-1 (PATIENT-2) is AGENT-1 that was created by both PATIENT-3 and American national BRIDGE-1 .
+CORRECT: AGENT-1 (PATIENT-2) is a comic character that was created by both PATIENT-3 and PATIENT-1 national BRIDGE-1 .
+COMMENT: nationality
+-
+Id3
+TEXT: Marv Wolfman and the American Karl Kesel are the creators of the comic book character Auron, whose full name is Lambien.
+TEMPLATE: PATIENT-3 and American BRIDGE-1 are the creators of AGENT-1 PATIENT-1 , whose full name is PATIENT-2 .
+CORRECT: PATIENT-3 and PATIENT-1 BRIDGE-1 are the creators of AGENT-1 , whose full name is PATIENT-2 .
+COMMENT: nationality
+-
+
+**************************************************
+
+Entry: Id27 4 ComicsCharacter
+
+TRIPLES
+Jerry_Ordway | nationality | Americans
+Bibbo_Bibbowski | fullName | "Bo Bibbowski"
+Bibbo_Bibbowski | creator | Jerry_Ordway
+Bibbo_Bibbowski | creator | Marv_Wolfman
+
+
+ENTITY MAP
+BRIDGE-1 | Jerry_Ordway
+AGENT-1 | Bibbo_Bibbowski
+PATIENT-1 | Americans
+PATIENT-3 | Marv_Wolfman
+PATIENT-2 | "Bo Bibbowski"
+
+
+LEX
+Id1
+TEXT: Bibbo Bibbowski is the full name of Bo Bibbowski created by Marv Wolfman and the American, Jerry Ordway.
+TEMPLATE: AGENT-1 is PATIENT-1 of PATIENT-2 created by PATIENT-3 and , BRIDGE-1 .
+CORRECT: AGENT-1 is the full name of PATIENT-2 created by PATIENT-3 and PATIENT-1 , BRIDGE-1 .
+COMMENT: nationality
+-
+Id2
+TEXT: Bo (full name Bibbo) Bibbowski was created by Marv Wolfman and the American, Jerry Ordway.
+TEMPLATE: Bo (PATIENT-1 Bibbo) AGENT-1 was created by PATIENT-3 and , BRIDGE-1 .
+CORRECT: Bo (full name Bibbo) AGENT-1 was created by PATIENT-3 and PATIENT-1 , BRIDGE-1 .
+COMMENT: wrong
+-
+Id3
+TEXT: Marv Wolfman and the American, Jerry Ordway created Bo (full name Bibbo) Bibbowski.
+TEMPLATE: PATIENT-3 and , BRIDGE-1 created Bo (full name Bibbo) AGENT-1 .
+CORRECT: PATIENT-3 and PATIENT-1 , BRIDGE-1 created Bo (full name Bibbo) AGENT-1 .
+COMMENT: wrong
+-
+
+**************************************************
+
+Entry: Id26 4 ComicsCharacter
+
+TRIPLES
+Duncan_Rouleau | nationality | Americans
+Baymax | creator | Duncan_Rouleau
+Big_Hero_6_(film) | starring | Alan_Tudyk
+Baymax | series | Big_Hero_6_(film)
+
+
+ENTITY MAP
+BRIDGE-1 | Duncan_Rouleau
+BRIDGE-2 | Big_Hero_6_(film)
+PATIENT-1 | Americans
+AGENT-1 | Baymax
+PATIENT-2 | Alan_Tudyk
+
+
+LEX
+Id1
+TEXT: Alan Tukyk stars in the film, Big Hero 6 in which Baymax, created by the American Duncan Rouleau, is also a character.
+TEMPLATE: PATIENT-2 stars in PATIENT-1 , BRIDGE-2 in which AGENT-1 , created by American BRIDGE-1 , is also a character .
+CORRECT: PATIENT-2 in BRIDGE-2 in which AGENT-1 , created by PATIENT-1 BRIDGE-1 , is also a character .
+COMMENT: nationality
+-
+Id2
+TEXT: The American, Duncan Rouleau created the character of Baymax who appeared in the film Big Hero 6 which starred Alan Tudyk.
+TEMPLATE: , BRIDGE-1 created the character of AGENT-1 who appeared in PATIENT-1 BRIDGE-2 6 which starred PATIENT-2 .
+CORRECT: PATIENT-1 , BRIDGE-1 created the character of AGENT-1 who appeared in BRIDGE-2 which starred PATIENT-2 .
+COMMENT: nationality
+-
+Id3
+TEXT: American national Duncan Rouleau is the creator of the character Baymax, which featured in the film Big Hero 6 ( starring Alan Tudyk ).
+TEMPLATE: American national BRIDGE-1 is BRIDGE-2 of AGENT-1 , which featured in the film Big Hero 6 (starring PATIENT-2) .
+CORRECT: PATIENT-1 BRIDGE-1 is the creator of AGENT-1 , which featured in BRIDGE-2 (starring PATIENT-2) .
+COMMENT: nationality
+-
+
+**************************************************
+
+Entry: Id25 4 ComicsCharacter
+
+TRIPLES
+Duncan_Rouleau | nationality | Americans
+Baymax | creator | Duncan_Rouleau
+Baymax | series | Big_Hero_6_(film)
+Big_Hero_6_(film) | starring | Scott_Adsit
+
+
+ENTITY MAP
+BRIDGE-1 | Duncan_Rouleau
+AGENT-1 | Baymax
+PATIENT-1 | Americans
+BRIDGE-2 | Big_Hero_6_(film)
+PATIENT-2 | Scott_Adsit
+
+
+LEX
+Id1
+TEXT: Baymax is a character in Big Hero 6 which starred Scott Adsit. The creator of Baymax is the American, Duncan Rouleau.
+TEMPLATE: AGENT-1 is a character in BRIDGE-2 which starred PATIENT-2 . The creator of AGENT-1 is PATIENT-1 , BRIDGE-1 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Baymax is a character in the film Big Hero 6 which star's Scott Adsit. The creator of this character is American national, Duncan Rouleau.
+TEMPLATE: AGENT-1 is a character in BRIDGE-2 6 which star 's PATIENT-2 . PATIENT-1 of this character is American national , BRIDGE-1 .
+CORRECT: AGENT-1 is a character in BRIDGE-2 which star 's PATIENT-2 . The creator of AGENT-1 is PATIENT-1 , BRIDGE-1 .
+COMMENT:
+-
+Id3
+TEXT: The American, Duncan Rouleau created the character of Baymax which appeared in the film Big Hero 6 alongside the star of the film, Scott Adsit.
+TEMPLATE: , BRIDGE-1 created the character of AGENT-1 which appeared in BRIDGE-2 Big Hero 6 alongside PATIENT-1 of BRIDGE-2 , PATIENT-2 .
+CORRECT: PATIENT-1 , BRIDGE-1 created AGENT-1 which appeared in BRIDGE-2 alongside the star of BRIDGE-2 , PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id24 4 ComicsCharacter
+
+TRIPLES
+Duncan_Rouleau | nationality | Americans
+Baymax | creator | Duncan_Rouleau
+Baymax | creator | Steven_T._Seagle
+Baymax | voice | Scott_Adsit
+
+
+ENTITY MAP
+BRIDGE-1 | Duncan_Rouleau
+AGENT-1 | Baymax
+PATIENT-1 | Americans
+PATIENT-3 | Scott_Adsit
+PATIENT-2 | Steven_T._Seagle
+
+
+LEX
+Id1
+TEXT: The character Baymax, created by Steve T Seagle and the American Duncan Rouleau, is voiced by Scott Adsit.
+TEMPLATE: AGENT-1 , created by PATIENT-2 and American BRIDGE-1 , is voiced by PATIENT-3 .
+CORRECT: AGENT-1 , created by PATIENT-2 and PATIENT-1 BRIDGE-1 , is voiced by PATIENT-3 .
+COMMENT:
+-
+Id2
+TEXT: Scott Adsit provides the voice for Baymax who was created by Steven T Seagle and the American, Duncan Rouleau.
+TEMPLATE: PATIENT-3 provides PATIENT-1 for AGENT-1 who was created by PATIENT-2 and , BRIDGE-1 .
+CORRECT: PATIENT-3 provides the voice for AGENT-1 who was created by PATIENT-2 and PATIENT-1 , BRIDGE-1 .
+COMMENT: nationality
+-
+Id3
+TEXT: Scott Adsit provides the voice for the character Baymax who was created by Steven T Seagle and the American, Duncan Rouleau.
+TEMPLATE: PATIENT-3 provides PATIENT-1 for AGENT-1 who was created by PATIENT-2 and , BRIDGE-1 .
+CORRECT: PATIENT-3 provides the voice for AGENT-1 who was created by PATIENT-2 and PATIENT-1 , BRIDGE-1 .
+COMMENT: nationality
+-
+
+**************************************************
+
+Entry: Id23 4 ComicsCharacter
+
+TRIPLES
+Duncan_Rouleau | nationality | Americans
+Baymax | creator | Duncan_Rouleau
+Baymax | creator | Steven_T._Seagle
+Baymax | series | Big_Hero_6_(film)
+
+
+ENTITY MAP
+BRIDGE-1 | Duncan_Rouleau
+AGENT-1 | Baymax
+PATIENT-1 | Americans
+PATIENT-3 | Big_Hero_6_(film)
+PATIENT-2 | Steven_T._Seagle
+
+
+LEX
+Id1
+TEXT: Baymax is a character from Big Hero 6, who was created by American born Duncan Rouleau and Steven T. Seagle.
+TEMPLATE: AGENT-1 is PATIENT-1 from PATIENT-3 , who was created by American born BRIDGE-1 and PATIENT-2 .
+CORRECT: AGENT-1 is a character from PATIENT-3 , who was created by PATIENT-1 born BRIDGE-1 and PATIENT-2 .
+COMMENT: nationality
+-
+Id2
+TEXT: Baymax, a character in Big Hero 6, was created by Steven T Seagle and the American, Duncan Rouleau.
+TEMPLATE: AGENT-1 , a character in PATIENT-3 6 , was created by PATIENT-2 and , BRIDGE-1 .
+CORRECT: AGENT-1 , a character in PATIENT-3 , was created by PATIENT-2 and PATIENT-1 , BRIDGE-1 .
+COMMENT: nationality
+-
+Id3
+TEXT: Baymax, created by Steven T Seagle and the American Duncan Rouleau, is a character in Big Hero 6.
+TEMPLATE: AGENT-1 , created by PATIENT-2 and American BRIDGE-1 , is a character in PATIENT-3 .
+CORRECT: AGENT-1 , created by PATIENT-2 and PATIENT-1 BRIDGE-1 , is a character in PATIENT-3 .
+COMMENT: nationality
+-
+
+**************************************************
+
+Entry: Id22 4 ComicsCharacter
+
+TRIPLES
+Bolt_(comicsCharacter) | creator | Paris_Cullins
+Ernie_Colón | nationality | Puerto_Ricans
+Bolt_(comicsCharacter) | creator | Ernie_Colón
+Bolt_(comicsCharacter) | alternativeName | "Larry Bolatinsky"
+
+
+ENTITY MAP
+BRIDGE-1 | Ernie_Colón
+AGENT-1 | Bolt_(comicsCharacter)
+PATIENT-1 | Paris_Cullins
+PATIENT-3 | "Larry Bolatinsky"
+PATIENT-2 | Puerto_Ricans
+
+
+LEX
+Id1
+TEXT: Bolt (Larry Bolatinsky) is a comic character that was created by both Paris Cullins and Ernie Colon who is a national of Puerto Rico.
+TEMPLATE: Bolt (PATIENT-3) is AGENT-1 that was created by both PATIENT-1 and BRIDGE-1 who is a national of PATIENT-2 .
+CORRECT: AGENT-1 (PATIENT-3) is a comic character that was created by both PATIENT-1 and BRIDGE-1 who is a national of PATIENT-2 .
+COMMENT:
+-
+Id2
+TEXT: Bolt is a comic character otherwise know as Larry Bolatinsky. He was created by Paris Cullins and Ernie Colon ( national of Puerto Rico ).
+TEMPLATE: Bolt is AGENT-1 otherwise know as PATIENT-3 . PATIENT-3 was created by PATIENT-1 and Ernie Colon (BRIDGE-1 of PATIENT-2) .
+CORRECT: AGENT-1 is a comic character otherwise know as PATIENT-3 . AGENT-1 was created by PATIENT-1 and BRIDGE-1 ( national of PATIENT-2 ) .
+COMMENT:
+-
+Id3
+TEXT: The character Bolt, also known as Larry Bolatinsky, was created by Paris Cullins and Ernie Colon, a puerto Rican National.
+TEMPLATE: AGENT-1 , also known as PATIENT-3 , was created by PATIENT-1 and Ernie Colon , PATIENT-2 .
+CORRECT: AGENT-1 , also known as PATIENT-3 , was created by PATIENT-1 and BRIDGE-1 , PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id21 4 ComicsCharacter
+
+TRIPLES
+Baymax | series | Big_Hero_6_(film)
+Baymax | voice | Scott_Adsit
+Baymax | creator | Duncan_Rouleau
+Baymax | creator | Steven_T._Seagle
+
+
+ENTITY MAP
+PATIENT-4 | Steven_T._Seagle
+AGENT-1 | Baymax
+PATIENT-1 | Big_Hero_6_(film)
+PATIENT-3 | Duncan_Rouleau
+PATIENT-2 | Scott_Adsit
+
+
+LEX
+Id1
+TEXT: Baymax, the Big Hero 6 character created by Steve T Seagle and Duncan Rouleau, is voiced by Scott Adsit.
+TEMPLATE: AGENT-1 , PATIENT-1 created by PATIENT-4 and PATIENT-3 , is voiced by PATIENT-2 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Duncan Rouleau and Steven T. Seagle are both creators of the character Baymax which featured in the film Big Hero 6. The voice of this character in the film was provided by Scott Adsit.
+TEMPLATE: PATIENT-3 and PATIENT-4 are both creators of AGENT-1 which featured in PATIENT-1 Big Hero 6 . The voice of this character in PATIENT-1 was provided by PATIENT-2 .
+CORRECT: PATIENT-3 and PATIENT-4 are both creators of AGENT-1 which featured in PATIENT-1 . The voice of AGENT-1 in PATIENT-1 was provided by PATIENT-2 .
+COMMENT:
+-
+Id3
+TEXT: Duncan Rouleau and Steven T. Seagle are both creators of Baymax which featured in the film Big Hero 6. The voice of Baymax was provided by Scott Adsit.
+TEMPLATE: PATIENT-3 and PATIENT-4 are both creators of AGENT-1 which featured in the film Big Hero 6 . PATIENT-1 of AGENT-1 was provided by PATIENT-2 .
+CORRECT: PATIENT-3 and PATIENT-4 are both creators of AGENT-1 which featured in PATIENT-1 . The voice of AGENT-1 was provided by PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id20 4 ComicsCharacter
+
+TRIPLES
+Baymax | series | Big_Hero_6_(film)
+Baymax | creator | Duncan_Rouleau
+Baymax | firstAppearanceInFilm | Big_Hero_6_(film)
+Baymax | creator | Steven_T._Seagle
+
+
+ENTITY MAP
+AGENT-1 | Baymax
+PATIENT-1 | Big_Hero_6_(film)
+PATIENT-3 | Steven_T._Seagle
+PATIENT-2 | Duncan_Rouleau
+
+
+LEX
+Id1
+TEXT: Baymax is a character created by Duncan Rouleau and Steve T. Seagle which first appeared in the film " Big Hero 6".
+TEMPLATE: AGENT-1 is a character created by PATIENT-2 and PATIENT-3 which first appeared in '' PATIENT-1 6 '' .
+CORRECT: AGENT-1 is a character created by PATIENT-2 and PATIENT-3 which first appeared in '' PATIENT-1 '' .
+COMMENT:
+-
+Id2
+TEXT: Baymax is a character who first appeared in the film Big Hero 6. It was created by Steven T Seagle and Duncan Rouleau.
+TEMPLATE: AGENT-1 is a character who first appeared in the film Big Hero 6 . AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+CORRECT: AGENT-1 is a character who first appeared in PATIENT-1 . AGENT-1 was created by PATIENT-3 and PATIENT-2 .
+COMMENT:
+-
+Id3
+TEXT: Steven T Seagle and Duncan Rouleau created the character Baymax, which first appeared in the movie Big Hero 6.
+TEMPLATE: PATIENT-1 and PATIENT-2 created AGENT-1 , which first appeared in the movie Big Hero 6 .
+CORRECT: PATIENT-3 and PATIENT-2 created AGENT-1 , which first appeared in PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id19 4 ComicsCharacter
+
+TRIPLES
+Baymax | firstAppearanceInFilm | Big_Hero_6_(film)
+Duncan_Rouleau | nationality | Americans
+Baymax | creator | Duncan_Rouleau
+Baymax | creator | Steven_T._Seagle
+
+
+ENTITY MAP
+BRIDGE-1 | Duncan_Rouleau
+AGENT-1 | Baymax
+PATIENT-1 | Big_Hero_6_(film)
+PATIENT-3 | Steven_T._Seagle
+PATIENT-2 | Americans
+
+
+LEX
+Id1
+TEXT: The character Baymax, created by Steve T Seagle and the American Duncan Rouleau, first appeared in the film Big Hero 6.
+TEMPLATE: AGENT-1 , created by PATIENT-1 and American BRIDGE-1 , first appeared in the film Big Hero 6 .
+CORRECT: AGENT-1 , created by PATIENT-3 and PATIENT-2 BRIDGE-1 , first appeared in PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Baymax first appeared in the film Big Hero 6 and was created by Steven T Seagle and the American, Duncan Rouleau.
+TEMPLATE: AGENT-1 first appeared in PATIENT-2 PATIENT-1 6 and was created by PATIENT-3 and , BRIDGE-1 .
+CORRECT: AGENT-1 first appeared in PATIENT-1 and was created by PATIENT-3 and PATIENT-2 , BRIDGE-1 .
+COMMENT:
+-
+Id3
+TEXT: Big hero 6 was the first appearance for Baymax, created by American Duncan Rouleau and Steven T. Seagle.
+TEMPLATE: PATIENT-1 was the first appearance for AGENT-1 , created by American BRIDGE-1 and PATIENT-3 .
+CORRECT: PATIENT-1 was the first appearance for AGENT-1 , created by PATIENT-2 BRIDGE-1 and PATIENT-3 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id18 4 ComicsCharacter
+
+TRIPLES
+Baymax | firstAppearanceInFilm | Big_Hero_6_(film)
+Baymax | voice | Scott_Adsit
+Baymax | creator | Duncan_Rouleau
+Baymax | creator | Steven_T._Seagle
+
+
+ENTITY MAP
+PATIENT-4 | Steven_T._Seagle
+AGENT-1 | Baymax
+PATIENT-1 | Big_Hero_6_(film)
+PATIENT-3 | Duncan_Rouleau
+PATIENT-2 | Scott_Adsit
+
+
+LEX
+Id1
+TEXT: The character Baymax first appeared in the film Big Hero 6 and is voiced by Scott Adsit. It was created by Duncan Rouleau and Steve T Seagle.
+TEMPLATE: AGENT-1 first appeared in PATIENT-1 6 and is voiced by PATIENT-2 . AGENT-1 was created by PATIENT-3 and PATIENT-4 .
+CORRECT: AGENT-1 first appeared in PATIENT-1 and is voiced by PATIENT-2 . AGENT-1 was created by PATIENT-3 and PATIENT-4 .
+COMMENT:
+-
+Id2
+TEXT: Duncan Rouleau and Steven T Seagle created the character of Baymax who first appeared in the film Big Hero 6 and is voiced by Scott Adsit.
+TEMPLATE: PATIENT-3 and PATIENT-4 created the character of AGENT-1 who first appeared in PATIENT-1 6 and is voiced by PATIENT-2 .
+CORRECT: PATIENT-3 and PATIENT-4 created the character of AGENT-1 who first appeared in PATIENT-1 and is voiced by PATIENT-2 .
+COMMENT:
+-
+Id3
+TEXT: Baymax, voiced by Scott Adsit and created by Duncan Roulean and Steven T. Seagle first appeared in the film Big Hero 6.
+TEMPLATE: AGENT-1 , voiced by PATIENT-2 and created by PATIENT-3 and PATIENT-4 first appeared in PATIENT-1 6 .
+CORRECT: AGENT-1 , voiced by PATIENT-2 and created by PATIENT-3 and PATIENT-4 first appeared in PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id17 4 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Tim_Brooke-Taylor
+Bananaman | broadcastedBy | BBC
+Bananaman | creator | Steve_Bright
+Bananaman | firstAired | "1983-10-03"
+
+
+ENTITY MAP
+PATIENT-4 | "1983-10-03"
+AGENT-1 | Bananaman
+PATIENT-1 | Tim_Brooke-Taylor
+PATIENT-3 | Steve_Bright
+PATIENT-2 | BBC
+
+
+LEX
+Id1
+TEXT: Bananaman was created by Steve Bright and starred Tim Brooke-Taylor. It was first aired on 3 October 1983, being broadcast by the BBC.
+TEMPLATE: AGENT-1 was created by PATIENT-3 and starred PATIENT-1 . It was first aired on PATIENT-4 , being broadcast by PATIENT-2 .
+CORRECT: AGENT-1 was created by PATIENT-3 and starred PATIENT-1 . AGENT-1 was first aired on PATIENT-4 , being broadcast by PATIENT-2 .
+COMMENT: coreference
+-
+Id2
+TEXT: Bananaman (created by Steve Bright ) was first broadcasted by the BBC on the 10/03/1983, and starred Tim Brooke-Taylor.
+TEMPLATE: AGENT-1 (created by PATIENT-3) was first broadcasted by PATIENT-2 on PATIENT-4 , and starred PATIENT-1 .
+CORRECT:
+COMMENT: good
+-
+Id3
+TEXT: Tim Brooke Taylor starred in Bananaman which was created by Steve Bright. It was broadcast by the BBC and first aired on 3 October 1983.
+TEMPLATE: PATIENT-1 starred in AGENT-1 which was created by PATIENT-3 . PATIENT-3 was broadcast by PATIENT-2 and first aired on PATIENT-4 .
+CORRECT: PATIENT-1 starred in AGENT-1 which was created by PATIENT-3 . AGENT-1 was broadcast by PATIENT-2 and first aired on PATIENT-4 .
+COMMENT: coreference
+-
+
+**************************************************
+
+Entry: Id16 4 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Tim_Brooke-Taylor
+Bananaman | broadcastedBy | BBC
+Bananaman | creator | John_Geering
+Bananaman | firstAired | "1983-10-03"
+
+
+ENTITY MAP
+PATIENT-4 | "1983-10-03"
+AGENT-1 | Bananaman
+PATIENT-1 | Tim_Brooke-Taylor
+PATIENT-3 | John_Geering
+PATIENT-2 | BBC
+
+
+LEX
+Id1
+TEXT: Tim Brooke-Taylor starred in Bananaman which was created by John Geering. It was first broadcast by the BBC on 3 October 1983.
+TEMPLATE: PATIENT-1 starred in AGENT-1 which was created by PATIENT-3 . PATIENT-3 was first broadcast by PATIENT-2 on PATIENT-4 .
+CORRECT: PATIENT-1 starred in AGENT-1 which was created by PATIENT-3 . AGENT-1 was first broadcast by PATIENT-2 on PATIENT-4 .
+COMMENT: coreference
+-
+Id2
+TEXT: Bananaman was first aired on 10/03/1983 and was broadcast by the BBC. Tim Brooke-Taylor starred in the show, which was created by John Geering.
+TEMPLATE: AGENT-1 was first aired on PATIENT-4 and was broadcast by PATIENT-2 . PATIENT-1 starred in the show , which was created by PATIENT-3 .
+CORRECT:
+COMMENT: good
+-
+Id3
+TEXT: The fictional comic superhero Bananaman was created by John Geering and starred Tim Brooke-taylor. It was first broadcast on 3 October 1983 by the BBC.
+TEMPLATE: fictional comic AGENT-1 was created by PATIENT-3 and starred PATIENT-1 . AGENT-1 was first broadcast on PATIENT-4 by PATIENT-2 .
+CORRECT: AGENT-1 was created by PATIENT-3 and starred PATIENT-1 . AGENT-1 was first broadcast on PATIENT-4 by PATIENT-2 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id15 4 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Graeme_Garden
+Graeme_Garden | birthPlace | Aberdeen
+Bananaman | broadcastedBy | BBC
+BBC | locationCity | Broadcasting_House
+
+
+ENTITY MAP
+BRIDGE-1 | Graeme_Garden
+AGENT-1 | Bananaman
+PATIENT-1 | Aberdeen
+BRIDGE-2 | BBC
+PATIENT-2 | Broadcasting_House
+
+
+LEX
+Id1
+TEXT: Aberdeen born Graeme Garden starred in Bananaman, which was broadcast by the BBC, whose headquarters are called Broadcasting House.
+TEMPLATE: PATIENT-1 born BRIDGE-1 starred in AGENT-1 , which was broadcast by BRIDGE-2 , whose headquarters are called PATIENT-2 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Aberdeen born Graeme Garden starred in the tv series " Bananaman " . The series was shown on the BBC which is based in the broadcasting house in London.
+TEMPLATE: PATIENT-1 born BRIDGE-1 starred in the tv series '' AGENT-1 '' . The series was shown on BRIDGE-2 which is based in PATIENT-2 in London .
+CORRECT: PATIENT-1 born BRIDGE-1 starred in AGENT-1 . AGENT-1 was shown on BRIDGE-2 which is based in PATIENT-2 .
+COMMENT: description
+-
+Id3
+TEXT: The BBC, based in Broadcasting House, London, showed the TV series Bananaman. This show starred Aberdeen born Graeme Garden.
+TEMPLATE: BRIDGE-2 , based in PATIENT-2 , London , showed AGENT-1 . This show starred PATIENT-1 born BRIDGE-1 .
+CORRECT: BRIDGE-2 , based in PATIENT-2 , showed AGENT-1 . AGENT-1 starred PATIENT-1 born BRIDGE-1 .
+COMMENT: description
+-
+
+**************************************************
+
+Entry: Id14 4 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Bill_Oddie
+Bananaman | broadcastedBy | BBC
+Bill_Oddie | birthPlace | Rochdale
+BBC | locationCity | London
+
+
+ENTITY MAP
+BRIDGE-1 | Bill_Oddie
+AGENT-1 | Bananaman
+PATIENT-1 | Rochdale
+BRIDGE-2 | BBC
+PATIENT-2 | London
+
+
+LEX
+Id1
+TEXT: Bananaman the TV series was shown on the BBC (London) and starred Bill Oddie, who was born in Rochdale.
+TEMPLATE: AGENT-1 the TV series was shown on BRIDGE-2 (PATIENT-2) and starred BRIDGE-1 , who was born in PATIENT-1 .
+CORRECT: AGENT-1 was shown on BRIDGE-2 (PATIENT-2) and starred BRIDGE-1 , who was born in PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: The BBC, which is located in London, showed the TV series Bananaman. It starred Bill Oddie who was born in Rochdale.
+TEMPLATE: BRIDGE-2 , which is located in PATIENT-2 , showed AGENT-1 . BRIDGE-2 starred BRIDGE-1 who was born in PATIENT-1 .
+CORRECT: BRIDGE-2 , which is located in PATIENT-2 , showed AGENT-1 . AGENT-1 starred BRIDGE-1 who was born in PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: Bananaman is a tv series which starred Rochdale born Bill Oddie. The series was shown on the BBC which is located in the city of London.
+TEMPLATE: AGENT-1 is a tv series which starred PATIENT-1 born BRIDGE-1 . The series was shown on BRIDGE-2 which is located in the city of PATIENT-2 .
+CORRECT: AGENT-1 is a tv series which starred PATIENT-1 born BRIDGE-1 . AGENT-1 was shown on BRIDGE-2 which is located in PATIENT-2 .
+COMMENT: description
+-
+
+**************************************************
+
+Entry: Id13 4 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Bill_Oddie
+Bananaman | broadcastedBy | BBC
+Bill_Oddie | birthPlace | Rochdale
+BBC | locationCity | Broadcasting_House
+
+
+ENTITY MAP
+BRIDGE-1 | Bill_Oddie
+AGENT-1 | Bananaman
+PATIENT-1 | Rochdale
+BRIDGE-2 | BBC
+PATIENT-2 | Broadcasting_House
+
+
+LEX
+Id1
+TEXT: Rochdale born Bill Oddie starred in the TV series Bananaman. This show was broadcast by the BBC, which has its headquarters in Broadcasting House.
+TEMPLATE: PATIENT-1 born BRIDGE-1 starred in AGENT-1 . This show was broadcast by BRIDGE-2 , which has AGENT-1 headquarters in PATIENT-2 .
+CORRECT: PATIENT-1 born BRIDGE-1 starred in AGENT-1 . AGENT-1 was broadcast by BRIDGE-2 , which has BRIDGE-2 headquarters in PATIENT-2 .
+COMMENT: coreference
+-
+Id2
+TEXT: The BBC broadcast Bananaman, which starred Rochdale born Bill Oddie. The BBC headquarters is called Broadcasting House.
+TEMPLATE: BRIDGE-2 AGENT-1 , which starred PATIENT-1 born BRIDGE-1 . The BRIDGE-2 headquarters is called PATIENT-2 .
+CORRECT: The BRIDGE-2 broadcast AGENT-1 , which starred PATIENT-1 born BRIDGE-1 . The BRIDGE-2 headquarters is called PATIENT-2 .
+COMMENT:
+-
+Id3
+TEXT: Rochdale born Bill Oddie starred in Bananaman which was a TV series shown on the BBC, based at Broadcasting House in London.
+TEMPLATE: PATIENT-1 born BRIDGE-1 starred in AGENT-1 which was a TV series shown on BRIDGE-2 , based at PATIENT-2 in London .
+CORRECT: PATIENT-1 born BRIDGE-1 starred in AGENT-1 which was a TV series shown on BRIDGE-2 , based at PATIENT-2 .
+COMMENT: prepositional phrase
+-
+
+**************************************************
+
+Entry: Id12 4 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Bill_Oddie
+Bananaman | broadcastedBy | BBC
+Bill_Oddie | birthPlace | Lancashire
+BBC | locationCity | London
+
+
+ENTITY MAP
+BRIDGE-1 | Bill_Oddie
+AGENT-1 | Bananaman
+PATIENT-1 | Lancashire
+BRIDGE-2 | BBC
+PATIENT-2 | London
+
+
+LEX
+Id1
+TEXT: Lancashire born Bill Oddie starred in Bananaman. It was broadcast by the BBC located in London.
+TEMPLATE: PATIENT-1 born BRIDGE-1 starred in AGENT-1 . PATIENT-1 was broadcast by BRIDGE-2 located in PATIENT-2 .
+CORRECT: PATIENT-1 born BRIDGE-1 starred in AGENT-1 . AGENT-1 was broadcast by BRIDGE-2 located in PATIENT-2 .
+COMMENT: coreference
+-
+Id2
+TEXT: Bananaman, that starred Lancashire born Bill Oddie, is broadcast by the BBC which is located in London.
+TEMPLATE: AGENT-1 , that starred PATIENT-1 born BRIDGE-1 , is broadcast by BRIDGE-2 which is located in PATIENT-2 .
+CORRECT:
+COMMENT: good
+-
+Id3
+TEXT: Lancashire born Bill Oddie starred in the TV series Bananaman. It was shown by the BBC who are located in London.
+TEMPLATE: PATIENT-1 born BRIDGE-1 starred in AGENT-1 . PATIENT-1 was shown by BRIDGE-2 who are located in PATIENT-2 .
+CORRECT: PATIENT-1 born BRIDGE-1 starred in AGENT-1 . AGENT-1 was shown by BRIDGE-2 who are located in PATIENT-2 .
+COMMENT: coreference
+-
+
+**************************************************
+
+Entry: Id11 4 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Bill_Oddie
+Bananaman | broadcastedBy | BBC
+Bill_Oddie | birthPlace | Lancashire
+BBC | locationCity | Broadcasting_House
+
+
+ENTITY MAP
+BRIDGE-1 | Bill_Oddie
+AGENT-1 | Bananaman
+PATIENT-1 | Lancashire
+BRIDGE-2 | BBC
+PATIENT-2 | Broadcasting_House
+
+
+LEX
+Id1
+TEXT: Lancashire born Bill Oddie was the star of Bananaman, broadcasted by the BBC out of the broadcasting house in London.
+TEMPLATE: PATIENT-1 born BRIDGE-1 was the star of AGENT-1 , broadcasted by BRIDGE-2 out of PATIENT-2 in London .
+CORRECT: PATIENT-1 born BRIDGE-1 was the star of AGENT-1 , broadcasted by BRIDGE-2 out of PATIENT-2 .
+COMMENT: prepositional phrase
+-
+
+**************************************************
+
+Entry: Id10 4 ComicsCharacter
+
+TRIPLES
+Bananaman | broadcastedBy | BBC
+Bananaman | starring | Jill_Shilling
+Bananaman | creator | Steve_Bright
+Bananaman | firstAired | "1983-10-03"
+
+
+ENTITY MAP
+PATIENT-4 | "1983-10-03"
+AGENT-1 | Bananaman
+PATIENT-1 | BBC
+PATIENT-3 | Steve_Bright
+PATIENT-2 | Jill_Shilling
+
+
+LEX
+Id1
+TEXT: Bananaman was first broadcast by the BBC on 3 October 1983. It was created by Steve Bright and starred Jill Shilling.
+TEMPLATE: AGENT-1 was first broadcast by PATIENT-1 on PATIENT-4 . AGENT-1 was created by PATIENT-3 and starred PATIENT-2 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Bananaman, starring Jill Shilling, created by Steve Bright. first aired on the BBC on 3/10/1983.
+TEMPLATE: AGENT-1 , starring PATIENT-2 , created by PATIENT-3 . first aired on PATIENT-1 on PATIENT-4 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id9 4 ComicsCharacter
+
+TRIPLES
+Bananaman | broadcastedBy | BBC
+Bananaman | starring | Jill_Shilling
+Bananaman | creator | John_Geering
+Bananaman | firstAired | "1983-10-03"
+
+
+ENTITY MAP
+PATIENT-4 | "1983-10-03"
+AGENT-1 | Bananaman
+PATIENT-1 | BBC
+PATIENT-3 | John_Geering
+PATIENT-2 | Jill_Shilling
+
+
+LEX
+Id1
+TEXT: John Geering created the TV character Bananaman which was first broadcast by the BBC on 3 October 1983 and starred Jill Shilling.
+TEMPLATE: PATIENT-3 created AGENT-1 which was first broadcast by PATIENT-1 on PATIENT-4 and starred PATIENT-2 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: John Geering created the fictional comic superhero of Bananaman which starred Jill Shilling. It was first aired by the BBC on 3 October 1983.
+TEMPLATE: PATIENT-3 created the fictional comic superhero of AGENT-1 which starred PATIENT-2 . It was first aired by PATIENT-1 on PATIENT-4 .
+CORRECT: PATIENT-3 created AGENT-1 which starred PATIENT-2 . AGENT-1 was first aired by PATIENT-1 on PATIENT-4 .
+COMMENT: modifier - coreference
+-
+
+**************************************************
+
+Entry: Id8 4 ComicsCharacter
+
+TRIPLES
+Bananaman | broadcastedBy | BBC
+Bananaman | creator | Steve_Bright
+Bananaman | starring | Graeme_Garden
+Bananaman | firstAired | "1983-10-03"
+
+
+ENTITY MAP
+PATIENT-4 | "1983-10-03"
+AGENT-1 | Bananaman
+PATIENT-1 | BBC
+PATIENT-3 | Graeme_Garden
+PATIENT-2 | Steve_Bright
+
+
+LEX
+Id1
+TEXT: Bananaman, which was first broadcast by the BBC on 3rd October 1983, was created by Steve Bright and starred Graeme Garden.
+TEMPLATE: AGENT-1 , which was first broadcast by PATIENT-1 on PATIENT-4 , was created by PATIENT-2 and starred PATIENT-3 .
+CORRECT:
+COMMENT: good
+-
+Id2
+TEXT: Steve Bright created Bananaman which was first aired by the BBC on 3 October 1983 and starred Graeme Garden.
+TEMPLATE: PATIENT-2 created AGENT-1 which was first aired by PATIENT-1 on PATIENT-4 and starred PATIENT-3 .
+CORRECT:
+COMMENT: good
+-
+Id3
+TEXT: Bananaman was first aired on 3 October 1983 by the BBC. It was created by Steve Bright and starred Graeme Garden.
+TEMPLATE: AGENT-1 was first aired on PATIENT-4 by PATIENT-1 . AGENT-1 was created by PATIENT-2 and starred PATIENT-3 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id7 4 ComicsCharacter
+
+TRIPLES
+Bananaman | broadcastedBy | BBC
+Bananaman | creator | Steve_Bright
+Bananaman | starring | Bill_Oddie
+Bananaman | firstAired | "1983-10-03"
+
+
+ENTITY MAP
+PATIENT-4 | "1983-10-03"
+AGENT-1 | Bananaman
+PATIENT-1 | BBC
+PATIENT-3 | Bill_Oddie
+PATIENT-2 | Steve_Bright
+
+
+LEX
+Id1
+TEXT: Bill Oddie stars in Bananaman which was created by Steve Bright. It was first broadcast by the BBC on 3 October 1983.
+TEMPLATE: PATIENT-3 stars in AGENT-1 which was created by PATIENT-2 . PATIENT-2 was first broadcast by PATIENT-1 on PATIENT-4 .
+CORRECT: PATIENT-3 stars in AGENT-1 which was created by PATIENT-2 . AGENT-1 was first broadcast by PATIENT-1 on PATIENT-4 .
+COMMENT: coreference
+-
+Id2
+TEXT: Bananaman, created by Steve Bright and starring Bill Oddie, was first broadcast by the BBC on the 3rd October 1983.
+TEMPLATE: AGENT-1 , created by PATIENT-2 and starring PATIENT-3 , was first broadcast by PATIENT-1 on PATIENT-4 .
+CORRECT:
+COMMENT: good
+-
+
+**************************************************
+
+Entry: Id6 4 ComicsCharacter
+
+TRIPLES
+Bananaman | broadcastedBy | BBC
+BBC | product | BBC_Radio
+BBC | locationCity | London
+BBC | foundedBy | John_Reith,_1st_Baron_Reith
+
+
+ENTITY MAP
+BRIDGE-1 | BBC
+AGENT-1 | Bananaman
+PATIENT-1 | BBC_Radio
+PATIENT-3 | John_Reith,_1st_Baron_Reith
+PATIENT-2 | London
+
+
+LEX
+Id1
+TEXT: 1st Baron, John Reith was the founder of the BBC which is located in London and showed the TV series, Bananaman. Another product of the BBC is BBC radio.
+TEMPLATE: 1st Baron , PATIENT-3 was the founder of BRIDGE-1 which is located in PATIENT-2 and showed the TV series , AGENT-1 . Another product of BRIDGE-1 is BRIDGE-1 radio .
+CORRECT: PATIENT-3 was the founder of BRIDGE-1 which is located in PATIENT-2 and showed AGENT-1 . Another product of BRIDGE-1 is PATIENT-1 .
+COMMENT: modifiers
+-
+Id2
+TEXT: Bananaman is broadcast by the BBC, the organisation founded by John Reith, 1st Baron Reith. The BBC is based in London and also produces BBC radio.
+TEMPLATE: AGENT-1 is broadcast by BRIDGE-1 , PATIENT-1 founded by PATIENT-3 . BRIDGE-1 is based in PATIENT-2 and also produces BRIDGE-1 radio .
+CORRECT: AGENT-1 is broadcast by BRIDGE-1 , the organisation founded by PATIENT-3 . BRIDGE-1 is based in PATIENT-2 and also produces PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id5 4 ComicsCharacter
+
+TRIPLES
+Bananaman | broadcastedBy | BBC
+BBC | product | BBC_Radio
+BBC | locationCity | Broadcasting_House
+BBC | foundedBy | John_Reith,_1st_Baron_Reith
+
+
+ENTITY MAP
+BRIDGE-1 | BBC
+AGENT-1 | Bananaman
+PATIENT-1 | BBC_Radio
+PATIENT-3 | John_Reith,_1st_Baron_Reith
+PATIENT-2 | Broadcasting_House
+
+
+LEX
+Id1
+TEXT: John Reith, 1st Baron Reith founded the BBC who have their HQ at Broadcasting House. The BBC broadcast Bananaman and also produce BBC radio.
+TEMPLATE: PATIENT-3 founded BRIDGE-1 who have PATIENT-1 at PATIENT-2 . BRIDGE-1 AGENT-1 and also produce BRIDGE-1 radio .
+CORRECT: PATIENT-3 founded BRIDGE-1 who have BRIDGE-1 HQ at PATIENT-2 . AGENT-1 and also produce PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The BBC, founded by John Reith, 1st Baron Reith, has its headquarters in Broadcasting House. The BBC produces BBC radio and broadcast the TV series Bananaman.
+TEMPLATE: BRIDGE-1 , founded by PATIENT-3 , has PATIENT-1 in PATIENT-2 . BRIDGE-1 produces BRIDGE-1 radio and broadcast AGENT-1 .
+CORRECT: BRIDGE-1 , founded by PATIENT-3 , has BRIDGE-1 headquarters in PATIENT-2 . BRIDGE-1 produces PATIENT-1 and broadcast AGENT-1 .
+COMMENT:
+-
+Id3
+TEXT: The founder of the BBC was 1st Baron John Reith and it is located at Broadcasting House in London. The BBC broadcast Bananaman and also produce BBC radio.
+TEMPLATE: The founder of BRIDGE-1 was PATIENT-3 and BRIDGE-1 is located at PATIENT-2 in PATIENT-1 . BRIDGE-1 AGENT-1 and also produce BRIDGE-1 radio .
+CORRECT: The founder of BRIDGE-1 was PATIENT-3 and BRIDGE-1 is located at PATIENT-2 in PATIENT-1 . AGENT-1 and also produce PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id4 4 ComicsCharacter
+
+TRIPLES
+Balder_(comicsCharacter) | creator | Jack_Kirby
+Jack_Kirby | nationality | Americans
+Balder_(comicsCharacter) | creator | Stan_Lee
+Balder_(comicsCharacter) | alternativeName | "Balder Odinson"
+
+
+ENTITY MAP
+BRIDGE-1 | Jack_Kirby
+AGENT-1 | Balder_(comicsCharacter)
+PATIENT-1 | Americans
+PATIENT-3 | "Balder Odinson"
+PATIENT-2 | Stan_Lee
+
+
+LEX
+Id1
+TEXT: Balder is a comic character created by Stan Lee and the American, Jack Kirby. His alternative name is Balder Odinson.
+TEMPLATE: PATIENT-1 is AGENT-1 created by PATIENT-2 and , BRIDGE-1 . BRIDGE-1 alternative name is PATIENT-3 .
+CORRECT: AGENT-1 is a comic character created by PATIENT-2 and PATIENT-1 , BRIDGE-1 . BRIDGE-1 alternative name is PATIENT-3 .
+COMMENT: nationality
+-
+Id2
+TEXT: The comic character of Balder is also known as "Balder Odinson". It was created by Stan Lee and the American, Jack Kirby.
+TEMPLATE: AGENT-1 of Balder is also known as `` PATIENT-3 '' . PATIENT-1 was created by PATIENT-2 and , BRIDGE-1 .
+CORRECT: AGENT-1 is also known as `` PATIENT-3 '' . AGENT-1 was created by PATIENT-2 and PATIENT-1 , BRIDGE-1 .
+COMMENT: nationality
+-
+Id3
+TEXT: The comic character, Balder has the alternative name of Balder Odinson . It was created by Stan Lee and the American, Jack Kirby.
+TEMPLATE: AGENT-1 , PATIENT-1 has the alternative name of PATIENT-3 . PATIENT-3 was created by PATIENT-2 and , BRIDGE-1 .
+CORRECT: AGENT-1 has the alternative name of PATIENT-3 . AGENT-1 was created by PATIENT-2 and PATIENT-1 , BRIDGE-1 .
+COMMENT: nationality
+-
+
+**************************************************
+
+Entry: Id3 4 ComicsCharacter
+
+TRIPLES
+BBC | keyPerson | Rona_Fairhead
+Bananaman | broadcastedBy | BBC
+BBC | product | BBC_Radio
+BBC | locationCity | London
+
+
+ENTITY MAP
+BRIDGE-1 | BBC
+AGENT-1 | Bananaman
+PATIENT-1 | Rona_Fairhead
+PATIENT-3 | London
+PATIENT-2 | BBC_Radio
+
+
+LEX
+Id1
+TEXT: The BBC, which is located in London, and where Rona Fairhead is a key person, once broadcast Bananaman and has a product called BBC radio.
+TEMPLATE: BRIDGE-1 , which is located in PATIENT-3 , and where PATIENT-1 is a key person , once broadcast AGENT-1 and has PATIENT-2 called BRIDGE-1 radio .
+CORRECT: BRIDGE-1 , which is located in PATIENT-3 , and where PATIENT-1 is a key person , once broadcast AGENT-1 and has a product called PATIENT-2 .
+COMMENT:
+-
+Id2
+TEXT: The BBC, located in London, with Rona Fairhead as a key person, broadcast the TV series Bananaman and produces BBC radio.
+TEMPLATE: BRIDGE-1 , located in PATIENT-3 , with PATIENT-1 as PATIENT-2 , broadcast AGENT-1 and produces BRIDGE-1 radio .
+CORRECT: BRIDGE-1 , located in PATIENT-3 , with PATIENT-1 as a key person , broadcast AGENT-1 and produces PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id2 4 ComicsCharacter
+
+TRIPLES
+Aurakles | creator | Dick_Dillin
+Dick_Dillin | nationality | United_States
+Aurakles | creator | Len_Wein
+Aurakles | alternativeName | "Aurakles"
+
+
+ENTITY MAP
+BRIDGE-1 | Dick_Dillin
+AGENT-1 | Aurakles
+PATIENT-1 | United_States
+PATIENT-3 | "Aurakles"
+PATIENT-2 | Len_Wein
+
+
+LEX
+Id1
+TEXT: The comic book character Aurakles was created by Len Wein and the American Dick Dillin.
+TEMPLATE: comic PATIENT-3 was created by PATIENT-2 and American BRIDGE-1 .
+CORRECT: AGENT-1 was created by PATIENT-2 and PATIENT-1 BRIDGE-1 .
+COMMENT: wrong
+-
+Id2
+TEXT: The comic book character Aurakles, with the alternative name Aurakles, was created by Dick Dillin (from the United States) and Len Wein.
+TEMPLATE: comic PATIENT-3 , with alternative PATIENT-3 , was created by BRIDGE-1 (from PATIENT-1) and PATIENT-2 .
+CORRECT: AGENT-1 , with alternative PATIENT-3 , was created by BRIDGE-1 (from PATIENT-1) and PATIENT-2 .
+COMMENT: modifier
+-
+Id3
+TEXT: The fictional character Aurakles, also known as ''Aurakles'' was created by Len Wein and Dick Dillin (American).
+TEMPLATE: fictional PATIENT-3 , also known as '' PATIENT-3 '' was created by PATIENT-2 and BRIDGE-1 (American) .
+CORRECT: AGENT-1 , also known as '' PATIENT-3 '' was created by PATIENT-2 and BRIDGE-1 ( PATIENT-1 ) .
+COMMENT: nationality
+-
+
+**************************************************
+
+Entry: Id1 4 ComicsCharacter
+
+TRIPLES
+Arion_(comicsCharacter) | creator | Jan_Duursema
+Jan_Duursema | award | Eisner_Award
+Arion_(comicsCharacter) | alternativeName | "Ahriahn"
+Arion_(comicsCharacter) | creator | Paul_Kupperberg
+
+
+ENTITY MAP
+BRIDGE-1 | Jan_Duursema
+AGENT-1 | Arion_(comicsCharacter)
+PATIENT-1 | Eisner_Award
+PATIENT-3 | Paul_Kupperberg
+PATIENT-2 | "Ahriahn"
+
+
+LEX
+Id1
+TEXT: Arion (also known as Ahri'ahn) is a comic character created by Paul Kupperberg and Jan Duursema, who won the Eisner award.
+TEMPLATE: Arion (also known as PATIENT-2) is AGENT-1 created by PATIENT-3 and BRIDGE-1 , who won PATIENT-1 .
+CORRECT: AGENT-1 (also known as PATIENT-2) is a comic character created by PATIENT-3 and BRIDGE-1 , who won PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Paul Kupperberg and Eisner Award winning Jan Duursema are the creators of the comic book character Arion, also know as Ahri'ahn.
+TEMPLATE: PATIENT-3 and PATIENT-1 winning BRIDGE-1 are AGENT-1 of the comic book character Arion , also know as PATIENT-2 .
+CORRECT: PATIENT-3 and PATIENT-1 winning BRIDGE-1 are the creators of AGENT-1 , also know as PATIENT-2 .
+COMMENT:
+-
+Id3
+TEXT: The comic book character Arion (also known as Ahri'ahn), was created by Paul Kupperberg and Jan Duursema, the latter having won the Eisner Award.
+TEMPLATE: The comic book character Arion (also known as PATIENT-2) , was created by PATIENT-3 and BRIDGE-1 , AGENT-1 having won PATIENT-1 .
+CORRECT: AGENT-1 (also known as PATIENT-2) , was created by PATIENT-3 and BRIDGE-1 , BRIDGE-1 having won PATIENT-1 .
+COMMENT:
+-
+

@@ -1,0 +1,1097 @@
+
+Entry: Id1 5 Food
+
+TRIPLES
+Ajoblanco | country | Spain
+Ajoblanco | mainIngredients | "Bread, almonds, garlic, water, olive oil"
+Ajoblanco | region | Andalusia
+Ajoblanco | alternativeName | "Ajo blanco"
+Ajoblanco | ingredient | Bread
+
+
+ENTITY MAP
+PATIENT-5 | Bread
+PATIENT-4 | "Ajo blanco"
+AGENT-1 | Ajoblanco
+PATIENT-1 | Spain
+PATIENT-3 | Andalusia
+PATIENT-2 | "Bread, almonds, garlic, water, olive oil"
+
+
+LEX
+Id1
+TEXT: From Andalusia, Spain, Ajoblanco is made with bread, almonds, garlic, water and olive oil. Ajo blanco is an alternative name to Ajoblanco.
+TEMPLATE: From PATIENT-3 , PATIENT-1 , AGENT-1 is made with PATIENT-5 , AGENT-1 , garlic , water and olive oil . PATIENT-4 is an alternative name to AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Ajoblanco, also known as Ajo blanco is a dish from the Andalusian region of Spain and includes the main ingredients of bread, almonds, garlic, water and olive oil.
+TEMPLATE: AGENT-1 , also known as PATIENT-4 is PATIENT-3 from PATIENT-2 of PATIENT-1 and includes PATIENT-2 of PATIENT-5 , AGENT-1 , garlic , water and olive oil .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: A dish found in the Andalusian region of Spain is called Ajoblanco (or Ajo blanco). It contains bread, almonds, garlic, water and olive oil.
+TEMPLATE: A dish found in PATIENT-2 of PATIENT-1 is called AGENT-1 ( or PATIENT-4 ) . PATIENT-3 contains PATIENT-5 , AGENT-1 , garlic , water and olive oil .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id2 5 Food
+
+TRIPLES
+Amatriciana_sauce | region | Lazio
+Amatriciana_sauce | country | Italy
+Amatriciana_sauce | ingredient | Guanciale
+Amatriciana_sauce | course | Italian_meal_structure
+Amatriciana_sauce | mainIngredients | "Tomatoes, guanciale, cheese, olive oil"
+
+
+ENTITY MAP
+PATIENT-5 | "Tomatoes, guanciale, cheese, olive oil"
+PATIENT-4 | Italian_meal_structure
+AGENT-1 | Amatriciana_sauce
+PATIENT-1 | Lazio
+PATIENT-3 | Guanciale
+PATIENT-2 | Italy
+
+
+LEX
+Id1
+TEXT: Tomatoes, guanciale, cheese, and olive oil are main ingredients in the traditional Amatriciana sauce, which comes from the region of Lazio and can be found in an Italian meal.
+TEMPLATE: PATIENT-5 , PATIENT-3 , PATIENT-2 , and PATIENT-4 are main ingredients in traditional AGENT-1 , which comes from the region of PATIENT-1 and can be found in PATIENT-4 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Amatriciana is a traditional sauce from Lazio, Italy. It includes cheese along with tomatoes, guanciale and olive oil.
+TEMPLATE: AGENT-1 is PATIENT-4 from PATIENT-1 , PATIENT-2 . AGENT-1 includes PATIENT-2 along with PATIENT-5 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Amatriciana sauce can be found in Italian food and comes from the country's Lazio region.The main ingredients of the sauce are guanciale,tomatoes,cheese, and olive oil.
+TEMPLATE: AGENT-1 can be found in PATIENT-2 food and comes from PATIENT-2 's PATIENT-1 region.PATIENT-2 main ingredients of AGENT-1 are PATIENT-3 , tomatoes , PATIENT-2 , and PATIENT-4 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id3 5 Food
+
+TRIPLES
+Arem-arem | country | Indonesia
+Arem-arem | region | Javanese_cuisine
+Indonesia | leaderName | Joko_Widodo
+Indonesia | currency | Indonesian_rupiah
+Indonesia | language | Indonesian_language
+
+
+ENTITY MAP
+PATIENT-4 | Indonesian_language
+BRIDGE-1 | Indonesia
+AGENT-1 | Arem-arem
+PATIENT-1 | Javanese_cuisine
+PATIENT-3 | Indonesian_rupiah
+PATIENT-2 | Joko_Widodo
+
+
+LEX
+Id1
+TEXT: Arem-arem, a Javanese dish, is commonly served in Indonesia where the leader is Joko Widodo. It is also where the currency is the Indonesian rupiah and where Indonesian language is the language spoken.
+TEMPLATE: AGENT-1 , PATIENT-1 , is commonly served in BRIDGE-1 where BRIDGE-1 leader is PATIENT-2 . AGENT-1 is also where BRIDGE-1 currency is PATIENT-3 and where PATIENT-4 is BRIDGE-1 PATIENT-4 spoken .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id4 5 Food
+
+TRIPLES
+Arrabbiata_sauce | country | Italy
+Italy | demonym | Italians
+Italy | capital | Rome
+Italy | language | Italian_language
+Italy | leaderName | Sergio_Mattarella
+
+
+ENTITY MAP
+PATIENT-4 | Sergio_Mattarella
+BRIDGE-1 | Italy
+AGENT-1 | Arrabbiata_sauce
+PATIENT-1 | Italians
+PATIENT-3 | Italian_language
+PATIENT-2 | Rome
+
+
+LEX
+Id1
+TEXT: Sergio Mattarella is a leader in Italy, a country where Rome is the capital,and both the people and the language spoken are Italian. Arrabbiata sauce can be found in Italy.
+TEMPLATE: PATIENT-4 is PATIENT-3 in BRIDGE-1 , a country where PATIENT-2 is PATIENT-3 , and both the people and PATIENT-3 spoken are BRIDGE-1 . AGENT-1 can be found in BRIDGE-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Arrabbiata sauce is from Italy where the capital is Rome, Italian is the language spoken and Sergio Mattarella is a leader.
+TEMPLATE: AGENT-1 is from BRIDGE-1 where PATIENT-3 is PATIENT-2 , BRIDGE-1 is PATIENT-3 spoken and PATIENT-4 is PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id5 5 Food
+
+TRIPLES
+Arròs_negre | region | Valencian_Community
+Valencian_Community | leaderName | Ximo_Puig
+Arròs_negre | country | Spain
+Spain | demonym | Spaniards
+Spain | leaderName | Felipe_VI_of_Spain
+
+
+ENTITY MAP
+BRIDGE-2 | Spain
+BRIDGE-1 | Valencian_Community
+AGENT-1 | Arròs_negre
+PATIENT-1 | Ximo_Puig
+PATIENT-3 | Felipe_VI_of_Spain
+PATIENT-2 | Spaniards
+
+
+LEX
+Id1
+TEXT: Ximo Puig is a leader of the Valencian Community which is where Arros negre comes from. It is a a traditional dish from Spain, where the people are called Spaniards and the leader is Felipe VI of Spain.
+TEMPLATE: PATIENT-1 is a leader of BRIDGE-1 which is where AGENT-1 comes from . BRIDGE-1 is a traditional dish from BRIDGE-2 , where the people are called PATIENT-2 and the leader is PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Arros negre is from the Valencian Community of Spain, home to the Spaniards, led by Felipe VI and Ximo Puig.
+TEMPLATE: AGENT-1 is from BRIDGE-1 of BRIDGE-2 , home to PATIENT-2 , led by PATIENT-3 and PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id6 5 Food
+
+TRIPLES
+Asam_pedas | country | Malaysia
+Malaysia | ethnicGroup | Malaysian_Chinese
+Malaysia | capital | Kuala_Lumpur
+Malaysia | ethnicGroup | Malaysian_Indian
+Asam_pedas | region | Malay_Peninsula
+
+
+ENTITY MAP
+PATIENT-4 | Malay_Peninsula
+BRIDGE-1 | Malaysia
+AGENT-1 | Asam_pedas
+PATIENT-1 | Malaysian_Chinese
+PATIENT-3 | Malaysian_Indian
+PATIENT-2 | Kuala_Lumpur
+
+
+LEX
+Id1
+TEXT: Asam pedas is a food found in the Malay Peninsula of Malaysia, whose capital is Kuala Lumpur, and includes the Malaysian Chinese and Malaysian Indians.
+TEMPLATE: AGENT-1 is a food found in PATIENT-4 of BRIDGE-1 , whose capital is PATIENT-2 , and includes PATIENT-1 and BRIDGE-1 Indians .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Asam pedas is a food found in the Malay Peninsula in Malaysia, whose capital is Kuala Lumpur, where Malaysian Indians and Malaysian Chinese are ethnic groups.
+TEMPLATE: AGENT-1 is a food found in PATIENT-4 in BRIDGE-1 , whose capital is PATIENT-2 , where BRIDGE-1 Indians and PATIENT-1 are ethnic groups .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Malaysia and the Malay Peninsula are home to the dish Asam pedas. The capital of Malaysian Chinese and Indian inhabited Malaysia is Kuala Lumpur.
+TEMPLATE: BRIDGE-1 and PATIENT-4 are PATIENT-1 to AGENT-1 . The capital of PATIENT-1 and Indian inhabited BRIDGE-1 is PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id7 5 Food
+
+TRIPLES
+Asam_pedas | country | Malaysia
+Malaysia | ethnicGroup | Malaysian_Chinese
+Malaysia | leaderName | Arifin_Zakaria
+Malaysia | ethnicGroup | Malaysian_Indian
+Asam_pedas | region | Malay_Peninsula
+
+
+ENTITY MAP
+PATIENT-4 | Malay_Peninsula
+BRIDGE-1 | Malaysia
+AGENT-1 | Asam_pedas
+PATIENT-1 | Malaysian_Chinese
+PATIENT-3 | Malaysian_Indian
+PATIENT-2 | Arifin_Zakaria
+
+
+LEX
+Id1
+TEXT: Malaysian Indian and Malaysian chinese are two of the ethnic groups in Malaysia where Arifin Zakaria is the leader. Asam pedas is found in Malaysia and is from the Malay Peninsula region.
+TEMPLATE: PATIENT-3 and BRIDGE-1 PATIENT-1 are two of PATIENT-3 groups in BRIDGE-1 where PATIENT-2 is AGENT-1 . AGENT-1 is found in BRIDGE-1 and is from PATIENT-4 region .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Asam pedas is a food found in the Malay Peninsula region, Malaysia, where ethnic groups include Malaysian Indian and Chinese. Arifin Zakaria is the country's leader.
+TEMPLATE: AGENT-1 is a food found in PATIENT-4 region , BRIDGE-1 , where ethnic groups include PATIENT-3 and PATIENT-1 . PATIENT-2 is the country 's leader .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Malaysia, led by Arifin Zakaria, is home to the Malaysian Indian and Chinese, as well as the asam pedas of the Malay Peninsula region.
+TEMPLATE: BRIDGE-1 , led by PATIENT-2 , is PATIENT-1 to PATIENT-3 and PATIENT-1 , as well as AGENT-1 of PATIENT-4 region .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id8 5 Food
+
+TRIPLES
+Ayam_penyet | region | "Nationwide, also can be found in Malaysia and Singapore"
+Ayam_penyet | country | Java
+Ayam_penyet | ingredient | Fried_chicken
+Ayam_penyet | mainIngredients | "Squeezed" or "smashed" fried chicken served with sambal
+Ayam_penyet | servingTemperature | "Hot"
+
+
+ENTITY MAP
+PATIENT-5 | "Hot"
+PATIENT-4 | "Squeezed" or "smashed" fried chicken served with sambal
+AGENT-1 | Ayam_penyet
+PATIENT-1 | "Nationwide, also can be found in Malaysia and Singapore"
+PATIENT-3 | Fried_chicken
+PATIENT-2 | Java
+
+
+LEX
+Id1
+TEXT: Ayam penyet is a Javanese dish made nationwide, and can also be found in Malaysia and Singapore. It should be served hot and contains the main ingredients of squeezed or smashed fried chicken served with sambal.
+TEMPLATE: AGENT-1 is Javanese PATIENT-1 . PATIENT-3 should be served hot and contains the main ingredients of PATIENT-4 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Ayam penyet is a hot food dish found in Java, Malaysia and Singapore and consists of fried chicken and sambal sauce.
+TEMPLATE: AGENT-1 is PATIENT-4 found in PATIENT-2 , PATIENT-1 and consists of PATIENT-3 and PATIENT-2 sauce .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Ayam penyet is a food made in Java regions of Malaysia and Singapore. It contains fried chicken that is smashed and served hot with sambal.
+TEMPLATE: AGENT-1 is a food made in PATIENT-2 regions of PATIENT-1 . PATIENT-3 contains PATIENT-3 that is smashed and served hot with PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id9 5 Food
+
+TRIPLES
+Ayam_penyet | region | Malaysia
+Malaysia | ethnicGroup | Malaysian_Chinese
+Ayam_penyet | ingredient | Fried_chicken
+Ayam_penyet | country | Indonesia
+Ayam_penyet | mainIngredients | "Squeezed" or "smashed" fried chicken served with sambal
+
+
+ENTITY MAP
+PATIENT-4 | "Squeezed" or "smashed" fried chicken served with sambal
+BRIDGE-1 | Malaysia
+AGENT-1 | Ayam_penyet
+PATIENT-1 | Malaysian_Chinese
+PATIENT-3 | Indonesia
+PATIENT-2 | Fried_chicken
+
+
+LEX
+Id1
+TEXT: Malaysian Chinese is an ethnic group from Malaysia and Ayam Penyet is from there. Ayam Penyet is also from Indonesia and it contains fried chicken as well as "squeezed" or "smashed" chicken served with sambal.
+TEMPLATE: PATIENT-1 is PATIENT-2 from BRIDGE-1 and AGENT-1 is from there . AGENT-1 is also from PATIENT-3 and PATIENT-3 contains PATIENT-2 as well as PATIENT-4 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Ayam penyet is a dish comprising "squeezed" or "smashed" fried chicken served with sambal. It can be found in Indonesia and in Malaysia, where there is an ethnic group called Malaysian Chinese.
+TEMPLATE: AGENT-1 is PATIENT-3 comprising `` squeezed '' or `` smashed '' PATIENT-2 served with sambal . PATIENT-2 can be found in PATIENT-3 and in BRIDGE-1 , where there is PATIENT-2 called PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Ayam penyet (origins: Indonesia) contains squeezed/smashed fried chicken with sambel and is popular in Malaysia. Malasysia is home to the Malaysian chinese.
+TEMPLATE: AGENT-1 ( origins : PATIENT-3 ) contains squeezed/smashed PATIENT-2 with sambel and is popular in BRIDGE-1 . Malasysia is PATIENT-1 to PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id10 5 Food
+
+TRIPLES
+Bacon_Explosion | country | United_States
+United_States | leaderName | Barack_Obama
+United_States | ethnicGroup | Native_Americans_in_the_United_States
+United_States | capital | Washington,_D.C.
+United_States | language | English_language
+
+
+ENTITY MAP
+PATIENT-4 | English_language
+BRIDGE-1 | United_States
+AGENT-1 | Bacon_Explosion
+PATIENT-1 | Barack_Obama
+PATIENT-3 | Washington,_D.C.
+PATIENT-2 | Native_Americans_in_the_United_States
+
+
+LEX
+Id1
+TEXT: Bacon Explosion is a dish that originates in the United States, where English is the language spoken and the capital is Washington DC. Barack Obama is leader of the US and Native Americans are one of the ethnic groups of the country.
+TEMPLATE: AGENT-1 is a dish that originates in BRIDGE-1 wBRIDGE-1 PATIENT-4 is BRIDGE-1 language spoken and BRIDGE-1 capital is PATIENT-3 . PATIENT-1 is leader of BRIDGE-1 and PATIENT-2 are one of BRIDGE-1 ethnic groups of BRIDGE-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Barack Obama is leader of United States, the home of the dish Bacon Explosion. Native Americans are one of the ethnic groups of the country, where Washington DC is the capital and English is the language spoken.
+TEMPLATE: PATIENT-1 is leader of BRIDGE-1 , BRIDGE-1 home of BRIDGE-1 AGENT-1 . PATIENT-2 are one of BRIDGE-1 ethnic groups of BRIDGE-1 , wBRIDGE-1 PATIENT-3 is BRIDGE-1 capital and PATIENT-4 is BRIDGE-1 language spoken .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Bacon Explosion comes from the United States whose leader is Barack Obama. The capital of the United States is Washington, D.C., the spoken language is English and Native Americans are one of the ethnic groups of the country.
+TEMPLATE: AGENT-1 comes from BRIDGE-1 whose leader is PATIENT-1 . BRIDGE-1 capital of BRIDGE-1 is PATIENT-3 BRIDGE-1 spoken language is PATIENT-4 and PATIENT-2 are one of BRIDGE-1 ethnic groups of BRIDGE-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id11 5 Food
+
+TRIPLES
+Baked_Alaska | country | France
+Hong_Kong | leaderName | Carrie_Lam_(politician)
+France | leaderName | Gérard_Larcher
+France | language | French_language
+Baked_Alaska | region | Hong_Kong
+
+
+ENTITY MAP
+BRIDGE-2 | Hong_Kong
+BRIDGE-1 | France
+AGENT-1 | Baked_Alaska
+PATIENT-1 | Carrie_Lam_(politician)
+PATIENT-3 | French_language
+PATIENT-2 | Gérard_Larcher
+
+
+LEX
+Id1
+TEXT: Baked Alaska originates from France where the national language is French and one of the leader is Gerard Larcher. The dessert is served in Hong Kong as well where the leader is Carrie Lam.
+TEMPLATE: AGENT-1 originates from BRIDGE-1 where the national language is PATIENT-3 and one of the leader is PATIENT-2 . The dessert is served in BRIDGE-2 as well where the leader is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Baked Alaska comes from France where the spoken language is French,and the country's leader is Gerard Larcher. This dessert is also served in Hong Kong.
+TEMPLATE: AGENT-1 comes from BRIDGE-1 where the spoken language is PATIENT-3 , and BRIDGE-1 's leader is PATIENT-2 . This dessert is also served in BRIDGE-2 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Baked Alaska, served in Hong Kong, who's political leader is Carrie Lam, but is actually from France where the national language is French and the leader is Gerard Larcher.
+TEMPLATE: AGENT-1 , served in BRIDGE-2 , who 's political leader is PATIENT-1 , but is actually from BRIDGE-1 where the national language is PATIENT-3 and the leader is PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id12 5 Food
+
+TRIPLES
+Bakewell_pudding | region | Derbyshire_Dales
+Derbyshire_Dales | leaderName | Patrick_McLoughlin
+Bakewell_pudding | dishVariation | Bakewell_tart
+Derbyshire_Dales | isPartOf | Derbyshire
+Bakewell_tart | ingredient | Shortcrust_pastry
+
+
+ENTITY MAP
+AGENT-1 | Bakewell_pudding
+BRIDGE-1 | Derbyshire_Dales
+BRIDGE-2 | Bakewell_tart
+PATIENT-1 | Patrick_McLoughlin
+PATIENT-3 | Shortcrust_pastry
+PATIENT-2 | Derbyshire
+
+
+LEX
+Id1
+TEXT: Bakewell Tart (or pudding) is from the Derbyshire Dales area of Derbyshire where Patrick McLoughlin is a leader. The tart is made with shortcrust pastry.
+TEMPLATE: AGENT-1 ( or pudding ) is from BRIDGE-1 areAGENT-1 of BRIDGE-1 where PATIENT-1 is AGENT-1 leader . BRIDGE-2 is made with PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The shortcrust pastry-based dessert Bakewell Tart (or pudding) hails from the Derbyshire Dales area of Derbyshire where Patrick McLoughlin is a leader.
+TEMPLATE: pastry-based AGENT-1 ( or pudding ) hails from BRIDGE-1 areAGENT-1 of BRIDGE-1 where PATIENT-1 is AGENT-1 leader .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: A variant of bakewell pudding is bakewell tart, which key ingredient is Shortcrust pastry. Bakewell pudding originates from the Derbyshire Dales, which leader is Patrick McLoughlin.
+TEMPLATE: A variant of AGENT-1 is BRIDGE-2 , which key ingredient is PATIENT-3 . AGENT-1 originates from BRIDGE-1 , which leader is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id13 5 Food
+
+TRIPLES
+Bandeja_paisa | ingredient | Lemon
+Lemon | family | Rutaceae
+Bandeja_paisa | country | Colombian_cuisine
+Bandeja_paisa | region | Paisa_Region
+Lemon | genus | Citrus
+
+
+ENTITY MAP
+PATIENT-4 | Citrus
+BRIDGE-1 | Lemon
+AGENT-1 | Bandeja_paisa
+PATIENT-1 | Rutaceae
+PATIENT-3 | Paisa_Region
+PATIENT-2 | Colombian_cuisine
+
+
+LEX
+Id1
+TEXT: Bandeja paisa is a dish from Colombian cuisine and originates from the Paisa region. One of the ingredients in Bandeja paisa is lemon which is a member of the family Rutaceae and is from the genus citrus.
+TEMPLATE: AGENT-1 is a dish from PATIENT-2 and originates from PATIENT-3 . One of PATIENT-2 ingredients in AGENT-1 is BRIDGE-1 which is a member of PATIENT-1 and is from PATIENT-4 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Bandeja paisa is a traditional dish from the Paisa region, Colombia. Lemon is one of its ingredients and is a member of the family Rutaceae and is from the genus citrus.
+TEMPLATE: AGENT-1 is a traditional dish from PATIENT-3 , PATIENT-2 . BRIDGE-1 is one of its ingredients and is a member of PATIENT-1 and is from PATIENT-4 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id14 5 Food
+
+TRIPLES
+Bandeja_paisa | ingredient | Lemon
+Lemon | order | Rosids
+Lemon | family | Rutaceae
+Bandeja_paisa | country | Colombian_cuisine
+Bandeja_paisa | region | Paisa_Region
+
+
+ENTITY MAP
+PATIENT-4 | Paisa_Region
+BRIDGE-1 | Lemon
+AGENT-1 | Bandeja_paisa
+PATIENT-1 | Rosids
+PATIENT-3 | Colombian_cuisine
+PATIENT-2 | Rutaceae
+
+
+LEX
+Id1
+TEXT: Bandeja paisa is typical Colombian cuisine that originates from the Paisa region and contains lemon. The lemon belongs to the rutaceae family and the order of Rosids.
+TEMPLATE: AGENT-1 is typical PATIENT-3 AGENT-1 originates from PATIENT-4 and contains BRIDGE-1 . BRIDGE-1 belongs to PATIENT-3 PATIENT-2 family and PATIENT-3 order of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id15 5 Food
+
+TRIPLES
+Barny_Cakes | country | France
+France | language | French_language
+France | leaderName | Gérard_Larcher
+France | leaderName | Claude_Bartolone
+Barny_Cakes | ingredient | Sponge_cake
+
+
+ENTITY MAP
+PATIENT-4 | Sponge_cake
+BRIDGE-1 | France
+AGENT-1 | Barny_Cakes
+PATIENT-1 | French_language
+PATIENT-3 | Claude_Bartolone
+PATIENT-2 | Gérard_Larcher
+
+
+LEX
+Id1
+TEXT: Barny Cakes, which are made from sponge cake, are from France, where Gerard Larcher and Claude Bartolone are leaders and French is the language spoken.
+TEMPLATE: AGENT-1 , which are made from PATIENT-4 , are from BRIDGE-1 , where PATIENT-2 and PATIENT-3 are PATIENT-1 and PATIENT-1 is the language spoken .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Barny cakes, made with sponge cake, are found in France, where French is spoken and whose leaders are Claude Bartolone and Gerard Larcher.
+TEMPLATE: AGENT-1 , made with PATIENT-4 , are found in BRIDGE-1 , where PATIENT-1 is spoken and whose PATIENT-1 are PATIENT-3 and PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id16 5 Food
+
+TRIPLES
+Barny_Cakes | country | France
+France | leaderName | Gérard_Larcher
+France | language | French_language
+Mondelez_International | foundationPlace | Chicago
+Barny_Cakes | creator | Mondelez_International
+
+
+ENTITY MAP
+BRIDGE-2 | Mondelez_International
+BRIDGE-1 | France
+AGENT-1 | Barny_Cakes
+PATIENT-1 | Gérard_Larcher
+PATIENT-3 | Chicago
+PATIENT-2 | French_language
+
+
+LEX
+Id1
+TEXT: Created by Mondelez International (founded in Chicago), Barny Cakes come from France where Gerard Larcher is leader and they speak French.
+TEMPLATE: Created by BRIDGE-2 ( founded in PATIENT-3 ) , AGENT-1 come from BRIDGE-1 where PATIENT-1 is leader and they speak PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Barny cakes is created by Mondelez International, which was founded in Chicago. It comes from France, which leader is Gérard Larcher and the language is French.
+TEMPLATE: AGENT-1 is created by BRIDGE-2 , which was founded in PATIENT-3 . BRIDGE-2 comes from BRIDGE-1 , which leader is PATIENT-1 and the language is PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id17 5 Food
+
+TRIPLES
+Beef_kway_teow | region | Singapore
+Singapore | language | English_language
+Beef_kway_teow | country | "Singapore and Indonesia"
+Singapore | leaderName | Tony_Tan
+Singapore | leaderName | Halimah_Yacob
+
+
+ENTITY MAP
+PATIENT-4 | Halimah_Yacob
+BRIDGE-1 | Singapore
+AGENT-1 | Beef_kway_teow
+PATIENT-1 | English_language
+PATIENT-3 | Tony_Tan
+PATIENT-2 | "Singapore and Indonesia"
+
+
+LEX
+Id1
+TEXT: English speaking Singapore, led by Tony Tan and Halimah Yacob, offers the dish Beef kway teow, also found in Indonesia.
+TEMPLATE: PATIENT-1 BRIDGE-1 , led by PATIENT-3 and PATIENT-4 , offers AGENT-1 AGENT-1 , also found in PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id18 5 Food
+
+TRIPLES
+Bhajji | country | India
+Bhajji | region | Karnataka
+Bhajji | mainIngredients | "Gram flour, vegetables"
+Bhajji | alternativeName | "Bhaji, bajji"
+Bhajji | ingredient | Vegetable
+
+
+ENTITY MAP
+PATIENT-5 | Vegetable
+PATIENT-4 | "Bhaji, bajji"
+AGENT-1 | Bhajji
+PATIENT-1 | India
+PATIENT-3 | "Gram flour, vegetables"
+PATIENT-2 | Karnataka
+
+
+LEX
+Id1
+TEXT: Bhajji is also known as Bhaji or bajj, originates from the Karnataka region of India. It is usually made up of vegetables and gram flour.
+TEMPLATE: AGENT-1 is also known as PATIENT-5 or bajj , originates from PATIENT-2 region of PATIENT-1 . AGENT-1 is usually made up of PATIENT-5 and PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Bhajji, also known as Bhaji or bajji, originates from India in the Karnataka region and the main ingredients are gram flour and vegetables.
+TEMPLATE: AGENT-1 , also known as PATIENT-4 , originates from PATIENT-1 in the PATIENT-2 region and PATIENT-3 are PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Bhajji (Bhaji), or bajji, contains vegetables and gram flour; it originates from the Karnataka region of India.
+TEMPLATE: AGENT-1 ( PATIENT-5 ) , or bajji , contains PATIENT-5 and PATIENT-3 ; PATIENT-5 originates from the PATIENT-2 region of PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id19 5 Food
+
+TRIPLES
+Bhajji | country | India
+India | demonym | Indian_people
+India | leaderName | Sumitra_Mahajan
+Bhajji | region | Karnataka
+Karnataka | leaderName | Vajubhai_Vala
+
+
+ENTITY MAP
+AGENT-1 | Bhajji
+BRIDGE-1 | India
+BRIDGE-2 | Karnataka
+PATIENT-1 | Indian_people
+PATIENT-3 | Vajubhai_Vala
+PATIENT-2 | Sumitra_Mahajan
+
+
+LEX
+Id1
+TEXT: Indians is the name given to people from India and the leaders are Sumitra Mahajan and Vajubhai Vala. Bhajji is from the Karnataka region of India.
+TEMPLATE: PATIENT-1 is the name given to PATIENT-1 from BRIDGE-1 and the leaders are PATIENT-2 and PATIENT-3 . AGENT-1 is from the BRIDGE-2 region of BRIDGE-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Bhajji is from the Karantake region of India. India is led by Vajubhai Vala and home to the Indian people.
+TEMPLATE: AGENT-1 is from PATIENT-2 of BRIDGE-1 . BRIDGE-1 is led by PATIENT-3 and home to PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Bhajji originates from the Karnataka region (led by Vajubhai Vala) of India. The Indians of India are led by Sumitra Mahajan.
+TEMPLATE: AGENT-1 originates from the BRIDGE-2 region ( led by PATIENT-3 ) of BRIDGE-1 . PATIENT-1 of BRIDGE-1 are led by PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id20 5 Food
+
+TRIPLES
+Bionico | country | Mexico
+Bionico | region | Jalisco
+Jalisco | leaderName | Jesús_Casillas_Romero
+Dessert | dishVariation | Cake
+Bionico | course | Dessert
+
+
+ENTITY MAP
+BRIDGE-2 | Dessert
+BRIDGE-1 | Jalisco
+AGENT-1 | Bionico
+PATIENT-1 | Mexico
+PATIENT-3 | Cake
+PATIENT-2 | Jesús_Casillas_Romero
+
+
+LEX
+Id1
+TEXT: Bionico is a dessert from Jalisco, Mexio. The leader in Jalisco is Jesus Casillas Romero. Another dessert is a cake.
+TEMPLATE: AGENT-1 is BRIDGE-2 from BRIDGE-1 , Mexio . BRIDGE-2 leader in BRIDGE-1 is PATIENT-2 . BRIDGE-2 is PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Bionico is a dessert found in the Jalisco region of Mexico. The name of the leader in Jalisco is Jesus Casillas Romero. Another dessert is a cake.
+TEMPLATE: AGENT-1 is BRIDGE-2 found in the BRIDGE-1 region of PATIENT-1 . BRIDGE-2 name of the leader in BRIDGE-1 is PATIENT-2 . BRIDGE-2 is PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id21 5 Food
+
+TRIPLES
+Bionico | country | Mexico
+Dessert | dishVariation | Cake
+Mexico | leaderName | Enrique_Peña_Nieto
+Bionico | course | Dessert
+Bionico | region | Guadalajara
+
+
+ENTITY MAP
+AGENT-1 | Bionico
+BRIDGE-1 | Mexico
+BRIDGE-2 | Dessert
+PATIENT-1 | Cake
+PATIENT-3 | Guadalajara
+PATIENT-2 | Enrique_Peña_Nieto
+
+
+LEX
+Id1
+TEXT: A type of dessert is a cake. However, bionico is not a cake, and instead a dessert from the Guadalajara region, in Mexico. Mexico is where Enrique Pena Nieto is the leader.
+TEMPLATE: A type of BRIDGE-2 is PATIENT-1 . However , AGENT-1 is not PATIENT-1 , and instead BRIDGE-2 from the PATIENT-3 region , in BRIDGE-1 . BRIDGE-1 is where PATIENT-2 is the leader .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Bionico is a dessert from Guadalajara, Mexico where the leader is Enrique Pena Nieto. Another dessert is a cake.
+TEMPLATE: AGENT-1 is BRIDGE-2 from PATIENT-3 , BRIDGE-1 where the leader is PATIENT-2 . BRIDGE-2 is PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id22 5 Food
+
+TRIPLES
+Derbyshire_Dales | leaderName | Patrick_McLoughlin
+Bakewell_pudding | dishVariation | Bakewell_tart
+Bakewell_tart | region | Derbyshire_Dales
+Derbyshire_Dales | administrativeCounty | Derbyshire
+Bakewell_tart | ingredient | Frangipane
+
+
+ENTITY MAP
+BRIDGE-2 | Derbyshire_Dales
+BRIDGE-1 | Bakewell_tart
+AGENT-1 | Bakewell_pudding
+PATIENT-1 | Patrick_McLoughlin
+PATIENT-3 | Frangipane
+PATIENT-2 | Derbyshire
+
+
+LEX
+Id1
+TEXT: Patrick McLoughlin is the leader of Derbyshire Dales which is in the County of Derbyshire. Bakewell tart, a variation of Bakewell pudding, comes from the Derbyshire Dales and contains frangipane.
+TEMPLATE: PATIENT-1 is PATIENT-2 of BRIDGE-2 which is in the County of BRIDGE-2 . BRIDGE-1 , AGENT-1 variation of AGENT-1 , comes from BRIDGE-2 and contains PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Patrick McLoughlin is a leader in the Derbyshire Dales (in the county of Derbyshire) where the Bakewell tart is a popular dish. This dish contains frangipane and has a variant called Bakewell pudding.
+TEMPLATE: PATIENT-1 is AGENT-1 leader in BRIDGE-2 ( in the county of BRIDGE-2 ) where BRIDGE-1 is AGENT-1 popular dish . This dish contains PATIENT-3 and has AGENT-1 variant called AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Patrick McLoughlin is a leader in Derbyshire Dales in the County of Derbyshire The frangipane Bakewell tart, a variation of Bakewell pudding, is popular in the Derbyshire Dales area.
+TEMPLATE: PATIENT-1 is AGENT-1 leader in BRIDGE-2 in the County of BRIDGE-2 PATIENT-3 BRIDGE-1 , AGENT-1 variation of AGENT-1 , is popular in BRIDGE-2 areAGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id23 5 Food
+
+TRIPLES
+Derbyshire_Dales | leaderName | Patrick_McLoughlin
+Bakewell_pudding | dishVariation | Bakewell_tart
+Bakewell_tart | region | Derbyshire_Dales
+Derbyshire_Dales | isPartOf | Derbyshire
+Bakewell_tart | ingredient | Frangipane
+
+
+ENTITY MAP
+BRIDGE-2 | Derbyshire_Dales
+BRIDGE-1 | Bakewell_tart
+AGENT-1 | Bakewell_pudding
+PATIENT-1 | Patrick_McLoughlin
+PATIENT-3 | Frangipane
+PATIENT-2 | Derbyshire
+
+
+LEX
+Id1
+TEXT: Patrick McLoughlin is the leader of Derbyshire Dales which is part of Derbyshire. Coming from the Derbyshire Dales region is Bakewell tart (a variation of Bakewell pudding) which has Frangipane as an ingredient.
+TEMPLATE: PATIENT-1 is PATIENT-2 of BRIDGE-2 which is part of BRIDGE-2 . Coming from BRIDGE-2 region is BRIDGE-1 ( AGENT-1 variation of AGENT-1 ) which has PATIENT-3 as an ingredient .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The Derbyshire Dales, whose leader is Patrick McLoughlin, is part of Derbyshire and is where Bakewell tarts come from. Bakewell tart is a variation of Bakewell pudding and one of the ingredients is frangipane.
+TEMPLATE: BRIDGE-2 , whose leader is PATIENT-1 , is part of BRIDGE-2 and is where BRIDGE-1 come from . BRIDGE-1 is AGENT-1 variation of AGENT-1 and one of the ingredients is PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: The Frangipane -based dessert Bakewell Tart (or pudding) is popular in the Derbyshire Dales area of Derbyshire where Patrick McLoughlin is a leader.
+TEMPLATE: PATIENT-3 - based AGENT-1 ( or pudding ) is popular in BRIDGE-2 areAGENT-1 of BRIDGE-2 where PATIENT-1 is AGENT-1 leader .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id24 5 Food
+
+TRIPLES
+Indonesia | capital | Jakarta
+Indonesia | language | Indonesian_language
+Indonesia | leaderName | Jusuf_Kalla
+Bakso | region | Indonesia
+Bakso | country | Indonesia
+
+
+ENTITY MAP
+BRIDGE-1 | Indonesia
+AGENT-1 | Bakso
+PATIENT-1 | Jakarta
+PATIENT-3 | Jusuf_Kalla
+PATIENT-2 | Indonesian_language
+
+
+LEX
+Id1
+TEXT: Jakarta is the capital of Indonesia where the leader is Jusuf Kalla, they speak Indonesian and eat bakso.
+TEMPLATE: PATIENT-1 is BRIDGE-1 capital of BRIDGE-1 where BRIDGE-1 leader is PATIENT-3 , they speak PATIENT-2 and eat AGENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Bakso is a dish from the country of Indonesia, which leader is Jusuf Kalla, the capital is Jakarta and the language is Indonesian.
+TEMPLATE: AGENT-1 is BRIDGE-1 from BRIDGE-1 , which leader is PATIENT-3 , BRIDGE-1 capital is PATIENT-1 and BRIDGE-1 PATIENT-2 is PATIENT-2 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Bakso is a food and a dish found in Indonesia, where the capital is Jakarta, the language is Indonesia and Jusuf Kalla is the leader.
+TEMPLATE: AGENT-1 is a food and BRIDGE-1 found in BRIDGE-1 , where BRIDGE-1 capital is PATIENT-1 , BRIDGE-1 PATIENT-2 is BRIDGE-1 and PATIENT-3 is BRIDGE-1 leader .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id25 5 Food
+
+TRIPLES
+Italy | demonym | Italians
+Italy | capital | Rome
+Italy | leaderName | Matteo_Renzi
+Amatriciana_sauce | country | Italy
+Italy | leaderName | Sergio_Mattarella
+
+
+ENTITY MAP
+PATIENT-4 | Sergio_Mattarella
+BRIDGE-1 | Italy
+AGENT-1 | Amatriciana_sauce
+PATIENT-1 | Italians
+PATIENT-3 | Matteo_Renzi
+PATIENT-2 | Rome
+
+
+LEX
+Id1
+TEXT: Italy is the country Amatriciana sauce comes from and people there are called Italians. The capital is Rome and the leaders are Matteo Renzi and Sergio Mattarella.
+TEMPLATE: BRIDGE-1 is AGENT-1 comes from and people there are called PATIENT-1 . BRIDGE-1 capital is PATIENT-2 and PATIENT-1 are PATIENT-3 and PATIENT-4 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Rome is the capital of Italy where the leaders are Matteo Renzi and Sergio Mattarella. Amatriciana sauce can be found there and people are called Italians.
+TEMPLATE: PATIENT-2 is the capital of BRIDGE-1 where PATIENT-1 are PATIENT-3 and PATIENT-4 . AGENT-1 can be found there and people are called PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Amatriciana sauce is from Italy, where Rome is the capital and where Italians live. Leaders of the country include Sergio Mattarella and Matteo Renzi.
+TEMPLATE: AGENT-1 is from BRIDGE-1 , where PATIENT-2 is the capital and where PATIENT-1 live . Leaders of BRIDGE-1 include PATIENT-4 and PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id26 5 Food
+
+TRIPLES
+Java | ethnicGroup | Baduy
+Singapore | language | English_language
+Singapore | leaderName | Halimah_Yacob
+Ayam_penyet | region | Singapore
+Ayam_penyet | country | Java
+
+
+ENTITY MAP
+BRIDGE-2 | Java
+BRIDGE-1 | Singapore
+AGENT-1 | Ayam_penyet
+PATIENT-1 | Baduy
+PATIENT-3 | Halimah_Yacob
+PATIENT-2 | English_language
+
+
+LEX
+Id1
+TEXT: Halimah Yacob is the leader in Singapore where English is spoken and the dish Ayam penyet is from. It is also from Java, a country where one of the ethnic groups are the Baduy.
+TEMPLATE: PATIENT-3 is the leader in BRIDGE-1 where PATIENT-2 is spoken and AGENT-1 is from . It is also from BRIDGE-2 , a country where one of the ethnic groups are PATIENT-1 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: The Baduy is an ethnic group in Java where Ayam penyet is from. This dish is also from Singapore where English is spoken and Halimah Yacob is the leader.
+TEMPLATE: PATIENT-1 is an ethnic group in BRIDGE-2 where AGENT-1 is from . This dish is also from BRIDGE-1 where PATIENT-2 is spoken and PATIENT-3 is the leader .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Ayam penyet originates from Java where Baduy people are one of the ethnic groups.The food can also be found in Singapore where English is mainly spoken and Halimah Yacob is the president.
+TEMPLATE: AGENT-1 originates from BRIDGE-2 where PATIENT-1 people are one of the ethnic groups.The food can also be found in BRIDGE-1 where PATIENT-2 is mainly spoken and PATIENT-3 is the president .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id27 5 Food
+
+TRIPLES
+Philippines | ethnicGroup | Ilocano_people
+Philippines | language | Arabic
+Philippines | officialLanguage | Philippine_English
+Batchoy | country | Philippines
+Philippines | ethnicGroup | Igorot_people
+
+
+ENTITY MAP
+PATIENT-4 | Igorot_people
+BRIDGE-1 | Philippines
+AGENT-1 | Batchoy
+PATIENT-1 | Ilocano_people
+PATIENT-3 | Philippine_English
+PATIENT-2 | Arabic
+
+
+LEX
+Id1
+TEXT: Philippines is the country the dish Batchoy comes from. The llocano and Igorot peoples are ethnic groups from the Philippines, where languages spoken include Arabic and Phillippine English.
+TEMPLATE: BRIDGE-1 is BRIDGE-1 AGENT-1 comes from . The llocano and Igorot peoples are ethnic groups from BRIDGE-1 , where languages spoken include PATIENT-2 and Phillippine PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Batchoy is eaten in the Philippines, languages spoken there include English (official language) and also Arabic. Ethnic groups there include the Ilocano and Igorot peoples.
+TEMPLATE: AGENT-1 is eaten in BRIDGE-1 , languages spoken there include PATIENT-3 ( official language ) and also PATIENT-2 . PATIENT-1 there include PATIENT-1 and Igorot peoples .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id28 5 Food
+
+TRIPLES
+Singapore | language | English_language
+Beef_kway_teow | country | Singapore
+Beef_kway_teow | region | "Nationwide in Singapore and Indonesia"
+Singapore | leaderName | Tony_Tan
+Singapore | leaderName | Halimah_Yacob
+
+
+ENTITY MAP
+PATIENT-4 | Halimah_Yacob
+BRIDGE-1 | Singapore
+AGENT-1 | Beef_kway_teow
+PATIENT-1 | English_language
+PATIENT-3 | Tony_Tan
+PATIENT-2 | "Nationwide in Singapore and Indonesia"
+
+
+LEX
+Id1
+TEXT: Available nationwide in Indonesia and Singapore, Beef kway teow is a dish which comes from Singapore, where English is spoken. It is also where two of the leaders are Halimah Yacob and Tony Tan.
+TEMPLATE: Available nationwide in PATIENT-2 and BRIDGE-1 , AGENT-1 is BRIDGE-1 which comes from BRIDGE-1 , where PATIENT-1 is spoken . PATIENT-3 is also where two of the leaders are PATIENT-4 and PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Just like in Indonesia, Beef kway teow is popular nationwide is Singapore (where it comes from). In this country, English is spoken and two of the leaders are Halimah Yacob and Tony Tan.
+TEMPLATE: Just like in PATIENT-2 , AGENT-1 is popular nationwide is BRIDGE-1 ( where PATIENT-3 comes from ) . In this country , PATIENT-1 is spoken and two of the leaders are PATIENT-4 and PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+Id3
+TEXT: Beef kway teow is a popular dish in Singapore and Indonesia. Tony Tan and Halimah Yacob are leaders in Singapore where English is spoken.
+TEMPLATE: AGENT-1 is a popular dish in BRIDGE-1 and PATIENT-2 . PATIENT-3 and PATIENT-4 are leaders in BRIDGE-1 where PATIENT-1 is spoken .
+CORRECT: 
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id29 5 Food
+
+TRIPLES
+Spain | leaderName | Felipe_VI_of_Spain
+Spain | language | Spanish_language
+Spain | currency | Euro
+Ajoblanco | country | Spain
+Spain | demonym | Spaniards
+
+
+ENTITY MAP
+PATIENT-4 | Spaniards
+BRIDGE-1 | Spain
+AGENT-1 | Ajoblanco
+PATIENT-1 | Felipe_VI_of_Spain
+PATIENT-3 | Euro
+PATIENT-2 | Spanish_language
+
+
+LEX
+Id1
+TEXT: Ajoblanco is a dish from Spain, where the currency is the euro, the leader is Felipe VI, the language spoken is Spanish and the people that live there are called Spaniards.
+TEMPLATE: AGENT-1 is a dish from BRIDGE-1 , where the currency is PATIENT-3 , the leader is PATIENT-1 , PATIENT-2 spoken is PATIENT-2 and the people that live there are called PATIENT-4 .
+CORRECT: 
+COMMENT: 
+-
+Id2
+TEXT: Ajoblanco is a food found in Spanish speaking and Felipe VI led Spain. It is also home to the Spaniards and can be purchased with the Euro.
+TEMPLATE: AGENT-1 is a food found in PATIENT-2 speaking and PATIENT-1 led BRIDGE-1 . AGENT-1 is also home to PATIENT-4 and can be purchased with PATIENT-3 .
+CORRECT: 
+COMMENT: 
+-
+
