@@ -217,8 +217,8 @@ class Generator():
             w1dt_pre = w1dt_pre or w1_pre * h_pre
             w1dt_pos = w1dt_pos or w1_pos * h_pos
 
-            attention_pre = self.attend(h_pre, s, w1dt_pre, dy.parameter(self.attention_w2_pre), dy.parameter(self.attention_v_pre))
-            attention_pos = self.attend(h_pos, s, w1dt_pos, dy.parameter(self.attention_w2_pos), dy.parameter(self.attention_v_pos))
+            attention_pre = self.attend(h_pre, s, w1dt_pre, self.attention_w2_pre, self.attention_v_pre)
+            attention_pos = self.attend(h_pos, s, w1dt_pos, self.attention_w2_pos, self.attention_v_pos)
 
             vector = dy.concatenate([self.hier_attend(attention_pre, attention_pos, s), last_output_embeddings, entity_embedding])
             s = s.add_input(vector)
@@ -307,8 +307,8 @@ class Generator():
         trainer = dy.AdadeltaTrainer(self.model)
 
         prev_acc, repeat = 0.0, 0
-        epochs = 50
-        for epoch in range(epochs):
+        batch = 50
+        for epoch in range(50):
             dy.renew_cg()
             losses = []
             closs = 0.0
@@ -320,14 +320,14 @@ class Generator():
                 loss = self.get_loss(pre_context, pos_context, refex, entity)
                 losses.append(loss)
 
-                if len(losses) == epochs:
+                if len(losses) == batch:
                     loss = dy.esum(losses)
                     closs += loss.value()
                     loss.backward()
                     trainer.update()
                     dy.renew_cg()
 
-                    print("Epoch: {0} \t Loss: {1}".format(epoch, (closs / epochs)), end='     \r')
+                    print("Epoch: {0} \t Loss: {1}".format(epoch, (closs / batch)), end='     \r')
                     losses = []
                     closs = 0.0
 
