@@ -33,6 +33,7 @@ class Generator():
 
         self.model = dy.Model()
 
+        # ENCODERS
         self.encpre_fwd_lstm = dy.LSTMBuilder(self.LSTM_NUM_OF_LAYERS, self.EMBEDDINGS_SIZE, self.STATE_SIZE, self.model)
         self.encpre_bwd_lstm = dy.LSTMBuilder(self.LSTM_NUM_OF_LAYERS, self.EMBEDDINGS_SIZE, self.STATE_SIZE, self.model)
         self.encpre_fwd_lstm.set_dropout(self.DROPOUT)
@@ -43,16 +44,36 @@ class Generator():
         self.encpos_fwd_lstm.set_dropout(self.DROPOUT)
         self.encpos_bwd_lstm.set_dropout(self.DROPOUT)
 
-        self.dec_lstm = dy.LSTMBuilder(self.LSTM_NUM_OF_LAYERS, (self.STATE_SIZE*4)+(self.EMBEDDINGS_SIZE*2), self.STATE_SIZE, self.model)
+        # DECODER
+        self.dec_lstm = dy.LSTMBuilder(self.LSTM_NUM_OF_LAYERS, (self.STATE_SIZE*2)+(self.EMBEDDINGS_SIZE*2), self.STATE_SIZE, self.model)
         self.dec_lstm.set_dropout(self.DROPOUT)
 
+        # EMBEDDINGS
         self.input_lookup = self.model.add_lookup_parameters((self.INPUT_VOCAB_SIZE, self.EMBEDDINGS_SIZE))
-        self.attention_w1 = self.model.add_parameters((self.ATTENTION_SIZE, self.STATE_SIZE*4))
-        self.attention_w2 = self.model.add_parameters((self.ATTENTION_SIZE, self.STATE_SIZE*self.LSTM_NUM_OF_LAYERS*2))
-        self.attention_v = self.model.add_parameters((1, self.ATTENTION_SIZE))
+        self.output_lookup = self.model.add_lookup_parameters((self.OUTPUT_VOCAB_SIZE, self.EMBEDDINGS_SIZE))
+
+        # ATTENTION
+        self.attention_w1_pre = self.model.add_parameters((self.ATTENTION_SIZE, self.STATE_SIZE * 2))
+        self.attention_w2_pre = self.model.add_parameters((self.ATTENTION_SIZE, self.STATE_SIZE * self.LSTM_NUM_OF_LAYERS * 2))
+        self.attention_v_pre = self.model.add_parameters((1, self.ATTENTION_SIZE))
+
+        self.attention_w1_pos = self.model.add_parameters((self.ATTENTION_SIZE, self.STATE_SIZE * 2))
+        self.attention_w2_pos = self.model.add_parameters((self.ATTENTION_SIZE, self.STATE_SIZE * self.LSTM_NUM_OF_LAYERS * 2))
+        self.attention_v_pos = self.model.add_parameters((1, self.ATTENTION_SIZE))
+
+        # HIERARCHICAL ATTENTION
+        self.hier_w1_pre = self.model.add_parameters((self.ATTENTION_SIZE, self.STATE_SIZE * 2))
+        self.hier_w_pre = self.model.add_parameters((self.STATE_SIZE * 2, self.STATE_SIZE * 2))
+
+        self.hier_w1_pos = self.model.add_parameters((self.ATTENTION_SIZE, self.STATE_SIZE * 2))
+        self.hier_w_pos = self.model.add_parameters((self.STATE_SIZE * 2, self.STATE_SIZE * 2))
+
+        self.hier_w2 = self.model.add_parameters((self.ATTENTION_SIZE, self.STATE_SIZE * self.LSTM_NUM_OF_LAYERS * 2))
+        self.hier_v = self.model.add_parameters((1, self.ATTENTION_SIZE))
+
+        # SOFTMAX
         self.decoder_w = self.model.add_parameters((self.OUTPUT_VOCAB_SIZE, self.STATE_SIZE))
         self.decoder_b = self.model.add_parameters((self.OUTPUT_VOCAB_SIZE))
-        self.output_lookup = self.model.add_lookup_parameters((self.OUTPUT_VOCAB_SIZE, self.EMBEDDINGS_SIZE))
 
 
     def embed_sentence(self, sentence):
@@ -84,9 +105,9 @@ class Generator():
         return vectors
 
 
-    def attend(self, input_mat, state, w1dt):
-        w2 = dy.parameter(self.attention_w2)
-        v = dy.parameter(self.attention_v)
+    def attend(self, h, state, w1dt, attention_w2, attention_v):
+        w2 = dy.parameter(attention_w2)
+        v = dy.parameter(attention_v)
 
         # input_mat: (encoder_state x seqlen) => input vecs concatenated as cols
         # w1dt: (attdim x seqlen)
@@ -96,29 +117,67 @@ class Generator():
         unnormalized = dy.transpose(v * dy.tanh(dy.colwise_add(w1dt, w2dt)))
         att_weights = dy.softmax(unnormalized)
         # context: (encoder_state)
-        context = input_mat * att_weights
+        context = h * att_weights
         return context
 
 
-    def decode(self, vectors, output, entity):
+    def hier_attend(self, context_pre, context_pos, state):
+        w2 = dy.parameter(self.hier_w2)
+        v = dy.parameter(self.hier_v)
+
+        w2dt = w2 * dy.concatenate(list(state.s()))
+
+        # context_pre
+        w1_pre = dy.parameter(self.hier_w1_pre)
+        w1dt_pre = w1_pre * context_pre
+        energy_pre = dy.transpose(v * dy.tanh(dy.colwise_add(w1dt_pre, w2dt)))
+
+        w_pre = dy.parameter(self.hier_w_pre)
+        wdt_pre = w_pre * context_pre
+
+        # context_pos
+        w1_pos = dy.parameter(self.hier_w1_pos)
+        w1dt_pos = w1_pos * context_pos
+        energy_pos = dy.transpose(v * dy.tanh(dy.colwise_add(w1dt_pos, w2dt)))
+
+        w_pos = dy.parameter(self.hier_w_pos)
+        wdt_pos = w_pos * context_pos
+
+        beta = dy.softmax(dy.concatenate([energy_pre, energy_pos]))
+        wdt = dy.concatenate_cols([wdt_pre, wdt_pos])
+        context = wdt * beta
+        return context
+
+
+    def decode(self, pre_encoded, pos_encoded, output, entity):
         output = list(output)
         output = [self.output2int[c] for c in output]
 
         w = dy.parameter(self.decoder_w)
         b = dy.parameter(self.decoder_b)
-        w1 = dy.parameter(self.attention_w1)
-        input_mat = dy.concatenate_cols(vectors)
-        w1dt = None
+
+        w1_pre = dy.parameter(self.attention_w1_pre)
+        h_pre = dy.concatenate_cols(pre_encoded)
+        w1dt_pre = None
+
+        w1_pos = dy.parameter(self.attention_w1_pos)
+        h_pos = dy.concatenate_cols(pos_encoded)
+        w1dt_pos = None
 
         last_output_embeddings = self.output_lookup[self.output2int[self.EOS]]
         entity_embedding = self.input_lookup[self.input2int[entity]]
-        s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.STATE_SIZE*4), last_output_embeddings, entity_embedding]))
+        s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.STATE_SIZE*2), last_output_embeddings, entity_embedding]))
         loss = []
 
         for word in output:
             # w1dt can be computed and cached once for the entire decoding phase
-            w1dt = w1dt or w1 * input_mat
-            vector = dy.concatenate([self.attend(input_mat, s, w1dt), last_output_embeddings, entity_embedding])
+            w1dt_pre = w1dt_pre or w1_pre * h_pre
+            w1dt_pos = w1dt_pos or w1_pos * h_pos
+
+            attention_pre = self.attend(h_pre, s, w1dt_pre, dy.parameter(self.attention_w2_pre), dy.parameter(self.attention_v_pre))
+            attention_pos = self.attend(h_pos, s, w1dt_pos, dy.parameter(self.attention_w2_pos), dy.parameter(self.attention_v_pos))
+
+            vector = dy.concatenate([self.hier_attend(attention_pre, attention_pos, s), last_output_embeddings, entity_embedding])
             s = s.add_input(vector)
             out_vector = w * s.output() + b
             probs = dy.softmax(out_vector)
@@ -135,25 +194,33 @@ class Generator():
         embedded = self.embed_sentence(pos_context)
         pos_encoded = self.encode_sentence(self.encpos_fwd_lstm, self.encpos_bwd_lstm, embedded)
 
-        encoded = [dy.concatenate(list(p)) for p in zip(pre_encoded, pos_encoded)]
-
         w = dy.parameter(self.decoder_w)
         b = dy.parameter(self.decoder_b)
-        w1 = dy.parameter(self.attention_w1)
-        input_mat = dy.concatenate_cols(encoded)
-        w1dt = None
+
+        w1_pre = dy.parameter(self.attention_w1_pre)
+        h_pre = dy.concatenate_cols(pre_encoded)
+        w1dt_pre = None
+
+        w1_pos = dy.parameter(self.attention_w1_pos)
+        h_pos = dy.concatenate_cols(pos_encoded)
+        w1dt_pos = None
 
         last_output_embeddings = self.output_lookup[self.input2int[self.EOS]]
         entity_embedding = self.input_lookup[self.input2int[entity]]
-        s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.STATE_SIZE*4), last_output_embeddings, entity_embedding]))
+        s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.STATE_SIZE*2), last_output_embeddings, entity_embedding]))
 
         out = ''
         count_EOS = 0
         for i in range(len(pre_context)*2):
             if count_EOS == 2: break
             # w1dt can be computed and cached once for the entire decoding phase
-            w1dt = w1dt or w1 * input_mat
-            vector = dy.concatenate([self.attend(input_mat, s, w1dt), last_output_embeddings, entity_embedding])
+            w1dt_pre = w1dt_pre or w1_pre * h_pre
+            w1dt_pos = w1dt_pos or w1_pos * h_pos
+
+            attention_pre = self.attend(h_pre, s, w1dt_pre, dy.parameter(self.attention_w2_pre), dy.parameter(self.attention_v_pre))
+            attention_pos = self.attend(h_pos, s, w1dt_pos, dy.parameter(self.attention_w2_pos), dy.parameter(self.attention_v_pos))
+
+            vector = dy.concatenate([self.hier_attend(attention_pre, attention_pos, s), last_output_embeddings, entity_embedding])
             s = s.add_input(vector)
             out_vector = w * s.output() + b
             probs = dy.softmax(out_vector).vec_value()
@@ -175,8 +242,7 @@ class Generator():
         embedded = self.embed_sentence(pos_context)
         pos_encoded = self.encode_sentence(self.encpos_fwd_lstm, self.encpos_bwd_lstm, embedded)
 
-        encoded = [dy.concatenate(list(p)) for p in zip(pre_encoded, pos_encoded)]
-        return self.decode(encoded, refex, entity)
+        return self.decode(pre_encoded, pos_encoded, refex, entity)
 
 
     def validate(self, save=False):
@@ -233,6 +299,7 @@ class Generator():
             f.write('\n')
         f.close()
 
+
     def train(self, config):
         self.init(config)
 
@@ -240,7 +307,8 @@ class Generator():
         trainer = dy.AdadeltaTrainer(self.model)
 
         prev_acc, repeat = 0.0, 0
-        for epoch in range(50):
+        epochs = 50
+        for epoch in range(epochs):
             dy.renew_cg()
             losses = []
             closs = 0.0
@@ -252,14 +320,14 @@ class Generator():
                 loss = self.get_loss(pre_context, pos_context, refex, entity)
                 losses.append(loss)
 
-                if len(losses) == 40:
+                if len(losses) == epochs:
                     loss = dy.esum(losses)
                     closs += loss.value()
                     loss.backward()
                     trainer.update()
                     dy.renew_cg()
 
-                    print("Epoch: {0} \t Loss: {1}".format(epoch, (closs / 40)), end='     \r')
+                    print("Epoch: {0} \t Loss: {1}".format(epoch, (closs / epochs)), end='     \r')
                     losses = []
                     closs = 0.0
 
@@ -272,7 +340,7 @@ class Generator():
             prev_acc = round(num/dem, 2)
 
         self.validate(True)
-        self.test()
+        # self.test()
         fname = 'data/models/' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1]
         self.model.save(fname)
 
@@ -287,10 +355,10 @@ if __name__ == '__main__':
         {'LSTM_NUM_OF_LAYERS':2, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
         {'LSTM_NUM_OF_LAYERS':2, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2},
         {'LSTM_NUM_OF_LAYERS':2, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
-        {'LSTM_NUM_OF_LAYERS':3, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2},
-        {'LSTM_NUM_OF_LAYERS':3, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
-        {'LSTM_NUM_OF_LAYERS':3, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2},
-        {'LSTM_NUM_OF_LAYERS':3, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3}
+        {'LSTM_NUM_OF_LAYERS':3, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2},
+        {'LSTM_NUM_OF_LAYERS':3, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3},
+        {'LSTM_NUM_OF_LAYERS':3, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2},
+        {'LSTM_NUM_OF_LAYERS':3, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3}
     ]
 
     Generator(configs)

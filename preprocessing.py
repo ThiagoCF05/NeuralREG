@@ -8,6 +8,7 @@ Description:
 """
 
 import copy
+import os
 import random
 import re
 import sys
@@ -16,117 +17,52 @@ sys.path.append('/home/tcastrof/workspace/stanford_corenlp_pywrapper')
 
 from stanford_corenlp_pywrapper import CoreNLP
 
-class ManualDelexicalizer(object):
-    def __init__(self, fname, _set='train'):
+from db.model import *
+
+class Preprocessing(object):
+    def __init__(self, ftrain, fdev):
         self.proc = CoreNLP('ssplit')
-        self._set = _set
+        self.ftrain = ftrain
+        self.fdev = fdev
 
-        f = open(fname)
-        doc = f.read().decode('utf-8')
-        f.close()
+        self.trainset()
 
-        doc = doc.split((50*'*')+'\n')
-
-        print('Doc size: ', len(doc))
-
-        data = []
+    def trainset(self):
         input_vocab, output_vocab = set(), set()
-        for entry in doc:
-            entry = entry.split('\n\n')
+        train, dev = [], []
+        train_info, dev_info = [], []
 
-            try:
-                _, entryId, size, semcategory = entry[0].replace('\n', '').split()
+        dirs = filter(lambda x: x != '.DS_Store', os.listdir(self.ftrain))
+        for path in dirs:
+            dirs2 = filter(lambda x: x != '.DS_Store', os.listdir(os.path.join(self.ftrain, path)))
+            for fname in dirs2:
+                f = open(os.path.join(self.ftrain, path, fname))
+                doc = f.read().decode('utf-8')
+                f.close()
 
-                entity_map = dict(map(lambda entity: entity.split(' | '), entry[2].replace('\nENTITY MAP\n', '').split('\n')))
-                entity_map = self.normalize_entities(entity_map)
+                doc = doc.split((50*'*')+'\n')
 
-                lexEntries = entry[3].replace('\nLEX\n', '').split('\n-')[:-1]
+                print('Doc size: ', len(doc))
 
-                for lex in lexEntries:
-                    if lex[0] == '\n':
-                        lex = lex[1:]
-                    lex = lex.split('\n')
+                data, in_vocab, out_vocab = self.annotation_parse(doc)
 
-                    text = lex[1].replace('TEXT: ', '').strip()
-                    template = lex[2].replace('TEMPLATE: ', '')
-                    correct = lex[3].replace('CORRECT: ', '').strip()
-                    comment = lex[4].replace('COMMENT: ', '').strip()
+                input_vocab = input_vocab.union(in_vocab)
+                output_vocab = output_vocab.union(out_vocab)
 
-                    if comment in ['g', 'good']:
-                        print(template)
-                        print(10 * '-')
+                train_size = int(0.9 * len(data))
 
-                        text, template = self.parse(text, template)
-                        references, in_vocab, out_vocab = self._get_refexes(text, template, entity_map)
-                        data.extend(references)
-                        input_vocab = input_vocab.union(in_vocab)
-                        output_vocab = output_vocab.union(out_vocab)
-                    elif correct != '' and comment != 'wrong':
-                        print(correct)
-                        print(10 * '-')
-                        text, template = self.parse(text, correct)
-                        references, in_vocab, out_vocab = self._get_refexes(text, template, entity_map)
-                        data.extend(references)
-                        input_vocab = input_vocab.union(in_vocab)
-                        output_vocab = output_vocab.union(out_vocab)
-            except:
-                print('ERROR')
+                random.shuffle(data)
+                train.extend(data[:train_size])
+                dev.extend(data[train_size:])
 
-        train_size = int(0.6 * len(data))
-        dev_size = int(0.2 * len(data))
+                info = len(train) * [path + ' ' + fname]
+                train_info.extend(info)
 
-        random.shuffle(data)
-        train = data[:train_size]
-        dev = data[train_size:train_size+dev_size]
-        test = data[train_size+dev_size:]
+                info = len(dev) * [path + ' ' + fname]
+                dev_info.extend(info)
 
-        pre_context = '\n'.join(map(lambda x: x['pre_context'], train)).encode('utf-8')
-        with open('data/train/pre_context.txt', 'w') as f:
-            f.write(pre_context)
-        pos_context = '\n'.join(map(lambda x: x['pos_context'], train)).encode('utf-8')
-        with open('data/train/pos_context.txt', 'w') as f:
-            f.write(pos_context)
-        entity = '\n'.join(map(lambda x: x['entity'], train)).encode('utf-8')
-        with open('data/train/entity.txt', 'w') as f:
-            f.write(entity)
-        refex = '\n'.join(map(lambda x: x['refex'], train)).encode('utf-8')
-        with open('data/train/refex.txt', 'w') as f:
-            f.write(refex)
-        size = '\n'.join(map(lambda x: str(x['size']), train))
-        with open('data/train/size.txt', 'w') as f:
-            f.write(size)
-
-        pre_context = '\n'.join(map(lambda x: x['pre_context'], dev)).encode('utf-8')
-        with open('data/dev/pre_context.txt', 'w') as f:
-            f.write(pre_context)
-        pos_context = '\n'.join(map(lambda x: x['pos_context'], dev)).encode('utf-8')
-        with open('data/dev/pos_context.txt', 'w') as f:
-            f.write(pos_context)
-        entity = '\n'.join(map(lambda x: x['entity'], dev)).encode('utf-8')
-        with open('data/dev/entity.txt', 'w') as f:
-            f.write(entity)
-        refex = '\n'.join(map(lambda x: x['refex'], dev)).encode('utf-8')
-        with open('data/dev/refex.txt', 'w') as f:
-            f.write(refex)
-        size = '\n'.join(map(lambda x: str(x['size']), dev))
-        with open('data/dev/size.txt', 'w') as f:
-            f.write(size)
-
-        pre_context = '\n'.join(map(lambda x: x['pre_context'], test)).encode('utf-8')
-        with open('data/test/pre_context.txt', 'w') as f:
-            f.write(pre_context)
-        pos_context = '\n'.join(map(lambda x: x['pos_context'], test)).encode('utf-8')
-        with open('data/test/pos_context.txt', 'w') as f:
-            f.write(pos_context)
-        entity = '\n'.join(map(lambda x: x['entity'], test)).encode('utf-8')
-        with open('data/test/entity.txt', 'w') as f:
-            f.write(entity)
-        refex = '\n'.join(map(lambda x: x['refex'], test)).encode('utf-8')
-        with open('data/test/refex.txt', 'w') as f:
-            f.write(refex)
-        size = '\n'.join(map(lambda x: str(x['size']), test))
-        with open('data/test/size.txt', 'w') as f:
-            f.write(size)
+        self.write('data/train', train, train_info)
+        self.write('data/dev', dev, dev_info)
 
         with open('data/input_vocab.txt', 'w') as f:
             f.write(('\n'.join(list(input_vocab))).encode("utf-8"))
@@ -134,6 +70,32 @@ class ManualDelexicalizer(object):
         with open('data/output_vocab.txt', 'w') as f:
             f.write(('\n'.join(list(output_vocab))).encode("utf-8"))
 
+    def write(self, fname, instances, info):
+        pre_context = '\n'.join(map(lambda x: x['pre_context'], instances)).encode('utf-8')
+        with open(os.path.join(fname, 'pre_context.txt'), 'w') as f:
+            f.write(pre_context)
+        pos_context = '\n'.join(map(lambda x: x['pos_context'], instances)).encode('utf-8')
+        with open(os.path.join(fname, 'pos_context.txt'), 'w') as f:
+            f.write(pos_context)
+        entity = '\n'.join(map(lambda x: x['entity'], instances)).encode('utf-8')
+        with open(os.path.join(fname, 'entity.txt'), 'w') as f:
+            f.write(entity)
+        refex = '\n'.join(map(lambda x: x['refex'], instances)).encode('utf-8')
+        with open(os.path.join(fname, 'refex.txt'), 'w') as f:
+            f.write(refex)
+        size = '\n'.join(map(lambda x: str(x['size']), instances))
+        with open(os.path.join(fname, 'size.txt'), 'w') as f:
+            f.write(size)
+        info = '\n'.join(info).encode('utf-8')
+        with open(os.path.join(fname, 'info.txt'), 'w') as f:
+            f.write(info)
+
+    def check_entity(self, entity):
+        f = Entity.objects(name=entity.strip(), type='wiki')
+        if f.count() > 0:
+            return '_'.join(entity.replace('\"', '').replace('\'', '').lower().split())
+        else:
+            return ''
 
     def normalize_entities(self, entity_map):
         for tag, entity in entity_map.iteritems():
@@ -207,15 +169,13 @@ class ManualDelexicalizer(object):
                     template = template.replace(tag, refex, 1)
 
                     # Do not include numbers
-                    try:
-                        float(refex)
-                        context = context.replace(tag, refex, 1)
-                    except:
+                    normalized = self.check_entity(entity_map[tag])
+                    if normalized != '':
                         refex = ['eos'] + refex.split() + ['eos']
                         row = {
-                            'pre_context':pre_context,
-                            'pos_context':pos_context,
-                            'entity':entity_map[tag],
+                            'pre_context':pre_context.replace('@', ''),
+                            'pos_context':pos_context.replace('@', ''),
+                            'entity':normalized,
                             'refex':' '.join(refex),
                             'size':len(entity_map.keys())
                         }
@@ -223,14 +183,62 @@ class ManualDelexicalizer(object):
                         output_vocab = output_vocab.union(set(refex))
                         input_vocab = input_vocab.union(set(pre_context.split()))
                         input_vocab = input_vocab.union(set(pos_context.split()))
-                        context = context.replace(tag, entity_map[tag], 1)
+
+                    context = context.replace(tag, entity_map[tag], 1)
                 else:
                     template = template.replace(tag, ' ', 1)
                     context = context.replace(tag, entity_map[tag], 1)
 
         return data, input_vocab, output_vocab
 
-    def parse(self, text, template):
+    def annotation_parse(self, doc):
+        data = []
+        input_vocab, output_vocab = set(), set()
+        for entry in doc:
+            entry = entry.split('\n\n')
+
+            try:
+                _, entryId, size, semcategory = entry[0].replace('\n', '').split()
+
+                entity_map = dict(map(lambda entity: entity.split(' | '), entry[2].replace('\nENTITY MAP\n', '').split('\n')))
+                # entity_map = self.normalize_entities(entity_map)
+
+                lexEntries = entry[3].replace('\nLEX\n', '').split('\n-')[:-1]
+
+                for lex in lexEntries:
+                    if lex[0] == '\n':
+                        lex = lex[1:]
+                    lex = lex.split('\n')
+
+                    text = lex[1].replace('TEXT: ', '').strip()
+                    template = lex[2].replace('TEMPLATE: ', '')
+                    correct = lex[3].replace('CORRECT: ', '').strip()
+                    comment = lex[4].replace('COMMENT: ', '').strip()
+
+                    if comment in ['g', 'good']:
+                        print('{}\r'.format(template))
+
+                        text, template = self.stanford_parse(text, template)
+                        references, in_vocab, out_vocab = self._get_refexes(text, template, entity_map)
+                        data.extend(references)
+                        input_vocab = input_vocab.union(in_vocab)
+                        output_vocab = output_vocab.union(out_vocab)
+                    elif correct != '' and comment != 'wrong':
+                        if correct.strip() == 'CORRECT:':
+                            correct = template
+                        print('{}\r'.format(correct))
+                        text, template = self.stanford_parse(text, correct)
+                        references, in_vocab, out_vocab = self._get_refexes(text, template, entity_map)
+                        data.extend(references)
+                        input_vocab = input_vocab.union(in_vocab)
+                        output_vocab = output_vocab.union(out_vocab)
+            except:
+                print('ERROR')
+
+        return data, input_vocab, output_vocab
+
+
+    def stanford_parse(self, text, template):
         '''
         Obtain information of references and their referring expressions
         :param text:
@@ -253,4 +261,6 @@ class ManualDelexicalizer(object):
         return text, template
 
 if __name__ == '__main__':
-    ManualDelexicalizer('data/data.txt')
+    ftrain = 'annotation/train'
+    fdev = 'annotation/dev'
+    Preprocessing(ftrain, fdev)
