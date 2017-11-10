@@ -183,6 +183,7 @@ class Preprocessing(object):
                         output_vocab = output_vocab.union(set(refex))
                         input_vocab = input_vocab.union(set(pre_context.split()))
                         input_vocab = input_vocab.union(set(pos_context.split()))
+                        input_vocab = input_vocab.union(set([normalized]))
 
                     context = context.replace(tag, entity_map[tag], 1)
                 else:
