@@ -174,8 +174,8 @@ class Generator():
             w1dt_pre = w1dt_pre or w1_pre * h_pre
             w1dt_pos = w1dt_pos or w1_pos * h_pos
 
-            attention_pre = self.attend(h_pre, s, w1dt_pre, dy.parameter(self.attention_w2_pre), dy.parameter(self.attention_v_pre))
-            attention_pos = self.attend(h_pos, s, w1dt_pos, dy.parameter(self.attention_w2_pos), dy.parameter(self.attention_v_pos))
+            attention_pre = self.attend(h_pre, s, w1dt_pre, self.attention_w2_pre, self.attention_v_pre)
+            attention_pos = self.attend(h_pos, s, w1dt_pos, self.attention_w2_pos, self.attention_v_pos)
 
             vector = dy.concatenate([self.hier_attend(attention_pre, attention_pos, s), last_output_embeddings, entity_embedding])
             s = s.add_input(vector)

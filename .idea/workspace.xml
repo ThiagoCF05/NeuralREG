@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0ea0bc8-9834-485a-926b-8fd7a4b15589" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/annotation/train/info" afterPath="$PROJECT_DIR$/annotation/info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev/entity.txt" afterPath="$PROJECT_DIR$/data/dev/entity.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev/pos_context.txt" afterPath="$PROJECT_DIR$/data/dev/pos_context.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev/pre_context.txt" afterPath="$PROJECT_DIR$/data/dev/pre_context.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev/refex.txt" afterPath="$PROJECT_DIR$/data/dev/refex.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev/size.txt" afterPath="$PROJECT_DIR$/data/dev/size.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/input_vocab.txt" afterPath="$PROJECT_DIR$/data/input_vocab.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/output_vocab.txt" afterPath="$PROJECT_DIR$/data/output_vocab.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/entity.txt" afterPath="$PROJECT_DIR$/data/train/entity.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/pos_context.txt" afterPath="$PROJECT_DIR$/data/train/pos_context.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/pre_context.txt" afterPath="$PROJECT_DIR$/data/train/pre_context.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/refex.txt" afterPath="$PROJECT_DIR$/data/train/refex.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/size.txt" afterPath="$PROJECT_DIR$/data/train/size.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generator.py" afterPath="$PROJECT_DIR$/generator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/preprocessing.py" afterPath="$PROJECT_DIR$/preprocessing.py" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -38,13 +22,12 @@
       <file leaf-file-name="generator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="329" column="81" lean-forward="false" selection-start-line="329" selection-start-column="81" selection-end-line="329" selection-end-column="81" />
+            <state relative-caret-position="391">
+              <caret line="177" column="104" lean-forward="false" selection-start-line="177" selection-start-column="104" selection-end-line="177" selection-end-column="104" />
               <folding>
-                <element signature="e#6167#7788#0" expanded="false" />
-                <element signature="e#7857#9923#0" expanded="false" />
-                <element signature="e#10429#11565#0" expanded="false" />
-                <element signature="e#11596#12395#0" expanded="false" />
+                <element signature="e#7801#9867#0" expanded="false" />
+                <element signature="e#10373#11509#0" expanded="false" />
+                <element signature="e#11540#12339#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1201,13 +1184,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="329" column="81" lean-forward="false" selection-start-line="329" selection-start-column="81" selection-end-line="329" selection-end-column="81" />
+        <state relative-caret-position="391">
+          <caret line="177" column="104" lean-forward="false" selection-start-line="177" selection-start-column="104" selection-end-line="177" selection-end-column="104" />
           <folding>
-            <element signature="e#6167#7788#0" expanded="false" />
-            <element signature="e#7857#9923#0" expanded="false" />
-            <element signature="e#10429#11565#0" expanded="false" />
-            <element signature="e#11596#12395#0" expanded="false" />
+            <element signature="e#7801#9867#0" expanded="false" />
+            <element signature="e#10373#11509#0" expanded="false" />
+            <element signature="e#11540#12339#0" expanded="false" />
           </folding>
         </state>
       </provider>
