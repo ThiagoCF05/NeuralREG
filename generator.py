@@ -205,7 +205,7 @@ class Generator():
         h_pos = dy.concatenate_cols(pos_encoded)
         w1dt_pos = None
 
-        last_output_embeddings = self.output_lookup[self.input2int[self.EOS]]
+        last_output_embeddings = self.output_lookup[self.output2int[self.EOS]]
         entity_embedding = self.input_lookup[self.input2int[entity]]
         s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.STATE_SIZE*2), last_output_embeddings, entity_embedding]))
 
