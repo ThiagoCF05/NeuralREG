@@ -327,7 +327,7 @@ class Generator():
                     trainer.update()
                     dy.renew_cg()
 
-                    print("Epoch: {0} \t Loss: {1}".format(epoch, (closs / batch)))
+                    print("Epoch: {0} \t Loss: {1}".format(epoch, (closs / batch)), end='       \r')
                     losses = []
                     closs = 0.0
 
