@@ -245,10 +245,17 @@ class Generator():
         return self.decode(pre_encoded, pos_encoded, refex, entity)
 
 
-    def validate(self, save=False):
-        if save:
-            fname = 'data/results/dev_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1]
-            f = open(fname, 'w')
+    def write(self, fname, outputs):
+        f = open(fname, 'w')
+
+        for output in outputs:
+            f.write(output)
+            f.write('\n')
+
+        f.close()
+
+    def validate(self):
+        results = []
         num, dem = 0.0, 0.0
         for i, devinst in enumerate(self.devset['refex']):
             pre_context = self.devset['pre_context'][i]
@@ -265,24 +272,19 @@ class Generator():
                 print ("Refex: ", refex, "\t Output: ", output)
                 print(10 * '-')
 
-            if save:
-                f.write(output)
-                f.write('\n')
+            results.append(output)
 
 
             if i % 40:
                 dy.renew_cg()
-        print("Dev: ", str(num/dem))
 
-        if save:
-            f.close()
-        return num, dem
+        return results, num, dem
 
 
     def test(self):
+        results = []
+
         dy.renew_cg()
-        fname = 'data/results/test_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1]
-        f = open(fname, 'w')
         for i, testinst in enumerate(self.testset['refex']):
             pre_context = self.testset['pre_context'][i]
             pos_context = self.testset['pos_context'][i]
@@ -295,20 +297,18 @@ class Generator():
             if i % 40:
                 dy.renew_cg()
 
-            f.write(output)
-            f.write('\n')
-        f.close()
+            results.append(output)
+        return results
 
 
     def train(self, config):
         self.init(config)
 
-        # trainer = dy.SimpleSGDTrainer(model)
         trainer = dy.AdadeltaTrainer(self.model)
 
-        prev_acc, repeat = 0.0, 0
+        best_acc, repeat = 0.0, 0
         batch = 50
-        for epoch in range(50):
+        for epoch in range(40):
             dy.renew_cg()
             losses = []
             closs = 0.0
@@ -327,19 +327,31 @@ class Generator():
                     trainer.update()
                     dy.renew_cg()
 
-                    print("Epoch: {0} \t Loss: {1}".format(epoch, (closs / batch)), end='     \r')
+                    print("Epoch: {0} \t Loss: {1}".format(epoch, (closs / batch)))
                     losses = []
                     closs = 0.0
 
-            num, dem = self.validate()
+            outputs, num, dem = self.validate()
+            acc = round(float(num) / dem, 2)
 
-            if round(num/dem, 2) == prev_acc:
+            print("Dev acc: {0} \t Best acc: {1}".format(str(num/dem), best_acc))
+
+            # Saving the model with best accuracy
+            if best_acc == 0.0 or acc > best_acc:
+                best_acc = acc
+
+                fname = 'data/results/dev_best_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1]
+                self.write(fname, outputs)
+
+                fname = 'data/models/best_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1]
+                self.model.save(fname)
+            else:
                 repeat += 1
+
+            # In case the accuracy does not increase in 20 epochs, break the process
             if repeat == 20:
                 break
-            prev_acc = round(num/dem, 2)
 
-        self.validate(True)
         # self.test()
         fname = 'data/models/' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1]
         self.model.save(fname)
@@ -351,10 +363,14 @@ if __name__ == '__main__':
         {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
         {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2},
         {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
-        {'LSTM_NUM_OF_LAYERS':2, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2},
-        {'LSTM_NUM_OF_LAYERS':2, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
-        {'LSTM_NUM_OF_LAYERS':2, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2},
-        {'LSTM_NUM_OF_LAYERS':2, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3},
+        {'LSTM_NUM_OF_LAYERS':2, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2},
+        {'LSTM_NUM_OF_LAYERS':2, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3},
+        {'LSTM_NUM_OF_LAYERS':2, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2},
+        {'LSTM_NUM_OF_LAYERS':2, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3},
         {'LSTM_NUM_OF_LAYERS':3, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2},
         {'LSTM_NUM_OF_LAYERS':3, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3},
         {'LSTM_NUM_OF_LAYERS':3, 'EMBEDDINGS_SIZE':256, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2},
