@@ -52,10 +52,10 @@ def load_data(character=False):
         entity = f.read().split('\n')
 
     if character:
-        with open('data/train/refex.txt') as f:
+        with open('data/dev/refex.txt') as f:
             refex = map(lambda x: ['eos'] + list(x.replace('eos', '').strip()) + ['eos'], f.read().split('\n'))
     else:
-        with open('data/train/refex.txt') as f:
+        with open('data/dev/refex.txt') as f:
             refex = map(lambda x: x.split(), f.read().split('\n'))
 
     with open('data/dev/size.txt') as f:
@@ -80,10 +80,10 @@ def load_data(character=False):
         entity = f.read().split('\n')
 
     if character:
-        with open('data/train/refex.txt') as f:
+        with open('data/test/refex.txt') as f:
             refex = map(lambda x: ['eos'] + list(x.replace('eos', '').strip()) + ['eos'], f.read().split('\n'))
     else:
-        with open('data/train/refex.txt') as f:
+        with open('data/test/refex.txt') as f:
             refex = map(lambda x: x.split(), f.read().split('\n'))
 
     with open('data/test/size.txt') as f:
@@ -98,3 +98,5 @@ def load_data(character=False):
     }
 
     return vocab, trainset, devset, testset
+
+load_data(True)
