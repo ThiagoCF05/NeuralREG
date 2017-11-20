@@ -1,0 +1,1931 @@
+
+Entry: Id58 1 University
+
+TRIPLES
+Visvesvaraya_Technological_University | city | Belgaum
+
+
+ENTITY MAP
+AGENT-1 | Visvesvaraya_Technological_University
+PATIENT-1 | Belgaum
+
+
+LEX
+Id1
+TEXT: The Visvesvaraya Technologiccal University is in the city of Belgaum.
+TEMPLATE: AGENT-1 is in the city of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Visvesvaraya Technological University is in the city of Belgaum.
+TEMPLATE: AGENT-1 is in the city of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Visvesvaraya Technological University is located in Belgaum.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id56 1 University
+
+TRIPLES
+Switzerland | legislature | Federal_Assembly_(Switzerland)
+
+
+ENTITY MAP
+AGENT-1 | Switzerland
+PATIENT-1 | Federal_Assembly_(Switzerland)
+
+
+LEX
+Id1
+TEXT: Switzerland's legislature is formed in the Federal Assembly.
+TEMPLATE: AGENT-1 's legislature is formed in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Switzerland's legislature is known as the Federal Assembly.
+TEMPLATE: AGENT-1 's legislature is known as PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Federal Assembly legislates in Switzerland.
+TEMPLATE: PATIENT-1 legislates in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id53 1 University
+
+TRIPLES
+Switzerland | anthem | Swiss_Psalm
+
+
+ENTITY MAP
+AGENT-1 | Switzerland
+PATIENT-1 | Swiss_Psalm
+
+
+LEX
+Id1
+TEXT: The Swiss Psalm is the anthem of Switzerland.
+TEMPLATE: PATIENT-1 is the anthem of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The anthem of Switzerland is called the Swiss Psalm.
+TEMPLATE: The anthem of AGENT-1 is called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id50 1 University
+
+TRIPLES
+School of Business and Social Sciences at the Aarhus University | city | Aarhus
+
+
+ENTITY MAP
+AGENT-1 | School of Business and Social Sciences at the Aarhus University
+PATIENT-1 | Aarhus
+
+
+LEX
+Id1
+TEXT: The Aarhus University School of Business and Social Sciences is in the city of Aarhus.
+TEMPLATE: The PATIENT-1 University School of AGENT-1 is in the city of PATIENT-1 .
+CORRECT: AGENT-1 is in the city of PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The School of Business and Social Sciences at Aarhus University is situated in the city of Aarhus.
+TEMPLATE: The School of AGENT-1 at PATIENT-1 University is situated in the city of PATIENT-1 .
+CORRECT: AGENT-1 is situated in the city of PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: The School of Business and Social Sciences at the Aarhus University is located in the city of Aarhus.
+TEMPLATE: AGENT-1 is located in the city of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id49 1 University
+
+TRIPLES
+School of Business and Social Sciences at the Aarhus University | affiliation | European_University_Association
+
+
+ENTITY MAP
+AGENT-1 | School of Business and Social Sciences at the Aarhus University
+PATIENT-1 | European_University_Association
+
+
+LEX
+Id1
+TEXT: The Aarhus University School of Business and Social Sciences is affiliated with the European University Association.
+TEMPLATE: The Aarhus University School of AGENT-1 is affiliated with PATIENT-1 .
+CORRECT: AGENT-1 is affiliated with PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The School of Business and Social Sciences at the Aarhus University is affiliated to European University Association.
+TEMPLATE: AGENT-1 is affiliated to PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The School of Business and Social Sciences at Aarhus University is affiliated to the European University Association.
+TEMPLATE: AGENT-1 is affiliated to PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id4
+TEXT: The School of Business and Social Sciences at the Aarhus University is affiliated with the European University Association.
+TEMPLATE: AGENT-1 is affiliated with PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id47 1 University
+
+TRIPLES
+Romania | leaderName | Klaus_Iohannis
+
+
+ENTITY MAP
+AGENT-1 | Romania
+PATIENT-1 | Klaus_Iohannis
+
+
+LEX
+Id1
+TEXT: The leader of Romania is Klaus Iohannis.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Romania's leader is Klaus Iohannis.
+TEMPLATE: AGENT-1 's leader is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id46 1 University
+
+TRIPLES
+Romania | ethnicGroup | Germans_of_Romania
+
+
+ENTITY MAP
+AGENT-1 | Romania
+PATIENT-1 | Germans_of_Romania
+
+
+LEX
+Id1
+TEXT: One of the ethnic groups in Romania are the Germans of Romania.
+TEMPLATE: One of the ethnic groups in AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Germans of Romania is an ethnic group in Romania.
+TEMPLATE: PATIENT-1 is an ethnic group in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Germans of Romania are an ethnic group in Romania.
+TEMPLATE: PATIENT-1 are an ethnic group in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id4
+TEXT: Romania has many ethnic groups one of which are Germans.
+TEMPLATE: AGENT-1 has many ethnic groups one of which are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id44 1 University
+
+TRIPLES
+Kerala | leaderName | Kochi
+
+
+ENTITY MAP
+AGENT-1 | Kerala
+PATIENT-1 | Kochi
+
+
+LEX
+Id1
+TEXT: Kochi is the leader of Kerala.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The leader of Kerala is Kochi.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Kerala leader is in Kochi.
+TEMPLATE: The AGENT-1 leader is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id43 1 University
+
+TRIPLES
+Karnataka | has to its west | Arabian_Sea
+
+
+ENTITY MAP
+AGENT-1 | Karnataka
+PATIENT-1 | Arabian_Sea
+
+
+LEX
+Id1
+TEXT: The Arabian Sea is west of Karnataka.
+TEMPLATE: PATIENT-1 is west of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The west of Karnataka is the Arabian Sea.
+TEMPLATE: The west of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: To the west Karnataka borders on the Arabian Sea.
+TEMPLATE: To the west AGENT-1 borders on PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id39 1 University
+
+TRIPLES
+European_University_Association | headquarters | Brussels
+
+
+ENTITY MAP
+AGENT-1 | European_University_Association
+PATIENT-1 | Brussels
+
+
+LEX
+Id1
+TEXT: The headquarters of the European University Association is in Brussels.
+TEMPLATE: The headquarters of AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The European University Associatian headquarter is in Brussels.
+TEMPLATE: AGENT-1 headquarter is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id38 1 University
+
+TRIPLES
+Denmark | religion | Church_of_Denmark
+
+
+ENTITY MAP
+AGENT-1 | Denmark
+PATIENT-1 | Church_of_Denmark
+
+
+LEX
+Id1
+TEXT: The official religion of Denmark is the Church of Denmark.
+TEMPLATE: The official religion of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Denmark's religion is led by Church of Denmark.
+TEMPLATE: AGENT-1 's religion is led by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Church of Denmark is the religion of Denmark.
+TEMPLATE: PATIENT-1 is the religion of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id35 1 University
+
+TRIPLES
+Bangalore | founder | Kempe_Gowda_I
+
+
+ENTITY MAP
+AGENT-1 | Bangalore
+PATIENT-1 | Kempe_Gowda_I
+
+
+LEX
+Id1
+TEXT: Kempe Gowda I founded Bangalore.
+TEMPLATE: PATIENT-1 founded AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The founder of Bangalore was Kempe Gowda.
+TEMPLATE: The founder of AGENT-1 was PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Kempe Gowda I was the founder of Bangalore.
+TEMPLATE: PATIENT-1 was the founder of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id31 1 University
+
+TRIPLES
+Acharya_Institute_of_Technology | sportsOffered | Tennis
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | Tennis
+
+
+LEX
+Id1
+TEXT: Tennis is one of the sports offered at the Acharya Institute of Technology.
+TEMPLATE: PATIENT-1 is one of the sports offered at AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Acharya Institute of Technology offers Tennis as a sport.
+TEMPLATE: AGENT-1 offers PATIENT-1 as a sport .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: One of the sports offered at the Acharya Institute of Technology is tennis.
+TEMPLATE: One of the sports offered at AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id4
+TEXT: The Acharya Institute of Technology offers sports including tennis.
+TEMPLATE: AGENT-1 offers sports including PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id41 1 University
+
+TRIPLES
+India | river | Ganges
+
+
+ENTITY MAP
+AGENT-1 | India
+PATIENT-1 | Ganges
+
+
+LEX
+Id1
+TEXT: The Ganges is a river in India.
+TEMPLATE: PATIENT-1 is a river in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Ganges is India's most well known river.
+TEMPLATE: PATIENT-1 is AGENT-1 's most well known river .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id40 1 University
+
+TRIPLES
+India | largestCity | Mumbai
+
+
+ENTITY MAP
+AGENT-1 | India
+PATIENT-1 | Mumbai
+
+
+LEX
+Id1
+TEXT: The largest city in India is Mumbai.
+TEMPLATE: The largest city in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Mumbai is India's largest city.
+TEMPLATE: PATIENT-1 is AGENT-1 's largest city .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id37 1 University
+
+TRIPLES
+Denmark | leaderTitle | Monarchy_of_Denmark
+
+
+ENTITY MAP
+AGENT-1 | Denmark
+PATIENT-1 | Monarchy_of_Denmark
+
+
+LEX
+Id1
+TEXT: Denmark is led by a Monarch.
+TEMPLATE: AGENT-1 is led by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Monarch of Denmark is the country's leader.
+TEMPLATE: PATIENT-1 of AGENT-1 is the country 's leader .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id34 1 University
+
+TRIPLES
+All_India_Council_for_Technical_Education | location | Mumbai
+
+
+ENTITY MAP
+AGENT-1 | All_India_Council_for_Technical_Education
+PATIENT-1 | Mumbai
+
+
+LEX
+Id1
+TEXT: All India Council for Technical Education is located in Mumbai.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The All India Council for Technical Education is located in Mumbai.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id24 1 University
+
+TRIPLES
+Acharya_Institute_of_Technology | established | 2000
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | 2000
+
+
+LEX
+Id1
+TEXT: The Acharya Institute of Technology was established in the year 2000.
+TEMPLATE: AGENT-1 was established in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Acharya Institute of Technology was established in 2000.
+TEMPLATE: AGENT-1 was established in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id17 1 University
+
+TRIPLES
+Accademia_di_Architettura_di_Mendrisio | location | Ticino
+
+
+ENTITY MAP
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | Ticino
+
+
+LEX
+Id1
+TEXT: The Accademia di Architettura di Mendrisio is located in Ticino.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Ticino is the location of the Accademia di Architettura di Mendrisio.
+TEMPLATE: PATIENT-1 is the location of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id16 1 University
+
+TRIPLES
+Accademia_di_Architettura_di_Mendrisio | established | 1996
+
+
+ENTITY MAP
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | 1996
+
+
+LEX
+Id1
+TEXT: The Accademia di Architettura di Mendrisio was established in 1996.
+TEMPLATE: AGENT-1 was established in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id15 1 University
+
+TRIPLES
+Accademia_di_Architettura_di_Mendrisio | dean | Mario_Botta
+
+
+ENTITY MAP
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | Mario_Botta
+
+
+LEX
+Id1
+TEXT: The dean of the Accademia di Architettura di Mendrisio is Mario Botta.
+TEMPLATE: The dean of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Accademia di Architettura di Mendrisio's dean is Mario Botta.
+TEMPLATE: AGENT-1 's dean is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id13 1 University
+
+TRIPLES
+Accademia_di_Architettura_di_Mendrisio | city | Mendrisio
+
+
+ENTITY MAP
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | Mendrisio
+
+
+LEX
+Id1
+TEXT: Accademia di Architettura di Mendrisio is located in the city of Mendrisio.
+TEMPLATE: AGENT-1 is located in the city of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Accademia di Architettura di Mendrisio is located in the city of Mendrisio.
+TEMPLATE: AGENT-1 is located in the city of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id11 1 University
+
+TRIPLES
+Aarhus | governmentType | Magistrate
+
+
+ENTITY MAP
+AGENT-1 | Aarhus
+PATIENT-1 | Magistrate
+
+
+LEX
+Id1
+TEXT: The type of government of Aarhus is magistrate.
+TEMPLATE: The type of government of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The city of Aarhus is governed by Magistrates.
+TEMPLATE: The city of AGENT-1 is governed by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id10 1 University
+
+TRIPLES
+AWH_Engineering_College | state | Kerala
+
+
+ENTITY MAP
+AGENT-1 | AWH_Engineering_College
+PATIENT-1 | Kerala
+
+
+LEX
+Id1
+TEXT: AWH Engineering College is located in Kerala state.
+TEMPLATE: AGENT-1 is located in PATIENT-1 state .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The AWH Engineering College is in the State of Kerala.
+TEMPLATE: AGENT-1 is in the State of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id9 1 University
+
+TRIPLES
+AWH_Engineering_College | established | 2001
+
+
+ENTITY MAP
+AGENT-1 | AWH_Engineering_College
+PATIENT-1 | 2001
+
+
+LEX
+Id1
+TEXT: The AWH Engineering College was established in 2001.
+TEMPLATE: AGENT-1 was established in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id8 1 University
+
+TRIPLES
+AWH_Engineering_College | country | India
+
+
+ENTITY MAP
+AGENT-1 | AWH_Engineering_College
+PATIENT-1 | India
+
+
+LEX
+Id1
+TEXT: AWH Engineering College is located in India.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id5 1 University
+
+TRIPLES
+1_Decembrie_1918_University | rector | "Breaz Valer Daniel"
+
+
+ENTITY MAP
+AGENT-1 | 1_Decembrie_1918_University
+PATIENT-1 | "Breaz Valer Daniel"
+
+
+LEX
+Id1
+TEXT: Breaz Valer Daniel is rector of the 1 Decembrie 1918 University.
+TEMPLATE: PATIENT-1 is rector of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The rector of the 1 Decembrie 1918 University is Breaz Valer Daniel.
+TEMPLATE: The rector of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id4 1 University
+
+TRIPLES
+1_Decembrie_1918_University | nickname | Uab
+
+
+ENTITY MAP
+AGENT-1 | 1_Decembrie_1918_University
+PATIENT-1 | Uab
+
+
+LEX
+Id1
+TEXT: The 1 Decembrie 1918 University has the nickname Uab.
+TEMPLATE: AGENT-1 has PATIENT-1 .
+CORRECT: AGENT-1 has the nickname PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id2 1 University
+
+TRIPLES
+1_Decembrie_1918_University | country | Romania
+
+
+ENTITY MAP
+AGENT-1 | 1_Decembrie_1918_University
+PATIENT-1 | Romania
+
+
+LEX
+Id1
+TEXT: The 1 Decembrie 1918 University is located in the country of Romania.
+TEMPLATE: AGENT-1 is located in the country of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The 1 Decembrie 1918 University is located in Romania.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id57 1 University
+
+TRIPLES
+Tennis | sportsGoverningBody | International_Tennis_Federation
+
+
+ENTITY MAP
+AGENT-1 | Tennis
+PATIENT-1 | International_Tennis_Federation
+
+
+LEX
+Id1
+TEXT: The sport Tennis has a Governing Body called the International Tennis Federation.
+TEMPLATE: AGENT-1 has a Governing Body called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The International Tennis Federation is the Governing Body for the tennis sport.
+TEMPLATE: PATIENT-1 is the Governing Body for AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The tennis sport is governed by the International Tennis Federation.
+TEMPLATE: AGENT-1 is governed by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id4
+TEXT: The International Tennis Federation is the Governing Body of the sport of tennis.
+TEMPLATE: PATIENT-1 is the Governing Body of the sport of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id5
+TEXT: The International Tennis Federation is the governing body of tennis.
+TEMPLATE: PATIENT-1 is the governing body of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id6
+TEXT: The sports governing body of tennis is the International Tennis Federation.
+TEMPLATE: The sports governing body of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id55 1 University
+
+TRIPLES
+Switzerland | leaderTitle | Federal_Chancellor_of_Switzerland
+
+
+ENTITY MAP
+AGENT-1 | Switzerland
+PATIENT-1 | Federal_Chancellor_of_Switzerland
+
+
+LEX
+Id1
+TEXT: The Federal Chancellor of Switzerland helps to lead the country.
+TEMPLATE: PATIENT-1 helps to lead AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Federal Chancellor of Switzerland is the title of the leader of Switzerland.
+TEMPLATE: PATIENT-1 is the title of the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The leader of Switzerland is titled the Federal Chancellor of Switzerland.
+TEMPLATE: The leader of AGENT-1 is titled PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id54 1 University
+
+TRIPLES
+Switzerland | leaderName | Johann_Schneider-Ammann
+
+
+ENTITY MAP
+AGENT-1 | Switzerland
+PATIENT-1 | Johann_Schneider-Ammann
+
+
+LEX
+Id1
+TEXT: Johann Schneider Ammann is the leader of Switzerland.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Johann Schneider-Ammann is the leader of Switzerland.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The leader of Switzerland is Johann Schneider-Ammann.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id4
+TEXT: Switzerland has a leader called Johann Schneider Ammann.
+TEMPLATE: AGENT-1 has a leader called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id5
+TEXT: Johann Schneider Ammann is the name of the leader of Switzerland.
+TEMPLATE: PATIENT-1 is the name of the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id6
+TEXT: The leader of Switzerland is Johann 'Schneider-Ammann.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id52 1 University
+
+TRIPLES
+School of Business and Social Sciences at the Aarhus University | latinName | "Universitas Aarhusiensis"
+
+
+ENTITY MAP
+AGENT-1 | School of Business and Social Sciences at the Aarhus University
+PATIENT-1 | "Universitas Aarhusiensis"
+
+
+LEX
+Id1
+TEXT: The latin name of School of Business and Social Sciences at the Aarhus University is "Universitas Aarhusiensis".
+TEMPLATE: The latin name of AGENT-1 is `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The latin name of the School of Business and Social Sciences at Aarhus University is "universitas Aarhusiensis".
+TEMPLATE: The latin name of AGENT-1 is `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The School of Business and Social Sciences at the Aarhus University has the latin name Universitas Aarhusiensis.
+TEMPLATE: AGENT-1 has PATIENT-1 .
+CORRECT: AGENT-1 has the latin name PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id51 1 University
+
+TRIPLES
+School of Business and Social Sciences at the Aarhus University | established | 1928
+
+
+ENTITY MAP
+AGENT-1 | School of Business and Social Sciences at the Aarhus University
+PATIENT-1 | 1928
+
+
+LEX
+Id1
+TEXT: The School of Business and Social Sciences at Aarhus University was established in 1928.
+TEMPLATE: AGENT-1 was established in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Aarhus University School of Business and Social Sciences was established in 1928.
+TEMPLATE: Aarhus University School of AGENT-1 was established in PATIENT-1 .
+CORRECT: AGENT-1 was established in PATIENT-1 .
+COMMENT: modifier
+-
+Id3
+TEXT: The School of Business and Social Sciences at the Aarhus University was established in 1928.
+TEMPLATE: AGENT-1 was established in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id4
+TEXT: The School of Business and Social Sciences at the Aarhus University is established in 1928.
+TEMPLATE: AGENT-1 is established in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id48 1 University
+
+TRIPLES
+Romania | leaderTitle | Prime_Minister_of_Romania
+
+
+ENTITY MAP
+AGENT-1 | Romania
+PATIENT-1 | Prime_Minister_of_Romania
+
+
+LEX
+Id1
+TEXT: The leader of Romania is known as the Prime Minister.
+TEMPLATE: The leader of AGENT-1 is known as PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Romania's leader is call the Prime Minister of Romania.
+TEMPLATE: AGENT-1 's leader is call PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The title of the leader of Romania is "Prime Minister".
+TEMPLATE: The title of the leader of AGENT-1 is `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id45 1 University
+
+TRIPLES
+Romania | anthem | Deșteaptă-te,_române!
+
+
+ENTITY MAP
+AGENT-1 | Romania
+PATIENT-1 | Deșteaptă-te,_române!
+
+
+LEX
+Id1
+TEXT: The anthem of Romania is called Desteapta te romane.
+TEMPLATE: The anthem of AGENT-1 is called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Desteapta te, romane is the Romanan anthem.
+TEMPLATE: PATIENT-1 is the Romanan anthem .
+CORRECT: PATIENT-1 is the AGENT-1 anthem .
+COMMENT:
+-
+Id3
+TEXT: The national anthem of Romania is Desteapta-te, romane!
+TEMPLATE: The national anthem of AGENT-1 is PATIENT-1 !
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id42 1 University
+
+TRIPLES
+Karnataka | has to its northeast | Telangana
+
+
+ENTITY MAP
+AGENT-1 | Karnataka
+PATIENT-1 | Telangana
+
+
+LEX
+Id1
+TEXT: Karnataka neighbors Telangana to its northeast.
+TEMPLATE: AGENT-1 neighbors PATIENT-1 to its northeast .
+CORRECT: AGENT-1 neighbors PATIENT-1 to AGENT-1 northeast .
+COMMENT: coreference
+-
+Id2
+TEXT: Karnataka has to its northeast Telangana.
+TEMPLATE: AGENT-1 has to AGENT-1 northeast PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: To the northeast of Karnataka is Telagana.
+TEMPLATE: To the northeast of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id36 1 University
+
+TRIPLES
+Denmark | leaderName | Lars_Løkke_Rasmussen
+
+
+ENTITY MAP
+AGENT-1 | Denmark
+PATIENT-1 | Lars_Løkke_Rasmussen
+
+
+LEX
+Id1
+TEXT: Lars Lokke Rasmussen is the leader of Denmark.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: One of Denmark's leaders is Lars Lokke Rasmussen.
+TEMPLATE: One of AGENT-1 's leaders is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Denmark's leader is Lars L??kke Rasmussen.
+TEMPLATE: AGENT-1 's leader is Lars L ?? PATIENT-1
+CORRECT: AGENT-1 's leader is PATIENT-1 .
+COMMENT:
+-
+Id4
+TEXT: The leader of Denmark is Lars Lokke Rasmussen.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id5
+TEXT: The Leader of Denmark is Lars L??kke Rasmussen.
+TEMPLATE: The Leader of AGENT-1 is Lars L ?? PATIENT-1
+CORRECT: The Leader of AGENT-1 is PATIENT-1 .
+COMMENT:
+-
+Id6
+TEXT: Lars L??kke Rasmussen is the leader of Denmark.
+TEMPLATE: Lars L ?? PATIENT-1 is the leader of AGENT-1 .
+CORRECT: PATIENT-1 is the leader of AGENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id33 1 University
+
+TRIPLES
+Acharya_Institute_of_Technology | was given the 'Technical Campus' status by | All_India_Council_for_Technical_Education
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | All_India_Council_for_Technical_Education
+
+
+LEX
+Id1
+TEXT: The All India Council for Technical Education was proud to give the Technical Campus status to the Acharya Institute of Technology.
+TEMPLATE: PATIENT-1 was proud to give the Technical Campus status to AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Acharya Institute of Technology was given the Technical Campus status by the All India Council for Technical Education.
+TEMPLATE: AGENT-1 was given the Technical Campus status by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Acharya Institute of Technology was given the 'Technical Campus' status by All India Council for Technical Education.
+TEMPLATE: AGENT-1 was given the ` Technical Campus ' status by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id32 1 University
+
+TRIPLES
+Acharya_Institute_of_Technology | state | Karnataka
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | Karnataka
+
+
+LEX
+Id1
+TEXT: The Acharya Institute of Technology is in the state of Karnataka.
+TEMPLATE: AGENT-1 is in the state of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Acharya Institute of Technology is located in the state of Karnataka.
+TEMPLATE: AGENT-1 is located in the state of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Acharya Institute of Technology is in Karnataka state.
+TEMPLATE: AGENT-1 is in PATIENT-1 state .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id30 1 University
+
+TRIPLES
+Acharya_Institute_of_Technology | outlookRanking | 63
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | 63
+
+
+LEX
+Id1
+TEXT: The outlook ranking for the Acharya Institute of Technology is 63.
+TEMPLATE: The outlook ranking for AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Acharya Institute of Technology's outlook ranking is 63.
+TEMPLATE: AGENT-1 's outlook ranking is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Acharya Institute of Technology has an outlook ranking of 63.
+TEMPLATE: AGENT-1 has an outlook ranking of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id29 1 University
+
+TRIPLES
+Acharya_Institute_of_Technology | officialSchoolColour | "Blue, White and Orange"
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | "Blue, White and Orange"
+
+
+LEX
+Id1
+TEXT: Blue, white and orange are the colours adopted by Acharya Institute of Technology.
+TEMPLATE: PATIENT-1 are the colours adopted by AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Blue, white and orange are the colours of Acharya Institute of Technology.
+TEMPLATE: PATIENT-1 are the colours of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Acharya Institute of Technology's official colors are Blue, White and Orange.
+TEMPLATE: AGENT-1 's official colors are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id4
+TEXT: The official school colours of the Archarya Institute of Technology are blue, white and orange.
+TEMPLATE: The official school colours of AGENT-1 are blue , white and orange .
+CORRECT: The official school colours of AGENT-1 are PATIENT-1 .
+COMMENT:
+-
+Id5
+TEXT: Acharya Institute of Technology official school colors are Blue White and Orange.
+TEMPLATE: AGENT-1 official school colors are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id6
+TEXT: Acharya Institue of Technology official school colours are blue, white and orange.
+TEMPLATE: AGENT-1 of Technology official school colours are blue , white and orange .
+CORRECT: AGENT-1 official school colours are PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id28 1 University
+
+TRIPLES
+Acharya_Institute_of_Technology | numberOfUndergraduateStudents | 10000
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | 10000
+
+
+LEX
+Id1
+TEXT: The number of undergraduates attending the Acharya Institute of Technology is roughly 10000 students.
+TEMPLATE: The number of undergraduates attending AGENT-1 is roughly PATIENT-1 students .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Acharya Institute of Technology's number of Undergraduate students total to ~10000.
+TEMPLATE: AGENT-1 's number of Undergraduate students total to ~ PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: There are around 10000 undergraduate students at the Acharya Institute of Technology.
+TEMPLATE: There are around PATIENT-1 undergraduate students at AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id4
+TEXT: The Acharya Institude of Technology has 10000 undergraduate students.
+TEMPLATE: AGENT-1 has PATIENT-1 undergraduate students .
+CORRECT:
+COMMENT: g
+-
+Id5
+TEXT: The Acharya Institute of Technology has 10000 undergraduate students.
+TEMPLATE: AGENT-1 has PATIENT-1 undergraduate students .
+CORRECT:
+COMMENT: g
+-
+Id6
+TEXT: Acharya Institute of Technology has 10,000 undergraduate students.
+TEMPLATE: AGENT-1 has PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id27 1 University
+
+TRIPLES
+Acharya_Institute_of_Technology | numberOfPostgraduateStudents | 700
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | 700
+
+
+LEX
+Id1
+TEXT: The number of post graduate students at the Acharya Institute of Technology is about 700.
+TEMPLATE: The number of post graduate students at AGENT-1 is about PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The number of postgraduate students in Acharya Institute of Technology is ~700.
+TEMPLATE: The number of postgraduate students in AGENT-1 is ~ PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: There are around 700 postgraduate students at the Acharya Institute of Technology.
+TEMPLATE: There are around PATIENT-1 postgraduate students at AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id4
+TEXT: There are about 700 post graduate students at the Acharya Institute of Technology.
+TEMPLATE: There are about PATIENT-1 post graduate students at AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id5
+TEXT: Acharya Institute of Technology has 700 postgraduate students.
+TEMPLATE: AGENT-1 has PATIENT-1 postgraduate students .
+CORRECT:
+COMMENT: g
+-
+Id6
+TEXT: 700 students are enrolled in a post-graduate program at Acharya Institute of Technology.
+TEMPLATE: PATIENT-1 students are enrolled in a post-graduate program at AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id26 1 University
+
+TRIPLES
+Acharya_Institute_of_Technology | nickname | "AIT"
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | "AIT"
+
+
+LEX
+Id1
+TEXT: AIT is the nickname for the Acharya Institute of Technology.
+TEMPLATE: PATIENT-1 is the nickname for AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The nickname of the Acharya Institute of Technology is AIT.
+TEMPLATE: The nickname of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Acharya Institute of Technology is known as AIT.
+TEMPLATE: AGENT-1 is known as PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id25 1 University
+
+TRIPLES
+Acharya_Institute_of_Technology | motto | "Nurturing Excellence"
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | "Nurturing Excellence"
+
+
+LEX
+Id1
+TEXT: Acharya Institute of Technology's motto is Nurturing Excellence.
+TEMPLATE: AGENT-1 's motto is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The motto of the Acharya Institute of Technology is 'Nurturing Excellence.'.
+TEMPLATE: The motto of AGENT-1 is ` PATIENT-1 . ' .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The motto of the Acharya Institute of Technology is "Nurturing Excellence".
+TEMPLATE: The motto of AGENT-1 is `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id23 1 University
+
+TRIPLES
+Acharya_Institute_of_Technology | director | "Dr. G. P. Prabhukumar"
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | "Dr. G. P. Prabhukumar"
+
+
+LEX
+Id1
+TEXT: Dr. G. P. Prabhukumar is the director of the Acharya Institute of Technology.
+TEMPLATE: PATIENT-1 is the director of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The director of Acharya Institute of Technology is Dr. G. P. Prabhukumar.
+TEMPLATE: The director of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Acharya Institute of Technology's director is Dr. G. P. Prabhukumar.
+TEMPLATE: AGENT-1 's director is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id22 1 University
+
+TRIPLES
+Acharya_Institute_of_Technology | country | "India"
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | "India"
+
+
+LEX
+Id1
+TEXT: Acharya Institute of Technology can be found in India.
+TEMPLATE: AGENT-1 can be found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Acharya Institute of Technology is located in India.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Acharya Institute of Technology is located in India.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id21 1 University
+
+TRIPLES
+Acharya_Institute_of_Technology | city | Bangalore
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | Bangalore
+
+
+LEX
+Id1
+TEXT: The Acharya Institute of Technology is located in the city of Bangalore.
+TEMPLATE: AGENT-1 is located in the city of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Acharya Institute of Technology is located in Bangalore.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Acharya Institute of Technology is in Bangalore.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id20 1 University
+
+TRIPLES
+Acharya_Institute_of_Technology | affiliation | Visvesvaraya_Technological_University
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | Visvesvaraya_Technological_University
+
+
+LEX
+Id1
+TEXT: The Acharya Institute of Technology is affiliated with Visvesvaraya Technologial University.
+TEMPLATE: AGENT-1 is affiliated with PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Acharya Institute of Technology is affiliated to Visvesvaraya Technological University.
+TEMPLATE: AGENT-1 is affiliated to PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Acharya Institute of Technology is affiliated with the Visvesvaraya Technological University.
+TEMPLATE: AGENT-1 is affiliated with PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id4
+TEXT: Acharya Institute of Technology is affiliated to the Visvesvaraya Technological University.
+TEMPLATE: AGENT-1 is affiliated to PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id5
+TEXT: Acharya Institute of Technology is affilaited with Visvesvaraya Technological University.
+TEMPLATE: AGENT-1 is affilaited with PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id19 1 University
+
+TRIPLES
+Acharya_Institute_of_Technology | academicStaffSize | "~500"
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | "~500"
+
+
+LEX
+Id1
+TEXT: Acharya Institute of Technology's academic staff total is ~500.
+TEMPLATE: AGENT-1 's academic staff total is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Acharya Institute of Technology employs about 500 academic staff.
+TEMPLATE: AGENT-1 employs about PATIENT-1 .
+CORRECT: AGENT-1 employs about PATIENT-1 academic staff .
+COMMENT:
+-
+Id3
+TEXT: Approximately 500 employees make up the academic staff at Acharya Institute of Technology.
+TEMPLATE: Approximately 500 employees make up PATIENT-1 at AGENT-1 .
+CORRECT: Approximately PATIENT-1 employees make up the academic staff at AGENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id18 1 University
+
+TRIPLES
+Accademia_di_Architettura_di_Mendrisio | numberOfStudents | 600
+
+
+ENTITY MAP
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | 600
+
+
+LEX
+Id1
+TEXT: There are 600 students at the Accademia di Architettura di Mendrisio.
+TEMPLATE: There are PATIENT-1 students at AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Six hundred students attend the Accademia di Architettura di Mendriso.
+TEMPLATE: Six hundred students attend AGENT-1 .
+CORRECT: PATIENT-1 students attend AGENT-1 .
+COMMENT: number
+-
+Id3
+TEXT: The Accademia di Architettura di Mendrisio has 600 students.
+TEMPLATE: AGENT-1 has PATIENT-1 students .
+CORRECT:
+COMMENT: g
+-
+Id4
+TEXT: Accademia di Architettura di Mendrisio has 600 students enrolled.
+TEMPLATE: AGENT-1 has PATIENT-1 students enrolled .
+CORRECT:
+COMMENT: g
+-
+Id5
+TEXT: There are 600 students attending the Accademia di Architettura di Mendrisio.
+TEMPLATE: There are PATIENT-1 students attending AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id14 1 University
+
+TRIPLES
+Accademia_di_Architettura_di_Mendrisio | country | Switzerland
+
+
+ENTITY MAP
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | Switzerland
+
+
+LEX
+Id1
+TEXT: The Accademia di Architettura di Mendrisio is located in Switzerland.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Accademia di Architettura di Mendrisio is located in Switzerland.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Accademia di Architettura di Mendrisio is in Switzerland.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id12 1 University
+
+TRIPLES
+Aarhus | has to its northeast | Mols
+
+
+ENTITY MAP
+AGENT-1 | Aarhus
+PATIENT-1 | Mols
+
+
+LEX
+Id1
+TEXT: Mols is to the northeast of Aarhus.
+TEMPLATE: PATIENT-1 is to the northeast of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Aarhus has to its northeast Mols.
+TEMPLATE: AGENT-1 has to AGENT-1 northeast PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Mols is the area to the northeast of Aarhus.
+TEMPLATE: PATIENT-1 is the area to the northeast of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id7 1 University
+
+TRIPLES
+AWH_Engineering_College | city | "Kuttikkattoor"
+
+
+ENTITY MAP
+AGENT-1 | AWH_Engineering_College
+PATIENT-1 | "Kuttikkattoor"
+
+
+LEX
+Id1
+TEXT: The AWH Engineering College is located in Kuttikkattoor.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AWH Engineering College is in the city of Kuttikkattoor.
+TEMPLATE: AGENT-1 is in the city of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: AWH Engineering College is located in Kuttikkattoor.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id6 1 University
+
+TRIPLES
+AWH_Engineering_College | academicStaffSize | 250
+
+
+ENTITY MAP
+AGENT-1 | AWH_Engineering_College
+PATIENT-1 | 250
+
+
+LEX
+Id1
+TEXT: The academic staff at the AWH Engineering College number 250.
+TEMPLATE: The academic staff at AGENT-1 PATIENT-1 .
+CORRECT: The academic staff at AGENT-1 number PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The AWH Engineering College has academic staff size of 250.
+TEMPLATE: AGENT-1 has academic staff size of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: AWH Engineering College has an academic staff of 250.
+TEMPLATE: AGENT-1 has an academic staff of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id3 1 University
+
+TRIPLES
+1_Decembrie_1918_University | latinName | "Universitas Apulensis"
+
+
+ENTITY MAP
+AGENT-1 | 1_Decembrie_1918_University
+PATIENT-1 | "Universitas Apulensis"
+
+
+LEX
+Id1
+TEXT: The Latin name of the 1 Decembrie 1918 University is "Universitas Apulensis".
+TEMPLATE: The Latin name of AGENT-1 is `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Latin name of 1 Decembrie 1918 University is Universitas Apulensis.
+TEMPLATE: The Latin name of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The latin name for 1 Decembrie 1918 University is Universitas Apulensis.
+TEMPLATE: The latin name for AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id1 1 University
+
+TRIPLES
+1_Decembrie_1918_University | city | Alba_Iulia
+
+
+ENTITY MAP
+AGENT-1 | 1_Decembrie_1918_University
+PATIENT-1 | Alba_Iulia
+
+
+LEX
+Id1
+TEXT: The "1 Decembrie 1918 University" is in the city Alba Iulia.
+TEMPLATE: `` AGENT-1 '' is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The city of Alba Iulia has a University called "1 Decembrie 1918 University".
+TEMPLATE: The city of PATIENT-1 has a University called `` AGENT-1 '' .
+CORRECT: The city of PATIENT-1 has `` AGENT-1 '' .
+COMMENT: modifier
+-
+Id3
+TEXT: The 1 Decembrie 1918 University is located in the city of Alba Iulia.
+TEMPLATE: AGENT-1 is located in the city of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+

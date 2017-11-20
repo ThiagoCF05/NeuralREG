@@ -1,0 +1,432 @@
+
+Entry: Id8 5 ComicsCharacter
+
+TRIPLES
+Big_Hero_6_(film) | starring | Ryan_Potter
+Duncan_Rouleau | nationality | Americans
+Baymax | creator | Duncan_Rouleau
+Baymax | creator | Steven_T._Seagle
+Baymax | series | Big_Hero_6_(film)
+
+
+ENTITY MAP
+AGENT-1 | Baymax
+BRIDGE-1 | Duncan_Rouleau
+BRIDGE-2 | Big_Hero_6_(film)
+PATIENT-1 | Ryan_Potter
+PATIENT-3 | Steven_T._Seagle
+PATIENT-2 | Americans
+
+
+LEX
+Id1
+TEXT: Baymax was created by the American, Duncan Rouleau and Steven T Seagle. The character appeared in Big Hero 6 which stars Ryan Potter.
+TEMPLATE: AGENT-1 was created by PATIENT-2 , BRIDGE-1 and PATIENT-3 . The character appeared in BRIDGE-2 6 which stars PATIENT-1 .
+CORRECT: AGENT-1 was created by PATIENT-2 , BRIDGE-1 and PATIENT-3 . AGENT-1 appeared in BRIDGE-2 6 which stars PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The character of Baymax appeared in Big Hero 6 which stars Ryan Potter. He was created by Steven T Seagle and the American, Duncan Rouleau.
+TEMPLATE: The character of AGENT-1 appeared in BRIDGE-2 6 which stars PATIENT-1 . PATIENT-2 was created by PATIENT-3 and , BRIDGE-1 .
+CORRECT: AGENT-1 appeared in BRIDGE-2 which stars PATIENT-1 . AGENT-1 was created by PATIENT-3 and , BRIDGE-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id7 5 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Tim_Brooke-Taylor
+Bananaman | broadcastedBy | BBC
+Bananaman | creator | Steve_Bright
+Bananaman | firstAired | "1983-10-03"
+Bananaman | lastAired | "1986-04-15"
+
+
+ENTITY MAP
+PATIENT-5 | "1986-04-15"
+PATIENT-4 | "1983-10-03"
+AGENT-1 | Bananaman
+PATIENT-1 | Tim_Brooke-Taylor
+PATIENT-3 | Steve_Bright
+PATIENT-2 | BBC
+
+
+LEX
+Id1
+TEXT: The BBC began broadcasting Bananaman on 10/03/1983 and its last episode went to air on April 15th, 1986. Steve Bright is one of the creators of Bananaman which has Tim Brooke-Taylor as one of its stars.
+TEMPLATE: PATIENT-2 began broadcasting AGENT-1 on PATIENT-4 and PATIENT-2 last episode went to air on PATIENT-5 . PATIENT-3 is one of the creators of AGENT-1 which has PATIENT-1 as one of its stars .
+CORRECT: PATIENT-2 began broadcasting AGENT-1 on PATIENT-4 and AGENT-1 last episode went to air on PATIENT-5 . PATIENT-3 is one of the creators of AGENT-1 which has PATIENT-1 as one of AGENT-1 stars .
+COMMENT:
+-
+Id2
+TEXT: Bananaman first aired on the BBC on October 3rd, 1983 and broadcast its last episode on April 15th, 1986. Its creator was Steve Bright and the series starred Tim Brooke-Taylor.
+TEMPLATE: AGENT-1 first aired on PATIENT-2 on PATIENT-4 and AGENT-1 last episode on PATIENT-5 . AGENT-1 creator was PATIENT-3 and the series starred PATIENT-1 .
+CORRECT:
+COMMENT:g
+-
+
+**************************************************
+
+Entry: Id3 5 ComicsCharacter
+
+TRIPLES
+Bananaman | broadcastedBy | BBC
+Bananaman | creator | Steve_Bright
+Bananaman | starring | Graeme_Garden
+Bananaman | firstAired | "1983-10-03"
+Bananaman | lastAired | "1986-04-15"
+
+
+ENTITY MAP
+PATIENT-5 | "1986-04-15"
+PATIENT-4 | "1983-10-03"
+AGENT-1 | Bananaman
+PATIENT-1 | BBC
+PATIENT-3 | Graeme_Garden
+PATIENT-2 | Steve_Bright
+
+
+LEX
+Id1
+TEXT: Bananaman first aired on the BBC 10/03/1983 and its last broadcast was 15th April 1986. The creator of Bananaman is Steve Bright and the show stars Graeme Garden.
+TEMPLATE: AGENT-1 first aired on PATIENT-1 PATIENT-4 and AGENT-1 last broadcast was PATIENT-5 . The creator of AGENT-1 is PATIENT-2 and the show stars PATIENT-3 .
+CORRECT: AGENT-1 first aired on PATIENT-1 PATIENT-4 and AGENT-1 last broadcast was PATIENT-5 . PATIENT-2 is PATIENT-2 and AGENT-1 stars PATIENT-3 .
+COMMENT:
+-
+Id2
+TEXT: Bananaman first aired on the BBC on October 3rd, 1983 and broadcast its last episode on April 15th, 1986. It was created by Steve Bright and stars Graeme Garden.
+TEMPLATE: AGENT-1 first aired on PATIENT-1 on PATIENT-4 and AGENT-1 last episode on PATIENT-5 . AGENT-1 was created by PATIENT-2 and PATIENT-3 .
+CORRECT: AGENT-1 first aired on PATIENT-1 on PATIENT-4 and AGENT-1 last episode on PATIENT-5 . AGENT-1 was created by PATIENT-2 and stars PATIENT-3 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id1 5 ComicsCharacter
+
+TRIPLES
+Bananaman | broadcastedBy | BBC
+Bananaman | creator | John_Geering
+Bananaman | starring | Graeme_Garden
+Bananaman | firstAired | "1983-10-03"
+Bananaman | lastAired | "1986-04-15"
+
+
+ENTITY MAP
+PATIENT-5 | "1986-04-15"
+PATIENT-4 | "1983-10-03"
+AGENT-1 | Bananaman
+PATIENT-1 | BBC
+PATIENT-3 | Graeme_Garden
+PATIENT-2 | John_Geering
+
+
+LEX
+Id1
+TEXT: Bananaman first aired on the BBC on October 3rd, 1983 and broadcast its last episode on April 15th, 1986. Bananaman last aired on 15th April 1986. Graeme Garden is one of the stars of the series which was created by John Geering.
+TEMPLATE: AGENT-1 first aired on PATIENT-1 on PATIENT-4 and AGENT-1 last episode on PATIENT-5 . AGENT-1 last aired on PATIENT-5 . PATIENT-3 is one of the stars of the series which was created by PATIENT-2 .
+CORRECT: 
+COMMENT:g
+-
+Id2
+TEXT: Bananaman first aired on the BBC on October 3rd, 1983 and broadcast its last episode on April 15th, 1986. The fictional comic superhero Bananaman was created by John Geering and stars Graeme Garden.
+TEMPLATE: AGENT-1 first aired on PATIENT-1 on PATIENT-4 and AGENT-1 last episode on PATIENT-5 . fictional comic AGENT-1 was created by PATIENT-2 and PATIENT-3 .
+CORRECT: AGENT-1 first aired on PATIENT-1 on PATIENT-4 and AGENT-1 last episode on PATIENT-5 . AGENT-1 was created by PATIENT-2 and PATIENT-3 .
+COMMENT:
+-
+Id3
+TEXT: Bananaman first aired on the BBC on October 3rd, 1983 and broadcast its last episode on April 15th, 1986. Graeme Garden was one of the stars on the series which was created by John Geering.
+TEMPLATE: AGENT-1 first aired on PATIENT-1 on PATIENT-4 and AGENT-1 last episode on PATIENT-5 . PATIENT-3 was one of the stars on the series which was created by PATIENT-2 .
+CORRECT:
+COMMENT:g
+-
+
+**************************************************
+
+Entry: Id2 5 ComicsCharacter
+
+TRIPLES
+Bananaman | broadcastedBy | BBC
+Bananaman | creator | Steve_Bright
+Bananaman | starring | Bill_Oddie
+Bananaman | firstAired | "1983-10-03"
+Bananaman | lastAired | "1986-04-15"
+
+
+ENTITY MAP
+PATIENT-5 | "1986-04-15"
+PATIENT-4 | "1983-10-03"
+AGENT-1 | Bananaman
+PATIENT-1 | BBC
+PATIENT-3 | Bill_Oddie
+PATIENT-2 | Steve_Bright
+
+
+LEX
+Id1
+TEXT: Bananaman first aired on the BBC on October 3rd, 1983 and broadcast its last episode on April 15th, 1986. Steve Bright created the series which starred Bill Oddie.
+TEMPLATE: AGENT-1 first aired on PATIENT-1 on PATIENT-4 and AGENT-1 last episode on PATIENT-5 . PATIENT-2 created the series which starred PATIENT-3 .
+CORRECT: 
+COMMENT:g
+-
+Id2
+TEXT: Bananaman was shown by the BBC and aired between 3 October 1985 and 15 April 1986. It was created by Steve Bright and starred Bill Oddie.
+TEMPLATE: AGENT-1 was shown by PATIENT-1 and aired between PATIENT-4 and PATIENT-5 . AGENT-1 was created by PATIENT-2 and starred PATIENT-3 .
+CORRECT:
+COMMENT:g
+-
+Id3
+TEXT: Bananaman was the TV series shown by the BBC between 3 October 1983 and 15 April 1986. It was created by Steve Bright and starred Bill Oddie.
+TEMPLATE: AGENT-1 was the TV series shown by PATIENT-1 between PATIENT-4 and PATIENT-5 . AGENT-1 was created by PATIENT-2 and starred PATIENT-3 .
+CORRECT: AGENT-1 was AGENT-1 shown by PATIENT-1 between PATIENT-4 and PATIENT-5 . AGENT-1 was created by PATIENT-2 and starred PATIENT-3 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id4 5 ComicsCharacter
+
+TRIPLES
+Bananaman | broadcastedBy | BBC
+Bananaman | starring | Jill_Shilling
+Bananaman | creator | Steve_Bright
+Bananaman | firstAired | "1983-10-03"
+Bananaman | lastAired | "1986-04-15"
+
+
+ENTITY MAP
+PATIENT-5 | "1986-04-15"
+PATIENT-4 | "1983-10-03"
+AGENT-1 | Bananaman
+PATIENT-1 | BBC
+PATIENT-3 | Steve_Bright
+PATIENT-2 | Jill_Shilling
+
+
+LEX
+Id1
+TEXT: The BBC aired the TV series of Bananaman between 3 October 1983 and 15 April 1986. It was created by Steve Bright and starred Jill Shilling.
+TEMPLATE: PATIENT-1 aired the TV series of AGENT-1 between PATIENT-4 and PATIENT-5 . PATIENT-1 was created by PATIENT-3 and starred PATIENT-2 .
+CORRECT: PATIENT-1 aired AGENT-1 of AGENT-1 between PATIENT-4 and PATIENT-5 . AGENT-1 was created by PATIENT-3 and starred PATIENT-2 .
+COMMENT:
+-
+Id2
+TEXT: Bananaman began airing on the BBC on 10/03/1983 and its last broadcast was April 15th, 1986. The creator of Bananaman is Steve Bright and among its stars are Jill Shilling.
+TEMPLATE: AGENT-1 began airing on PATIENT-1 on PATIENT-4 and AGENT-1 last broadcast was PATIENT-5 . The creator of AGENT-1 is PATIENT-3 and among AGENT-1 stars are PATIENT-2 .
+CORRECT: AGENT-1 began airing on PATIENT-1 on PATIENT-4 and AGENT-1 last broadcast was PATIENT-5 . PATIENT-3 of AGENT-1 is PATIENT-3 and among AGENT-1 stars are PATIENT-2 .
+COMMENT:
+-
+Id3
+TEXT: Bananaman was broadcast by the BBC, airing between 3 October 1983 and 15 April 1986. It was created by Steve Bright and starred Jill Shilling.
+TEMPLATE: AGENT-1 was broadcast by PATIENT-1 , airing between PATIENT-4 and PATIENT-5 . AGENT-1 was created by PATIENT-3 and starred PATIENT-2 .
+CORRECT:
+COMMENT:g
+-
+
+**************************************************
+
+Entry: Id5 5 ComicsCharacter
+
+TRIPLES
+Bananaman | creator | John_Geering
+Bananaman | starring | Graeme_Garden
+Bananaman | firstAired | "1983-10-03"
+Bananaman | lastAired | "1986-04-15"
+Bananaman | broadcastedBy | "STV"
+
+
+ENTITY MAP
+PATIENT-5 | "STV"
+PATIENT-4 | "1986-04-15"
+AGENT-1 | Bananaman
+PATIENT-1 | John_Geering
+PATIENT-3 | "1983-10-03"
+PATIENT-2 | Graeme_Garden
+
+
+LEX
+Id1
+TEXT: Bananaman first aired on STV on October 3rd, 1983 and broadcast its last episode on April 15th, 1986. The series, which was created by John Geering, stars Graeme Garden.
+TEMPLATE: AGENT-1 first aired on PATIENT-5 on PATIENT-3 and AGENT-1 last episode on PATIENT-4 . The series , which was created by PATIENT-1 , PATIENT-2 .
+CORRECT: AGENT-1 first aired on PATIENT-5 on PATIENT-3 and AGENT-1 last episode on PATIENT-4 . AGENT-1 , which was created by PATIENT-1 , PATIENT-2 .
+COMMENT:
+-
+Id2
+TEXT: The TV character Bananaman was created by John Geering. The programme was broadcast by STV and starred Graeme Garden. Bananaman was first shown on 10th March 1983 and last aired on 15th April 1986.
+TEMPLATE: AGENT-1 was created by PATIENT-1 . The programme was broadcast by PATIENT-5 and starred PATIENT-2 . AGENT-1 was first shown on PATIENT-3 and last aired on PATIENT-4 .
+CORRECT: AGENT-1 was created by PATIENT-1 . AGENT-1 was broadcast by PATIENT-5 and starred PATIENT-2 . AGENT-1 was first shown on PATIENT-3 and last aired on PATIENT-4 .
+COMMENT:
+-
+Id3
+TEXT: Bananaman first aired on STV on October 3rd, 1983 and broadcast its last episode on April 15th, 1986. John Geering created the series which stars Graeme Garden.
+TEMPLATE: AGENT-1 first aired on PATIENT-5 on PATIENT-3 and AGENT-1 last episode on PATIENT-4 . PATIENT-1 created the series which stars PATIENT-2 .
+CORRECT: AGENT-1 first aired on PATIENT-5 on PATIENT-3 and AGENT-1 last episode on PATIENT-4 . PATIENT-1 created AGENT-1 which stars PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id6 5 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Jill_Shilling
+Bananaman | creator | Steve_Bright
+Bananaman | firstAired | "1983-10-03"
+Bananaman | lastAired | "1986-04-15"
+Bananaman | broadcastedBy | "STV"
+
+
+ENTITY MAP
+PATIENT-5 | "STV"
+PATIENT-4 | "1986-04-15"
+AGENT-1 | Bananaman
+PATIENT-1 | Jill_Shilling
+PATIENT-3 | "1983-10-03"
+PATIENT-2 | Steve_Bright
+
+
+LEX
+Id1
+TEXT: Bananaman was broadcast by STV between 3 October 1983 and 15 April 1986. It was created by Steve Bright and starred Jill Shilling.
+TEMPLATE: AGENT-1 was broadcast by PATIENT-5 between PATIENT-3 and PATIENT-4 . AGENT-1 was created by PATIENT-2 and starred PATIENT-1 .
+CORRECT:
+COMMENT:g
+-
+Id2
+TEXT: Bananaman first aired on STV on October 3rd, 1983 and broadcast its last episode on April 15th, 1986. The series was created by Steve Bright and starred Jill Shilling.
+TEMPLATE: AGENT-1 first aired on PATIENT-5 on PATIENT-3 and AGENT-1 last episode on PATIENT-4 . The series was created by PATIENT-2 and starred PATIENT-1 .
+CORRECT: AGENT-1 first aired on PATIENT-5 on PATIENT-3 and AGENT-1 last episode on PATIENT-4 . AGENT-1 was created by PATIENT-2 and starred PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: Bananaman was broadcast by STV from 3 October 1983 until 15 April 1986. It was created by Steve Bright and starred Jill Shilling.
+TEMPLATE: AGENT-1 was broadcast by PATIENT-5 from PATIENT-3 until PATIENT-4 . AGENT-1 was created by PATIENT-2 and starred PATIENT-1 .
+CORRECT: 
+COMMENT:g
+-
+
+**************************************************
+
+Entry: Id9 5 ComicsCharacter
+
+TRIPLES
+Duncan_Rouleau | nationality | Americans
+Baymax | creator | Duncan_Rouleau
+Baymax | creator | Steven_T._Seagle
+Baymax | series | Big_Hero_6_(film)
+Big_Hero_6_(film) | starring | Damon_Wayans,_Jr.
+
+
+ENTITY MAP
+AGENT-1 | Baymax
+BRIDGE-1 | Duncan_Rouleau
+BRIDGE-2 | Big_Hero_6_(film)
+PATIENT-1 | Americans
+PATIENT-3 | Damon_Wayans,_Jr.
+PATIENT-2 | Steven_T._Seagle
+
+
+LEX
+Id1
+TEXT: Baymax, a character in Big Hero 6, was created by the american Duncan Rouleau and by Steven T. Seagle. Damon Wayans, Jr. starred in the film Big Hero 6.
+TEMPLATE: AGENT-1 , a character in BRIDGE-2 6 , was created by american BRIDGE-1 and by PATIENT-2 . PATIENT-3 starred in BRIDGE-2 6 .
+CORRECT: AGENT-1 , AGENT-1 in BRIDGE-2 , was created by PATIENT-1 BRIDGE-1 and by PATIENT-2 . PATIENT-3 starred in BRIDGE-2.
+COMMENT:
+-
+Id
+TEXT: Baymax, a character in Big Hero 6, was created by the american Duncan Rouleau and by Steven T. Seagle. Damon Wayans, Jr. starred in the film version of Big Hero 6.
+TEMPLATE: AGENT-1 , a character in BRIDGE-2 6 , was created by american BRIDGE-1 and by PATIENT-2 . PATIENT-3 starred in the film version of BRIDGE-2 6 .
+CORRECT: AGENT-1 , AGENT-1 in BRIDGE-2, was created by PATIENT-1 BRIDGE-1 and by PATIENT-2 . PATIENT-3 starred in AGENT-1 version of BRIDGE-2.
+COMMENT:
+-
+Id3
+TEXT: Baymax is a character in the film Big Hero 6 which stars Damon Wayans Jr. He was created by Steven t Seagle and the American, Duncan Rouleau.
+TEMPLATE: AGENT-1 is a character in the film Big PATIENT-1ro 6 which stars PATIENT-3 . PATIENT-1 was created by BRIDGE-2 and , BRIDGE-1 .
+CORRECT: AGENT-1 is AGENT-1 in BRIDGE-2 BRIDGE-2 which stars PATIENT-3 . AGENT-1 was created by PATIENT-2  and , BRIDGE-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id10 5 ComicsCharacter
+
+TRIPLES
+Duncan_Rouleau | nationality | Americans
+Baymax | creator | Duncan_Rouleau
+Baymax | creator | Steven_T._Seagle
+Baymax | series | Big_Hero_6_(film)
+Big_Hero_6_(film) | starring | Jamie_Chung
+
+
+ENTITY MAP
+AGENT-1 | Baymax
+BRIDGE-1 | Duncan_Rouleau
+BRIDGE-2 | Big_Hero_6_(film)
+PATIENT-1 | Americans
+PATIENT-3 | Jamie_Chung
+PATIENT-2 | Steven_T._Seagle
+
+
+LEX
+Id1
+TEXT: Baymax is a character in Big Hero 6 which stars Jamie Chung and was created by Steve T. Seagle and Duncan Rouleau, an American.
+TEMPLATE: AGENT-1 is a character in BRIDGE-2 which stars PATIENT-3 and was created by Steve T. Seagle and BRIDGE-1 , PATIENT-1 .
+CORRECT: AGENT-1 is AGENT-1 in BRIDGE-2 which stars PATIENT-3 and was created by PATIENT-2 and BRIDGE-1 , PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Baymax is a character created by Steven T Seagle and the American, Duncan Rouleau. He appears in Big Hero 6 that stars Jamie Chung.
+TEMPLATE: AGENT-1 is a character created by PATIENT-2 and , BRIDGE-1 . PATIENT-1 appears in BRIDGE-2 that stars PATIENT-3 .
+CORRECT: AGENT-1 is AGENT-1 created by PATIENT-2 and , PATIENT-1 BRIDGE-1 . AGENT-1 appears in BRIDGE-2 that stars PATIENT-3 .
+COMMENT:
+-
+Id3
+TEXT: Baymax is a character in Big Hero 6 which stars Jamie Chung. Baymax was created by American Duncan Rouleau and Steven T. Seagle.
+TEMPLATE: AGENT-1 is PATIENT-1 in BRIDGE-2 which stars PATIENT-3 . AGENT-1 was created by American BRIDGE-1 and PATIENT-2 .
+CORRECT: AGENT-1 is AGENT-1 in BRIDGE-2 which stars PATIENT-3 . AGENT-1 was created by PATIENT-1 BRIDGE-1 and PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id11 5 ComicsCharacter
+
+TRIPLES
+Duncan_Rouleau | nationality | Americans
+Baymax | creator | Duncan_Rouleau
+Baymax | creator | Steven_T._Seagle
+Baymax | series | Big_Hero_6_(film)
+Big_Hero_6_(film) | starring | Maya_Rudolph
+
+
+ENTITY MAP
+AGENT-1 | Baymax
+BRIDGE-1 | Duncan_Rouleau
+BRIDGE-2 | Big_Hero_6_(film)
+PATIENT-1 | Americans
+PATIENT-3 | Maya_Rudolph
+PATIENT-2 | Steven_T._Seagle
+
+
+LEX
+Id1
+TEXT: Baymax a character in Big Hero 6 was created by the american Duncan Rouleau and by Steve T. Seagle. Maya Rudolph was one of the stars in the film version of Big Hero 6.
+TEMPLATE: AGENT-1 a character in BRIDGE-2 6 was created by american BRIDGE-1 and by PATIENT-2 . PATIENT-3 was one of PATIENT-1 in the film version of BRIDGE-2 6 .
+CORRECT: AGENT-1 in BRIDGE-2 was created by PATIENT-1 BRIDGE-1 and by PATIENT-2 . PATIENT-3 was one of the stars in the film version of BRIDGE-2 .
+COMMENT:
+-
+Id2
+TEXT: Baymax, is a character in Big Hero 6 whose creators are Steve T. Seagle and Duncan Rouleau, an American and it stars Maya Rudolph.
+TEMPLATE: AGENT-1 , is a character in BRIDGE-2 whose creators are PATIENT-2 and BRIDGE-1 , PATIENT-1 and AGENT-1 stars PATIENT-3 .
+CORRECT: AGENT-1 , is AGENT-1 in BRIDGE-2 whose creators are PATIENT-2 and BRIDGE-1 , PATIENT-1 and AGENT-1 stars PATIENT-3 .
+COMMENT:
+-
+Id3
+TEXT: Baymax was created by American Duncan Rouleau and Steven T. Seagle. Baymax is a character in Big Hero 6 which stars Maya Rudolph.
+TEMPLATE: AGENT-1 was created by American BRIDGE-1 and PATIENT-2 . AGENT-1 is PATIENT-1 in BRIDGE-2 which stars PATIENT-3 .
+CORRECT: AGENT-1 was created by PATIENT-1 BRIDGE-1 and PATIENT-2 . AGENT-1 is AGENT-1 in BRIDGE-2 which stars PATIENT-3 .
+COMMENT:
+-
+

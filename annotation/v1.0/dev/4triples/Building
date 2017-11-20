@@ -1,0 +1,950 @@
+
+Entry: Id7 4 Building
+
+TRIPLES
+3Arena | owner | Live_Nation_Entertainment
+Dublin | leaderName | Críona_Ní_Dhálaigh
+Dublin | isPartOf | Republic_of_Ireland
+3Arena | location | Dublin
+
+
+ENTITY MAP
+BRIDGE-1 | Dublin
+AGENT-1 | 3Arena
+PATIENT-1 | Live_Nation_Entertainment
+PATIENT-3 | Republic_of_Ireland
+PATIENT-2 | Críona_Ní_Dhálaigh
+
+
+LEX
+Id1
+TEXT: Live Nation Entertainment owns 3Arena, located in Dublin, Republic of Ireland. The Lord Mayor of Dublin is Críona Ní Dhálaigh.
+TEMPLATE: PATIENT-1 owns AGENT-1 , located in BRIDGE-1 , PATIENT-3 . The Lord Mayor of BRIDGE-1 is PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Owned by Live Nation Entertainment, 3Arena can be found in Dublin in the Republic of Ireland, a Republic run by Lord Mayor Críona Ní Dhálaigh.
+TEMPLATE: Owned by PATIENT-1 , AGENT-1 can be found in BRIDGE-1 in PATIENT-3 , a Republic run by PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id1 4 Building
+
+TRIPLES
+11_Diagonal_Street | location | South_Africa
+South_Africa | capital | Cape_Town
+South_Africa | leaderName | Cyril_Ramaphosa
+South_Africa | ethnicGroup | Asian_South_Africans
+
+
+ENTITY MAP
+BRIDGE-1 | South_Africa
+AGENT-1 | 11_Diagonal_Street
+PATIENT-1 | Cape_Town
+PATIENT-3 | Asian_South_Africans
+PATIENT-2 | Cyril_Ramaphosa
+
+
+LEX
+Id1
+TEXT: Cyril Ramaphosa is one of the leaders of South Africa, which capital is Cape Town. The address, 11 Diagonal Street is located in that country and one of the the ethnic groups is Asian South Africans.
+TEMPLATE: PATIENT-2 is one of the leaders of BRIDGE-1 , which capital is PATIENT-1 . AGENT-1 is located in BRIDGE-1 and one of the the ethnic groups is PATIENT-3 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Lead by Cyril Ramaphosa, South Africa is location of 11 Diagonal Street, has the capital of Cape Town and has an ethnic group of Asian South Africans.
+TEMPLATE: Lead by PATIENT-2 , BRIDGE-1 is location of AGENT-1 , has the capital of PATIENT-1 and has an ethnic group of PATIENT-3 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: With the capital of Cape Town, South Africa is the location of 11 Diagonal Street, has the ethnic group of Asian South African and one of its leaders is Cyril Ramaphosa.
+TEMPLATE: With the capital of PATIENT-1 , BRIDGE-1 is BRIDGE-1 of AGENT-1 , has the ethnic group of PATIENT-3 and one of its leaders is PATIENT-2 .
+CORRECT: With the capital of PATIENT-1 , BRIDGE-1 is the location of AGENT-1 , has the ethnic group of PATIENT-3 and one of BRIDGE-1 leaders is PATIENT-2 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id2 4 Building
+
+TRIPLES
+11_Diagonal_Street | location | South_Africa
+South_Africa | ethnicGroup | Asian_South_Africans
+South_Africa | capital | Cape_Town
+South_Africa | ethnicGroup | White_South_African
+
+
+ENTITY MAP
+BRIDGE-1 | South_Africa
+AGENT-1 | 11_Diagonal_Street
+PATIENT-1 | Asian_South_Africans
+PATIENT-3 | White_South_African
+PATIENT-2 | Cape_Town
+
+
+LEX
+Id1
+TEXT: With the capital of Cape Town, South Africa is the location of 11 Diagonal Street and has the ethnic groups of Asian South Africans and white South Africans.
+TEMPLATE: With the capital of PATIENT-2 , BRIDGE-1 is BRIDGE-1 of AGENT-1 and has the ethnic groups of PATIENT-1 and PATIENT-3 .
+CORRECT: With the capital of PATIENT-2 , BRIDGE-1 is the location of AGENT-1 and has the ethnic groups of PATIENT-1 and PATIENT-3 .
+COMMENT: 
+-
+Id2
+TEXT: 11 Diagonal Street is located in South Africa, of which Cape Town is the capital. Two ethnic groups within South Africa are the Asian South Africans, and white South Africans.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , of which PATIENT-2 is the capital . Two ethnic groups within BRIDGE-1 are PATIENT-1 , and PATIENT-3 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: 11 Diagonal Street is located in South Africa, where the capital is Cape Town. White South Africans and Asian South Africans are ethnic groups in South Africa.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , where the capital is PATIENT-2 . PATIENT-3 and PATIENT-1 are ethnic groups in BRIDGE-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id3 4 Building
+
+TRIPLES
+200_Public_Square | location | Cleveland
+Cleveland | isPartOf | Cuyahoga_County,_Ohio
+Cleveland | isPartOf | Ohio
+Cleveland | governingBody | Cleveland_City_Council
+
+
+ENTITY MAP
+BRIDGE-1 | Cleveland
+AGENT-1 | 200_Public_Square
+PATIENT-1 | Cuyahoga_County,_Ohio
+PATIENT-3 | Cleveland_City_Council
+PATIENT-2 | Ohio
+
+
+LEX
+Id1
+TEXT: 200 Public Square is located in Cleveland, Cuyahoga County, Ohio which is governed by Cleveland City Council.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , PATIENT-1 which is governed by PATIENT-3 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: 200 Public Square is located in Cleveland, Cuyahoga County, Ohio which is governed by the Cleveland City Council.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , PATIENT-1 which is governed by PATIENT-3 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: 200 Public Square is located in Cleveland, Cuyahoga County, Ohio, and is governed by Cleveland City Council.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , PATIENT-1 , and is governed by PATIENT-3 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id4 4 Building
+
+TRIPLES
+250_Delaware_Avenue | architecturalStyle | Postmodern_architecture
+250_Delaware_Avenue | buildingStartDate | "January, 2014"
+250_Delaware_Avenue | floorArea | 30843.8 (square metres)
+250_Delaware_Avenue | floorCount | 12
+
+
+ENTITY MAP
+PATIENT-4 | 12
+AGENT-1 | 250_Delaware_Avenue
+PATIENT-1 | Postmodern_architecture
+PATIENT-3 | 30843.8 (square metres)
+PATIENT-2 | "January, 2014"
+
+
+LEX
+Id1
+TEXT: Construction beginning in January 2014, Postmodern art @ 250 Delaware Avenue has 12 floors with a total area of 30843.8 square meters.
+TEMPLATE: Construction beginning in PATIENT-2 , PATIENT-1 AGENT-1 has PATIENT-4 floors with a total area of PATIENT-3 .
+CORRECT: Construction beginning in PATIENT-2 , PATIENT-1 @ AGENT-1 has PATIENT-4 floors with a total area of PATIENT-3 .
+COMMENT: 
+-
+Id2
+TEXT: Construction of the 12 floor Postmodern style building , 250 Delaware Avenue, which has a floor area of 30843.8 square metres began in January 2014.
+TEMPLATE: Construction of the PATIENT-4 floor PATIENT-1 style building , AGENT-1 , which has a floor area of PATIENT-3 began in PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: First begun to be built in January 2014, the postmodernist art @ 250 Delaware Avenue has 12 floors and a total floor area of 30843.8 square metres.
+TEMPLATE: First begun to be built in PATIENT-2 , postmodernist AGENT-1 has PATIENT-4 floors and PATIENT-1 of PATIENT-3 .
+CORRECT: First begun to be built in PATIENT-2 , PATIENT-1 @ AGENT-1 has PATIENT-4 floors and PATIENT-3 of square metres .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id5 4 Building
+
+TRIPLES
+300_North_LaSalle | location | Chicago
+Chicago | isPartOf | DuPage_County,_Illinois
+Chicago | country | United_States
+Chicago | leaderName | Susana_Mendoza
+
+
+ENTITY MAP
+BRIDGE-1 | Chicago
+AGENT-1 | 300_North_LaSalle
+PATIENT-1 | DuPage_County,_Illinois
+PATIENT-3 | Susana_Mendoza
+PATIENT-2 | United_States
+
+
+LEX
+Id1
+TEXT: 300 North LaSalle is located in Chicago, Du Page County, Illinois, United States where the leader is Susana Mendoza.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , PATIENT-1 , PATIENT-2 wPATIENT-2 PATIENT-2 leader is PATIENT-3 .
+CORRECT: AGENT-1 is located in BRIDGE-1 , PATIENT-1 , PATIENT-2 where the leader is PATIENT-3 .
+COMMENT: 
+-
+Id2
+TEXT: 300 North Lasalle is located in Chicago, DuPage County, Illinois. The leader or Chicago is Susana Mendoza.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , PATIENT-1 . PATIENT-2 leader or BRIDGE-1 is PATIENT-3 .
+CORRECT: AGENT-1 is located in BRIDGE-1 , PATIENT-1 . The leader or BRIDGE-1 is PATIENT-3 .
+COMMENT: 
+-
+Id3
+TEXT: 300 North LaSalle is situated in Chicago which is part of the Dupage County in Illinois located in the U.S. Susana Mendoza is currently the leader of Chicago.
+TEMPLATE: AGENT-1 is situated in BRIDGE-1 which is PATIENT-2 of PATIENT-2 PATIENT-1 in PATIENT-2 located in PATIENT-3 is currently PATIENT-2 leader of BRIDGE-1 .
+CORRECT: AGENT-1 is situated in BRIDGE-1 which is part of PATIENT-1 in PATIENT-2 located in PATIENT-2 . PATIENT-3 is currently the leader of BRIDGE-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id6 4 Building
+
+TRIPLES
+3Arena | owner | Live_Nation_Entertainment
+Dublin | leaderName | Críona_Ní_Dhálaigh
+Dublin | country | Republic_of_Ireland
+3Arena | location | Dublin
+
+
+ENTITY MAP
+BRIDGE-1 | Dublin
+AGENT-1 | 3Arena
+PATIENT-1 | Live_Nation_Entertainment
+PATIENT-3 | Republic_of_Ireland
+PATIENT-2 | Críona_Ní_Dhálaigh
+
+
+LEX
+Id1
+TEXT: 3 Arena is located in Dublin, the Republic of Ireland, where Críona Ní Dhálaigh was Lord Mayor. The owner of 3Arena is Live Nation Entertainment.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , PATIENT-3 , where PATIENT-2 was Lord Mayor . The owner of AGENT-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: The Lord Mayor of Dublin (Republic of Ireland) is Criona Ni Dhalaigh. Based in Dublin is 3Arena which is owned by Live Nation Entretainment.
+TEMPLATE: The Lord Mayor of BRIDGE-1 ( PATIENT-3 ) is PATIENT-2 . Based in BRIDGE-1 is AGENT-1 which is owned by PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: the 3Arena, Dublin, Republic of Ireland is owned by Live Nation Entertainment. Críona Ní Dhálaigh was Lord Mayor of Dublin.
+TEMPLATE: AGENT-1 , BRIDGE-1 , PATIENT-3 is owned by PATIENT-1 . PATIENT-2 was Lord Mayor of BRIDGE-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id15 4 Building
+
+TRIPLES
+Alan_B._Miller_Hall | location | Virginia
+Alan_B._Miller_Hall | completionDate | "1 June 2009"
+Mason_School_of_Business | country | United_States
+Alan_B._Miller_Hall | currentTenants | Mason_School_of_Business
+
+
+ENTITY MAP
+BRIDGE-1 | Mason_School_of_Business
+AGENT-1 | Alan_B._Miller_Hall
+PATIENT-1 | Virginia
+PATIENT-3 | United_States
+PATIENT-2 | "1 June 2009"
+
+
+LEX
+Id1
+TEXT: Situated in Virginia, United States,, Alan B. Miller Hall was completed on 1st June 2009. The current tenants are the Mason School of Business.
+TEMPLATE: Situated in PATIENT-1 , PATIENT-3 , , AGENT-1 was completed on PATIENT-2 . PATIENT-3 current tenants are BRIDGE-1 .
+CORRECT: Situated in PATIENT-1 , PATIENT-3 , , AGENT-1 was completed on PATIENT-2 . The current tenants are BRIDGE-1 .
+COMMENT: 
+-
+Id2
+TEXT: Located in Virginia, United States and with the current tenants of the Mason School of Business, the Alan B. Miller Hall was completed in June 1st, 2009.
+TEMPLATE: Located in PATIENT-1 , PATIENT-3 and with PATIENT-3 current tenants of BRIDGE-1 , AGENT-1 was completed in PATIENT-2 .
+CORRECT: Located in PATIENT-1 , PATIENT-3 and with the current tenants of BRIDGE-1 , AGENT-1 was completed in PATIENT-2 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id8 4 Building
+
+TRIPLES
+AC_Hotel_Bella_Sky_Copenhagen | location | Denmark
+AC_Hotel_Bella_Sky_Copenhagen | tenant | Marriott_International
+AC_Hotel_Bella_Sky_Copenhagen | owner | Bella_Center
+AC_Hotel_Bella_Sky_Copenhagen | floorCount | 23
+
+
+ENTITY MAP
+PATIENT-4 | 23
+AGENT-1 | AC_Hotel_Bella_Sky_Copenhagen
+PATIENT-1 | Denmark
+PATIENT-3 | Bella_Center
+PATIENT-2 | Marriott_International
+
+
+LEX
+Id1
+TEXT: AC Hotel Bella Sky is located in Copenhagen, Denmark and the tenant from the hotel is Marriott International. It is own by Bella Center and there is 23 floors in that hotel.
+TEMPLATE: AGENT-1 is located in PATIENT-1 and PATIENT-4 tenant from AGENT-1 is PATIENT-2 . AGENT-1 is own by PATIENT-3 and there is PATIENT-4 floors in that hotel .
+CORRECT: AGENT-1 is located in PATIENT-1 and the tenant from AGENT-1 is PATIENT-2 . AGENT-1 is own by PATIENT-3 and there is PATIENT-4 floors in AGENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: There are 23 floors in the AC Hotel Bella Sky Copenhagen, Denmark. The tenant is the Marriott International Hotel and the owner is Bella Center.
+TEMPLATE: There are PATIENT-4 floors in AGENT-1 , PATIENT-1 . PATIENT-4 tenant is PATIENT-4 PATIENT-2 and PATIENT-4 owner is PATIENT-3 .
+CORRECT: There are PATIENT-4 floors in AGENT-1 , PATIENT-1 . The tenant is PATIENT-2 and the owner is PATIENT-3 .
+COMMENT: 
+-
+Id3
+TEXT: Located in Denmark and with tenant Marriott International, AC Hotel Bella Sky Copenhagen is owned by Bella Center and has 23 floors.
+TEMPLATE: Located in PATIENT-1 and with PATIENT-2 , AGENT-1 is owned by PATIENT-3 and has PATIENT-4 floors .
+CORRECT: Located in PATIENT-1 and with tenant PATIENT-2 , AGENT-1 is owned by PATIENT-3 and has PATIENT-4 floors .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id9 4 Building
+
+TRIPLES
+AC_Hotel_Bella_Sky_Copenhagen | owner | Bella_Center
+AC_Hotel_Bella_Sky_Copenhagen | tenant | Marriott_International
+AC_Hotel_Bella_Sky_Copenhagen | architect | 3XN
+AC_Hotel_Bella_Sky_Copenhagen | floorCount | 23
+
+
+ENTITY MAP
+PATIENT-4 | 23
+AGENT-1 | AC_Hotel_Bella_Sky_Copenhagen
+PATIENT-1 | Bella_Center
+PATIENT-3 | 3XN
+PATIENT-2 | Marriott_International
+
+
+LEX
+Id1
+TEXT: The tenant of the AC Hotel Bella Sky Copenhagen is Marriott International. The hotel has 23 floors, was designed by the company 3XN and is owned by the Bella Center.
+TEMPLATE: PATIENT-4 tenant of AGENT-1 is PATIENT-2 . AGENT-1 has PATIENT-4 floors , was designed by PATIENT-4 PATIENT-3 and is owned by PATIENT-1 .
+CORRECT: PATIENT-4 tenant of AGENT-1 is PATIENT-2 . AGENT-1 has PATIENT-4 floors , was designed by PATIENT-3 and is owned by PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: 3XN was the architect of the AC Hotel Bella Sky Copenhagen which has 23 floors and is owned by the Bella Center and currently tenanted by Marriott International.
+TEMPLATE: PATIENT-3 was PATIENT-4 architect of AGENT-1 which has PATIENT-4 floors and is owned by PATIENT-1 and currently tenanted by PATIENT-2 .
+CORRECT: PATIENT-3 was the architect of AGENT-1 which has PATIENT-4 floors and is owned by PATIENT-1 and currently tenanted by PATIENT-2 .
+COMMENT: 
+-
+Id3
+TEXT: Bella Center owns AC Hotel Bella Sky Copenhagen and Marriott International is a tenant. The hotel has 23 floors and was designed by 3XN.
+TEMPLATE: PATIENT-1 owns AGENT-1 and PATIENT-2 is a tenant . AGENT-1 has PATIENT-4 floors and was designed by PATIENT-3 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id10 4 Building
+
+TRIPLES
+Adisham_Hall | architecturalStyle | "Tudor and Jacabian"
+Adisham_Hall | location | Sri_Lanka
+Adisham_Hall | completionDate | 1931
+Adisham_Hall | buildingStartDate | "1927"
+
+
+ENTITY MAP
+PATIENT-4 | "1927"
+AGENT-1 | Adisham_Hall
+PATIENT-1 | "Tudor and Jacabian"
+PATIENT-3 | 1931
+PATIENT-2 | Sri_Lanka
+
+
+LEX
+Id1
+TEXT: Construction began in 1927 and finished in 1931 of Adisham Hall in Sri Lanka and was in the Tudor and Jacobean style.
+TEMPLATE: Construction began in PATIENT-4 and finished in PATIENT-3 of AGENT-1 in PATIENT-2 and was in the PATIENT-1 style .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: The Tudor and Jacobean styled Adisham Hall was built in Sri Lanka between 1927 and 1931.
+TEMPLATE: PATIENT-1 styled AGENT-1 was built in PATIENT-2 between PATIENT-4 and PATIENT-3 .
+CORRECT: The PATIENT-1 styled AGENT-1 was built in PATIENT-2 between PATIENT-4 and PATIENT-3 .
+COMMENT: 
+-
+Id3
+TEXT: Adisham Hall began in 1927 and completed in 1931. It has a Tudor and Jacabian style and is located in Sri Lanka.
+TEMPLATE: AGENT-1 began in PATIENT-4 and completed in PATIENT-3 . PATIENT-2 has a PATIENT-1 style and is located in PATIENT-2 .
+CORRECT: AGENT-1 began in PATIENT-4 and completed in PATIENT-3 . AGENT-1 has a PATIENT-1 style and is located in PATIENT-2 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id11 4 Building
+
+TRIPLES
+Adisham_Hall | country | Sri_Lanka
+Adisham_Hall | location | "Haputale, Sri Lanka"
+Sri_Lanka | capital | Sri_Jayawardenepura_Kotte
+Sri_Lanka | language | Tamil_language
+
+
+ENTITY MAP
+BRIDGE-1 | Sri_Lanka
+AGENT-1 | Adisham_Hall
+PATIENT-1 | "Haputale, Sri Lanka"
+PATIENT-3 | Tamil_language
+PATIENT-2 | Sri_Jayawardenepura_Kotte
+
+
+LEX
+Id1
+TEXT: Adisham Hall is located in Haputale, Sri Lanka which has the capital city of Sri Jayawardenepura Kotte . Tamil is the language of the country.
+TEMPLATE: AGENT-1 is located in PATIENT-1 which has the capital city of PATIENT-2 . PATIENT-3 is the language of BRIDGE-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Adisham Hall can be found in Haputale, Sri Lanka, a country with the capital Sri Jayawardenepura Kotte and language of the Tamil language.
+TEMPLATE: AGENT-1 can be found in PATIENT-1 , BRIDGE-1 with PATIENT-2 and language of PATIENT-3 .
+CORRECT: AGENT-1 can be found in PATIENT-1 , a country with the capital PATIENT-2 and language of PATIENT-3 .
+COMMENT: 
+-
+Id3
+TEXT: Adisham Hall can be found in Haputale, Sri Lanka, where Sri Lanka's capital is Sri Jayawardenepura Kotte and the language is the Tamil Language.
+TEMPLATE: AGENT-1 can be found in PATIENT-1 , where BRIDGE-1 's capital is PATIENT-2 and the language is the PATIENT-3 Language .
+CORRECT: AGENT-1 can be found in PATIENT-1 , where BRIDGE-1 capital is PATIENT-2 and the language is the PATIENT-3 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id12 4 Building
+
+TRIPLES
+Adisham_Hall | location | Sri_Lanka
+Adisham_Hall | architecturalStyle | Tudor_Revival_architecture
+Adisham_Hall | completionDate | 1931
+Adisham_Hall | buildingStartDate | "1927"
+
+
+ENTITY MAP
+PATIENT-4 | "1927"
+AGENT-1 | Adisham_Hall
+PATIENT-1 | Sri_Lanka
+PATIENT-3 | 1931
+PATIENT-2 | Tudor_Revival_architecture
+
+
+LEX
+Id1
+TEXT: Construction of Adisham Hall in Sri Lanka began in 1927 and ended in 1931. It was built in the Tudor Revival architectural style.
+TEMPLATE: Construction of AGENT-1 in PATIENT-1 began in PATIENT-4 and ended in PATIENT-3 . PATIENT-1 was built in PATIENT-2 .
+CORRECT: Construction of AGENT-1 in PATIENT-1 began in PATIENT-4 and ended in PATIENT-3 . AGENT-1 was built in PATIENT-2 .
+COMMENT: 
+-
+Id2
+TEXT: Adisham Hall , Sri Lanka, was started in 1927 and completed in 1931. It has the Tudor Revival style.
+TEMPLATE: AGENT-1 , PATIENT-1 , was started in PATIENT-4 and completed in PATIENT-3 . PATIENT-1 has PATIENT-2 .
+CORRECT: AGENT-1 , PATIENT-1 , was started in PATIENT-4 and completed in PATIENT-3 . AGENT-1 has PATIENT-2 .
+COMMENT: 
+-
+Id3
+TEXT: The architectural styled "Tudor Revival" Adisham Hall is located in Sri Lanka and was built in 1927 and completed in 1931.
+TEMPLATE: The architectural styled `` PATIENT-2 '' AGENT-1 is located in PATIENT-1 and was built in PATIENT-4 and completed in PATIENT-3 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id13 4 Building
+
+TRIPLES
+Akita_Museum_of_Art | location | Akita,_Akita
+Akita,_Akita | isPartOf | Akita_Prefecture
+Japan | ethnicGroup | Filipinos_in_Japan
+Akita_Prefecture | country | Japan
+
+
+ENTITY MAP
+BRIDGE-1 | Akita,_Akita
+AGENT-1 | Akita_Museum_of_Art
+BRIDGE-3 | Japan
+PATIENT-1 | Filipinos_in_Japan
+BRIDGE-2 | Akita_Prefecture
+
+
+LEX
+Id1
+TEXT: The Akita Museum of Art is located in Akita Prefecture, Akita, Japan. One of the ethnic groups of Japan is the Filipinos.
+TEMPLATE: AGENT-1 is located in BRIDGE-2 , BRIDGE-3 . One of the ethnic groups of BRIDGE-3 is PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Akita Museum of Art is located in Akita, Akita, Akita Prefecture, Japan, where one of the ethnic groups is the Filipinos.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , BRIDGE-3 , where BRIDGE-2 of the ethnic groups is PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: The Akita Prefecture, where the Akita Museum of Art is located, is part of the country of Japan a country where one of the ethnic groups is Filipinos.
+TEMPLATE: BRIDGE-2 , where AGENT-1 is located , is part of BRIDGE-3 of BRIDGE-3 a country where BRIDGE-2 of the ethnic groups is PATIENT-1 .
+CORRECT: BRIDGE-2 , where AGENT-1 is located , is part of the country of BRIDGE-3 a country where BRIDGE-2 of the ethnic groups is PATIENT-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id14 4 Building
+
+TRIPLES
+Alan_B._Miller_Hall | location | Virginia
+Alan_B._Miller_Hall | architect | Robert_A._M._Stern
+Mason_School_of_Business | country | United_States
+Alan_B._Miller_Hall | currentTenants | Mason_School_of_Business
+
+
+ENTITY MAP
+BRIDGE-1 | Mason_School_of_Business
+AGENT-1 | Alan_B._Miller_Hall
+PATIENT-1 | Virginia
+PATIENT-3 | United_States
+PATIENT-2 | Robert_A._M._Stern
+
+
+LEX
+Id1
+TEXT: The Mason School of Business is located in the US and they are the current tenants of Alan B Miller Hall. Robert A.M. Stern is the architect for Alan B. Miller Hall, which is situated in Virginia.
+TEMPLATE: BRIDGE-1 is located in PATIENT-3 and AGENT-1 are PATIENT-3 current tenants of AGENT-1 . PATIENT-2 is PATIENT-3 architect for AGENT-1 , which is situated in PATIENT-1 .
+CORRECT: BRIDGE-1 is located in PATIENT-3 and BRIDGE-1 are the current tenants of AGENT-1 . PATIENT-2 is the architect for AGENT-1 , which is situated in PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: The US based Mason School of Business are the current tenants of Alan B Miller Hall in Virginia which was designed by the architect Robert A M Stern.
+TEMPLATE: PATIENT-3 based BRIDGE-1 are PATIENT-3 current tenants of AGENT-1 in PATIENT-1 which was designed by PATIENT-2 .
+CORRECT: PATIENT-3 based BRIDGE-1 are the current tenants of AGENT-1 in PATIENT-1 which was designed by PATIENT-2 .
+COMMENT: 
+-
+Id3
+TEXT: The Mason School of Business are the current tenants of Alan B Miller Hall, which is located in Virginia, United States and was designed by the architect Robert A M Stern.
+TEMPLATE: BRIDGE-1 are PATIENT-3 current tenants of AGENT-1 , which is located in PATIENT-1 , PATIENT-3 and was designed by PATIENT-2 .
+CORRECT: BRIDGE-1 are the current tenants of AGENT-1 , which is located in PATIENT-1 , PATIENT-3 and was designed by the architect PATIENT-2 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id17 4 Building
+
+TRIPLES
+Amdavad_ni_Gufa | location | Gujarat
+Amdavad_ni_Gufa | address | "Lalbhai Dalpatbhai Campus, near CEPT University, opp. Gujarat University, University Road"
+Amdavad_ni_Gufa | country | India
+Amdavad_ni_Gufa | location | Ahmedabad
+
+
+ENTITY MAP
+PATIENT-4 | Ahmedabad
+AGENT-1 | Amdavad_ni_Gufa
+PATIENT-1 | Gujarat
+PATIENT-3 | India
+PATIENT-2 | "Lalbhai Dalpatbhai Campus, near CEPT University, opp. Gujarat University, University Road"
+
+
+LEX
+Id1
+TEXT: The address for Amdavad ni Gufa is Lalbhai Dalpatbhai Campus, near CEPT University, opp. Gujarat University, University Road, Gujarat, Ahmedabad, India.
+TEMPLATE: The address for AGENT-1 is PATIENT-2 , PATIENT-1 , PATIENT-4 , PATIENT-3 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: The address of Amdavad ni Gufa is Lalbhai Dalpatbhai Campus, near CEPT University, opp. Gujarat University, University Road, Ahmedabad, Gujarat, India.
+TEMPLATE: The address of AGENT-1 is PATIENT-2 , PATIENT-4 , PATIENT-1 , PATIENT-3 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id16 4 Building
+
+TRIPLES
+Amdavad_ni_Gufa | location | Ahmedabad
+Amdavad_ni_Gufa | country | India
+India | leaderName | Narendra_Modi
+India | leaderName | Sumitra_Mahajan
+
+
+ENTITY MAP
+BRIDGE-1 | India
+AGENT-1 | Amdavad_ni_Gufa
+PATIENT-1 | Ahmedabad
+PATIENT-3 | Sumitra_Mahajan
+PATIENT-2 | Narendra_Modi
+
+
+LEX
+Id1
+TEXT: Narendra Modi and Sumitra Mahajan are leaders in India where Amdavad ni Gufa is located in Ahmedabad.
+TEMPLATE: PATIENT-2 and PATIENT-3 are leaders in BRIDGE-1 where AGENT-1 is located in PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Amdavad ni Gufa is located in Ahmedabad, India. Narendra Modi is the Prime Minister of India whilst Sumitra Mahajan is another leader of India.
+TEMPLATE: AGENT-1 is located in PATIENT-1 , BRIDGE-1 . PATIENT-2 is the Prime Minister of BRIDGE-1 whilst PATIENT-3 is another leader of BRIDGE-1 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Amdavad ni Gufa can be found in Ahmedabad, India, a country lead by Narendra Modi and Sumitra Mahajan.
+TEMPLATE: AGENT-1 can be found in PATIENT-1 , BRIDGE-1 , a country lead by PATIENT-2 and PATIENT-3 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id21 4 Building
+
+TRIPLES
+Asilomar_Conference_Grounds | architect | Julia_Morgan
+Julia_Morgan | significantBuilding | Los_Angeles_Herald-Examiner
+Julia_Morgan | significantBuilding | Riverside_Art_Museum
+Julia_Morgan | birthPlace | California
+
+
+ENTITY MAP
+BRIDGE-1 | Julia_Morgan
+AGENT-1 | Asilomar_Conference_Grounds
+PATIENT-1 | Los_Angeles_Herald-Examiner
+PATIENT-3 | California
+PATIENT-2 | Riverside_Art_Museum
+
+
+LEX
+Id1
+TEXT: Born in California, Julia Morgan has designed buildings such as Los Angeles Herald Examiner building and The Riverside Art Museum, and was also the architect of the grounds of Asilomar Conference.
+TEMPLATE: Born in PATIENT-3 , BRIDGE-1 has designed buildings such as PATIENT-1 building and PATIENT-2 , and was also the architect of the grounds of AGENT-1 .
+CORRECT: Born in PATIENT-3 , BRIDGE-1 has designed buildings such as PATIENT-1 and PATIENT-2 , and was also the architect of AGENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: Julia Morgan from California, designed many important buildings including the Los Angeles Herald building and the Asilomer Conference Grounds.
+TEMPLATE: BRIDGE-1 from PATIENT-3 , designed PATIENT-2 including PATIENT-1 and AGENT-1 .
+CORRECT: BRIDGE-1 from PATIENT-3 , designed many important buildings including PATIENT-1 and AGENT-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id18 4 Building
+
+TRIPLES
+Amdavad_ni_Gufa | location | Gujarat
+India | leaderName | T._S._Thakur
+Amdavad_ni_Gufa | location | Ahmedabad
+Amdavad_ni_Gufa | country | India
+
+
+ENTITY MAP
+BRIDGE-1 | India
+AGENT-1 | Amdavad_ni_Gufa
+PATIENT-1 | Gujarat
+PATIENT-3 | Ahmedabad
+PATIENT-2 | T._S._Thakur
+
+
+LEX
+Id1
+TEXT: Amdavad ni Gufa is located in Ahmedabad, Gujarat, India. T S Thakur was an Indian leader.
+TEMPLATE: AGENT-1 is located in PATIENT-3 , PATIENT-1 , BRIDGE-1 . PATIENT-2 was BRIDGE-1 leader .
+CORRECT: AGENT-1 is located in PATIENT-3 , PATIENT-1 , BRIDGE-1 . PATIENT-2 was an BRIDGE-1 leader .
+COMMENT: 
+-
+Id2
+TEXT: Amdavad ni Gufa is located in Ahmedabad, Gujurat, India. T S Thakur is a leader in India.
+TEMPLATE: AGENT-1 is located in PATIENT-3 , PATIENT-1 , BRIDGE-1 . PATIENT-2 is a leader in BRIDGE-1 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Amdavad ni Gufa is located in Gujarat, Ahmedabad, India, where the leader was T. S. Thakur.
+TEMPLATE: AGENT-1 is located in PATIENT-1 , PATIENT-3 , BRIDGE-1 , where the leader was PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id19 4 Building
+
+TRIPLES
+Ampara_Hospital | country | Sri_Lanka
+Sri_Lanka | leaderName | Ranil_Wickremesinghe
+Sri_Lanka | currency | Sri_Lankan_rupee
+Ampara_Hospital | state | Eastern_Province,_Sri_Lanka
+
+
+ENTITY MAP
+BRIDGE-1 | Sri_Lanka
+AGENT-1 | Ampara_Hospital
+PATIENT-1 | Ranil_Wickremesinghe
+PATIENT-3 | Eastern_Province,_Sri_Lanka
+PATIENT-2 | Sri_Lankan_rupee
+
+
+LEX
+Id1
+TEXT: Ampara Hospital is located in the Eastern Province of Sri Lanka, where the currency is the Ski Lankan rupee. One of the leaders of Sri Lanka is Ranil Wickremesinghe.
+TEMPLATE: AGENT-1 is located in PATIENT-3 , where BRIDGE-1 is PATIENT-2 . One of the leaders of PATIENT-3 is PATIENT-1 .
+CORRECT: AGENT-1 is located in PATIENT-3 , where the currency is PATIENT-2 . One of the leaders of PATIENT-3 is PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: Ampara Hospital is located in Eastern Province, Sri Lanka. The currency of Sri Lanka is the Sri Lankan rupee and the leader of the country is Ranil Wickremesinghe.
+TEMPLATE: AGENT-1 is located in PATIENT-3 . BRIDGE-1 of PATIENT-3 is PATIENT-2 and BRIDGE-1 of BRIDGE-1 is PATIENT-1 .
+CORRECT: AGENT-1 is located in PATIENT-3 . The currency of BRIDGE-1 is PATIENT-2 and the leader of BRIDGE-1 is PATIENT-1 .
+COMMENT: 
+-
+Id3
+TEXT: Ampara Hospital is in the Eastern Province, Sri Lanka. The leader of Sri Lanka is Ranil Wickremesinghe and its currency is the Sri Lankan rupee.
+TEMPLATE: AGENT-1 is in PATIENT-3 . BRIDGE-1 of PATIENT-3 is PATIENT-1 and BRIDGE-1 BRIDGE-1 is PATIENT-2 .
+CORRECT: AGENT-1 is in PATIENT-3 . The leader of BRIDGE-1 is PATIENT-1 and BRIDGE-1 currency is PATIENT-2 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id20 4 Building
+
+TRIPLES
+Asilomar_Conference_Grounds | architect | Julia_Morgan
+Julia_Morgan | birthPlace | San_Francisco
+Julia_Morgan | significantBuilding | Los_Angeles_Herald-Examiner
+Julia_Morgan | significantBuilding | Asilomar_State_Beach
+
+
+ENTITY MAP
+BRIDGE-1 | Julia_Morgan
+AGENT-1 | Asilomar_Conference_Grounds
+PATIENT-1 | San_Francisco
+PATIENT-3 | Asilomar_State_Beach
+PATIENT-2 | Los_Angeles_Herald-Examiner
+
+
+LEX
+Id1
+TEXT: San Francisco born architect Julia Morgan designed many significant buildings including the Asilomar Conference Grounds, the Los Angeles Herald Examiner Building and the Asilomar State Beach.
+TEMPLATE: PATIENT-1 born BRIDGE-1 designed many significant buildings including AGENT-1 , PATIENT-2 and PATIENT-3 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Julia Morgan, born in San Francisco and designer of many significant buildings, including the Los Angeles Herald Examiner building and the Asilomar State Beach, was also the architect of the grounds of Asilomar Conference.
+TEMPLATE: BRIDGE-1 , born in PATIENT-1 and designer of many significant buildings , including PATIENT-2 and PATIENT-3 , was also the architect of the grounds of AGENT-1 .
+CORRECT: BRIDGE-1 , born in PATIENT-1 and designer of many significant buildings , including PATIENT-2 and PATIENT-3 , was also the architect of AGENT-1 .
+COMMENT: 
+-
+Id3
+TEXT: Julia Morgan was born in San Fransisco. She designed the Asilomar Conference Grounds, the Asilomar State Beach and the Los Angeles Herald examiner, a landmark in California.
+TEMPLATE: BRIDGE-1 was born in PATIENT-1 . BRIDGE-1 designed AGENT-1 , PATIENT-3 and PATIENT-2 , a landmark in California .
+CORRECT: BRIDGE-1 was born in PATIENT-1 . BRIDGE-1 designed AGENT-1 , PATIENT-3 and PATIENT-2 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id22 4 Building
+
+TRIPLES
+Asser_Levy_Public_Baths | location | New_York_City
+New_York_City | country | United_States
+New_York_City | isPartOf | Manhattan
+New_York_City | isPartOf | New_Netherland
+
+
+ENTITY MAP
+BRIDGE-1 | New_York_City
+AGENT-1 | Asser_Levy_Public_Baths
+PATIENT-1 | United_States
+PATIENT-3 | New_Netherland
+PATIENT-2 | Manhattan
+
+
+LEX
+Id1
+TEXT: Asser Levy Public Baths are in New York City, U.S. which is part of Manhattan. New York City was part of New Netherland.
+TEMPLATE: AGENT-1 are in BRIDGE-1 , PATIENT-1 which is PATIENT-1 of PATIENT-2 . BRIDGE-1 was PATIENT-1 of PATIENT-3 .
+CORRECT: AGENT-1 are in BRIDGE-1 , PATIENT-1 which is part of PATIENT-2 . BRIDGE-1 was part of PATIENT-3 .
+COMMENT: 
+-
+Id2
+TEXT: Asser Levy Public Baths are located in New York City, Manhattan, New Netherland in the United States.
+TEMPLATE: AGENT-1 are located in BRIDGE-1 , PATIENT-2 , PATIENT-3 in PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Asser Levy Public Baths is located in New York City, on Manhattan Island, New York, in the United States. New York City was part of what was New Netherland.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , on PATIENT-2 Island , PATIENT-1 York , in PATIENT-1 . BRIDGE-1 was PATIENT-1 of what was PATIENT-3 .
+CORRECT: AGENT-1 is located in BRIDGE-1 , on PATIENT-2 , BRIDGE-1 , in PATIENT-1 . BRIDGE-1 was part of what was PATIENT-3 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id23 4 Building
+
+TRIPLES
+Birmingham | postalCode | B_postcode_area
+103_Colmore_Row | architect | John_Madin
+John_Madin | hometown | Birmingham
+Birmingham | leaderName | John_Clancy_(Labour_politician)
+
+
+ENTITY MAP
+BRIDGE-1 | John_Madin
+AGENT-1 | 103_Colmore_Row
+PATIENT-1 | B_postcode_area
+BRIDGE-2 | Birmingham
+PATIENT-2 | John_Clancy_(Labour_politician)
+
+
+LEX
+Id1
+TEXT: The architect John Madin was the designer of 103 Colmore Row, which is located in his home city of Birmingham. Labour politician, John Clancy is the leader of Birmingham and the city has the postal code 'B'.
+TEMPLATE: BRIDGE-1 was BRIDGE-2 designer of AGENT-1 , which is located in BRIDGE-1 home city of BRIDGE-2 . PATIENT-2 is BRIDGE-2 leader of BRIDGE-2 and BRIDGE-2 has BRIDGE-2 postal code ` PATIENT-1 ' .
+CORRECT: BRIDGE-1 was the designer of AGENT-1 , which is located in BRIDGE-1 home city of BRIDGE-2 . PATIENT-2 is the leader of BRIDGE-2 and BRIDGE-2 has the postal code ` PATIENT-1 ' .
+COMMENT: 
+-
+Id2
+TEXT: 103 Colmore Row was designed by the architect, John Madin, Birmingham native. Birmingham has the postcode area 'B' and is lead by Labour politician, John Clancy.
+TEMPLATE: AGENT-1 was designed by BRIDGE-1 , BRIDGE-2 native . BRIDGE-2 has PATIENT-1 and is lead by PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Labour politician, John Clancy is the leader of Birmingham which has the postcode area 'B' and is home town of John Madin the architect who designed 103 Colmore Row.
+TEMPLATE: PATIENT-2 is BRIDGE-2 leader of BRIDGE-2 which has PATIENT-1 and is home town of BRIDGE-1 BRIDGE-2 architect who designed AGENT-1 .
+CORRECT: PATIENT-2 is the leader of BRIDGE-2 which has PATIENT-1 and is home town of BRIDGE-1 the architect who designed AGENT-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id24 4 Building
+
+TRIPLES
+Ethiopia | leaderName | Mulatu_Teshome
+Addis_Ababa | isPartOf | Addis_Ababa_Stadium
+Addis_Ababa_City_Hall | country | Ethiopia
+Addis_Ababa_City_Hall | location | Addis_Ababa
+
+
+ENTITY MAP
+BRIDGE-1 | Ethiopia
+AGENT-1 | Addis_Ababa_City_Hall
+PATIENT-1 | Mulatu_Teshome
+BRIDGE-2 | Addis_Ababa
+PATIENT-2 | Addis_Ababa_Stadium
+
+
+LEX
+Id1
+TEXT: Addis Ababa, Ethiopia is home to Addis Ababa Stadium and the Addis Ababa City Hall. The name of the leader in Ethiopia is Malatu Teshome.
+TEMPLATE: BRIDGE-2 , BRIDGE-1 is home to PATIENT-2 and AGENT-1 . The name of the leader in BRIDGE-1 is PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Mulatu Teshome is a leader in Ethiopia, a country where Addis Ababa is located and within which is Addis Ababa City Hall and Addis Ababa Stadium.
+TEMPLATE: PATIENT-1 is a leader in BRIDGE-1 , a country where BRIDGE-2 is located and within which is AGENT-1 and PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Mulata Teshome is an Ethiopian leader. Addis Ababa City Hall is located in Addis Ababa, Ethopia. Addis Ababa Stadium is part of Addid Ababa.
+TEMPLATE: Mulata Teshome is an BRIDGE-1 leader . AGENT-1 is located in BRIDGE-2 , BRIDGE-1 . PATIENT-2 is part of BRIDGE-2 .
+CORRECT: PATIENT-1 is an BRIDGE-1 leader . AGENT-1 is located in BRIDGE-2 , BRIDGE-1 . PATIENT-2 is part of BRIDGE-2 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id25 4 Building
+
+TRIPLES
+United_States | capital | Washington,_D.C.
+United_States | leaderTitle | President_of_the_United_States
+United_States | leaderName | Paul_Ryan
+250_Delaware_Avenue | location | United_States
+
+
+ENTITY MAP
+BRIDGE-1 | United_States
+AGENT-1 | 250_Delaware_Avenue
+PATIENT-1 | Washington,_D.C.
+PATIENT-3 | Paul_Ryan
+PATIENT-2 | President_of_the_United_States
+
+
+LEX
+Id1
+TEXT: The leader of the US is known as the President and the capital city is Washington DC. One of the country's leaders if Paul Ryan and it is the location of 250 Delaware Avenue.
+TEMPLATE: PATIENT-2 of BRIDGE-1 is known as PATIENT-2 and BRIDGE-1 capital city is PATIENT-1 . One of BRIDGE-1 's leaders if PATIENT-3 and PATIENT-3 is PATIENT-2 of AGENT-1 .
+CORRECT: The leader of BRIDGE-1 is known as PATIENT-2 and the capital city is PATIENT-1 . One of BRIDGE-1 leaders if PATIENT-3 and BRIDGE-1 is the location of AGENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: Paul Ryan is president of the United States and both 250 Delaware Avenue and Washington DC (the capital) are located there.
+TEMPLATE: PATIENT-3 is president of BRIDGE-1 and both AGENT-1 and PATIENT-1 ( BRIDGE-1 capital ) are located BRIDGE-1 .
+CORRECT: PATIENT-3 is president of BRIDGE-1 and both AGENT-1 and PATIENT-1 ( the capital ) are located there .
+COMMENT: 
+-
+Id3
+TEXT: Paul Ryan is the leader, or President of the United States, of which Washington D.C. is the capital. 250 Delaware Avenue is part of the United States.
+TEMPLATE: PATIENT-3 is BRIDGE-1 PATIENT-2 , or PATIENT-2 , of which PATIENT-1 is BRIDGE-1 capital . AGENT-1 is BRIDGE-1 of BRIDGE-1 .
+CORRECT: PATIENT-3 is the leader , or PATIENT-2 , of which PATIENT-1 is the capital . AGENT-1 is part of BRIDGE-1 .
+COMMENT: 
+-
+

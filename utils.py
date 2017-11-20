@@ -1,12 +1,16 @@
 
 
-def load_data():
+def load_data(character=False):
     # VOCABULARY
     with open('data/input_vocab.txt') as f:
         input_vocab = f.read().split('\n')
 
-    with open('data/output_vocab.txt') as f:
-        output_vocab = f.read().split('\n')
+    if character:
+        with open('data/character_vocab.txt') as f:
+            output_vocab = f.read().split('\n')
+    else:
+        with open('data/output_vocab.txt') as f:
+            output_vocab = f.read().split('\n')
     vocab = {'input':input_vocab, 'output':output_vocab}
 
     # TRAINSET
@@ -19,8 +23,12 @@ def load_data():
     with open('data/train/entity.txt') as f:
         entity = f.read().split('\n')
 
-    with open('data/train/refex.txt') as f:
-        refex = map(lambda x: x.split(), f.read().split('\n'))
+    if character:
+        with open('data/train/refex.txt') as f:
+            refex = map(lambda x: ['eos'] + list(x.replace('eos', '').strip()) + ['eos'], f.read().split('\n'))
+    else:
+        with open('data/train/refex.txt') as f:
+            refex = map(lambda x: x.split(), f.read().split('\n'))
 
     with open('data/train/size.txt') as f:
         size = f.read().split('\n')
@@ -43,8 +51,12 @@ def load_data():
     with open('data/dev/entity.txt') as f:
         entity = f.read().split('\n')
 
-    with open('data/dev/refex.txt') as f:
-        refex = map(lambda x: x.split(), f.read().split('\n'))
+    if character:
+        with open('data/train/refex.txt') as f:
+            refex = map(lambda x: ['eos'] + list(x.replace('eos', '').strip()) + ['eos'], f.read().split('\n'))
+    else:
+        with open('data/train/refex.txt') as f:
+            refex = map(lambda x: x.split(), f.read().split('\n'))
 
     with open('data/dev/size.txt') as f:
         size = f.read().split('\n')
@@ -67,8 +79,12 @@ def load_data():
     with open('data/test/entity.txt') as f:
         entity = f.read().split('\n')
 
-    with open('data/test/refex.txt') as f:
-        refex = map(lambda x: x.split(), f.read().split('\n'))
+    if character:
+        with open('data/train/refex.txt') as f:
+            refex = map(lambda x: ['eos'] + list(x.replace('eos', '').strip()) + ['eos'], f.read().split('\n'))
+    else:
+        with open('data/train/refex.txt') as f:
+            refex = map(lambda x: x.split(), f.read().split('\n'))
 
     with open('data/test/size.txt') as f:
         size = f.read().split('\n')

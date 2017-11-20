@@ -1,0 +1,6226 @@
+
+Entry: Id18 2 Airport
+
+TRIPLES
+Abilene_Regional_Airport | locationIdentifier | "ABI"
+Abilene_Regional_Airport | elevationAboveTheSeaLevel_(in_metres) | 546
+
+
+ENTITY MAP
+AGENT-1 | Abilene_Regional_Airport
+PATIENT-1 | "ABI"
+PATIENT-2 | 546
+
+
+LEX
+Id1
+TEXT: Abilene Regional Airport, located 546 metres above sea level, has the location identifier ABI.
+TEMPLATE: AGENT-1 , located PATIENT-2 metres above sea level , has PATIENT-1 .
+CORRECT: AGENT-1 , located PATIENT-2 metres above sea level , has the location identifier PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: The Abilene Regional Airport's identifier is ABI and it is 546 metres above sea level.
+TEMPLATE: AGENT-1 's identifier is PATIENT-1 and AGENT-1 is PATIENT-2 metres above sea level .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The location Identifier of Abilene Regional Airport, located 546 metres above sea level, is ABI.
+TEMPLATE: The location Identifier of AGENT-1 , located PATIENT-2 metres above sea level , is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id17 2 Airport
+
+TRIPLES
+Abilene_Regional_Airport | cityServed | Abilene,_Texas
+Abilene,_Texas | isPartOf | Taylor_County,_Texas
+
+
+ENTITY MAP
+BRIDGE-1 | Abilene,_Texas
+AGENT-1 | Abilene_Regional_Airport
+PATIENT-1 | Taylor_County,_Texas
+
+
+LEX
+Id1
+TEXT: Abilene is part of Taylor County, Texas and served by Abilene regional airport.
+TEMPLATE: BRIDGE-1 is part of PATIENT-1 and served by AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Abilene, Texas is part of Taylor County, Texas and is served by the Abilene regional airport.
+TEMPLATE: BRIDGE-1 is part of PATIENT-1 and is served by AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Abilene, Taylor County, Texas is served by the Abilene regional airport.
+TEMPLATE: BRIDGE-1 , PATIENT-1 is served by AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id16 2 Airport
+
+TRIPLES
+Abilene_Regional_Airport | cityServed | Abilene,_Texas
+Abilene,_Texas | isPartOf | Jones_County,_Texas
+
+
+ENTITY MAP
+BRIDGE-1 | Abilene,_Texas
+AGENT-1 | Abilene_Regional_Airport
+PATIENT-1 | Jones_County,_Texas
+
+
+LEX
+Id1
+TEXT: The Abilene regional airport serves Abilene, Jones County, Texas.
+TEMPLATE: AGENT-1 serves BRIDGE-1 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Abilene Regional Airport serves the city of Abilene which is part of Jones County, Texas.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 which is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Abilene Regional Airport serves the city of Abilene, Jones County, Texas.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id15 2 Airport
+
+TRIPLES
+Abilene_Regional_Airport | cityServed | Abilene,_Texas
+Abilene,_Texas | country | United_States
+
+
+ENTITY MAP
+BRIDGE-1 | Abilene,_Texas
+AGENT-1 | Abilene_Regional_Airport
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Abilene Regional Airport serves the city of Abilene in Texas, United States.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 in Texas , PATIENT-1 .
+CORRECT: AGENT-1 serves the city of BRIDGE-1 in PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Abilene Regional Airport serves the city of Abilene, Texas United States.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Abilene in Texas (United States) is served by the Abilene regional airport.
+TEMPLATE: BRIDGE-1 (PATIENT-1) is served by AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id14 2 Airport
+
+TRIPLES
+Abilene_Regional_Airport | 3rd_runway_LengthFeet | 7202
+Abilene_Regional_Airport | elevationAboveTheSeaLevel_(in_metres) | 546
+
+
+ENTITY MAP
+AGENT-1 | Abilene_Regional_Airport
+PATIENT-1 | 7202
+PATIENT-2 | 546
+
+
+LEX
+Id1
+TEXT: The Abilene Regional Airport lies 546 metres above sea level and its third runway is 7,202 feet long.
+TEMPLATE: AGENT-1 lies PATIENT-2 metres above sea level and AGENT-1 third runway is PATIENT-1 long .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Abilene regional airport is 546 metres above sea level and has a runway length of 7202 feet.
+TEMPLATE: AGENT-1 is PATIENT-2 metres above sea level and has a runway length of PATIENT-1 feet .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Abilene Regional Airport is located 546 metres above sea level and the length of the 3rd runway is 7202 feet.
+TEMPLATE: AGENT-1 is located PATIENT-2 metres above sea level and the length of the 3rd runway is PATIENT-1 feet .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id13 2 Airport
+
+TRIPLES
+Abilene_Regional_Airport | 1st_runway_SurfaceType | Asphalt
+Abilene_Regional_Airport | elevationAboveTheSeaLevel_(in_metres) | 546
+
+
+ENTITY MAP
+AGENT-1 | Abilene_Regional_Airport
+PATIENT-1 | Asphalt
+PATIENT-2 | 546
+
+
+LEX
+Id1
+TEXT: Abilene Regional Airportis 546 metres above sea level and has a 1st runway made of asphalt.
+TEMPLATE: AGENT-1 PATIENT-2 metres above sea level and has a 1st runway made of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The first runway at Abilene Regional Airport (elevation 546 metres above sea level) is made from asphalt.
+TEMPLATE: The first runway at AGENT-1 (elevation PATIENT-2 metres above sea level) is made from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Abilene Regional Airport is located 546 metres above sea level and the 1st runway is made of asphalt.
+TEMPLATE: AGENT-1 is located PATIENT-2 metres above sea level and the 1st runway is made of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id12 2 Airport
+
+TRIPLES
+Abilene_Regional_Airport | 1st_runway_LengthFeet | 3678
+Abilene_Regional_Airport | elevationAboveTheSeaLevel_(in_metres) | 546
+
+
+ENTITY MAP
+AGENT-1 | Abilene_Regional_Airport
+PATIENT-1 | 3678
+PATIENT-2 | 546
+
+
+LEX
+Id1
+TEXT: 546m above sea level, the length of the 1st runway at Abilene Regional airport is 3678 feet.
+TEMPLATE: PATIENT-2 above sea level , the length of the 1st runway at AGENT-1 is PATIENT-1 feet .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Abilene Regional Airport is 546 metres above sea level and the 1st runway is 3678 feet.
+TEMPLATE: AGENT-1 is PATIENT-2 metres above sea level and the 1st runway is PATIENT-1 feet .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Abilene Regional Airpot is 546 metres above sea level and the length of the first runway is 3678 feet.
+TEMPLATE: AGENT-1 is PATIENT-2 metres above sea level and the length of the first runway is PATIENT-1 feet .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id11 2 Airport
+
+TRIPLES
+Aarhus_Airport | runwayLength | 2777.0
+Aarhus_Airport | operatingOrganisation | Aktieselskab
+
+
+ENTITY MAP
+AGENT-1 | Aarhus_Airport
+PATIENT-1 | 2777.0
+PATIENT-2 | Aktieselskab
+
+
+LEX
+Id1
+TEXT: Aarhus Airport is operated by the Aktieselkab organisation and has a runway length of 2777.0 meters.
+TEMPLATE: AGENT-1 is operated by the Aktieselkab organisation and has PATIENT-2 of PATIENT-1 meters .
+CORRECT: AGENT-1 is operated by PATIENT-2 and has a runway length of PATIENT-1 meters .
+COMMENT:
+-
+Id2
+TEXT: Aktieselskab is the operating organisation for Aarhus Airport which has a runway with the length of 2777.0 meters.
+TEMPLATE: PATIENT-2 is the operating organisation for AGENT-1 which has a runway with the length of PATIENT-1 meters .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id10 2 Airport
+
+TRIPLES
+Aarhus_Airport | runwayLength | 2776.0
+Aarhus_Airport | operatingOrganisation | Aktieselskab
+
+
+ENTITY MAP
+AGENT-1 | Aarhus_Airport
+PATIENT-1 | 2776.0
+PATIENT-2 | Aktieselskab
+
+
+LEX
+Id1
+TEXT: Aarhus Airport, operated by Aktieselkab, has a runway length of 2776.
+TEMPLATE: AGENT-1 , operated by PATIENT-2 , has a runway length of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Aktieselskab is the operating organisation for Aarhus Airport which has a runway length of 2776.0 metres.
+TEMPLATE: PATIENT-2 is the operating organisation for AGENT-1 which has a runway length of PATIENT-1 metres .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Aktieselkab organisation operates Aarhus Airport, which has a runway length of 2776.0.
+TEMPLATE: The Aktieselkab organisation operates AGENT-1 , which has PATIENT-2 of PATIENT-1 .
+CORRECT: PATIENT-2 operates AGENT-1 , which has a runway length of PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id9 2 Airport
+
+TRIPLES
+Aarhus_Airport | runwayLength | 2776.0
+Aarhus_Airport | operatingOrganisation | "Aarhus Lufthavn A/S"
+
+
+ENTITY MAP
+AGENT-1 | Aarhus_Airport
+PATIENT-1 | 2776.0
+PATIENT-2 | "Aarhus Lufthavn A/S"
+
+
+LEX
+Id1
+TEXT: Aarhus Airport is operated by Aarhus Lufthave A/S and the length of the runway is 2776.0.
+TEMPLATE: AGENT-1 is operated by PATIENT-2 and the length of the runway is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Aarhus Lufthavn A/S is the operation organisation of Aarhus Airport which has a runway with the length of 2776.0 metres.
+TEMPLATE: PATIENT-2 is the operation organisation of AGENT-1 which has a runway with the length of PATIENT-1 metres .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id8 2 Airport
+
+TRIPLES
+Aarhus_Airport | operatingOrganisation | Aktieselskab
+Aarhus_Airport | runwayName | "10R/28L"
+
+
+ENTITY MAP
+AGENT-1 | Aarhus_Airport
+PATIENT-1 | Aktieselskab
+PATIENT-2 | "10R/28L"
+
+
+LEX
+Id1
+TEXT: Aktieselskab is the operating organisation for Aarhus Airport which has the runway name 10R/28L.
+TEMPLATE: PATIENT-1 is the operating organisation for AGENT-1 which has PATIENT-2 .
+CORRECT: PATIENT-1 is the operating organisation for AGENT-1 which has the runway name PATIENT-2 .
+COMMENT: mod
+-
+Id2
+TEXT: Aktieselskab is the operating organisation for Aarhus Airport, where the runway name is 10R/28L.
+TEMPLATE: PATIENT-1 is the operating organisation for AGENT-1 , where the runway name is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The runway name at Aarhus Airport, operated by Aktieselskab, is "10R/28L".
+TEMPLATE: The runway name at AGENT-1 , operated by PATIENT-1 , is `` PATIENT-2 '' .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id7 2 Airport
+
+TRIPLES
+Aarhus_Airport | operatingOrganisation | Aktieselskab
+Aarhus_Airport | runwayName | "10L/28R"
+
+
+ENTITY MAP
+AGENT-1 | Aarhus_Airport
+PATIENT-1 | Aktieselskab
+PATIENT-2 | "10L/28R"
+
+
+LEX
+Id1
+TEXT: Aarhus Airport is operated by the Aktieselkab organisation and the runway name is 10L/28R.
+TEMPLATE: AGENT-1 is operated by the Aktieselkab organisation and PATIENT-1 is PATIENT-2 .
+CORRECT: AGENT-1 is operated by PATIENT-1 and the runway name is PATIENT-2 .
+COMMENT:
+-
+Id2
+TEXT: Aktieselskab operates Aarhus Airport which has the runway known as 10L/28R.
+TEMPLATE: PATIENT-1 operates AGENT-1 which has the runway known as PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Aktieselskab operates Aarhus Airport, and its runway is called 10L/28R.
+TEMPLATE: PATIENT-1 operates AGENT-1 , and AGENT-1 runway is called PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id6 2 Airport
+
+TRIPLES
+Aarhus_Airport | operatingOrganisation | Aktieselskab
+Aarhus_Airport | runwayLength | 2702.0
+
+
+ENTITY MAP
+AGENT-1 | Aarhus_Airport
+PATIENT-1 | Aktieselskab
+PATIENT-2 | 2702.0
+
+
+LEX
+Id1
+TEXT: Aarhus Airport is operated by Aktieselskab and the runway length is 2702.0.
+TEMPLATE: AGENT-1 is operated by PATIENT-1 and the runway length is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Aarhus Airport, with a runway length of 2702, is operated by Aktieselskab.
+TEMPLATE: AGENT-1 , with a runway length of PATIENT-2 , is operated by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Aarhus airport, which has a runway length of 2702.0, is operated by Aktieselskab.
+TEMPLATE: AGENT-1 , which has a runway length of PATIENT-2 , is operated by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id5 2 Airport
+
+TRIPLES
+Aarhus_Airport | operatingOrganisation | "Aarhus Lufthavn A/S"
+Aarhus_Airport | runwayLength | 2702.0
+
+
+ENTITY MAP
+AGENT-1 | Aarhus_Airport
+PATIENT-1 | "Aarhus Lufthavn A/S"
+PATIENT-2 | 2702.0
+
+
+LEX
+Id1
+TEXT: Aarhus Lufthavn A/S is the operation organisation of Aarhus Airport which has a runway length of 2702.0.
+TEMPLATE: PATIENT-1 is the operation organisation of AGENT-1 which has a runway length of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Aarhus Airport is operated by Aarhus Lufthavn A/S, and its runway length is 2702.0.
+TEMPLATE: AGENT-1 is operated by PATIENT-1 , and AGENT-1 runway length is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Aarhus Airport is operated by Aarhus Lufthavn A/S and has a runway length of 2702.0.
+TEMPLATE: AGENT-1 is operated by PATIENT-1 and has a runway length of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id4 2 Airport
+
+TRIPLES
+Aarhus_Airport | location | Tirstrup
+Tirstrup | isPartOf | Denmark
+
+
+ENTITY MAP
+BRIDGE-1 | Tirstrup
+AGENT-1 | Aarhus_Airport
+PATIENT-1 | Denmark
+
+
+LEX
+Id1
+TEXT: The location of Aarhus Airport is Tirstrup Denmark.
+TEMPLATE: The location of AGENT-1 is BRIDGE-1 PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Aarhus Airport is located in Tirstrup, Denmark.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id2 2 Airport
+
+TRIPLES
+Aarhus_Airport | location | Tirstrup
+Tirstrup | country | Denmark
+
+
+ENTITY MAP
+BRIDGE-1 | Tirstrup
+AGENT-1 | Aarhus_Airport
+PATIENT-1 | Denmark
+
+
+LEX
+Id1
+TEXT: Aarhus Airport is located in Tirstrup, Denmark.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The location of Aarhus Airport is Tirstrup, in Denmark.
+TEMPLATE: The location of AGENT-1 is BRIDGE-1 , in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id1 2 Airport
+
+TRIPLES
+Aarhus | leaderName | Jacob_Bundsgaard
+Aarhus_Airport | cityServed | Aarhus
+
+
+ENTITY MAP
+BRIDGE-1 | Aarhus
+AGENT-1 | Aarhus_Airport
+PATIENT-1 | Jacob_Bundsgaard
+
+
+LEX
+Id1
+TEXT: Aarhus airport serves the city of Aarhus who's leader is Jacob Bundsgaard.
+TEMPLATE: BRIDGE-1 airport serves AGENT-1 of BRIDGE-1 who 's leader is PATIENT-1 .
+CORRECT: AGENT-1 serves the city of BRIDGE-1 who 's leader is PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Aarhus airport serves the city of Aarhus where Jacob Bundsgaard is a leader.
+TEMPLATE: BRIDGE-1 airport serves the city of BRIDGE-1 where PATIENT-1 is AGENT-1 .
+CORRECT: AGENT-1 serves the city of BRIDGE-1 where PATIENT-1 is a leader .
+COMMENT:
+-
+Id3
+TEXT: Aarhus airport serves the city of Aarhus, it's leader is Jacob Bundsgaard.
+TEMPLATE: BRIDGE-1 airport serves AGENT-1 of BRIDGE-1 , AGENT-1 's leader is PATIENT-1 .
+CORRECT: AGENT-1 serves the city of BRIDGE-1 , BRIDGE-1 's leader is PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id3 2 Airport
+
+TRIPLES
+Aarhus_Airport | location | Tirstrup
+Tirstrup | isPartOf | Central_Denmark_Region
+
+
+ENTITY MAP
+BRIDGE-1 | Tirstrup
+AGENT-1 | Aarhus_Airport
+PATIENT-1 | Central_Denmark_Region
+
+
+LEX
+Id1
+TEXT: Aarhus Airport is located in Tirstrup which is part of the Central Denmark region.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 which is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The location of Aarhus Airport is Tirstrup, part of Central Denmark.
+TEMPLATE: The location of AGENT-1 is BRIDGE-1 , part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Aarhus Airport is located in Tirstrup, part of the Central Denmark region.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id193 2 Airport
+
+TRIPLES
+Saranac_Lake,_New_York | isPartOf | United_States
+Adirondack_Regional_Airport | cityServed | Saranac_Lake,_New_York
+
+
+ENTITY MAP
+BRIDGE-1 | Saranac_Lake,_New_York
+AGENT-1 | Adirondack_Regional_Airport
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Adirondack Regional Airport serves the city of Saranac Lake, New York, in the United States.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 , in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Adirondack Regional Airport serves the city of Saranac Lake, New York, U.S.
+TEMPLATE: AGENT-1 serves PATIENT-1 of BRIDGE-1 , U.S.
+CORRECT: AGENT-1 serves the city of BRIDGE-1 , PATIENT-1
+COMMENT: nationality
+-
+Id3
+TEXT: Adirondack Regional Airport serves the city of Saranac Lake, New York which is part of the U.S.
+TEMPLATE: AGENT-1 serves PATIENT-1 of BRIDGE-1 which is part of the U.S.
+CORRECT: AGENT-1 serves the city of BRIDGE-1 which is part of PATIENT-1
+COMMENT: nationality
+-
+
+**************************************************
+
+Entry: Id192 2 Airport
+
+TRIPLES
+Saranac_Lake,_New_York | isPartOf | Harrietstown,_New_York
+Adirondack_Regional_Airport | cityServed | Saranac_Lake,_New_York
+
+
+ENTITY MAP
+BRIDGE-1 | Saranac_Lake,_New_York
+AGENT-1 | Adirondack_Regional_Airport
+PATIENT-1 | Harrietstown,_New_York
+
+
+LEX
+Id1
+TEXT: Adirondack Regional Airport serves the city of Saranac Lake, New York which is part of Harrietstown, N.Y.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 which is part of PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Adirondack Regional Airport serves the city of Saranac Lake, New York which is part of Harrietstown, New York.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 which is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Adirondack Regional Airport serves the city of Saranac Lake in Harrietstown, New York.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id191 2 Airport
+
+TRIPLES
+Saranac_Lake,_New_York | isPartOf | Essex_County,_New_York
+Adirondack_Regional_Airport | cityServed | Saranac_Lake,_New_York
+
+
+ENTITY MAP
+BRIDGE-1 | Saranac_Lake,_New_York
+AGENT-1 | Adirondack_Regional_Airport
+PATIENT-1 | Essex_County,_New_York
+
+
+LEX
+Id1
+TEXT: Adirondack Regional Airport serves the city of Saranac Lake, Essex County, New York.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id190 2 Airport
+
+TRIPLES
+Poaceae | order | Commelinids
+Ardmore_Airport_(New_Zealand) | 2nd_runway_SurfaceType | Poaceae
+
+
+ENTITY MAP
+BRIDGE-1 | Poaceae
+AGENT-1 | Ardmore_Airport_(New_Zealand)
+PATIENT-1 | Commelinids
+
+
+LEX
+Id1
+TEXT: Poaceae is the order of Commelinids, it is also the surface type of the second runway of Ardmore Airport, New Zealand.
+TEMPLATE: BRIDGE-1 is the order of PATIENT-1 , BRIDGE-1 is also the surface type of the second runway of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The 2nd runway at Ardmore Airport (New Zealand) is made of Poaceae which belongs to the order of Commelinids.
+TEMPLATE: The 2nd runway at AGENT-1 is made of BRIDGE-1 which belongs to the order of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id189 2 Airport
+
+TRIPLES
+Poaceae | division | Flowering_plant
+Ardmore_Airport_(New_Zealand) | 2nd_runway_SurfaceType | Poaceae
+
+
+ENTITY MAP
+BRIDGE-1 | Poaceae
+AGENT-1 | Ardmore_Airport_(New_Zealand)
+PATIENT-1 | Flowering_plant
+
+
+LEX
+Id1
+TEXT: Poaceae belongs to the division of flowering plants and it is the surface type of the second runway of Ardmore Airport, New Zealand.
+TEMPLATE: BRIDGE-1 belongs to the division of PATIENT-1 and BRIDGE-1 is the surface type of the second runway of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Poaceae belongs to the division of flowering plants and is the surface type of the second runway of Ardmore Airport, New Zealand.
+TEMPLATE: BRIDGE-1 belongs to the division of PATIENT-1 and is the surface type of the second runway of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The 2nd runway at Ardmore Airport (New Zealand) is made of Poaceae which belongs to the division of flowering plants.
+TEMPLATE: The 2nd runway at AGENT-1 is made of BRIDGE-1 which belongs to the division of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id188 2 Airport
+
+TRIPLES
+Poaceae | division | Flowering_plant
+Alderney_Airport | 1st_runway_SurfaceType | Poaceae
+
+
+ENTITY MAP
+BRIDGE-1 | Poaceae
+AGENT-1 | Alderney_Airport
+PATIENT-1 | Flowering_plant
+
+
+LEX
+Id1
+TEXT: The surface of the 1st runway at Alderney Airport is covered with poaceae, which belongs to the division of flowering plants.
+TEMPLATE: The surface of the 1st runway at AGENT-1 is covered with BRIDGE-1 , which belongs to the division of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The 1st runway at Alderney Airport is made from Poaceae which belongs to the division of flowering plants.
+TEMPLATE: The 1st runway at AGENT-1 is made from BRIDGE-1 which belongs to the division of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The surface of the 1st runway at Alderney airport is poaceae which is a type of flowering plant.
+TEMPLATE: The surface of the 1st runway at AGENT-1 is BRIDGE-1 which is a type of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id187 2 Airport
+
+TRIPLES
+Poaceae | class | Monocotyledon
+Ardmore_Airport_(New_Zealand) | 2nd_runway_SurfaceType | Poaceae
+
+
+ENTITY MAP
+BRIDGE-1 | Poaceae
+AGENT-1 | Ardmore_Airport_(New_Zealand)
+PATIENT-1 | Monocotyledon
+
+
+LEX
+Id1
+TEXT: The 2nd runway at Ardmore Airport (New Zealand) is made of Poaceae, which is classed as a Monocotyledon.
+TEMPLATE: The 2nd runway at AGENT-1 is made of BRIDGE-1 , which is classed as PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Poaceae, of the class Monocotyledon, is the surface type of the second runway at Ardmore Airport, New Zealand.
+TEMPLATE: BRIDGE-1 , of PATIENT-1 , is the surface type of the second runway at AGENT-1 .
+CORRECT: BRIDGE-1 , of the class PATIENT-1 , is the surface type of the second runway at AGENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: Poaceae is in the class Monocotyledon and is used as the surface of the second runway of Ardmore Airport, New Zealand.
+TEMPLATE: BRIDGE-1 is in PATIENT-1 and is used as the surface of the second runway of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id186 2 Airport
+
+TRIPLES
+Maple_Ridge_Township,_Alpena_County,_Michigan | isPartOf | United_States
+Alpena_County_Regional_Airport | location | Maple_Ridge_Township,_Alpena_County,_Michigan
+
+
+ENTITY MAP
+BRIDGE-1 | Maple_Ridge_Township,_Alpena_County,_Michigan
+AGENT-1 | Alpena_County_Regional_Airport
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Maple Ridge Township, Alpena County, Michigan is in the United States. The Alpena County Regional Airport is located there.
+TEMPLATE: BRIDGE-1 is in PATIENT-1 . AGENT-1 is located there .
+CORRECT: BRIDGE-1 is in PATIENT-1 . AGENT-1 is located BRIDGE-1 .
+COMMENT: coref
+-
+Id2
+TEXT: Alpena County Regional Airport is located in the United States in the Maple Ridge Township, Alpena County, Michigan.
+TEMPLATE: AGENT-1 is located in PATIENT-1 in BRIDGE-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Alpena County Regional Airport is located in Maple Ridge Township, Alpena County, Michigan, USA.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id185 2 Airport
+
+TRIPLES
+Madrid | isPartOf | Community_of_Madrid
+Adolfo_Suárez_Madrid–Barajas_Airport | location | Madrid
+
+
+ENTITY MAP
+BRIDGE-1 | Madrid
+AGENT-1 | Adolfo_Suárez_Madrid–Barajas_Airport
+PATIENT-1 | Community_of_Madrid
+
+
+LEX
+Id1
+TEXT: Adolfo Suarez Madrid-Barajas Airport is located in Madrid, which is part of the community of Madrid.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , which is part of PATIENT-1 of BRIDGE-1 .
+CORRECT: AGENT-1 is located in BRIDGE-1 , which is part of PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: The Adolfo Suárez Madrid–Barajas Airport is in Madrid, which is part of the community known by the same name.
+TEMPLATE: BRIDGE-1 -- AGENT-1 is in BRIDGE-1 , which is part of PATIENT-1 known by the same name .
+CORRECT: AGENT-1 is in BRIDGE-1 , which is part of PATIENT-1 known by the same name .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id184 2 Airport
+
+TRIPLES
+Lake_Placid,_New_York | isPartOf | New_York
+Adirondack_Regional_Airport | cityServed | Lake_Placid,_New_York
+
+
+ENTITY MAP
+BRIDGE-1 | Lake_Placid,_New_York
+AGENT-1 | Adirondack_Regional_Airport
+PATIENT-1 | New_York
+
+
+LEX
+Id1
+TEXT: Lake Placid, New York is part of New York and is served by the Adirondack Regional Airport.
+TEMPLATE: BRIDGE-1 is part of PATIENT-1 and is served by AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Adirondack Regional Airport serves the city of Lake Placid which is in and is a part of New York.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 which is in and is a part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id183 2 Airport
+
+TRIPLES
+Lake_Placid,_New_York | isPartOf | Essex_County,_New_York
+Adirondack_Regional_Airport | cityServed | Lake_Placid,_New_York
+
+
+ENTITY MAP
+BRIDGE-1 | Lake_Placid,_New_York
+AGENT-1 | Adirondack_Regional_Airport
+PATIENT-1 | Essex_County,_New_York
+
+
+LEX
+Id1
+TEXT: Adirondack Regional Airport serves the city of Lake Placid, New York which is part of Essex County, New York.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 which is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Lake Placid, New York is part of Essex County, NY and it is served by the Adirondack Regional Airport.
+TEMPLATE: BRIDGE-1 is part of PATIENT-1 and BRIDGE-1 is served by AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Lake Placid, is part of Essex County, New York and is served by the Adirondack Regional Airport.
+TEMPLATE: BRIDGE-1 , is part of PATIENT-1 and is served by AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id182 2 Airport
+
+TRIPLES
+Lahore | country | Pakistan
+Allama_Iqbal_International_Airport | cityServed | Lahore
+
+
+ENTITY MAP
+BRIDGE-1 | Lahore
+AGENT-1 | Allama_Iqbal_International_Airport
+PATIENT-1 | Pakistan
+
+
+LEX
+Id1
+TEXT: The Allama Iqbal International airport serves the city of Lahore in Pakistan.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The city of Lahore in Pakistan is served by Allama Iqbal International airport.
+TEMPLATE: The city of BRIDGE-1 in PATIENT-1 is served by AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id181 2 Airport
+
+TRIPLES
+Indian_Air_Force | aircraftHelicopter | HAL_Light_Combat_Helicopter
+Agra_Airport | operatingOrganisation | Indian_Air_Force
+
+
+ENTITY MAP
+BRIDGE-1 | Indian_Air_Force
+AGENT-1 | Agra_Airport
+PATIENT-1 | HAL_Light_Combat_Helicopter
+
+
+LEX
+Id1
+TEXT: India's Air Force has a helicopter known as the HAL Light Combat Helicopter and also operates Agra Airport.
+TEMPLATE: BRIDGE-1 has a helicopter known as PATIENT-1 and also operates AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The HAL Light Combat Helicopter is a Helicopter used by the Indian Air Force who operates the Agra Airport.
+TEMPLATE: PATIENT-1 is a Helicopter used by BRIDGE-1 who operates AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The operating organization for Agra Airport is the Indian Air Force who use the HAL Light Combat Helicopter.
+TEMPLATE: The operating organization for AGENT-1 is BRIDGE-1 who use PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id180 2 Airport
+
+TRIPLES
+Flemish_Government | jurisdiction | Flemish_Region
+Antwerp_International_Airport | operatingOrganisation | Flemish_Government
+
+
+ENTITY MAP
+BRIDGE-1 | Flemish_Government
+AGENT-1 | Antwerp_International_Airport
+PATIENT-1 | Flemish_Region
+
+
+LEX
+Id1
+TEXT: Antwerp international airport is operated by the Flemish government which has full jurisdiction.
+TEMPLATE: AGENT-1 is operated by BRIDGE-1 which has full jurisdiction .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Antwerp International Airport is operated by the Flemish government, which has jurisdiction over the Flemish Region.
+TEMPLATE: AGENT-1 is operated by BRIDGE-1 , which has jurisdiction over PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The operating organisation of Antwerp International airport is the Flemish government who have jurisdiction of the Flemish Region.
+TEMPLATE: The operating organisation of AGENT-1 is BRIDGE-1 who have jurisdiction of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id179 2 Airport
+
+TRIPLES
+Egg_Harbor_Township,_New_Jersey | isPartOf | New_Jersey
+Atlantic_City_International_Airport | location | Egg_Harbor_Township,_New_Jersey
+
+
+ENTITY MAP
+BRIDGE-1 | Egg_Harbor_Township,_New_Jersey
+AGENT-1 | Atlantic_City_International_Airport
+PATIENT-1 | New_Jersey
+
+
+LEX
+Id1
+TEXT: Atlantic City International Airport can be found in New Jersey in Egg Harbor Township.
+TEMPLATE: AGENT-1 can be found in PATIENT-1 in BRIDGE-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Atlantic City International Airport is located in Egg Harbor Township, in New Jersey.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Atlantic City International Airport is located in Egg Harbor Township in New Jersey.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id178 2 Airport
+
+TRIPLES
+ENAIRE | locationCity | Madrid
+Adolfo_Suárez_Madrid–Barajas_Airport | operatingOrganisation | ENAIRE
+
+
+ENTITY MAP
+BRIDGE-1 | ENAIRE
+AGENT-1 | Adolfo_Suárez_Madrid–Barajas_Airport
+PATIENT-1 | Madrid
+
+
+LEX
+Id1
+TEXT: ENAIRE is the operating organisation for Adolfo Suarez Madrid-Barajas airport in Madrid.
+TEMPLATE: BRIDGE-1 is the operating organisation for AGENT-1 in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Adolfo Suarez Madrid-Barajas Airport is operated by ENAIRE, Madrid.
+TEMPLATE: AGENT-1 is operated by BRIDGE-1 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Adolfo Suárez Madrid–Barajas Airport is operated by ENAIRE in Madrid.
+TEMPLATE: PATIENT-1 -- AGENT-1 is operated by BRIDGE-1 in PATIENT-1 .
+CORRECT: AGENT-1 is operated by BRIDGE-1 in PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id177 2 Airport
+
+TRIPLES
+Atlantic_City_International_Airport | runwayLength | 1873.0
+Atlantic_City_International_Airport | operatingOrganisation | Port_Authority_of_New_York_and_New_Jersey
+
+
+ENTITY MAP
+AGENT-1 | Atlantic_City_International_Airport
+PATIENT-1 | 1873.0
+PATIENT-2 | Port_Authority_of_New_York_and_New_Jersey
+
+
+LEX
+Id1
+TEXT: The Atlantic City International Airport is operated by the Port Authority of New York and New Jersey, its runway length is 1,873.
+TEMPLATE: AGENT-1 is operated by PATIENT-2 , AGENT-1 runway length is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Port Authority of New York and New Jersey is the operating organisation of Atlantic City International airport, where the runway length is 1873.
+TEMPLATE: PATIENT-2 is the operating organisation of AGENT-1 , where the runway length is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Atlantic City International Airport, run by the port authorities of New York and New jersey, ha a runway length of 1,873.
+TEMPLATE: AGENT-1 , run by PATIENT-2 a runway length of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id176 2 Airport
+
+TRIPLES
+Atlantic_City_International_Airport | owner | South_Jersey_Transportation_Authority
+South_Jersey_Transportation_Authority | leaderName | Stephen_Dilts
+
+
+ENTITY MAP
+BRIDGE-1 | South_Jersey_Transportation_Authority
+AGENT-1 | Atlantic_City_International_Airport
+PATIENT-1 | Stephen_Dilts
+
+
+LEX
+Id1
+TEXT: Atlantic City International Airport is owned by the South Jersey Transportation Authority whose leader is Stephen Dilts.
+TEMPLATE: AGENT-1 is owned by BRIDGE-1 whose leader is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Atlantic City International Airport owner is South Jersey Transportation Authority headed by Stephen Dilts .
+TEMPLATE: AGENT-1 owner is BRIDGE-1 headed by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Atlantic City International Airport is owned by the South Jersey Transportation Authority which is headed by Stephen Dilts.
+TEMPLATE: AGENT-1 is owned by BRIDGE-1 which is headed by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id175 2 Airport
+
+TRIPLES
+Atlantic_City_International_Airport | owner | South_Jersey_Transportation_Authority
+South_Jersey_Transportation_Authority | chief | Stephen_Dilts
+
+
+ENTITY MAP
+BRIDGE-1 | South_Jersey_Transportation_Authority
+AGENT-1 | Atlantic_City_International_Airport
+PATIENT-1 | Stephen_Dilts
+
+
+LEX
+Id1
+TEXT: Atlantic City International Airport is owned by South Jersey Transportation Authority whose chief is Stephen Dilts.
+TEMPLATE: AGENT-1 is owned by BRIDGE-1 whose chief is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Atlantic City International Airport owned by South Jersey Transportation Authority who's chief is Stephen Dilts.
+TEMPLATE: AGENT-1 owned by BRIDGE-1 who 's chief is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id174 2 Airport
+
+TRIPLES
+Atlantic_City_International_Airport | operatingOrganisation | Port_Authority_of_New_York_and_New_Jersey
+Port_Authority_of_New_York_and_New_Jersey | headquarter | New_York
+
+
+ENTITY MAP
+BRIDGE-1 | Port_Authority_of_New_York_and_New_Jersey
+AGENT-1 | Atlantic_City_International_Airport
+PATIENT-1 | New_York
+
+
+LEX
+Id1
+TEXT: The Atlantic City International Airport is operated by the Port Authority of New York and New Jersey, based in New York.
+TEMPLATE: AGENT-1 is operated by BRIDGE-1 , based in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Port Authority of New York and New Jersey, headquartered in New York, is the operating organisation of Atlantic City International airport.
+TEMPLATE: BRIDGE-1 , headquartered in PATIENT-1 , is the operating organisation of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Port Authority of New York and New Jersey is the operating organisation of Atlantic City International airport with its headquarters in New York.
+TEMPLATE: BRIDGE-1 is the operating organisation of AGENT-1 with BRIDGE-1 headquarters in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id173 2 Airport
+
+TRIPLES
+Atlantic_City_International_Airport | operatingOrganisation | Port_Authority_of_New_York_and_New_Jersey
+Port_Authority_of_New_York_and_New_Jersey | headquarter | Four_World_Trade_Center
+
+
+ENTITY MAP
+BRIDGE-1 | Port_Authority_of_New_York_and_New_Jersey
+AGENT-1 | Atlantic_City_International_Airport
+PATIENT-1 | Four_World_Trade_Center
+
+
+LEX
+Id1
+TEXT: The Atlantic City International Airport is operated by the Port Authority of New York and New Jersey, which has its headquarters at the Four World Trade Centre.
+TEMPLATE: AGENT-1 is operated by BRIDGE-1 , which has AGENT-1 headquarters at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Port Authority of New York and New Jersey is based at the Four World Trade Centre and operates Atlantic City international airport.
+TEMPLATE: BRIDGE-1 is based at PATIENT-1 and operates AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id172 2 Airport
+
+TRIPLES
+Atlantic_City_International_Airport | operatingOrganisation | Port_Authority_of_New_York_and_New_Jersey
+Atlantic_City_International_Airport | runwayName | "13/31"
+
+
+ENTITY MAP
+AGENT-1 | Atlantic_City_International_Airport
+PATIENT-1 | Port_Authority_of_New_York_and_New_Jersey
+PATIENT-2 | "13/31"
+
+
+LEX
+Id1
+TEXT: 13/31 is the name of a runway at Atlantic City International Airport, operated by Port Authorities of New York and New Jersey.
+TEMPLATE: PATIENT-2 is the name of a runway at AGENT-1 , operated by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Port Authority of New York and New Jersey is the operating organisation of Atlantic City International airport, which has the runway name of 13/31.
+TEMPLATE: PATIENT-1 is the operating organisation of AGENT-1 , which has the runway name of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Atlantic City International Airport, operated by the Port Authority of New York and New Jersey, has a runway named "13/31".
+TEMPLATE: AGENT-1 , operated by PATIENT-1 , has a runway named `` PATIENT-2 '' .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id171 2 Airport
+
+TRIPLES
+Atlantic_City_International_Airport | operatingOrganisation | Port_Authority_of_New_York_and_New_Jersey
+Atlantic_City_International_Airport | elevationAboveTheSeaLevel_(in_metres) | 23.0
+
+
+ENTITY MAP
+AGENT-1 | Atlantic_City_International_Airport
+PATIENT-1 | Port_Authority_of_New_York_and_New_Jersey
+PATIENT-2 | 23.0
+
+
+LEX
+Id1
+TEXT: Atlantic City International Airport is operated by the Port Authority of New York and New Jersey and is 23.0 metres above sea level.
+TEMPLATE: AGENT-1 is operated by PATIENT-1 and is PATIENT-2 metres above sea level .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Atlantic City International Airport is run by the Port Authority of New York and New Jersey and is 23 m above sea level.
+TEMPLATE: AGENT-1 is run by PATIENT-1 and is PATIENT-2 above sea level .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Atlantic City International Airport is 23.0 metres above sea level and is operated by the Port Authority of New York.
+TEMPLATE: AGENT-1 is PATIENT-2 metres above sea level and is operated by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id170 2 Airport
+
+TRIPLES
+Atlantic_City_International_Airport | location | Egg_Harbor_Township,_New_Jersey
+Egg_Harbor_Township,_New_Jersey | isPartOf | Atlantic_County,_New_Jersey
+
+
+ENTITY MAP
+BRIDGE-1 | Egg_Harbor_Township,_New_Jersey
+AGENT-1 | Atlantic_City_International_Airport
+PATIENT-1 | Atlantic_County,_New_Jersey
+
+
+LEX
+Id1
+TEXT: Atlantic City International Airport is in Egg Harbor Township which is part of Atlantic County, New Jersey.
+TEMPLATE: AGENT-1 is in BRIDGE-1 which is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Atlantic City International Airport is located at Egg Harbour Township, which is located in Atlantic City, New Jersey, United States.
+TEMPLATE: AGENT-1 is located at BRIDGE-1 , which is located in PATIENT-1 , New Jersey , United States .
+CORRECT: AGENT-1 is located at BRIDGE-1 , which is located in PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: Atlantic City International Airport is in Egg Harbor Township, NJ, which is part of Atlantic County.
+TEMPLATE: AGENT-1 is in BRIDGE-1 , NJ , which is part of PATIENT-1 .
+CORRECT: AGENT-1 is in BRIDGE-1 , which is part of PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id169 2 Airport
+
+TRIPLES
+Atlantic_City_International_Airport | cityServed | Atlantic_City,_New_Jersey
+Atlantic_City,_New_Jersey | leaderName | Don_Guardian
+
+
+ENTITY MAP
+BRIDGE-1 | Atlantic_City,_New_Jersey
+AGENT-1 | Atlantic_City_International_Airport
+PATIENT-1 | Don_Guardian
+
+
+LEX
+Id1
+TEXT: Atlantic City International Airport serves the city of Atlantic City, New Jersey and has Don Guardian as its leader.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 and has PATIENT-1 as AGENT-1 leader .
+CORRECT: AGENT-1 serves the city of BRIDGE-1 and has PATIENT-1 as BRIDGE-1 leader .
+COMMENT:
+-
+Id2
+TEXT: Atlantic City, N.J., which is led by Don Guardian, is served by the Atlantic City International Airport.
+TEMPLATE: BRIDGE-1 , N.J. , which is led by PATIENT-1 , is served by AGENT-1 .
+CORRECT: BRIDGE-1 , which is led by PATIENT-1 , is served by AGENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id168 2 Airport
+
+TRIPLES
+Athens_International_Airport | location | Spata
+Athens_International_Airport | elevationAboveTheSeaLevel_(in_metres) | 94
+
+
+ENTITY MAP
+AGENT-1 | Athens_International_Airport
+PATIENT-1 | Spata
+PATIENT-2 | 94
+
+
+LEX
+Id1
+TEXT: Athens International Airport is located in Spata and is 94 metres above sea level.
+TEMPLATE: AGENT-1 is located in PATIENT-1 and is PATIENT-2 metres above sea level .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Athens International Airport, which is 94 metres above sea level, is in Sparta.
+TEMPLATE: AGENT-1 , which is PATIENT-2 metres above sea level , is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Athens International Airport is located in Spata, at 94 m above the sea level.
+TEMPLATE: AGENT-1 is located in PATIENT-1 , at PATIENT-2 m above the sea level .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id167 2 Airport
+
+TRIPLES
+Athens_International_Airport | cityServed | Athens
+Athens_International_Airport | runwayLength | 4000.0
+
+
+ENTITY MAP
+AGENT-1 | Athens_International_Airport
+PATIENT-1 | Athens
+PATIENT-2 | 4000.0
+
+
+LEX
+Id1
+TEXT: The Athens international airport serves the city of Athens and has a runway length of 4000.
+TEMPLATE: The PATIENT-1 international airport serves AGENT-1 of PATIENT-1 and has a runway length of PATIENT-2 .
+CORRECT: AGENT-1 serves the city of PATIENT-1 and has a runway length of PATIENT-2 .
+COMMENT:
+-
+Id2
+TEXT: Athens International Airport serves the city of Athens and its runway length is 4000.
+TEMPLATE: AGENT-1 serves the city of PATIENT-1 and PATIENT-1 runway length is PATIENT-2 .
+CORRECT: AGENT-1 serves the city of PATIENT-1 and AGENT-1 runway length is PATIENT-2 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id166 2 Airport
+
+TRIPLES
+Athens_International_Airport | cityServed | Athens
+Athens | country | Greece
+
+
+ENTITY MAP
+BRIDGE-1 | Athens
+AGENT-1 | Athens_International_Airport
+PATIENT-1 | Greece
+
+
+LEX
+Id1
+TEXT: The Athens International Airport serves the city of Athens which is a city in Greece.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 which is a city in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Athens International Airport serves the city of Athens, Greece.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id165 2 Airport
+
+TRIPLES
+Athens | mayor | Giorgos_Kaminis
+Athens_International_Airport | cityServed | Athens
+
+
+ENTITY MAP
+BRIDGE-1 | Athens
+AGENT-1 | Athens_International_Airport
+PATIENT-1 | Giorgos_Kaminis
+
+
+LEX
+Id1
+TEXT: Athens International Airport serves the city of Athens, where the mayor is Giorgos Kaminis.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 , where the mayor is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Athens International Airport serves the city of Athens where the mayor is Giorgos Kaminis.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 where the mayor is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Athens International Airport serves the city of Athens where the mayor is Giorgos Kaminis.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 where the mayor is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id164 2 Airport
+
+TRIPLES
+Ashgabat_International_Airport | runwayLength | 2989.0
+Ashgabat_International_Airport | location | Ashgabat
+
+
+ENTITY MAP
+AGENT-1 | Ashgabat_International_Airport
+PATIENT-1 | 2989.0
+PATIENT-2 | Ashgabat
+
+
+LEX
+Id1
+TEXT: Ashgabat is the location of Ashgabat International Airport and has a runway length of 2989m.
+TEMPLATE: PATIENT-2 is the location of AGENT-1 and has a runway length of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Ashgabat International Airport is located in Ashgabat and has a runway length of 2989 metres.
+TEMPLATE: AGENT-1 is located in PATIENT-2 and has a runway length of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Ashgabat International Airport in Ashgabat has a runway length of 2989.
+TEMPLATE: AGENT-1 in PATIENT-2 has a runway length of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id163 2 Airport
+
+TRIPLES
+Ashgabat_International_Airport | operatingOrganisation | Turkmenistan_Airlines
+Turkmenistan_Airlines | hubAirport | Turkmenbashi_International_Airport
+
+
+ENTITY MAP
+BRIDGE-1 | Turkmenistan_Airlines
+AGENT-1 | Ashgabat_International_Airport
+PATIENT-1 | Turkmenbashi_International_Airport
+
+
+LEX
+Id1
+TEXT: Ashgabat International Airport is operated by Turkmenistan Airlines which has Turkmenbashi International Airport as its hub.
+TEMPLATE: AGENT-1 is operated by BRIDGE-1 which has PATIENT-1 as AGENT-1 hub .
+CORRECT: AGENT-1 is operated by BRIDGE-1 which has PATIENT-1 as BRIDGE-1 hub .
+COMMENT: coref
+-
+Id2
+TEXT: Ashgabat International Airport is operated by Turkmenistan Airlines whose hub airport is Turkmenbashi International Airport.
+TEMPLATE: AGENT-1 is operated by BRIDGE-1 whose hub airport is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The hub airport for Turkmenistan Airlines, who are the operating organisation for Ashgabat International Airport, is Turkmenbashi International Airport.
+TEMPLATE: The hub airport for BRIDGE-1 , who are the operating organisation for AGENT-1 , is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id162 2 Airport
+
+TRIPLES
+Ashgabat_International_Airport | operatingOrganisation | Turkmenistan_Airlines
+Turkmenistan_Airlines | hubAirport | Turkmenabat_Airport
+
+
+ENTITY MAP
+BRIDGE-1 | Turkmenistan_Airlines
+AGENT-1 | Ashgabat_International_Airport
+PATIENT-1 | Turkmenabat_Airport
+
+
+LEX
+Id1
+TEXT: Ashgabat International Airport is operated by Turkmenistan Airlines whose hub airport is Turkmenabat Airport.
+TEMPLATE: AGENT-1 is operated by BRIDGE-1 whose hub airport is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id161 2 Airport
+
+TRIPLES
+Ashgabat_International_Airport | operatingOrganisation | Turkmenistan_Airlines
+Turkmenistan_Airlines | headquarter | Ashgabat
+
+
+ENTITY MAP
+BRIDGE-1 | Turkmenistan_Airlines
+AGENT-1 | Ashgabat_International_Airport
+PATIENT-1 | Ashgabat
+
+
+LEX
+Id1
+TEXT: The operating organization for Ashgabat International Airport is called Turkmenistan Airlines who have their headquarters in Ashgabat.
+TEMPLATE: The operating organization for AGENT-1 is called BRIDGE-1 who have their headquarters in PATIENT-1 .
+CORRECT: The operating organization for AGENT-1 is called BRIDGE-1 who have BRIDGE-1 headquarters in PATIENT-1 .
+COMMENT: coref
+-
+Id2
+TEXT: Ashgabat International Airport is operated by Turkmenistan Airlines, whose headquarters are located in Ashgabat.
+TEMPLATE: AGENT-1 is operated by BRIDGE-1 , whose headquarters are located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id160 2 Airport
+
+TRIPLES
+Ashgabat_International_Airport | operatingOrganisation | Turkmenistan_Airlines
+Ashgabat_International_Airport | elevationAboveTheSeaLevel_(in_metres) | 211
+
+
+ENTITY MAP
+AGENT-1 | Ashgabat_International_Airport
+PATIENT-1 | Turkmenistan_Airlines
+PATIENT-2 | 211
+
+
+LEX
+Id1
+TEXT: Ashgabat International Airport is operated by Turkmenistan Airlines and it is 211 metres above sea level.
+TEMPLATE: AGENT-1 is operated by PATIENT-1 and AGENT-1 is PATIENT-2 metres above sea level .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The operating organization for Ashgabat International Airport which is elevated 211 metres above sea level is called Turkmenistan Airlines.
+TEMPLATE: The operating organization for AGENT-1 which is elevated PATIENT-2 metres above sea level is called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Ashgabat International Airport is operated by Turkmenistan Airlines, it is 211m above sea level.
+TEMPLATE: AGENT-1 is operated by PATIENT-1 , PATIENT-2 is PATIENT-2 above sea level .
+CORRECT: AGENT-1 is operated by PATIENT-1 , AGENT-1 is PATIENT-2 above sea level .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id159 2 Airport
+
+TRIPLES
+Ashgabat_International_Airport | location | Ashgabat
+Ashgabat_International_Airport | elevationAboveTheSeaLevel_(in_metres) | 211
+
+
+ENTITY MAP
+AGENT-1 | Ashgabat_International_Airport
+PATIENT-1 | Ashgabat
+PATIENT-2 | 211
+
+
+LEX
+Id1
+TEXT: Ashgabat International Airport is located in Ashgabat and it is 211 metres above sea level.
+TEMPLATE: AGENT-1 is located in PATIENT-1 and PATIENT-1 is PATIENT-2 metres above sea level .
+CORRECT: AGENT-1 is located in PATIENT-1 and AGENT-1 is PATIENT-2 metres above sea level .
+COMMENT: coref
+-
+Id2
+TEXT: Ashgabat International Airport in Ashgabat is 211 m above sea level.
+TEMPLATE: AGENT-1 in PATIENT-1 is PATIENT-2 m above sea level .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id158 2 Airport
+
+TRIPLES
+Ashgabat_International_Airport | ICAO_Location_Identifier | "UTAA"
+Ashgabat_International_Airport | IATA_Location_Identifier | "ASB"
+
+
+ENTITY MAP
+AGENT-1 | Ashgabat_International_Airport
+PATIENT-1 | "UTAA"
+PATIENT-2 | "ASB"
+
+
+LEX
+Id1
+TEXT: The ICAO Location Identifier of Ashgabat International Airport is UTAA and the IATA location is ASB.
+TEMPLATE: The ICAO Location Identifier of AGENT-1 is PATIENT-1 and the IATA location is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: UTAA is the ICAO Location Identifier of Ashgabat International Airport and ASB is the IATA identifier.
+TEMPLATE: PATIENT-1 is the ICAO Location Identifier of AGENT-1 and PATIENT-2 is the IATA identifier .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Ashgabat International airport has an ICAO location identifier of UTAA, and an IATA location identifier of ASB.
+TEMPLATE: AGENT-1 has an ICAO location identifier of PATIENT-1 , and an IATA location identifier of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id157 2 Airport
+
+TRIPLES
+Ashgabat_International_Airport | 3rd_runway_LengthFeet | 2953
+Ashgabat_International_Airport | elevationAboveTheSeaLevel_(in_metres) | 211
+
+
+ENTITY MAP
+AGENT-1 | Ashgabat_International_Airport
+PATIENT-1 | 2953
+PATIENT-2 | 211
+
+
+LEX
+Id1
+TEXT: Ashgabat international airport is 211 metres above sea level and the 3rd runway has a length of 2953 feet.
+TEMPLATE: AGENT-1 is PATIENT-2 metres above sea level and the 3rd runway has a length of PATIENT-1 feet .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Ashgabat International Airport is 211 metres above sea level and its 3rd runway has length of 2953 feet.
+TEMPLATE: AGENT-1 is PATIENT-2 metres above sea level and AGENT-1 3rd runway has length of PATIENT-1 feet .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Ashgabat International Airport's is 211 metres above sea level and its 3rd runway is 2953 ft in length.
+TEMPLATE: AGENT-1 's is PATIENT-2 metres above sea level and AGENT-1 3rd runway is PATIENT-1 ft in length .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id156 2 Airport
+
+TRIPLES
+Ardmore_Airport_(New_Zealand) | runwayLength | 1411.0
+Ardmore_Airport_(New_Zealand) | 3rd_runway_SurfaceType | Poaceae
+
+
+ENTITY MAP
+AGENT-1 | Ardmore_Airport_(New_Zealand)
+PATIENT-1 | 1411.0
+PATIENT-2 | Poaceae
+
+
+LEX
+Id1
+TEXT: The runway length of Ardmore Airport in New Zealand is 1,411 and the 3rd runway surface type is poaceae.
+TEMPLATE: The runway length of AGENT-1 is PATIENT-1 and the 3rd runway surface type is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id155 2 Airport
+
+TRIPLES
+Ardmore_Airport_(New_Zealand) | operatingOrganisation | Civil_Aviation_Authority_of_New_Zealand
+Civil_Aviation_Authority_of_New_Zealand | location | Wellington
+
+
+ENTITY MAP
+BRIDGE-1 | Civil_Aviation_Authority_of_New_Zealand
+AGENT-1 | Ardmore_Airport_(New_Zealand)
+PATIENT-1 | Wellington
+
+
+LEX
+Id1
+TEXT: The Civil Aviation Authority of Wellington, New Zealand is the operating organisation for Ardmore Airport, New Zealand.
+TEMPLATE: BRIDGE-1 of PATIENT-1 , New Zealand is the operating organisation for AGENT-1 .
+CORRECT: BRIDGE-1 of PATIENT-1 is the operating organisation for AGENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Ardmore Airport (New Zealand) is operated by the Civil Aviation Authority of New Zealand, located in Wellington.
+TEMPLATE: AGENT-1 is operated by BRIDGE-1 , located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id154 2 Airport
+
+TRIPLES
+Ardmore_Airport_(New_Zealand) | location | Auckland
+Ardmore_Airport_(New_Zealand) | operatingOrganisation | Civil_Aviation_Authority_of_New_Zealand
+
+
+ENTITY MAP
+AGENT-1 | Ardmore_Airport_(New_Zealand)
+PATIENT-1 | Auckland
+PATIENT-2 | Civil_Aviation_Authority_of_New_Zealand
+
+
+LEX
+Id1
+TEXT: The Civil Aviation Authority of New Zealand is the operating organisation for Ardmore Airport, located in Auckland, New Zealand.
+TEMPLATE: PATIENT-2 is the operating organisation for AGENT-1 , located in PATIENT-1 , New Zealand .
+CORRECT: PATIENT-2 is the operating organisation for AGENT-1 , located in PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Ardmore Airport is located in Auckland, New Zealand and is operated by the Civil Aviation Authority of New Zealand.
+TEMPLATE: AGENT-1 is located in PATIENT-1 , New Zealand and is operated by PATIENT-2 .
+CORRECT: AGENT-1 is located in PATIENT-1 and is operated by PATIENT-2 .
+COMMENT: mod
+-
+Id3
+TEXT: The Ardmore Airport which is operated by the Civil Aviation Authority of New Zealand is in Auckland.
+TEMPLATE: AGENT-1 which is operated by PATIENT-2 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id153 2 Airport
+
+TRIPLES
+Ardmore_Airport_(New_Zealand) | 3rd_runway_SurfaceType | Poaceae
+Poaceae | order | Poales
+
+
+ENTITY MAP
+BRIDGE-1 | Poaceae
+AGENT-1 | Ardmore_Airport_(New_Zealand)
+PATIENT-1 | Poales
+
+
+LEX
+Id1
+TEXT: The 3rd runway at Ardmore Airport (New Zealand) is made of Poaceae, which is of the order Poales.
+TEMPLATE: The 3rd runway at AGENT-1 is made of BRIDGE-1 , which is of PATIENT-1 .
+CORRECT: The 3rd runway at AGENT-1 is made of BRIDGE-1 , which is of the order PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: The 3rd runway at Ardmore Airport (New Zealand) is made of Poaceae of the Poales order.
+TEMPLATE: The 3rd runway at AGENT-1 is made of BRIDGE-1 of the PATIENT-1 order .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The third runway at Ardmore Airport in New Zealand has a surface type known as Poaceae which is of the Poales order.
+TEMPLATE: The third runway at AGENT-1 has a surface type known as BRIDGE-1 which is of the PATIENT-1 order .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id152 2 Airport
+
+TRIPLES
+Ardmore_Airport_(New_Zealand) | 3rd_runway_SurfaceType | Poaceae
+Poaceae | order | Commelinids
+
+
+ENTITY MAP
+BRIDGE-1 | Poaceae
+AGENT-1 | Ardmore_Airport_(New_Zealand)
+PATIENT-1 | Commelinids
+
+
+LEX
+Id1
+TEXT: Ardmore Airport (New Zealand)'s 3rd runway surface type is Poaceae which is of the order Commelinids.
+TEMPLATE: AGENT-1 3rd runway surface type is BRIDGE-1 which is of PATIENT-1 .
+CORRECT: AGENT-1 3rd runway surface type is BRIDGE-1 which is of the order PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: New Zealand's Ardmore Airport's 3rd runway is made of poaceae (Commelinids order).
+TEMPLATE: AGENT-1 Ardmore Airport 's 3rd runway is made of BRIDGE-1 (PATIENT-1 order) .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The 3rd runway at Ardmore Airport (New Zealand) is made of Poaceae which is of the order of Commelinids.
+TEMPLATE: The 3rd runway at AGENT-1 is made of BRIDGE-1 which is of the order of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id151 2 Airport
+
+TRIPLES
+Ardmore_Airport_(New_Zealand) | 3rd_runway_SurfaceType | Poaceae
+Poaceae | division | Flowering_plant
+
+
+ENTITY MAP
+BRIDGE-1 | Poaceae
+AGENT-1 | Ardmore_Airport_(New_Zealand)
+PATIENT-1 | Flowering_plant
+
+
+LEX
+Id1
+TEXT: The third runway at Ardmore Airport (New Zealand) is made of Poaceae, which belongs to the division of flowering plants.
+TEMPLATE: The third runway at AGENT-1 is made of BRIDGE-1 , which belongs to the division of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: New Zealand's Ardmore Airport has a third type of runway surface, Poaceae which belongs to the division of flowering plants.
+TEMPLATE: AGENT-1 Ardmore Airport has a third type of runway surface , BRIDGE-1 which belongs to the division of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id150 2 Airport
+
+TRIPLES
+Ardmore_Airport_(New_Zealand) | 3rd_runway_SurfaceType | Poaceae
+Ardmore_Airport_(New_Zealand) | runwayName | "07/25"
+
+
+ENTITY MAP
+AGENT-1 | Ardmore_Airport_(New_Zealand)
+PATIENT-1 | Poaceae
+PATIENT-2 | "07/25"
+
+
+LEX
+Id1
+TEXT: New Zealand's Ardmore Airport has a runway named 07/25 and its 3rd runway has a Poaceae surface.
+TEMPLATE: AGENT-1 Ardmore Airport has a runway named PATIENT-2 and PATIENT-2 3rd runway has a PATIENT-1 surface .
+CORRECT: AGENT-1 has a runway named PATIENT-2 and AGENT-1 3rd runway has a PATIENT-1 surface .
+COMMENT: mod - coref
+-
+
+**************************************************
+
+Entry: Id149 2 Airport
+
+TRIPLES
+Ardmore_Airport_(New_Zealand) | 3rd_runway_SurfaceType | Poaceae
+Ardmore_Airport_(New_Zealand) | runwayName | "03R/21L"
+
+
+ENTITY MAP
+AGENT-1 | Ardmore_Airport_(New_Zealand)
+PATIENT-1 | Poaceae
+PATIENT-2 | "03R/21L"
+
+
+LEX
+Id1
+TEXT: Ardmore airport in New Zealand has a runway named 03R/21L and interestingly the third runway is made of Poaceae.
+TEMPLATE: AGENT-1 has a runway named PATIENT-2 and interestingly the third runway is made of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The 3rd runway at Ardmore Airport (New Zealand), which is called "03R/21L", is made of Poaceae.
+TEMPLATE: The 3rd runway at AGENT-1 , which is called `` PATIENT-2 '' , is made of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Ardmore Airport (New Zealand)'s 3rd runway surface type is Poaceae and the runway is called "03R/21L".
+TEMPLATE: AGENT-1 3rd runway surface type is PATIENT-1 and the runway is called `` PATIENT-2 '' .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id148 2 Airport
+
+TRIPLES
+Ardmore_Airport_(New_Zealand) | 3rd_runway_SurfaceType | Poaceae
+Ardmore_Airport_(New_Zealand) | runwayName | "03L/21R"
+
+
+ENTITY MAP
+AGENT-1 | Ardmore_Airport_(New_Zealand)
+PATIENT-1 | Poaceae
+PATIENT-2 | "03L/21R"
+
+
+LEX
+Id1
+TEXT: 03L/21R is the runway name of Ardmore Airport in New Zealand where the 3rd runway is made of Poaceae.
+TEMPLATE: PATIENT-2 is the runway name of AGENT-1 in New Zealand where the 3rd runway is made of PATIENT-1 .
+CORRECT: PATIENT-2 is the runway name of AGENT-1 where the 3rd runway is made of PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Ardmore Airport (New Zealand)'s runway name is 03L/21R and its surface type is Poaceae.
+TEMPLATE: AGENT-1 runway name is PATIENT-2 and AGENT-1 surface type is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: New Zealand's Ardmore airport has the runway name 03L/21R. It also has a third runway surface type which is Poaceae.
+TEMPLATE: AGENT-1 Ardmore airport has PATIENT-2 . PATIENT-1 also has a third runway surface type which is PATIENT-1 .
+CORRECT: AGENT-1 has PATIENT-2 . AGENT-1 also has a third runway surface type which is PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id147 2 Airport
+
+TRIPLES
+Ardmore_Airport_(New_Zealand) | 3rd_runway_SurfaceType | Poaceae
+Ardmore_Airport_(New_Zealand) | runwayLength | 518.0
+
+
+ENTITY MAP
+AGENT-1 | Ardmore_Airport_(New_Zealand)
+PATIENT-1 | Poaceae
+PATIENT-2 | 518.0
+
+
+LEX
+Id1
+TEXT: At New Zealand's Ardmore Airport, one of the runways is 518.0 long and the third runway is made of Poaceae.
+TEMPLATE: At AGENT-1 Ardmore Airport , one of the runways is PATIENT-2 long and the third runway is made of PATIENT-1 .
+CORRECT: At AGENT-1 , one of the runways is PATIENT-2 long and the third runway is made of PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The 3rd runway at Ardmore Airport (New Zealand) is made of Poaceae and has a length of 518.0.
+TEMPLATE: The 3rd runway at AGENT-1 is made of PATIENT-1 and has a length of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id146 2 Airport
+
+TRIPLES
+Ardmore_Airport_(New_Zealand) | 3rd_runway_LengthFeet | 1960
+Ardmore_Airport_(New_Zealand) | elevationAboveTheSeaLevel_(in_metres) | 34.0
+
+
+ENTITY MAP
+AGENT-1 | Ardmore_Airport_(New_Zealand)
+PATIENT-1 | 1960
+PATIENT-2 | 34.0
+
+
+LEX
+Id1
+TEXT: Ardmore Airport in New Zealand, is elevated 34.0 metres above sea level and its 3rd runway is 1960 feet long.
+TEMPLATE: AGENT-1 , is elevated PATIENT-2 metres above sea level and PATIENT-2 3rd runway is PATIENT-1 feet long .
+CORRECT: AGENT-1 , is elevated PATIENT-2 metres above sea level and AGENT-1 3rd runway is PATIENT-1 feet long .
+COMMENT: coref
+-
+Id2
+TEXT: The Ardmore Airport in New Zealand is elevated 34.0 metres above sea level and its 3rd runway has a length of 1960 feet.
+TEMPLATE: AGENT-1 is elevated PATIENT-2 metres above sea level and AGENT-1 3rd runway has a length of PATIENT-1 feet .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Ardmore Airport in New Zealand is 34 meters above sea level and the 3rd runway is 1960 feet in length.
+TEMPLATE: AGENT-1 is 34 meters above sea level and the 3rd runway is PATIENT-1 feet in PATIENT-2 .
+CORRECT: AGENT-1 is PATIENT-2 meters above sea level and the 3rd runway is PATIENT-1 feet in length .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id145 2 Airport
+
+TRIPLES
+Appleton_International_Airport | locationIdentifier | "ATW"
+Appleton_International_Airport | elevationAboveTheSeaLevel_(in_metres) | 280
+
+
+ENTITY MAP
+AGENT-1 | Appleton_International_Airport
+PATIENT-1 | "ATW"
+PATIENT-2 | 280
+
+
+LEX
+Id1
+TEXT: Appleton International Airport has an elevation of 280 metres above sea level and the location ID, ATW.
+TEMPLATE: AGENT-1 has an elevation of PATIENT-2 metres above sea level and the location ID , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Appleton International Airport has an elevation of 280 metres above sea level and has the location identifier ATW.
+TEMPLATE: AGENT-1 has an elevation of PATIENT-2 metres above sea level and has PATIENT-1 .
+CORRECT: AGENT-1 has an elevation of PATIENT-2 metres above sea level and has the location identifier PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: The location identifier of Appleton International Airport is ATW and is 280m a.s.l.
+TEMPLATE: PATIENT-2 of AGENT-1 is PATIENT-1 and is 280m a.s.l.
+CORRECT: The location identifier of AGENT-1 is PATIENT-1 and is PATIENT-2
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id144 2 Airport
+
+TRIPLES
+Appleton_International_Airport | location | Greenville,_Wisconsin
+Greenville,_Wisconsin | country | United_States
+
+
+ENTITY MAP
+BRIDGE-1 | Greenville,_Wisconsin
+AGENT-1 | Appleton_International_Airport
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Appleton International airport is located in Greenville, Wisconsin, in the United States.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Appleton International Airport can be found in Greenville, Wisconsin, United States.
+TEMPLATE: AGENT-1 can be found in BRIDGE-1 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Appleton International Airport is in Greenville, Wisconsin, United States.
+TEMPLATE: AGENT-1 is in BRIDGE-1 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id143 2 Airport
+
+TRIPLES
+Appleton_International_Airport | location | Greenville,_Wisconsin
+Appleton_International_Airport | elevationAboveTheSeaLevel_(in_metres) | 280
+
+
+ENTITY MAP
+AGENT-1 | Appleton_International_Airport
+PATIENT-1 | Greenville,_Wisconsin
+PATIENT-2 | 280
+
+
+LEX
+Id1
+TEXT: Appleton International Airport is at an elevation of 280 metres above sea level and can be found in Greenville, Wisconsin.
+TEMPLATE: AGENT-1 is at an elevation of PATIENT-2 metres above sea level and can be found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Appleton International Airport is in Greenville, Wisconsin and is 280 metres above sea level,.
+TEMPLATE: AGENT-1 is in PATIENT-1 and is PATIENT-2 metres above sea level , .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Appleton International Airport in Greenville, Wisconsin is 280 metres above sea leve.
+TEMPLATE: AGENT-1 in PATIENT-1 is PATIENT-2 metres above sea leve .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id142 2 Airport
+
+TRIPLES
+Appleton_International_Airport | elevationAboveTheSeaLevel_(in_metres) | 280
+Appleton_International_Airport | operatingOrganisation | Outagamie_County,_Wisconsin
+
+
+ENTITY MAP
+AGENT-1 | Appleton_International_Airport
+PATIENT-1 | 280
+PATIENT-2 | Outagamie_County,_Wisconsin
+
+
+LEX
+Id1
+TEXT: Appleton International Airport has an elevation of 280 metres above sea level, and its operators are in Outagamie County, Wisconsin.
+TEMPLATE: AGENT-1 has an elevation of PATIENT-1 metres above sea level , and AGENT-1 operators are in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Outagamie County, Wisconsin is the operating organisation of Appleton International Airport which is elevated 280 metres above sea level.
+TEMPLATE: PATIENT-2 is the operating organisation of AGENT-1 which is elevated PATIENT-1 metres above sea level .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id141 2 Airport
+
+TRIPLES
+Appleton_International_Airport | 1st_runway_LengthFeet | 8002
+Appleton_International_Airport | elevationAboveTheSeaLevel_(in_metres) | 280
+
+
+ENTITY MAP
+AGENT-1 | Appleton_International_Airport
+PATIENT-1 | 8002
+PATIENT-2 | 280
+
+
+LEX
+Id1
+TEXT: The Appleton International Airport is elevated 280 metres above sea level and the first runway built here has a length of 8002 feet.
+TEMPLATE: AGENT-1 is elevated PATIENT-2 metres above sea level and the first runway built here has a length of PATIENT-1 feet .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The first runway of Appleton International Airport has a length of 8002 feet and an elevation of 280 metres above sea level.
+TEMPLATE: The first runway of AGENT-1 has a length of PATIENT-1 feet and an elevation of PATIENT-2 metres above sea level .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id140 2 Airport
+
+TRIPLES
+Appleton,_Wisconsin | isPartOf | Little_Chute,_Wisconsin
+Appleton_International_Airport | cityServed | Appleton,_Wisconsin
+
+
+ENTITY MAP
+BRIDGE-1 | Appleton,_Wisconsin
+AGENT-1 | Appleton_International_Airport
+PATIENT-1 | Little_Chute,_Wisconsin
+
+
+LEX
+Id1
+TEXT: Appletone International Airport serves Appleton which is part of Little Chute, Wisconsin.
+TEMPLATE: AGENT-1 serves BRIDGE-1 which is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The city, Appleton, Wisconsin is part of little chute, Wisconsin, and is served by Appleton International Airport.
+TEMPLATE: The city , BRIDGE-1 is part of PATIENT-1 and is served by AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Little Chute is part of Appleton, Wisconsin which is served by Appleton International Airport.
+TEMPLATE: PATIENT-1 is part of BRIDGE-1 which is served by AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id139 2 Airport
+
+TRIPLES
+Appleton,_Wisconsin | isPartOf | Kimberly,_Wisconsin
+Appleton_International_Airport | cityServed | Appleton,_Wisconsin
+
+
+ENTITY MAP
+BRIDGE-1 | Appleton,_Wisconsin
+AGENT-1 | Appleton_International_Airport
+PATIENT-1 | Kimberly,_Wisconsin
+
+
+LEX
+Id1
+TEXT: The Appleton International Airport serves the city of Appleton, Wisconsin which is part of Kimberly, Wisconsin.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 which is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id138 2 Airport
+
+TRIPLES
+Antwerp_International_Airport | runwayLength | 600.0
+Antwerp_International_Airport | operatingOrganisation | "Flemish department of Mobility and Public Works"
+
+
+ENTITY MAP
+AGENT-1 | Antwerp_International_Airport
+PATIENT-1 | 600.0
+PATIENT-2 | "Flemish department of Mobility and Public Works"
+
+
+LEX
+Id1
+TEXT: The Antwerp International Airport is operated by the Flemish department of Mobility and Public Works; its runway length is 600.
+TEMPLATE: AGENT-1 is operated by PATIENT-2 ; AGENT-1 runway length is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Flemish Department of Mobility and Public Works is the operator of Antwerp International Airport, which has a runway length of 600.0.
+TEMPLATE: PATIENT-2 is the operator of AGENT-1 , which has a runway length of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Antwerp International Airport has a runway length of 600.0 and is operated by Flemish Department of Mobility and Public Works.
+TEMPLATE: AGENT-1 has a runway length of PATIENT-1 and is operated by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id137 2 Airport
+
+TRIPLES
+Antwerp_International_Airport | runwayLength | 1510.0
+Antwerp_International_Airport | operatingOrganisation | "Flemish department of Mobility and Public Works"
+
+
+ENTITY MAP
+AGENT-1 | Antwerp_International_Airport
+PATIENT-1 | 1510.0
+PATIENT-2 | "Flemish department of Mobility and Public Works"
+
+
+LEX
+Id1
+TEXT: Antwerp International Airport has a runway length of 1510.0 and is operated by The Flemish Department of Mobility and Public Works.
+TEMPLATE: AGENT-1 has a runway length of PATIENT-1 and is operated by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Flemish Department of Mobility and Public Works are the operators of Antwerp International Airport, which has a runway length of 1510.0.
+TEMPLATE: PATIENT-2 are the operators of AGENT-1 , which has a runway length of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id136 2 Airport
+
+TRIPLES
+Antwerp_International_Airport | owner | Flemish_Region
+Antwerp_International_Airport | operatingOrganisation | "Flemish department of Mobility and Public Works"
+
+
+ENTITY MAP
+AGENT-1 | Antwerp_International_Airport
+PATIENT-1 | Flemish_Region
+PATIENT-2 | "Flemish department of Mobility and Public Works"
+
+
+LEX
+Id1
+TEXT: Flemish Department of Mobility and Public Works operates the Antwerp International Airport which is owned by Flemish Region.
+TEMPLATE: PATIENT-2 operates AGENT-1 which is owned by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Owned by the Flemish Region, Antwerp International Airport's operation organization is Flemish department of mobility and public works.
+TEMPLATE: Owned by PATIENT-1 , AGENT-1 's operation organization is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Flemish Department of Mobility and Public Works operates the Antwerp International Airport, as it is owned by the Flemish Region.
+TEMPLATE: PATIENT-2 operates AGENT-1 , as PATIENT-2 is owned by PATIENT-1 .
+CORRECT: PATIENT-2 operates AGENT-1 , as AGENT-1 is owned by PATIENT-1 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id135 2 Airport
+
+TRIPLES
+Antwerp_International_Airport | owner | Flemish_Region
+Antwerp_International_Airport | cityServed | Antwerp
+
+
+ENTITY MAP
+AGENT-1 | Antwerp_International_Airport
+PATIENT-1 | Flemish_Region
+PATIENT-2 | Antwerp
+
+
+LEX
+Id1
+TEXT: Antwerp International Airport is owned by the Flemish Region and serves the city of Antwerp.
+TEMPLATE: AGENT-1 is owned by PATIENT-1 and serves the city of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Flemish Region owns Antwerp International Airport, which serves the city of Antwerp.
+TEMPLATE: PATIENT-1 owns AGENT-1 , which serves the city of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Antwerp International Airport, serving the city of Antwerp, is owned by Flemish Region.
+TEMPLATE: AGENT-1 , serving the city of PATIENT-2 , is owned by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id134 2 Airport
+
+TRIPLES
+Antwerp_International_Airport | operatingOrganisation | Flemish_Government
+Flemish_Government | jurisdiction | Flanders
+
+
+ENTITY MAP
+BRIDGE-1 | Flemish_Government
+AGENT-1 | Antwerp_International_Airport
+PATIENT-1 | Flanders
+
+
+LEX
+Id1
+TEXT: The operating organisation of Antwerp International airport is the Flemish government which has jurisdiction in Flanders.
+TEMPLATE: The operating organisation of AGENT-1 is BRIDGE-1 which has jurisdiction in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Antwerp International Airport is operated by the Flemish Government which has jurisdiction over Flanders.
+TEMPLATE: AGENT-1 is operated by BRIDGE-1 which has jurisdiction over PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id133 2 Airport
+
+TRIPLES
+Antwerp_International_Airport | operatingOrganisation | Flemish_Government
+Antwerp_International_Airport | runwayLength | 600.0
+
+
+ENTITY MAP
+AGENT-1 | Antwerp_International_Airport
+PATIENT-1 | Flemish_Government
+PATIENT-2 | 600.0
+
+
+LEX
+Id1
+TEXT: Antwerp International Airport is operated by the Flemish government and its runway is 600 long.
+TEMPLATE: AGENT-1 is operated by PATIENT-1 and AGENT-1 runway is PATIENT-2 long .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Antwerp International airport, operated by the Flemish government, has a runway length of 600 feet.
+TEMPLATE: AGENT-1 , operated by PATIENT-1 , has a runway length of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Antwerp International Airport is operated by the Flemish Government and its runway is 600 long.
+TEMPLATE: AGENT-1 is operated by PATIENT-1 and AGENT-1 runway is PATIENT-2 long .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id132 2 Airport
+
+TRIPLES
+Antwerp_International_Airport | operatingOrganisation | Flemish_Government
+Antwerp_International_Airport | owner | Flemish_Region
+
+
+ENTITY MAP
+AGENT-1 | Antwerp_International_Airport
+PATIENT-1 | Flemish_Government
+PATIENT-2 | Flemish_Region
+
+
+LEX
+Id1
+TEXT: The Antwerp International Airport, which is owned by the Flemish Region, is operated by the Flemish Government.
+TEMPLATE: AGENT-1 , which is owned by PATIENT-2 , is operated by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Antwerp International Airport is operated by the Flemish government and is operated by the Flemish government.
+TEMPLATE: AGENT-1 is operated by PATIENT-1 and is operated by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The owner of Antwerp International Airport is the Flemish Region and the operating organisation is the Flemish government.
+TEMPLATE: The owner of AGENT-1 is PATIENT-2 and the operating organisation is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id131 2 Airport
+
+TRIPLES
+Antwerp_International_Airport | operatingOrganisation | Flemish_Government
+Antwerp_International_Airport | elevationAboveTheSeaLevel_(in_metres) | 12.0
+
+
+ENTITY MAP
+AGENT-1 | Antwerp_International_Airport
+PATIENT-1 | Flemish_Government
+PATIENT-2 | 12.0
+
+
+LEX
+Id1
+TEXT: The Antwerp International Airport, which is 12 metres above sea level, is operated by the Flemish Government.
+TEMPLATE: AGENT-1 , which is PATIENT-2 above sea level , is operated by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Antwerp International Airport has an elevation of 12.0 metres above sea level and is operated by the Flemish government.
+TEMPLATE: AGENT-1 has an elevation of PATIENT-2 metres above sea level and is operated by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Antwerp International Airport is operated by the Flemish Government and is 12 metres above sea level.
+TEMPLATE: AGENT-1 is operated by PATIENT-1 and is PATIENT-2 above sea level .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id130 2 Airport
+
+TRIPLES
+Antwerp_International_Airport | cityServed | Antwerp
+Antwerp | mayor | Bart_De_Wever
+
+
+ENTITY MAP
+BRIDGE-1 | Antwerp
+AGENT-1 | Antwerp_International_Airport
+PATIENT-1 | Bart_De_Wever
+
+
+LEX
+Id1
+TEXT: Bart De Wever is the mayor of Antwerp, which is served by Antwerp International airport.
+TEMPLATE: PATIENT-1 is AGENT-1 of BRIDGE-1 , which is served by BRIDGE-1 International airport .
+CORRECT: PATIENT-1 is the mayor of BRIDGE-1 , which is served by AGENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Bart De Wever is mayor of Antwerp, home of the Antwerp International Airport.
+TEMPLATE: PATIENT-1 is mayor of BRIDGE-1 , home of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id129 2 Airport
+
+TRIPLES
+Antwerp_International_Airport | cityServed | Antwerp
+Antwerp | country | Belgium
+
+
+ENTITY MAP
+BRIDGE-1 | Antwerp
+AGENT-1 | Antwerp_International_Airport
+PATIENT-1 | Belgium
+
+
+LEX
+Id1
+TEXT: Antwerp International Airport serves the city of Antwerp in Belgium.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Antwerp in Belgium is served by the Antwerp international airport.
+TEMPLATE: BRIDGE-1 in PATIENT-1 is served by the BRIDGE-1 international airport .
+CORRECT: BRIDGE-1 in PATIENT-1 is served by AGENT-1 .
+COMMENT:
+-
+Id3
+TEXT: Antwerp International Airport serves the city of Antwerp, a popular tourist destination in Belgium.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 , a popular tourist destination in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id128 2 Airport
+
+TRIPLES
+Antwerp_International_Airport | cityServed | Antwerp
+Antwerp | administrativeArrondissement | Arrondissement_of_Antwerp
+
+
+ENTITY MAP
+BRIDGE-1 | Antwerp
+AGENT-1 | Antwerp_International_Airport
+PATIENT-1 | Arrondissement_of_Antwerp
+
+
+LEX
+Id1
+TEXT: The arrondissement of Antwerp serves the city of Antwerp, where the Antwerp International Airport is located.
+TEMPLATE: PATIENT-1 of BRIDGE-1 serves the city of BRIDGE-1 , where AGENT-1 is located .
+CORRECT: PATIENT-1 serves the city of BRIDGE-1 , where AGENT-1 is located .
+COMMENT: mod
+-
+Id2
+TEXT: Antwerp International Airport serves the city of Antwerp which is administrated by the Arrondissement of Antwerp.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 which is administrated by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Arrondissement of Antwerp is the administrative arrondissement of Antwerp which is served by Antwerp International airport.
+TEMPLATE: PATIENT-1 is AGENT-1 of BRIDGE-1 which is served by BRIDGE-1 International airport .
+CORRECT: PATIENT-1 of BRIDGE-1 which is served by AGENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id127 2 Airport
+
+TRIPLES
+Angola_International_Airport | runwayLength | 4000.0
+Angola_International_Airport | cityServed | Luanda
+
+
+ENTITY MAP
+AGENT-1 | Angola_International_Airport
+PATIENT-1 | 4000.0
+PATIENT-2 | Luanda
+
+
+LEX
+Id1
+TEXT: Angola International Airport serves Luanda and it is 4000 in length.
+TEMPLATE: AGENT-1 serves PATIENT-2 and PATIENT-1 is PATIENT-1 in length .
+CORRECT: AGENT-1 serves PATIENT-2 and AGENT-1 is PATIENT-1 in length .
+COMMENT: coref
+-
+Id2
+TEXT: Angola International Airport serves Luanda and its runway is 4000 long.
+TEMPLATE: AGENT-1 serves PATIENT-2 and PATIENT-2 runway is PATIENT-1 long .
+CORRECT: AGENT-1 serves PATIENT-2 and AGENT-1 runway is PATIENT-1 long .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id126 2 Airport
+
+TRIPLES
+Angola_International_Airport | location | Ícolo_e_Bengo
+Ícolo_e_Bengo | isPartOf | Luanda_Province
+
+
+ENTITY MAP
+BRIDGE-1 | Ícolo_e_Bengo
+AGENT-1 | Angola_International_Airport
+PATIENT-1 | Luanda_Province
+
+
+LEX
+Id1
+TEXT: Angola International Airport can be found in Ícolo e Bengo, which is in the Luanda Province.
+TEMPLATE: AGENT-1 can be found in BRIDGE-1 , which is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Angola International Airport is located at Ícolo e Bengo, part of Luanda Province.
+TEMPLATE: AGENT-1 is located at BRIDGE-1 , part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Angola International airport is located in Icolo e Bengo, in the Luanda Province.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id125 2 Airport
+
+TRIPLES
+Angola_International_Airport | location | Ícolo_e_Bengo
+Angola_International_Airport | elevationAboveTheSeaLevel_(in_metres) | 159
+
+
+ENTITY MAP
+AGENT-1 | Angola_International_Airport
+PATIENT-1 | Ícolo_e_Bengo
+PATIENT-2 | 159
+
+
+LEX
+Id1
+TEXT: The Angola International Airport located in Icolo e Bengo is 159 meters above sea level.
+TEMPLATE: AGENT-1 located in Icolo e PATIENT-1 is PATIENT-2 meters above sea level .
+CORRECT: AGENT-1 located in PATIENT-1 is PATIENT-2 meters above sea level .
+COMMENT: mod
+-
+Id2
+TEXT: Angola International Airport, located in Ícolo e Bengo, is 159 metres above the sea level.
+TEMPLATE: AGENT-1 , located in PATIENT-1 , is PATIENT-2 metres above the sea level .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Angola International Airport which is 159 meters above sea level, is located at Ícolo e Bengo.
+TEMPLATE: AGENT-1 which is PATIENT-2 meters above sea level , is located at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id124 2 Airport
+
+TRIPLES
+Angola_International_Airport | 1st_runway_SurfaceType | "Asphalt"
+Angola_International_Airport | elevationAboveTheSeaLevel_(in_metres) | 159
+
+
+ENTITY MAP
+AGENT-1 | Angola_International_Airport
+PATIENT-1 | "Asphalt"
+PATIENT-2 | 159
+
+
+LEX
+Id1
+TEXT: Angola International Airport is 159 metres above the sea level and the 1st runway has an asphalt surface.
+TEMPLATE: AGENT-1 is PATIENT-2 metres above PATIENT-1 and the 1st runway has an asphalt surface .
+CORRECT: AGENT-1 is PATIENT-2 metres above the sea level and the 1st runway has an PATIENT-1 surface .
+COMMENT:
+-
+Id2
+TEXT: Asphalt is the surface of the first runway of Angola International Airport, which is located 159 metres above sea level.
+TEMPLATE: PATIENT-1 is the surface of the first runway of AGENT-1 , which is located PATIENT-2 metres above sea level .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id123 2 Airport
+
+TRIPLES
+Angola_International_Airport | 1st_runway_Number | 5
+Angola_International_Airport | elevationAboveTheSeaLevel_(in_metres) | 159
+
+
+ENTITY MAP
+AGENT-1 | Angola_International_Airport
+PATIENT-1 | 5
+PATIENT-2 | 159
+
+
+LEX
+Id1
+TEXT: 5 is the number of the first runway of Angola International Airport which is 159m a.s.l.
+TEMPLATE: PATIENT-1 is PATIENT-2 of the first runway of AGENT-1 which is 159m a.s.l.
+CORRECT: PATIENT-1 is the number of the first runway of AGENT-1 which is PATIENT-2
+COMMENT:
+-
+Id2
+TEXT: The first runway at Angola International Airport is known as 5 and is 159 metres above sea level.
+TEMPLATE: The first runway at AGENT-1 is known as PATIENT-1 and is PATIENT-2 metres above sea level .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Angola International Airport's 1st runway has the number 5, and the elevation of the airport above the sea level is 159 m.
+TEMPLATE: AGENT-1 's 1st runway has PATIENT-1 , and the elevation of the airport above the sea level is PATIENT-2 m.
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id122 2 Airport
+
+TRIPLES
+Angola_International_Airport | 1st_runway_LengthFeet | 13123
+Angola_International_Airport | elevationAboveTheSeaLevel_(in_metres) | 159
+
+
+ENTITY MAP
+AGENT-1 | Angola_International_Airport
+PATIENT-1 | 13123
+PATIENT-2 | 159
+
+
+LEX
+Id1
+TEXT: The length of the first runway at Angola International Airport is 13,123 feet, the airport is 159m above sea level.
+TEMPLATE: The length of the first runway at AGENT-1 is 13,123 feet , the airport is PATIENT-1 above sea level .
+CORRECT: The length of the first runway at AGENT-1 is PATIENT-1 feet , AGENT-1 is PATIENT-2 above sea level .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id121 2 Airport
+
+TRIPLES
+Andrews_County_Airport | locationIdentifier | "E11"
+Andrews_County_Airport | elevationAboveTheSeaLevel_(in_metres) | 973.0
+
+
+ENTITY MAP
+AGENT-1 | Andrews_County_Airport
+PATIENT-1 | "E11"
+PATIENT-2 | 973.0
+
+
+LEX
+Id1
+TEXT: Andrews County Airport is 973 metres above sea level and is located in E11.
+TEMPLATE: AGENT-1 is PATIENT-2 above sea level and is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: E11 is the location identifier of Andrews County Airport, which is located 973 metres above sea level.
+TEMPLATE: PATIENT-1 is the location identifier of AGENT-1 , which is located PATIENT-2 above sea level .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id120 2 Airport
+
+TRIPLES
+Andrews_County_Airport | location | Texas
+Texas | language | Spanish_language
+
+
+ENTITY MAP
+BRIDGE-1 | Texas
+AGENT-1 | Andrews_County_Airport
+PATIENT-1 | Spanish_language
+
+
+LEX
+Id1
+TEXT: Andrews County Airport is located in Texas where Spanish is spoken.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 where PATIENT-1 is spoken .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id119 2 Airport
+
+TRIPLES
+Andrews_County_Airport | location | Texas
+Texas | language | English_language
+
+
+ENTITY MAP
+BRIDGE-1 | Texas
+AGENT-1 | Andrews_County_Airport
+PATIENT-1 | English_language
+
+
+LEX
+Id1
+TEXT: Andrews County Airport is located in Texas where they speak English.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 where they speak PATIENT-1 .
+CORRECT: AGENT-1 is located in BRIDGE-1 where BRIDGE-1 speak PATIENT-1 .
+COMMENT: coref
+-
+Id2
+TEXT: Andrews County Airport is located in Texas where the spoken language is English.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 where the spoken language is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Andrews County Airport is located in Texas where English is the spoken language.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 where PATIENT-1 is the spoken language .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id118 2 Airport
+
+TRIPLES
+Andrews_County_Airport | location | Texas
+Texas | demonym | Texan
+
+
+ENTITY MAP
+BRIDGE-1 | Texas
+AGENT-1 | Andrews_County_Airport
+PATIENT-1 | Texan
+
+
+LEX
+Id1
+TEXT: Andrews County Airport is located in Texas, where the inhabitants have the demonym Texan.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , where the inhabitants have PATIENT-1 .
+CORRECT: AGENT-1 is located in BRIDGE-1 , where the inhabitants have the demonym PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Andrews County Airport is located in Texas where the inhabitants are called Texans.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 where the inhabitants are called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Andrews County Airport is located in Texas where the locals are called Texans.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 where the locals are called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id117 2 Airport
+
+TRIPLES
+Andrews_County_Airport | location | Texas
+Texas | demonym | Tejano
+
+
+ENTITY MAP
+BRIDGE-1 | Texas
+AGENT-1 | Andrews_County_Airport
+PATIENT-1 | Tejano
+
+
+LEX
+Id1
+TEXT: Andrews County Airport is located in Texas, who's inhabitants are called Tejano.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , who 's inhabitants are called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Andrews County Airport is located in Texas where tejano is the demonym used.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 where PATIENT-1 is the demonym used .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Andrews County Airport is located in Texas where the demonym is Tejano.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 where the demonym is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id116 2 Airport
+
+TRIPLES
+Andrews_County_Airport | location | Texas
+Texas | country | United_States
+
+
+ENTITY MAP
+BRIDGE-1 | Texas
+AGENT-1 | Andrews_County_Airport
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Andrews County Airport is located in Texas, in the United States.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Andrews County Airport is located in Texas, United States.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id115 2 Airport
+
+TRIPLES
+Andrews_County_Airport | location | Texas
+Andrews_County_Airport | elevationAboveTheSeaLevel_(in_metres) | 973.0
+
+
+ENTITY MAP
+AGENT-1 | Andrews_County_Airport
+PATIENT-1 | Texas
+PATIENT-2 | 973.0
+
+
+LEX
+Id1
+TEXT: Andrews County Airport is located in Texas and is 973 metres above sea level.
+TEMPLATE: AGENT-1 is located in PATIENT-1 and is PATIENT-2 above sea level .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id114 2 Airport
+
+TRIPLES
+Andrews_County_Airport | 4th_runway_LengthFeet | 25
+Andrews_County_Airport | elevationAboveTheSeaLevel_(in_metres) | 973.0
+
+
+ENTITY MAP
+AGENT-1 | Andrews_County_Airport
+PATIENT-1 | 25
+PATIENT-2 | 973.0
+
+
+LEX
+Id1
+TEXT: Andrews County Airport is 973.0 below sea level and the 4th runway has a length of 25 feet.
+TEMPLATE: AGENT-1 is PATIENT-2 below sea level and the 4th runway has a length of PATIENT-1 feet .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Andrews County Airport is 973 metres above sea level and its 4th runway is 25ft.
+TEMPLATE: AGENT-1 is PATIENT-2 above PATIENT-1 and AGENT-1 4th runway is 25ft .
+CORRECT: AGENT-1 is PATIENT-2 metres above sea level and AGENT-1 4th runway is PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id113 2 Airport
+
+TRIPLES
+Andrews_County_Airport | 3rd_runway_LengthFeet | 2939
+Andrews_County_Airport | elevationAboveTheSeaLevel_(in_metres) | 973.0
+
+
+ENTITY MAP
+AGENT-1 | Andrews_County_Airport
+PATIENT-1 | 2939
+PATIENT-2 | 973.0
+
+
+LEX
+Id1
+TEXT: The 3rd runway at Andrews County Airport is 2939 feet and it is 973 m above sea level.
+TEMPLATE: The 3rd runway at AGENT-1 is PATIENT-1 feet and AGENT-1 is PATIENT-2 above sea level .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Andrews County Airport is 973 metres above sea level and the 3rd runway has a length of 2939 feet.
+TEMPLATE: AGENT-1 is PATIENT-2 above sea level and the 3rd runway has a length of PATIENT-1 feet .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id112 2 Airport
+
+TRIPLES
+Andrews_County,_Texas | largestCity | Andrews,_Texas
+Andrews_County_Airport | owner | Andrews_County,_Texas
+
+
+ENTITY MAP
+BRIDGE-1 | Andrews_County,_Texas
+AGENT-1 | Andrews_County_Airport
+PATIENT-1 | Andrews,_Texas
+
+
+LEX
+Id1
+TEXT: Andrews County Airport is owned by Andrews County, Texas where the largest city is Andrews.
+TEMPLATE: AGENT-1 is owned by BRIDGE-1 where the largest city is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The owner of Andrew County airport is Andrews County, Texas where the largest city is Andrews.
+TEMPLATE: The owner of AGENT-1 is BRIDGE-1 where the largest city is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Andrews, Texas is the largest city in Andrews County, Texas, which owns the Andrews County Airport.
+TEMPLATE: PATIENT-1 is the largest city in BRIDGE-1 , which owns AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id111 2 Airport
+
+TRIPLES
+Andrews_County,_Texas | countySeat | Andrews,_Texas
+Andrews_County_Airport | owner | Andrews_County,_Texas
+
+
+ENTITY MAP
+BRIDGE-1 | Andrews_County,_Texas
+AGENT-1 | Andrews_County_Airport
+PATIENT-1 | Andrews,_Texas
+
+
+LEX
+Id1
+TEXT: Andrews County, Texas has its county seat in Andrews, Texas and owns the airport with the same name.
+TEMPLATE: BRIDGE-1 has AGENT-1 in PATIENT-1 and owns the airport with the same name .
+CORRECT: BRIDGE-1 has BRIDGE-1 county in PATIENT-1 and owns AGENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Andrews County Airport is owned by Andrews County, Texas, which has its seat in the county.
+TEMPLATE: AGENT-1 is owned by BRIDGE-1 , which has PATIENT-1 in the county .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id110 2 Airport
+
+TRIPLES
+Amsterdam_Airport_Schiphol | elevationAboveTheSeaLevel_(in_metres) | -3.3528
+Amsterdam_Airport_Schiphol | location | Haarlemmermeer
+
+
+ENTITY MAP
+AGENT-1 | Amsterdam_Airport_Schiphol
+PATIENT-1 | -3.3528
+PATIENT-2 | Haarlemmermeer
+
+
+LEX
+Id1
+TEXT: The Amsterdam Airport Schiphol in Haarlemmermeer is -3.3528 metres above sea level.
+TEMPLATE: AGENT-1 in PATIENT-2 is PATIENT-1 metres above sea level .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Amsterdam Airport Schiphol, located in Haarlemmermeer, is at an elevation of -3.3528 from sea level.
+TEMPLATE: AGENT-1 , located in PATIENT-2 , is at an elevation of PATIENT-1 from sea level .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id109 2 Airport
+
+TRIPLES
+Amsterdam_Airport_Schiphol | cityServed | Amsterdam
+Amsterdam_Airport_Schiphol | runwayLength | 3800.0
+
+
+ENTITY MAP
+AGENT-1 | Amsterdam_Airport_Schiphol
+PATIENT-1 | Amsterdam
+PATIENT-2 | 3800.0
+
+
+LEX
+Id1
+TEXT: The Amsterdam Airport, whose runway is 3800 feet, serves Amsterdam.
+TEMPLATE: The PATIENT-1 Airport , whose runway is AGENT-1 , serves PATIENT-1 .
+CORRECT: AGENT-1 , whose runway is AGENT-1 , serves PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Amsterdam Airport Schuphol serves Amsterdam and has a runway length of 3800.0.
+TEMPLATE: PATIENT-1 Airport Schuphol serves PATIENT-1 and has AGENT-1 of PATIENT-2 .
+CORRECT: AGENT-1 serves PATIENT-1 and has runway length of PATIENT-2 .
+COMMENT:
+-
+Id3
+TEXT: Amsterdam Airport Schiphol's runway length is 3800.0 and it serves Amsterdam.
+TEMPLATE: AGENT-1 's runway length is PATIENT-2 and PATIENT-1 serves PATIENT-1 .
+CORRECT: AGENT-1 's runway length is PATIENT-2 and AGENT-1 serves PATIENT-1 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id108 2 Airport
+
+TRIPLES
+Amsterdam_Airport_Schiphol | cityServed | Amsterdam
+Amsterdam_Airport_Schiphol | runwayLength | 3500.0
+
+
+ENTITY MAP
+AGENT-1 | Amsterdam_Airport_Schiphol
+PATIENT-1 | Amsterdam
+PATIENT-2 | 3500.0
+
+
+LEX
+Id1
+TEXT: The runway length of Amsterdam Airport Schiphol, which serves the city of Amsterdam, is 3500.0.
+TEMPLATE: The runway length of AGENT-1 , which serves the city of PATIENT-1 , is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id107 2 Airport
+
+TRIPLES
+Amsterdam_Airport_Schiphol | cityServed | Amsterdam
+Amsterdam_Airport_Schiphol | runwayLength | 3453.0
+
+
+ENTITY MAP
+AGENT-1 | Amsterdam_Airport_Schiphol
+PATIENT-1 | Amsterdam
+PATIENT-2 | 3453.0
+
+
+LEX
+Id1
+TEXT: The Amsterdam Airport Schiphol, which serves the city of Amsterdam, has a runway length of 3453.0.
+TEMPLATE: AGENT-1 , which serves the city of PATIENT-1 , has a runway length of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The runway length of Amsterdam Airport Schiphol, which serves the city of Amsterdam, is 3453.0.
+TEMPLATE: The runway length of AGENT-1 , which serves the city of PATIENT-1 , is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id106 2 Airport
+
+TRIPLES
+Amsterdam_Airport_Schiphol | cityServed | Amsterdam
+Amsterdam_Airport_Schiphol | runwayLength | 3400.0
+
+
+ENTITY MAP
+AGENT-1 | Amsterdam_Airport_Schiphol
+PATIENT-1 | Amsterdam
+PATIENT-2 | 3400.0
+
+
+LEX
+Id1
+TEXT: Amsterdam Airport Schiphol, with a runway length of 3400.0, serves the city of Amsterdam.
+TEMPLATE: AGENT-1 , with a runway length of PATIENT-2 , serves the city of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Serving the city of Amsterdam, Amsterdam Airport Schiphol's runway length is 3400.0 metres.
+TEMPLATE: Serving the city of PATIENT-1 , AGENT-1 's runway length is PATIENT-2 metres .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Amsterdam Airport Schipol serves the city of Amsterdam and has a runway that is 3400 metres long.
+TEMPLATE: PATIENT-1 Airport Schipol serves AGENT-1 of PATIENT-1 and has a runway that is PATIENT-2 long .
+CORRECT: AGENT-1 serves the city of PATIENT-1 and has a runway that is PATIENT-2 long .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id105 2 Airport
+
+TRIPLES
+Amsterdam_Airport_Schiphol | cityServed | Amsterdam
+Amsterdam | leaderName | Eberhard_van_der_Laan
+
+
+ENTITY MAP
+BRIDGE-1 | Amsterdam
+AGENT-1 | Amsterdam_Airport_Schiphol
+PATIENT-1 | Eberhard_van_der_Laan
+
+
+LEX
+Id1
+TEXT: Eberhard van der Laan is the leader of Amsterdam, where the airport serving the city is called Amsterdam Airport Schipol.
+TEMPLATE: PATIENT-1 is the leader of BRIDGE-1 , where AGENT-1 serving the city is called BRIDGE-1 Airport Schipol .
+CORRECT: PATIENT-1 is the leader of BRIDGE-1 , where the airport serving the city is called AGENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Amsterdam Airport Schiphol serves the city of Amsterdam whose leader is Eberhard van der Laan.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 whose leader is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Amsterdam airport, Schipol serves the city of Amsterdam, the leader of which is Eberhard van der Laan.
+TEMPLATE: BRIDGE-1 airport , AGENT-1 serves the city of BRIDGE-1 , the leader of which is PATIENT-1 .
+CORRECT: AGENT-1 serves the city of BRIDGE-1 , the leader of which is PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id104 2 Airport
+
+TRIPLES
+Amsterdam_Airport_Schiphol | 5th_runway_SurfaceType | "Asphalt"
+Amsterdam_Airport_Schiphol | elevationAboveTheSeaLevel_(in_metres) | -3.3528
+
+
+ENTITY MAP
+AGENT-1 | Amsterdam_Airport_Schiphol
+PATIENT-1 | "Asphalt"
+PATIENT-2 | -3.3528
+
+
+LEX
+Id1
+TEXT: Amsterdam airport Schipol is -3.3528 above sea level and the 5th runway has an asphalt surface.
+TEMPLATE: AGENT-1 is PATIENT-2 above PATIENT-1 and the 5th runway has an asphalt surface .
+CORRECT: AGENT-1 is PATIENT-2 above sea level and the 5th runway has an PATIENT-1 surface .
+COMMENT:
+-
+Id2
+TEXT: Amsterdam Airport Schiphol is at an elevation of -3.3528 from sea level and the 5th runway is made of asphalt.
+TEMPLATE: AGENT-1 is at an elevation of PATIENT-2 from sea level and the 5th runway is made of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Amsterdam Airport Schipol, which is at an elevation of -3.3528 from sea level, has a fifth runway with an asphalt surface.
+TEMPLATE: AGENT-1 , which is at an elevation of PATIENT-2 from PATIENT-1 , has a fifth runway with an asphalt surface .
+CORRECT: AGENT-1 , which is at an elevation of PATIENT-2 from sea level , has a fifth runway with an PATIENT-1 surface .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id103 2 Airport
+
+TRIPLES
+Amsterdam_Airport_Schiphol | 5th_runway_Number | 18
+Amsterdam_Airport_Schiphol | elevationAboveTheSeaLevel_(in_metres) | -3.3528
+
+
+ENTITY MAP
+AGENT-1 | Amsterdam_Airport_Schiphol
+PATIENT-1 | 18
+PATIENT-2 | -3.3528
+
+
+LEX
+Id1
+TEXT: Amsterdam Airport Schiphol is at an elevation of -3.3528 from sea level and its 5th runway number is 18.
+TEMPLATE: AGENT-1 is at an elevation of PATIENT-2 from sea level and AGENT-1 5th runway number is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Amsterdam airport Schipol is -3.3528 above sea level and the 5th runway is known as number 18.
+TEMPLATE: AGENT-1 is PATIENT-2 above sea level and the 5th runway is known as PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Amsterdam airport Schipol is -3.3528 above sea level and the 5th runway has the number 18.
+TEMPLATE: AGENT-1 is PATIENT-2 above sea level and the 5th runway has PATIENT-1 .
+CORRECT: AGENT-1 is PATIENT-2 above sea level and the 5th runway has number PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id102 2 Airport
+
+TRIPLES
+Amsterdam_Airport_Schiphol | 4th_runway_SurfaceType | "Asphalt"
+Amsterdam_Airport_Schiphol | elevationAboveTheSeaLevel_(in_metres) | -3.3528
+
+
+ENTITY MAP
+AGENT-1 | Amsterdam_Airport_Schiphol
+PATIENT-1 | "Asphalt"
+PATIENT-2 | -3.3528
+
+
+LEX
+Id1
+TEXT: Amsterdam Airport Schiphol is 3.3528 below sea level and its fourth runway is made from asphalt.
+TEMPLATE: AGENT-1 is PATIENT-2 below sea level and AGENT-1 fourth runway is made from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Amsterdam Airport Schiphol is -3.3528 metres above sea level and the 4th runway is made of asphalt.
+TEMPLATE: AGENT-1 is PATIENT-2 metres above sea level and the 4th runway is made of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id101 2 Airport
+
+TRIPLES
+Amsterdam_Airport_Schiphol | 1st_runway_Number | 18
+Amsterdam_Airport_Schiphol | elevationAboveTheSeaLevel_(in_metres) | -3.3528
+
+
+ENTITY MAP
+AGENT-1 | Amsterdam_Airport_Schiphol
+PATIENT-1 | 18
+PATIENT-2 | -3.3528
+
+
+LEX
+Id1
+TEXT: Amsterdam airport Schipol is -3.3528 above sea level and its first runway is known as Number 18.
+TEMPLATE: AGENT-1 is PATIENT-2 above sea level and AGENT-1 first runway is known as PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Amsterdam Airport Schiphol is -3.3528 metres above sea level and the first runway is known as Number 18.
+TEMPLATE: AGENT-1 is PATIENT-2 metres above sea level and the first runway is known as PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The number of the 1st runway at Amsterdam Airport Schiphol is 18, the airport is -3.3528 metres above sea level.
+TEMPLATE: The number of the 1st runway at AGENT-1 is PATIENT-1 , the airport is PATIENT-2 metres above sea level .
+CORRECT: The number of the 1st runway at AGENT-1 is PATIENT-1 , AGENT-1 is PATIENT-2 metres above sea level .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id100 2 Airport
+
+TRIPLES
+Alpena_County_Regional_Airport | locationIdentifier | "APN"
+Alpena_County_Regional_Airport | elevationAboveTheSeaLevel_(in_metres) | 210
+
+
+ENTITY MAP
+AGENT-1 | Alpena_County_Regional_Airport
+PATIENT-1 | "APN"
+PATIENT-2 | 210
+
+
+LEX
+Id1
+TEXT: The location identifier of Alpena County Regional airport is APN and is 210m a.s.l.
+TEMPLATE: The location identifier of AGENT-1 is PATIENT-1 and is PATIENT-2 a.s.l.
+CORRECT: The location identifier of AGENT-1 is PATIENT-1 and is PATIENT-2
+COMMENT: mod
+-
+Id2
+TEXT: Ipena County Regional Airport (IPN) is 210 metres above sea level.
+TEMPLATE: AGENT-1 (PATIENT-1) is PATIENT-2 metres above sea level .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Alpena County Regional Airport's location id is "APN", and it is elevated 210 metres above sea level.
+TEMPLATE: AGENT-1 's location id is `` PATIENT-1 '' , and PATIENT-1 is elevated PATIENT-2 metres above sea level .
+CORRECT: AGENT-1 's location id is `` PATIENT-1 '' , and AGENT-1 is elevated PATIENT-2 metres above sea level .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id99 2 Airport
+
+TRIPLES
+Alpena_County_Regional_Airport | location | Wilson_Township,_Alpena_County,_Michigan
+Wilson_Township,_Alpena_County,_Michigan | country | United_States
+
+
+ENTITY MAP
+BRIDGE-1 | Wilson_Township,_Alpena_County,_Michigan
+AGENT-1 | Alpena_County_Regional_Airport
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Alpena County Regional Airport is found in Wilson Township, Alpena County, Michigan United States.
+TEMPLATE: AGENT-1 is found in BRIDGE-1 PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Alpena County Regional Airport is located in the Wilson Township, Alpena County, Michigan, USA.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id98 2 Airport
+
+TRIPLES
+Alpena_County_Regional_Airport | location | Wilson_Township,_Alpena_County,_Michigan
+Alpena_County_Regional_Airport | elevationAboveTheSeaLevel_(in_metres) | 210
+
+
+ENTITY MAP
+AGENT-1 | Alpena_County_Regional_Airport
+PATIENT-1 | Wilson_Township,_Alpena_County,_Michigan
+PATIENT-2 | 210
+
+
+LEX
+Id1
+TEXT: Alpena County Regional Airport has an elevation of 210 metres above sea level and is located at Wilson Township, Alpena County, Michigan.
+TEMPLATE: AGENT-1 has an elevation of PATIENT-2 metres above sea level and is located at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Alpena County Regional Airport is elevated 210 metres above sea level and is located in Wilson Township, Alpena County, Michigan.
+TEMPLATE: AGENT-1 is elevated PATIENT-2 metres above sea level and is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id97 2 Airport
+
+TRIPLES
+Alpena_County_Regional_Airport | location | Maple_Ridge_Township,_Alpena_County,_Michigan
+Maple_Ridge_Township,_Alpena_County,_Michigan | country | United_States
+
+
+ENTITY MAP
+BRIDGE-1 | Maple_Ridge_Township,_Alpena_County,_Michigan
+AGENT-1 | Alpena_County_Regional_Airport
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Alpena County Regional Airport is found in Maple Ridge Township, Alpena County, Michigan, United States.
+TEMPLATE: AGENT-1 is found in BRIDGE-1 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Alpena County Regional Airport is located in Maple Ridge Township, Alpena County, Michigan, United States.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Alpena County Regional Airport is in Maple Ridge Township, Alpena County, Michigan in the U.S.A..
+TEMPLATE: AGENT-1 is in BRIDGE-1 in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id96 2 Airport
+
+TRIPLES
+Alpena_County_Regional_Airport | location | Maple_Ridge_Township,_Alpena_County,_Michigan
+Alpena_County_Regional_Airport | elevationAboveTheSeaLevel_(in_metres) | 210
+
+
+ENTITY MAP
+AGENT-1 | Alpena_County_Regional_Airport
+PATIENT-1 | Maple_Ridge_Township,_Alpena_County,_Michigan
+PATIENT-2 | 210
+
+
+LEX
+Id1
+TEXT: Alpena County Regional Airport is located in Maple Ridge Township, Alpena County, Michigan and is 210 metres above sea level.
+TEMPLATE: AGENT-1 is located in PATIENT-1 and is PATIENT-2 metres above sea level .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Alpena County Regional Airport is found in Maple Ridge Township. Alpena County, Michigan and it is 210 metres above sea level.
+TEMPLATE: AGENT-1 is found in PATIENT-1 . Alpena County , Michigan and AGENT-1 is PATIENT-2 metres above sea level .
+CORRECT: AGENT-1 is found in PATIENT-1 . AGENT-1 is PATIENT-2 metres above sea level .
+COMMENT: mod
+-
+Id3
+TEXT: lpena County Regional Airport is located in Maple Ridge Township, Alpena County, Michigan, the airport is 210m above sea level.
+TEMPLATE: AGENT-1 is located in PATIENT-1 , the airport is PATIENT-2 above sea level .
+CORRECT: AGENT-1 is located in PATIENT-1 , AGENT-1 is PATIENT-2 above sea level .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id95 2 Airport
+
+TRIPLES
+Alpena_County_Regional_Airport | elevationAboveTheSeaLevel_(in_metres) | 210
+Alpena_County_Regional_Airport | owner | Alpena_County,_Michigan
+
+
+ENTITY MAP
+AGENT-1 | Alpena_County_Regional_Airport
+PATIENT-1 | 210
+PATIENT-2 | Alpena_County,_Michigan
+
+
+LEX
+Id1
+TEXT: The Aplena County Regional Airport is elevated 210 metres above sea level and is owned by Alpena Country, Michigan.
+TEMPLATE: AGENT-1 is elevated PATIENT-1 metres above sea level and is owned by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Aplena County Regional Airport, which is 210 metres above sea level is owned by Alpena County, Michigan.
+TEMPLATE: AGENT-1 , which is PATIENT-1 metres above sea level is owned by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Alpena County, Michigan is the owner of the Alpena County Regional Airport, which has an elevation above sea level of 210 metres.
+TEMPLATE: PATIENT-2 is the owner of AGENT-1 , which has an elevation above sea level of PATIENT-1 metres .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id94 2 Airport
+
+TRIPLES
+Alpena_County_Regional_Airport | 1st_runway_LengthFeet | 9001
+Alpena_County_Regional_Airport | elevationAboveTheSeaLevel_(in_metres) | 210
+
+
+ENTITY MAP
+AGENT-1 | Alpena_County_Regional_Airport
+PATIENT-1 | 9001
+PATIENT-2 | 210
+
+
+LEX
+Id1
+TEXT: Aplena County Regional Airport is elevated 210 metres above sea level and its first runway has a length of 9,001 feet.
+TEMPLATE: AGENT-1 is elevated PATIENT-2 metres above sea level and AGENT-1 first runway has a length of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: lpena County Regional Airport is 210m above sea level, its first runway is 9001 feet long.
+TEMPLATE: AGENT-1 is PATIENT-2 above sea level , AGENT-1 first runway is PATIENT-1 feet long .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id93 2 Airport
+
+TRIPLES
+Allama_Iqbal_International_Airport | runwayLength | 3310.0
+Allama_Iqbal_International_Airport | location | Punjab,_Pakistan
+
+
+ENTITY MAP
+AGENT-1 | Allama_Iqbal_International_Airport
+PATIENT-1 | 3310.0
+PATIENT-2 | Punjab,_Pakistan
+
+
+LEX
+Id1
+TEXT: Allama Iqbal International Airport has a runway length of 3310.0 and is found in Punjab, Pakistan.
+TEMPLATE: AGENT-1 has a runway length of PATIENT-1 and is found in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Allama Iqbal International Airport is located in Punjab Pakistan; its runway length is 3,310.
+TEMPLATE: AGENT-1 is located in PATIENT-2 ; AGENT-1 runway length is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Allama Iqbal International Airport located in Punjab, Pakistan has a runway length of 3310.0..
+TEMPLATE: AGENT-1 located in PATIENT-2 has a runway length of PATIENT-1 . .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id92 2 Airport
+
+TRIPLES
+Allama_Iqbal_International_Airport | operatingOrganisation | Pakistan_Civil_Aviation_Authority
+Pakistan_Civil_Aviation_Authority | location | Jinnah_International_Airport
+
+
+ENTITY MAP
+BRIDGE-1 | Pakistan_Civil_Aviation_Authority
+AGENT-1 | Allama_Iqbal_International_Airport
+PATIENT-1 | Jinnah_International_Airport
+
+
+LEX
+Id1
+TEXT: Jinnah International Airport is the location of the HQ of the Pakistan Civil Aviation Authority, who govern Allama Iqbal International Airport.
+TEMPLATE: PATIENT-1 is the location of the HQ of BRIDGE-1 , who govern AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Pakistan Civil Aviation Authority is located at Jinnah International Airport and is the operating organisation of the Allama Iqbal International Airport.
+TEMPLATE: BRIDGE-1 is located at PATIENT-1 and is the operating organisation of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Pakistan Civil Aviation Authority which is located at Jinnah International airport, is the operating organisation of the Allama Iqbal International Airport.
+TEMPLATE: BRIDGE-1 which is located at PATIENT-1 , is the operating organisation of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id91 2 Airport
+
+TRIPLES
+Allama_Iqbal_International_Airport | operatingOrganisation | Pakistan_Civil_Aviation_Authority
+Allama_Iqbal_International_Airport | location | Punjab,_Pakistan
+
+
+ENTITY MAP
+AGENT-1 | Allama_Iqbal_International_Airport
+PATIENT-1 | Pakistan_Civil_Aviation_Authority
+PATIENT-2 | Punjab,_Pakistan
+
+
+LEX
+Id1
+TEXT: Allama Iqbal International Airport in Punjab, Pakistan, is operated by Pakistan Civil Aviation Authority.
+TEMPLATE: AGENT-1 in PATIENT-2 , is operated by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Pakistan Civil Aviation Authority is the operating authority of the Allama Iqbal International Airport, which is located in Punjab, Pakistan.
+TEMPLATE: PATIENT-1 is the operating authority of AGENT-1 , which is located in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Pakistan Civil Aviation Authority is the operating organisation of the Allama Iqbal International Airport in Punjab, Pakistan.
+TEMPLATE: PATIENT-1 is the operating organisation of AGENT-1 in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id90 2 Airport
+
+TRIPLES
+Allama_Iqbal_International_Airport | location | Punjab,_Pakistan
+Punjab,_Pakistan | leaderTitle | Provincial_Assembly_of_the_Punjab
+
+
+ENTITY MAP
+BRIDGE-1 | Punjab,_Pakistan
+AGENT-1 | Allama_Iqbal_International_Airport
+PATIENT-1 | Provincial_Assembly_of_the_Punjab
+
+
+LEX
+Id1
+TEXT: Allama Iqbal International Airport is located in Punjab, Pakistan, which is led by the Provincial Assembly of the Punjab.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , which is led by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Punjab, Pakistan, led by the Provincial Assembly, is the location of Allama Iqbal International Airport.
+TEMPLATE: BRIDGE-1 , led by PATIENT-1 , is the location of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Allama Iqbal International Airport is located in Punjab, Pakistan which is led by the Provincial Assembly of the Punjab.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 which is led by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id89 2 Airport
+
+TRIPLES
+Allama_Iqbal_International_Airport | location | Punjab,_Pakistan
+Allama_Iqbal_International_Airport | runwayLength | 3360.12
+
+
+ENTITY MAP
+AGENT-1 | Allama_Iqbal_International_Airport
+PATIENT-1 | Punjab,_Pakistan
+PATIENT-2 | 3360.12
+
+
+LEX
+Id1
+TEXT: Located in Punjab, in Pakistan, Allama Iqbal International Airport has a runway length of 3360.12 metres.
+TEMPLATE: Located in Punjab , in PATIENT-1 , AGENT-1 has a runway length of PATIENT-2 metres .
+CORRECT: Located in PATIENT-1 , AGENT-1 has a runway length of PATIENT-2 metres .
+COMMENT: mod
+-
+Id2
+TEXT: The runway at Allama Iqbal International Airport in Punjab, Pakistan is 3360.12 long.
+TEMPLATE: The runway at AGENT-1 in PATIENT-1 is PATIENT-2 long .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Allama Iqbal international airport is located in Punjab, Pakistan and has a runway length of 3360.12.
+TEMPLATE: AGENT-1 is located in PATIENT-1 and has a runway length of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id88 2 Airport
+
+TRIPLES
+Allama_Iqbal_International_Airport | location | Pakistan
+Pakistan | leaderName | Sardar_Ayaz_Sadiq
+
+
+ENTITY MAP
+BRIDGE-1 | Pakistan
+AGENT-1 | Allama_Iqbal_International_Airport
+PATIENT-1 | Sardar_Ayaz_Sadiq
+
+
+LEX
+Id1
+TEXT: Allama Iqbal International airport is located in Pakistan where Sardar Ayaz Sadiq is the leader.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 where PATIENT-1 is the leader .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Allama Iqbal International airport is located in Pakistan, of which Sardar Ayaz Sadiq is the leader.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , of which PATIENT-1 is the leader .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id87 2 Airport
+
+TRIPLES
+Allama_Iqbal_International_Airport | location | Pakistan
+Pakistan | leaderName | Nawaz_Sharif
+
+
+ENTITY MAP
+BRIDGE-1 | Pakistan
+AGENT-1 | Allama_Iqbal_International_Airport
+PATIENT-1 | Nawaz_Sharif
+
+
+LEX
+Id1
+TEXT: Allama Iqbal International airport is located in Pakistan where the leader is Nawaz Sharif.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 where the leader is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Allama Iqbal International airport is located in Pakistan whose leader is Nawaz Sharif.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 whose leader is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Allama Iqbal International airport is located in Pakistan where Nawaz Sharif is a leader.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 where PATIENT-1 is a leader .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id86 2 Airport
+
+TRIPLES
+Allama_Iqbal_International_Airport | location | Pakistan
+Pakistan | leaderName | Mamnoon_Hussain
+
+
+ENTITY MAP
+BRIDGE-1 | Pakistan
+AGENT-1 | Allama_Iqbal_International_Airport
+PATIENT-1 | Mamnoon_Hussain
+
+
+LEX
+Id1
+TEXT: Allama Iqbal International airport is located in Pakistan where the leader is Mamnoon Hussain.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 where the leader is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Allama Iqbal International airport is located in Pakistan, the leader of the country is Mamnoon Hussain.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , the leader of the country is PATIENT-1 .
+CORRECT: AGENT-1 is located in BRIDGE-1 , the leader of BRIDGE-1 is PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: Allama Iqbal International airport is located in Pakistan where Mamnoon Hussain is a leader.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 where PATIENT-1 is a leader .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id85 2 Airport
+
+TRIPLES
+Allama_Iqbal_International_Airport | location | Pakistan
+Allama_Iqbal_International_Airport | runwayLength | 3360.12
+
+
+ENTITY MAP
+AGENT-1 | Allama_Iqbal_International_Airport
+PATIENT-1 | Pakistan
+PATIENT-2 | 3360.12
+
+
+LEX
+Id1
+TEXT: Allama Iqbal international airport has a runway length of 3360.12 and is located in Pakistan.
+TEMPLATE: AGENT-1 has a runway length of PATIENT-2 and is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The runway at Allama Iqbal International Airport in Pakistan has a length of 3360.12.
+TEMPLATE: The runway at AGENT-1 in PATIENT-1 has a length of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id84 2 Airport
+
+TRIPLES
+Allama_Iqbal_International_Airport | location | Pakistan
+Allama_Iqbal_International_Airport | runwayLength | 3310.0
+
+
+ENTITY MAP
+AGENT-1 | Allama_Iqbal_International_Airport
+PATIENT-1 | Pakistan
+PATIENT-2 | 3310.0
+
+
+LEX
+Id1
+TEXT: The runway length of Allama Iqbal International Airport in Pakistan is 3,310.
+TEMPLATE: The runway length of AGENT-1 in PATIENT-1 is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Allama Iqbal International airport is located in Pakistan and the runway length is 3310.0.
+TEMPLATE: AGENT-1 is located in PATIENT-1 and the runway length is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Allama Iqbal International airport, with a runway length of 3310.0, is located in Pakistan.
+TEMPLATE: AGENT-1 , with a runway length of PATIENT-2 , is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id83 2 Airport
+
+TRIPLES
+Allama_Iqbal_International_Airport | location | Pakistan
+Allama_Iqbal_International_Airport | runwayLength | 2900.0
+
+
+ENTITY MAP
+AGENT-1 | Allama_Iqbal_International_Airport
+PATIENT-1 | Pakistan
+PATIENT-2 | 2900.0
+
+
+LEX
+Id1
+TEXT: Allama Iqbal International Airport is located in Pakistan and has a runway length of 2900.
+TEMPLATE: AGENT-1 is located in PATIENT-1 and has a runway length of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Allama Iqbal International airport is located in Pakistan with a runway length of 2900m.
+TEMPLATE: AGENT-1 is located in PATIENT-1 with a runway length of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The runway length of Allama Iqbal International Airport, Pakistan, is 2900.0.
+TEMPLATE: The runway length of AGENT-1 , PATIENT-1 , is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id82 2 Airport
+
+TRIPLES
+Allama_Iqbal_International_Airport | location | Pakistan
+Allama_Iqbal_International_Airport | operatingOrganisation | Pakistan_Civil_Aviation_Authority
+
+
+ENTITY MAP
+AGENT-1 | Allama_Iqbal_International_Airport
+PATIENT-1 | Pakistan
+PATIENT-2 | Pakistan_Civil_Aviation_Authority
+
+
+LEX
+Id1
+TEXT: The Pakistan Civil Aviation Authority governs the Allama Iqbal International Airport in Pakistan.
+TEMPLATE: PATIENT-2 governs AGENT-1 in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: In Pakistan, the Pakistan Civil Aviation Authority is the operating organisation of the Allama Iqbal International Airport.
+TEMPLATE: In PATIENT-1 , PATIENT-2 is the operating organisation of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Allama Iqbal International Airport in Pakistan is operated by the Pakistan Civil Aviation Authority.
+TEMPLATE: AGENT-1 in PATIENT-1 is operated by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id81 2 Airport
+
+TRIPLES
+Alderney_Airport | runwayLength | 497.0
+Alderney_Airport | 1st_runway_SurfaceType | Asphalt
+
+
+ENTITY MAP
+AGENT-1 | Alderney_Airport
+PATIENT-1 | 497.0
+PATIENT-2 | Asphalt
+
+
+LEX
+Id1
+TEXT: The 1st runway at Alderney Airport is made from Asphalt and has a length of 497.0.
+TEMPLATE: The 1st runway at AGENT-1 is made from PATIENT-2 and has a length of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Alderney Airport has a runway length of 497.0, it is made of asphalt.
+TEMPLATE: AGENT-1 has a runway length of PATIENT-1 , AGENT-1 is made of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id80 2 Airport
+
+TRIPLES
+Alderney_Airport | cityServed | Alderney
+Alderney | leaderName | Elizabeth_II
+
+
+ENTITY MAP
+BRIDGE-1 | Alderney
+AGENT-1 | Alderney_Airport
+PATIENT-1 | Elizabeth_II
+
+
+LEX
+Id1
+TEXT: The Alderney Airport serves Alderney whose leader is Elizabeth II.
+TEMPLATE: AGENT-1 serves BRIDGE-1 whose leader is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Alderney Airport serves the city of Alderney, whose leader is Elizabeth II.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 , whose leader is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Alderney Airport serves the city of Alderney, the leader of which is Elizabeth II.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 , the leader of which is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id79 2 Airport
+
+TRIPLES
+Alderney_Airport | cityServed | Alderney
+Alderney | language | English_language
+
+
+ENTITY MAP
+BRIDGE-1 | Alderney
+AGENT-1 | Alderney_Airport
+PATIENT-1 | English_language
+
+
+LEX
+Id1
+TEXT: Alderney Airport serves the English speaking city of Alderney.
+TEMPLATE: AGENT-1 serves PATIENT-1 of BRIDGE-1 .
+CORRECT: AGENT-1 serves the PATIENT-1 speaking city of BRIDGE-1 .
+COMMENT:
+-
+Id2
+TEXT: The English language is spoken in Alderney which is served by Alderney airport.
+TEMPLATE: PATIENT-1 is spoken in BRIDGE-1 which is served by BRIDGE-1 airport .
+CORRECT: PATIENT-1 is spoken in BRIDGE-1 which is served by AGENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id78 2 Airport
+
+TRIPLES
+Alderney_Airport | cityServed | Alderney
+Alderney | capital | Saint_Anne,_Alderney
+
+
+ENTITY MAP
+BRIDGE-1 | Alderney
+AGENT-1 | Alderney_Airport
+PATIENT-1 | Saint_Anne,_Alderney
+
+
+LEX
+Id1
+TEXT: The capital of Alderney is Saint Anne and is served by the Alderney Airport.
+TEMPLATE: The capital of BRIDGE-1 is PATIENT-1 and is served by AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Alderney Airport serves Alderney, where the capital is Saint Anne.
+TEMPLATE: AGENT-1 serves BRIDGE-1 , where the capital is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id77 2 Airport
+
+TRIPLES
+Alderney_Airport | 1st_runway_SurfaceType | Poaceae
+Poaceae | order | Poales
+
+
+ENTITY MAP
+BRIDGE-1 | Poaceae
+AGENT-1 | Alderney_Airport
+PATIENT-1 | Poales
+
+
+LEX
+Id1
+TEXT: The surface of the 1st runway at Alderney airport is poaceae, which is of the order Poales.
+TEMPLATE: The surface of the 1st runway at AGENT-1 is BRIDGE-1 , which is of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The 1st runway at Alderney Airport is made from Poaceae, which is of the order Poales.
+TEMPLATE: The 1st runway at AGENT-1 is made from BRIDGE-1 , which is of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The first runway at Alderney Airport is made from Poaceae, which is a member of the order of Poales.
+TEMPLATE: The first runway at AGENT-1 is made from BRIDGE-1 , which is a member of the order of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id76 2 Airport
+
+TRIPLES
+Alderney_Airport | 1st_runway_SurfaceType | Poaceae
+Poaceae | order | Commelinids
+
+
+ENTITY MAP
+BRIDGE-1 | Poaceae
+AGENT-1 | Alderney_Airport
+PATIENT-1 | Commelinids
+
+
+LEX
+Id1
+TEXT: The surface of the 1st runway at Alderney airport is made from poaceae, which belongs to the order of Commelinids.
+TEMPLATE: The surface of the 1st runway at AGENT-1 is made from BRIDGE-1 , which belongs to the order of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The 1st runway at Alderney Airport is made from Poaceae which belongs to the order of Commelinids.
+TEMPLATE: The 1st runway at AGENT-1 is made from BRIDGE-1 which belongs to the order of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The surface of the 1st runway at Alderney airport is made from poaceae, Poaceae is the order of Commelinid.
+TEMPLATE: The surface of the 1st runway at AGENT-1 is made from poaceae , BRIDGE-1 is the order of PATIENT-1 .
+CORRECT: The surface of the 1st runway at AGENT-1 is made from BRIDGE-1 , BRIDGE-1 is the order of PATIENT-1 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id75 2 Airport
+
+TRIPLES
+Alderney_Airport | 1st_runway_SurfaceType | Poaceae
+Alderney_Airport | runwayLength | 733.0
+
+
+ENTITY MAP
+AGENT-1 | Alderney_Airport
+PATIENT-1 | Poaceae
+PATIENT-2 | 733.0
+
+
+LEX
+Id1
+TEXT: Alderney Airport has a runway with a length of 733.0 metres and its 1st runway is made from Poaceae.
+TEMPLATE: AGENT-1 has a runway with a length of PATIENT-2 metres and AGENT-1 1st runway is made from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Alderney Airport has a runway length of 733 and its 1st runway surface is poaceae.
+TEMPLATE: AGENT-1 has a runway length of PATIENT-2 and AGENT-1 1st runway surface is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Alderney Airport runway has a length of 733 and the surface of its 1st runway is poaceae.
+TEMPLATE: The AGENT-1 runway has a length of PATIENT-2 and the surface of AGENT-1 1st runway is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id74 2 Airport
+
+TRIPLES
+Alderney_Airport | 1st_runway_SurfaceType | Poaceae
+Alderney_Airport | runwayLength | 497.0
+
+
+ENTITY MAP
+AGENT-1 | Alderney_Airport
+PATIENT-1 | Poaceae
+PATIENT-2 | 497.0
+
+
+LEX
+Id1
+TEXT: The surface type of the 497.0 long runway at Alderney Airport is poaceae.
+TEMPLATE: The surface type of the PATIENT-2 long runway at AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The runway length of Alderney Airport is 497.0 and the 1st runway has a poaceae surface.
+TEMPLATE: The runway length of AGENT-1 is PATIENT-2 and the 1st runway has PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The 1st runway at Alderney Airport, which is 497.0 in length, is made from Poaceae.
+TEMPLATE: The 1st runway at AGENT-1 , which is PATIENT-2 in length , is made from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id73 2 Airport
+
+TRIPLES
+Alderney_Airport | 1st_runway_SurfaceType | Poaceae
+Alderney_Airport | cityServed | Alderney
+
+
+ENTITY MAP
+AGENT-1 | Alderney_Airport
+PATIENT-1 | Poaceae
+PATIENT-2 | Alderney
+
+
+LEX
+Id1
+TEXT: Serving the city of Alderney, Alderney Airport's 1st runway is made from Poaceae.
+TEMPLATE: Serving the city of PATIENT-2 , AGENT-1 's 1st runway is made from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Alderney Airport serves the city of Alderney and the surface of its 1st runway is poaceae.
+TEMPLATE: AGENT-1 serves the city of PATIENT-2 and the surface of PATIENT-2 1st runway is PATIENT-1 .
+CORRECT: AGENT-1 serves the city of PATIENT-2 and the surface of AGENT-1 1st runway is PATIENT-1 .
+COMMENT: coref
+-
+Id3
+TEXT: The surface of the 1st runway at Alderney airport, which serves Alderney, is poaceae.
+TEMPLATE: AGENT-1 of the 1st runway at PATIENT-2 airport , which serves PATIENT-2 , is PATIENT-1 .
+CORRECT: The surface of the 1st runway at AGENT-1 , which serves PATIENT-2 , is PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id72 2 Airport
+
+TRIPLES
+Alderney_Airport | 1st_runway_SurfaceType | Asphalt
+Alderney_Airport | cityServed | Alderney
+
+
+ENTITY MAP
+AGENT-1 | Alderney_Airport
+PATIENT-1 | Asphalt
+PATIENT-2 | Alderney
+
+
+LEX
+Id1
+TEXT: The city of Alderney is served by the Alderney Airport which has first runway made of asphalt.
+TEMPLATE: The city of PATIENT-2 is served by AGENT-1 which has first runway made of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The first runway at Alderney airport, which serves Alderney, has an asphalt surface.
+TEMPLATE: AGENT-1 at PATIENT-2 airport , which serves PATIENT-2 , has PATIENT-1 .
+CORRECT: The first runway at AGENT-1 , which serves PATIENT-2 , has PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: Alderney is served by Alderney Airport where the 1st runway has an asphalt surface.
+TEMPLATE: PATIENT-2 is served by AGENT-1 where the 1st runway has PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id71 2 Airport
+
+TRIPLES
+Alcobendas | leaderParty | Peoples_Party_(Spain)
+Adolfo_Suárez_Madrid–Barajas_Airport | location | Alcobendas
+
+
+ENTITY MAP
+BRIDGE-1 | Alcobendas
+AGENT-1 | Adolfo_Suárez_Madrid–Barajas_Airport
+PATIENT-1 | Peoples_Party_(Spain)
+
+
+LEX
+Id1
+TEXT: Adolfo Suárez Madrid–Barajas Airport is located in Alcobendas where the leader party is the Peoples Party (Spain).
+TEMPLATE: AGENT-1 -- Barajas Airport is located in BRIDGE-1 where the leader party is PATIENT-1 .
+CORRECT: AGENT-1 is located in BRIDGE-1 where the leader party is PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Adolfo Suárez Madrid–Barajas Airport is in Alcobendas where the Peoples Party (Spain) is the leader party.
+TEMPLATE: AGENT-1 -- Barajas Airport is in BRIDGE-1 where PATIENT-1 is the leader party .
+CORRECT: AGENT-1 is in BRIDGE-1 where PATIENT-1 is the leader party .
+COMMENT: mod
+-
+Id3
+TEXT: Adolfo Suárez Madrid Barajas Airport is found in Alcobendas where the leader party is the Peoples Party (Spain).
+TEMPLATE: AGENT-1 is found in BRIDGE-1 where the leader party is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id70 2 Airport
+
+TRIPLES
+Al_Asad_Airbase | runwayLength | 3992.88
+Al_Asad_Airbase | location | "Al Anbar Province, Iraq"
+
+
+ENTITY MAP
+AGENT-1 | Al_Asad_Airbase
+PATIENT-1 | 3992.88
+PATIENT-2 | "Al Anbar Province, Iraq"
+
+
+LEX
+Id1
+TEXT: Al Asad Airbase in Al Anbar Province, Iraq has a runway that's 3,992.88 long.
+TEMPLATE: AGENT-1 in PATIENT-2 has a runway that 's PATIENT-1 long .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Al Asad Airbase has a runway length of 3992.88 and is located in Al Anbar Province, Iraq.
+TEMPLATE: AGENT-1 has a runway length of PATIENT-1 and is located in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Al Asad Airbase is situated in the Al Anbar Province, Iraq and has a runway length of 3,992.88.
+TEMPLATE: AGENT-1 is situated in PATIENT-2 and has a runway length of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id69 2 Airport
+
+TRIPLES
+Al_Asad_Airbase | runwayLength | 3990.0
+Al_Asad_Airbase | location | "Al Anbar Province, Iraq"
+
+
+ENTITY MAP
+AGENT-1 | Al_Asad_Airbase
+PATIENT-1 | 3990.0
+PATIENT-2 | "Al Anbar Province, Iraq"
+
+
+LEX
+Id1
+TEXT: Al Asad airbase is located in the Al Anbar province in Iraq and has a runway length of 3990.0.
+TEMPLATE: AGENT-1 is located in PATIENT-2 in Iraq and has a runway length of PATIENT-1 .
+CORRECT: AGENT-1 is located in PATIENT-2 and has a runway length of PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: The Al Asad Airbase, located in Al Anbar Province, Iraq, has a runway length of 3990 ft.
+TEMPLATE: AGENT-1 , located in PATIENT-2 , has a runway length of PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id68 2 Airport
+
+TRIPLES
+Al_Asad_Airbase | operatingOrganisation | United_States_Air_Force
+United_States_Air_Force | transportAircraft | Lockheed_C-130_Hercules
+
+
+ENTITY MAP
+BRIDGE-1 | United_States_Air_Force
+AGENT-1 | Al_Asad_Airbase
+PATIENT-1 | Lockheed_C-130_Hercules
+
+
+LEX
+Id1
+TEXT: Al Asad Airbase is operated by the United States Air Force which uses the transport aircraft, the Lockheed C-130 Hercules.
+TEMPLATE: AGENT-1 is operated by BRIDGE-1 which uses the transport aircraft , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The United States Air Force is the operating organisation for Al Asad airbase and uses the transport aircraft, Lockheed C-130 Hercules.
+TEMPLATE: BRIDGE-1 is the operating organisation for AGENT-1 and uses the transport aircraft , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Al Asad Airbase is operated by the United States Air Force which use the Lockheed C-130 Hercules as a transport aircraft.
+TEMPLATE: AGENT-1 is operated by BRIDGE-1 which use PATIENT-1 as a transport aircraft .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id67 2 Airport
+
+TRIPLES
+Al_Asad_Airbase | operatingOrganisation | United_States_Air_Force
+United_States_Air_Force | battles | Korean_War
+
+
+ENTITY MAP
+BRIDGE-1 | United_States_Air_Force
+AGENT-1 | Al_Asad_Airbase
+PATIENT-1 | Korean_War
+
+
+LEX
+Id1
+TEXT: The USAF, which fought in the Korean War, operates Al Asad airbase.
+TEMPLATE: The USAF , which fought in PATIENT-1 , operates BRIDGE-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The United States Air Force fought battles in the Korean war and operates the Al Asad Airbase.
+TEMPLATE: BRIDGE-1 fought battles in PATIENT-1 and operates AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id66 2 Airport
+
+TRIPLES
+Al_Asad_Airbase | operatingOrganisation | United_States_Air_Force
+United_States_Air_Force | battles | 1986_United_States_bombing_of_Libya
+
+
+ENTITY MAP
+BRIDGE-1 | United_States_Air_Force
+AGENT-1 | Al_Asad_Airbase
+PATIENT-1 | 1986_United_States_bombing_of_Libya
+
+
+LEX
+Id1
+TEXT: The United States Air Force was fighting in the United States bombing of Libya in 1986 and also operates the Al Asad Airbase.
+TEMPLATE: BRIDGE-1 was fighting in PATIENT-1 in 1986 and also operates AGENT-1 .
+CORRECT: BRIDGE-1 was fighting in PATIENT-1 and also operates AGENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Al Asad Airbase is operated by the United States Air Force, which carried out the US bombing of Libya.
+TEMPLATE: AGENT-1 is operated by BRIDGE-1 , which carried out PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id65 2 Airport
+
+TRIPLES
+Al_Asad_Airbase | operatingOrganisation | United_States_Air_Force
+United_States_Air_Force | attackAircraft | Lockheed_AC-130
+
+
+ENTITY MAP
+BRIDGE-1 | United_States_Air_Force
+AGENT-1 | Al_Asad_Airbase
+PATIENT-1 | Lockheed_AC-130
+
+
+LEX
+Id1
+TEXT: Al Asad Airbase is operated by the United States Air Force whose aircraft carriers transport the Lockheed AC-130.
+TEMPLATE: AGENT-1 is operated by BRIDGE-1 whose aircraft carriers transport PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id64 2 Airport
+
+TRIPLES
+Al_Asad_Airbase | operatingOrganisation | United_States_Air_Force
+United_States_Air_Force | aircraftFighter | McDonnell_Douglas_F-15_Eagle
+
+
+ENTITY MAP
+BRIDGE-1 | United_States_Air_Force
+AGENT-1 | Al_Asad_Airbase
+PATIENT-1 | McDonnell_Douglas_F-15_Eagle
+
+
+LEX
+Id1
+TEXT: The McDonnell Douglas F-15 Eagle is an aircraft fighter in the U.S. Air Force who are the operating organisation for Al Asad airbase.
+TEMPLATE: PATIENT-1 is an aircraft fighter in BRIDGE-1 who are the operating organisation for AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Al Asad Airbase, operated by the United States Air Force, uses The McDonnell Douglas F-15 Eagle aircraft carrier.
+TEMPLATE: AGENT-1 , operated by BRIDGE-1 , uses The PATIENT-1 aircraft carrier .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Al Asad Airbase uses the McDonnell Douglas F-15 Eagle and is operated by The U.S. Air Force.
+TEMPLATE: AGENT-1 uses PATIENT-1 and is operated by BRIDGE-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id63 2 Airport
+
+TRIPLES
+Al_Asad_Airbase | operatingOrganisation | United_States_Air_Force
+United_States_Air_Force | aircraftFighter | General_Dynamics_F-16_Fighting_Falcon
+
+
+ENTITY MAP
+BRIDGE-1 | United_States_Air_Force
+AGENT-1 | Al_Asad_Airbase
+PATIENT-1 | General_Dynamics_F-16_Fighting_Falcon
+
+
+LEX
+Id1
+TEXT: The United States Air Force, who operated Al Asad airbase, deploy the aircraft fighter known as General Dynamics F-16 Fighting Falcon.
+TEMPLATE: BRIDGE-1 , who operated AGENT-1 , deploy the aircraft fighter known as PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Al Asad Airbase is operated by the United States Air Force which also uses the General Dynamics F-16 Fighting Falcon aircraft.
+TEMPLATE: AGENT-1 is operated by BRIDGE-1 which also uses the PATIENT-1 aircraft .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The General Dynamics F-16 Fighting Falcon is an aircraft fighter in the United States Air Force who are the operating organisation for Al Asad airbase.
+TEMPLATE: PATIENT-1 is an aircraft fighter in BRIDGE-1 who are the operating organisation for AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id62 2 Airport
+
+TRIPLES
+Al_Asad_Airbase | location | Iraq
+Al_Asad_Airbase | runwayLength | 3992.88
+
+
+ENTITY MAP
+AGENT-1 | Al_Asad_Airbase
+PATIENT-1 | Iraq
+PATIENT-2 | 3992.88
+
+
+LEX
+Id1
+TEXT: Al Asad Airbase is in Iraq and the length of the runway is 3992.88.
+TEMPLATE: AGENT-1 is in PATIENT-1 and the length of the runway is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The runway length of Al Asad Airbase, Iraq, is 3,992.88.
+TEMPLATE: The runway length of AGENT-1 , PATIENT-1 , is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id61 2 Airport
+
+TRIPLES
+Al_Asad_Airbase | location | Iraq
+Al_Asad_Airbase | runwayLength | 3990.0
+
+
+ENTITY MAP
+AGENT-1 | Al_Asad_Airbase
+PATIENT-1 | Iraq
+PATIENT-2 | 3990.0
+
+
+LEX
+Id1
+TEXT: Al Asad Airbase, in Iraq, Has a runway length of 3990.
+TEMPLATE: AGENT-1 , in PATIENT-1 , Has a runway length of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Al Asad Airbase is found in Iraq and has a runway length of 3,990.
+TEMPLATE: AGENT-1 is found in PATIENT-1 and has a runway length of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: In Iraq, the Al Asad Airbase has a runway length of 3,990 metres.
+TEMPLATE: In PATIENT-1 , AGENT-1 has a runway length of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id60 2 Airport
+
+TRIPLES
+Al_Asad_Airbase | location | Iraq
+Al_Asad_Airbase | runwayLength | 3090.0
+
+
+ENTITY MAP
+AGENT-1 | Al_Asad_Airbase
+PATIENT-1 | Iraq
+PATIENT-2 | 3090.0
+
+
+LEX
+Id1
+TEXT: Al Asad Airbase in Iraq has a runway length of 3090.0.
+TEMPLATE: AGENT-1 in PATIENT-1 has a runway length of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id59 2 Airport
+
+TRIPLES
+Al_Asad_Airbase | location | Iraq
+Al_Asad_Airbase | runwayLength | 3078.48
+
+
+ENTITY MAP
+AGENT-1 | Al_Asad_Airbase
+PATIENT-1 | Iraq
+PATIENT-2 | 3078.48
+
+
+LEX
+Id1
+TEXT: The runway length of Al Asad Airbase, Iraq, is 3078.48.
+TEMPLATE: The runway length of AGENT-1 , PATIENT-1 , is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Al Asad Airbase is found in Iraq and has a length of 3078.48m.
+TEMPLATE: AGENT-1 is found in PATIENT-1 and has a length of PATIENT-2 m.
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The runway length of Al Asad Airbase, located in Iraq, is 3078.48.
+TEMPLATE: The runway length of AGENT-1 , located in PATIENT-1 , is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id58 2 Airport
+
+TRIPLES
+Al_Asad_Airbase | location | Iraq
+Al_Asad_Airbase | elevationAboveTheSeaLevel_(in_feet) | 618
+
+
+ENTITY MAP
+AGENT-1 | Al_Asad_Airbase
+PATIENT-1 | Iraq
+PATIENT-2 | 618
+
+
+LEX
+Id1
+TEXT: Al Asad Airbase in Iraq is 618 feet above sea level.
+TEMPLATE: AGENT-1 in PATIENT-1 is PATIENT-2 feet above sea level .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Al Asad Airbase is 618 ft above sea level and is located in Iraq.
+TEMPLATE: AGENT-1 is PATIENT-2 ft above sea level and is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id57 2 Airport
+
+TRIPLES
+Al_Asad_Airbase | location | "Al Anbar Province, Iraq"
+Al_Asad_Airbase | runwayLength | 3078.48
+
+
+ENTITY MAP
+AGENT-1 | Al_Asad_Airbase
+PATIENT-1 | "Al Anbar Province, Iraq"
+PATIENT-2 | 3078.48
+
+
+LEX
+Id1
+TEXT: Al Asad Airbase is located in Al Anbar Province, Iraq, it's runway is 3078.48 long.
+TEMPLATE: AGENT-1 is located in PATIENT-1 , AGENT-1 's runway is PATIENT-2 long .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Located at Al Anbar Province, in Iraq, Al Asad Airbase has a runway with the length of 3078.48 metres.
+TEMPLATE: Located at PATIENT-1 , in Iraq , AGENT-1 has a runway with the length of PATIENT-2 metres .
+CORRECT: Located at PATIENT-1 , AGENT-1 has a runway with the length of PATIENT-2 metres .
+COMMENT: mod
+-
+Id3
+TEXT: Al Asad airbase is located at Al Anbar Province, Iraq and has a runway length of 3078.48.
+TEMPLATE: AGENT-1 is located at PATIENT-1 and has a runway length of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id56 2 Airport
+
+TRIPLES
+Al-Taqaddum_Air_Base | runwayLength | 4019.0
+Al-Taqaddum_Air_Base | cityServed | Fallujah
+
+
+ENTITY MAP
+AGENT-1 | Al-Taqaddum_Air_Base
+PATIENT-1 | 4019.0
+PATIENT-2 | Fallujah
+
+
+LEX
+Id1
+TEXT: The runway length of Al-Taqaddum air base is 4019.0 and it serves the city of Fallujah.
+TEMPLATE: The runway length of AGENT-1 is PATIENT-1 and PATIENT-1 serves the city of PATIENT-2 .
+CORRECT: The runway length of AGENT-1 is PATIENT-1 and AGENT-1 serves the city of PATIENT-2 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id55 2 Airport
+
+TRIPLES
+Al-Taqaddum_Air_Base | runwayLength | 3684.0
+Al-Taqaddum_Air_Base | cityServed | Fallujah
+
+
+ENTITY MAP
+AGENT-1 | Al-Taqaddum_Air_Base
+PATIENT-1 | 3684.0
+PATIENT-2 | Fallujah
+
+
+LEX
+Id1
+TEXT: The Al Taqaddum air base serves Fallujah. The runway length is 3684.
+TEMPLATE: AGENT-1 serves PATIENT-2 . The runway length is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The length of the runway at Al-Taqaddum Air Base, which serves the city of Fallujah, is 3684.0.
+TEMPLATE: The length of the runway at AGENT-1 , which serves the city of PATIENT-2 , is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id54 2 Airport
+
+TRIPLES
+Al-Taqaddum_Air_Base | cityServed | Fallujah
+Fallujah | country | Iraq
+
+
+ENTITY MAP
+BRIDGE-1 | Fallujah
+AGENT-1 | Al-Taqaddum_Air_Base
+PATIENT-1 | Iraq
+
+
+LEX
+Id1
+TEXT: Al-Taqaddum Air Base serves the city of Fallujah which is in Iraq.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 which is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Al Taqaddum Air Base serves the city of Fallujah, Iraq.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Al Taqaddum Air Base serves the city of Fallujah which is in country of Iraq.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 which is in country of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id53 2 Airport
+
+TRIPLES
+Al-Taqaddum_Air_Base | cityServed | Fallujah
+Al-Taqaddum_Air_Base | elevationAboveTheSeaLevel_(in_metres) | 84.0
+
+
+ENTITY MAP
+AGENT-1 | Al-Taqaddum_Air_Base
+PATIENT-1 | Fallujah
+PATIENT-2 | 84.0
+
+
+LEX
+Id1
+TEXT: The Al Taqaddum air base is 84 metres above sea level and serves the city of Fallujah.
+TEMPLATE: AGENT-1 is PATIENT-2 above sea level and serves the city of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Al-Taqaddum Air Base is 84 metres above sea level and serves the city of Fallujah.
+TEMPLATE: AGENT-1 is PATIENT-2 above sea level and serves the city of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id52 2 Airport
+
+TRIPLES
+Agra_Airport | operatingOrganisation | Indian_Air_Force
+Indian_Air_Force | transportAircraft | Boeing_C-17_Globemaster_III
+
+
+ENTITY MAP
+BRIDGE-1 | Indian_Air_Force
+AGENT-1 | Agra_Airport
+PATIENT-1 | Boeing_C-17_Globemaster_III
+
+
+LEX
+Id1
+TEXT: The Indian Air Force has a transport aircraft called the Boeing C-17 Globemaster III and it also operates Agra Airport.
+TEMPLATE: BRIDGE-1 has a transport aircraft called PATIENT-1 and BRIDGE-1 also operates AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Boeing C-17 Globemaster III is a transport aircraft in the Indian Air Force, the operating organisation for Agra Airport.
+TEMPLATE: PATIENT-1 is a transport aircraft in BRIDGE-1 , the operating organisation for AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id51 2 Airport
+
+TRIPLES
+Agra_Airport | operatingOrganisation | Indian_Air_Force
+Agra_Airport | location | Agra
+
+
+ENTITY MAP
+AGENT-1 | Agra_Airport
+PATIENT-1 | Indian_Air_Force
+PATIENT-2 | Agra
+
+
+LEX
+Id1
+TEXT: Agra Airport in Agra is operated by the Indian Air Force.
+TEMPLATE: AGENT-1 in PATIENT-2 is operated by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Agra Airport is operated by the Indian Air Force and is located in Agra.
+TEMPLATE: AGENT-1 is operated by PATIENT-1 and is located in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The operating organization for Agra Airport located in Agra, is the Indian Air Force.
+TEMPLATE: The operating organization for AGENT-1 located in PATIENT-2 , is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id50 2 Airport
+
+TRIPLES
+Agra_Airport | location | Uttar_Pradesh
+Uttar_Pradesh | leaderName | Ram_Naik
+
+
+ENTITY MAP
+BRIDGE-1 | Uttar_Pradesh
+AGENT-1 | Agra_Airport
+PATIENT-1 | Ram_Naik
+
+
+LEX
+Id1
+TEXT: Agra Airport is located in Uttar Pradesh where Ram Naik is leader.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 where PATIENT-1 is leader .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Agra Airport is in Uttar Pradesh where Ram Naik is the leader.
+TEMPLATE: AGENT-1 is in BRIDGE-1 where PATIENT-1 is the leader .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Agra Airport is in Uttar Pradesh, the leader there is Ram Naik.
+TEMPLATE: AGENT-1 is in BRIDGE-1 , the leader there is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id49 2 Airport
+
+TRIPLES
+Agra_Airport | location | Uttar_Pradesh
+Uttar_Pradesh | isPartOf | Bundelkhand
+
+
+ENTITY MAP
+BRIDGE-1 | Uttar_Pradesh
+AGENT-1 | Agra_Airport
+PATIENT-1 | Bundelkhand
+
+
+LEX
+Id1
+TEXT: Agra Airport is in Uttar Pradesh which is part of Bundelkhand.
+TEMPLATE: AGENT-1 is in BRIDGE-1 which is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Agra Airport is located in Uttar Pradesh which is part of Bundelkhand.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 which is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id48 2 Airport
+
+TRIPLES
+Agra_Airport | location | Uttar_Pradesh
+Agra_Airport | ICAO_Location_Identifier | "VIAG"
+
+
+ENTITY MAP
+AGENT-1 | Agra_Airport
+PATIENT-1 | Uttar_Pradesh
+PATIENT-2 | "VIAG"
+
+
+LEX
+Id1
+TEXT: Agra Airport is in Uttar Pradesh with the ICAO Location Identifier of VIAG.
+TEMPLATE: AGENT-1 is in PATIENT-1 with the ICAO Location Identifier of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Agra Airport is located in Uttar Pradesh and its ICAO identifier is VIAG.
+TEMPLATE: AGENT-1 is located in PATIENT-1 and AGENT-1 ICAO identifier is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id47 2 Airport
+
+TRIPLES
+Agra_Airport | location | Uttar_Pradesh
+Agra_Airport | IATA_Location_Identifier | "AGR"
+
+
+ENTITY MAP
+AGENT-1 | Agra_Airport
+PATIENT-1 | Uttar_Pradesh
+PATIENT-2 | "AGR"
+
+
+LEX
+Id1
+TEXT: Agra Airport is located in Uttar Pradesh and has the IATA Location Identifier of AGR.
+TEMPLATE: AGENT-1 is located in PATIENT-1 and has the IATA Location Identifier of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AGR is the IATA location identifier for Agra Airport which is located in Uttar Pradesh.
+TEMPLATE: PATIENT-2 is the IATA location identifier for AGENT-1 which is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Located in Uttar Pradesh, Agra Airport has the ATA location identifier AGR.
+TEMPLATE: Located in PATIENT-1 , AGENT-1 has PATIENT-2 .
+CORRECT: Located in PATIENT-1 , AGENT-1 has the ATA location identifier PATIENT-2 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id46 2 Airport
+
+TRIPLES
+Agra_Airport | location | India
+India | leaderName | Narendra_Modi
+
+
+ENTITY MAP
+BRIDGE-1 | India
+AGENT-1 | Agra_Airport
+PATIENT-1 | Narendra_Modi
+
+
+LEX
+Id1
+TEXT: Agra Airport is located in India, where the leader is Narendra Modi.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , where the leader is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Agra Airport is in India where the leader is Narendra Modi.
+TEMPLATE: AGENT-1 is in BRIDGE-1 where the leader is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The leader of India is Narendra Modi and Agra airport is located in that country.
+TEMPLATE: The leader of BRIDGE-1 is PATIENT-1 and AGENT-1 is located in that country .
+CORRECT: The leader of BRIDGE-1 is PATIENT-1 and AGENT-1 is located in BRIDGE-1 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id45 2 Airport
+
+TRIPLES
+Agra_Airport | location | India
+Agra_Airport | ICAO_Location_Identifier | "VIAG"
+
+
+ENTITY MAP
+AGENT-1 | Agra_Airport
+PATIENT-1 | India
+PATIENT-2 | "VIAG"
+
+
+LEX
+Id1
+TEXT: Agra airport is located in India and the ICAO location identifier is VIAG.
+TEMPLATE: AGENT-1 is located in PATIENT-1 and the ICAO location identifier is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The location identifier for Agra Airport, India is VIAG.
+TEMPLATE: The location identifier for AGENT-1 , PATIENT-1 is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The ICAO Location Identifier of Agra Airport which is in India is VIAG.
+TEMPLATE: The ICAO Location Identifier of AGENT-1 which is in PATIENT-1 is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id44 2 Airport
+
+TRIPLES
+Agra_Airport | location | India
+Agra_Airport | IATA_Location_Identifier | "AGR"
+
+
+ENTITY MAP
+AGENT-1 | Agra_Airport
+PATIENT-1 | India
+PATIENT-2 | "AGR"
+
+
+LEX
+Id1
+TEXT: Agra airport is in India and has the ATA location identifier AGR.
+TEMPLATE: AGENT-1 is in PATIENT-1 and has PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Agra Airport, India, has an IATA Location Identifier of AGR.
+TEMPLATE: AGENT-1 , PATIENT-1 , has an IATA Location Identifier of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id43 2 Airport
+
+TRIPLES
+Agra_Airport | ICAO_Location_Identifier | "VIAG"
+Agra_Airport | location | Agra
+
+
+ENTITY MAP
+AGENT-1 | Agra_Airport
+PATIENT-1 | "VIAG"
+PATIENT-2 | Agra
+
+
+LEX
+Id1
+TEXT: Agra airport is located in Agra and its ICAO location identifier is VIAG.
+TEMPLATE: PATIENT-2 airport is located in PATIENT-2 and AGENT-1 is PATIENT-1 .
+CORRECT: AGENT-1 is located in PATIENT-2 and AGENT-1 ICAO location identifier is PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id42 2 Airport
+
+TRIPLES
+Agra_Airport | IATA_Location_Identifier | "AGR"
+Agra_Airport | location | Agra
+
+
+ENTITY MAP
+AGENT-1 | Agra_Airport
+PATIENT-1 | "AGR"
+PATIENT-2 | Agra
+
+
+LEX
+Id1
+TEXT: AGR is the ATA Location Identifier for Agra Airport, Agra.
+TEMPLATE: PATIENT-1 is the ATA Location Identifier for AGENT-1 , PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AGR is the ATA Location Identifier for Agra Airport which is located in Agra.
+TEMPLATE: PATIENT-1 is the ATA Location Identifier for AGENT-1 which is located in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: AGR is the IATA I.D. of the Agra Airport which is located in Agra.
+TEMPLATE: PATIENT-1 is the IATA I.D. of AGENT-1 which is located in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id41 2 Airport
+
+TRIPLES
+Afonso_Pena_International_Airport | runwayLength | 2215.0
+Afonso_Pena_International_Airport | location | São_José_dos_Pinhais
+
+
+ENTITY MAP
+AGENT-1 | Afonso_Pena_International_Airport
+PATIENT-1 | 2215.0
+PATIENT-2 | São_José_dos_Pinhais
+
+
+LEX
+Id1
+TEXT: Located at Sao Jose dos Pinhais, Afonso Pena International Airport has a runway length of 2215.0 metres.
+TEMPLATE: Located at Sao Jose dos PATIENT-2 , AGENT-1 has a runway length of PATIENT-1 metres .
+CORRECT: Located at PATIENT-2 , AGENT-1 has a runway length of PATIENT-1 metres .
+COMMENT: mod
+-
+Id2
+TEXT: 2215.0 is the length of the runway at Afonso Pena International Airport, São José dos Pinhais.
+TEMPLATE: PATIENT-1 is the length of the runway at AGENT-1 , PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The runway length at Afonso Pena International Airport, located in São José dos Pinhais, is 2215.0.
+TEMPLATE: The runway length at AGENT-1 , located in PATIENT-2 , is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id40 2 Airport
+
+TRIPLES
+Afonso_Pena_International_Airport | operatingOrganisation | Infraero
+Infraero | location | Brazil
+
+
+ENTITY MAP
+BRIDGE-1 | Infraero
+AGENT-1 | Afonso_Pena_International_Airport
+PATIENT-1 | Brazil
+
+
+LEX
+Id1
+TEXT: Infraero in Brazil, operates Afonso Pena International Airport.
+TEMPLATE: BRIDGE-1 in PATIENT-1 , operates AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Afonso Pena International Airport is operated by Infraero who are located in Brazil.
+TEMPLATE: AGENT-1 is operated by BRIDGE-1 who are located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id39 2 Airport
+
+TRIPLES
+Afonso_Pena_International_Airport | operatingOrganisation | Infraero
+Afonso_Pena_International_Airport | location | São_José_dos_Pinhais
+
+
+ENTITY MAP
+AGENT-1 | Afonso_Pena_International_Airport
+PATIENT-1 | Infraero
+PATIENT-2 | São_José_dos_Pinhais
+
+
+LEX
+Id1
+TEXT: Afonso Pena International Airport, operated by Infraero, is located in Sao Jose dos Pinhais.
+TEMPLATE: AGENT-1 , operated by PATIENT-1 , is located in Sao Jose dos PATIENT-2 .
+CORRECT: AGENT-1 , operated by PATIENT-1 , is located in PATIENT-2 .
+COMMENT: mod
+-
+Id2
+TEXT: Afonso Pena International Airport in Sao Jose dos Pinhais is operated by Infraero.
+TEMPLATE: AGENT-1 in Sao Jose dos PATIENT-2 is operated by PATIENT-1 .
+CORRECT: AGENT-1 in PATIENT-2 is operated by PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: Afonso Pena International Airport is located in Sao Jose dos Pinhais and Infraero is the operating organisation.
+TEMPLATE: AGENT-1 is located in PATIENT-2 dos Pinhais and PATIENT-1 is the operating organisation .
+CORRECT: AGENT-1 is located in PATIENT-2 and PATIENT-1 is the operating organisation .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id38 2 Airport
+
+TRIPLES
+Afonso_Pena_International_Airport | location | São_José_dos_Pinhais
+Afonso_Pena_International_Airport | runwayLength | 1800.0
+
+
+ENTITY MAP
+AGENT-1 | Afonso_Pena_International_Airport
+PATIENT-1 | São_José_dos_Pinhais
+PATIENT-2 | 1800.0
+
+
+LEX
+Id1
+TEXT: Afonso Pena International Airport, with a runway length of 1800.00, is located in Sao Jose dos Pinhais.
+TEMPLATE: AGENT-1 , with a runway length of PATIENT-2 , is located in Sao Jose dos PATIENT-1 .
+CORRECT: AGENT-1 , with a runway length of PATIENT-2 , is located in PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id37 2 Airport
+
+TRIPLES
+Afonso_Pena_International_Airport | elevationAboveTheSeaLevel_(in_feet) | 2988
+Afonso_Pena_International_Airport | location | São_José_dos_Pinhais
+
+
+ENTITY MAP
+AGENT-1 | Afonso_Pena_International_Airport
+PATIENT-1 | 2988
+PATIENT-2 | São_José_dos_Pinhais
+
+
+LEX
+Id1
+TEXT: Afonso Pena International Airpor in São José dos Pinhais, is 2988 feet above sea level.
+TEMPLATE: AGENT-1 in PATIENT-2 , is PATIENT-1 feet above sea level .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Afonso Pena International Airport, located in Sao Jose dos Pinhais, is elevated 2988 feet above sea level.
+TEMPLATE: AGENT-1 , located in PATIENT-2 Pinhais , is elevated PATIENT-1 feet above sea level .
+CORRECT: AGENT-1 , located in PATIENT-2 , is elevated PATIENT-1 feet above sea level .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id36 2 Airport
+
+TRIPLES
+Afonso_Pena_International_Airport | cityServed | Curitiba
+Curitiba | isPartOf | South_Region,_Brazil
+
+
+ENTITY MAP
+BRIDGE-1 | Curitiba
+AGENT-1 | Afonso_Pena_International_Airport
+PATIENT-1 | South_Region,_Brazil
+
+
+LEX
+Id1
+TEXT: Afonsa Pena International Airport serves the city of Curitiba which is part of the South Region, Brazil.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 which is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Afonsa Pena International Airport serves the city of Curitiba, part of the South Region in Brazil.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 , part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Afonso Pena International Airport serves Curitiba, South Region, Brazil.
+TEMPLATE: AGENT-1 serves BRIDGE-1 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id35 2 Airport
+
+TRIPLES
+Afonso_Pena_International_Airport | cityServed | Curitiba
+Curitiba | isPartOf | Paraná_(state)
+
+
+ENTITY MAP
+BRIDGE-1 | Curitiba
+AGENT-1 | Afonso_Pena_International_Airport
+PATIENT-1 | Paraná_(state)
+
+
+LEX
+Id1
+TEXT: Afonso Pena International Airport serves Curitiba, which is part of Parana state.
+TEMPLATE: AGENT-1 serves BRIDGE-1 , which is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Afonso Pena International Airport serves Curitiba which is part of the State of Paraná.
+TEMPLATE: AGENT-1 serves BRIDGE-1 which is part of the State of PATIENT-1 .
+CORRECT: AGENT-1 serves BRIDGE-1 which is part of PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: Afonsa Pena International Airport serves the city of Curitiba which is part of the state of Parana.
+TEMPLATE: AGENT-1 serves the city of BRIDGE-1 which is part of PATIENT-1 of Parana .
+CORRECT: AGENT-1 serves the city of BRIDGE-1 which is part of PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id34 2 Airport
+
+TRIPLES
+Adolfo_Suárez_Madrid–Barajas_Airport | runwayLength | 4349.0
+Adolfo_Suárez_Madrid–Barajas_Airport | location | San_Sebastián_de_los_Reyes
+
+
+ENTITY MAP
+AGENT-1 | Adolfo_Suárez_Madrid–Barajas_Airport
+PATIENT-1 | 4349.0
+PATIENT-2 | San_Sebastián_de_los_Reyes
+
+
+LEX
+Id1
+TEXT: The runway length of Adolfo Suárez Madrid–Barajas Airport which is located at San Sebastian de los Reyes, is 4,349.
+TEMPLATE: The runway length of AGENT-1 -- Barajas Airport which is located at PATIENT-2 , is PATIENT-1 .
+CORRECT: The runway length of AGENT-1 which is located at PATIENT-2 , is PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Adolfo Suarez Madrid-Barajas Airport is located in San Sebstian de los Reyes and its runway is 4349 metres long.
+TEMPLATE: AGENT-1 is located in PATIENT-2 and AGENT-1 runway is PATIENT-1 long .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id33 2 Airport
+
+TRIPLES
+Adolfo_Suárez_Madrid–Barajas_Airport | runwayLength | 4349.0
+Adolfo_Suárez_Madrid–Barajas_Airport | location | "Madrid, Paracuellos de Jarama, San Sebastián de los Reyes and Alcobendas"
+
+
+ENTITY MAP
+AGENT-1 | Adolfo_Suárez_Madrid–Barajas_Airport
+PATIENT-1 | 4349.0
+PATIENT-2 | "Madrid, Paracuellos de Jarama, San Sebastián de los Reyes and Alcobendas"
+
+
+LEX
+Id1
+TEXT: Adolfo Suárez Madrid–Barajas Airport (located at Madrid, Paracuellos de Jarama, San Sebastián de los Reyes and Alcobendas) has a runway that is 4349 metres long.
+TEMPLATE: AGENT-1 -- Barajas Airport (located at PATIENT-2) has a runway that is PATIENT-1 long .
+CORRECT: AGENT-1 (located at PATIENT-2) has a runway that is PATIENT-1 long .
+COMMENT: mod
+-
+Id2
+TEXT: Adolfo Suarez Madrid-Barajas airport is located at Madrid, Paracuellos de Jarama, San Sebastian de los Reyes and Alcobendas. It has a runway length of 4349.0.
+TEMPLATE: AGENT-1 is located at PATIENT-2 . AGENT-1 has a runway length of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Found in Madrid, Paracuellos de Jarama, San Sebastián de los Reyes and Alcobendas, Adolfo Suárez Madrid–Barajas Airport, has a runway that is 4349 metres long.
+TEMPLATE: Found in PATIENT-2 , AGENT-1 has a runway that is PATIENT-1 long .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id32 2 Airport
+
+TRIPLES
+Adolfo_Suárez_Madrid–Barajas_Airport | runwayLength | 3500.0
+Adolfo_Suárez_Madrid–Barajas_Airport | location | Madrid
+
+
+ENTITY MAP
+AGENT-1 | Adolfo_Suárez_Madrid–Barajas_Airport
+PATIENT-1 | 3500.0
+PATIENT-2 | Madrid
+
+
+LEX
+Id1
+TEXT: In Madrid, the Adolfo Suárez Madrid–Barajas Airport has a runway with the length of 3,500 metres.
+TEMPLATE: In PATIENT-2 , PATIENT-2 -- AGENT-1 has PATIENT-1 with the length of 3,500 metres .
+CORRECT: In PATIENT-2 , AGENT-1 has a runway with the length of PATIENT-1 metres .
+COMMENT:
+-
+Id2
+TEXT: The Adolfo Suarez Madrid-Barajas airport is located in Madrid and has a runway length of 3500.
+TEMPLATE: AGENT-1 is located in PATIENT-2 and has a runway length of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The runway length at Adolfo Suarez Madrid-Barajas airport in Madrid is 3500.0.
+TEMPLATE: The runway length at AGENT-1 in PATIENT-2 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id31 2 Airport
+
+TRIPLES
+Adolfo_Suárez_Madrid–Barajas_Airport | location | San_Sebastián_de_los_Reyes
+San_Sebastián_de_los_Reyes | country | Spain
+
+
+ENTITY MAP
+BRIDGE-1 | San_Sebastián_de_los_Reyes
+AGENT-1 | Adolfo_Suárez_Madrid–Barajas_Airport
+PATIENT-1 | Spain
+
+
+LEX
+Id1
+TEXT: Adolfo Suarez Madrid- Barajas airport is located at San Sebastian de los Reyes, in Spain.
+TEMPLATE: AGENT-1 - Barajas airport is located at BRIDGE-1 , in PATIENT-1 .
+CORRECT: AGENT-1 is located at BRIDGE-1 , in PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Adolfo Suárez Madrid–Barajas Airport is found in San Sebastián de los Reyes, Spain.
+TEMPLATE: AGENT-1 -- Barajas Airport is found in BRIDGE-1 , PATIENT-1 .
+CORRECT: AGENT-1 is found in BRIDGE-1 , PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: The Adolfo Suárez Madrid–Barajas Airport is located in San Sebastián de los Reyes, Spain.
+TEMPLATE: AGENT-1 -- Barajas Airport is located in BRIDGE-1 , PATIENT-1 .
+CORRECT: AGENT-1 is located in BRIDGE-1 , PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id30 2 Airport
+
+TRIPLES
+Adolfo_Suárez_Madrid–Barajas_Airport | location | Paracuellos_de_Jarama
+Paracuellos_de_Jarama | isPartOf | Community_of_Madrid
+
+
+ENTITY MAP
+BRIDGE-1 | Paracuellos_de_Jarama
+AGENT-1 | Adolfo_Suárez_Madrid–Barajas_Airport
+PATIENT-1 | Community_of_Madrid
+
+
+LEX
+Id1
+TEXT: Adolfo Suarez Madrid-Barejas Airport is in Paracuellos de Jarama, Madrid.
+TEMPLATE: AGENT-1 is in BRIDGE-1 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Adolfo Suarez Madrid-Barajas airport is located in Paracuellos de Jarama in Madrid.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id29 2 Airport
+
+TRIPLES
+Adolfo_Suárez_Madrid–Barajas_Airport | location | Paracuellos_de_Jarama
+Paracuellos_de_Jarama | country | Spain
+
+
+ENTITY MAP
+BRIDGE-1 | Paracuellos_de_Jarama
+AGENT-1 | Adolfo_Suárez_Madrid–Barajas_Airport
+PATIENT-1 | Spain
+
+
+LEX
+Id1
+TEXT: Adolfo Suárez Madrid–Barajas Airport can be found in Paracuellos de Jarama Spain.
+TEMPLATE: AGENT-1 -- Barajas Airport can be found in BRIDGE-1 PATIENT-1 .
+CORRECT: AGENT-1 can be found in BRIDGE-1 PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: The Adolfo Suárez Madrid–Barajas Airport is in Paracuellos de Jarama, Spain.
+TEMPLATE: AGENT-1 -- Barajas Airport is in BRIDGE-1 , PATIENT-1 .
+CORRECT: AGENT-1 is in BRIDGE-1 , PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id28 2 Airport
+
+TRIPLES
+Adolfo_Suárez_Madrid–Barajas_Airport | location | Paracuellos_de_Jarama
+Adolfo_Suárez_Madrid–Barajas_Airport | runwayLength | 4349.0
+
+
+ENTITY MAP
+AGENT-1 | Adolfo_Suárez_Madrid–Barajas_Airport
+PATIENT-1 | Paracuellos_de_Jarama
+PATIENT-2 | 4349.0
+
+
+LEX
+Id1
+TEXT: Located in Paracuellos de Jarama, theAdolfo Suárez Madrid–Barajas Airport has a runway length of 4349.0.
+TEMPLATE: Located in PATIENT-1 , AGENT-1 -- Barajas Airport has a runway length of PATIENT-2 .
+CORRECT: Located in PATIENT-1 , AGENT-1 has a runway length of PATIENT-2 .
+COMMENT: mod
+-
+Id2
+TEXT: The runway length of Adolfo Suárez Madrid–Barajas Airport, in Paracuellos de Jarama, is 4,349.
+TEMPLATE: The runway length of AGENT-1 -- Barajas Airport , in PATIENT-1 , is PATIENT-2 .
+CORRECT: The runway length of AGENT-1 , in PATIENT-1 , is PATIENT-2 .
+COMMENT: mod
+-
+Id3
+TEXT: The Adolfo Suárez Madrid–Barajas Airport is in Paracuellos de Jarama and has a runway length of 4349.0.
+TEMPLATE: AGENT-1 -- Barajas Airport is in PATIENT-1 and has a runway length of PATIENT-2 .
+CORRECT: AGENT-1 is in PATIENT-1 and has a runway length of PATIENT-2 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id27 2 Airport
+
+TRIPLES
+Adolfo_Suárez_Madrid–Barajas_Airport | location | Paracuellos_de_Jarama
+Adolfo_Suárez_Madrid–Barajas_Airport | runwayLength | 4100.0
+
+
+ENTITY MAP
+AGENT-1 | Adolfo_Suárez_Madrid–Barajas_Airport
+PATIENT-1 | Paracuellos_de_Jarama
+PATIENT-2 | 4100.0
+
+
+LEX
+Id1
+TEXT: The Adolfo Suárez Madrid–Barajas Airport is in Paracuellos de Jarama and has a runway length of 4100.
+TEMPLATE: AGENT-1 -- Barajas Airport is in PATIENT-1 and has a runway length of PATIENT-2 .
+CORRECT: AGENT-1 is in PATIENT-1 and has a runway length of PATIENT-2 .
+COMMENT: mod
+-
+Id2
+TEXT: The runway length of Adolfo Suarez Madrid-Barajas airport, Paracuellos de Jarama, is 4100.0.
+TEMPLATE: The runway length of AGENT-1 , PATIENT-1 , is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The runway length of Adolfo Suárez Madrid–Barajas Airport located at Paracuellos de Jarama, is 4,100.
+TEMPLATE: The runway length of AGENT-1 -- Barajas Airport located at PATIENT-1 , is PATIENT-2 .
+CORRECT: The runway length of AGENT-1 located at PATIENT-1 , is PATIENT-2 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id26 2 Airport
+
+TRIPLES
+Adolfo_Suárez_Madrid–Barajas_Airport | location | Paracuellos_de_Jarama
+Adolfo_Suárez_Madrid–Barajas_Airport | runwayLength | 3500.0
+
+
+ENTITY MAP
+AGENT-1 | Adolfo_Suárez_Madrid–Barajas_Airport
+PATIENT-1 | Paracuellos_de_Jarama
+PATIENT-2 | 3500.0
+
+
+LEX
+Id1
+TEXT: The Adolfo Suárez Madrid–Barajas Airport which has a runway length of 3500 is located in Paracuellos de Jarama.
+TEMPLATE: AGENT-1 -- Barajas Airport which has a runway length of PATIENT-2 is located in PATIENT-1 .
+CORRECT: AGENT-1 which has a runway length of PATIENT-2 is located in PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: The Adolfo Suarez madrid-Barejas airport is located at Paracuellos de Jarama and its runway length is 3500.
+TEMPLATE: AGENT-1 is located at PATIENT-1 and AGENT-1 runway length is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Adolfo Suárez Madrid–Barajas Airport can be found in Paracuellos de Jarama and has a runway length of 3500.0.
+TEMPLATE: AGENT-1 -- Barajas Airport can be found in PATIENT-1 and has a runway length of PATIENT-2 .
+CORRECT: AGENT-1 can be found in PATIENT-1 and has a runway length of PATIENT-2 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id25 2 Airport
+
+TRIPLES
+Adolfo_Suárez_Madrid–Barajas_Airport | location | Paracuellos_de_Jarama
+Adolfo_Suárez_Madrid–Barajas_Airport | elevationAboveTheSeaLevel_(in_metres) | 610.0
+
+
+ENTITY MAP
+AGENT-1 | Adolfo_Suárez_Madrid–Barajas_Airport
+PATIENT-1 | Paracuellos_de_Jarama
+PATIENT-2 | 610.0
+
+
+LEX
+Id1
+TEXT: Adolfo Suarez Madrid-Barejas airport is located at Paracuellos de Jarama at an elevation of 610.0 metres above sea level.
+TEMPLATE: AGENT-1 is located at PATIENT-1 at an elevation of PATIENT-2 metres above sea level .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Adolfo Suarez Madrid-Barejas airport is located at Paracuellos de Jarama and is elevated 610 metres above sea level.
+TEMPLATE: AGENT-1 is located at PATIENT-1 and is elevated 610 metres above PATIENT-2 .
+CORRECT: AGENT-1 is located at PATIENT-1 and is elevated PATIENT-2 metres above sea level .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id24 2 Airport
+
+TRIPLES
+Adolfo_Suárez_Madrid–Barajas_Airport | location | Madrid
+Madrid | country | Spain
+
+
+ENTITY MAP
+BRIDGE-1 | Madrid
+AGENT-1 | Adolfo_Suárez_Madrid–Barajas_Airport
+PATIENT-1 | Spain
+
+
+LEX
+Id1
+TEXT: Adolfo Suarez Madrid-Barajas Aiport is located in Madrid, in Spain.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Adolfo Suarez Madrid-Barajas Aiport is located in Madrid, Spain.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Adolfo Suárez Madrid–Barajas Airport is in Madrid, Spain.
+TEMPLATE: BRIDGE-1 -- AGENT-1 is in BRIDGE-1 , PATIENT-1 .
+CORRECT: AGENT-1 is in BRIDGE-1 , PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id23 2 Airport
+
+TRIPLES
+Adolfo_Suárez_Madrid–Barajas_Airport | location | Alcobendas
+Alcobendas | country | Spain
+
+
+ENTITY MAP
+BRIDGE-1 | Alcobendas
+AGENT-1 | Adolfo_Suárez_Madrid–Barajas_Airport
+PATIENT-1 | Spain
+
+
+LEX
+Id1
+TEXT: Adolfo Suárez Madrid Barajas Airport is found in Alcobendas, Spain.
+TEMPLATE: AGENT-1 is found in BRIDGE-1 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Adolfo Suárez Madrid–Barajas Airport is in Alcobendas, Spain.
+TEMPLATE: AGENT-1 -- Barajas Airport is in BRIDGE-1 , PATIENT-1 .
+CORRECT: AGENT-1 is in BRIDGE-1 , PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id22 2 Airport
+
+TRIPLES
+Adirondack_Regional_Airport | locationIdentifier | "SLK"
+Adirondack_Regional_Airport | elevationAboveTheSeaLevel_(in_metres) | 507
+
+
+ENTITY MAP
+AGENT-1 | Adirondack_Regional_Airport
+PATIENT-1 | "SLK"
+PATIENT-2 | 507
+
+
+LEX
+Id1
+TEXT: Adirondack Regional Airport is 507 metres above sea level and has SLK as its location identifier.
+TEMPLATE: AGENT-1 is PATIENT-2 metres above sea level and has PATIENT-1 as AGENT-1 location identifier .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: SLK is the I.D. of the Adirondack Regional Airport which is 507 metres above sea level.
+TEMPLATE: PATIENT-1 is the I.D. of AGENT-1 which is PATIENT-2 metres above sea level .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id21 2 Airport
+
+TRIPLES
+Adirondack_Regional_Airport | location | Harrietstown,_New_York
+Adirondack_Regional_Airport | elevationAboveTheSeaLevel_(in_metres) | 507
+
+
+ENTITY MAP
+AGENT-1 | Adirondack_Regional_Airport
+PATIENT-1 | Harrietstown,_New_York
+PATIENT-2 | 507
+
+
+LEX
+Id1
+TEXT: Adirondack Regional Airport is 507 metres above sea level and is located in Harrietstown, New York.
+TEMPLATE: AGENT-1 is PATIENT-2 metres above sea level and is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Adirondack Regional airport is located at Harrietstown, New York and is 507 metres above sea level.
+TEMPLATE: AGENT-1 is located at PATIENT-1 and is PATIENT-2 metres above sea level .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Adirondack Regional airport is 507 metres above sea level and is located at Harrietstown, New York.
+TEMPLATE: AGENT-1 is PATIENT-2 metres above sea level and is located at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id20 2 Airport
+
+TRIPLES
+Adirondack_Regional_Airport | cityServed | Lake_Placid,_New_York
+Adirondack_Regional_Airport | cityServed | Saranac_Lake,_New_York
+
+
+ENTITY MAP
+AGENT-1 | Adirondack_Regional_Airport
+PATIENT-1 | Lake_Placid,_New_York
+PATIENT-2 | Saranac_Lake,_New_York
+
+
+LEX
+Id1
+TEXT: Adirondack Regional Airport serves Lake Placid and the city of Saranac Lake, New York.
+TEMPLATE: AGENT-1 serves PATIENT-1 and the city of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Adirondack Regional Airport serves both Lake Placid and Saranac Lake, New York.
+TEMPLATE: AGENT-1 serves both PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Adirondack Regional Airport serves the cities of Lake Placid and Saranac Lake, New York.
+TEMPLATE: AGENT-1 serves the cities of PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id19 2 Airport
+
+TRIPLES
+Adirondack_Regional_Airport | 1st_runway_LengthFeet | 6573
+Adirondack_Regional_Airport | elevationAboveTheSeaLevel_(in_metres) | 507
+
+
+ENTITY MAP
+AGENT-1 | Adirondack_Regional_Airport
+PATIENT-1 | 6573
+PATIENT-2 | 507
+
+
+LEX
+Id1
+TEXT: Adirondack Regional Airport is 507 metres above sea level and the 1st runway is 6573 ft in length.
+TEMPLATE: AGENT-1 is PATIENT-2 metres above sea level and the 1st runway is PATIENT-1 ft in length .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Adirondack Regional Airport is 507 metres above sea level and its 1st runway has a length of 6573 metres.
+TEMPLATE: AGENT-1 is PATIENT-2 metres above sea level and AGENT-1 1st runway has a length of PATIENT-1 metres .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Adirondack Regional Airport is 507 metres above sea level and the length of the first runway is 6,573 feet.
+TEMPLATE: AGENT-1 is PATIENT-2 metres above sea level and the length of the first runway is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+

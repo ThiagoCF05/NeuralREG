@@ -1,0 +1,216 @@
+
+Entry: Id1 2 Astronaut
+
+TRIPLES
+Alan_Shepard | was a crew member of | Apollo_14
+Alan_Shepard | dateOfRetirement | "1974-08-01"
+
+
+ENTITY MAP
+AGENT-1 | Alan_Shepard
+PATIENT-1 | Apollo_14
+PATIENT-2 | "1974-08-01"
+
+
+LEX
+Id1
+TEXT: Apollo 14 crew member Alan Shepard retired on the first of August, 1974.
+TEMPLATE: PATIENT-1 AGENT-1 retired on the first of August , PATIENT-2 .
+CORRECT: PATIENT-1 crew member AGENT-1 retired on PATIENT-2 .
+COMMENT: 
+-
+Id2
+TEXT: Alan Shepard, who served as a crew member of Apollo 14, retired 1974-08-01.
+TEMPLATE: AGENT-1 , who served as a crew member of PATIENT-1 , retired PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id2 2 Astronaut
+
+TRIPLES
+Buzz_Aldrin | birthPlace | Glen_Ridge,_New_Jersey
+Buzz_Aldrin | nationality | United_States
+
+
+ENTITY MAP
+AGENT-1 | Buzz_Aldrin
+PATIENT-1 | Glen_Ridge,_New_Jersey
+PATIENT-2 | United_States
+
+
+LEX
+Id1
+TEXT: Buzz Aldrin is a US national because he was born in Glen Ridge, New Jersey.
+TEMPLATE: AGENT-1 is PATIENT-2 because AGENT-1 was born in PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: American Buzz Aldrin hails from Glen Ridge, New Jersey.
+TEMPLATE: AGENT-1 hails from PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Buzz Aldrin was born in Glen Ridge, New Jersey in the United States.
+TEMPLATE: AGENT-1 was born in PATIENT-1 in PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+Id4
+TEXT: Buzz Aldrin was a US citizen born in Glen Ridge, New Jersey.
+TEMPLATE: AGENT-1 was PATIENT-2 born in PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id3 2 Astronaut
+
+TRIPLES
+Buzz_Aldrin | occupation | Fighter_pilot
+Buzz_Aldrin | status | "Retired"
+
+
+ENTITY MAP
+AGENT-1 | Buzz_Aldrin
+PATIENT-1 | Fighter_pilot
+PATIENT-2 | "Retired"
+
+
+LEX
+Id1
+TEXT: Retiree @ Buzz Aldrin is a former fighter pilot.
+TEMPLATE: PATIENT-2 AGENT-1 is former PATIENT-1 .
+CORRECT: PATIENT-2 @ AGENT-1 is PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: Buzz Aldrin is now retired but he was once a fighter pilot.
+TEMPLATE: AGENT-1 is now PATIENT-2 but PATIENT-1 was once PATIENT-1 .
+CORRECT: AGENT-1 is now PATIENT-2 but AGENT-1 was once PATIENT-1 .
+COMMENT: 
+-
+Id3
+TEXT: Buzz Aldrin has since retired but he once served as a fighter pilot.
+TEMPLATE: AGENT-1 has since PATIENT-2 but PATIENT-1 once served as PATIENT-1 .
+CORRECT: AGENT-1 has since PATIENT-2 but AGENT-1 once served as PATIENT-1 .
+COMMENT: 
+-
+Id4
+TEXT: Buzz Aldrin served as a fighter pilot and is now retired.
+TEMPLATE: AGENT-1 served as PATIENT-1 and is now PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id4 2 Astronaut
+
+TRIPLES
+Buzz_Aldrin | was a crew member of | Apollo_11
+Apollo_11 | operator | NASA
+
+
+ENTITY MAP
+BRIDGE-1 | Apollo_11
+AGENT-1 | Buzz_Aldrin
+PATIENT-1 | NASA
+
+
+LEX
+Id1
+TEXT: The Apollo 11 program was organized by NASA and included Buzz Aldrin as one of its crew members.
+TEMPLATE: BRIDGE-1 was organized by PATIENT-1 and included AGENT-1 as one of its crew members .
+CORRECT: BRIDGE-1 was organized by PATIENT-1 and included AGENT-1 as one of BRIDGE-1 crew members .
+COMMENT: 
+-
+Id2
+TEXT: NASA operated the Apollo 11 program of which Buzz Aldrin was a member.
+TEMPLATE: PATIENT-1 operated the BRIDGE-1 program of which AGENT-1 was AGENT-1 .
+CORRECT: PATIENT-1 operated BRIDGE-1 of which AGENT-1 was a member .
+COMMENT: 
+-
+Id3
+TEXT: Buzz Aldrin was on Apollo 11 which NASA operated.
+TEMPLATE: AGENT-1 was on BRIDGE-1 which PATIENT-1 operated .
+CORRECT: 
+COMMENT: g
+-
+Id4
+TEXT: Buzz Aldrin served as a crew member of Apollo 11 which is operated by NASA.
+TEMPLATE: AGENT-1 served as a crew member of BRIDGE-1 which is operated by PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id5
+TEXT: Buzz Aldrin was a crew member of Apollo 11 - whose operator was NASA.
+TEMPLATE: AGENT-1 was a crew member of BRIDGE-1 - whose operator was PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id6
+TEXT: buzz aldrin was a crew member of apollo 11, which was operated by NASA.
+TEMPLATE: AGENT-1 was a crew member of BRIDGE-1 , which was operated by PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id7
+TEXT: Buzz Aldrin was a crew member of NASA's @ Apollo 11.
+TEMPLATE: AGENT-1 was a crew member of PATIENT-1 BRIDGE-1 .
+CORRECT: AGENT-1 was a crew member of PATIENT-1 @ BRIDGE-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id5 2 Astronaut
+
+TRIPLES
+Buzz_Aldrin | was a crew member of | Apollo_11
+Buzz_Aldrin | occupation | Fighter_pilot
+
+
+ENTITY MAP
+AGENT-1 | Buzz_Aldrin
+PATIENT-1 | Apollo_11
+PATIENT-2 | Fighter_pilot
+
+
+LEX
+Id1
+TEXT: Buzz Aldrin performed as a fighter pilot and was a crew member on Apollo 11.
+TEMPLATE: AGENT-1 performed as PATIENT-2 and was a crew member on PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Buzz Aldrin, who was a fighter pilot, was a crew member on Apollo 11.
+TEMPLATE: AGENT-1 , who was PATIENT-2 , was a crew member on PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Buzz Aldrin was a fighter pilot who was also part of the Apollo 11 crew.
+TEMPLATE: AGENT-1 was PATIENT-2 who was also part of tPATIENT-2 PATIENT-1 crew .
+CORRECT: AGENT-1 was PATIENT-2 who was also part of the PATIENT-1 crew .
+COMMENT: 
+-
+Id4
+TEXT: Buzz Aldrin was both a fighter pilot and member of the Apollo 11 flight crew.
+TEMPLATE: AGENT-1 was both PATIENT-2 and member of tPATIENT-2 PATIENT-1 flight crew .
+CORRECT: AGENT-1 was both PATIENT-2 and member of the PATIENT-1 flight crew .
+COMMENT: 
+-
+Id5
+TEXT: Buzz Aldrin was a fighter pilot and crew member of Apollo 11.
+TEMPLATE: AGENT-1 was PATIENT-2 and crew member of PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+

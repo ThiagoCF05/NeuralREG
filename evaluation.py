@@ -40,7 +40,7 @@ if __name__ == '__main__':
     evaluate(y_real, y_pred)
 
 
-    with open('data/results/dev_1_256_1024_1024_0.2') as f:
+    with open('data/results/dev_1_300_1024_1024_2') as f:
         y_pred = f.read().split('\n')
 
     with open('data/dev/refex.txt') as f:

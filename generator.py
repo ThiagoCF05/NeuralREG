@@ -2,11 +2,12 @@ import dynet as dy
 import utils
 
 class Generator():
-    def __init__(self, configs):
-        self.configs = configs
+    def __init__(self, config):
+        self.config = config
+        self.character = config['CHARACTER']
 
         self.EOS = "eos"
-        self.vocab, self.trainset, self.devset, self.testset = utils.load_data()
+        self.vocab, self.trainset, self.devset, self.testset = utils.load_data(self.character)
 
         self.int2input = list(self.vocab['input'])
         self.input2int = {c:i for i, c in enumerate(self.vocab['input'])}
@@ -14,9 +15,8 @@ class Generator():
         self.int2output = list(self.vocab['output'])
         self.output2int = {c:i for i, c in enumerate(self.vocab['output'])}
 
-        for config in configs:
-            self.init(config)
-            self.train(config)
+        self.init(config)
+        self.train(config)
 
 
     def init(self, config):
@@ -209,7 +209,7 @@ class Generator():
         entity_embedding = self.input_lookup[self.input2int[entity]]
         s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.STATE_SIZE*2), last_output_embeddings, entity_embedding]))
 
-        out = ''
+        out = []
         count_EOS = 0
         for i in range(len(pre_context)*2):
             if count_EOS == 2: break
@@ -230,8 +230,9 @@ class Generator():
                 count_EOS += 1
                 continue
 
-            out = out + self.int2output[next_word] + ' '
-        return out.strip()
+            out.append(self.int2output[next_word])
+
+        return out
 
 
     def get_loss(self, pre_context, pos_context, refex, entity):
@@ -260,10 +261,15 @@ class Generator():
         for i, devinst in enumerate(self.devset['refex']):
             pre_context = self.devset['pre_context'][i]
             pos_context = self.devset['pos_context'][i]
-            refex = ' '.join(self.devset['refex'][i]).replace('eos', '').strip()
             entity = self.devset['entity'][i]
             output = self.generate(pre_context, pos_context, entity)
-            output = output.replace('eos', '').strip()
+
+            delimiter = ' '
+            if self.character:
+                delimiter = ''
+            output = delimiter.join(output).replace('eos', '').strip()
+            refex = delimiter.join(self.devset['refex'][i]).replace('eos', '').strip()
+
             if refex == output:
                 num += 1
             dem += 1
@@ -273,7 +279,6 @@ class Generator():
                 print(10 * '-')
 
             results.append(output)
-
 
             if i % 40:
                 dy.renew_cg()
@@ -292,7 +297,10 @@ class Generator():
             entity = self.testset['entity'][i]
 
             output = self.generate(pre_context, pos_context, entity)
-            output = output.replace('eos', '').strip()
+            delimiter = ' '
+            if self.character:
+                delimiter = ''
+            output = delimiter.join(output).replace('eos', '').strip()
 
             if i % 40:
                 dy.renew_cg()
@@ -359,14 +367,17 @@ class Generator():
 
 if __name__ == '__main__':
     configs = [
-        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2},
-        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
-        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2},
-        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3},
-        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2},
-        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3},
-        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2},
-        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2, 'CHARACTER':True},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3, 'CHARACTER':True},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2, 'CHARACTER':False},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3, 'CHARACTER':False},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2, 'CHARACTER':False},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3, 'CHARACTER':False},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2, 'CHARACTER':False},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3, 'CHARACTER':False},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2, 'CHARACTER':False},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3, 'CHARACTER':False},
     ]
 
-    Generator(configs)
+    for config in configs:
+        Generator(config)
