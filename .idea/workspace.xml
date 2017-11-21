@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0ea0bc8-9834-485a-926b-8fd7a4b15589" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseline/only_names.py" afterPath="$PROJECT_DIR$/baseline/only_names.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseline/reg/reg.cPickle" afterPath="$PROJECT_DIR$/baseline/reg/reg.cPickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseline/reg/reg_main.py" afterPath="$PROJECT_DIR$/baseline/reg/reg_main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev/data.cPickle" afterPath="$PROJECT_DIR$/data/dev/data.cPickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev/entity.txt" afterPath="$PROJECT_DIR$/data/dev/entity.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev/info.txt" afterPath="$PROJECT_DIR$/data/dev/info.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev/pos_context.txt" afterPath="$PROJECT_DIR$/data/dev/pos_context.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev/pre_context.txt" afterPath="$PROJECT_DIR$/data/dev/pre_context.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev/refex.txt" afterPath="$PROJECT_DIR$/data/dev/refex.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev/size.txt" afterPath="$PROJECT_DIR$/data/dev/size.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/input_vocab.txt" afterPath="$PROJECT_DIR$/data/input_vocab.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/output_vocab.txt" afterPath="$PROJECT_DIR$/data/output_vocab.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/data.cPickle" afterPath="$PROJECT_DIR$/data/train/data.cPickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/entity.txt" afterPath="$PROJECT_DIR$/data/train/entity.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/info.txt" afterPath="$PROJECT_DIR$/data/train/info.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/pos_context.txt" afterPath="$PROJECT_DIR$/data/train/pos_context.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/pre_context.txt" afterPath="$PROJECT_DIR$/data/train/pre_context.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/refex.txt" afterPath="$PROJECT_DIR$/data/train/refex.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/size.txt" afterPath="$PROJECT_DIR$/data/train/size.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/evaluation.py" afterPath="$PROJECT_DIR$/evaluation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/preprocessing.py" afterPath="$PROJECT_DIR$/preprocessing.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generator.py" afterPath="$PROJECT_DIR$/generator.py" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -75,13 +54,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="evaluation.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="evaluation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/evaluation.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="558">
               <caret line="55" column="20" lean-forward="false" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
               <folding>
                 <element signature="e#1#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generator.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/generator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="369" column="15" lean-forward="false" selection-start-line="369" selection-start-column="15" selection-end-line="369" selection-end-column="15" />
+              <folding>
+                <element signature="e#3733#3878#0" expanded="false" />
+                <element signature="e#3937#4153#0" expanded="false" />
+                <element signature="e#4662#5191#0" expanded="false" />
+                <element signature="e#5262#6109#0" expanded="false" />
+                <element signature="e#7818#9816#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -130,9 +125,9 @@
         <option value="$PROJECT_DIR$/preprocessing.py" />
         <option value="$PROJECT_DIR$/baseline/reg/reg_main.py" />
         <option value="$PROJECT_DIR$/utils.py" />
-        <option value="$PROJECT_DIR$/generator.py" />
         <option value="$PROJECT_DIR$/baseline/only_names.py" />
         <option value="$PROJECT_DIR$/evaluation.py" />
+        <option value="$PROJECT_DIR$/generator.py" />
       </list>
     </option>
   </component>
@@ -776,7 +771,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1680" y="-143" width="1680" height="1050" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -787,7 +782,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3102041" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3102041" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1075,20 +1070,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="260" column="27" lean-forward="true" selection-start-line="260" selection-start-column="27" selection-end-line="260" selection-end-column="27" />
-          <folding>
-            <element signature="e#3733#3878#0" expanded="false" />
-            <element signature="e#3937#4153#0" expanded="false" />
-            <element signature="e#4662#5191#0" expanded="false" />
-            <element signature="e#5262#6109#0" expanded="false" />
-            <element signature="e#7818#9816#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/baseline/reg/reg_train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1124,6 +1105,20 @@
           <caret line="55" column="20" lean-forward="false" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
           <folding>
             <element signature="e#1#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="369" column="15" lean-forward="false" selection-start-line="369" selection-start-column="15" selection-end-line="369" selection-end-column="15" />
+          <folding>
+            <element signature="e#3733#3878#0" expanded="false" />
+            <element signature="e#3937#4153#0" expanded="false" />
+            <element signature="e#4662#5191#0" expanded="false" />
+            <element signature="e#5262#6109#0" expanded="false" />
+            <element signature="e#7818#9816#0" expanded="false" />
           </folding>
         </state>
       </provider>
