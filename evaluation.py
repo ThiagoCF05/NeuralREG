@@ -2,6 +2,7 @@
 from nltk.metrics.distance import edit_distance
 
 import numpy as np
+import cPickle as p
 
 def evaluate(y_real, y_pred):
     edit_distances = []
@@ -10,6 +11,7 @@ def evaluate(y_real, y_pred):
 
     for real, pred in zip(y_real, y_pred):
         real = real.replace('eos', '').strip()
+        pred = pred.replace('eos', '').strip()
 
         edit_distances.append(edit_distance(real, pred.strip()))
 
@@ -31,19 +33,25 @@ def evaluate(y_real, y_pred):
     print('PRONOUN ACCURACY: ', str(round(pronoun_num/pronoun_dem, 4)))
 
 if __name__ == '__main__':
-    with open('data/results/baseline_names.txt') as f:
-        y_pred = f.read().split('\n')
+    references = p.load(open('data/results/baseline_names.cPickle'))
+    y_pred = map(lambda x: x['y_pred'], references)
 
-    with open('data/dev/refex.txt') as f:
-        y_real = f.read().split('\n')
-    print 'BASELINE: '
+    y_real = map(lambda x: x['y_real'], references)
+    print 'BASELINE: ONLY NAMES'
     evaluate(y_real, y_pred)
+    #
+    #
+    # with open('data/results/dev_1_300_1024_1024_2') as f:
+    #     y_pred = f.read().split('\n')
+    #
+    # with open('data/dev/refex.txt') as f:
+    #     y_real = f.read().split('\n')
+    # print 'MODEL: '
+    # evaluate(y_real, y_pred)
 
+    references = p.load(open('baseline/reg/result.cPickle'))
+    y_pred = map(lambda x: x['realization'], references)
 
-    with open('data/results/dev_1_300_1024_1024_2') as f:
-        y_pred = f.read().split('\n')
-
-    with open('data/dev/refex.txt') as f:
-        y_real = f.read().split('\n')
-    print 'MODEL: '
+    y_real = map(lambda x: x['refex'], references)
+    print 'BASELINE:'
     evaluate(y_real, y_pred)

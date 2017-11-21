@@ -2003,7 +2003,6 @@ build
 a.s._gubbio_1910
 commemorated
 tranmere_rovers_f.c.
-2014–15_azerbaijan_premier_league
 province
 aired
 added
@@ -2638,6 +2637,7 @@ emperor
 maiden_castle_(novel)
 batak
 issn
+inagra
 chief
 compressed_rice_cooked_in_banana_leaf_with_vegetables_or_minced_meat_fillings
 1634:_the_bavarian_crisis
@@ -2753,7 +2753,7 @@ student
 invasion_of_grenada
 el_salvador_national_football_team
 owned
-facility
+2014–15_azerbaijan_premier_league
 arts_and_crafts_movement_and_american_craftsman_bungalows
 inspain
 sc_wiener_neustadt
@@ -2911,6 +2911,7 @@ categorised
 contain
 walt_simonson
 ohio
+facility
 menasha_(town),_wisconsin
 europe
 national

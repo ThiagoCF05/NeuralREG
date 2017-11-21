@@ -252,9 +252,7 @@ class Preprocessing(object):
         :param template: template (delexicalized text)
         :return:
         '''
-        text = 'BEGIN BEGIN BEGIN ' + text
         context = copy.copy(template)
-        template = 'BEGIN BEGIN BEGIN ' + template
 
         data, input_vocab, output_vocab, character_vocab = [], set(), set(), set()
 
@@ -266,14 +264,30 @@ class Preprocessing(object):
             if tag == '':
                 isOver = True
             else:
-                regex = re.escape(' '.join(pre_tag[-3:]).strip()) + ' (.+?) ' + re.escape(' '.join(pos_tag[:3]).strip())
-                f = re.findall(regex, text)
+                # Look for reference from 5-gram to 2-gram
+                i, f = 5, []
+                while i > 1:
+                    begin = ' '.join(i * ['BEGIN'])
+                    text = begin + ' ' + text
+                    template = begin + ' ' + template
+                    pre_tag, tag, pos_tag = self.process_template(template)
+
+                    regex = re.escape(' '.join(pre_tag[-i:]).strip()) + ' (.+?) ' + re.escape(' '.join(pos_tag[:i]).strip())
+                    f = re.findall(regex, text)
+
+                    template = template.replace('BEGIN', '').strip()
+                    text = text.replace('BEGIN', '').strip()
+                    i -= 1
+
+                    if len(f) == 1:
+                        break
 
                 if len(f) > 0:
+                    # DO NOT LOWER CASE HERE!!!!!!
+                    template = template.replace(tag, f[0], 1)
                     refex = f[0].lower()
-                    template = template.replace(tag, refex, 1)
 
-                    # Do not include numbers
+                    # Do not include literals
                     normalized = self.check_entity(entity_map[tag])
                     if normalized != '':
                         aux = context.replace(tag, 'ENTITY', 1)

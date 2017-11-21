@@ -92,7 +92,7 @@ class REG(object):
             # Check for a competitor
             isCompetitor = False
             for prev_reference in prev_references:
-                if prev_reference['entity'].name != entity and prev_reference['realization'] == description:
+                if prev_reference['entity'] != entity and prev_reference['realization'] == description:
                     isCompetitor = True
                     break
 
@@ -165,7 +165,7 @@ class REG(object):
         }
         isCompetitor = False
         for prev_reference in prev_references[::-1]:
-            if prev_reference['entity'].name != entity:
+            if prev_reference['entity'] != entity:
                 distractor_pronouns = data[prev_reference['entity']]
                 if len(distractor_pronouns) == 0:
                     distractor_pronouns = ['it']
@@ -187,9 +187,9 @@ class REG(object):
         if reference['form'] == 'pronoun':
             isCompetitor, pronoun = self._realize_pronoun(prev_references, reference, self.model['pronouns'])
 
-            if reference['no_pronoun']:
-                return self._realize_name(reference, self.model['names'])
-            elif isCompetitor and reference['tag'].lower() != topic.lower():
+            # if reference['no_pronoun']:
+            #     return self._realize_name(reference, self.model['names'])
+            if isCompetitor:
                 return self._realize_description(prev_references, reference, self.model['descriptions'])
             else:
                 return pronoun
@@ -205,9 +205,11 @@ class REG(object):
         references = form_choice.variation_bayes(references)
 
         references = sorted(references, key=lambda x: (x['sentence'], x['pos']))
+
         prev_references = []
         for reference in references:
-            reference['realization'] = self._realize(prev_references, reference).lower()
+            realization = self._realize(prev_references, reference).lower()
+            reference['realization'] = realization
             prev_references.append(reference)
 
         return references

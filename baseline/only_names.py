@@ -1,22 +1,23 @@
 
-import utils
+import cPickle as p
 
 class Baseline():
     def __init__(self):
-        self.vocab, self.trainset, self.devset, self.testset = utils.load_data()
+        self.references = p.load(open('../data/dev/data.cPickle'))
 
     def only_names(self):
-        fname = 'data/results/baseline_names.txt'
-        f = open(fname, 'w')
-        for i, testinst in enumerate(self.devset['refex']):
-            refex = ' '.join(self.devset['refex'][i]).replace('eos', '').strip()
-            entity = self.devset['entity'][i]
+        fname = '../data/results/baseline_names.cPickle'
+        results = []
+
+        for i, testinst in enumerate(self.references):
+            refex = testinst['refex'].replace('eos', '').strip()
+            entity = testinst['entity']
 
             output = ' '.join(entity.split('_'))
 
-            f.write(output)
-            f.write('\n')
-        f.close()
+            results.append({'y_real':refex, 'y_pred':output})
+
+        p.dump(results, open(fname, 'w'))
 
 b = Baseline()
 b.only_names()
