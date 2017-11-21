@@ -80,7 +80,7 @@ class REG(object):
         syntax = reference['syntax']
         text_status = reference['text_status']
         sentence_status = reference['sentence_status']
-        entity = reference['entity'].name
+        entity = reference['entity']
 
         descriptions = data[(syntax, text_status, sentence_status, entity)]
         if len(descriptions) == 0:
@@ -113,7 +113,7 @@ class REG(object):
         syntax = reference['syntax']
         text_status = reference['text_status']
         sentence_status = reference['sentence_status']
-        entity = reference['entity'].name
+        entity = reference['entity']
 
         names = data[(syntax, text_status, sentence_status, entity)]
         if len(names) > 0:

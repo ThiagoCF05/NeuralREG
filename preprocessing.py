@@ -60,11 +60,13 @@ class Preprocessing(object):
                 output_vocab = output_vocab.union(out_vocab)
                 character_vocab = character_vocab.union(c_vocab)
 
-                train_size = int(0.9 * len(data))
+                text_ids = list(set(map(lambda x: x['text_id'], data)))
 
-                random.shuffle(data)
-                train.extend(data[:train_size])
-                dev.extend(data[train_size:])
+                train_size = int(0.9 * len(text_ids))
+
+                random.shuffle(text_ids)
+                train.extend(filter(lambda x: x['text_id'] in text_ids[:train_size], data))
+                dev.extend(filter(lambda x: x['text_id'] in text_ids[train_size:], data))
 
                 info = len(train) * [path + ' ' + fname]
                 train_info.extend(info)
@@ -112,6 +114,9 @@ class Preprocessing(object):
 
 
     def check_entity(self, entity):
+        if entity[0] in ['\'', '\"'] and entity[-1] in ['\'', '\"']:
+            return ''
+
         f = Entity.objects(name=entity.strip(), type='wiki')
         if f.count() > 0:
             return '_'.join(entity.replace('\"', '').replace('\'', '').lower().split())
@@ -192,8 +197,10 @@ class Preprocessing(object):
         pre_context = ' '.join(['EOS'] + pre_context)
         pos_context = ' '.join(pos_context + ['EOS'])
         for tag, entity in entity_map.iteritems():
-            pre_context = pre_context.replace(tag, entity_map[tag])
-            pos_context = pos_context.replace(tag, entity_map[tag])
+            # pre_context = pre_context.replace(tag, entity_map[tag])
+            # pos_context = pos_context.replace(tag, entity_map[tag])
+            pre_context = pre_context.replace(tag, '_'.join(entity_map[tag].replace('\"', '').replace('\'', '').lower().split()))
+            pos_context = pos_context.replace(tag, '_'.join(entity_map[tag].replace('\"', '').replace('\'', '').lower().split()))
 
         return pre_context.lower(), pos_context.lower()
 
@@ -295,10 +302,10 @@ class Preprocessing(object):
 
                         context = context.replace(tag, normalized, 1)
                     else:
-                        context = context.replace(tag, entity_map[tag], 1)
+                        context = context.replace(tag, '_'.join(entity_map[tag].replace('\"', '').replace('\'', '').lower().split()), 1)
                 else:
                     template = template.replace(tag, ' ', 1)
-                    context = context.replace(tag, entity_map[tag], 1)
+                    context = context.replace(tag, '_'.join(entity_map[tag].replace('\"', '').replace('\'', '').lower().split()), 1)
 
         self.text_id += 1
         data = self.classify(data)

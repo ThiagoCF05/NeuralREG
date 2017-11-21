@@ -2,82 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0ea0bc8-9834-485a-926b-8fd7a4b15589" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/baseline/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/baseline/reg/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/baseline/reg/form_choice.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/baseline/reg/pronoun_data/form_distributions.cPickle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/baseline/reg/reg_main.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/baseline/reg/reg_train.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/annotation/dev.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/annotation/diego/5triples.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/annotation/diego/5triples/Diego/quarta/Astronaut" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/annotation/diego/5triples/Diego/quarta/University" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/annotation/diego/5triples/Diego/segunda/Monument" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/annotation/diego/5triples/Diego/segunda/SportsTeam" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/annotation/diego/5triples/Diego/terça/ComicsCharacter" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/annotation/diego/5triples/Diego/terça/WrittenWork" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/annotation/diego/7triples.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/annotation/diego/7triples/Astronaut" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/annotation/diego/7triples/Monument" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/annotation/diego/7triples/University" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/attention.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/results/baseline_names.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/results/dev_1_256_1024_1024_0.2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/results/test_1_256_1024_1024_0.2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/test/entity.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/test/pos_context.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/test/pre_context.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/test/refex.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/test/size.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mlp.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/baseline.py" afterPath="$PROJECT_DIR$/baseline/only_names.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/1triples/Airport" afterPath="$PROJECT_DIR$/annotation/dev/1triples/Airport" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/1triples/Astronaut" afterPath="$PROJECT_DIR$/annotation/dev/1triples/Astronaut" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/1triples/Building" afterPath="$PROJECT_DIR$/annotation/dev/1triples/Building" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/1triples/City" afterPath="$PROJECT_DIR$/annotation/dev/1triples/City" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/1triples/ComicsCharacter" afterPath="$PROJECT_DIR$/annotation/dev/1triples/ComicsCharacter" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/1triples/Food" afterPath="$PROJECT_DIR$/annotation/dev/1triples/Food" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/1triples/Monument" afterPath="$PROJECT_DIR$/annotation/dev/1triples/Monument" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/1triples/SportsTeam" afterPath="$PROJECT_DIR$/annotation/dev/1triples/SportsTeam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/1triples/University" afterPath="$PROJECT_DIR$/annotation/dev/1triples/University" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/1triples/WrittenWork" afterPath="$PROJECT_DIR$/annotation/dev/1triples/WrittenWork" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/3triples/Airport" afterPath="$PROJECT_DIR$/annotation/dev/3triples/Airport" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/3triples/Astronaut" afterPath="$PROJECT_DIR$/annotation/dev/3triples/Astronaut" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/3triples/Building" afterPath="$PROJECT_DIR$/annotation/dev/3triples/Building" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/3triples/ComicsCharacter" afterPath="$PROJECT_DIR$/annotation/dev/3triples/ComicsCharacter" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/3triples/Food" afterPath="$PROJECT_DIR$/annotation/dev/3triples/Food" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/3triples/Monument" afterPath="$PROJECT_DIR$/annotation/dev/3triples/Monument" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/3triples/SportsTeam" afterPath="$PROJECT_DIR$/annotation/dev/3triples/SportsTeam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/3triples/University" afterPath="$PROJECT_DIR$/annotation/dev/3triples/University" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/3triples/WrittenWork" afterPath="$PROJECT_DIR$/annotation/dev/3triples/WrittenWork" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/5triples/Airport" afterPath="$PROJECT_DIR$/annotation/dev/5triples/Airport" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/5triples/Astronaut" afterPath="$PROJECT_DIR$/annotation/dev/5triples/Astronaut" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/5triples/Building" afterPath="$PROJECT_DIR$/annotation/dev/5triples/Building" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/5triples/ComicsCharacter" afterPath="$PROJECT_DIR$/annotation/dev/5triples/ComicsCharacter" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/5triples/Food" afterPath="$PROJECT_DIR$/annotation/dev/5triples/Food" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/5triples/Monument" afterPath="$PROJECT_DIR$/annotation/dev/5triples/Monument" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/5triples/SportsTeam" afterPath="$PROJECT_DIR$/annotation/dev/5triples/SportsTeam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/5triples/University" afterPath="$PROJECT_DIR$/annotation/dev/5triples/University" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/5triples/WrittenWork" afterPath="$PROJECT_DIR$/annotation/dev/5triples/WrittenWork" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/7triples/Astronaut" afterPath="$PROJECT_DIR$/annotation/dev/7triples/Astronaut" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/7triples/Monument" afterPath="$PROJECT_DIR$/annotation/dev/7triples/Monument" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/dev/7triples/University" afterPath="$PROJECT_DIR$/annotation/dev/7triples/University" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseline/reg/form_choice.py" afterPath="$PROJECT_DIR$/baseline/reg/form_choice.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseline/reg/reg_main.py" afterPath="$PROJECT_DIR$/baseline/reg/reg_main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseline/reg/reg_train.py" afterPath="$PROJECT_DIR$/baseline/reg/reg_train.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev/data.cPickle" afterPath="$PROJECT_DIR$/data/dev/data.cPickle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev/entity.txt" afterPath="$PROJECT_DIR$/data/dev/entity.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev/info.txt" afterPath="$PROJECT_DIR$/data/dev/info.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev/pos_context.txt" afterPath="$PROJECT_DIR$/data/dev/pos_context.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev/pre_context.txt" afterPath="$PROJECT_DIR$/data/dev/pre_context.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev/refex.txt" afterPath="$PROJECT_DIR$/data/dev/refex.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev/size.txt" afterPath="$PROJECT_DIR$/data/dev/size.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/input_vocab.txt" afterPath="$PROJECT_DIR$/data/input_vocab.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/output_vocab.txt" afterPath="$PROJECT_DIR$/data/output_vocab.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/data.cPickle" afterPath="$PROJECT_DIR$/data/train/data.cPickle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/entity.txt" afterPath="$PROJECT_DIR$/data/train/entity.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/info.txt" afterPath="$PROJECT_DIR$/data/train/info.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/pos_context.txt" afterPath="$PROJECT_DIR$/data/train/pos_context.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/pre_context.txt" afterPath="$PROJECT_DIR$/data/train/pre_context.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/refex.txt" afterPath="$PROJECT_DIR$/data/train/refex.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/size.txt" afterPath="$PROJECT_DIR$/data/train/size.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/evaluation.py" afterPath="$PROJECT_DIR$/evaluation.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generator.py" afterPath="$PROJECT_DIR$/generator.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/preprocessing.py" afterPath="$PROJECT_DIR$/preprocessing.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils.py" afterPath="$PROJECT_DIR$/utils.py" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -97,8 +43,8 @@
       <file leaf-file-name="reg_train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/baseline/reg/reg_train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="50" column="48" lean-forward="false" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="48" />
+            <state relative-caret-position="555">
+              <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
               <folding>
                 <element signature="e#183#202#0" expanded="true" />
               </folding>
@@ -109,11 +55,24 @@
       <file leaf-file-name="reg_main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/baseline/reg/reg_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="227" column="26" lean-forward="false" selection-start-line="227" selection-start-column="26" selection-end-line="227" selection-end-column="26" />
+            <state relative-caret-position="1425">
+              <caret line="207" column="0" lean-forward="false" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
               <folding>
                 <element signature="e#693#1748#0" expanded="false" />
-                <element signature="e#3738#5544#0" expanded="false" />
+                <element signature="e#3095#3652#0" expanded="false" />
+                <element signature="e#3728#5534#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form_choice.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/baseline/reg/form_choice.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+              <folding>
+                <element signature="e#144#163#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,18 +81,37 @@
       <file leaf-file-name="preprocessing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="291" column="0" lean-forward="false" selection-start-line="291" selection-start-column="0" selection-end-line="291" selection-end-column="0" />
+            <state relative-caret-position="232">
+              <caret line="281" column="43" lean-forward="false" selection-start-line="281" selection-start-column="43" selection-end-line="281" selection-end-column="43" />
               <folding>
                 <element signature="e#520#531#0" expanded="true" />
-                <element signature="e#2805#3960#0" expanded="false" />
-                <element signature="e#4007#4209#0" expanded="false" />
-                <element signature="e#4269#5390#0" expanded="false" />
-                <element signature="e#5443#6175#0" expanded="false" />
-                <element signature="e#7095#8686#0" expanded="false" />
-                <element signature="e#11765#14119#0" expanded="false" />
-                <element signature="e#14176#14852#0" expanded="false" />
+                <element signature="e#2974#4129#0" expanded="false" />
+                <element signature="e#4530#5651#0" expanded="false" />
+                <element signature="e#5704#6436#0" expanded="false" />
+                <element signature="e#7620#9211#0" expanded="false" />
+                <element signature="e#12414#14768#0" expanded="false" />
+                <element signature="e#14825#15501#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="init.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/init.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="35" column="15" lean-forward="false" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="operations.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/operations.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -141,36 +119,16 @@
       <file leaf-file-name="generator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2722">
-              <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+            <state relative-caret-position="259">
+              <caret line="364" column="29" lean-forward="false" selection-start-line="364" selection-start-column="29" selection-end-line="364" selection-end-column="29" />
               <folding>
-                <element signature="e#627#3682#0" expanded="false" />
                 <element signature="e#3733#3878#0" expanded="false" />
                 <element signature="e#3937#4153#0" expanded="false" />
                 <element signature="e#4233#4586#0" expanded="false" />
                 <element signature="e#4662#5191#0" expanded="false" />
                 <element signature="e#5262#6109#0" expanded="false" />
+                <element signature="e#7818#9816#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="character_vocab.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/character_vocab.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-329">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1485">
-              <caret line="99" column="43" lean-forward="false" selection-start-line="99" selection-start-column="43" selection-end-line="99" selection-end-column="43" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -211,15 +169,15 @@
         <option value="$PROJECT_DIR$/evaluation.py" />
         <option value="$PROJECT_DIR$/db/reference_delex.py" />
         <option value="$PROJECT_DIR$/db/manual.py" />
-        <option value="$PROJECT_DIR$/baseline/reg/reg_train.py" />
         <option value="$PROJECT_DIR$/baseline/reg/pronoun.py" />
         <option value="$PROJECT_DIR$/baseline/reg/proper_name.py" />
-        <option value="$PROJECT_DIR$/baseline/reg/form_choice.py" />
         <option value="$PROJECT_DIR$/baseline/reg/description.py" />
-        <option value="$PROJECT_DIR$/preprocessing.py" />
-        <option value="$PROJECT_DIR$/generator.py" />
-        <option value="$PROJECT_DIR$/baseline/reg/reg_main.py" />
         <option value="$PROJECT_DIR$/utils.py" />
+        <option value="$PROJECT_DIR$/baseline/reg/reg_train.py" />
+        <option value="$PROJECT_DIR$/baseline/reg/form_choice.py" />
+        <option value="$PROJECT_DIR$/baseline/reg/reg_main.py" />
+        <option value="$PROJECT_DIR$/generator.py" />
+        <option value="$PROJECT_DIR$/preprocessing.py" />
       </list>
     </option>
   </component>
@@ -244,9 +202,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -269,12 +226,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeuralREG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeuralREG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="baseline" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -304,7 +276,7 @@
       <recent name="$PROJECT_DIR$/baseline" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.utils">
+  <component name="RunManager" selected="Python.preprocessing">
     <configuration default="false" name="preprocessing" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -322,7 +294,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="evaluation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -334,24 +306,41 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="NeuralREG" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/evaluation.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="baseline" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="reg_train" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/baseline/reg" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="NeuralREG" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/baseline/only_names.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/baseline/reg/reg_train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="reg_main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/baseline/reg" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NeuralREG" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/baseline/reg/reg_main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -369,23 +358,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="NeuralREG" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db/init.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="NeuralREG" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -797,18 +769,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.preprocessing" />
-      <item index="1" class="java.lang.String" itemvalue="Python.evaluation" />
-      <item index="2" class="java.lang.String" itemvalue="Python.baseline" />
-      <item index="3" class="java.lang.String" itemvalue="Python.init" />
-      <item index="4" class="java.lang.String" itemvalue="Python.utils" />
+      <item index="1" class="java.lang.String" itemvalue="Python.utils" />
+      <item index="2" class="java.lang.String" itemvalue="Python.reg_train" />
+      <item index="3" class="java.lang.String" itemvalue="Python.reg_main" />
+      <item index="4" class="java.lang.String" itemvalue="Python.init" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.utils" />
-        <item index="1" class="java.lang.String" itemvalue="Python.preprocessing" />
-        <item index="2" class="java.lang.String" itemvalue="Python.evaluation" />
-        <item index="3" class="java.lang.String" itemvalue="Python.baseline" />
-        <item index="4" class="java.lang.String" itemvalue="Python.init" />
+        <item index="0" class="java.lang.String" itemvalue="Python.preprocessing" />
+        <item index="1" class="java.lang.String" itemvalue="Python.init" />
+        <item index="2" class="java.lang.String" itemvalue="Python.reg_main" />
+        <item index="3" class="java.lang.String" itemvalue="Python.utils" />
+        <item index="4" class="java.lang.String" itemvalue="Python.reg_train" />
       </list>
     </recent_temporary>
   </component>
@@ -837,41 +809,50 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-1680" y="-143" width="1680" height="1050" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3102041" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3122449" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10561661" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3265306" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12515263" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3265306" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -896,21 +877,86 @@
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/preprocessing.py</url>
-          <line>274</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/utils.py</url>
           <line>4</line>
           <option name="timeStamp" value="47" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/baseline/reg/reg_train.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/baseline/reg/reg_train.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/baseline/reg/reg_train.py</url>
+          <line>72</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/baseline/reg/reg_train.py</url>
+          <line>92</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/baseline/reg/reg_train.py</url>
+          <line>48</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils.py</url>
+          <line>99</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/baseline/reg/reg_main.py</url>
+          <line>228</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/baseline/reg/reg_main.py</url>
+          <line>204</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/db/init.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/preprocessing.py</url>
+          <line>117</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/preprocessing.py</url>
+          <line>123</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/preprocessing.py</url>
+          <line>198</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/preprocessing.py</url>
+          <line>204</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="48" />
+      <option name="time" value="80" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="pre_context.replace(tag, entity_map[tag].decode('utf-8'))" language="Python" />
+        <watch expression="entity[0] in ['\'', '\&quot;'] and entity[1] in ['\'', '\&quot;']" language="Python" />
       </configuration>
     </watches-manager>
   </component>
@@ -921,36 +967,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2295">
-          <caret line="187" column="33" lean-forward="false" selection-start-line="187" selection-start-column="28" selection-end-line="187" selection-end-column="33" />
-          <folding>
-            <element signature="e#520#531#0" expanded="true" />
-            <element signature="e#2805#3960#0" expanded="false" />
-            <element signature="e#4007#4209#0" expanded="false" />
-            <element signature="e#4269#5390#0" expanded="false" />
-            <element signature="e#5443#6175#0" expanded="false" />
-            <element signature="e#7095#8686#0" expanded="false" />
-            <element signature="e#11765#14119#0" expanded="false" />
-            <element signature="e#14176#14852#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlp.py" />
-    <entry file="file://$PROJECT_DIR$/mlp.py" />
-    <entry file="file://$PROJECT_DIR$/preprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
           <caret line="65" column="30" lean-forward="false" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
           <folding>
             <element signature="e#520#531#0" expanded="true" />
-            <element signature="e#2805#3960#0" expanded="false" />
-            <element signature="e#4007#4209#0" expanded="false" />
-            <element signature="e#4269#5390#0" expanded="false" />
-            <element signature="e#5443#6175#0" expanded="false" />
-            <element signature="e#7095#8686#0" expanded="false" />
-            <element signature="e#11765#14119#0" expanded="false" />
-            <element signature="e#14176#14852#0" expanded="false" />
+            <element signature="e#2974#4129#0" expanded="false" />
+            <element signature="e#4530#5651#0" expanded="false" />
+            <element signature="e#5704#6436#0" expanded="false" />
+            <element signature="e#7620#9211#0" expanded="false" />
+            <element signature="e#12414#14768#0" expanded="false" />
+            <element signature="e#14825#15501#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -963,13 +989,12 @@
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="e#520#531#0" expanded="true" />
-            <element signature="e#2805#3960#0" expanded="false" />
-            <element signature="e#4007#4209#0" expanded="false" />
-            <element signature="e#4269#5390#0" expanded="false" />
-            <element signature="e#5443#6175#0" expanded="false" />
-            <element signature="e#7095#8686#0" expanded="false" />
-            <element signature="e#11765#14119#0" expanded="false" />
-            <element signature="e#14176#14852#0" expanded="false" />
+            <element signature="e#2974#4129#0" expanded="false" />
+            <element signature="e#4530#5651#0" expanded="false" />
+            <element signature="e#5704#6436#0" expanded="false" />
+            <element signature="e#7620#9211#0" expanded="false" />
+            <element signature="e#12414#14768#0" expanded="false" />
+            <element signature="e#14825#15501#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -988,21 +1013,9 @@
     <entry file="file://$PROJECT_DIR$/data/train/pre_context.txt" />
     <entry file="file://$PROJECT_DIR$/data/dev/entity.txt" />
     <entry file="file://$PROJECT_DIR$/data/test/pos_context.txt" />
-    <entry file="file://$PROJECT_DIR$/data/results/dev_1_256_1024_1024_0.2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/results/dev_1_256_1024_1024_0.2" />
     <entry file="file://$PROJECT_DIR$/annotation/data/1triples/Airport" />
-    <entry file="file://$PROJECT_DIR$/data/results/baseline_names.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/results/baseline_names.txt" />
     <entry file="file://$PROJECT_DIR$/annotation/annotate.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -1020,14 +1033,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/dev/info.txt" />
     <entry file="file://$PROJECT_DIR$/data/dev/pos_context.txt" />
-    <entry file="file://$PROJECT_DIR$/data/dev/refex.txt" />
-    <entry file="file://$PROJECT_DIR$/db/init.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1875">
-          <caret line="125" column="29" lean-forward="false" selection-start-line="125" selection-start-column="29" selection-end-line="125" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/annotation/train/1triples/Airport">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16680">
@@ -1045,13 +1050,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mlp.py" />
     <entry file="file://$PROJECT_DIR$/data/train/entity.txt" />
-    <entry file="file://$PROJECT_DIR$/data/results/dev_1_300_1024_1024_2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="618" column="10" lean-forward="false" selection-start-line="609" selection-start-column="1" selection-end-line="618" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/results/dev_1_300_1024_1024_2" />
     <entry file="file://$PROJECT_DIR$/evaluation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1069,151 +1068,146 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/attention.py" />
-    <entry file="file://$PROJECT_DIR$/baseline/reg/name_data/model.cPickle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/baseline/reg/name_data/model.cPickle" />
     <entry file="file://$PROJECT_DIR$/db/manual.py" />
     <entry file="file://$PROJECT_DIR$/db/reference_delex.py" />
-    <entry file="file://$PROJECT_DIR$/data/train1/info.txt">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/dev1/info.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/baseline/reg/description.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="41" column="23" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="41" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/baseline/reg/pronoun.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="45" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/baseline/reg/proper_name.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="15" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="28" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/train1/info.txt" />
+    <entry file="file://$PROJECT_DIR$/data/dev1/info.txt" />
+    <entry file="file://$PROJECT_DIR$/baseline/reg/description.py" />
+    <entry file="file://$PROJECT_DIR$/baseline/reg/pronoun.py" />
+    <entry file="file://$PROJECT_DIR$/baseline/reg/proper_name.py" />
     <entry file="file://$PROJECT_DIR$/data/output_vocab.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-23654">
           <caret line="1641" column="7" lean-forward="false" selection-start-line="1641" selection-start-column="0" selection-end-line="1641" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/character_vocab.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/dev/refex.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75868">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="922">
+          <caret line="85" column="28" lean-forward="false" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/dev/pre_context.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2057">
-          <caret line="4915" column="27" lean-forward="true" selection-start-line="4915" selection-start-column="0" selection-end-line="4916" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/input_vocab.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26626">
-          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/baseline/reg/form_choice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding>
-            <element signature="e#144#163#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/preprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="291" column="0" lean-forward="false" selection-start-line="291" selection-start-column="0" selection-end-line="291" selection-end-column="0" />
-          <folding>
-            <element signature="e#520#531#0" expanded="true" />
-            <element signature="e#2805#3960#0" expanded="false" />
-            <element signature="e#4007#4209#0" expanded="false" />
-            <element signature="e#4269#5390#0" expanded="false" />
-            <element signature="e#5443#6175#0" expanded="false" />
-            <element signature="e#7095#8686#0" expanded="false" />
-            <element signature="e#11765#14119#0" expanded="false" />
-            <element signature="e#14176#14852#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/baseline/reg/reg_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="50" column="48" lean-forward="false" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="48" />
+        <state relative-caret-position="555">
+          <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
           <folding>
             <element signature="e#183#202#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/baseline/reg/reg_main.py">
+    <entry file="file://$PROJECT_DIR$/baseline/reg/form_choice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="227" column="26" lean-forward="false" selection-start-line="227" selection-start-column="26" selection-end-line="227" selection-end-column="26" />
+        <state relative-caret-position="165">
+          <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
           <folding>
-            <element signature="e#693#1748#0" expanded="false" />
-            <element signature="e#3738#5544#0" expanded="false" />
+            <element signature="e#144#163#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/character_vocab.txt">
+    <entry file="file://$PROJECT_DIR$/baseline/reg/reg_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-329">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="1425">
+          <caret line="207" column="0" lean-forward="false" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+          <folding>
+            <element signature="e#693#1748#0" expanded="false" />
+            <element signature="e#3095#3652#0" expanded="false" />
+            <element signature="e#3728#5534#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/cyber/dev/2triples/2triples_ComicsCharacter_dev_challenge.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/init.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="35" column="15" lean-forward="false" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
+    <entry file="file://$PROJECT_DIR$/db/operations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1485">
-          <caret line="99" column="43" lean-forward="false" selection-start-line="99" selection-start-column="43" selection-end-line="99" selection-end-column="43" />
+        <state relative-caret-position="465">
+          <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/cyber/dev/2triples/2triples_Airport_dev_challenge.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/input_vocab.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="66" column="28" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/dev/pre_context.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73830">
+          <caret line="4922" column="91" lean-forward="false" selection-start-line="4922" selection-start-column="0" selection-end-line="4922" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="281" column="43" lean-forward="false" selection-start-line="281" selection-start-column="43" selection-end-line="281" selection-end-column="43" />
+          <folding>
+            <element signature="e#520#531#0" expanded="true" />
+            <element signature="e#2974#4129#0" expanded="false" />
+            <element signature="e#4530#5651#0" expanded="false" />
+            <element signature="e#5704#6436#0" expanded="false" />
+            <element signature="e#7620#9211#0" expanded="false" />
+            <element signature="e#12414#14768#0" expanded="false" />
+            <element signature="e#14825#15501#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2722">
-          <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+        <state relative-caret-position="259">
+          <caret line="364" column="29" lean-forward="false" selection-start-line="364" selection-start-column="29" selection-end-line="364" selection-end-column="29" />
           <folding>
-            <element signature="e#627#3682#0" expanded="false" />
             <element signature="e#3733#3878#0" expanded="false" />
             <element signature="e#3937#4153#0" expanded="false" />
             <element signature="e#4233#4586#0" expanded="false" />
             <element signature="e#4662#5191#0" expanded="false" />
             <element signature="e#5262#6109#0" expanded="false" />
+            <element signature="e#7818#9816#0" expanded="false" />
           </folding>
         </state>
       </provider>

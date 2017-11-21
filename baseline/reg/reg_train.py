@@ -23,7 +23,7 @@ lemma = {
 pronouns, names, descriptions, demonstratives = {}, {}, {}, {}
 
 # References extracted on preprocessing
-references = p.load(open('data/train/data.cPickle'))
+references = p.load(open('../../data/train/data.cPickle'))
 
 # Retrieve all wiki entities and normalize their names
 entities = Entity.objects(type='wiki')

@@ -11,7 +11,7 @@ import cPickle as p
 import operator
 from random import shuffle
 
-DISTRIBUTIONS = p.load(open('reg/pronoun_data/form_distributions.cPickle'))
+DISTRIBUTIONS = p.load(open('pronoun_data/form_distributions.cPickle'))
 
 # text-new -> name / text-old -> pronoun
 def rule_form_choice(text_status):
@@ -34,7 +34,7 @@ def variation_bayes(references):
     :param references:
     :return:
     '''
-    distributions = p.load(open('reg/pronoun_data/form_distributions.cPickle'))
+    distributions = p.load(open('pronoun_data/form_distributions.cPickle'))
     def group():
         g = {}
         for reference in references:
