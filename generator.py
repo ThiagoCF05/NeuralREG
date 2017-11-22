@@ -316,8 +316,8 @@ class Generator():
         trainer = dy.AdadeltaTrainer(self.model)
 
         best_acc, repeat = 0.0, 0
-        batch = 50
-        for epoch in range(40):
+        batch = 40
+        for epoch in range(50):
             dy.renew_cg()
             losses = []
             closs = 0.0
@@ -368,6 +368,8 @@ class Generator():
 
 if __name__ == '__main__':
     configs = [
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2, 'CHARACTER':False},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3, 'CHARACTER':False},
         {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2, 'CHARACTER':False},
         {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3, 'CHARACTER':False},
         {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2, 'CHARACTER':False},
@@ -376,11 +378,12 @@ if __name__ == '__main__':
         {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':2048, 'ATTENTION_SIZE':2048, 'DROPOUT':0.3, 'CHARACTER':False},
         {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':2048, 'ATTENTION_SIZE':2048, 'DROPOUT':0.2, 'CHARACTER':False},
         {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':2048, 'ATTENTION_SIZE':2048, 'DROPOUT':0.3, 'CHARACTER':False},
-        # {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2, 'CHARACTER':False},
-        # {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3, 'CHARACTER':False},
         # {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2, 'CHARACTER':False},
         # {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3, 'CHARACTER':False}
     ]
 
     for config in configs:
-        Generator(config)
+        try:
+            Generator(config)
+        except:
+            print("Error:  " + str(config))
