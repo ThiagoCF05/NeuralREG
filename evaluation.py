@@ -39,19 +39,26 @@ if __name__ == '__main__':
     y_real = map(lambda x: x['y_real'], references)
     print 'BASELINE: ONLY NAMES'
     evaluate(y_real, y_pred)
-    #
-    #
-    # with open('data/results/dev_1_300_1024_1024_2') as f:
-    #     y_pred = f.read().split('\n')
-    #
-    # with open('data/dev/refex.txt') as f:
-    #     y_real = f.read().split('\n')
-    # print 'MODEL: '
-    # evaluate(y_real, y_pred)
 
     references = p.load(open('baseline/reg/result.cPickle'))
     y_pred = map(lambda x: x['realization'], references)
 
     y_real = map(lambda x: x['refex'], references)
     print 'BASELINE:'
+    evaluate(y_real, y_pred)
+
+    with open('data/results/dev_best_1_300_1024_1024_2_False') as f:
+        y_pred = f.read().split('\n')
+
+    with open('data/dev/refex.txt') as f:
+        y_real = f.read().split('\n')
+    print 'MODEL: dev_best_1_300_1024_1024_2_False'
+    evaluate(y_real, y_pred)
+
+    with open('data/results/dev_best_1_300_1024_1024_3_False') as f:
+        y_pred = f.read().split('\n')
+
+    with open('data/dev/refex.txt') as f:
+        y_real = f.read().split('\n')
+    print 'MODEL: dev_best_1_300_1024_1024_3_False'
     evaluate(y_real, y_pred)
