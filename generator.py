@@ -211,7 +211,7 @@ class Generator():
 
         out = []
         count_EOS = 0
-        for i in range(len(pre_context)*2):
+        for i in range(30):
             if count_EOS == 2: break
             # w1dt can be computed and cached once for the entire decoding phase
             w1dt_pre = w1dt_pre or w1_pre * h_pre
