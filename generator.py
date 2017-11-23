@@ -279,8 +279,8 @@ class Generator():
 
                     last_output_embeddings = self.output_lookup[self.output2int[candidate['sentence'][-1]]]
                     vector = dy.concatenate([self.hier_attend(attention_pre, attention_pos, candidate['s']), last_output_embeddings, entity_embedding])
-                    s = s.add_input(vector)
-                    out_vector = w * s.output() + b
+                    candidate['s'] = candidate['s'].add_input(vector)
+                    out_vector = w * candidate['s'].output() + b
                     probs = dy.softmax(out_vector).vec_value()
                     next_words = [{'prob':e, 'index':probs.index(e)} for e in sorted(probs, reverse=True)[:beam]]
 
@@ -291,7 +291,7 @@ class Generator():
                             'sentence': candidate['sentence'] + [word],
                             'prob': candidate['prob'] + np.log(next_word['prob']),
                             'count_EOS': candidate['count_EOS'],
-                            's':s
+                            's':candidate['s']
                         }
 
                         if word == self.EOS:
