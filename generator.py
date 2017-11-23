@@ -296,7 +296,6 @@ class Generator():
 
                         if word == self.EOS:
                             new_candidate['count_EOS'] += 1
-                            continue
 
                         new_candidates.append(new_candidate)
             candidates = sorted(new_candidates, key=lambda x: x['prob'], reverse=True)[:beam]
