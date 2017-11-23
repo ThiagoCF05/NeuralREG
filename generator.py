@@ -262,14 +262,13 @@ class Generator():
         outputs = []
 
         i = 0
-        while i < self.config['GENERATION'] and beam > 0:
+        while i < self.config['GENERATION'] and len(outputs) < beam:
             new_candidates = []
             for candidate in candidates:
                 if candidate['count_EOS'] == 2:
-                    beam -= 1
                     outputs.append(candidate)
 
-                    if beam == 0: break
+                    if len(outputs) == beam: break
                 else:
                     # w1dt can be computed and cached once for the entire decoding phase
                     w1dt_pre = w1dt_pre or w1_pre * h_pre
@@ -283,7 +282,7 @@ class Generator():
                     s = s.add_input(vector)
                     out_vector = w * s.output() + b
                     probs = dy.softmax(out_vector).vec_value()
-                    next_words = [{'prob':e, 'index':probs.index(e)} for e in sorted(probs)[-beam:]]
+                    next_words = [{'prob':e, 'index':probs.index(e)} for e in sorted(probs, reverse=True)[:beam]]
 
                     for next_word in next_words:
                         word = self.int2output[next_word['index']]
@@ -302,6 +301,9 @@ class Generator():
                         new_candidates.append(new_candidate)
             candidates = sorted(new_candidates, key=lambda x: x['prob'], reverse=True)[:beam]
             i += 1
+
+        if len(outputs) == 0:
+            outputs = candidates
 
         # Length Normalization
         alpha = 0.6
@@ -450,10 +452,10 @@ class Generator():
 
 if __name__ == '__main__':
     configs = [
-        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30, 'BEAM':10},
-        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3, 'CHARACTER':False, 'GENERATION':30, 'BEAM':10},
-        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30, 'BEAM':10},
-        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3, 'CHARACTER':False, 'GENERATION':30, 'BEAM':10},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':10},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':10},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':10},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':10},
         # {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30},
         # {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3, 'CHARACTER':False, 'GENERATION':30},
         # {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30},
@@ -461,7 +463,7 @@ if __name__ == '__main__':
     ]
 
     for config in configs:
-        try:
-            Generator(config)
-        except:
-            print("Error:  " + str(config))
+        # try:
+        Generator(config)
+        # except:
+        #     print("Error:  " + str(config))
