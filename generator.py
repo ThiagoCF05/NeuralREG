@@ -279,8 +279,8 @@ class Generator():
 
                     last_output_embeddings = self.output_lookup[self.output2int[candidate['sentence'][-1]]]
                     vector = dy.concatenate([self.hier_attend(attention_pre, attention_pos, candidate['s']), last_output_embeddings, entity_embedding])
-                    candidate['s'] = candidate['s'].add_input(vector)
-                    out_vector = w * candidate['s'].output() + b
+                    s = candidate['s'].add_input(vector)
+                    out_vector = w * s.output() + b
                     probs = dy.softmax(out_vector).vec_value()
                     next_words = [{'prob':e, 'index':probs.index(e)} for e in sorted(probs, reverse=True)[:beam]]
 
@@ -291,7 +291,7 @@ class Generator():
                             'sentence': candidate['sentence'] + [word],
                             'prob': candidate['prob'] + np.log(next_word['prob']),
                             'count_EOS': candidate['count_EOS'],
-                            's':candidate['s']
+                            's':s
                         }
 
                         if word == self.EOS:
@@ -454,8 +454,8 @@ if __name__ == '__main__':
     configs = [
         {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':10},
         {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':10},
-        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':10},
-        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':10},
+        # {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':10},
+        # {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':10},
         # {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30},
         # {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3, 'CHARACTER':False, 'GENERATION':30},
         # {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30},
