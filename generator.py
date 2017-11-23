@@ -268,6 +268,8 @@ class Generator():
                 if candidate['count_EOS'] == 2:
                     beam -= 1
                     outputs.append(candidate)
+
+                    if beam == 0: break
                 else:
                     # w1dt can be computed and cached once for the entire decoding phase
                     w1dt_pre = w1dt_pre or w1_pre * h_pre
