@@ -1,5 +1,6 @@
 import dynet as dy
 import utils
+import numpy as np
 
 class Generator():
     def __init__(self, config):
@@ -30,6 +31,7 @@ class Generator():
         self.STATE_SIZE = config['STATE_SIZE']
         self.ATTENTION_SIZE = config['ATTENTION_SIZE']
         self.DROPOUT = config['DROPOUT']
+        self.BEAM = config['BEAM_SIZE']
 
         self.model = dy.Model()
 
@@ -235,54 +237,80 @@ class Generator():
         return out
 
 
-    # def beam_search(self, pre_context, pos_context, entity, beam):
-    #     embedded = self.embed_sentence(pre_context)
-    #     pre_encoded = self.encode_sentence(self.encpre_fwd_lstm, self.encpre_bwd_lstm, embedded)
-    #
-    #     embedded = self.embed_sentence(pos_context)
-    #     pos_encoded = self.encode_sentence(self.encpos_fwd_lstm, self.encpos_bwd_lstm, embedded)
-    #
-    #     w = dy.parameter(self.decoder_w)
-    #     b = dy.parameter(self.decoder_b)
-    #
-    #     w1_pre = dy.parameter(self.attention_w1_pre)
-    #     h_pre = dy.concatenate_cols(pre_encoded)
-    #     w1dt_pre = None
-    #
-    #     w1_pos = dy.parameter(self.attention_w1_pos)
-    #     h_pos = dy.concatenate_cols(pos_encoded)
-    #     w1dt_pos = None
-    #
-    #     candidates = []
-    #     last_output_embeddings = [(self.output_lookup[self.output2int[self.EOS]], 0.0)]
-    #     entity_embedding = self.input_lookup[self.input2int[entity]]
-    #     s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.STATE_SIZE*2), last_output_embeddings[0][0], entity_embedding]))
-    #
-    #     out = []
-    #     count_EOS = 0
-    #     for i in range(self.config['GENERATION']):
-    #         if count_EOS == 2: break
-    #         # w1dt can be computed and cached once for the entire decoding phase
-    #         w1dt_pre = w1dt_pre or w1_pre * h_pre
-    #         w1dt_pos = w1dt_pos or w1_pos * h_pos
-    #
-    #         attention_pre = self.attend(h_pre, s, w1dt_pre, self.attention_w2_pre, self.attention_v_pre)
-    #         attention_pos = self.attend(h_pos, s, w1dt_pos, self.attention_w2_pos, self.attention_v_pos)
-    #
-    #         vector = dy.concatenate([self.hier_attend(attention_pre, attention_pos, s), last_output_embeddings, entity_embedding])
-    #         s = s.add_input(vector)
-    #         out_vector = w * s.output() + b
-    #         probs = dy.softmax(out_vector).vec_value()
-    #         next_word = probs.index(max(probs))
-    #         next_words = [probs.index(e) for e in sorted(probs)[-5:]]
-    #         last_output_embeddings = self.output_lookup[next_word]
-    #         if self.int2output[next_word] == self.EOS:
-    #             count_EOS += 1
-    #             continue
-    #
-    #         out.append(self.int2output[next_word])
-    #
-    #     return out
+    def beam_search(self, pre_context, pos_context, entity, beam):
+        embedded = self.embed_sentence(pre_context)
+        pre_encoded = self.encode_sentence(self.encpre_fwd_lstm, self.encpre_bwd_lstm, embedded)
+
+        embedded = self.embed_sentence(pos_context)
+        pos_encoded = self.encode_sentence(self.encpos_fwd_lstm, self.encpos_bwd_lstm, embedded)
+
+        w = dy.parameter(self.decoder_w)
+        b = dy.parameter(self.decoder_b)
+
+        w1_pre = dy.parameter(self.attention_w1_pre)
+        h_pre = dy.concatenate_cols(pre_encoded)
+        w1dt_pre = None
+
+        w1_pos = dy.parameter(self.attention_w1_pos)
+        h_pos = dy.concatenate_cols(pos_encoded)
+        w1dt_pos = None
+
+        entity_embedding = self.input_lookup[self.input2int[entity]]
+        last_output_embeddings = self.output_lookup[self.output2int[self.EOS]]
+        s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.STATE_SIZE*2), last_output_embeddings, entity_embedding]))
+        candidates = [{'sentence':[self.EOS], 'prob':0.0, 'count_EOS':0, 's':s}]
+        outputs = []
+
+        i = 0
+        while i < self.config['GENERATION'] and beam > 0:
+            new_candidates = []
+            for candidate in candidates:
+                if candidate['count_EOS'] == 2:
+                    beam -= 1
+                    outputs.append(candidate)
+                else:
+                    # w1dt can be computed and cached once for the entire decoding phase
+                    w1dt_pre = w1dt_pre or w1_pre * h_pre
+                    w1dt_pos = w1dt_pos or w1_pos * h_pos
+
+                    attention_pre = self.attend(h_pre, candidate['s'], w1dt_pre, self.attention_w2_pre, self.attention_v_pre)
+                    attention_pos = self.attend(h_pos, candidate['s'], w1dt_pos, self.attention_w2_pos, self.attention_v_pos)
+
+                    last_output_embeddings = self.output_lookup[self.output2int[candidate['sentence'][-1]]]
+                    vector = dy.concatenate([self.hier_attend(attention_pre, attention_pos, candidate['s']), last_output_embeddings, entity_embedding])
+                    s = s.add_input(vector)
+                    out_vector = w * s.output() + b
+                    probs = dy.softmax(out_vector).vec_value()
+                    next_words = [{'prob':e, 'index':probs.index(e)} for e in sorted(probs)[-beam:]]
+
+                    for next_word in next_words:
+                        word = self.int2output[next_word['index']]
+
+                        new_candidate = {
+                            'sentence': candidate['sentence'] + [word],
+                            'prob': candidate['prob'] + np.log(next_word['prob']),
+                            'count_EOS': candidate['count_EOS'],
+                            's':s
+                        }
+
+                        if word == self.EOS:
+                            new_candidate['count_EOS'] += 1
+                            continue
+
+                        new_candidates.append(new_candidate)
+            candidates = sorted(new_candidates, key=lambda x: x['prob'], reverse=True)[:beam]
+            i += 1
+
+        # Length Normalization
+        alpha = 0.6
+        for output in outputs:
+            length = len(output['sentence'])
+            lp_y = ((5.0 + length)**alpha) / ((5.0+1.0)**alpha)
+
+            output['prob'] = output['prob'] / lp_y
+
+        outputs = sorted(outputs, key=lambda x: x['prob'], reverse=True)
+        return outputs[0]['sentence']
 
 
     def get_loss(self, pre_context, pos_context, refex, entity):
@@ -313,7 +341,7 @@ class Generator():
             pre_context = self.devset['pre_context'][i]
             pos_context = self.devset['pos_context'][i]
             entity = self.devset['entity'][i]
-            output = self.generate(pre_context, pos_context, entity)
+            output = self.beam_search(pre_context, pos_context, entity, self.BEAM)
 
             delimiter = ' '
             if self.character:
@@ -347,7 +375,7 @@ class Generator():
             # refex = ' '.join(testset['refex'][i]).replace('eos', '').strip()
             entity = self.testset['entity'][i]
 
-            output = self.generate(pre_context, pos_context, entity)
+            output = self.beam_search(pre_context, pos_context, entity, self.BEAM)
             delimiter = ' '
             if self.character:
                 delimiter = ''
@@ -399,10 +427,10 @@ class Generator():
             if best_acc == 0.0 or acc > best_acc:
                 best_acc = acc
 
-                fname = 'data/results/dev_best_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1] + '_' + str(self.character)
+                fname = 'data/results/dev_best_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1] + '_' + str(self.character) + '_' + str(self.BEAM)
                 self.write(fname, outputs)
 
-                fname = 'data/models/best_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1] + '_' + str(self.character)
+                fname = 'data/models/best_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1] + '_' + str(self.character) + '_' + str(self.BEAM)
                 self.model.save(fname)
 
                 repeat = 0
@@ -414,16 +442,16 @@ class Generator():
                 break
 
         # self.test()
-        fname = 'data/models/' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1] + '_' + str(self.character)
+        fname = 'data/models/' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1] + '_' + str(self.character) + '_' + str(self.BEAM)
         self.model.save(fname)
 
 
 if __name__ == '__main__':
     configs = [
-        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30},
-        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3, 'CHARACTER':False, 'GENERATION':30},
-        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30},
-        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3, 'CHARACTER':False, 'GENERATION':30},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30, 'BEAM':10},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3, 'CHARACTER':False, 'GENERATION':30, 'BEAM':10},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30, 'BEAM':10},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3, 'CHARACTER':False, 'GENERATION':30, 'BEAM':10},
         # {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30},
         # {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':1024, 'ATTENTION_SIZE':1024, 'DROPOUT':0.3, 'CHARACTER':False, 'GENERATION':30},
         # {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':512, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30},
