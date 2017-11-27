@@ -18,43 +18,37 @@ import cPickle as p
 import os
 import random
 import re
+import xml.etree.ElementTree as ET
 import sys
 sys.path.append('../')
 sys.path.append('/home/tcastrof/workspace/stanford_corenlp_pywrapper')
 
 from stanford_corenlp_pywrapper import CoreNLP
 
-from db.model import *
-
 class Preprocessing(object):
-    def __init__(self, ftrain, fdev):
+    def __init__(self, in_train, in_dev):
         self.proc = CoreNLP('ssplit')
         self.parser = CoreNLP('parse')
-        self.ftrain = ftrain
-        self.fdev = fdev
+        self.in_train = in_train
+        self.in_dev = in_dev
 
-        self.run()
-
-
-    def run(self):
         self.text_id = 0
+        self.trainset()
+        self.testset()
+
+
+    def trainset(self):
         input_vocab, output_vocab, character_vocab = set(), set(), set()
         train, dev = [], []
         train_info, dev_info = [], []
 
-        dirs = filter(lambda x: x != '.DS_Store', os.listdir(self.ftrain))
+        dirs = filter(lambda x: x != '.DS_Store', os.listdir(self.in_train))
         for path in dirs:
-            dirs2 = filter(lambda x: x != '.DS_Store', os.listdir(os.path.join(self.ftrain, path)))
+            dirs2 = filter(lambda x: x != '.DS_Store', os.listdir(os.path.join(self.in_train, path)))
             for fname in dirs2:
-                f = open(os.path.join(self.ftrain, path, fname))
-                doc = f.read().decode('utf-8')
-                f.close()
+                f = open(os.path.join(self.in_train, path, fname))
 
-                doc = doc.split((50*'*')+'\n')
-
-                print('Doc size: ', len(doc))
-
-                data, in_vocab, out_vocab, c_vocab = self.annotation_parse(doc)
+                data, in_vocab, out_vocab, c_vocab = self.annotation_parse(f)
 
                 input_vocab = input_vocab.union(in_vocab)
                 output_vocab = output_vocab.union(out_vocab)
@@ -87,6 +81,126 @@ class Preprocessing(object):
             f.write(('\n'.join(list(character_vocab))).encode("utf-8"))
 
 
+    def testset(self):
+        test = []
+        test_info = [], []
+
+        dirs = filter(lambda x: x != '.DS_Store', os.listdir(self.in_dev))
+        for path in dirs:
+            dirs2 = filter(lambda x: x != '.DS_Store', os.listdir(os.path.join(self.in_dev, path)))
+            for fname in dirs2:
+                f = open(os.path.join(self.in_dev, path, fname))
+
+                data, in_vocab, out_vocab, c_vocab = self.annotation_parse(f)
+
+                info = len(data) * [path + ' ' + fname]
+                test_info.extend(info)
+
+                info = len(data) * [path + ' ' + fname]
+                test_info.extend(info)
+
+        self.write('data/test', test, test_info)
+
+    def extract_entity_type(self, entity):
+        aux = entity.split('^^')
+        if len(aux) > 1:
+            return aux[-1]
+
+        aux = entity.split('@')
+        if len(aux) > 1:
+            return aux[-1]
+
+        return 'wiki'
+
+    def annotation_parse(self, doc):
+        '''
+        Parse an annotation document and extract references from the texts
+        :param doc:
+        :return:
+        '''
+        tree = ET.parse(doc)
+        root =  tree.getroot()
+
+        data = []
+        input_vocab, output_vocab, character_vocab = set(), set(), set()
+
+        entries = root.find('entries')
+        for entry in entries:
+            entryId = entry.attrib['eid']
+            size = entry.attrib['size']
+            semcategory = entry.attrib['category']
+
+            # get entity map
+            entitymap_xml = entry.find('entitymap')
+            entity_map = {}
+            for inst in entitymap_xml:
+                tag, entity = inst.text.split(' | ')
+                entity_map[tag] = entity
+
+            # Reading original triples to extract the entities type
+            types = []
+            otripleset = entry.find('originaltripleset')
+            for otriple in otripleset:
+                e1, pred, e2 = otriple.text.split(' | ')
+
+                entity1_type = self.extract_entity_type(e1.strip())
+                entity2_type = self.extract_entity_type(e2.strip())
+
+                types.append({'e1_type':entity1_type, 'e2_type':entity2_type})
+
+            # Reading modified triples to extract entities and classify them according to type
+            mtripleset = entry.find('modifiedtripleset')
+            entity_type = {}
+            for i, mtriple in enumerate(mtripleset):
+                e1, pred, e2 = mtriple.text.split(' | ')
+
+                entity_type[e1.replace('\'', '')] = types[i]['e1_type']
+                entity_type[e2.replace('\'', '')] = types[i]['e2_type']
+
+            lexEntries = entry.findall('lex')
+
+            for lex in lexEntries:
+                try:
+                    text = lex.find('text').text
+                    template = lex.find('template').text
+
+                    if template:
+                        print('{}\r'.format(template))
+                        text, template = self.stanford_parse(text, template)
+                        references, in_vocab, out_vocab, c_vocab = self.get_refexes(text, template, entity_map, entity_type)
+                        data.extend(references)
+                        input_vocab = input_vocab.union(in_vocab)
+                        output_vocab = output_vocab.union(out_vocab)
+                        character_vocab = character_vocab.union(c_vocab)
+                except Exception as e:
+                    print('ERROR')
+                    print(e.message)
+
+        return data, input_vocab, output_vocab, character_vocab
+
+
+    def stanford_parse(self, text, template):
+        '''
+        Tokenizing text and template
+        :param text: original text
+        :param template: original template
+        :return: Tokenized text and template
+        '''
+        out = self.proc.parse_doc(text)
+        text = []
+        for i, snt in enumerate(out['sentences']):
+            text.extend(snt['tokens'])
+        text = ' '.join(text).replace('-LRB-', '(').replace('-RRB-', ')').strip()
+
+        out = self.proc.parse_doc(template)
+        temp = []
+        for i, snt in enumerate(out['sentences']):
+            temp.extend(snt['tokens'])
+        template = ' '.join(temp).replace('-LRB-', '(').replace('-RRB-', ')').strip()
+
+        return text, template
+
+
     def write(self, fname, instances, info):
         if not os.path.exists(fname):
             os.mkdir(fname)
@@ -111,17 +225,6 @@ class Preprocessing(object):
             f.write(info)
 
         p.dump(instances, open(os.path.join(fname, 'data.cPickle'), 'w'))
-
-
-    def check_entity(self, entity):
-        if entity[0] in ['\'', '\"'] and entity[-1] in ['\'', '\"']:
-            return ''
-
-        f = Entity.objects(name=entity.strip(), type='wiki')
-        if f.count() > 0:
-            return '_'.join(entity.replace('\"', '').replace('\'', '').lower().split())
-        else:
-            return ''
 
 
     def get_reference_info(self, template, tag):
@@ -245,7 +348,7 @@ class Preprocessing(object):
         return references
 
 
-    def get_refexes(self, text, template, entity_map):
+    def get_refexes(self, text, template, entity_map, entity_type):
         '''
         Extract referring expressions for each reference overlapping text and template
         :param text: original text
@@ -285,11 +388,12 @@ class Preprocessing(object):
                 if len(f) > 0:
                     # DO NOT LOWER CASE HERE!!!!!!
                     template = template.replace(tag, f[0], 1)
-                    refex = f[0].lower()
+                    refex = f[0]
 
                     # Do not include literals
-                    normalized = self.check_entity(entity_map[tag])
-                    if normalized != '':
+                    entity = entity_map[tag]
+                    if entity_type[entity] == 'wiki':
+                        normalized = '_'.join(entity.replace('\"', '').replace('\'', '').lower().split())
                         aux = context.replace(tag, 'ENTITY', 1)
                         reference = self.get_reference_info(aux, 'ENTITY')
 
@@ -325,84 +429,8 @@ class Preprocessing(object):
         data = self.classify(data)
         return data, input_vocab, output_vocab, character_vocab
 
-
-    def annotation_parse(self, doc):
-        '''
-        Parse an annotation document and extract references from the texts
-        :param doc:
-        :return:
-        '''
-        data = []
-        input_vocab, output_vocab, character_vocab = set(), set(), set()
-        for entry in doc:
-            entry = entry.split('\n\n')
-
-            try:
-                _, entryId, size, semcategory = entry[0].replace('\n', '').split()
-
-                entity_map = dict(map(lambda entity: entity.split(' | '), entry[2].replace('\nENTITY MAP\n', '').split('\n')))
-
-                lexEntries = entry[3].replace('\nLEX\n', '').split('\n-')[:-1]
-
-                for lex in lexEntries:
-                    if lex[0] == '\n':
-                        lex = lex[1:]
-                    lex = lex.split('\n')
-
-                    text = lex[1].replace('TEXT: ', '').strip()
-                    template = lex[2].replace('TEMPLATE: ', '')
-                    correct = lex[3].replace('CORRECT: ', '').strip()
-                    comment = lex[4].replace('COMMENT: ', '').strip()
-
-                    if comment in ['g', 'good']:
-                        print('{}\r'.format(template))
-
-                        text, template = self.stanford_parse(text, template)
-                        references, in_vocab, out_vocab, c_vocab = self.get_refexes(text, template, entity_map)
-                        data.extend(references)
-                        input_vocab = input_vocab.union(in_vocab)
-                        output_vocab = output_vocab.union(out_vocab)
-                        character_vocab = character_vocab.union(c_vocab)
-                    elif correct != '' and comment != 'wrong':
-                        if correct.strip() == 'CORRECT:':
-                            correct = template
-                        print('{}\r'.format(correct))
-                        text, template = self.stanford_parse(text, correct)
-                        references, in_vocab, out_vocab, c_vocab = self.get_refexes(text, template, entity_map)
-                        data.extend(references)
-                        input_vocab = input_vocab.union(in_vocab)
-                        output_vocab = output_vocab.union(out_vocab)
-                        character_vocab = character_vocab.union(c_vocab)
-            except:
-                print('ERROR')
-
-        return data, input_vocab, output_vocab, character_vocab
-
-
-    def stanford_parse(self, text, template):
-        '''
-        Obtain information of references and their referring expressions
-        :param text:
-        :param template:
-        :param entities:
-        :return:
-        '''
-        out = self.proc.parse_doc(text)
-        text = []
-        for i, snt in enumerate(out['sentences']):
-            text.extend(snt['tokens'])
-        text = ' '.join(text).replace('-LRB-', '(').replace('-RRB-', ')').strip()
-
-        out = self.proc.parse_doc(template)
-        temp = []
-        for i, snt in enumerate(out['sentences']):
-            temp.extend(snt['tokens'])
-        template = ' '.join(temp).replace('-LRB-', '(').replace('-RRB-', ')').strip()
-
-        return text, template
-
 if __name__ == '__main__':
-    ftrain = 'annotation/train'
-    fdev = 'annotation/dev'
+    ftrain = 'annotation/final/train'
+    fdev = 'annotation/final/dev'
 
     Preprocessing(ftrain, fdev)

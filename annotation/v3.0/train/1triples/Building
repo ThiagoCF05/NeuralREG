@@ -1,0 +1,6586 @@
+
+Entry: Id233 1 Building
+
+TRIPLES
+United_States | leaderName | Joe_Biden
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | Joe_Biden
+
+
+LEX
+Id1
+TEXT: Joe Biden is a leader of the United States.
+TEMPLATE: PATIENT-1 is a leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The leader of the United States is Joe Biden.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Joe Biden is a leader of the U.S.
+TEMPLATE: PATIENT-1 is AGENT-1 of the U.S.
+CORRECT: PATIENT-1 is a leader of AGENT-1 .
+COMMENT: nationality
+-
+
+**************************************************
+
+Entry: Id232 1 Building
+
+TRIPLES
+United_States | leaderName | Barack_Obama
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | Barack_Obama
+
+
+LEX
+Id1
+TEXT: The leader of the United States was Barack Obama.
+TEMPLATE: The leader of AGENT-1 was PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Barack Obama is the leader of the U.S.
+TEMPLATE: PATIENT-1 is AGENT-1 of the U.S.
+CORRECT: PATIENT-1 is the leader of AGENT-1 .
+COMMENT: nationality
+-
+Id3
+TEXT: Barack Obama is the leader of the United States.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id231 1 Building
+
+TRIPLES
+United_States | language | English_language
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | English_language
+
+
+LEX
+Id1
+TEXT: English is the language of the U.S..
+TEMPLATE: English is PATIENT-1 of the U.S. .
+CORRECT: PATIENT-1 is the language of AGENT-1 .
+COMMENT: language
+-
+Id2
+TEXT: English is the language in the United States.
+TEMPLATE: English is PATIENT-1 in AGENT-1 .
+CORRECT: PATIENT-1 is the language in AGENT-1 .
+COMMENT: language
+-
+Id3
+TEXT: The English language is the language of the United States.
+TEMPLATE: PATIENT-1 is the language of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id229 1 Building
+
+TRIPLES
+United_States | ethnicGroup | Asian_Americans
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | Asian_Americans
+
+
+LEX
+Id1
+TEXT: An ethnic group of the United States is Asian Americans.
+TEMPLATE: An ethnic group of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Asian Americans are an ethnic group in the U.S.
+TEMPLATE: PATIENT-1 are an ethnic group in AGENT-1
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: There is an ethnic group of Asians in the United States.
+TEMPLATE: There is an ethnic group of PATIENT-1 in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id227 1 Building
+
+TRIPLES
+United_States | capital | Washington,_D.C.
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | Washington,_D.C.
+
+
+LEX
+Id1
+TEXT: Washington DC is the capital of the United States.
+TEMPLATE: PATIENT-1 is the capital of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The capital of the United States is Washington D.C.
+TEMPLATE: The capital of AGENT-1 is PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Washington D.C. is the capital of the USA.
+TEMPLATE: PATIENT-1 is the capital of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id236 1 Building
+
+TRIPLES
+Virginia | country | United_States
+
+
+ENTITY MAP
+AGENT-1 | Virginia
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Virginia is in the United States.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id230 1 Building
+
+TRIPLES
+United_States | ethnicGroup | White_Americans
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | White_Americans
+
+
+LEX
+Id1
+TEXT: One United States ethnic group is White Americans.
+TEMPLATE: One AGENT-1 ethnic group is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id228 1 Building
+
+TRIPLES
+United_States | ethnicGroup | African_Americans
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | African_Americans
+
+
+LEX
+Id1
+TEXT: One of the ethnic groups of the United States are the African Americans.
+TEMPLATE: One of the ethnic groups of AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id226 1 Building
+
+TRIPLES
+United_Kingdom | demonym | British_people
+
+
+ENTITY MAP
+AGENT-1 | United_Kingdom
+PATIENT-1 | British_people
+
+
+LEX
+Id1
+TEXT: The demonym for natives of the United kingdom is British people.
+TEMPLATE: The demonym for natives of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id223 1 Building
+
+TRIPLES
+Sri_Lanka | language | Tamil_language
+
+
+ENTITY MAP
+AGENT-1 | Sri_Lanka
+PATIENT-1 | Tamil_language
+
+
+LEX
+Id1
+TEXT: The language of Sri Lanka is the Tamil language.
+TEMPLATE: The language of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id216 1 Building
+
+TRIPLES
+South_Africa | demonym | South_Africa
+
+
+ENTITY MAP
+BRIDGE-1 | South_Africa
+
+
+LEX
+Id1
+TEXT: People from South Africa can say they are from South Africa.
+TEMPLATE: People from BRIDGE-1 can say BRIDGE-1 are from BRIDGE-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id215 1 Building
+
+TRIPLES
+Republic_of_Ireland | leaderName | Enda_Kenny
+
+
+ENTITY MAP
+AGENT-1 | Republic_of_Ireland
+PATIENT-1 | Enda_Kenny
+
+
+LEX
+Id1
+TEXT: The leader of the Republic of Ireland is Enda Kenny.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id209 1 Building
+
+TRIPLES
+New_York_City | isPartOf | New_York
+
+
+ENTITY MAP
+AGENT-1 | New_York_City
+PATIENT-1 | New_York
+
+
+LEX
+Id1
+TEXT: New York City is part of New York.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id205 1 Building
+
+TRIPLES
+Mason_School_of_Business | country | United_States
+
+
+ENTITY MAP
+AGENT-1 | Mason_School_of_Business
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: The Mason School of Business is located in the United States.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id203 1 Building
+
+TRIPLES
+Marriott_International | foundationPlace | Washington,_D.C.
+
+
+ENTITY MAP
+AGENT-1 | Marriott_International
+PATIENT-1 | Washington,_D.C.
+
+
+LEX
+Id1
+TEXT: Marriott International was founded in Washington, D.C.
+TEMPLATE: AGENT-1 was founded in PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id200 1 Building
+
+TRIPLES
+London | leaderTitle | Parliament_of_the_United_Kingdom
+
+
+ENTITY MAP
+AGENT-1 | London
+PATIENT-1 | Parliament_of_the_United_Kingdom
+
+
+LEX
+Id1
+TEXT: The Parliament of the United Kingdom is the leader of London.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id199 1 Building
+
+TRIPLES
+London | leaderTitle | European_Parliament
+
+
+ENTITY MAP
+AGENT-1 | London
+PATIENT-1 | European_Parliament
+
+
+LEX
+Id1
+TEXT: London is lead via the European Parliament.
+TEMPLATE: AGENT-1 is lead via PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id196 1 Building
+
+TRIPLES
+Julia_Morgan | significantBuilding | Riverside_Art_Museum
+
+
+ENTITY MAP
+AGENT-1 | Julia_Morgan
+PATIENT-1 | Riverside_Art_Museum
+
+
+LEX
+Id1
+TEXT: The Riverside Art Musuem is one of Julia Morgan's significant buildings.
+TEMPLATE: PATIENT-1 is one of AGENT-1 's significant buildings .
+CORRECT: PATIENT-1 is one of AGENT-1 significant buildings .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id194 1 Building
+
+TRIPLES
+Julia_Morgan | significantBuilding | Asilomar_State_Beach
+
+
+ENTITY MAP
+AGENT-1 | Julia_Morgan
+PATIENT-1 | Asilomar_State_Beach
+
+
+LEX
+Id1
+TEXT: One of the significant buildings designed by Julia Morgan is the Asilomar State Beach.
+TEMPLATE: One of the significant buildings designed by AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id193 1 Building
+
+TRIPLES
+Julia_Morgan | birthPlace | San_Francisco
+
+
+ENTITY MAP
+AGENT-1 | Julia_Morgan
+PATIENT-1 | San_Francisco
+
+
+LEX
+Id1
+TEXT: Julia Morgan was born in San Francisco.
+TEMPLATE: AGENT-1 was born in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id190 1 Building
+
+TRIPLES
+John_Madin | birthPlace | Birmingham
+
+
+ENTITY MAP
+AGENT-1 | John_Madin
+PATIENT-1 | Birmingham
+
+
+LEX
+Id1
+TEXT: John Madin was born in Birmingham.
+TEMPLATE: AGENT-1 was born in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id185 1 Building
+
+TRIPLES
+Japan | ethnicGroup | Japanese_people
+
+
+ENTITY MAP
+AGENT-1 | Japan
+PATIENT-1 | Japanese_people
+
+
+LEX
+Id1
+TEXT: The main ethnic group in Japan is the Japanese.
+TEMPLATE: The main ethnic group in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id184 1 Building
+
+TRIPLES
+Japan | ethnicGroup | Filipinos_in_Japan
+
+
+ENTITY MAP
+AGENT-1 | Japan
+PATIENT-1 | Filipinos_in_Japan
+
+
+LEX
+Id1
+TEXT: One of the ethnic groups in Japan is the Filipinos.
+TEMPLATE: One of the ethnic groups in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id177 1 Building
+
+TRIPLES
+Gujarat | leaderTitle | Gujarat_Legislative_Assembly
+
+
+ENTITY MAP
+AGENT-1 | Gujarat
+PATIENT-1 | Gujarat_Legislative_Assembly
+
+
+LEX
+Id1
+TEXT: Gujarat's leader is known as the Gujarat Legislative Assembly.
+TEMPLATE: AGENT-1 's leader is known as PATIENT-1 .
+CORRECT: AGENT-1 leader is known as PATIENT-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id168 1 Building
+
+TRIPLES
+Dublin | leaderTitle | Dáil_Éireann
+
+
+ENTITY MAP
+AGENT-1 | Dublin
+PATIENT-1 | Dáil_Éireann
+
+
+LEX
+Id1
+TEXT: Dáil Éireann is a leader in Dublin.
+TEMPLATE: PATIENT-1 is a leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id164 1 Building
+
+TRIPLES
+Denmark | language | Greenlandic_language
+
+
+ENTITY MAP
+AGENT-1 | Denmark
+PATIENT-1 | Greenlandic_language
+
+
+LEX
+Id1
+TEXT: Greenlandic is one of the languages of Denmark.
+TEMPLATE: PATIENT-1 is one of the languages of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id148 1 Building
+
+TRIPLES
+Buffalo,_New_York | isPartOf | New_York
+
+
+ENTITY MAP
+AGENT-1 | Buffalo,_New_York
+PATIENT-1 | New_York
+
+
+LEX
+Id1
+TEXT: Buffalo New York is part of New York.
+TEMPLATE: PATIENT-1 is AGENT-1 of PATIENT-1 .
+CORRECT: AGENT-1 is part of PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id145 1 Building
+
+TRIPLES
+Birmingham | leaderName | Khalid_Mahmood_(British_politician)
+
+
+ENTITY MAP
+AGENT-1 | Birmingham
+PATIENT-1 | Khalid_Mahmood_(British_politician)
+
+
+LEX
+Id1
+TEXT: Khalid Mahmood (British politician) is one of the leaders of Birmingham.
+TEMPLATE: PATIENT-1 is one of the leaders of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id144 1 Building
+
+TRIPLES
+Birmingham | leaderName | John_Clancy_(Labour_politician)
+
+
+ENTITY MAP
+AGENT-1 | Birmingham
+PATIENT-1 | John_Clancy_(Labour_politician)
+
+
+LEX
+Id1
+TEXT: Labour politician, John Clancy is the leader of Birmingham.
+TEMPLATE: PATIENT-1 , John Clancy is the leader of AGENT-1 .
+CORRECT: PATIENT-1 is the leader of AGENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id143 1 Building
+
+TRIPLES
+Birmingham | leaderName | Conservative_Party_(UK)
+
+
+ENTITY MAP
+AGENT-1 | Birmingham
+PATIENT-1 | Conservative_Party_(UK)
+
+
+LEX
+Id1
+TEXT: The leader of Birmingham is the Conservative Party (UK).
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id140 1 Building
+
+TRIPLES
+Augustus_Pugin | significantBuilding | Palace_of_Westminster
+
+
+ENTITY MAP
+AGENT-1 | Augustus_Pugin
+PATIENT-1 | Palace_of_Westminster
+
+
+LEX
+Id1
+TEXT: One of the significant buildings designed by Augustus Pugin is the Palace Of Westminster.
+TEMPLATE: One of the significant buildings designed by AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id138 1 Building
+
+TRIPLES
+Asser_Levy_Public_Baths | location | Manhattan
+
+
+ENTITY MAP
+AGENT-1 | Asser_Levy_Public_Baths
+PATIENT-1 | Manhattan
+
+
+LEX
+Id1
+TEXT: Asser Levy Public Baths is located in Manhattan.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id137 1 Building
+
+TRIPLES
+Asser_Levy_Public_Baths | location | Avenue_A_(Manhattan)
+
+
+ENTITY MAP
+AGENT-1 | Asser_Levy_Public_Baths
+PATIENT-1 | Avenue_A_(Manhattan)
+
+
+LEX
+Id1
+TEXT: Asser Levy Public Baths is located in Avenue A, Manhattan.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id128 1 Building
+
+TRIPLES
+Asilomar_Conference_Grounds | architecturalStyle | American_Craftsman
+
+
+ENTITY MAP
+AGENT-1 | Asilomar_Conference_Grounds
+PATIENT-1 | American_Craftsman
+
+
+LEX
+Id1
+TEXT: The Asilomar Conference Grounds have the architectural style of American Craftsman.
+TEMPLATE: AGENT-1 have the architectural style of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id125 1 Building
+
+TRIPLES
+Asherton,_Texas | isPartOf | United_States
+
+
+ENTITY MAP
+AGENT-1 | Asherton,_Texas
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Asherton, Texas is part of the United States.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id120 1 Building
+
+TRIPLES
+Asher_and_Mary_Isabelle_Richardson_House | location | Asherton,_Texas
+
+
+ENTITY MAP
+AGENT-1 | Asher_and_Mary_Isabelle_Richardson_House
+PATIENT-1 | Asherton,_Texas
+
+
+LEX
+Id1
+TEXT: Asher and Mary Isabelle Richardson House is located in Asherton, Texas.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id118 1 Building
+
+TRIPLES
+Ampara_Hospital | website | <http://www.ghampara.gov.lk/>
+
+
+ENTITY MAP
+AGENT-1 | Ampara_Hospital
+PATIENT-1 | <http://www.ghampara.gov.lk/>
+
+
+LEX
+Id1
+TEXT: Ampara Hospital has a website.
+TEMPLATE: AGENT-1 has PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id113 1 Building
+
+TRIPLES
+Amdavad_ni_Gufa | location | Gujarat
+
+
+ENTITY MAP
+AGENT-1 | Amdavad_ni_Gufa
+PATIENT-1 | Gujarat
+
+
+LEX
+Id1
+TEXT: Amdavad ni Gufa is located in Gujarat.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id111 1 Building
+
+TRIPLES
+Amdavad_ni_Gufa | country | India
+
+
+ENTITY MAP
+AGENT-1 | Amdavad_ni_Gufa
+PATIENT-1 | India
+
+
+LEX
+Id1
+TEXT: Amdavad ni Gufa is located in India.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id110 1 Building
+
+TRIPLES
+Amdavad_ni_Gufa | completionDate | 1995
+
+
+ENTITY MAP
+AGENT-1 | Amdavad_ni_Gufa
+PATIENT-1 | 1995
+
+
+LEX
+Id1
+TEXT: Amdavad ni Gufa was completed in 1995.
+TEMPLATE: AGENT-1 was completed in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id107 1 Building
+
+TRIPLES
+Alan_B._Miller_Hall | tenant | Mason_School_of_Business
+
+
+ENTITY MAP
+AGENT-1 | Alan_B._Miller_Hall
+PATIENT-1 | Mason_School_of_Business
+
+
+LEX
+Id1
+TEXT: Mason School of Business is a tenant of the Alan B. Miller Hall.
+TEMPLATE: PATIENT-1 is a tenant of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id90 1 Building
+
+TRIPLES
+Akita,_Akita | isPartOf | Akita_Prefecture
+
+
+ENTITY MAP
+AGENT-1 | Akita,_Akita
+PATIENT-1 | Akita_Prefecture
+
+
+LEX
+Id1
+TEXT: Akita, Akita is part of Akita Prefecture.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id79 1 Building
+
+TRIPLES
+Addis_Ababa_City_Hall | location | Addis_Ababa
+
+
+ENTITY MAP
+AGENT-1 | Addis_Ababa_City_Hall
+PATIENT-1 | Addis_Ababa
+
+
+LEX
+Id1
+TEXT: Addis Ababa City Hall is located in Addis Ababa.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id67 1 Building
+
+TRIPLES
+Adare_Manor | location | Adare
+
+
+ENTITY MAP
+AGENT-1 | Adare_Manor
+PATIENT-1 | Adare
+
+
+LEX
+Id1
+TEXT: Adare Manor is located in Adare.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id61 1 Building
+
+TRIPLES
+Adare_Manor | architect | Augustus_Pugin
+
+
+ENTITY MAP
+AGENT-1 | Adare_Manor
+PATIENT-1 | Augustus_Pugin
+
+
+LEX
+Id1
+TEXT: The architect of Adare Manor is Augustus Pugin.
+TEMPLATE: The architect of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id60 1 Building
+
+TRIPLES
+Adare | isPartOf | Munster
+
+
+ENTITY MAP
+AGENT-1 | Adare
+PATIENT-1 | Munster
+
+
+LEX
+Id1
+TEXT: Adare is part of Munster.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id40 1 Building
+
+TRIPLES
+300_North_LaSalle | location | Illinois
+
+
+ENTITY MAP
+AGENT-1 | 300_North_LaSalle
+PATIENT-1 | Illinois
+
+
+LEX
+Id1
+TEXT: 300 North LaSalle is in Illinois.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id39 1 Building
+
+TRIPLES
+300_North_LaSalle | floorArea | 120770.0 (square metres)
+
+
+ENTITY MAP
+AGENT-1 | 300_North_LaSalle
+PATIENT-1 | 120770.0 (square metres)
+
+
+LEX
+Id1
+TEXT: The floor area of 300 North LaSalle is 120770.0 square metres.
+TEMPLATE: The floor area of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id36 1 Building
+
+TRIPLES
+250_Delaware_Avenue | location | United_States
+
+
+ENTITY MAP
+AGENT-1 | 250_Delaware_Avenue
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: 250 Delaware Avenue is located in the United States.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id30 1 Building
+
+TRIPLES
+20_Fenchurch_Street | location | London
+
+
+ENTITY MAP
+AGENT-1 | 20_Fenchurch_Street
+PATIENT-1 | London
+
+
+LEX
+Id1
+TEXT: 20 Fenchurch Street is located in London.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id28 1 Building
+
+TRIPLES
+20_Fenchurch_Street | floorArea | 62145.3 (square metres)
+
+
+ENTITY MAP
+AGENT-1 | 20_Fenchurch_Street
+PATIENT-1 | 62145.3 (square metres)
+
+
+LEX
+Id1
+TEXT: 20 Fenchurch Street has a floor area of 62145.3 square metres.
+TEMPLATE: AGENT-1 has a floor area of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id23 1 Building
+
+TRIPLES
+200_Public_Square | location | "United States"
+
+
+ENTITY MAP
+AGENT-1 | 200_Public_Square
+PATIENT-1 | "United States"
+
+
+LEX
+Id1
+TEXT: 200 Public Square is located in the United States.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id16 1 Building
+
+TRIPLES
+11_Diagonal_Street | floorCount | 20
+
+
+ENTITY MAP
+AGENT-1 | 11_Diagonal_Street
+PATIENT-1 | 20
+
+
+LEX
+Id1
+TEXT: 11 Diagonal Street has 20 floors.
+TEMPLATE: AGENT-1 has PATIENT-1 floors .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id15 1 Building
+
+TRIPLES
+11_Diagonal_Street | floorArea | 1200 (square metres)
+
+
+ENTITY MAP
+AGENT-1 | 11_Diagonal_Street
+PATIENT-1 | 1200 (square metres)
+
+
+LEX
+Id1
+TEXT: 11 Diagonal Street has a floor area of 1200 square metres.
+TEMPLATE: AGENT-1 has a floor area of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id13 1 Building
+
+TRIPLES
+11_Diagonal_Street | architect | Helmut_Jahn
+
+
+ENTITY MAP
+AGENT-1 | 11_Diagonal_Street
+PATIENT-1 | Helmut_Jahn
+
+
+LEX
+Id1
+TEXT: The architect of 11 Diagonal Street is Helmut Jahn.
+TEMPLATE: The architect of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id10 1 Building
+
+TRIPLES
+108_St_Georges_Terrace | floorArea | 39500.0 (square metres)
+
+
+ENTITY MAP
+AGENT-1 | 108_St_Georges_Terrace
+PATIENT-1 | 39500.0 (square metres)
+
+
+LEX
+Id1
+TEXT: 108 St. Georges Terrace has a floor area of 39599.0 square metres.
+TEMPLATE: AGENT-1 has a floor area of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id8 1 Building
+
+TRIPLES
+108_St_Georges_Terrace | completionDate | 1988
+
+
+ENTITY MAP
+AGENT-1 | 108_St_Georges_Terrace
+PATIENT-1 | 1988
+
+
+LEX
+Id1
+TEXT: 108 St Georges Terrace was completed in 1988.
+TEMPLATE: AGENT-1 was completed in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id6 1 Building
+
+TRIPLES
+103_Colmore_Row | location | Birmingham
+
+
+ENTITY MAP
+AGENT-1 | 103_Colmore_Row
+PATIENT-1 | Birmingham
+
+
+LEX
+Id1
+TEXT: 103 Colmore Row is located in Birmingham.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id219 1 Building
+
+TRIPLES
+South_Africa | leaderName | Cyril_Ramaphosa
+
+
+ENTITY MAP
+AGENT-1 | South_Africa
+PATIENT-1 | Cyril_Ramaphosa
+
+
+LEX
+Id1
+TEXT: Cyril Ramaphosa is the leader of South Africa.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Cyril Ramaphosa is one of the leaders of South Africa.
+TEMPLATE: PATIENT-1 is one of the leaders of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The leader of South Africa is called Cyril Ramaphosa.
+TEMPLATE: The leader of AGENT-1 is called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id235 1 Building
+
+TRIPLES
+United_States | leaderTitle | President_of_the_United_States
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | President_of_the_United_States
+
+
+LEX
+Id1
+TEXT: The leader of the United States is known as the President of the United States.
+TEMPLATE: The leader of AGENT-1 is known as PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The title of the leader of the United States is President of the United States.
+TEMPLATE: The title of the leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The leader of the United States has the title President of the United States.
+TEMPLATE: The leader of AGENT-1 has PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id234 1 Building
+
+TRIPLES
+United_States | leaderName | John_Roberts
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | John_Roberts
+
+
+LEX
+Id1
+TEXT: The United States of America`s Chief Justice is John Roberts.
+TEMPLATE: AGENT-1 of America ` s Chief Justice is PATIENT-1 .
+CORRECT: AGENT-1 Chief Justice is PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: John Roberts is a leader in the United States.
+TEMPLATE: PATIENT-1 is a leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id225 1 Building
+
+TRIPLES
+United_Kingdom | currency | Pound_sterling
+
+
+ENTITY MAP
+AGENT-1 | United_Kingdom
+PATIENT-1 | Pound_sterling
+
+
+LEX
+Id1
+TEXT: The United Kingdom's currency is Pound sterling.
+TEMPLATE: AGENT-1 's currency is PATIENT-1 .
+CORRECT: AGENT-1 currency is PATIENT-1 .
+COMMENT: g
+-
+Id2
+TEXT: The currency of the United Kingdom is the Pound sterling.
+TEMPLATE: The currency of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id224 1 Building
+
+TRIPLES
+Sri_Lanka | leaderName | Ranil_Wickremesinghe
+
+
+ENTITY MAP
+AGENT-1 | Sri_Lanka
+PATIENT-1 | Ranil_Wickremesinghe
+
+
+LEX
+Id1
+TEXT: Ranil Wickremesinghe is a leader of Sri Lanka.
+TEMPLATE: PATIENT-1 is a leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Sri Lanka's leader is called Ranil Wickremesinghe.
+TEMPLATE: AGENT-1 's leader is called PATIENT-1 .
+CORRECT: AGENT-1 leader is called PATIENT-1 .
+COMMENT: 
+-
+Id3
+TEXT: The leader of Sri Lanka is Ranil Wickremesinghe.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id222 1 Building
+
+TRIPLES
+Sri_Lanka | currency | Sri_Lankan_rupee
+
+
+ENTITY MAP
+AGENT-1 | Sri_Lanka
+PATIENT-1 | Sri_Lankan_rupee
+
+
+LEX
+Id1
+TEXT: Ski Lanka's currency is the Ski Lankan rupee.
+TEMPLATE: AGENT-1 currency is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The currency of Sri Lanka is the Sri Lankan rupee.
+TEMPLATE: The currency of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id221 1 Building
+
+TRIPLES
+Sri_Lanka | capital | Sri_Jayawardenepura_Kotte
+
+
+ENTITY MAP
+AGENT-1 | Sri_Lanka
+PATIENT-1 | Sri_Jayawardenepura_Kotte
+
+
+LEX
+Id1
+TEXT: The capital of Sri Lanka is Sri Jayawardenepura Kotte.
+TEMPLATE: The capital of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Sri Jayawardenepura Kotte is the capital of Sri Lanka.
+TEMPLATE: PATIENT-1 is the capital of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id220 1 Building
+
+TRIPLES
+South_Africa | leaderName | Jacob_Zuma
+
+
+ENTITY MAP
+AGENT-1 | South_Africa
+PATIENT-1 | Jacob_Zuma
+
+
+LEX
+Id1
+TEXT: South Africa's leader is called Jacob Zuma.
+TEMPLATE: AGENT-1 's leader is called PATIENT-1 .
+CORRECT: AGENT-1 leader is called PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: The leader of South Africa is Jacob Zuma.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Jacob Zuma is a leader in South Africa.
+TEMPLATE: PATIENT-1 is a leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id218 1 Building
+
+TRIPLES
+South_Africa | ethnicGroup | Coloured
+
+
+ENTITY MAP
+AGENT-1 | South_Africa
+PATIENT-1 | Coloured
+
+
+LEX
+Id1
+TEXT: One of South Africa's ethnic groups are the Coloured.
+TEMPLATE: One of AGENT-1 's ethnic groups are PATIENT-1 .
+CORRECT: One of AGENT-1 ethnic groups are PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: Coloured people are an ethnic group in South Africa.
+TEMPLATE: PATIENT-1 people are an ethnic group in AGENT-1 .
+CORRECT: PATIENT-1 are an ethnic group in AGENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id217 1 Building
+
+TRIPLES
+South_Africa | ethnicGroup | Asian_South_Africans
+
+
+ENTITY MAP
+AGENT-1 | South_Africa
+PATIENT-1 | Asian_South_Africans
+
+
+LEX
+Id1
+TEXT: In South Africa there is an ethnic group of Asian South Africans.
+TEMPLATE: In AGENT-1 there is an ethnic group of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: One of the ethnic groups within South Africa is Asian South Africans.
+TEMPLATE: One of the ethnic groups within AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id214 1 Building
+
+TRIPLES
+Republic_of_Ireland | language | Irish_language
+
+
+ENTITY MAP
+AGENT-1 | Republic_of_Ireland
+PATIENT-1 | Irish_language
+
+
+LEX
+Id1
+TEXT: In the Republic of Ireland they speak Irish.
+TEMPLATE: In AGENT-1 they speak PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Irish is one of the official language in the Republic of Ireland.
+TEMPLATE: PATIENT-1 is one of the official language in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Irish is the official language of the Republic of Ireland.
+TEMPLATE: PATIENT-1 is the official language of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id213 1 Building
+
+TRIPLES
+Republic_of_Ireland | demonym | Irish_people
+
+
+ENTITY MAP
+AGENT-1 | Republic_of_Ireland
+PATIENT-1 | Irish_people
+
+
+LEX
+Id1
+TEXT: Irish people are the inhabitants of the Republic of Ireland.
+TEMPLATE: PATIENT-1 are the inhabitants of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Irish people inhabit the Republic of Ireland.
+TEMPLATE: PATIENT-1 inhabit AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The demonym of natives of the Republic of Ireland is Irish people.
+TEMPLATE: The demonym of natives of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id212 1 Building
+
+TRIPLES
+Republic_of_Ireland | currency | Euro
+
+
+ENTITY MAP
+AGENT-1 | Republic_of_Ireland
+PATIENT-1 | Euro
+
+
+LEX
+Id1
+TEXT: The currency of the Republic of Ireland is the euro.
+TEMPLATE: The currency of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Republic of Ireland's currency is the Euro.
+TEMPLATE: AGENT-1 's currency is PATIENT-1 .
+CORRECT: AGENT-1 currency is PATIENT-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id211 1 Building
+
+TRIPLES
+Perth | country | Australia
+
+
+ENTITY MAP
+AGENT-1 | Perth
+PATIENT-1 | Australia
+
+
+LEX
+Id1
+TEXT: Perth is located in Australia.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Perth is in Australia.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id210 1 Building
+
+TRIPLES
+Pacific_Grove,_California | country | United_States
+
+
+ENTITY MAP
+AGENT-1 | Pacific_Grove,_California
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Pacific Grove, California is in the United States.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Pacific Grove, California is located in the United States.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id208 1 Building
+
+TRIPLES
+New_York_City | isPartOf | Manhattan
+
+
+ENTITY MAP
+AGENT-1 | New_York_City
+PATIENT-1 | Manhattan
+
+
+LEX
+Id1
+TEXT: Manhattan is part of New York City.
+TEMPLATE: PATIENT-1 is part of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: New York City is part of Manhattan.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id207 1 Building
+
+TRIPLES
+New_York_City | isPartOf | Brooklyn
+
+
+ENTITY MAP
+AGENT-1 | New_York_City
+PATIENT-1 | Brooklyn
+
+
+LEX
+Id1
+TEXT: Brooklyn is part of New York City.
+TEMPLATE: PATIENT-1 is part of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Brooklyn is a part of New York City.
+TEMPLATE: PATIENT-1 is a part of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id206 1 Building
+
+TRIPLES
+New_York_City | country | United_States
+
+
+ENTITY MAP
+AGENT-1 | New_York_City
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: New York city is located in the U.S.
+TEMPLATE: AGENT-1 is located in PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: New York City is in the United States.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: New York City is located in the United States.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id204 1 Building
+
+TRIPLES
+Marriott_International | location | Bethesda,_Maryland
+
+
+ENTITY MAP
+AGENT-1 | Marriott_International
+PATIENT-1 | Bethesda,_Maryland
+
+
+LEX
+Id1
+TEXT: Marriott International is based in Bethesda, Maryland.
+TEMPLATE: AGENT-1 is based in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Marriott International is located in Bethesda Maryland.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Marriott International is located in Bethseda, Maryland.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id202 1 Building
+
+TRIPLES
+Manhattan | leaderName | Gale_Brewer
+
+
+ENTITY MAP
+AGENT-1 | Manhattan
+PATIENT-1 | Gale_Brewer
+
+
+LEX
+Id1
+TEXT: The leader of Manhattan is Gale Brewer.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Gale Brewer is the leader of Manhattan.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id201 1 Building
+
+TRIPLES
+Manhattan | leaderName | Cyrus_Vance,_Jr.
+
+
+ENTITY MAP
+AGENT-1 | Manhattan
+PATIENT-1 | Cyrus_Vance,_Jr.
+
+
+LEX
+Id1
+TEXT: The leader of Manhattan is Cyrus Vance Jr.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Cyrus Vance Jr. is one of the leaders of Manhattan.
+TEMPLATE: PATIENT-1 is one of the leaders of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id198 1 Building
+
+TRIPLES
+London | leaderName | Boris_Johnson
+
+
+ENTITY MAP
+AGENT-1 | London
+PATIENT-1 | Boris_Johnson
+
+
+LEX
+Id1
+TEXT: Boris Johnson is the leader in London.
+TEMPLATE: PATIENT-1 is the leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The leader of London is called Boris Johnson.
+TEMPLATE: The leader of AGENT-1 is called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id197 1 Building
+
+TRIPLES
+Julia_Morgan | significantProject | Hearst_Castle
+
+
+ENTITY MAP
+AGENT-1 | Julia_Morgan
+PATIENT-1 | Hearst_Castle
+
+
+LEX
+Id1
+TEXT: Hearst Castle was a significant project of Julia Morgan.
+TEMPLATE: PATIENT-1 was a significant project of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Julia Morgan was the architect of the landmark Hearst Castle.
+TEMPLATE: AGENT-1 was the architect of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Hearst Castle was a significant project for Julia Morgan.
+TEMPLATE: PATIENT-1 was a significant project for AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id195 1 Building
+
+TRIPLES
+Julia_Morgan | significantBuilding | Chinatown,_San_Francisco
+
+
+ENTITY MAP
+AGENT-1 | Julia_Morgan
+PATIENT-1 | Chinatown,_San_Francisco
+
+
+LEX
+Id1
+TEXT: Julie Morgan designed significant buildings in Chinatown, San Francisco.
+TEMPLATE: AGENT-1 designed significant buildings in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Julia Morgan is the architect behind Chinatown in San Francisco.
+TEMPLATE: AGENT-1 is the architect behind PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id192 1 Building
+
+TRIPLES
+Julia_Morgan | birthPlace | California
+
+
+ENTITY MAP
+AGENT-1 | Julia_Morgan
+PATIENT-1 | California
+
+
+LEX
+Id1
+TEXT: The birth place of Julia Morgan is California.
+TEMPLATE: The birth place of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Julia Morgan was born in California.
+TEMPLATE: AGENT-1 was born in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id191 1 Building
+
+TRIPLES
+John_Madin | hometown | Birmingham
+
+
+ENTITY MAP
+AGENT-1 | John_Madin
+PATIENT-1 | Birmingham
+
+
+LEX
+Id1
+TEXT: Birmingham is the home town of John Madin.
+TEMPLATE: PATIENT-1 is the home town of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The hometown of Joh Madin is Birmingham.
+TEMPLATE: The hometown of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id189 1 Building
+
+TRIPLES
+Japan | leaderName | Shinzō_Abe
+
+
+ENTITY MAP
+AGENT-1 | Japan
+PATIENT-1 | Shinzō_Abe
+
+
+LEX
+Id1
+TEXT: The leader of Japan is Shinzō Abe.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Shinzo Abe is the leader of Japan.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id188 1 Building
+
+TRIPLES
+Japan | leaderName | Akihito
+
+
+ENTITY MAP
+AGENT-1 | Japan
+PATIENT-1 | Akihito
+
+
+LEX
+Id1
+TEXT: The leader of Japan is called Akihito.
+TEMPLATE: The leader of AGENT-1 is called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The leader of Japan is Akihito.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Emperor of Japan is Akihito.
+TEMPLATE: The Emperor of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id187 1 Building
+
+TRIPLES
+Japan | ethnicGroup | Vietnamese_people_in_Japan
+
+
+ENTITY MAP
+AGENT-1 | Japan
+PATIENT-1 | Vietnamese_people_in_Japan
+
+
+LEX
+Id1
+TEXT: There is an ethnic group of Vietnamese people in Japan.
+TEMPLATE: AGENT-1 is an ethnic group of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Vietnamese people in Japan are an ethnic group from Japan.
+TEMPLATE: PATIENT-1 are an ethnic group from AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id186 1 Building
+
+TRIPLES
+Japan | ethnicGroup | Koreans_in_Japan
+
+
+ENTITY MAP
+AGENT-1 | Japan
+PATIENT-1 | Koreans_in_Japan
+
+
+LEX
+Id1
+TEXT: Japan has an ethnic group called Koreans in Japan.
+TEMPLATE: AGENT-1 has an ethnic group called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Japan has an ethnic group of Koreans.
+TEMPLATE: AGENT-1 has an ethnic group of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id183 1 Building
+
+TRIPLES
+Japan | ethnicGroup | Chinese_people_in_Japan
+
+
+ENTITY MAP
+AGENT-1 | Japan
+PATIENT-1 | Chinese_people_in_Japan
+
+
+LEX
+Id1
+TEXT: There is an ethnic group of Chinese people in Japan.
+TEMPLATE: AGENT-1 is an ethnic group of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: In Japan there is an ethnic group of Chinese people.
+TEMPLATE: In AGENT-1 there is an ethnic group of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id182 1 Building
+
+TRIPLES
+India | leaderName | T._S._Thakur
+
+
+ENTITY MAP
+AGENT-1 | India
+PATIENT-1 | T._S._Thakur
+
+
+LEX
+Id1
+TEXT: T S Thakur is a leader in India.
+TEMPLATE: PATIENT-1 is a leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The leader of India is called T S Thakur.
+TEMPLATE: The leader of AGENT-1 is called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: T. S. Thakur was an Indian leader.
+TEMPLATE: PATIENT-1 was AGENT-1 .
+CORRECT: PATIENT-1 was AGENT-1 leader .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id181 1 Building
+
+TRIPLES
+India | leaderName | Narendra_Modi
+
+
+ENTITY MAP
+AGENT-1 | India
+PATIENT-1 | Narendra_Modi
+
+
+LEX
+Id1
+TEXT: Narendra Modi leads India.
+TEMPLATE: PATIENT-1 leads AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The leader of India is Narendra Modi.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Narendra Modi is the prime minister of India.
+TEMPLATE: PATIENT-1 is the prime minister of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id180 1 Building
+
+TRIPLES
+Illinois | language | English_language
+
+
+ENTITY MAP
+AGENT-1 | Illinois
+PATIENT-1 | English_language
+
+
+LEX
+Id1
+TEXT: The English language is spoken in Illinois.
+TEMPLATE: PATIENT-1 is spoken in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The language of Illinois is the English language.
+TEMPLATE: The language of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id179 1 Building
+
+TRIPLES
+Illinois | country | United_States
+
+
+ENTITY MAP
+AGENT-1 | Illinois
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Illinois is in the United States.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Illinois state is in the United States.
+TEMPLATE: AGENT-1 state is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Illinois is situated in the United States.
+TEMPLATE: AGENT-1 is situated in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id178 1 Building
+
+TRIPLES
+Illinois | capital | Springfield,_Illinois
+
+
+ENTITY MAP
+AGENT-1 | Illinois
+PATIENT-1 | Springfield,_Illinois
+
+
+LEX
+Id1
+TEXT: The capital of Illinois is Springfield, Illinois.
+TEMPLATE: The capital of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The capital of Illinois is Springfield.
+TEMPLATE: The capital of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id176 1 Building
+
+TRIPLES
+Gujarat | leaderName | Anandiben_Patel
+
+
+ENTITY MAP
+AGENT-1 | Gujarat
+PATIENT-1 | Anandiben_Patel
+
+
+LEX
+Id1
+TEXT: Anandiben Patel is the leader of Gujarat.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Anandiben Patel was the leader of Gujurat.
+TEMPLATE: PATIENT-1 was the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id175 1 Building
+
+TRIPLES
+George_Winkler | country | United_States
+
+
+ENTITY MAP
+AGENT-1 | George_Winkler
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: George Winkler is from the United States.
+TEMPLATE: AGENT-1 is from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: George Winkler is from the United States of America.
+TEMPLATE: AGENT-1 is from PATIENT-1 of America .
+CORRECT: AGENT-1 is from PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id174 1 Building
+
+TRIPLES
+Ethiopia | leaderName | Hailemariam_Desalegn
+
+
+ENTITY MAP
+AGENT-1 | Ethiopia
+PATIENT-1 | Hailemariam_Desalegn
+
+
+LEX
+Id1
+TEXT: The leader of Ethiopia is Hailemariam Desalegn.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Hailemariam Desalegn is the leader of Ethiopia.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id173 1 Building
+
+TRIPLES
+Ethiopia | language | Amharic
+
+
+ENTITY MAP
+AGENT-1 | Ethiopia
+PATIENT-1 | Amharic
+
+
+LEX
+Id1
+TEXT: Amharic is a language found in Ethiopia.
+TEMPLATE: PATIENT-1 is a language found in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The language spoken in Ethiopia is Amharic.
+TEMPLATE: The language spoken in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Amharic is the language of Ethiopia.
+TEMPLATE: PATIENT-1 is the language of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id172 1 Building
+
+TRIPLES
+Ethiopia | currency | Ethiopian_birr
+
+
+ENTITY MAP
+AGENT-1 | Ethiopia
+PATIENT-1 | Ethiopian_birr
+
+
+LEX
+Id1
+TEXT: Ethiopia's currency is the Ethiopian Birr.
+TEMPLATE: AGENT-1 's currency is PATIENT-1 .
+CORRECT: AGENT-1 currency is PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: The Ethiopian birr is the money used in Ethiopia.
+TEMPLATE: PATIENT-1 is the money used in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The currency of Ethiopia is the Ethiopian birr.
+TEMPLATE: The currency of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id171 1 Building
+
+TRIPLES
+Eastern_Province,_Sri_Lanka | leaderName | Austin_Fernando
+
+
+ENTITY MAP
+AGENT-1 | Eastern_Province,_Sri_Lanka
+PATIENT-1 | Austin_Fernando
+
+
+LEX
+Id1
+TEXT: The leader of the Eastern Province, Sri Lanka is Austin Fernando.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Austin Fernando is the leader of the Eastern Province of Sri Lanka.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Austin Fernando is the name of the leader in the Eastern Province of Sri Lanka.
+TEMPLATE: PATIENT-1 is the name of the leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id170 1 Building
+
+TRIPLES
+Eastern_Province,_Sri_Lanka | governingBody | Eastern_Provincial_Council
+
+
+ENTITY MAP
+AGENT-1 | Eastern_Province,_Sri_Lanka
+PATIENT-1 | Eastern_Provincial_Council
+
+
+LEX
+Id1
+TEXT: The governing body of the Eastern Province Sri Lanka is the Eastern Provincial Council.
+TEMPLATE: The governing body of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Eastern Provincial Council is the governing body of Eastern Province in Sri Lanka.
+TEMPLATE: PATIENT-1 is the governing body of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Eastern Provincial Council is the governing body of Eastern Province, Sri Lanka.
+TEMPLATE: PATIENT-1 is the governing body of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id169 1 Building
+
+TRIPLES
+Dublin | leaderTitle | European_Parliament
+
+
+ENTITY MAP
+AGENT-1 | Dublin
+PATIENT-1 | European_Parliament
+
+
+LEX
+Id1
+TEXT: Dublin is lead by the European Parliament.
+TEMPLATE: AGENT-1 is lead by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: European Parliament is the title of the leader of Dublin.
+TEMPLATE: PATIENT-1 is the title of the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The leader of the government in Dublin is the European Parliament.
+TEMPLATE: The leader of the government in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id167 1 Building
+
+TRIPLES
+Dublin | isPartOf | Republic_of_Ireland
+
+
+ENTITY MAP
+AGENT-1 | Dublin
+PATIENT-1 | Republic_of_Ireland
+
+
+LEX
+Id1
+TEXT: Dublin is part of the Republic of Ireland.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Dublin is a part of the Republic of Ireland.
+TEMPLATE: AGENT-1 is a part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id166 1 Building
+
+TRIPLES
+Denmark | leaderName | Margrethe_II_of_Denmark
+
+
+ENTITY MAP
+AGENT-1 | Denmark
+PATIENT-1 | Margrethe_II_of_Denmark
+
+
+LEX
+Id1
+TEXT: Margrethe II of Denmark is the leader of Denmark.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Margrethe II of Denmark is the name of Denmark's leader.
+TEMPLATE: PATIENT-1 is the name of AGENT-1 's leader .
+CORRECT: PATIENT-1 is the name of AGENT-1 leader .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id165 1 Building
+
+TRIPLES
+Denmark | leaderName | Lars_Løkke_Rasmussen
+
+
+ENTITY MAP
+AGENT-1 | Denmark
+PATIENT-1 | Lars_Løkke_Rasmussen
+
+
+LEX
+Id1
+TEXT: Lars Lokke Rasmussen is Denmark's leader.
+TEMPLATE: PATIENT-1 is AGENT-1 's leader .
+CORRECT:  PATIENT-1 is AGENT-1 leader .
+COMMENT:
+-
+Id2
+TEXT: The leader of Denmark is Lars Løkke Rasmussen.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Lars Løkke Rasmussen is the prime minister of Denmark.
+TEMPLATE: PATIENT-1 is the prime minister of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id163 1 Building
+
+TRIPLES
+Denmark | language | German_language
+
+
+ENTITY MAP
+AGENT-1 | Denmark
+PATIENT-1 | German_language
+
+
+LEX
+Id1
+TEXT: One of the languages in Denmark is the German.
+TEMPLATE: One of PATIENT-1 in AGENT-1 is the German .
+CORRECT: One of the languages in AGENT-1 is PATIENT-1 .
+COMMENT: language
+-
+Id2
+TEXT: One of the languages used in Denmark is the German language.
+TEMPLATE: One of the languages used in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id162 1 Building
+
+TRIPLES
+Denmark | language | Faroese_language
+
+
+ENTITY MAP
+AGENT-1 | Denmark
+PATIENT-1 | Faroese_language
+
+
+LEX
+Id1
+TEXT: The Faroese Language is spoken in Denmark.
+TEMPLATE: PATIENT-1 is spoken in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The language Faroese is spoken in Denmark.
+TEMPLATE: PATIENT-1 is spoken in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id161 1 Building
+
+TRIPLES
+Denmark | capital | Copenhagen
+
+
+ENTITY MAP
+AGENT-1 | Denmark
+PATIENT-1 | Copenhagen
+
+
+LEX
+Id1
+TEXT: Copenhagen is the capital of Denmark.
+TEMPLATE: PATIENT-1 is the capital of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The capital of Denmark is Copenhagen.
+TEMPLATE: The capital of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id160 1 Building
+
+TRIPLES
+County_Limerick | governmentType | Limerick_City_and_County_Council
+
+
+ENTITY MAP
+AGENT-1 | County_Limerick
+PATIENT-1 | Limerick_City_and_County_Council
+
+
+LEX
+Id1
+TEXT: County Limerick is governed by the Limerick City and County Council.
+TEMPLATE: AGENT-1 is governed by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Limerick City and County Council governs County Limerick.
+TEMPLATE: PATIENT-1 governs AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id159 1 Building
+
+TRIPLES
+College_of_William_&_Mary | chancellor | Robert_Gates
+
+
+ENTITY MAP
+AGENT-1 | College_of_William_&_Mary
+PATIENT-1 | Robert_Gates
+
+
+LEX
+Id1
+TEXT: Robert Gates is the chancellor of the College of William & Mary.
+TEMPLATE: PATIENT-1 is the chancellor of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Chancellor of the College of William and Mary is Robert Gates.
+TEMPLATE: The Chancellor of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Robert Gates served as chancellor of the College of William and Mary.
+TEMPLATE: PATIENT-1 served as chancellor of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id154 1 Building
+
+TRIPLES
+Cleveland | country | United_States
+
+
+ENTITY MAP
+AGENT-1 | Cleveland
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Cleveland is located in the United States.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Cleveland is in the United States.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id153 1 Building
+
+TRIPLES
+Chicago | leaderName | Susana_Mendoza
+
+
+ENTITY MAP
+AGENT-1 | Chicago
+PATIENT-1 | Susana_Mendoza
+
+
+LEX
+Id1
+TEXT: Susana Mendoza is the leader of Chicago.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The leader of Chicago is Susana Mendoza.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Susana Mendoza is a leader in Chicago.
+TEMPLATE: PATIENT-1 is a leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id152 1 Building
+
+TRIPLES
+Chicago | leaderName | Rahm_Emanuel
+
+
+ENTITY MAP
+AGENT-1 | Chicago
+PATIENT-1 | Rahm_Emanuel
+
+
+LEX
+Id1
+TEXT: Rahm Emanuel is a leader in Chicago.
+TEMPLATE: PATIENT-1 is a leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Chicago's leader is called Rahm Emanuel.
+TEMPLATE: AGENT-1 's leader is called PATIENT-1 .
+CORRECT: AGENT-1 leader is called PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: Rahm Emanuel is the leader of Chicago.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id151 1 Building
+
+TRIPLES
+Chicago | isPartOf | Illinois
+
+
+ENTITY MAP
+AGENT-1 | Chicago
+PATIENT-1 | Illinois
+
+
+LEX
+Id1
+TEXT: Chicago is part of Illinois.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Chicago is part of the State of Illinois.
+TEMPLATE: AGENT-1 is part of the State of PATIENT-1 .
+CORRECT: AGENT-1 is part of PATIENT-1 .
+COMMENT: modifier
+-
+Id3
+TEXT: the city of Chicago is part of the state of Illinois.
+TEMPLATE: the city of AGENT-1 is part of the state of PATIENT-1 .
+CORRECT: AGENT-1 is part of PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id150 1 Building
+
+TRIPLES
+Chicago | isPartOf | Cook_County,_Illinois
+
+
+ENTITY MAP
+AGENT-1 | Chicago
+PATIENT-1 | Cook_County,_Illinois
+
+
+LEX
+Id1
+TEXT: Chicago is part of Cook County, Illinois.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Chicago is in Cook County, Illinois.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id149 1 Building
+
+TRIPLES
+Chicago | country | United_States
+
+
+ENTITY MAP
+AGENT-1 | Chicago
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Chicago is located in the United States.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Chicago is located in the U.S.
+TEMPLATE: AGENT-1 is located in PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Chicago is in the United States.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id147 1 Building
+
+TRIPLES
+Birmingham | leaderName | Liberal_Democrats
+
+
+ENTITY MAP
+AGENT-1 | Birmingham
+PATIENT-1 | Liberal_Democrats
+
+
+LEX
+Id1
+TEXT: The Liberal Democrats are the leaders of Birmingham.
+TEMPLATE: PATIENT-1 are the leaders of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The leader of Birmingham are the Liberal Democrats.
+TEMPLATE: The leader of AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Liberal Democrats are leaders of Birmingham.
+TEMPLATE: PATIENT-1 are leaders of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id146 1 Building
+
+TRIPLES
+Birmingham | leaderName | Labour_Party_(UK)
+
+
+ENTITY MAP
+AGENT-1 | Birmingham
+PATIENT-1 | Labour_Party_(UK)
+
+
+LEX
+Id1
+TEXT: Birmingham Council is lead by the Labour Party (UK).
+TEMPLATE: AGENT-1 Council is lead by PATIENT-1 .
+CORRECT: AGENT-1 is lead by PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: The Labour Party leads Birmingham.
+TEMPLATE: PATIENT-1 leads AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id142 1 Building
+
+TRIPLES
+Birmingham | leaderName | Andrew_Mitchell
+
+
+ENTITY MAP
+AGENT-1 | Birmingham
+PATIENT-1 | Andrew_Mitchell
+
+
+LEX
+Id1
+TEXT: Andrew Mitchell is the leader of Birmingham.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Birmingham's leader is Andrew Mitchell.
+TEMPLATE: AGENT-1 's leader is PATIENT-1 .
+CORRECT: AGENT-1 leader is PATIENT-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id141 1 Building
+
+TRIPLES
+Birmingham | governingBody | Birmingham_City_Council
+
+
+ENTITY MAP
+AGENT-1 | Birmingham
+PATIENT-1 | Birmingham_City_Council
+
+
+LEX
+Id1
+TEXT: Birmingham's governing body is Birmingham City Council.
+TEMPLATE: AGENT-1 's governing body is PATIENT-1 .
+CORRECT: AGENT-1 governing body is PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: The Birmingham City Council is the governing body of Birmingham.
+TEMPLATE: PATIENT-1 is the governing body of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The governing body of Birmingham is Birmingham City Council.
+TEMPLATE: The governing body of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id139 1 Building
+
+TRIPLES
+Augustus_Pugin | birthPlace | Bloomsbury
+
+
+ENTITY MAP
+AGENT-1 | Augustus_Pugin
+PATIENT-1 | Bloomsbury
+
+
+LEX
+Id1
+TEXT: The birth place of Augustus Pugin is Bloomsbury.
+TEMPLATE: The birth place of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Augustus Pugin's birthplace is Bloomsbury.
+TEMPLATE: AGENT-1 's birthplace is PATIENT-1 .
+CORRECT: AGENT-1 birthplace is PATIENT-1 .
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id136 1 Building
+
+TRIPLES
+Asser_Levy_Public_Baths | location | 23rd_Street_(Manhattan)
+
+
+ENTITY MAP
+AGENT-1 | Asser_Levy_Public_Baths
+PATIENT-1 | 23rd_Street_(Manhattan)
+
+
+LEX
+Id1
+TEXT: Asser Levy Public Baths is located at 23rd Street (Manhattan).
+TEMPLATE: AGENT-1 is located at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Asser Levy Public Baths is located on 23rd Street, Manhattan.
+TEMPLATE: AGENT-1 is located on PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id135 1 Building
+
+TRIPLES
+Asser_Levy_Public_Baths | location | "Asser Levy Place and East 23rd Street"
+
+
+ENTITY MAP
+AGENT-1 | Asser_Levy_Public_Baths
+PATIENT-1 | "Asser Levy Place and East 23rd Street"
+
+
+LEX
+Id1
+TEXT: The Asser Levy Public Baths is in Asser Levy Place and East 23rd Street.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Asser Levy Public Baths are located on Asser Levy Place and East 23rd Street.
+TEMPLATE: AGENT-1 are located on PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Asser Levy Public Baths are located in Asser Levy Place , East 23rd Street.
+TEMPLATE: AGENT-1 are located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id134 1 Building
+
+TRIPLES
+Asser_Levy_Public_Baths | architecturalStyle | Romanesque_Revival_architecture
+
+
+ENTITY MAP
+AGENT-1 | Asser_Levy_Public_Baths
+PATIENT-1 | Romanesque_Revival_architecture
+
+
+LEX
+Id1
+TEXT: The Asser Levy Public Baths have the Romanesque Revival style of architecture.
+TEMPLATE: AGENT-1 have PATIENT-1 .
+CORRECT: AGENT-1 have PATIENT-1 style of architecture .
+COMMENT: modifier
+-
+Id2
+TEXT: The Asser Levy Public Baths architectural style is that of Romanesque Revival.
+TEMPLATE: The AGENT-1 architectural style is that of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Asser Levy Public Baths are in the architectural sytle of Romanesque Revival architecture.
+TEMPLATE: AGENT-1 are in the architectural sytle of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id158 1 Building
+
+TRIPLES
+Cleveland | leaderName | Frank_G._Jackson
+
+
+ENTITY MAP
+AGENT-1 | Cleveland
+PATIENT-1 | Frank_G._Jackson
+
+
+LEX
+Id1
+TEXT: Frank G Jackson is a leader in Cleveland.
+TEMPLATE: PATIENT-1 is a leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: the leader in Cleveland is Frank G Jackson.
+TEMPLATE: the leader in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id132 1 Building
+
+TRIPLES
+Asser_Levy_Public_Baths | ReferenceNumber in the National Register of Historic Places | "80002709"
+
+
+ENTITY MAP
+AGENT-1 | Asser_Levy_Public_Baths
+PATIENT-1 | "80002709"
+
+
+LEX
+Id1
+TEXT: Asser Levy Public Baths has the reference number 80002709 in the National Register of Historic Places.
+TEMPLATE: AGENT-1 has PATIENT-1 in the National Register of Historic Places .
+CORRECT: AGENT-1 has the reference number PATIENT-1 in the National Register of Historic Places .
+COMMENT: modifier
+-
+Id2
+TEXT: The Reference Number in the National Register of Historic Places of Asser Levy Public Baths is 80002709.
+TEMPLATE: The Reference Number in the National Register of Historic Places of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Asser Levy Public Baths' reference number is 80002709 in the National Register of Historic Places.
+TEMPLATE: AGENT-1 ' reference number is PATIENT-1 in the National Register of Historic Places .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id157 1 Building
+
+TRIPLES
+Cleveland | isPartOf | Ohio
+
+
+ENTITY MAP
+AGENT-1 | Cleveland
+PATIENT-1 | Ohio
+
+
+LEX
+Id1
+TEXT: Cleveland is located within Ohio,.
+TEMPLATE: AGENT-1 is located within PATIENT-1 , .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Cleveland is part of Ohio.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id130 1 Building
+
+TRIPLES
+Asilomar_Conference_Grounds | location | "Asilomar Blvd., Pacific Grove, California"
+
+
+ENTITY MAP
+AGENT-1 | Asilomar_Conference_Grounds
+PATIENT-1 | "Asilomar Blvd., Pacific Grove, California"
+
+
+LEX
+Id1
+TEXT: Asilomar Conference Grouns is located at Asilomar Blvd., Pacific Grove, California.
+TEMPLATE: AGENT-1 is located at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Asilomar Conference Grounds is located on Asilomar Blvd, Pacific Grove, California.
+TEMPLATE: AGENT-1 is located on PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The location of Asilomar Conference Grounds is Asilomar Blvd., Pacific Grove, California.
+TEMPLATE: The location of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id156 1 Building
+
+TRIPLES
+Cleveland | isPartOf | Cuyahoga_County,_Ohio
+
+
+ENTITY MAP
+AGENT-1 | Cleveland
+PATIENT-1 | Cuyahoga_County,_Ohio
+
+
+LEX
+Id1
+TEXT: Cleveland is part of Cuyahoga County, Ohio.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Cleveland is part of the Cuyahoga County in Ohio.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id155 1 Building
+
+TRIPLES
+Cleveland | governingBody | Cleveland_City_Council
+
+
+ENTITY MAP
+AGENT-1 | Cleveland
+PATIENT-1 | Cleveland_City_Council
+
+
+LEX
+Id1
+TEXT: Cleveland's governing body is Cleveland City Council.
+TEMPLATE: AGENT-1 's governing body is PATIENT-1 .
+CORRECT: AGENT-1 governing body is PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: The Cleveland City Council is the governing body of Cleveland.
+TEMPLATE: PATIENT-1 is the governing body of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The governing body of Cleveland is Cleveland City Council.
+TEMPLATE: The governing body of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id133 1 Building
+
+TRIPLES
+Asser_Levy_Public_Baths | added to the National Register of Historic Places | "1980-04-23"
+
+
+ENTITY MAP
+AGENT-1 | Asser_Levy_Public_Baths
+PATIENT-1 | "1980-04-23"
+
+
+LEX
+Id1
+TEXT: Asser Levy Public Baths was added to the National Register of Historic Places on 1980-04-23.
+TEMPLATE: AGENT-1 was added to the National Register of Historic Places on PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Asser Levy Public Baths was added to the National Register of Historic Places on "1980-04-23".
+TEMPLATE: AGENT-1 was added to the National Register of Historic Places on `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Asser Levy Public Baths was added to the National Register of Historic Places on 23rd April 1980.
+TEMPLATE: AGENT-1 was added to the National Register of Historic Places on PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id131 1 Building
+
+TRIPLES
+Asilomar_Conference_Grounds | location | Pacific_Grove,_California
+
+
+ENTITY MAP
+AGENT-1 | Asilomar_Conference_Grounds
+PATIENT-1 | Pacific_Grove,_California
+
+
+LEX
+Id1
+TEXT: The Asilomar Conference Grounds is located at Pacific Grove, California.
+TEMPLATE: AGENT-1 is located at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Asilomar Conference Grounds are located in Pacific Grove, California.
+TEMPLATE: AGENT-1 are located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id129 1 Building
+
+TRIPLES
+Asilomar_Conference_Grounds | architecturalStyle | Arts_and_Crafts_movement
+
+
+ENTITY MAP
+AGENT-1 | Asilomar_Conference_Grounds
+PATIENT-1 | Arts_and_Crafts_movement
+
+
+LEX
+Id1
+TEXT: Asilomar Conference Grounds has the architectural style of the Arts and Crafts Movement.
+TEMPLATE: AGENT-1 has the architectural style of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Asilomar Conference Grounds has an Arts and Crafts movement style architecture.
+TEMPLATE: AGENT-1 has an PATIENT-1 style architecture .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Asilomar Conference Grounds are in the architectural style of the Arts and Crafts Movement.
+TEMPLATE: AGENT-1 are in the architectural style of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id127 1 Building
+
+TRIPLES
+Asilomar_Conference_Grounds | added to the National Register of Historic Places | "1987-02-27"
+
+
+ENTITY MAP
+AGENT-1 | Asilomar_Conference_Grounds
+PATIENT-1 | "1987-02-27"
+
+
+LEX
+Id1
+TEXT: The Asilomar Conference Grounds were added to the National Register of Historic Places on 27 February 1987.
+TEMPLATE: AGENT-1 were added to the National Register of Historic Places on PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Asilomar Conference Grounds was added to the National Register of Historic Places on February the 27nd 1987.
+TEMPLATE: AGENT-1 was added to the National Register of Historic Places on PATIENT-1 the 27nd 1987 .
+CORRECT: AGENT-1 was added to the National Register of Historic Places on PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id126 1 Building
+
+TRIPLES
+Asilomar_Conference_Grounds | ReferenceNumber in the National Register of Historic Places | "87000823"
+
+
+ENTITY MAP
+AGENT-1 | Asilomar_Conference_Grounds
+PATIENT-1 | "87000823"
+
+
+LEX
+Id1
+TEXT: Asilomar Conference Grounds has the reference number 87000823 in the National Register of Historic Places.
+TEMPLATE: AGENT-1 has PATIENT-1 in the National Register of Historic Places .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The reference number in the the National Register of Historic Places for Asilomar Conference Grounds is 87000823.
+TEMPLATE: The reference number in the the National Register of Historic Places for AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: "87000823" is Asilomar Conference Grounds' reference number in the National Register of Historic Places.
+TEMPLATE: `` PATIENT-1 '' is AGENT-1 ' reference number in the National Register of Historic Places .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id124 1 Building
+
+TRIPLES
+Asherton,_Texas | isPartOf | Dimmit_County,_Texas
+
+
+ENTITY MAP
+AGENT-1 | Asherton,_Texas
+PATIENT-1 | Dimmit_County,_Texas
+
+
+LEX
+Id1
+TEXT: Asherton, Texas is part of Dimmit County, Texas.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Asherton is part of Dimmit County, Texas.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id123 1 Building
+
+TRIPLES
+Asherton,_Texas | country | United_States
+
+
+ENTITY MAP
+AGENT-1 | Asherton,_Texas
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Asherton Texas is in the United States.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Asherton is situated in Texas,United States.
+TEMPLATE: AGENT-1 is situated in Texas , PATIENT-1 .
+CORRECT: AGENT-1 is situated in PATIENT-1 .
+COMMENT: modifier
+-
+Id3
+TEXT: Asherton , Texas is in the country of the United States.
+TEMPLATE: AGENT-1 is in the country of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id122 1 Building
+
+TRIPLES
+Asher_and_Mary_Isabelle_Richardson_House | yearOfConstruction | 1911
+
+
+ENTITY MAP
+AGENT-1 | Asher_and_Mary_Isabelle_Richardson_House
+PATIENT-1 | 1911
+
+
+LEX
+Id1
+TEXT: Asher and Mary Isabelle Richardson House was built in 1911.
+TEMPLATE: AGENT-1 was built in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Asher and Mary Isabelle Richardson House was constructed in 1911.
+TEMPLATE: AGENT-1 was constructed in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id121 1 Building
+
+TRIPLES
+Asher_and_Mary_Isabelle_Richardson_House | location | U.S._Route_83
+
+
+ENTITY MAP
+AGENT-1 | Asher_and_Mary_Isabelle_Richardson_House
+PATIENT-1 | U.S._Route_83
+
+
+LEX
+Id1
+TEXT: Asher and Mary Isabelle Richardson House is located at U.S. Route 83.
+TEMPLATE: AGENT-1 is located at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Asher and Mary Isabelle Richardson House is located on U.S. Route 83.
+TEMPLATE: AGENT-1 is located on PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id119 1 Building
+
+TRIPLES
+Asher_and_Mary_Isabelle_Richardson_House | architect | Alfred_Giles_(architect)
+
+
+ENTITY MAP
+AGENT-1 | Asher_and_Mary_Isabelle_Richardson_House
+PATIENT-1 | Alfred_Giles_(architect)
+
+
+LEX
+Id1
+TEXT: Alfred Giles was the architect of Asher and Mary Isabelle Richardson House.
+TEMPLATE: PATIENT-1 was the architect of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Asher and Mary Isabelle Richardson House was designed by architect Alfred Giles.
+TEMPLATE: AGENT-1 was designed by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The architect of Asher and Mary Isabelle Richardson House was Alfred Giles.
+TEMPLATE: The architect of AGENT-1 was PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id117 1 Building
+
+TRIPLES
+Ampara_Hospital | state | Eastern_Province,_Sri_Lanka
+
+
+ENTITY MAP
+AGENT-1 | Ampara_Hospital
+PATIENT-1 | Eastern_Province,_Sri_Lanka
+
+
+LEX
+Id1
+TEXT: Ampara Hospital is in Eastern Province, Sri Lanka.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Ampara Hopsital is in the Eastern Province, Sri Lanka.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Ampara Hospital is situated in the Eastern Province state of Sri Lanka.
+TEMPLATE: AGENT-1 is situated in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id116 1 Building
+
+TRIPLES
+Ampara_Hospital | region | Ampara_District
+
+
+ENTITY MAP
+AGENT-1 | Ampara_Hospital
+PATIENT-1 | Ampara_District
+
+
+LEX
+Id1
+TEXT: Ampara Hospital is located in the region of Ampara District.
+TEMPLATE: AGENT-1 is located in the region of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Ampara hospital is located in Ampara district.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id115 1 Building
+
+TRIPLES
+Ampara_Hospital | location | Ampara
+
+
+ENTITY MAP
+AGENT-1 | Ampara_Hospital
+PATIENT-1 | Ampara
+
+
+LEX
+Id1
+TEXT: The Ampara Hospital is in Ampara.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Ampara Hospital is located in Ampara.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id114 1 Building
+
+TRIPLES
+Ampara_Hospital | bedCount | 476
+
+
+ENTITY MAP
+AGENT-1 | Ampara_Hospital
+PATIENT-1 | 476
+
+
+LEX
+Id1
+TEXT: The bed count of Ampara Hospital is 476.
+TEMPLATE: The bed count of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Ampara Hospital has 476 beds.
+TEMPLATE: AGENT-1 has PATIENT-1 beds .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id112 1 Building
+
+TRIPLES
+Amdavad_ni_Gufa | location | Ahmedabad
+
+
+ENTITY MAP
+AGENT-1 | Amdavad_ni_Gufa
+PATIENT-1 | Ahmedabad
+
+
+LEX
+Id1
+TEXT: The location of Amdavad ni Gufa is Ahmedabad.
+TEMPLATE: The location of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Amdavad ni Gufa is located in Ahmedabad.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id109 1 Building
+
+TRIPLES
+Alfred_Giles_(architect) | placeOfDeath | Kendall_County,_Texas
+
+
+ENTITY MAP
+AGENT-1 | Alfred_Giles_(architect)
+PATIENT-1 | Kendall_County,_Texas
+
+
+LEX
+Id1
+TEXT: The architect Alfred Giles died in Kendall County, Texas.
+TEMPLATE: AGENT-1 died in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The architect Alfred Giles died in Kendall County Texas.
+TEMPLATE: The architect Alfred Giles died in AGENT-1 .
+CORRECT: The architect AGENT-1 died in PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id108 1 Building
+
+TRIPLES
+Alfred_Giles_(architect) | birthPlace | England
+
+
+ENTITY MAP
+AGENT-1 | Alfred_Giles_(architect)
+PATIENT-1 | England
+
+
+LEX
+Id1
+TEXT: The architect Alfred Giles was born in England.
+TEMPLATE: AGENT-1 was born in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Architect, Alfred Giles was born in England.
+TEMPLATE: Architect , AGENT-1 was born in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id106 1 Building
+
+TRIPLES
+Alan_B._Miller_Hall | location | Williamsburg,_Virginia
+
+
+ENTITY MAP
+AGENT-1 | Alan_B._Miller_Hall
+PATIENT-1 | Williamsburg,_Virginia
+
+
+LEX
+Id1
+TEXT: The Alan B. Miller Hall is in Williamsburg, Virginia.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Alan B Miller Hall's location is Williamsburg, Virginia.
+TEMPLATE: AGENT-1 location is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Alan B Miller Hall is located in Williamsburg, Virginia.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id105 1 Building
+
+TRIPLES
+Alan_B._Miller_Hall | location | Virginia
+
+
+ENTITY MAP
+AGENT-1 | Alan_B._Miller_Hall
+PATIENT-1 | Virginia
+
+
+LEX
+Id1
+TEXT: Alan B Miller Hall is located in Virginia.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Alan B. Miller Hall is situated in Virginia.
+TEMPLATE: AGENT-1 is situated in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id104 1 Building
+
+TRIPLES
+Alan_B._Miller_Hall | inaugurationDate | "2009-10-02"
+
+
+ENTITY MAP
+AGENT-1 | Alan_B._Miller_Hall
+PATIENT-1 | "2009-10-02"
+
+
+LEX
+Id1
+TEXT: Alan B. Miller Hall was in augurated on 2009-10-02.
+TEMPLATE: AGENT-1 was in augurated on PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Alan B. Miller Hall was inaugurated on "2009-10-02".
+TEMPLATE: AGENT-1 was inaugurated on `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The inauguration date of the Alan B. Miller Hall was 2nd October, 2009.
+TEMPLATE: The inauguration date of AGENT-1 was PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id103 1 Building
+
+TRIPLES
+Alan_B._Miller_Hall | cost | "75.0 million (dollars)"
+
+
+ENTITY MAP
+AGENT-1 | Alan_B._Miller_Hall
+PATIENT-1 | "75.0 million (dollars)"
+
+
+LEX
+Id1
+TEXT: The Alan B Miller Hall cost 75 million dollars.
+TEMPLATE: AGENT-1 PATIENT-1 .
+CORRECT: AGENT-1 costs PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Alan B. Miller Hall cost 75 million dollars.
+TEMPLATE: AGENT-1 PATIENT-1 .
+CORRECT: AGENT-1 costs PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id102 1 Building
+
+TRIPLES
+Alan_B._Miller_Hall | completionDate | "1 June 2009"
+
+
+ENTITY MAP
+AGENT-1 | Alan_B._Miller_Hall
+PATIENT-1 | "1 June 2009"
+
+
+LEX
+Id1
+TEXT: Alan B. Miller Hall was completed on June 1st, 2009.
+TEMPLATE: AGENT-1 was completed on PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Alan B. Miller Hall was completed on "1 June 2009".
+TEMPLATE: AGENT-1 was completed on `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Alan B. Millar Hall was completed on 1st June 2009.
+TEMPLATE: AGENT-1 was completed on PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id101 1 Building
+
+TRIPLES
+Alan_B._Miller_Hall | buildingStartDate | "30 March 2007"
+
+
+ENTITY MAP
+AGENT-1 | Alan_B._Miller_Hall
+PATIENT-1 | "30 March 2007"
+
+
+LEX
+Id1
+TEXT: Alan B. Miller Hall's building start date was in 30th March 2007.
+TEMPLATE: AGENT-1 's building start date was in PATIENT-1 .
+CORRECT: AGENT-1 building start date was in PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: They started to build Alan B Miller Hall on 30 March, 2007.
+TEMPLATE: They started to build AGENT-1 on PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id100 1 Building
+
+TRIPLES
+Alan_B._Miller_Hall | architecturalStyle | Georgian_architecture
+
+
+ENTITY MAP
+AGENT-1 | Alan_B._Miller_Hall
+PATIENT-1 | Georgian_architecture
+
+
+LEX
+Id1
+TEXT: The architectural style of the Alan B. Miller Hall is Georgian.
+TEMPLATE: PATIENT-1 of AGENT-1 is Georgian .
+CORRECT: The architectural style of AGENT-1 is PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The architectural style of the Alan B Miller Hall is Georgian.
+TEMPLATE: PATIENT-1 of AGENT-1 is Georgian .
+CORRECT: The architectural style of AGENT-1 is PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: Alan B Miller Hall was built in the Georgian architecture style.
+TEMPLATE: AGENT-1 was built in the PATIENT-1 style .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id99 1 Building
+
+TRIPLES
+Alan_B._Miller_Hall | architect | Robert_A._M._Stern
+
+
+ENTITY MAP
+AGENT-1 | Alan_B._Miller_Hall
+PATIENT-1 | Robert_A._M._Stern
+
+
+LEX
+Id1
+TEXT: Robert A.M. Stern is the architect for Alan B. Miller Hall.
+TEMPLATE: PATIENT-1 is the architect for AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The architect of Alan B Miller Hall is Robert A M Stern.
+TEMPLATE: The architect of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Alan B. Miller Hall was designed by Robert A.M. Stern.
+TEMPLATE: AGENT-1 was designed by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id98 1 Building
+
+TRIPLES
+Alan_B._Miller_Hall | address | "101 Ukrop Way"
+
+
+ENTITY MAP
+AGENT-1 | Alan_B._Miller_Hall
+PATIENT-1 | "101 Ukrop Way"
+
+
+LEX
+Id1
+TEXT: The address of Alan B. Miller Hall is "101 Ukrop Way".
+TEMPLATE: The address of AGENT-1 is `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The address of Alan B. Miller Hall is 101 Ukrop Way.
+TEMPLATE: The address of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id97 1 Building
+
+TRIPLES
+Akita_Prefecture | country | Japan
+
+
+ENTITY MAP
+AGENT-1 | Akita_Prefecture
+PATIENT-1 | Japan
+
+
+LEX
+Id1
+TEXT: The Akita Prefecture is located in Japan.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Akita Prefecture is part of the country of Japan.
+TEMPLATE: AGENT-1 is part of the country of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Akita Prefecture is located in Japan.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id96 1 Building
+
+TRIPLES
+Akita_Museum_of_Art | location | Akita_Prefecture
+
+
+ENTITY MAP
+AGENT-1 | Akita_Museum_of_Art
+PATIENT-1 | Akita_Prefecture
+
+
+LEX
+Id1
+TEXT: Akita Museum of Art is located in Akita Prefecture.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Akita Museum of Art is located in Akita Prefecture.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id95 1 Building
+
+TRIPLES
+Akita_Museum_of_Art | location | Akita,_Akita
+
+
+ENTITY MAP
+AGENT-1 | Akita_Museum_of_Art
+PATIENT-1 | Akita,_Akita
+
+
+LEX
+Id1
+TEXT: Akita Museum of Art is an art museum in the city of Akita.
+TEMPLATE: AGENT-1 is an art museum in the city of PATIENT-1 .
+CORRECT: AGENT-1 is an art museum in PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: Akita Museum of Art is located in Akita, Akita.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Akita Museum of Art is located in Akita, Akita.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id94 1 Building
+
+TRIPLES
+Akita_Museum_of_Art | floorCount | 3
+
+
+ENTITY MAP
+AGENT-1 | Akita_Museum_of_Art
+PATIENT-1 | 3
+
+
+LEX
+Id1
+TEXT: The Akita Museum of Art has 3 floors.
+TEMPLATE: AGENT-1 has PATIENT-1 floors .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Akita Museum of Art 3 floors.
+TEMPLATE: AGENT-1 PATIENT-1 floors .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id93 1 Building
+
+TRIPLES
+Akita_Museum_of_Art | floorArea | 3746.66 (square metres)
+
+
+ENTITY MAP
+AGENT-1 | Akita_Museum_of_Art
+PATIENT-1 | 3746.66 (square metres)
+
+
+LEX
+Id1
+TEXT: The Akita Museum of Art has a floor area of 3746.66 (square metres).
+TEMPLATE: AGENT-1 has a floor area of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The floor area of the Akita Museum of Art is 3746.66 square metres.
+TEMPLATE: The floor area of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Akita Museum of Art has a floor area of 3746.66 square metres.
+TEMPLATE: AGENT-1 has a floor area of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id92 1 Building
+
+TRIPLES
+Akita_Museum_of_Art | architect | Tadao_Ando
+
+
+ENTITY MAP
+AGENT-1 | Akita_Museum_of_Art
+PATIENT-1 | Tadao_Ando
+
+
+LEX
+Id1
+TEXT: Tadao Ando is the architect who designed the Akita Museum of Art.
+TEMPLATE: PATIENT-1 is the architect who designed AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Tadao Ando is the architect of the Akita Museum of Art.
+TEMPLATE: PATIENT-1 is the architect of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Tadao Ando is the architect of Akita Museum.
+TEMPLATE: PATIENT-1 is the architect of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id91 1 Building
+
+TRIPLES
+Akita_Museum_of_Art | address | "1-4-2 Nakadori"
+
+
+ENTITY MAP
+AGENT-1 | Akita_Museum_of_Art
+PATIENT-1 | "1-4-2 Nakadori"
+
+
+LEX
+Id1
+TEXT: The address of Akita Museum of Art is "1-4-2 Nakadori".
+TEMPLATE: The address of AGENT-1 is `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The address of Akita Musuem of Art is 142 Nakadori.
+TEMPLATE: The address of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id89 1 Building
+
+TRIPLES
+Akita,_Akita | country | Japan
+
+
+ENTITY MAP
+AGENT-1 | Akita,_Akita
+PATIENT-1 | Japan
+
+
+LEX
+Id1
+TEXT: Akita Akita is found in the country of Japan.
+TEMPLATE: AGENT-1 is found in the country of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Akita is located in Japan.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id88 1 Building
+
+TRIPLES
+Ahmedabad | country | India
+
+
+ENTITY MAP
+AGENT-1 | Ahmedabad
+PATIENT-1 | India
+
+
+LEX
+Id1
+TEXT: Ahmedabad is in India.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Ahmedabad is located in India.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id87 1 Building
+
+TRIPLES
+Adisham_Hall | location | Sri_Lanka
+
+
+ENTITY MAP
+AGENT-1 | Adisham_Hall
+PATIENT-1 | Sri_Lanka
+
+
+LEX
+Id1
+TEXT: Adisham Hall is located in Sri Lanka.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Adisham Hall is in Sri Lanka.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Aidsham Hall is located in Sri Lanka.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id86 1 Building
+
+TRIPLES
+Adisham_Hall | location | "Haputale, Sri Lanka"
+
+
+ENTITY MAP
+AGENT-1 | Adisham_Hall
+PATIENT-1 | "Haputale, Sri Lanka"
+
+
+LEX
+Id1
+TEXT: Admisham Hall is located at Haputale, Sri Lanka.
+TEMPLATE: AGENT-1 is located at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Adisham Hall is located in Haputale, Sri Lanka.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Adisham Hall is in Haputale, Sri Lanka.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id85 1 Building
+
+TRIPLES
+Adisham_Hall | country | Sri_Lanka
+
+
+ENTITY MAP
+AGENT-1 | Adisham_Hall
+PATIENT-1 | Sri_Lanka
+
+
+LEX
+Id1
+TEXT: Adisham Hall is located in Sri Lanka.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Adisham Hall is located in the country of Sri Lanka.
+TEMPLATE: AGENT-1 is located in the country of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Adisham Hall is in Sri Lanka.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id84 1 Building
+
+TRIPLES
+Adisham_Hall | completionDate | 1931
+
+
+ENTITY MAP
+AGENT-1 | Adisham_Hall
+PATIENT-1 | 1931
+
+
+LEX
+Id1
+TEXT: Adisham Hall was completed in 1931.
+TEMPLATE: AGENT-1 was completed in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The construction of Adisham Hall was completed in 1931.
+TEMPLATE: The construction of AGENT-1 was completed in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Adisham Hall was finished in 1931.
+TEMPLATE: AGENT-1 was finished in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id83 1 Building
+
+TRIPLES
+Adisham_Hall | buildingStartDate | "1927"
+
+
+ENTITY MAP
+AGENT-1 | Adisham_Hall
+PATIENT-1 | "1927"
+
+
+LEX
+Id1
+TEXT: Construction of Adisham Hall began in 1927.
+TEMPLATE: Construction of AGENT-1 began in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Adisham Hall was begun to be built in 1927.
+TEMPLATE: AGENT-1 was begun to be built in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id82 1 Building
+
+TRIPLES
+Adisham_Hall | architecturalStyle | Tudor_Revival_architecture
+
+
+ENTITY MAP
+AGENT-1 | Adisham_Hall
+PATIENT-1 | Tudor_Revival_architecture
+
+
+LEX
+Id1
+TEXT: Adisham Hall has the Tudor Revival architectural style.
+TEMPLATE: AGENT-1 has PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Adisham Hall has the architectural style 'Tudor Revival'.
+TEMPLATE: AGENT-1 has architectural PATIENT-1 .
+CORRECT: AGENT-1 has architectural style PATIENT-1 .
+COMMENT: modifier
+-
+Id3
+TEXT: The Adisham Hall's style of architecture is Tudor Revival.
+TEMPLATE: AGENT-1 's style of architecture is PATIENT-1 .
+CORRECT: AGENT-1 style of architecture is PATIENT-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id81 1 Building
+
+TRIPLES
+Adisham_Hall | architecturalStyle | "Tudor and Jacabian"
+
+
+ENTITY MAP
+AGENT-1 | Adisham_Hall
+PATIENT-1 | "Tudor and Jacabian"
+
+
+LEX
+Id1
+TEXT: Adisham Halls Architectural style`is Tudor and Jacabian.
+TEMPLATE: AGENT-1 style`is PATIENT-1 .
+CORRECT: AGENT-1 Architectural style is PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The architecture style of Adisham Hall is Tudor and Jacabian.
+TEMPLATE: The architecture style of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Adisham Hall is in the architectural style of "Tudor and Jacobean".
+TEMPLATE: AGENT-1 is in the architectural style of `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id80 1 Building
+
+TRIPLES
+Adisham_Hall | address | "St. Benedicts Monastery, Adisham, Haputhale, Sri Lanka"
+
+
+ENTITY MAP
+AGENT-1 | Adisham_Hall
+PATIENT-1 | "St. Benedicts Monastery, Adisham, Haputhale, Sri Lanka"
+
+
+LEX
+Id1
+TEXT: Adisham Hall is located on St. Benedict's Monastery, Adisham, Haputhale, Sri Lanka.
+TEMPLATE: AGENT-1 is located on PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The address of Adisham Hall is St. Benedicts Monastery,Adisham,Haputhale,Sri Lanka.
+TEMPLATE: The address of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The address of Adisham Hall is, St Benedict's Monastery, Adisham, Haputhale, Sri Lanka.
+TEMPLATE: The address of AGENT-1 is , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id78 1 Building
+
+TRIPLES
+Addis_Ababa_City_Hall | height | "42 m"
+
+
+ENTITY MAP
+AGENT-1 | Addis_Ababa_City_Hall
+PATIENT-1 | "42 m"
+
+
+LEX
+Id1
+TEXT: Addis Ababa City Hall has a height of 42 metres.
+TEMPLATE: AGENT-1 has a height of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Addis Ababa City Hall is 42 m high.
+TEMPLATE: AGENT-1 is PATIENT-1 high .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id77 1 Building
+
+TRIPLES
+Addis_Ababa_City_Hall | floorArea | 140000.0 (square metres)
+
+
+ENTITY MAP
+AGENT-1 | Addis_Ababa_City_Hall
+PATIENT-1 | 140000.0 (square metres)
+
+
+LEX
+Id1
+TEXT: The floor area of Addis Ababa City Hall is 140000.0 (square metres).
+TEMPLATE: The floor area of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Addis Ababa City Hall has a 140000.0 (square metres) floor area.
+TEMPLATE: AGENT-1 has a PATIENT-1 floor area .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Addis Ababa City Hall has a floor area of 140000.0 square metres.
+TEMPLATE: AGENT-1 has a floor area of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id76 1 Building
+
+TRIPLES
+Addis_Ababa_City_Hall | currentTenants | "Government of Addis Ababa"
+
+
+ENTITY MAP
+AGENT-1 | Addis_Ababa_City_Hall
+PATIENT-1 | "Government of Addis Ababa"
+
+
+LEX
+Id1
+TEXT: The Government of Addis Ababa is the current tenant of the Addis Ababa City Hall.
+TEMPLATE: PATIENT-1 is the current tenant of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Government of Addis Ababa is the current tenants of the Addis Ababa city hall.
+TEMPLATE: PATIENT-1 is the current tenants of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The " Government of Addis Ababa" are the current tenants of Addis Ababa City Hall.
+TEMPLATE: The '' PATIENT-1 '' are the current tenants of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id75 1 Building
+
+TRIPLES
+Addis_Ababa_City_Hall | country | Ethiopia
+
+
+ENTITY MAP
+AGENT-1 | Addis_Ababa_City_Hall
+PATIENT-1 | Ethiopia
+
+
+LEX
+Id1
+TEXT: Addis Ababa City Hall is located in the country of Ethiopia.
+TEMPLATE: AGENT-1 is located in the country of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Addis Ababa City Hall is in the country of Ethiopia.
+TEMPLATE: AGENT-1 is in the country of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Addis Ababa City Hall is in Ethiopia.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id74 1 Building
+
+TRIPLES
+Addis_Ababa_City_Hall | completionDate | 1964
+
+
+ENTITY MAP
+AGENT-1 | Addis_Ababa_City_Hall
+PATIENT-1 | 1964
+
+
+LEX
+Id1
+TEXT: Addid Ababa City Hall was completed in 1964.
+TEMPLATE: AGENT-1 was completed in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Addis Ababa City Hall's completion date was in 1964.
+TEMPLATE: AGENT-1 's completion date was in PATIENT-1 .
+CORRECT: AGENT-1 completion date was in PATIENT-1 .
+COMMENT: 
+-
+Id3
+TEXT: Addis Ababa City Hall was completed in 1964.
+TEMPLATE: AGENT-1 was completed in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id73 1 Building
+
+TRIPLES
+Addis_Ababa_City_Hall | buildingType | Seat_of_local_government
+
+
+ENTITY MAP
+AGENT-1 | Addis_Ababa_City_Hall
+PATIENT-1 | Seat_of_local_government
+
+
+LEX
+Id1
+TEXT: The Addis Ababa City Hall is the seat of the local government.
+TEMPLATE: AGENT-1 is the seat of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Addis Ababa City Hall is the seat of Local Government.
+TEMPLATE: AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id72 1 Building
+
+TRIPLES
+Addis_Ababa_City_Hall | buildingStartDate | 1961
+
+
+ENTITY MAP
+AGENT-1 | Addis_Ababa_City_Hall
+PATIENT-1 | 1961
+
+
+LEX
+Id1
+TEXT: Building started on the Addis Ababa City Hall in 1961.
+TEMPLATE: Building started on AGENT-1 in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The start date for building Addis Ababa City Hall was 1961.
+TEMPLATE: The start date for building AGENT-1 was PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: They started to build Addis Ababa City Hall in 1961.
+TEMPLATE: They started to build AGENT-1 in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id71 1 Building
+
+TRIPLES
+Addis_Ababa | isPartOf | Addis_Ababa_Stadium
+
+
+ENTITY MAP
+AGENT-1 | Addis_Ababa
+PATIENT-1 | Addis_Ababa_Stadium
+
+
+LEX
+Id1
+TEXT: Addis Ababa Stadium is part of Addid Ababa.
+TEMPLATE: PATIENT-1 is part of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Addis Ababa Stadium is situated in Addis Ababa.
+TEMPLATE: PATIENT-1 is situated in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Addis Ababa Stadium is part of Addis Ababa.
+TEMPLATE: PATIENT-1 is part of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id70 1 Building
+
+TRIPLES
+Addis_Ababa | country | Ethiopia
+
+
+ENTITY MAP
+AGENT-1 | Addis_Ababa
+PATIENT-1 | Ethiopia
+
+
+LEX
+Id1
+TEXT: Addis Ababa is located in Ethiopia.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Addis Ababa is in Ethiopia.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id69 1 Building
+
+TRIPLES
+Adare_Manor | owner | J._P._McManus
+
+
+ENTITY MAP
+AGENT-1 | Adare_Manor
+PATIENT-1 | J._P._McManus
+
+
+LEX
+Id1
+TEXT: J P McManus is the owner of Adare Manor.
+TEMPLATE: PATIENT-1 is the owner of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: J.P. McManus is the owner of Adare Manor.
+TEMPLATE: PATIENT-1 is the owner of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: JP McManus owns Adare Manor.
+TEMPLATE: PATIENT-1 owns AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id68 1 Building
+
+TRIPLES
+Adare_Manor | location | County_Limerick
+
+
+ENTITY MAP
+AGENT-1 | Adare_Manor
+PATIENT-1 | County_Limerick
+
+
+LEX
+Id1
+TEXT: Adare Manor is located in County Limerick.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Adare Manor can be found in County Limerick.
+TEMPLATE: AGENT-1 can be found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id66 1 Building
+
+TRIPLES
+Adare_Manor | completionDate | 1862
+
+
+ENTITY MAP
+AGENT-1 | Adare_Manor
+PATIENT-1 | 1862
+
+
+LEX
+Id1
+TEXT: The construction of Adare Manor was completed in 1862.
+TEMPLATE: The construction of AGENT-1 was completed in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Adare Manor was completed in 1862.
+TEMPLATE: AGENT-1 was completed in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The completion date of Adare Manor is 1862.
+TEMPLATE: The completion date of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id65 1 Building
+
+TRIPLES
+Adare_Manor | architect | Philip_Charles_Hardwick
+
+
+ENTITY MAP
+AGENT-1 | Adare_Manor
+PATIENT-1 | Philip_Charles_Hardwick
+
+
+LEX
+Id1
+TEXT: Philip Charles Hardwick was the architect of Adare Manor.
+TEMPLATE: PATIENT-1 was the architect of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Adare Manor's architect was Philip Charles Hardwick.
+TEMPLATE: AGENT-1 's architect was PATIENT-1 .
+CORRECT: AGENT-1 architect was PATIENT-1 .
+COMMENT: 
+-
+Id3
+TEXT: The architect responsible for Adare Manor was Philip Charles Hardwick.
+TEMPLATE: The architect responsible for AGENT-1 was PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id64 1 Building
+
+TRIPLES
+Adare_Manor | architect | Lewis_Nockalls_Cottingham
+
+
+ENTITY MAP
+AGENT-1 | Adare_Manor
+PATIENT-1 | Lewis_Nockalls_Cottingham
+
+
+LEX
+Id1
+TEXT: Adare Manor was designed by the architect Lewis Nockalls Cottingham.
+TEMPLATE: AGENT-1 was designed by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Lewis Nockalls Cottingham is the architect of Adare Manor.
+TEMPLATE: PATIENT-1 is the architect of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Lewis Cottingham is the architect of Adare Manor.
+TEMPLATE: PATIENT-1 is the architect of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id63 1 Building
+
+TRIPLES
+Adare_Manor | architect | James_Pain
+
+
+ENTITY MAP
+AGENT-1 | Adare_Manor
+PATIENT-1 | James_Pain
+
+
+LEX
+Id1
+TEXT: The architect of Adare Manor was James Pain.
+TEMPLATE: The architect of AGENT-1 was PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: James Pain was the architect of the Adare Manor.
+TEMPLATE: PATIENT-1 was the architect of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id62 1 Building
+
+TRIPLES
+Adare_Manor | architect | George_Richard_Pain
+
+
+ENTITY MAP
+AGENT-1 | Adare_Manor
+PATIENT-1 | George_Richard_Pain
+
+
+LEX
+Id1
+TEXT: The architect of Adare Manor is George Richard Pain.
+TEMPLATE: The architect of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Adare Manor's architect was George Richard Pain.
+TEMPLATE: AGENT-1 's architect was PATIENT-1 .
+CORRECT: AGENT-1 architect was PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: The architect of Adare Manor was George Richard Pain.
+TEMPLATE: The architect of AGENT-1 was PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id59 1 Building
+
+TRIPLES
+AC_Hotel_Bella_Sky_Copenhagen | tenant | Marriott_International
+
+
+ENTITY MAP
+AGENT-1 | AC_Hotel_Bella_Sky_Copenhagen
+PATIENT-1 | Marriott_International
+
+
+LEX
+Id1
+TEXT: Marriott International is the tenant of AC Hotel Bella Sky Copenhagen.
+TEMPLATE: PATIENT-1 is the tenant of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The tenant of the AC Hotel Bella Sky Copenhagen is Marriott International.
+TEMPLATE: The tenant of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The tenant of the AC Hotel Bella Sky Copenhagen is the Marriott International Hotel.
+TEMPLATE: The tenant of AGENT-1 is the PATIENT-1 Hotel .
+CORRECT: The tenant of AGENT-1 is the PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id58 1 Building
+
+TRIPLES
+AC_Hotel_Bella_Sky_Copenhagen | owner | Bella_Center
+
+
+ENTITY MAP
+AGENT-1 | AC_Hotel_Bella_Sky_Copenhagen
+PATIENT-1 | Bella_Center
+
+
+LEX
+Id1
+TEXT: AC Hotel Bella Sky Copenhagen is owned by Bella Center.
+TEMPLATE: AGENT-1 is owned by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The owner of the AC Hotel Bella Sky Copenhagen is Bella Center.
+TEMPLATE: The owner of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id57 1 Building
+
+TRIPLES
+AC_Hotel_Bella_Sky_Copenhagen | location | Denmark
+
+
+ENTITY MAP
+AGENT-1 | AC_Hotel_Bella_Sky_Copenhagen
+PATIENT-1 | Denmark
+
+
+LEX
+Id1
+TEXT: AC Hotel Bella Sky is in Copenhagen, Denmark.
+TEMPLATE: AGENT-1 is in Copenhagen , PATIENT-1 .
+CORRECT: AGENT-1 is in PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: AC Hotel Bella Sky Copenhagen is located in Denmark.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id56 1 Building
+
+TRIPLES
+AC_Hotel_Bella_Sky_Copenhagen | location | Copenhagen
+
+
+ENTITY MAP
+AGENT-1 | AC_Hotel_Bella_Sky_Copenhagen
+PATIENT-1 | Copenhagen
+
+
+LEX
+Id1
+TEXT: The AC Hotel Bella Sky is in Copenhagen.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AC Hotel Bella Sky Copenhagen is located in Copenhagen.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The AC Hotel , Bella Sky is located in Copenhagen.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id55 1 Building
+
+TRIPLES
+AC_Hotel_Bella_Sky_Copenhagen | floorCount | 23
+
+
+ENTITY MAP
+AGENT-1 | AC_Hotel_Bella_Sky_Copenhagen
+PATIENT-1 | 23
+
+
+LEX
+Id1
+TEXT: The AC Hotel Bella Sky Copenhagen has 23 floors.
+TEMPLATE: AGENT-1 has PATIENT-1 floors .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: There are 23 floors in the AC Hotel Bella Sky Copenhagen.
+TEMPLATE: There are PATIENT-1 floors in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Bella Sky hotel in Copenhagen has 23 floors.
+TEMPLATE: AGENT-1 in Copenhagen has PATIENT-1 floors .
+CORRECT: AGENT-1 has PATIENT-1 floors .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id54 1 Building
+
+TRIPLES
+AC_Hotel_Bella_Sky_Copenhagen | developer | Bella_Center
+
+
+ENTITY MAP
+AGENT-1 | AC_Hotel_Bella_Sky_Copenhagen
+PATIENT-1 | Bella_Center
+
+
+LEX
+Id1
+TEXT: The AC Hotel Bella Sky, Copenhagen was developed by the Bella Center.
+TEMPLATE: The AC Hotel Bella Sky , AGENT-1 was developed by PATIENT-1 .
+CORRECT: AGENT-1 was developed by PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: The developer of the AC Hotel Bella Sky in Copenhagen is Bella Center.
+TEMPLATE: The developer of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Bella Center were developers of AC Hotel Bella Sky Copenhagen.
+TEMPLATE: PATIENT-1 were developers of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id53 1 Building
+
+TRIPLES
+AC_Hotel_Bella_Sky_Copenhagen | architect | 3XN
+
+
+ENTITY MAP
+AGENT-1 | AC_Hotel_Bella_Sky_Copenhagen
+PATIENT-1 | 3XN
+
+
+LEX
+Id1
+TEXT: 3XN was the architect of the AC Hotel Bella Sky Copenhagen.
+TEMPLATE: PATIENT-1 was the architect of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The AC Hotel Bella Sky in Copenhagen was designed by the architects of the 3XN firm.
+TEMPLATE: AGENT-1 was designed by the architects of the PATIENT-1 firm .
+CORRECT: AGENT-1 was designed by the architects of the PATIENT-1 .
+COMMENT: modifier
+-
+Id3
+TEXT: The architect of the AC Hotel Bella Sky, Copenhagen was 3XN.
+TEMPLATE: The architect of AGENT-1 was PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id52 1 Building
+
+TRIPLES
+3Arena | owner | Live_Nation_Entertainment
+
+
+ENTITY MAP
+AGENT-1 | 3Arena
+PATIENT-1 | Live_Nation_Entertainment
+
+
+LEX
+Id1
+TEXT: The owner of 3Arena is Live Nation Entertainment.
+TEMPLATE: The owner of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 3Arena is owned by Live Nation Entertainment.
+TEMPLATE: AGENT-1 is owned by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id51 1 Building
+
+TRIPLES
+3Arena | location | North_Wall,_Dublin
+
+
+ENTITY MAP
+AGENT-1 | 3Arena
+PATIENT-1 | North_Wall,_Dublin
+
+
+LEX
+Id1
+TEXT: 3Arena is located at North Wall, Dublin.
+TEMPLATE: AGENT-1 is located at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The 3Arena is located at North Wall, Dublin.
+TEMPLATE: AGENT-1 is located at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id50 1 Building
+
+TRIPLES
+3Arena | location | Dublin
+
+
+ENTITY MAP
+AGENT-1 | 3Arena
+PATIENT-1 | Dublin
+
+
+LEX
+Id1
+TEXT: The 3Arena is located in Dublin.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 3 Arena is located in Dublin.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: 3Arena is located in Dublin.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id49 1 Building
+
+TRIPLES
+3Arena | location | "North Wall Quay"
+
+
+ENTITY MAP
+AGENT-1 | 3Arena
+PATIENT-1 | "North Wall Quay"
+
+
+LEX
+Id1
+TEXT: The 3Arena is located at the North Wall Quay.
+TEMPLATE: AGENT-1 is located at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The 3Arena is located on North Wall Quay.
+TEMPLATE: AGENT-1 is located on PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The 3Arena is located at "North Wall Quay.".
+TEMPLATE: AGENT-1 is located at `` PATIENT-1 . '' .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id48 1 Building
+
+TRIPLES
+3Arena | height | 28.0 (metres)
+
+
+ENTITY MAP
+AGENT-1 | 3Arena
+PATIENT-1 | 28.0 (metres)
+
+
+LEX
+Id1
+TEXT: The height of 3 arena is 28 metres.
+TEMPLATE: The height of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The height of 3Arena is 28.0 metres.
+TEMPLATE: The height of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: 3Arena is 28.0 metres high.
+TEMPLATE: AGENT-1 is PATIENT-1 high .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id47 1 Building
+
+TRIPLES
+3Arena | completionDate | "December 2008"
+
+
+ENTITY MAP
+AGENT-1 | 3Arena
+PATIENT-1 | "December 2008"
+
+
+LEX
+Id1
+TEXT: The completion date of 3Arena is December 2008.
+TEMPLATE: The completion date of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The 3Arena was completed in December 2008.
+TEMPLATE: AGENT-1 was completed in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id46 1 Building
+
+TRIPLES
+3Arena | buildingType | "Concert and events venue"
+
+
+ENTITY MAP
+AGENT-1 | 3Arena
+PATIENT-1 | "Concert and events venue"
+
+
+LEX
+Id1
+TEXT: The 3Arena is a concerts and events venue type building.
+TEMPLATE: AGENT-1 is PATIENT-1 venue type building .
+CORRECT: AGENT-1 is PATIENT-1 type building .
+COMMENT: modifier
+-
+Id2
+TEXT: The 3Arena hosts concerts and events.
+TEMPLATE: The AGENT-1 hosts PATIENT-1 .
+CORRECT: AGENT-1 hosts PATIENT-1 .
+COMMENT: determiner
+-
+
+**************************************************
+
+Entry: Id45 1 Building
+
+TRIPLES
+3Arena | architect | Populous_(company)
+
+
+ENTITY MAP
+AGENT-1 | 3Arena
+PATIENT-1 | Populous_(company)
+
+
+LEX
+Id1
+TEXT: The architect of 3Arena was the company Populous.
+TEMPLATE: PATIENT-1 of AGENT-1 was the company Populous .
+CORRECT: The architect of AGENT-1 was PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The company Populous were the architects who designed the 3Arena.
+TEMPLATE: The company Populous were PATIENT-1 who designed AGENT-1 .
+CORRECT: PATIENT-1 were the architects who designed AGENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id44 1 Building
+
+TRIPLES
+320_South_Boston_Building | height | 121.92 (metres)
+
+
+ENTITY MAP
+AGENT-1 | 320_South_Boston_Building
+PATIENT-1 | 121.92 (metres)
+
+
+LEX
+Id1
+TEXT: The 320 South Boston Building is 121.92 metres.
+TEMPLATE: AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The 320 South Boston Building has a height of 121.92 metres.
+TEMPLATE: AGENT-1 has a height of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: 320 South Boston Building is 121.92 metres in height.
+TEMPLATE: AGENT-1 is PATIENT-1 in height .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id43 1 Building
+
+TRIPLES
+320_South_Boston_Building | formerName | "Exchange National Bank Building"
+
+
+ENTITY MAP
+AGENT-1 | 320_South_Boston_Building
+PATIENT-1 | "Exchange National Bank Building"
+
+
+LEX
+Id1
+TEXT: 320 South Boston Building was formerly called the Exchange National Bank Building.
+TEMPLATE: AGENT-1 was formerly called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The previous name of 320 South Boston Building was the Exchange National Bank Building.
+TEMPLATE: The previous name of AGENT-1 was PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id42 1 Building
+
+TRIPLES
+320_South_Boston_Building | floorCount | 22
+
+
+ENTITY MAP
+AGENT-1 | 320_South_Boston_Building
+PATIENT-1 | 22
+
+
+LEX
+Id1
+TEXT: There are 22 floors in 320 South Boston Building.
+TEMPLATE: There are PATIENT-1 floors in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The building at 320 South Boston Street has 22 floors.
+TEMPLATE: The building at AGENT-1 has PATIENT-1 floors .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id41 1 Building
+
+TRIPLES
+320_South_Boston_Building | completionDate | 1929
+
+
+ENTITY MAP
+AGENT-1 | 320_South_Boston_Building
+PATIENT-1 | 1929
+
+
+LEX
+Id1
+TEXT: The construction of 320 South Boston Building was completed in 1929.
+TEMPLATE: The construction of AGENT-1 was completed in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 320 South Boston was completed in 1929.
+TEMPLATE: AGENT-1 was completed in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: 320 South Boston Building was completed in 1929.
+TEMPLATE: AGENT-1 was completed in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id38 1 Building
+
+TRIPLES
+300_North_LaSalle | completionDate | 2009
+
+
+ENTITY MAP
+AGENT-1 | 300_North_LaSalle
+PATIENT-1 | 2009
+
+
+LEX
+Id1
+TEXT: 300 North LaSalle was completed in 2009.
+TEMPLATE: AGENT-1 was completed in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The building at 300 North LaSalle was completed in 2009.
+TEMPLATE: The building at AGENT-1 was completed in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id37 1 Building
+
+TRIPLES
+300_North_LaSalle | architect | Pickard_Chilton
+
+
+ENTITY MAP
+AGENT-1 | 300_North_LaSalle
+PATIENT-1 | Pickard_Chilton
+
+
+LEX
+Id1
+TEXT: Pickard Chilton is the architect of 300 North LaSalle.
+TEMPLATE: PATIENT-1 is the architect of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The architect of 300 North LaSalle is Pickard Chilton.
+TEMPLATE: The architect of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The architect of 300 North LaSalle was Pickard Chilton.
+TEMPLATE: The architect of AGENT-1 was PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id35 1 Building
+
+TRIPLES
+250_Delaware_Avenue | location | Buffalo,_New_York
+
+
+ENTITY MAP
+AGENT-1 | 250_Delaware_Avenue
+PATIENT-1 | Buffalo,_New_York
+
+
+LEX
+Id1
+TEXT: 250 Delaware Avenue is a location in Buffalo, New York.
+TEMPLATE: AGENT-1 is a location in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 250 Delaware Avenue is located in Buffalo, New York.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: 250 Delaware Avenue is in Buffalo, New York.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id34 1 Building
+
+TRIPLES
+250_Delaware_Avenue | floorCount | 12
+
+
+ENTITY MAP
+AGENT-1 | 250_Delaware_Avenue
+PATIENT-1 | 12
+
+
+LEX
+Id1
+TEXT: 250 Delaware Avenue has 12 floors.
+TEMPLATE: AGENT-1 has PATIENT-1 floors .
+CORRECT:
+COMMENT:
+-
+Id2
+TEXT: There are a total of 12 floors in 250 Delaware Avenue.
+TEMPLATE: There are a total of PATIENT-1 floors in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: 250 Delaware Avenue has a floor count of 12.
+TEMPLATE: AGENT-1 has a floor count of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id33 1 Building
+
+TRIPLES
+250_Delaware_Avenue | floorArea | 30843.8 (square metres)
+
+
+ENTITY MAP
+AGENT-1 | 250_Delaware_Avenue
+PATIENT-1 | 30843.8 (square metres)
+
+
+LEX
+Id1
+TEXT: 250 Delaware Avenue has a floor area of 30843.8 square metres.
+TEMPLATE: AGENT-1 has a floor area of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 250 Delaware Avenue has a floor area of 30843.8 (square metres).
+TEMPLATE: AGENT-1 has a floor area of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: 250 Delawre Avenue has a floor area of 30843.8 square metres.
+TEMPLATE: AGENT-1 has a floor area of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id32 1 Building
+
+TRIPLES
+250_Delaware_Avenue | cost | "110 million (dollars)"
+
+
+ENTITY MAP
+AGENT-1 | 250_Delaware_Avenue
+PATIENT-1 | "110 million (dollars)"
+
+
+LEX
+Id1
+TEXT: 250 Delaware Avenue cost 110 million dollars.
+TEMPLATE: AGENT-1 PATIENT-1 .
+CORRECT: AGENT-1 costs PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The cost to build 250 Delaware Avenue is "110 million (dollars)".
+TEMPLATE: The cost to build AGENT-1 is `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id31 1 Building
+
+TRIPLES
+250_Delaware_Avenue | buildingStartDate | "January, 2014"
+
+
+ENTITY MAP
+AGENT-1 | 250_Delaware_Avenue
+PATIENT-1 | "January, 2014"
+
+
+LEX
+Id1
+TEXT: The construction of 250 Delaware Avenue began in January 2014.
+TEMPLATE: The construction of AGENT-1 began in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The start date of building 250 Delaware Avenue was January 2014.
+TEMPLATE: PATIENT-1 of AGENT-1 was January 2014 .
+CORRECT: The start date of AGENT-1 was PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: January 2014 is the building start date of 250 Delaware Avenue.
+TEMPLATE: PATIENT-1 is the building start date of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id29 1 Building
+
+TRIPLES
+20_Fenchurch_Street | floorCount | 34
+
+
+ENTITY MAP
+AGENT-1 | 20_Fenchurch_Street
+PATIENT-1 | 34
+
+
+LEX
+Id1
+TEXT: There are 34 floors at 20 Fenchurch Street.
+TEMPLATE: There are PATIENT-1 floors at AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 20 Fenchurch Street has a floor count of 34.
+TEMPLATE: AGENT-1 has a floor count of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id27 1 Building
+
+TRIPLES
+20_Fenchurch_Street | completionDate | "April 2014"
+
+
+ENTITY MAP
+AGENT-1 | 20_Fenchurch_Street
+PATIENT-1 | "April 2014"
+
+
+LEX
+Id1
+TEXT: 20 Fenchurch Street was completed in April of 2014.
+TEMPLATE: AGENT-1 was completed in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 20 Fenchurch Street was completed in April 2014.
+TEMPLATE: AGENT-1 was completed in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id21 1 Building
+
+TRIPLES
+200_Public_Square | floorCount | 45
+
+
+ENTITY MAP
+AGENT-1 | 200_Public_Square
+PATIENT-1 | 45
+
+
+LEX
+Id1
+TEXT: There are 45 floors at 200 Public Square.
+TEMPLATE: There are PATIENT-1 floors at AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 200 Public Square has a floor count of 45.
+TEMPLATE: AGENT-1 has a floor count of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id26 1 Building
+
+TRIPLES
+20_Fenchurch_Street | architect | Rafael_Viñoly
+
+
+ENTITY MAP
+AGENT-1 | 20_Fenchurch_Street
+PATIENT-1 | Rafael_Viñoly
+
+
+LEX
+Id1
+TEXT: 20 Fenchurch Street was designed by the architect Rafael Viñoly.
+TEMPLATE: AGENT-1 was designed by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Rafael Viñoly designed 20 Fenchurch Street.
+TEMPLATE: PATIENT-1 designed AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id25 1 Building
+
+TRIPLES
+200_Public_Square | location | Public_Square,_Cleveland
+
+
+ENTITY MAP
+AGENT-1 | 200_Public_Square
+PATIENT-1 | Public_Square,_Cleveland
+
+
+LEX
+Id1
+TEXT: 200 Public Square is located at Public Square, Cleveland.
+TEMPLATE: AGENT-1 is located at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 200 Public Square is located in Public Square, Cleveland.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id24 1 Building
+
+TRIPLES
+200_Public_Square | location | Cleveland
+
+
+ENTITY MAP
+AGENT-1 | 200_Public_Square
+PATIENT-1 | Cleveland
+
+
+LEX
+Id1
+TEXT: 200 Public square is in Cleveland.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 200 Public Square is located in Cleveland.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id22 1 Building
+
+TRIPLES
+200_Public_Square | location | "Cleveland, Ohio 44114"
+
+
+ENTITY MAP
+AGENT-1 | 200_Public_Square
+PATIENT-1 | "Cleveland, Ohio 44114"
+
+
+LEX
+Id1
+TEXT: 200 Public Square is located in Cleveland, Ohio 44114.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 200 Public Square is located in Cleveland Ohio 44114.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id14 1 Building
+
+TRIPLES
+11_Diagonal_Street | buildingStartDate | "1978"
+
+
+ENTITY MAP
+AGENT-1 | 11_Diagonal_Street
+PATIENT-1 | "1978"
+
+
+LEX
+Id1
+TEXT: The 11 Diagonal Street originated in 1978.
+TEMPLATE: AGENT-1 originated in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 11 Diagonal Street was built in 1978.
+TEMPLATE: AGENT-1 was built in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The building at 11 Diagonal Street was started to be erected in 1978.
+TEMPLATE: The building at AGENT-1 was started to be erected in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id12 1 Building
+
+TRIPLES
+108_St_Georges_Terrace | location | Perth
+
+
+ENTITY MAP
+AGENT-1 | 108_St_Georges_Terrace
+PATIENT-1 | Perth
+
+
+LEX
+Id1
+TEXT: The 108 St. Georges Terrace is located in Perth.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 108 St. Georges Terrace is located in Perth.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id20 1 Building
+
+TRIPLES
+200_Public_Square | floorArea | 111484 (square metres)
+
+
+ENTITY MAP
+AGENT-1 | 200_Public_Square
+PATIENT-1 | 111484 (square metres)
+
+
+LEX
+Id1
+TEXT: 200 Public Square has a floor area of 111484 square metres.
+TEMPLATE: AGENT-1 has a floor area of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 200 Public Square is 111484 square metres.
+TEMPLATE: AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id19 1 Building
+
+TRIPLES
+200_Public_Square | architect | HOK_(firm)
+
+
+ENTITY MAP
+AGENT-1 | 200_Public_Square
+PATIENT-1 | HOK_(firm)
+
+
+LEX
+Id1
+TEXT: The architect of 200 Public Square is HOK.
+TEMPLATE: The architect of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: HOK (firm) were the architects of 200 Public Square.
+TEMPLATE: PATIENT-1 were the architects of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id18 1 Building
+
+TRIPLES
+11_Diagonal_Street | owner | Redefine_Properties_Limited
+
+
+ENTITY MAP
+AGENT-1 | 11_Diagonal_Street
+PATIENT-1 | Redefine_Properties_Limited
+
+
+LEX
+Id1
+TEXT: Redefine Properties Limited is the owner of 11 Diagonal Street.
+TEMPLATE: PATIENT-1 is the owner of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 11 Diagonal Street is owned by Redefine Properties Limited.
+TEMPLATE: AGENT-1 is owned by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Redefine Properties Limited is the owner of 11 Diagonal Strret.
+TEMPLATE: PATIENT-1 is the owner of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id17 1 Building
+
+TRIPLES
+11_Diagonal_Street | location | Johannesburg
+
+
+ENTITY MAP
+AGENT-1 | 11_Diagonal_Street
+PATIENT-1 | Johannesburg
+
+
+LEX
+Id1
+TEXT: 11 Diagonal Street is in Johannesburg.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 11 Diagonal Street is located in Johannesburg.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id11 1 Building
+
+TRIPLES
+108_St_Georges_Terrace | floorCount | 50
+
+
+ENTITY MAP
+AGENT-1 | 108_St_Georges_Terrace
+PATIENT-1 | 50
+
+
+LEX
+Id1
+TEXT: 108 St Georges Terrace has a floor count of 50.
+TEMPLATE: AGENT-1 has a floor count of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: There are 50 floors at 108 St Georges Terrace.
+TEMPLATE: There are PATIENT-1 floors at AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id9 1 Building
+
+TRIPLES
+108_St_Georges_Terrace | cost | "120 million (Australian dollars)"
+
+
+ENTITY MAP
+AGENT-1 | 108_St_Georges_Terrace
+PATIENT-1 | "120 million (Australian dollars)"
+
+
+LEX
+Id1
+TEXT: 108 St Georges Terrace cost 120 million Australian dollars.
+TEMPLATE: AGENT-1 PATIENT-1 .
+CORRECT: AGENT-1 costs PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: 108 St Georges Terrance cost 120m Australian dollars.
+TEMPLATE: AGENT-1 PATIENT-1 .
+CORRECT: AGENT-1 costs PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: The cost of 108 St. Georges Terrace is 120 million AUD.
+TEMPLATE: The cost of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id7 1 Building
+
+TRIPLES
+108_St_Georges_Terrace | buildingStartDate | 1981
+
+
+ENTITY MAP
+AGENT-1 | 108_St_Georges_Terrace
+PATIENT-1 | 1981
+
+
+LEX
+Id1
+TEXT: The construction of 108 St Georges Terrace began in 1981.
+TEMPLATE: The construction of AGENT-1 began in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The building of 108 St. Georges Terrace was started in 1981.
+TEMPLATE: The building of AGENT-1 was started in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id5 1 Building
+
+TRIPLES
+103_Colmore_Row | location | "Colmore Row, Birmingham, England"
+
+
+ENTITY MAP
+AGENT-1 | 103_Colmore_Row
+PATIENT-1 | "Colmore Row, Birmingham, England"
+
+
+LEX
+Id1
+TEXT: 103 Colmore Row is located on Colmore Row, Birmingham, England.
+TEMPLATE: AGENT-1 is located on PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 103 Colmore Row is located in Colmore Row, Birmingham, England.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: 103 Colmore Row is in Birmingham, England.
+TEMPLATE: AGENT-1 is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id4 1 Building
+
+TRIPLES
+103_Colmore_Row | floorCount | 23
+
+
+ENTITY MAP
+AGENT-1 | 103_Colmore_Row
+PATIENT-1 | 23
+
+
+LEX
+Id1
+TEXT: There are 23 floors at 103 Colmore Row.
+TEMPLATE: There are PATIENT-1 floors at AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 103 Colmore Row has 23 floors.
+TEMPLATE: AGENT-1 has PATIENT-1 floors .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id3 1 Building
+
+TRIPLES
+103_Colmore_Row | completionDate | 1976
+
+
+ENTITY MAP
+AGENT-1 | 103_Colmore_Row
+PATIENT-1 | 1976
+
+
+LEX
+Id1
+TEXT: 103 Colmore Row was completed in 1976.
+TEMPLATE: AGENT-1 was completed in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The building of 103 Colmore Row was completed in 1976.
+TEMPLATE: The building of AGENT-1 was completed in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id2 1 Building
+
+TRIPLES
+103_Colmore_Row | buildingStartDate | "1973"
+
+
+ENTITY MAP
+AGENT-1 | 103_Colmore_Row
+PATIENT-1 | "1973"
+
+
+LEX
+Id1
+TEXT: 1973 was the start date for the building at 103 Colmore Row.
+TEMPLATE: PATIENT-1 was the start date for the building at AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The building of 103 Colmore Row began in 1973.
+TEMPLATE: The building of AGENT-1 began in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: 103 Colmore Row opened in 1973.
+TEMPLATE: AGENT-1 opened in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id1 1 Building
+
+TRIPLES
+103_Colmore_Row | architecturalStyle | Brutalist_architecture
+
+
+ENTITY MAP
+AGENT-1 | 103_Colmore_Row
+PATIENT-1 | Brutalist_architecture
+
+
+LEX
+Id1
+TEXT: The architecture style of 103 Colmore Row falls under Brutalist architecture.
+TEMPLATE: The architecture style of AGENT-1 falls under PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 103 Colmore Row is in the architectural style " Brutalist architecture".
+TEMPLATE: AGENT-1 is in architectural '' PATIENT-1 '' .
+CORRECT: AGENT-1 is in architectural style '' PATIENT-1 '' .
+COMMENT: modifier
+-
+

@@ -1,0 +1,362 @@
+
+Entry: Id1 4 Astronaut
+
+TRIPLES
+Alan_Bean | was a crew member of | Apollo_12
+Alan_Bean | nationality | United_States
+Apollo_12 | operator | NASA
+Apollo_12 | commander | David_Scott
+
+
+ENTITY MAP
+BRIDGE-1 | Apollo_12
+AGENT-1 | Alan_Bean
+PATIENT-1 | United_States
+PATIENT-3 | David_Scott
+PATIENT-2 | NASA
+
+
+LEX
+Id1
+TEXT: Alan Bean (of the United States) was a crew member of NASA's @ Apollo 12 under the commander David Scott.
+TEMPLATE: AGENT-1 ( of PATIENT-1 ) was PATIENT-1 of PATIENT-2 's BRIDGE-1 under PATIENT-1 PATIENT-3 .
+CORRECT: AGENT-1 ( of PATIENT-1 ) was a crew member of PATIENT-2 @ BRIDGE-1 under the commander PATIENT-3 .
+COMMENT: 
+-
+Id2
+TEXT: United States national Alan Bean was a crew member of NASA's @ Apollo 12 mission under commander David S cott.
+TEMPLATE: PATIENT-1 national AGENT-1 was PATIENT-1 of PATIENT-2 's BRIDGE-1 mission under commander David S cott .
+CORRECT: PATIENT-1 national AGENT-1 was a crew member of PATIENT-2 @ BRIDGE-1 mission under commander PATIENT-3 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id2 4 Astronaut
+
+TRIPLES
+Alan_Shepard | almaMater | "NWC, M.A. 1957"
+Alan_Shepard | birthPlace | New_Hampshire
+Alan_Shepard | dateOfRetirement | "1974-08-01"
+Alan_Shepard | birthDate | "1923-11-18"
+
+
+ENTITY MAP
+PATIENT-4 | "1923-11-18"
+AGENT-1 | Alan_Shepard
+PATIENT-1 | "NWC, M.A. 1957"
+PATIENT-3 | "1974-08-01"
+PATIENT-2 | New_Hampshire
+
+
+LEX
+Id1
+TEXT: Alan Shepard, who was born in New Hampshire on November 18th, 1923, graduated with a M.A. from NWC in 1957 and retired on August 1st, 1974.
+TEMPLATE: AGENT-1 , who was born in PATIENT-2 on PATIENT-4 , graduated with a M.A. from PATIENT-1 and retired on PATIENT-3 .
+CORRECT: AGENT-1 , who was born in PATIENT-2 on PATIENT-4 , graduated with PATIENT-1 and retired on PATIENT-3 .
+COMMENT: 
+-
+Id2
+TEXT: Alan Shepard was born 1923-11-18 in New Hampshire. He obtained a MA in 1957 from "NWC" @ he retired 1974-08-01.
+TEMPLATE: AGENT-1 was born PATIENT-4 in PATIENT-2 . AGENT-1 obtained a MA in PATIENT-1 from `` PATIENT-1 '' AGENT-1 retired PATIENT-3 .
+CORRECT: AGENT-1 was born PATIENT-4 in PATIENT-2 . AGENT-1 obtained PATIENT-1 @ AGENT-1 retired PATIENT-3 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id5 4 Astronaut
+
+TRIPLES
+Apollo_12 | backup pilot | Alfred_Worden
+Alan_Bean | was a crew member of | Apollo_12
+Apollo_12 | operator | NASA
+Apollo_12 | commander | David_Scott
+
+
+ENTITY MAP
+BRIDGE-1 | Apollo_12
+AGENT-1 | Alan_Bean
+PATIENT-1 | Alfred_Worden
+PATIENT-3 | David_Scott
+PATIENT-2 | NASA
+
+
+LEX
+Id1
+TEXT: The backup pilot to Apollo 12 was Alfred Worden and also part of Apollo 12 were Alan Bean and commander David Scott who were all chosen by NASA.
+TEMPLATE: The backup pilot to BRIDGE-1 was PATIENT-1 and also part of BRIDGE-1 were AGENT-1 and PATIENT-3 who were all chosen by PATIENT-2 .
+CORRECT: The backup pilot to BRIDGE-1 was PATIENT-1 and also part of BRIDGE-1 were AGENT-1 and commander PATIENT-3 who were all chosen by PATIENT-2 .
+COMMENT: 
+-
+Id2
+TEXT: Alan Bean was a crew member on the NASA @ Apollo 12 mission along with backup pilot Alfred Worden and commander David Scott.
+TEMPLATE: AGENT-1 was a crew member on PATIENT-2 BRIDGE-1 mission along with PATIENT-1 and PATIENT-3 .
+CORRECT: AGENT-1 was a crew member on PATIENT-2 @ BRIDGE-1 mission along with backup pilot PATIENT-1 and commander PATIENT-3 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id3 4 Astronaut
+
+TRIPLES
+Alan_Shepard | status | "Deceased"
+Alan_Shepard | deathPlace | California
+Alan_Shepard | occupation | Test_pilot
+Alan_Shepard | birthPlace | New_Hampshire
+
+
+ENTITY MAP
+PATIENT-4 | New_Hampshire
+AGENT-1 | Alan_Shepard
+PATIENT-1 | "Deceased"
+PATIENT-3 | Test_pilot
+PATIENT-2 | California
+
+
+LEX
+Id1
+TEXT: American test pilot Alan Shepard died in California and was born in New Hampshire.
+TEMPLATE: American PATIENT-3 AGENT-1 died in PATIENT-2 and was born in PATIENT-4 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Alan Shepard was born in New Hampshire and became a test pilot. He died in California.
+TEMPLATE: AGENT-1 was born in PATIENT-4 and became PATIENT-3 . PATIENT-1 died in PATIENT-2 .
+CORRECT: AGENT-1 was born in PATIENT-4 and became PATIENT-3 . AGENT-1 died in PATIENT-2 .
+COMMENT: 
+-
+Id3
+TEXT: Alan Shepard was born in New Hampshire and died in California. He served as a test pilot.
+TEMPLATE: AGENT-1 was born in PATIENT-4 and died in PATIENT-2 . PATIENT-1 served as PATIENT-3 .
+CORRECT: AGENT-1 was born in PATIENT-4 and died in PATIENT-2 . AGENT-1 served as PATIENT-3 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id4 4 Astronaut
+
+TRIPLES
+Alan_Shepard | was a crew member of | Apollo_14
+Alan_Shepard | occupation | Test_pilot
+Alan_Shepard | birthPlace | New_Hampshire
+Apollo_14 | operator | NASA
+
+
+ENTITY MAP
+BRIDGE-1 | Apollo_14
+AGENT-1 | Alan_Shepard
+PATIENT-1 | Test_pilot
+PATIENT-3 | NASA
+PATIENT-2 | New_Hampshire
+
+
+LEX
+Id1
+TEXT: Alan Shepard was a test pilot born in New Hampshire who NASA picked as a member of Apollo 14.
+TEMPLATE: AGENT-1 was PATIENT-1 born in PATIENT-2 who PATIENT-3 picked as a member of BRIDGE-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Alan Shepard , originally from New Hampshire joined NASA as a test pilot and also became a member of Apollo 14.
+TEMPLATE: AGENT-1 , originally from PATIENT-2 joined PATIENT-3 as PATIENT-1 and also became a member of BRIDGE-1 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Alan Shepard, who was born in New Hampshire and served as a test pilot, was a crew member of the NASA operated Apollo 14 mission.
+TEMPLATE: AGENT-1 , who was born in PATIENT-2 and served as PATIENT-1 , was PATIENT-1 of PATIENT-3 operated BRIDGE-1 mission .
+CORRECT: AGENT-1 , who was born in PATIENT-2 and served as PATIENT-1 , was a crew member of PATIENT-3 operated BRIDGE-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id6 4 Astronaut
+
+TRIPLES
+Buzz_Aldrin | birthPlace | Glen_Ridge,_New_Jersey
+Buzz_Aldrin | nationality | United_States
+United_States | leaderName | Joe_Biden
+Glen_Ridge,_New_Jersey | isPartOf | Essex_County,_New_Jersey
+
+
+ENTITY MAP
+BRIDGE-1 | United_States
+AGENT-1 | Buzz_Aldrin
+PATIENT-1 | Joe_Biden
+BRIDGE-2 | Glen_Ridge,_New_Jersey
+PATIENT-2 | Essex_County,_New_Jersey
+
+
+LEX
+Id1
+TEXT: Buzz Aldrin is a national of the United States whose leader is Joe Biden. He was born in Glen Ridge, Essex County, New Jersey.
+TEMPLATE: AGENT-1 is a national of BRIDGE-1 whose leader is PATIENT-1 . BRIDGE-1 was born in BRIDGE-2 , PATIENT-2 , BRIDGE-1 Jersey .
+CORRECT: AGENT-1 is a national of BRIDGE-1 whose leader is PATIENT-1 . AGENT-1 was born in BRIDGE-2 , PATIENT-2 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id7 4 Astronaut
+
+TRIPLES
+Elliot_See | almaMater | University_of_Texas_at_Austin
+Elliot_See | deathPlace | St._Louis
+Elliot_See | birthDate | "1927-07-23"
+Elliot_See | birthPlace | Dallas
+
+
+ENTITY MAP
+PATIENT-4 | Dallas
+AGENT-1 | Elliot_See
+PATIENT-1 | University_of_Texas_at_Austin
+PATIENT-3 | "1927-07-23"
+PATIENT-2 | St._Louis
+
+
+LEX
+Id1
+TEXT: Elliot See, a graduate of University of Texas at Austin, was born in Dallas on July 23, 1927, and died in St. Louis.
+TEMPLATE: AGENT-1 , a graduate of PATIENT-1 , was born in PATIENT-4 on PATIENT-3 , and died in PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id8 4 Astronaut
+
+TRIPLES
+Elliot_See | almaMater | University_of_Texas_at_Austin
+Elliot_See | deathPlace | St._Louis
+Elliot_See | deathDate | "1966-02-28"
+Elliot_See | occupation | Test_pilot
+
+
+ENTITY MAP
+PATIENT-4 | Test_pilot
+AGENT-1 | Elliot_See
+PATIENT-1 | University_of_Texas_at_Austin
+PATIENT-3 | "1966-02-28"
+PATIENT-2 | St._Louis
+
+
+LEX
+Id1
+TEXT: Elliot See attended the University of Texas in Austin. He became a test pilot. He died in St. Louis on 1966-02-28.
+TEMPLATE: AGENT-1 attended PATIENT-1 . AGENT-1 became PATIENT-4 . AGENT-1 died in PATIENT-2 on PATIENT-3 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Ellior See attended the University of Texas at Austin. He was a pilot and died in St. Louis, 28th February 1966.
+TEMPLATE: Ellior See attended PATIENT-1 . AGENT-1 was PATIENT-4 and died in PATIENT-2 , PATIENT-3 .
+CORRECT: AGENT-1 attended PATIENT-1 . AGENT-1 was PATIENT-4 and died in PATIENT-2 , PATIENT-3 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id9 4 Astronaut
+
+TRIPLES
+Elliot_See | almaMater | University_of_Texas_at_Austin
+University_of_Texas_at_Austin | affiliations | University_of_Texas_System
+Elliot_See | deathPlace | St._Louis
+St._Louis | isPartOf | Kingdom_of_France
+
+
+ENTITY MAP
+BRIDGE-1 | University_of_Texas_at_Austin
+AGENT-1 | Elliot_See
+PATIENT-1 | University_of_Texas_System
+BRIDGE-2 | St._Louis
+PATIENT-2 | Kingdom_of_France
+
+
+LEX
+Id1
+TEXT: Elliot See attended the University of Texas in Austin which is affiliated to the University of Texas system. He died in St Louis which is part of the Kingdom of France.
+TEMPLATE: AGENT-1 attended BRIDGE-1 which is affiliated to PATIENT-1 . AGENT-1 died in BRIDGE-2 which is part of PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Elliot See died in St Louis which is part of the kingdom of France, his alma mater was the University of Texas at Austin which is affiliated with the University of Texas system.
+TEMPLATE: AGENT-1 died in BRIDGE-2 which is part of PATIENT-2 , AGENT-1 alma mater was BRIDGE-1 which is affiliated with PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id10 4 Astronaut
+
+TRIPLES
+Elliot_See | deathPlace | St._Louis
+Elliot_See | birthDate | "1927-07-23"
+Elliot_See | birthPlace | Dallas
+Elliot_See | deathDate | "1966-02-28"
+
+
+ENTITY MAP
+PATIENT-4 | "1966-02-28"
+AGENT-1 | Elliot_See
+PATIENT-1 | St._Louis
+PATIENT-3 | Dallas
+PATIENT-2 | "1927-07-23"
+
+
+LEX
+Id1
+TEXT: Elliot See was born on July 23rd, 1927 in Dallas, and died in St. Louis on February 28th, 1966.
+TEMPLATE: AGENT-1 was born on PATIENT-2 in PATIENT-3 , and died in PATIENT-1 on PATIENT-4 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Ellior See was born 23rd July 1927 in Dallas and died in St. Louis on 28th February 1966.
+TEMPLATE: AGENT-1 was born PATIENT-2 in PATIENT-3 and died in PATIENT-1 on PATIENT-4 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id11 4 Astronaut
+
+TRIPLES
+William_Anders | dateOfRetirement | "1969-09-01"
+Apollo_8 | commander | Frank_Borman
+William_Anders | was a crew member of | Apollo_8
+Apollo_8 | backup pilot | Buzz_Aldrin
+
+
+ENTITY MAP
+BRIDGE-1 | Apollo_8
+AGENT-1 | William_Anders
+PATIENT-1 | "1969-09-01"
+PATIENT-3 | Buzz_Aldrin
+PATIENT-2 | Frank_Borman
+
+
+LEX
+Id1
+TEXT: The members of Apollo 8 were Buzz Aldrin who was backup pilot, commander Frank Borman and William Anders who retired on September 1st, 1969.
+TEMPLATE: The members of BRIDGE-1 were PATIENT-3 who was backup pilot , PATIENT-2 and AGENT-1 who retired on PATIENT-1 .
+CORRECT: The members of BRIDGE-1 were PATIENT-3 who was backup pilot , commander PATIENT-2 and AGENT-1 who retired on PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: William Anders served as a crew member of Apollo 8 under Commander Frank Borrman and backup pilot Buzz Aldrin. He retired 1969.09.01.
+TEMPLATE: AGENT-1 served as PATIENT-1 of BRIDGE-1 under Commander Frank Borrman and backup PATIENT-3 . AGENT-1 retired PATIENT-1 .
+CORRECT: AGENT-1 served as a crew member of BRIDGE-1 under Commander PATIENT-2 and backup pilot PATIENT-3 . AGENT-1 retired PATIENT-1 .
+COMMENT: 
+-
+

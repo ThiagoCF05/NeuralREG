@@ -1,0 +1,5877 @@
+
+Entry: Id167 2 SportsTeam
+
+TRIPLES
+Peter_Stöger | club | SK_Rapid_Wien
+1._FC_Köln | manager | Peter_Stöger
+
+
+ENTITY MAP
+BRIDGE-1 | Peter_Stöger
+AGENT-1 | 1._FC_Köln
+PATIENT-1 | SK_Rapid_Wien
+
+
+LEX
+Id1
+TEXT: Peter Stoger plays for SK Rapid Wien and is the manager of 1. FC Koln.
+TEMPLATE: BRIDGE-1 plays for PATIENT-1 and is the manager of 1 . AGENT-1
+CORRECT: BRIDGE-1 plays for PATIENT-1 and is the manager of AGENT-1
+COMMENT: mod
+-
+Id2
+TEXT: The manager of 1. FC Koln is Peter Stöger, who plays for SK Rapid Wien club.
+TEMPLATE: The manager of AGENT-1 . FC Koln isBRIDGE-AGENT-1 , who plays for PATIENT-AGENT-1 club .
+CORRECT: The manager of AGENT-1 is BRIDGE-1 , who plays for PATIENT-1 club .
+COMMENT:
+-
+Id3
+TEXT: Peter Stöger, the manager of 1. FC Köln, plays for SK Rapid Wien.
+TEMPLATE: BRIDGE-1 , the manager of AGENT-1 , plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id162 2 SportsTeam
+
+TRIPLES
+Massimo_Drago | club | Vigor_Lamezia
+A.C._Cesena | manager | Massimo_Drago
+
+
+ENTITY MAP
+BRIDGE-1 | Massimo_Drago
+AGENT-1 | A.C._Cesena
+PATIENT-1 | Vigor_Lamezia
+
+
+LEX
+Id1
+TEXT: Massimo Drago is attached to the club Vigor Lamezia and manages A.C. Cesena.
+TEMPLATE: BRIDGE-1 is attached to PATIENT-1 and manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Massimo Drago is attached to the club Vigor Lamezia and he has been the manager of A C Cesena.
+TEMPLATE: BRIDGE-1 is attached to PATIENT-1 and BRIDGE-1 has been the manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Massimo Drago is attached to the club Vigor Lamezia and has been the manager of A C Cesena.
+TEMPLATE: BRIDGE-1 is attached to PATIENT-1 and has been the manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id160 2 SportsTeam
+
+TRIPLES
+Luciano_Spalletti | club | Udinese_Calcio
+A.S._Roma | manager | Luciano_Spalletti
+
+
+ENTITY MAP
+BRIDGE-1 | Luciano_Spalletti
+AGENT-1 | A.S._Roma
+PATIENT-1 | Udinese_Calcio
+
+
+LEX
+Id1
+TEXT: Luciano Spalletti, who manages A.S. Roma, played for Udinese Calcio.
+TEMPLATE: BRIDGE-1 , who manages AGENT-1 , played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Luciano Spalletti plays for Udinese Calcio and manages AS Roma.
+TEMPLATE: BRIDGE-1 plays for PATIENT-1 and manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Luciano Spalletti manages A S Roma and plays for Udinese Calcio.
+TEMPLATE: BRIDGE-1 manages AGENT-1 and plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id157 2 SportsTeam
+
+TRIPLES
+Italy | demonym | Italians
+A.S._Gubbio_1910 | ground | Italy
+
+
+ENTITY MAP
+BRIDGE-1 | Italy
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | Italians
+
+
+LEX
+Id1
+TEXT: Italians inhabit Italy where the ground of A.S. Gubbio 1910 is located.
+TEMPLATE: PATIENT-1 inhabit BRIDGE-1 where the ground of AGENT-1 is located .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy, where the people who live there are called Italians.
+TEMPLATE: The ground of AGENT-1 is located in BRIDGE-1 , where the people who live there are called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy, where Italians live.
+TEMPLATE: The ground of AGENT-1 is located in BRIDGE-1 , where PATIENT-1 live .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id170 2 SportsTeam
+
+TRIPLES
+Serie_A | champions | Juventus_F.C.
+A.S._Roma | league | Serie_A
+
+
+ENTITY MAP
+BRIDGE-1 | Serie_A
+AGENT-1 | A.S._Roma
+PATIENT-1 | Juventus_F.C.
+
+
+LEX
+Id1
+TEXT: AS Roma play in the Serie A league where the champions are Juventus FC.
+TEMPLATE: AGENT-1 in the BRIDGE-1 league where the champions are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Juventus FC have been Serie A champions and AS Roma play in the same league.
+TEMPLATE: PATIENT-1 have been BRIDGE-1 champions and AGENT-1 in the same league .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Juventus F.C. are former champions of Serie A, A.S. Roma also play in the same competition.
+TEMPLATE: PATIENT-1 are former champions of BRIDGE-1 , AGENT-1 also play in the same competition .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id169 2 SportsTeam
+
+TRIPLES
+Serie_A | champions | Juventus_F.C.
+A.C._Chievo_Verona | league | Serie_A
+
+
+ENTITY MAP
+BRIDGE-1 | Serie_A
+AGENT-1 | A.C._Chievo_Verona
+PATIENT-1 | Juventus_F.C.
+
+
+LEX
+Id1
+TEXT: A.C. Chievo Verona play in Serie A where Juventus FC have been champions .
+TEMPLATE: AGENT-1 play in BRIDGE-1 where PATIENT-1 have been champions .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Juventus F.C. are former champions of Serie A, and A.C. Chievo Verona are also in the same competition.
+TEMPLATE: PATIENT-1 are former champions of BRIDGE-1 , and AGENT-1 are also in the same competition .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: AC Chievo Verona play in the Serie A league in which Juventus FC have been champions.
+TEMPLATE: AGENT-1 play in the BRIDGE-1 league in which PATIENT-1 have been champions .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id168 2 SportsTeam
+
+TRIPLES
+Peter_Stöger | club | SK_Vorwärts_Steyr
+1._FC_Köln | manager | Peter_Stöger
+
+
+ENTITY MAP
+BRIDGE-1 | Peter_Stöger
+AGENT-1 | 1._FC_Köln
+PATIENT-1 | SK_Vorwärts_Steyr
+
+
+LEX
+Id1
+TEXT: Peter Stoger, manager of 1.FC Koln, is also in the SK Vorwarts Steyr club.
+TEMPLATE: BRIDGE-1 , manager of 1 . AGENT-1 , is also in PATIENT-1 .
+CORRECT: BRIDGE-1 , manager of AGENT-1 , is also in PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Peter Stoger is in the SK Vorwarts Steyr club and is the manager of 1. FC Koln.
+TEMPLATE: BRIDGE-1 is in PATIENT-1 and is the manager of 1 . AGENT-1
+CORRECT: BRIDGE-1 is in PATIENT-1 and is the manager of AGENT-1
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id166 2 SportsTeam
+
+TRIPLES
+Peter_Stöger | club | FC_Admira_Wacker_Mödling
+1._FC_Köln | manager | Peter_Stöger
+
+
+ENTITY MAP
+BRIDGE-1 | Peter_Stöger
+AGENT-1 | 1._FC_Köln
+PATIENT-1 | FC_Admira_Wacker_Mödling
+
+
+LEX
+Id1
+TEXT: Peter Stöger's club is the FC Admira Wacker Mödling and he is the manager of 1. FC Koln.
+TEMPLATE: BRIDGE-1 's club is PATIENT-1 and BRIDGE-1 is the manager of 1 . AGENT-1
+CORRECT: BRIDGE-1 club is PATIENT-1 and BRIDGE-1 is the manager of AGENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Peter Stoger is the manager of FC Kolin and his club is FC Admira Wacker Modling.
+TEMPLATE: BRIDGE-1 is the manager of AGENT-1 and BRIDGE-1 club is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The manager of 1.FC Koln is Peter Stoger, who's club is FC Admira Wacker Modling.
+TEMPLATE: The manager of 1 . AGENT-1 is BRIDGE-1 , who 's club is PATIENT-1 .
+CORRECT: The manager of AGENT-1 is BRIDGE-1 , who 's club is PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id165 2 SportsTeam
+
+TRIPLES
+Olympic_Stadium_(Athens) | location | Marousi
+AEK_Athens_F.C. | ground | Olympic_Stadium_(Athens)
+
+
+ENTITY MAP
+BRIDGE-1 | Olympic_Stadium_(Athens)
+AGENT-1 | AEK_Athens_F.C.
+PATIENT-1 | Marousi
+
+
+LEX
+Id1
+TEXT: The Olympic Stadium (Athens) is located in Marousi and is the home ground of AEK Athens FC.
+TEMPLATE: BRIDGE-1 is located in PATIENT-1 and is the home ground of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The ground for AEK Athens FC is the Olympic Stadium (Athens) located in Marousi.
+TEMPLATE: The ground for AGENT-1 is BRIDGE-1 (Athens) located in PATIENT-1 .
+CORRECT: The ground for AGENT-1 is BRIDGE-1 located in PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: The ground for AEK Athens FC is the Olympic Stadium (Athens) in Marousi.
+TEMPLATE: The ground for AGENT-1 is BRIDGE-1 in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id164 2 SportsTeam
+
+TRIPLES
+Olympic_Stadium_(Athens) | location | Athens
+AEK_Athens_F.C. | ground | Olympic_Stadium_(Athens)
+
+
+ENTITY MAP
+BRIDGE-1 | Olympic_Stadium_(Athens)
+AGENT-1 | AEK_Athens_F.C.
+PATIENT-1 | Athens
+
+
+LEX
+Id1
+TEXT: The Olympic Stadium, located in Athens, is the home ground of AEK Athens FC.
+TEMPLATE: BRIDGE-1 , located in PATIENT-1 , is AGENT-1 of AEK PATIENT-1 FC .
+CORRECT: BRIDGE-1 , located in PATIENT-1 , is the home of AGENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The Olympic Stadium in Athens is where the AEK Athens football club play.
+TEMPLATE: BRIDGE-1 in PATIENT-1 is where the AEK PATIENT-1 football AGENT-1 .
+CORRECT: BRIDGE-1 in PATIENT-1 is where AGENT-1 play .
+COMMENT:
+-
+Id3
+TEXT: The Olympic Stadium, in Athens, is the home ground of AEK Athens FC.
+TEMPLATE: BRIDGE-1 , in PATIENT-1 , is AGENT-1 of AEK PATIENT-1 FC .
+CORRECT: BRIDGE-1 , in PATIENT-1 , is the home ground of AGENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id163 2 SportsTeam
+
+TRIPLES
+National_League_North | champions | Barrow_A.F.C.
+A.F.C._Fylde | league | National_League_North
+
+
+ENTITY MAP
+BRIDGE-1 | National_League_North
+AGENT-1 | A.F.C._Fylde
+PATIENT-1 | Barrow_A.F.C.
+
+
+LEX
+Id1
+TEXT: Barrow A.F.C. team won the championship before in the National League North, obviously they are in that league.
+TEMPLATE: PATIENT-1 won the championship before in BRIDGE-1 , obviously they are in AGENT-1 .
+CORRECT:
+COMMENT: wrong
+-
+Id2
+TEXT: Barrow A.F.C. are the National League North Champions and A.F.C. Fylde play in the same league.
+TEMPLATE: PATIENT-1 are BRIDGE-1 Champions and A.F.C. Fylde play in the same league .
+CORRECT: PATIENT-1 are BRIDGE-1 Champions and AGENT-1 play in the same league .
+COMMENT:
+-
+Id3
+TEXT: Fylde played in the National League North league of which Barrow AFC are the champions.
+TEMPLATE: AGENT-1 played in the BRIDGE-1 league of which PATIENT-1 are the champions .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id161 2 SportsTeam
+
+TRIPLES
+Massimo_Drago | club | U.S._Castrovillari_Calcio
+A.C._Cesena | manager | Massimo_Drago
+
+
+ENTITY MAP
+BRIDGE-1 | Massimo_Drago
+AGENT-1 | A.C._Cesena
+PATIENT-1 | U.S._Castrovillari_Calcio
+
+
+LEX
+Id1
+TEXT: Massimo Drago plays for U.S Castrovillari Calcio and manages A.C. Cesena.
+TEMPLATE: BRIDGE-1 plays for PATIENT-1 and manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Massimo Drago, who manages A.C. Cesena, was once a player for US Castrovillari Calcio.
+TEMPLATE: BRIDGE-1 , who manages AGENT-1 , was once a player for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Massimo Drago plays for U.S Castrovillari Calcio and has been the manager of A C Cesena.
+TEMPLATE: BRIDGE-1 plays for PATIENT-1 and has been the manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id159 2 SportsTeam
+
+TRIPLES
+Italy | officialLanguage | Italian_language
+A.S._Gubbio_1910 | ground | Italy
+
+
+ENTITY MAP
+BRIDGE-1 | Italy
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | Italian_language
+
+
+LEX
+Id1
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy, where the official language is Italian.
+TEMPLATE: The ground of AGENT-1 is located in BRIDGE-1 , where PATIENT-1 is Italian .
+CORRECT: The ground of AGENT-1 is located in BRIDGE-1 , where the official language is PATIENT-1 .
+COMMENT: language
+-
+Id2
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy, where unsurprisingly they speak Italian.
+TEMPLATE: PATIENT-1 of AGENT-1 is located in BRIDGE-1 , where unsurprisingly they speak Italian .
+CORRECT: The ground of AGENT-1 is located in BRIDGE-1 , where unsurprisingly BRIDGE-1 speak PATIENT-1 .
+COMMENT: language
+-
+Id3
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy where the official language is Italian.
+TEMPLATE: The ground of AGENT-1 is located in BRIDGE-1 where PATIENT-1 is Italian .
+CORRECT: The ground of AGENT-1 is located in BRIDGE-1 where the official language is PATIENT-1 .
+COMMENT: language
+-
+
+**************************************************
+
+Entry: Id158 2 SportsTeam
+
+TRIPLES
+Italy | leader | Sergio_Mattarella
+A.S._Gubbio_1910 | ground | Italy
+
+
+ENTITY MAP
+BRIDGE-1 | Italy
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | Sergio_Mattarella
+
+
+LEX
+Id1
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy where Sergio Mattarella is the leader.
+TEMPLATE: The ground of AGENT-1 is located in BRIDGE-1 where PATIENT-1 is the leader .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy, where the leader is Sergio Mattarella.
+TEMPLATE: The ground of AGENT-1 is located in BRIDGE-1 , where the leader is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy, which has the leader Sergio Mattarella.
+TEMPLATE: The ground of AGENT-1 is located in BRIDGE-1 , which has PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id156 2 SportsTeam
+
+TRIPLES
+Italy | capital | Rome
+A.S._Gubbio_1910 | ground | Italy
+
+
+ENTITY MAP
+BRIDGE-1 | Italy
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | Rome
+
+
+LEX
+Id1
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy, the capital of which is Rome.
+TEMPLATE: The ground of AGENT-1 is located in BRIDGE-1 , the capital of which is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The ground of A.S. Gubbio 1910 is located near Rome, capital of Italy.
+TEMPLATE: The ground of AGENT-1 is located near PATIENT-1 , capital of BRIDGE-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy, which has Rome as its capital.
+TEMPLATE: The ground of AGENT-1 is located in BRIDGE-1 , which has PATIENT-1 as AGENT-1 capital .
+CORRECT: The ground of AGENT-1 is located in BRIDGE-1 , which has PATIENT-1 as BRIDGE-1 capital .
+COMMENT: coreference
+-
+
+**************************************************
+
+Entry: Id136 2 SportsTeam
+
+TRIPLES
+AZ_Alkmaar | numberOfMembers | 17023
+AZ_Alkmaar | season | 2014–15_Eredivisie
+
+
+ENTITY MAP
+AGENT-1 | AZ_Alkmaar
+PATIENT-1 | 17023
+PATIENT-2 | 2014–15_Eredivisie
+
+
+LEX
+Id1
+TEXT: AZ Alkmaar has 17023 members and played in the Eredivisie 2014-15.
+TEMPLATE: AGENT-1 has PATIENT-1 members and played in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AZ Alkmaar has 17023 members and played in the Eredivisie in 2014-15.
+TEMPLATE: AGENT-1 has PATIENT-1 members and played in PATIENT-2 in 2014-15 .
+CORRECT: AGENT-1 has PATIENT-1 members and played in PATIENT-2 .
+COMMENT: mod
+-
+Id3
+TEXT: AZ Alkmaar, which has 17023 members, played in the Eredivisie in 2014-15.
+TEMPLATE: AGENT-1 , which has PATIENT-1 members , played in PATIENT-2 in 2014-15 .
+CORRECT: AGENT-1 , which has PATIENT-1 members , played in PATIENT-2 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id135 2 SportsTeam
+
+TRIPLES
+AZ_Alkmaar | manager | John_van_den_Brom
+John_van_den_Brom | club | İstanbulspor_A.Ş.
+
+
+ENTITY MAP
+BRIDGE-1 | John_van_den_Brom
+AGENT-1 | AZ_Alkmaar
+PATIENT-1 | İstanbulspor_A.Ş.
+
+
+LEX
+Id1
+TEXT: John van den Brom has been manager of AZ Alkmaar and is a player in İstanbulspor A.Ş.
+TEMPLATE: BRIDGE-1 has been manager of AGENT-1 and is a player in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: John van den Brom plays in İstanbulspor A.Ş. He manages the İstanbulspor A.Ş.
+TEMPLATE: BRIDGE-1 plays in PATIENT-1 AGENT-1 manages the İstanbulspor A.Ş .
+CORRECT: BRIDGE-1 plays in PATIENT-1 . BRIDGE-1 manages the PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: John van den Brom, who manages the AZ Alkmaair, plays for Istanulspor A.S.
+TEMPLATE: BRIDGE-1 , who manages AGENT-1 , plays for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id134 2 SportsTeam
+
+TRIPLES
+AZ_Alkmaar | manager | John_van_den_Brom
+John_van_den_Brom | club | Vitesse_Arnhem
+
+
+ENTITY MAP
+BRIDGE-1 | John_van_den_Brom
+AGENT-1 | AZ_Alkmaar
+PATIENT-1 | Vitesse_Arnhem
+
+
+LEX
+Id1
+TEXT: John van den Brom , who managed AZ Alkmaar, plays for Vitesse Arnhem.
+TEMPLATE: BRIDGE-1 , who managed AGENT-1 , plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: John van den Brom, who plays for Vitesse Arnhem, is the manager of AZ Alkmaar.
+TEMPLATE: BRIDGE-1 , who plays for PATIENT-1 , is the manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: John van den Brom, manager of AZ Alkmaar, is in Vitesse Arnhem.
+TEMPLATE: BRIDGE-1 , manager of AGENT-1 , is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id138 2 SportsTeam
+
+TRIPLES
+AZ_Alkmaar | season | 2014
+AZ_Alkmaar | numberOfMembers | 17023
+
+
+ENTITY MAP
+AGENT-1 | AZ_Alkmaar
+PATIENT-1 | 2014
+PATIENT-2 | 17023
+
+
+LEX
+Id1
+TEXT: AZ Alkmaar has 17023 members and played in the 2014 season.
+TEMPLATE: AGENT-1 has PATIENT-2 members and played in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AZ Alkmaar, who has 17023 members, played in the 2014 season.
+TEMPLATE: AGENT-1 , who has PATIENT-2 members , played in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id132 2 SportsTeam
+
+TRIPLES
+AZ_Alkmaar | manager | John_van_den_Brom
+John_van_den_Brom | club | De_Graafschap
+
+
+ENTITY MAP
+BRIDGE-1 | John_van_den_Brom
+AGENT-1 | AZ_Alkmaar
+PATIENT-1 | De_Graafschap
+
+
+LEX
+Id1
+TEXT: John van den Brom has been manager of AZ Alkmaar, Brom also plays for De Graafschap.
+TEMPLATE: BRIDGE-1 has been manager of AGENT-1 , Brom also plays for PATIENT-1 .
+CORRECT: BRIDGE-1 has been manager of AGENT-1 , BRIDGE-1 also plays for PATIENT-1 .
+COMMENT: coreference
+-
+Id2
+TEXT: John van den Brom plays for De Graafschap and manages AZ Alkmaair.
+TEMPLATE: BRIDGE-1 plays for PATIENT-1 and manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: John van den Brom, manager of AZ Alkmaar, plays for De Graafschap.
+TEMPLATE: BRIDGE-1 , manager of AGENT-1 , plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id131 2 SportsTeam
+
+TRIPLES
+AZ_Alkmaar | manager | John_van_den_Brom
+John_van_den_Brom | club | AFC_Ajax
+
+
+ENTITY MAP
+BRIDGE-1 | John_van_den_Brom
+AGENT-1 | AZ_Alkmaar
+PATIENT-1 | AFC_Ajax
+
+
+LEX
+Id1
+TEXT: John van den Brom plays for AFC Ajax and has previously been the manager for AZ Alkmaar.
+TEMPLATE: BRIDGE-1 plays for PATIENT-1 and has previously been the manager for AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: John van den Brom plays for AFC Ajax and manages AZ Alkmaar.
+TEMPLATE: BRIDGE-1 plays for PATIENT-1 and manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: John van den Brom manages the AZ Alkmaair and plays for AFC Ajax.
+TEMPLATE: BRIDGE-1 manages AGENT-1 and plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id130 2 SportsTeam
+
+TRIPLES
+AZ_Alkmaar | ground | AFAS_Stadion
+AZ_Alkmaar | numberOfMembers | 17023
+
+
+ENTITY MAP
+AGENT-1 | AZ_Alkmaar
+PATIENT-1 | AFAS_Stadion
+PATIENT-2 | 17023
+
+
+LEX
+Id1
+TEXT: AZ Alkmaar ground is the AFAS Stadion and it has 17023 members.
+TEMPLATE: AGENT-1 's ground is PATIENT-1 and PATIENT-1 has PATIENT-2 members .
+CORRECT: AGENT-1 ground is PATIENT-1 and PATIENT-1 has PATIENT-2 members .
+COMMENT:
+-
+Id2
+TEXT: AZ Alkmaar has 17023 members and its ground is the AFAS Stadion.
+TEMPLATE: AGENT-1 has PATIENT-2 members and AGENT-1 ground is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: AZ Alkmaar has has 17023 members and their ground is the AFAS Stadion.
+TEMPLATE: AGENT-1 has has PATIENT-2 members and PATIENT-2 ground is PATIENT-1 .
+CORRECT: AGENT-1 has has PATIENT-2 members and AGENT-1 ground is PATIENT-1 .
+COMMENT: coreference
+-
+
+**************************************************
+
+Entry: Id129 2 SportsTeam
+
+TRIPLES
+AZAL_PFK | season | 2014–15_Azerbaijan_Premier_League
+AZAL_PFK | numberOfMembers | 3500
+
+
+ENTITY MAP
+AGENT-1 | AZAL_PFK
+PATIENT-1 | 2014–15_Azerbaijan_Premier_League
+PATIENT-2 | 3500
+
+
+LEX
+Id1
+TEXT: AZAL PFK Bakou which has 3500 members is playing in the Azerbaijan PremierLeague, 2014–15.
+TEMPLATE: AGENT-1 Bakou which has PATIENT-2 members is playing in PATIENT-1 , 2014 -- 15 .
+CORRECT: AGENT-1 which has PATIENT-2 members is playing in PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: AZAL PFK Bakou, whose ground has a capacity of 3500, played in the Azerbaijan Premier League, 2014–15.
+TEMPLATE: AGENT-1 Bakou , whose ground has a capacity of PATIENT-2 , played in PATIENT-1 , 2014 -- 15 .
+CORRECT: AGENT-1 , whose ground has a capacity of PATIENT-2 , played in PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: AZAL PFK were in the Azerbaijan Premier League in 2014-15 and have 3500 members.
+TEMPLATE: AGENT-1 were in PATIENT-1 in 2014-15 and have PATIENT-2 members .
+CORRECT: AGENT-1 were in PATIENT-1 and have PATIENT-2 members .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id128 2 SportsTeam
+
+TRIPLES
+AZAL_PFK | numberOfMembers | 3500
+AZAL_PFK | season | 2014
+
+
+ENTITY MAP
+AGENT-1 | AZAL_PFK
+PATIENT-1 | 3500
+PATIENT-2 | 2014
+
+
+LEX
+Id1
+TEXT: There are 3500 members of AZAL PFK who are in season 2014.
+TEMPLATE: There are PATIENT-1 members of AGENT-1 who are in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AZAL PFK has 3500 members and competed in the 2014season.
+TEMPLATE: AGENT-1 has PATIENT-1 members and competed in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Azal Pfk are in season 2014, and have 3500 members.
+TEMPLATE: AGENT-1 are in PATIENT-2 , and have PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id127 2 SportsTeam
+
+TRIPLES
+AZAL_PFK | league | Azerbaijan_Premier_League
+Azerbaijan_Premier_League | champions | Qarabağ_FK
+
+
+ENTITY MAP
+BRIDGE-1 | Azerbaijan_Premier_League
+AGENT-1 | AZAL_PFK
+PATIENT-1 | Qarabağ_FK
+
+
+LEX
+Id1
+TEXT: The AZAL PFK competes in The Azerbaijan Premier League where the championship is held by Qarabag FK.
+TEMPLATE: AGENT-1 competes in BRIDGE-1 where the championship is held by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AZAL PFK play in the Azerbaijan Premier League where the champions are Qarabag FK.
+TEMPLATE: AGENT-1 play in BRIDGE-1 where the champions are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Although AZAL PFK is in the Azerbaijan Premier League, Qarabag FK are the champions.
+TEMPLATE: Although AGENT-1 is in BRIDGE-1 , PATIENT-1 are the champions .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id126 2 SportsTeam
+
+TRIPLES
+AZAL_PFK | league | Azerbaijan_Premier_League
+AZAL_PFK | ground | AZAL_Arena
+
+
+ENTITY MAP
+AGENT-1 | AZAL_PFK
+PATIENT-1 | Azerbaijan_Premier_League
+PATIENT-2 | AZAL_Arena
+
+
+LEX
+Id1
+TEXT: AZAL Arena is the ground of AZAL PFK who play in the Azerbaijan Premier League.
+TEMPLATE: PATIENT-2 is the ground of AGENT-1 who play in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The AZAL PFK competes in The Azerbaijan Premier League and play their home matches at the AZAL Arena.
+TEMPLATE: AGENT-1 competes in PATIENT-1 and play their home matches at PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: AZAL PFK, in the Azerbaijan Premier League, play their home games at the AZAL Arena.
+TEMPLATE: AGENT-1 , in PATIENT-1 , play their home games at PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id125 2 SportsTeam
+
+TRIPLES
+AZAL_PFK | ground | AZAL_Arena
+AZAL_Arena | location | Azerbaijan
+
+
+ENTITY MAP
+BRIDGE-1 | AZAL_Arena
+AGENT-1 | AZAL_PFK
+PATIENT-1 | Azerbaijan
+
+
+LEX
+Id1
+TEXT: AZAL Arena in Azerbaijan is the ground of AZAL PFK.
+TEMPLATE: BRIDGE-1 in PATIENT-1 is the ground of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AZAL Arena is the ground of AZAL PFK, it is in Azerbaijan.
+TEMPLATE: BRIDGE-1 is the ground of AGENT-1 , AGENT-1 is in PATIENT-1 .
+CORRECT: BRIDGE-1 is the ground of AGENT-1 , BRIDGE-1 is in PATIENT-1 .
+COMMENT: coreference
+-
+Id3
+TEXT: AZAL PFK play their home matches at the AZAL Arena in Azerbaijan.
+TEMPLATE: AGENT-1 play their home matches at BRIDGE-1 in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id124 2 SportsTeam
+
+TRIPLES
+AZAL_Arena | location | Baku
+AZAL_PFK | ground | AZAL_Arena
+
+
+ENTITY MAP
+BRIDGE-1 | AZAL_Arena
+AGENT-1 | AZAL_PFK
+PATIENT-1 | Baku
+
+
+LEX
+Id1
+TEXT: AZAL PFK play their home matches at the AZAL Arena which is located in Baku.
+TEMPLATE: AGENT-1 play their home matches at BRIDGE-1 which is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The AZAL Arena is in Baku and is the ground of AZAL PFK.
+TEMPLATE: BRIDGE-1 is in PATIENT-1 and is the ground of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: AZAL Arena, the ground of AZAL PFK, is located in Baku.
+TEMPLATE: BRIDGE-1 , the ground of AGENT-1 , is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id123 2 SportsTeam
+
+TRIPLES
+AFC_Ajax_(amateurs) | season | 2014–15_Topklasse
+AFC_Ajax_(amateurs) | fullname | "Amsterdamsche Football Club Ajax Amateurs"
+
+
+ENTITY MAP
+AGENT-1 | AFC_Ajax_(amateurs)
+PATIENT-1 | 2014–15_Topklasse
+PATIENT-2 | "Amsterdamsche Football Club Ajax Amateurs"
+
+
+LEX
+Id1
+TEXT: The Amsterdamsche Football Club Ajax Amateurs is the complete name for the AFC Ajax (amateurs) who played in the Topklasse in the 2014-2015 season.
+TEMPLATE: PATIENT-2 is the complete name for the AFC Ajax (AGENT-1) who played in PATIENT-1 in the 2014-2015 season .
+CORRECT: PATIENT-2 is the complete name for AGENT-1 who played in PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: The AFC Ajax amateurs (Amsterdamsche Football Club Ajax Amateurs) played the 2014-2015 season in the Topklasse.
+TEMPLATE: AGENT-1 (PATIENT-2) played the 2014-2015 season in PATIENT-1 .
+CORRECT: AGENT-1 (PATIENT-2) played the PATIENT-1 season .
+COMMENT:
+-
+Id3
+TEXT: AFC Ajax (amateurs), with full name "Amsterdamsche Football Club Ajax Amateurs", played in the Topklasse in the 2014-2015 season.
+TEMPLATE: AGENT-1 (amateurs) , with full `` PATIENT-2 '' , played in PATIENT-1 in the 2014-2015 season .
+CORRECT: AGENT-1 , with full `` PATIENT-2 '' , played in PATIENT-1 season .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id122 2 SportsTeam
+
+TRIPLES
+AFC_Ajax_(amateurs) | season | 2014
+AFC_Ajax_(amateurs) | numberOfMembers | 5000
+
+
+ENTITY MAP
+AGENT-1 | AFC_Ajax_(amateurs)
+PATIENT-1 | 2014
+PATIENT-2 | 5000
+
+
+LEX
+Id1
+TEXT: AFC Ajax (amateurs) who have 5000 members played in the 2014 season.
+TEMPLATE: AGENT-1 (amateurs) who have PATIENT-2 members played in the PATIENT-1 season .
+CORRECT: AGENT-1 who have PATIENT-2 members played in the PATIENT-1 season .
+COMMENT: mod
+-
+Id2
+TEXT: AFC Ajax (amateurs), who have 5000 members played in the 2014 season.
+TEMPLATE: AGENT-1 (amateurs) , who have PATIENT-2 members played in the PATIENT-1 season .
+CORRECT: AGENT-1 , who have PATIENT-2 members played in the PATIENT-1 season .
+COMMENT: mod
+-
+Id3
+TEXT: AFC Ajax (Amateurs) competed in the 2014 season and it has 5000 members.
+TEMPLATE: AGENT-1 competed in the PATIENT-1 season and AGENT-1 has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id121 2 SportsTeam
+
+TRIPLES
+AFC_Ajax_(amateurs) | numberOfMembers | 5000
+AFC_Ajax_(amateurs) | fullname | "Amsterdamsche Football Club Ajax Amateurs"
+
+
+ENTITY MAP
+AGENT-1 | AFC_Ajax_(amateurs)
+PATIENT-1 | 5000
+PATIENT-2 | "Amsterdamsche Football Club Ajax Amateurs"
+
+
+LEX
+Id1
+TEXT: Amsterdamsche Football Club Ajax Amateurs (abbreviated to AFC Ajax (amateurs)) has 5000 members.
+TEMPLATE: PATIENT-2 (abbreviated to AGENT-1) has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The full name of AFC Ajax (amateurs) which has 5000 members, is "Amsterdamsche Football Club Ajax Amateurs".
+TEMPLATE: The full name of AGENT-1 (amateurs) which has PATIENT-1 members , is `` PATIENT-2 '' .
+CORRECT: The full name of AGENT-1 which has PATIENT-1 members , is `` PATIENT-2 '' .
+COMMENT: mod
+-
+Id3
+TEXT: The full name of AFC Ajax (amateurs) is Amsterdamsche Football Club Ajax Amateurs and it has 5000 members.
+TEMPLATE: The full name of AGENT-1 is PATIENT-2 and PATIENT-2 has PATIENT-1 members .
+CORRECT: The full name of AGENT-1 is PATIENT-2 and AGENT-1 has PATIENT-1 members .
+COMMENT: coreference
+-
+
+**************************************************
+
+Entry: Id120 2 SportsTeam
+
+TRIPLES
+AFC_Ajax_(amateurs) | league | Hoofdklasse
+AFC_Ajax_(amateurs) | numberOfMembers | 5000
+
+
+ENTITY MAP
+AGENT-1 | AFC_Ajax_(amateurs)
+PATIENT-1 | Hoofdklasse
+PATIENT-2 | 5000
+
+
+LEX
+Id1
+TEXT: AFC Ajax (amateurs), with 5000 members, play in the Hoofdklasse league.
+TEMPLATE: AGENT-1 (amateurs) , with PATIENT-2 members , play in the PATIENT-1 league .
+CORRECT: AGENT-1 , with PATIENT-2 members , play in the PATIENT-1 league .
+COMMENT: mod
+-
+Id2
+TEXT: AFC Ajax, whose amateurs play in the Hoofdklasse league, has 5000 members.
+TEMPLATE: AGENT-1 , whose amateurs play in the PATIENT-1 league , has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: AFC Ajax (amateurs) play in the Hoofdklasse league and their ground has the capacity for 5000 fans.
+TEMPLATE: AGENT-1 play in the PATIENT-1 league and PATIENT-2 ground has the capacity for PATIENT-2 fans .
+CORRECT: AGENT-1 play in the PATIENT-1 league and AGENT-1 ground has the capacity for PATIENT-2 fans .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id119 2 SportsTeam
+
+TRIPLES
+AFC_Ajax_(amateurs) | ground | Sportpark_De_Toekomst
+Sportpark_De_Toekomst | tenant | Ajax_Youth_Academy
+
+
+ENTITY MAP
+BRIDGE-1 | Sportpark_De_Toekomst
+AGENT-1 | AFC_Ajax_(amateurs)
+PATIENT-1 | Ajax_Youth_Academy
+
+
+LEX
+Id1
+TEXT: Ajax Youth Academy is a tenant of Sportpark De Toekomst, the ground of AFC Ajax amateurs.
+TEMPLATE: PATIENT-1 is a tenant of BRIDGE-1 , the ground of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AFC Ajax (amateurs)'s ground is Sportpark De Toekomst, where Ajax Youth Academy is a tenant.
+TEMPLATE: AGENT-1 's ground is BRIDGE-1 , where PATIENT-1 is a tenant .
+CORRECT: AGENT-1 ground is BRIDGE-1 , where PATIENT-1 is a tenant .
+COMMENT:
+-
+Id3
+TEXT: AFC Ajax (amateurs)'s ground is Sportpark De Toekomst, with Ajax Youth Academy as tenant.
+TEMPLATE: AGENT-1 's ground is BRIDGE-1 , with PATIENT-1 as tenant .
+CORRECT: AGENT-1 ground is BRIDGE-1 , with PATIENT-1 as tenant .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id118 2 SportsTeam
+
+TRIPLES
+AFC_Ajax_(amateurs) | ground | Sportpark_De_Toekomst
+Sportpark_De_Toekomst | owner | AFC_Ajax_N.V.
+
+
+ENTITY MAP
+BRIDGE-1 | Sportpark_De_Toekomst
+AGENT-1 | AFC_Ajax_(amateurs)
+PATIENT-1 | AFC_Ajax_N.V.
+
+
+LEX
+Id1
+TEXT: AFC Ajax (amateurs)'s ground is Sportpark De Toekomst, which is owned by AFC Ajax N.V.
+TEMPLATE: AGENT-1 's ground is BRIDGE-1 , which is owned by PATIENT-1
+CORRECT: AGENT-1 ground is BRIDGE-1 , which is owned by PATIENT-1
+COMMENT:
+-
+Id2
+TEXT: AFC Ajax (amateurs) ground is Sportpark De Toekomst which is owned by AFC Ajax N.V..
+TEMPLATE: AFC Ajax (amateurs) ground is BRIDGE-1 which is owned by AGENT-1 .
+CORRECT: AGENT-1 ground is BRIDGE-1 which is owned by AGENT-1 .
+COMMENT:
+-
+Id3
+TEXT: Sportpark De Toekomst belongs to amateur AFC Ajax.
+TEMPLATE: BRIDGE-1 belongs to AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id117 2 SportsTeam
+
+TRIPLES
+AFC_Ajax_(amateurs) | ground | Sportpark_De_Toekomst
+Sportpark_De_Toekomst | operator | AFC_Ajax
+
+
+ENTITY MAP
+BRIDGE-1 | Sportpark_De_Toekomst
+AGENT-1 | AFC_Ajax_(amateurs)
+PATIENT-1 | AFC_Ajax
+
+
+LEX
+Id1
+TEXT: AFC Ajax (amateurs)'s ground, Sportpark De Toekomst, is operated by AFC Ajax.
+TEMPLATE: PATIENT-1 (AGENT-1) 's ground , BRIDGE-1 , is operated by PATIENT-1 .
+CORRECT: AGENT-1 ground , BRIDGE-1 , is operated by PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Sportpark De Toekomst is the ground of AFC Ajax (amateurs) and it is operated by AFC Ajax.
+TEMPLATE: BRIDGE-1 is the ground of PATIENT-1 (AGENT-1) and AGENT-1 is operated by PATIENT-1 .
+CORRECT: BRIDGE-1 is the ground of AGENT-1 and BRIDGE-1 is operated by PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: AFC Ajax (amateurs)'s ground is Sportpark De Toekomst, operated by AFC Ajax.
+TEMPLATE: PATIENT-1 (AGENT-1) 's ground is BRIDGE-1 , operated by PATIENT-1 .
+CORRECT: AGENT-1 ground is BRIDGE-1 , operated by PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id116 2 SportsTeam
+
+TRIPLES
+AFC_Ajax_(amateurs) | ground | Amsterdam
+Amsterdam | part | Amsterdam-Noord
+
+
+ENTITY MAP
+BRIDGE-1 | Amsterdam
+AGENT-1 | AFC_Ajax_(amateurs)
+PATIENT-1 | Amsterdam-Noord
+
+
+LEX
+Id1
+TEXT: Amsterdam-Noord is part of Amsterdam where the ground of AFC Ajax (amateurs) is located.
+TEMPLATE: PATIENT-1 is part of BRIDGE-1 where the ground of AGENT-1 is located .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Amsterdam Noord is part of Amsterdam where the ground of AFC Ajax (amateurs) is located.
+TEMPLATE: BRIDGE-1 Noord is part of BRIDGE-1 where the ground of AGENT-1 is located .
+CORRECT: PATIENT-1 is part of BRIDGE-1 where the ground of AGENT-1 is located .
+COMMENT:
+-
+Id3
+TEXT: Amsterdam Noord is part of Amsterdam where AFC Ajax is based.
+TEMPLATE: BRIDGE-1 Noord is part of BRIDGE-1 where AGENT-1 is based .
+CORRECT: PATIENT-1 is part of BRIDGE-1 where AGENT-1 is based .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id115 2 SportsTeam
+
+TRIPLES
+AFC_Ajax_(amateurs) | ground | Amsterdam
+Amsterdam | part | Amsterdam-Centrum
+
+
+ENTITY MAP
+BRIDGE-1 | Amsterdam
+AGENT-1 | AFC_Ajax_(amateurs)
+PATIENT-1 | Amsterdam-Centrum
+
+
+LEX
+Id1
+TEXT: Amsterdam-Centrum is part of Amsterdam where The ground of AFC Ajax (amateurs) is located.
+TEMPLATE: PATIENT-1 is part of BRIDGE-1 where The ground of AGENT-1 is located .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Amsterdam-Centrum is part of Amsterdam, the city where AFC Ajax (amateurs) have their ground.
+TEMPLATE: PATIENT-1 is part of BRIDGE-1 , the city where AGENT-1 have BRIDGE-1 ground .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Amsterdam-Centrum is part of Amsterdam where AFC Ajax is based.
+TEMPLATE: PATIENT-1 is part of BRIDGE-1 where AGENT-1 is based .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id114 2 SportsTeam
+
+TRIPLES
+AFC_Ajax | season | 2014
+AFC_Ajax | numberOfMembers | 53502
+
+
+ENTITY MAP
+AGENT-1 | AFC_Ajax
+PATIENT-1 | 2014
+PATIENT-2 | 53502
+
+
+LEX
+Id1
+TEXT: AFC Ajax has 53502 members and they payed in season 2014.
+TEMPLATE: AGENT-1 has PATIENT-2 members and PATIENT-2 payed in PATIENT-1 .
+CORRECT: AGENT-1 has PATIENT-2 members and AGENT-1 payed in PATIENT-1 .
+COMMENT: coreference
+-
+Id2
+TEXT: AFC Ajax played in the 2014 season, the team has 53502 members.
+TEMPLATE: AGENT-1 played in the PATIENT-1 season , the team has PATIENT-2 members .
+CORRECT: AGENT-1 played in the PATIENT-1 season , AGENT-1 has PATIENT-2 members .
+COMMENT: description
+-
+Id3
+TEXT: AFC Ajax, which has 53502 members, played in the 2014 season.
+TEMPLATE: AGENT-1 , which has PATIENT-2 members , played in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id133 2 SportsTeam
+
+TRIPLES
+AZ_Alkmaar | manager | John_van_den_Brom
+John_van_den_Brom | club | Netherlands_national_football_team
+
+
+ENTITY MAP
+BRIDGE-1 | John_van_den_Brom
+AGENT-1 | AZ_Alkmaar
+PATIENT-1 | Netherlands_national_football_team
+
+
+LEX
+Id1
+TEXT: John van den Brom played for the Netherlands national football team and is the manager of AZ Alkmaar.
+TEMPLATE: BRIDGE-1 played for PATIENT-1 and is the manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: John van den Brom played for the Netherlands national football team but now manages the AZ Alkmaair.
+TEMPLATE: BRIDGE-1 played for PATIENT-1 but now manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id112 2 SportsTeam
+
+TRIPLES
+AFC_Ajax | manager | Frank_de_Boer
+Frank_de_Boer | club | Netherlands_national_football_team
+
+
+ENTITY MAP
+BRIDGE-1 | Frank_de_Boer
+AGENT-1 | AFC_Ajax
+PATIENT-1 | Netherlands_national_football_team
+
+
+LEX
+Id1
+TEXT: Frank de Boer played for the Netherlands national football team and manages the AFC Ajax team.
+TEMPLATE: BRIDGE-1 played for PATIENT-1 and manages the AGENT-1 team .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The manager of AFC Ajax is Frank de Boer, who played for the Netherlands national football team.
+TEMPLATE: The manager of AGENT-1 is BRIDGE-1 , who played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Frank de Boer, who played for the Netherlands national football team, is the manager of AFC Ajax.
+TEMPLATE: BRIDGE-1 , who played for PATIENT-1 , is the manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id111 2 SportsTeam
+
+TRIPLES
+AFC_Ajax | manager | Frank_de_Boer
+Frank_de_Boer | club | FC_Barcelona
+
+
+ENTITY MAP
+BRIDGE-1 | Frank_de_Boer
+AGENT-1 | AFC_Ajax
+PATIENT-1 | FC_Barcelona
+
+
+LEX
+Id1
+TEXT: The manager of AFC Ajax's manager is Frank de Boer who is also attached to the club FC Barcelona.
+TEMPLATE: The manager of AGENT-1 's manager is BRIDGE-1 who is also attached to PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Frank de Boer who once played football for FC Barcelona now manages the AFC Ajax.
+TEMPLATE: BRIDGE-1 who once played football for PATIENT-1 now manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Frank de Boer is attached to the club FC Barcelona and is the manager of AFC Ajax.
+TEMPLATE: BRIDGE-1 is attached to PATIENT-1 and is the manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id110 2 SportsTeam
+
+TRIPLES
+AFC_Ajax | manager | Frank_de_Boer
+Frank_de_Boer | club | Al-Shamal_Sports_Club
+
+
+ENTITY MAP
+BRIDGE-1 | Frank_de_Boer
+AGENT-1 | AFC_Ajax
+PATIENT-1 | Al-Shamal_Sports_Club
+
+
+LEX
+Id1
+TEXT: The manager of AFC Ajax is Frank de Boer, who played for Al-Shamal Sports Club.
+TEMPLATE: The manager of AGENT-1 is BRIDGE-1 , who played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Frank de Boer, played for Al-Shamal Sports Club and is the managerof AFC Ajax.
+TEMPLATE: BRIDGE-1 , played for PATIENT-1 and is AGENT-1 .
+CORRECT: BRIDGE-1 , played for PATIENT-1 and is managerof AGENT-1 .
+COMMENT:
+-
+Id3
+TEXT: Frank de Boer manages the AFC Ajax team and plays for Al-Shamal Sports Club.
+TEMPLATE: BRIDGE-1 manages the AGENT-1 team and plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id109 2 SportsTeam
+
+TRIPLES
+AEK_Athens_F.C. | numberOfMembers | 69618
+AEK_Athens_F.C. | ground | Olympic_Stadium_(Athens)
+
+
+ENTITY MAP
+AGENT-1 | AEK_Athens_F.C.
+PATIENT-1 | 69618
+PATIENT-2 | Olympic_Stadium_(Athens)
+
+
+LEX
+Id1
+TEXT: The Olympic Stadium (Athens) is the home ground of AEK Athens FC which has 69618 members.
+TEMPLATE: PATIENT-2 is the home ground of AGENT-1 which has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The ground for AEK Athens F.C., which has 69618 members, is the Olympic Stadium (Athens).
+TEMPLATE: The ground for AGENT-1 , which has PATIENT-1 members , is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: AEK Athens F.C. has 69618 members and their ground is the Olympic Stadium (Athens).
+TEMPLATE: AGENT-1 has PATIENT-1 members and PATIENT-1 ground is PATIENT-2 .
+CORRECT: AGENT-1 has PATIENT-1 members and AGENT-1 ground is PATIENT-2 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id108 2 SportsTeam
+
+TRIPLES
+AEK_Athens_F.C. | manager | Gus_Poyet
+Gus_Poyet | club | Real_Zaragoza
+
+
+ENTITY MAP
+BRIDGE-1 | Gus_Poyet
+AGENT-1 | AEK_Athens_F.C.
+PATIENT-1 | Real_Zaragoza
+
+
+LEX
+Id1
+TEXT: AEK Athens are managed by Gus Poyet who is in the Real Zaragoza club.
+TEMPLATE: AGENT-1 are managed by BRIDGE-1 who is in the PATIENT-1 club .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AEK Athens F.C. manager is Gus Poyet, who is associated with the Real Zaragoza, a football club.
+TEMPLATE: AGENT-1 is BRIDGE-1 , who is associated with PATIENT-1 , a football club .
+CORRECT: AGENT-1 manager is BRIDGE-1 , who is associated with PATIENT-1 , a football club .
+COMMENT: mod
+-
+Id3
+TEXT: Gus Poyet is manager of AEK Athens FC and his club is Real Zaragoza.
+TEMPLATE: BRIDGE-1 is manager of AGENT-1 and BRIDGE-1 club is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id107 2 SportsTeam
+
+TRIPLES
+AEK_Athens_F.C. | manager | Gus_Poyet
+Gus_Poyet | club | Chelsea_F.C.
+
+
+ENTITY MAP
+BRIDGE-1 | Gus_Poyet
+AGENT-1 | AEK_Athens_F.C.
+PATIENT-1 | Chelsea_F.C.
+
+
+LEX
+Id1
+TEXT: Gus Poyet has been the manager of AEK Athens FC and has also been a player for Chelsea F.C.
+TEMPLATE: BRIDGE-1 has been the manager of AGENT-1 and has also been a player for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AEK Athens F.C. manager is Gus Poyet who played for Chelsea F.C.
+TEMPLATE: AGENT-1 is BRIDGE-1 who played for PATIENT-1
+CORRECT: AGENT-1 manager is BRIDGE-1 who played for PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: AEK Athens are managed by Gus Poyet who played for Chelsea F.C.
+TEMPLATE: AGENT-1 are managed by BRIDGE-1 who played for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id106 2 SportsTeam
+
+TRIPLES
+AEK_Athens_F.C. | league | Superleague_Greece
+Superleague_Greece | champions | Olympiacos_F.C.
+
+
+ENTITY MAP
+BRIDGE-1 | Superleague_Greece
+AGENT-1 | AEK_Athens_F.C.
+PATIENT-1 | Olympiacos_F.C.
+
+
+LEX
+Id1
+TEXT: AEK Athens F.C. is in the Superleague of Greece, in which Olympiacos F.C. were past champions.
+TEMPLATE: AGENT-1 is in BRIDGE-1 of Greece , in which PATIENT-1 were past champions .
+CORRECT: AGENT-1 is in BRIDGE-1 , in which PATIENT-1 were past champions .
+COMMENT: mod
+-
+Id2
+TEXT: AEK Athens F.C. play in the Superleague Greece, the champions of which are, Olympiacos F.C.
+TEMPLATE: AGENT-1 play in BRIDGE-1 , the champions of which are , PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: AEK Athens FC compete in the Superleague Greece, Olympiacos FC are previous champions of the team.
+TEMPLATE: AGENT-1 compete in BRIDGE-1 , PATIENT-1 are previous champions of the team .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id105 2 SportsTeam
+
+TRIPLES
+AEK_Athens_F.C. | league | Superleague_Greece
+AEK_Athens_F.C. | ground | Athens
+
+
+ENTITY MAP
+AGENT-1 | AEK_Athens_F.C.
+PATIENT-1 | Superleague_Greece
+PATIENT-2 | Athens
+
+
+LEX
+Id1
+TEXT: AEK Athens FC compete in the Superleague Greece and ground is in Athens.
+TEMPLATE: AEK PATIENT-2 FC compete in PATIENT-1 and ground is in PATIENT-2 .
+CORRECT: AGENT-1 compete in PATIENT-1 and ground is in PATIENT-2 .
+COMMENT:
+-
+Id2
+TEXT: AEK Athens F.C. play in the Superleague Greece, and their ground is in Athens.
+TEMPLATE: AEK PATIENT-2 F.C. play in PATIENT-1 , and AGENT-1 is in PATIENT-2 .
+CORRECT: AGENT-1 play in PATIENT-1 , and AGENT-1 is in PATIENT-2 .
+COMMENT:
+-
+Id3
+TEXT: AEK Athens F.C, member of the Superleague of Greece, has its ground in Athens.
+TEMPLATE: AEK PATIENT-2 F.C , member of PATIENT-1 , has AGENT-1 ground in PATIENT-2 .
+CORRECT: AGENT-1 , member of PATIENT-1 , has AGENT-1 ground in PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id104 2 SportsTeam
+
+TRIPLES
+AEK_Athens_F.C. | ground | Greece
+AEK_Athens_F.C. | league | Superleague_Greece
+
+
+ENTITY MAP
+AGENT-1 | AEK_Athens_F.C.
+PATIENT-1 | Greece
+PATIENT-2 | Superleague_Greece
+
+
+LEX
+Id1
+TEXT: AEK Athens F.C's grounds are in Greece and obviously they play in the Superleague Greece.
+TEMPLATE: AGENT-1 grounds are in PATIENT-1 and obviously they play in PATIENT-2 .
+CORRECT: AGENT-1 grounds are in PATIENT-1 and obviously AGENT-1 play in PATIENT-2 .
+COMMENT: coref
+-
+Id2
+TEXT: AEK Athens F.C. is in the Superleague of Greece, where their ground is located.
+TEMPLATE: AGENT-1 is in PATIENT-2 of PATIENT-1 , where their ground is located .
+CORRECT: AGENT-1 is in PATIENT-2 of PATIENT-1 , where AGENT-1 ground is located .
+COMMENT: coref
+-
+Id3
+TEXT: AEK Athens's ground is in Greece and they compete in the Superleague Greece.
+TEMPLATE: AGENT-1 ground is in PATIENT-1 and they compete in PATIENT-2 .
+CORRECT: AGENT-1 ground is in PATIENT-1 and AGENT-1 compete in PATIENT-2 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id103 2 SportsTeam
+
+TRIPLES
+AEK_Athens_F.C. | ground | Athens
+Athens | mayor | Giorgos_Kaminis
+
+
+ENTITY MAP
+BRIDGE-1 | Athens
+AGENT-1 | AEK_Athens_F.C.
+PATIENT-1 | Giorgos_Kaminis
+
+
+LEX
+Id1
+TEXT: AEK Athens F.C.'s ground is in Athens, where the mayor is Giorgos Kaminis.
+TEMPLATE: AEK BRIDGE-1 F.C. 's ground is in BRIDGE-1 , where AGENT-1 is PATIENT-1 .
+CORRECT: AGENT-1 ground is in BRIDGE-1 , where the mayor is PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Giorgos Kaminis is the mayor of Athens, where AEK Athens F.C's ground is situated.
+TEMPLATE: PATIENT-1 is AGENT-1 of BRIDGE-1 , where AEK BRIDGE-1 F.C 's ground is situated .
+CORRECT: PATIENT-1 is the mayor of BRIDGE-1 , where AGENT-1 ground is situated .
+COMMENT:
+-
+Id3
+TEXT: AEK Athens F.C.'s ground is in Athens, the mayor of Athens is Giorgos Kaminis.
+TEMPLATE: AEK BRIDGE-1 F.C. 's ground is in BRIDGE-1 , AGENT-1 of BRIDGE-1 is PATIENT-1 .
+CORRECT: AGENT-1 ground is in BRIDGE-1 , the mayor of BRIDGE-1 is PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id102 2 SportsTeam
+
+TRIPLES
+ACF_Fiorentina | numberOfMembers | 47290
+ACF_Fiorentina | season | 2014–15_Serie_A
+
+
+ENTITY MAP
+AGENT-1 | ACF_Fiorentina
+PATIENT-1 | 47290
+PATIENT-2 | 2014–15_Serie_A
+
+
+LEX
+Id1
+TEXT: ACF Fiorentina, have 47290 members, and played the 2014-15 season in Serie A.
+TEMPLATE: AGENT-1 , have PATIENT-1 members , and played the 2014-15 season in PATIENT-2
+CORRECT: AGENT-1 , have PATIENT-1 members , and played PATIENT-2 season .
+COMMENT:
+-
+Id2
+TEXT: ACF Fiorentina played the 2014-15 season in Serie A and their ground holds 47290 members.
+TEMPLATE: AGENT-1 played the 2014-15 season in PATIENT-2 and their ground holds PATIENT-1 members .
+CORRECT: AGENT-1 played the PATIENT-2 season and AGENT-1 ground holds PATIENT-1 members .
+COMMENT:
+-
+Id3
+TEXT: ACF Fiorentina has 47290 members and played in the 2014-15 Serie A season.
+TEMPLATE: AGENT-1 has PATIENT-1 members and played in PATIENT-2 .
+CORRECT: AGENT-1 has PATIENT-1 members and played in PATIENT-2 season .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id101 2 SportsTeam
+
+TRIPLES
+ACF_Fiorentina | numberOfMembers | 47290
+ACF_Fiorentina | season | 2014
+
+
+ENTITY MAP
+AGENT-1 | ACF_Fiorentina
+PATIENT-1 | 47290
+PATIENT-2 | 2014
+
+
+LEX
+Id1
+TEXT: ACF Fiorentina has 47290 members, The team competed in the 2014 season.
+TEMPLATE: AGENT-1 has PATIENT-1 members , The team competed in the PATIENT-2 season .
+CORRECT: AGENT-1 has PATIENT-1 members , AGENT-1 competed in the PATIENT-2 season .
+COMMENT: coref
+-
+Id2
+TEXT: ACF Fiorentina has 47290 members, and they competed in the 2014 season.
+TEMPLATE: AGENT-1 has PATIENT-1 members , and PATIENT-1 competed in the PATIENT-2 season .
+CORRECT: AGENT-1 has PATIENT-1 members , and AGENT-1 competed in the PATIENT-2 season .
+COMMENT: coref
+-
+Id3
+TEXT: ACF Fiorentina competed in the 2014 season and they have 47290 members.
+TEMPLATE: AGENT-1 competed in the PATIENT-2 season and they have PATIENT-1 members .
+CORRECT: AGENT-1 competed in the PATIENT-2 season and AGENT-1 have PATIENT-1 members .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id100 2 SportsTeam
+
+TRIPLES
+ACF_Fiorentina | manager | Paulo_Sousa
+Paulo_Sousa | club | Portugal_national_football_team
+
+
+ENTITY MAP
+BRIDGE-1 | Paulo_Sousa
+AGENT-1 | ACF_Fiorentina
+PATIENT-1 | Portugal_national_football_team
+
+
+LEX
+Id1
+TEXT: The manager, of ACF Fiorentina, is Paulo Sousa, who plays for the Portugal national football team.
+TEMPLATE: The manager , of AGENT-1 , is BRIDGE-1 , who plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Paulo Sousa is a member of the Portugal National Football team and is the manager of ACF Fiorentina.
+TEMPLATE: BRIDGE-1 is a member of PATIENT-1 and is the manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Paulo Sousa is the manager of the ACF Fiorentina and a member of the Portugal National Football Team.
+TEMPLATE: BRIDGE-1 is the manager of AGENT-1 and a member of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id99 2 SportsTeam
+
+TRIPLES
+ACF_Fiorentina | manager | Paulo_Sousa
+Paulo_Sousa | club | Inter_Milan
+
+
+ENTITY MAP
+BRIDGE-1 | Paulo_Sousa
+AGENT-1 | ACF_Fiorentina
+PATIENT-1 | Inter_Milan
+
+
+LEX
+Id1
+TEXT: Paula Sousa, manager of ACF Florentina, is attached to club Inter Milan.
+TEMPLATE: BRIDGE-1 , manager of AGENT-1 , is attached to PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Paulo Sousa is the manager of the ACF Fiorentina, he played at the Inter Milan club.
+TEMPLATE: BRIDGE-1 is the manager of AGENT-1 , BRIDGE-1 played at the PATIENT-1 club .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The manager of ACF Fiorentina is Paulo Sousa, who plays at the Inter Milan club.
+TEMPLATE: The manager of AGENT-1 is BRIDGE-1 , who plays at the PATIENT-1 club .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id98 2 SportsTeam
+
+TRIPLES
+A.S._Roma | numberOfMembers | 70634
+A.S._Roma | ground | Rome
+
+
+ENTITY MAP
+AGENT-1 | A.S._Roma
+PATIENT-1 | 70634
+PATIENT-2 | Rome
+
+
+LEX
+Id1
+TEXT: AS Roma has 70634 members and their grounds are in Rome.
+TEMPLATE: AGENT-1 has PATIENT-1 members and PATIENT-1 grounds are in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.S. Roma have a ground in Rome and has 70634 members.
+TEMPLATE: AGENT-1 have a ground in PATIENT-2 and has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: A.S. Roma has 70634 members and have a ground in Rome.
+TEMPLATE: AGENT-1 has PATIENT-1 members and have a ground in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id97 2 SportsTeam
+
+TRIPLES
+A.S._Roma | manager | Luciano_Spalletti
+Luciano_Spalletti | club | Virtus_Entella
+
+
+ENTITY MAP
+BRIDGE-1 | Luciano_Spalletti
+AGENT-1 | A.S._Roma
+PATIENT-1 | Virtus_Entella
+
+
+LEX
+Id1
+TEXT: Luciano Spalletti, who was at the club Virtus Entella, manages A.S. Roma.
+TEMPLATE: BRIDGE-1 , who was at PATIENT-1 , manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AS Roma's manager is Luciano Spallett, who plays for Virtus Entella.
+TEMPLATE: AGENT-1 manager is BRIDGE-1 , who plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The manager of A.S. Roma is Luciano Spalletti, who was at the club Virtus Entella.
+TEMPLATE: The manager of AGENT-1 is BRIDGE-1 , who was at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id96 2 SportsTeam
+
+TRIPLES
+A.S._Roma | league | Serie_A
+A.S._Roma | ground | Rome
+
+
+ENTITY MAP
+AGENT-1 | A.S._Roma
+PATIENT-1 | Serie_A
+PATIENT-2 | Rome
+
+
+LEX
+Id1
+TEXT: AS Roma play in the Serie A league and have a ground in Rome.
+TEMPLATE: AGENT-1 play in the PATIENT-1 league and have a ground in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.S. Roma play in Serie A and their stadium is in Rome.
+TEMPLATE: AGENT-1 play in PATIENT-1 and their stadium is in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: A.S. Roma play in Serie A and have a ground in Rome.
+TEMPLATE: AGENT-1 play in PATIENT-1 and have a ground in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id95 2 SportsTeam
+
+TRIPLES
+A.S._Roma | ground | Stadio_Olimpico
+A.S._Roma | numberOfMembers | 70634
+
+
+ENTITY MAP
+AGENT-1 | A.S._Roma
+PATIENT-1 | Stadio_Olimpico
+PATIENT-2 | 70634
+
+
+LEX
+Id1
+TEXT: A.S Roma ground is Stadio Olimpico and has 70634 members.
+TEMPLATE: AGENT-1 is PATIENT-1 and has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.S Roma's has 70634 members and its grounds are at Stadio Olimpico.
+TEMPLATE: AGENT-1 has PATIENT-2 members and AGENT-1 grounds are at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: A.S Roma has 70634 members and their ground is Stadio Olimpico.
+TEMPLATE: AGENT-1 has PATIENT-2 members and PATIENT-2 ground is PATIENT-1 .
+CORRECT: AGENT-1 has PATIENT-2 members and AGENT-1 ground is PATIENT-1 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id94 2 SportsTeam
+
+TRIPLES
+A.S._Roma | ground | Stadio_Olimpico
+A.S._Roma | league | Serie_A
+
+
+ENTITY MAP
+AGENT-1 | A.S._Roma
+PATIENT-1 | Stadio_Olimpico
+PATIENT-2 | Serie_A
+
+
+LEX
+Id1
+TEXT: AS Roma, in the Serie A league, has its grounds in Stadio Olimpico.
+TEMPLATE: AGENT-1 , in the PATIENT-2 league , has PATIENT-2 grounds in PATIENT-1 .
+CORRECT: AGENT-1 , in the PATIENT-2 league , has AGENT-1 grounds in PATIENT-1 .
+COMMENT: coref
+-
+Id2
+TEXT: A.S. Roma play in Serie A and their ground is the Stadio Olimpico.
+TEMPLATE: AGENT-1 play in PATIENT-2 and their ground is PATIENT-1 .
+CORRECT: AGENT-1 play in PATIENT-2 and AGENT-1 ground is PATIENT-1 .
+COMMENT: coref
+-
+Id3
+TEXT: A.S Roma's ground is Stadio Olimpico, and they play in the Serie A league.
+TEMPLATE: AGENT-1 ground is PATIENT-1 , and they play in the PATIENT-2 league .
+CORRECT: AGENT-1 ground is PATIENT-1 , and AGENT-1 play in the PATIENT-2 league .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id93 2 SportsTeam
+
+TRIPLES
+A.S._Roma | ground | "Rome, Italy"
+A.S._Roma | numberOfMembers | 70634
+
+
+ENTITY MAP
+AGENT-1 | A.S._Roma
+PATIENT-1 | "Rome, Italy"
+PATIENT-2 | 70634
+
+
+LEX
+Id1
+TEXT: A.S. Roma, which has 70634 members, have their grounds in Rome, Italy.
+TEMPLATE: AGENT-1 , which has PATIENT-2 members , have PATIENT-2 grounds in PATIENT-1 .
+CORRECT: AGENT-1 , which has PATIENT-2 members , have AGENT-1 grounds in PATIENT-1 .
+COMMENT: coref
+-
+Id2
+TEXT: AS Roma has 70634 members and their ground is in Rome, Italy.
+TEMPLATE: AGENT-1 has PATIENT-2 members and PATIENT-2 ground is in PATIENT-1 .
+CORRECT: AGENT-1 has PATIENT-2 members and AGENT-1 ground is in PATIENT-1 .
+COMMENT: coref
+-
+Id3
+TEXT: A.S. Roma's ground is in Rome, Italy, the team has 70634 members.
+TEMPLATE: AGENT-1 's ground is in PATIENT-1 , the team has PATIENT-2 members .
+CORRECT: AGENT-1 ground is in PATIENT-1 , AGENT-1 has PATIENT-2 members .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id92 2 SportsTeam
+
+TRIPLES
+A.S._Roma | chairman | James_Pallotta
+James_Pallotta | birthPlace | Boston
+
+
+ENTITY MAP
+BRIDGE-1 | James_Pallotta
+AGENT-1 | A.S._Roma
+PATIENT-1 | Boston
+
+
+LEX
+Id1
+TEXT: A.S. Roma's chairman is James Pallotta, who was born in Boston.
+TEMPLATE: AGENT-1 's chairman is BRIDGE-1 , who was born in PATIENT-1 .
+CORRECT: AGENT-1 chairman is BRIDGE-1 , who was born in PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: James Pallotta, who was born in Boston, is the chairman of A.S. Roma.
+TEMPLATE: BRIDGE-1 , who was born in PATIENT-1 , is the chairman of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: James Pallotta, born in Boston, is the chairman of A.S. Roma.
+TEMPLATE: BRIDGE-1 , born in PATIENT-1 , is the chairman of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id91 2 SportsTeam
+
+TRIPLES
+A.S._Livorno_Calcio | manager | Christian_Panucci
+Christian_Panucci | club | Inter_Milan
+
+
+ENTITY MAP
+BRIDGE-1 | Christian_Panucci
+AGENT-1 | A.S._Livorno_Calcio
+PATIENT-1 | Inter_Milan
+
+
+LEX
+Id1
+TEXT: A.S. Livorno Calcio is managed by Christian Panucci who plays for Inter Milan.
+TEMPLATE: AGENT-1 is managed by BRIDGE-1 who plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.S. Livorno Calcio are managed by Christian Panucci who played for Inter Milan.
+TEMPLATE: AGENT-1 are managed by BRIDGE-1 who played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Christian Panucci, manager of A. S. Livorno Calcio, used to play for Inter Milan.
+TEMPLATE: BRIDGE-1 , manager of AGENT-1 , used to play for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id90 2 SportsTeam
+
+TRIPLES
+A.S._Livorno_Calcio | manager | Christian_Panucci
+Christian_Panucci | club | Genoa_C.F.C.
+
+
+ENTITY MAP
+BRIDGE-1 | Christian_Panucci
+AGENT-1 | A.S._Livorno_Calcio
+PATIENT-1 | Genoa_C.F.C.
+
+
+LEX
+Id1
+TEXT: A.S. Livorno Calcio is managed by Christian Panucci who played football for Genoa C.F.C.
+TEMPLATE: AGENT-1 is managed by BRIDGE-1 who played football for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.S. Livorno Calcio are managed by Christian Panucci who is attached to the club Genoa CFC.
+TEMPLATE: AGENT-1 are managed by BRIDGE-1 who is attached to PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: A.S. Livorno Calcio are managed by Christian Panucci, who played football for Genoa C.F.C.
+TEMPLATE: AGENT-1 are managed by BRIDGE-1 , who played football for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id89 2 SportsTeam
+
+TRIPLES
+A.S._Livorno_Calcio | manager | Christian_Panucci
+Christian_Panucci | club | Chelsea_F.C.
+
+
+ENTITY MAP
+BRIDGE-1 | Christian_Panucci
+AGENT-1 | A.S._Livorno_Calcio
+PATIENT-1 | Chelsea_F.C.
+
+
+LEX
+Id1
+TEXT: A.S. Livorno Calcio is managed by Christian Panucci who has played for Chelsea FC.
+TEMPLATE: AGENT-1 is managed by BRIDGE-1 who has played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.S. Livorno Calcio, are managed by Christian Panucci, who has played for Chelsea FC.
+TEMPLATE: AGENT-1 , are managed by BRIDGE-1 , who has played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Christian Panucci is the manager of A.S. Livorno Calcio and has played for Chelsea FC.
+TEMPLATE: BRIDGE-1 is the manager of AGENT-1 and has played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id88 2 SportsTeam
+
+TRIPLES
+A.S._Livorno_Calcio | ground | Stadio_Armando_Picchi
+A.S._Livorno_Calcio | numberOfMembers | 19238
+
+
+ENTITY MAP
+AGENT-1 | A.S._Livorno_Calcio
+PATIENT-1 | Stadio_Armando_Picchi
+PATIENT-2 | 19238
+
+
+LEX
+Id1
+TEXT: A.S. Livorno Calcio (home ground Stadio Armando Picchi) has 19,238 members.
+TEMPLATE: AGENT-1 (home PATIENT-1) has PATIENT-2 .
+CORRECT: AGENT-1 (home ground PATIENT-1) has PATIENT-2 .
+COMMENT: mod
+-
+Id2
+TEXT: AS Livorno Calcio with 19238 members is in Stadio Armando Picchi.
+TEMPLATE: AGENT-1 with PATIENT-2 members is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: A.S. Livorno Calcio, has 19238 members, and has their home ground at the Stadio Armando Picchi.
+TEMPLATE: AGENT-1 , has PATIENT-2 members , and has PATIENT-2 home ground at PATIENT-1 .
+CORRECT: AGENT-1 , has PATIENT-2 members , and has AGENT-1 home ground at PATIENT-1 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id87 2 SportsTeam
+
+TRIPLES
+A.S._Livorno_Calcio | ground | Stadio_Armando_Picchi
+A.S._Livorno_Calcio | league | Serie_B
+
+
+ENTITY MAP
+AGENT-1 | A.S._Livorno_Calcio
+PATIENT-1 | Stadio_Armando_Picchi
+PATIENT-2 | Serie_B
+
+
+LEX
+Id1
+TEXT: AS Livorno club plays in Serie B and their home ground is the Stadio Armando Picchi.
+TEMPLATE: AGENT-1 plays in PATIENT-2 and their home ground is PATIENT-1 .
+CORRECT: AGENT-1 plays in PATIENT-2 and AGENT-1 home ground is PATIENT-1 .
+COMMENT: coref
+-
+Id2
+TEXT: A S Livorno Calcio's home ground is the Stadio Armando Picchi, and the legue they play in is Serie B.
+TEMPLATE: AGENT-1 home ground is PATIENT-1 , and the legue they play in is PATIENT-2
+CORRECT: AGENT-1 home ground is PATIENT-1 , and the legue AGENT-1 play in is PATIENT-2
+COMMENT: coref
+-
+Id3
+TEXT: A.S. Livorno Calcio has the ground Stadio Armando Picchi and play in Serie B.
+TEMPLATE: AGENT-1 has PATIENT-1 and play in PATIENT-2
+CORRECT: AGENT-1 has the ground PATIENT-1 and play in PATIENT-2
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id86 2 SportsTeam
+
+TRIPLES
+A.S._Livorno_Calcio | ground | Livorno
+A.S._Livorno_Calcio | numberOfMembers | 19238
+
+
+ENTITY MAP
+AGENT-1 | A.S._Livorno_Calcio
+PATIENT-1 | Livorno
+PATIENT-2 | 19238
+
+
+LEX
+Id1
+TEXT: A.S Livorno Calcio's ground is in Livorno, and it has 19238 members.
+TEMPLATE: A.S PATIENT-1 Calcio 's ground is in PATIENT-1 , and AGENT-1 has PATIENT-2 members .
+CORRECT: AGENT-1 ground is in PATIENT-1 , and AGENT-1 has PATIENT-2 members .
+COMMENT:
+-
+Id2
+TEXT: A.S Livorno Calcio ground is in Livorno and has 19238 members.
+TEMPLATE: A.S PATIENT-1 Calcio ground is in PATIENT-1 and has PATIENT-2 members .
+CORRECT: AGENT-1 ground is in PATIENT-1 and has PATIENT-2 members .
+COMMENT:
+-
+Id3
+TEXT: The AS Livorno Calcio has 19238 members and their ground is in Livorno.
+TEMPLATE: The AS PATIENT-1 Calcio has PATIENT-2 members and AGENT-1 is in PATIENT-1 .
+CORRECT: AGENT-1 has PATIENT-2 members and AGENT-1 is in PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id85 2 SportsTeam
+
+TRIPLES
+A.S._Livorno_Calcio | ground | "Livorno, Italy"
+A.S._Livorno_Calcio | numberOfMembers | 19238
+
+
+ENTITY MAP
+AGENT-1 | A.S._Livorno_Calcio
+PATIENT-1 | "Livorno, Italy"
+PATIENT-2 | 19238
+
+
+LEX
+Id1
+TEXT: Based in Livorno, Italy, A.S. Livorno Calcio has 19238 members.
+TEMPLATE: Based in PATIENT-1 , AGENT-1 has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Livorno, Italy is the location of the ground of AS Livorno Calcio and has 19238 members.
+TEMPLATE: PATIENT-1 is the location of the ground of AGENT-1 and has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Livorno, Italy is the location of the ground of AS Livorno Calcio, which has 19238 members.
+TEMPLATE: PATIENT-1 is the location of the ground of AGENT-1 , which has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id84 2 SportsTeam
+
+TRIPLES
+A.S._Livorno_Calcio | ground | "Livorno, Italy"
+A.S._Livorno_Calcio | league | Serie_B
+
+
+ENTITY MAP
+AGENT-1 | A.S._Livorno_Calcio
+PATIENT-1 | "Livorno, Italy"
+PATIENT-2 | Serie_B
+
+
+LEX
+Id1
+TEXT: A.S. Livorno Calcio is based in Livorno, Italy and Serie B league.
+TEMPLATE: AGENT-1 is based in PATIENT-1 and PATIENT-2 league .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Livorno, Italy is the location of the ground of AS Livorno Calcio, this club playing in Serie B.
+TEMPLATE: PATIENT-1 is the location of the ground of AGENT-1 , this club playing in PATIENT-2
+CORRECT: PATIENT-1 is the location of the ground of AGENT-1 , AGENT-1 playing in PATIENT-2
+COMMENT: coref
+-
+Id3
+TEXT: A.S. Livorno Calcio's ground is in Livorno, Italy, and the club plays in Serie B.
+TEMPLATE: AGENT-1 's ground is in PATIENT-1 , and the club plays in PATIENT-2
+CORRECT: AGENT-1 ground is in PATIENT-1 , and AGENT-1 plays in PATIENT-2
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id83 2 SportsTeam
+
+TRIPLES
+A.S._Gubbio_1910 | season | 2014–15_Lega_Pro
+A.S._Gubbio_1910 | numberOfMembers | 5300
+
+
+ENTITY MAP
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | 2014–15_Lega_Pro
+PATIENT-2 | 5300
+
+
+LEX
+Id1
+TEXT: A.S. Gubbio 1910 has 5300 menbers and was a part of the 2014–15 Lega Pro season.
+TEMPLATE: AGENT-1 has PATIENT-2 menbers and was a part of the 2014 -- PATIENT-1 Pro season .
+CORRECT: AGENT-1 has PATIENT-2 menbers and was a part of PATIENT-1 season .
+COMMENT: mod
+-
+Id2
+TEXT: A.S. Gubbio 1910 hs 5300 members and were in the Lega Pro in the 2014-15 season.
+TEMPLATE: AGENT-1 hs PATIENT-2 members and were in PATIENT-1 Pro in the 2014-15 season .
+CORRECT: AGENT-1 hs PATIENT-2 members and were in PATIENT-1 season .
+COMMENT: mod
+-
+Id3
+TEXT: A.S. Gubbio 1910 was a part of the 2014–15 Lega Pro season, it has 5300 members.
+TEMPLATE: AGENT-1 was a part of the 2014 -- PATIENT-1 season , PATIENT-1 has PATIENT-2 members .
+CORRECT: AGENT-1 was a part of PATIENT-1 season , AGENT-1 has PATIENT-2 members .
+COMMENT: mod - coref
+-
+
+**************************************************
+
+Entry: Id82 2 SportsTeam
+
+TRIPLES
+A.S._Gubbio_1910 | season | 2014
+A.S._Gubbio_1910 | numberOfMembers | 5300
+
+
+ENTITY MAP
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | 2014
+PATIENT-2 | 5300
+
+
+LEX
+Id1
+TEXT: The A.S. Gubbio 1910, has 5300 members, and played in the 2014 season.
+TEMPLATE: AGENT-1 , has PATIENT-2 members , and played in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.S. Gubbio has 5300 members and played in 2014.
+TEMPLATE: AGENT-1 has PATIENT-2 members and played in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: AS Gubbio 1910 competed in the 2014 season, they have 5300 members.
+TEMPLATE: AS AGENT-1 competed in the PATIENT-1 season , they have PATIENT-2 members .
+CORRECT: AGENT-1 competed in the PATIENT-1 season , AGENT-1 have PATIENT-2 members .
+COMMENT: mod - coref
+-
+
+**************************************************
+
+Entry: Id81 2 SportsTeam
+
+TRIPLES
+A.S._Gubbio_1910 | league | Serie_D
+Serie_D | champions | S.S._Robur_Siena
+
+
+ENTITY MAP
+BRIDGE-1 | Serie_D
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | S.S._Robur_Siena
+
+
+LEX
+Id1
+TEXT: The A.S. Gubbio 1910 football club play in Serie D, the champions of which are S.S. Robur Siena.
+TEMPLATE: The AGENT-1 football club play in BRIDGE-1 , the champions of which are PATIENT-1 .
+CORRECT: AGENT-1 play in BRIDGE-1 , the champions of which are PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: A.S. Gubbio 1910 is in the Serie D league whose champions are SS Robur Siena.
+TEMPLATE: AGENT-1 is in the BRIDGE-1 league whose champions are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The A.S. Gubbio 1910 football club play in Serie D whose champions include S S Robur Siena.
+TEMPLATE: The AGENT-1 football club play in BRIDGE-1 whose champions include PATIENT-1 .
+CORRECT: AGENT-1 play in BRIDGE-1 whose champions include PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id80 2 SportsTeam
+
+TRIPLES
+A.S._Gubbio_1910 | ground | Stadio_Pietro_Barbetti
+A.S._Gubbio_1910 | numberOfMembers | 5300
+
+
+ENTITY MAP
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | Stadio_Pietro_Barbetti
+PATIENT-2 | 5300
+
+
+LEX
+Id1
+TEXT: The ground of AS Gubbio 1910, which has 5300 members, is called Stadio Pietro Barbetti.
+TEMPLATE: The ground of AGENT-1 , which has PATIENT-2 members , is called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The ground of AS Gubbio 1910 is called Stadio Pietro Barbetti and the club has 5300 members.
+TEMPLATE: The ground of AGENT-1 is called PATIENT-1 and the club has PATIENT-2 members .
+CORRECT: The ground of AGENT-1 is called PATIENT-1 and AGENT-1 has PATIENT-2 members .
+COMMENT: coref
+-
+Id3
+TEXT: The ground of AS Gubbio 1910 is called Stadio Pietro Barbetti and has the capacity for a crowd of 5300.
+TEMPLATE: The ground of AGENT-1 is called PATIENT-1 and has the capacity for a crowd of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id79 2 SportsTeam
+
+TRIPLES
+A.S._Gubbio_1910 | ground | Italy
+Italy | language | Italian_language
+
+
+ENTITY MAP
+BRIDGE-1 | Italy
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | Italian_language
+
+
+LEX
+Id1
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy, where the Italian language is spoken.
+TEMPLATE: The ground of AGENT-1 is located in BRIDGE-1 , where PATIENT-1 is spoken .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy where the Italian language is spoken.
+TEMPLATE: The ground of AGENT-1 is located in BRIDGE-1 where PATIENT-1 is spoken .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id78 2 SportsTeam
+
+TRIPLES
+A.S._Gubbio_1910 | ground | Italy
+A.S._Gubbio_1910 | numberOfMembers | 5300
+
+
+ENTITY MAP
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | Italy
+PATIENT-2 | 5300
+
+
+LEX
+Id1
+TEXT: A.S. Gubbio has 5300 members and their ground is located in Italy.
+TEMPLATE: AGENT-1 has PATIENT-2 members and PATIENT-2 ground is located in PATIENT-1 .
+CORRECT: AGENT-1 has PATIENT-2 members and AGENT-1 ground is located in PATIENT-1 .
+COMMENT: coref
+-
+Id2
+TEXT: A.S. Gubbio 1910 in Italy has 5300 members.
+TEMPLATE: AGENT-1 in PATIENT-1 has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The ground of A.S. Gubbio 1910 is located in Italy, the team have 5300 members.
+TEMPLATE: The ground of AGENT-1 is located in PATIENT-1 , the team have PATIENT-2 members .
+CORRECT: The ground of AGENT-1 is located in PATIENT-1 , AGENT-1 have PATIENT-2 members .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id77 2 SportsTeam
+
+TRIPLES
+A.S._Gubbio_1910 | ground | Gubbio
+Gubbio | leaderParty | Left_Ecology_Freedom
+
+
+ENTITY MAP
+BRIDGE-1 | Gubbio
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | Left_Ecology_Freedom
+
+
+LEX
+Id1
+TEXT: The ground of A.S. Gubbio 1910 is in Gubbio where the Left Ecology Freedom are the leading party.
+TEMPLATE: The ground of AGENT-1 is in BRIDGE-1 where PATIENT-1 are the leading party .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.S. Gubbio 1910 has a ground in Gubbio where the Left Ecology Freedom are the leading party.
+TEMPLATE: AGENT-1 has a ground in BRIDGE-1 where PATIENT-1 are the leading party .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The ground of A.S. Gubbio 1910 is located in Gubbio, The Left Ecology Freedom are the leading party.
+TEMPLATE: The ground of AGENT-1 is located in BRIDGE-1 , PATIENT-1 are the leading party .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id76 2 SportsTeam
+
+TRIPLES
+A.S._Gubbio_1910 | fullname | "Associazione Sportiva Gubbio 1910 Srl"
+A.S._Gubbio_1910 | numberOfMembers | 5300
+
+
+ENTITY MAP
+AGENT-1 | A.S._Gubbio_1910
+PATIENT-1 | "Associazione Sportiva Gubbio 1910 Srl"
+PATIENT-2 | 5300
+
+
+LEX
+Id1
+TEXT: It has 5300 members, and the full name of A.S. Gubbio 1910, is Associazione Sportiva Gubbio 1910 Srl.
+TEMPLATE: It has PATIENT-2 members , and the full name of AGENT-1 , is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.S. Gubbio 1910's full name is Associazione Sportiva Gubbio 1910 Srl. and it has 5300 members.
+TEMPLATE: AGENT-1 's full name is PATIENT-1 . and PATIENT-1 has PATIENT-2 members .
+CORRECT: AGENT-1 full name is PATIENT-1 and AGENT-1 has PATIENT-2 members .
+COMMENT: coref
+-
+Id3
+TEXT: Associazione Sportiva Gubbio 1910 Srl (abbreviated to A.S. Gubbio 1910) has 5300 members.
+TEMPLATE: PATIENT-1 (abbreviated to AGENT-1) has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id75 2 SportsTeam
+
+TRIPLES
+A.F.C._Fylde | manager | Dave_Challinor
+Dave_Challinor | club | Tranmere_Rovers_F.C.
+
+
+ENTITY MAP
+BRIDGE-1 | Dave_Challinor
+AGENT-1 | A.F.C._Fylde
+PATIENT-1 | Tranmere_Rovers_F.C.
+
+
+LEX
+Id1
+TEXT: Dave Challinor is the manager of AFC Fylde, and he plays for Tranmere Rovers F.C.
+TEMPLATE: BRIDGE-1 is the manager of AGENT-1 , and BRIDGE-1 plays for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Affiliated with Tranmere Rovers F.C., Dave Challinor, manages A.F.C. Fylde.
+TEMPLATE: Affiliated with PATIENT-1 , BRIDGE-1 , manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: AFC Fylde's manager is Dave Challinor, who is affiliated with Tranmere Rovers F.C.
+TEMPLATE: AGENT-1 manager is BRIDGE-1 , who is affiliated with PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id74 2 SportsTeam
+
+TRIPLES
+A.F.C._Fylde | manager | Dave_Challinor
+Dave_Challinor | club | Stockport_County_F.C.
+
+
+ENTITY MAP
+BRIDGE-1 | Dave_Challinor
+AGENT-1 | A.F.C._Fylde
+PATIENT-1 | Stockport_County_F.C.
+
+
+LEX
+Id1
+TEXT: AFC Fylde's manager is Dave Challinor who plays at the Stockport County F.C.
+TEMPLATE: AGENT-1 manager is BRIDGE-1 who plays at PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Dave Challinor manages A.F.C. Fylde and plays at the Stockport County F.C.
+TEMPLATE: BRIDGE-1 manages AGENT-1 and plays at PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Dave Challinor, manager of AFC Fylde, played for Stockport County F.C.
+TEMPLATE: BRIDGE-1 , manager of AGENT-1 , played for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id73 2 SportsTeam
+
+TRIPLES
+A.F.C._Fylde | manager | Dave_Challinor
+Dave_Challinor | club | Colwyn_Bay_F.C.
+
+
+ENTITY MAP
+BRIDGE-1 | Dave_Challinor
+AGENT-1 | A.F.C._Fylde
+PATIENT-1 | Colwyn_Bay_F.C.
+
+
+LEX
+Id1
+TEXT: Dave Challinor is at Colwyn Bay FC and is the manager of AFC Fylde.
+TEMPLATE: BRIDGE-1 is at PATIENT-1 and is the manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Dave Challinor manages A.F.C. Fylde and also plays for Colwyn Bay F.C.
+TEMPLATE: BRIDGE-1 manages AGENT-1 and also plays for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Dave Challinor, is at Colwyn Bay FC, and manages A.F.C. Fylde.
+TEMPLATE: BRIDGE-1 , is at PATIENT-1 , and manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id72 2 SportsTeam
+
+TRIPLES
+A.F.C._Fylde | manager | Dave_Challinor
+Dave_Challinor | club | Bury_F.C.
+
+
+ENTITY MAP
+BRIDGE-1 | Dave_Challinor
+AGENT-1 | A.F.C._Fylde
+PATIENT-1 | Bury_F.C.
+
+
+LEX
+Id1
+TEXT: AFC Fylde's manager is Dave Challinor who once played for Bury F.C.
+TEMPLATE: AGENT-1 manager is BRIDGE-1 who once played for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AFC Fylde's manager is Dave Challinor who used to play football for Bury FC.
+TEMPLATE: AGENT-1 manager is BRIDGE-1 who used to play football for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Dave Challinor, who played football for Bury FC., is the manager of AFC Fylde.
+TEMPLATE: BRIDGE-1 , who played football for PATIENT-1 . , is the manager of AGENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id71 2 SportsTeam
+
+TRIPLES
+A.F.C._Fylde | ground | Warton,_Fylde
+A.F.C._Fylde | numberOfMembers | 3180
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Fylde
+PATIENT-1 | Warton,_Fylde
+PATIENT-2 | 3180
+
+
+LEX
+Id1
+TEXT: AFC Fylde's ground is located in Warton, Fylde and they have 3180 members.
+TEMPLATE: AGENT-1 ground is located in PATIENT-1 and they have PATIENT-2 members .
+CORRECT: AGENT-1 ground is located in PATIENT-1 and AGENT-1 have PATIENT-2 members .
+COMMENT: coref
+-
+Id2
+TEXT: A.F.C. Fylde ground is Warton Fylde and it has 3180 members.
+TEMPLATE: A.F.C. Fylde ground is PATIENT-1 and AGENT-1 has PATIENT-2 members .
+CORRECT: AGENT-1 ground is PATIENT-1 and AGENT-1 has PATIENT-2 members .
+COMMENT:
+-
+Id3
+TEXT: A.F.C. Fylde has 3180 members and their ground is Warton Fylde.
+TEMPLATE: AGENT-1 has PATIENT-2 members and PATIENT-2 ground is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id70 2 SportsTeam
+
+TRIPLES
+A.F.C._Fylde | ground | "Warton, Fylde, Lancashire"
+A.F.C._Fylde | numberOfMembers | 3180
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Fylde
+PATIENT-1 | "Warton, Fylde, Lancashire"
+PATIENT-2 | 3180
+
+
+LEX
+Id1
+TEXT: A.F.C. Fylde's ground is in Warton, Fylde, Lancashire and the club has 3180 members.
+TEMPLATE: AGENT-1 ground is in PATIENT-1 and the club has PATIENT-2 members .
+CORRECT: AGENT-1 ground is in PATIENT-1 and AGENT-1 has PATIENT-2 members .
+COMMENT: coref
+-
+Id2
+TEXT: A.F.C. Fylde have 3180 members and are based at Warton, Fylde, Lancashire.
+TEMPLATE: AGENT-1 have PATIENT-2 members and are based at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: A.F.C. Fylde are based at Warton, Fylde, Lancashire and has 3180 members.
+TEMPLATE: AGENT-1 are based at PATIENT-1 and has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id69 2 SportsTeam
+
+TRIPLES
+A.F.C._Fylde | ground | "Kellamergh Park"
+A.F.C._Fylde | numberOfMembers | 3180
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Fylde
+PATIENT-1 | "Kellamergh Park"
+PATIENT-2 | 3180
+
+
+LEX
+Id1
+TEXT: A.F.C.Fylde's ground is Kellamergh Park and the club has 3180 members.
+TEMPLATE: AGENT-1 ground is PATIENT-1 and the club has PATIENT-2 members .
+CORRECT: AGENT-1 ground is PATIENT-1 and AGENT-1 has PATIENT-2 members .
+COMMENT: coref
+-
+Id2
+TEXT: AFC Fylde has the ground Kellamergh Park and also has 3180 members.
+TEMPLATE: AGENT-1 has PATIENT-1 and also has PATIENT-2 members .
+CORRECT: AGENT-1 has the ground PATIENT-1 and also has PATIENT-2 members .
+COMMENT: mod
+-
+Id3
+TEXT: A.F.C. Fylde, has 3180 members and its ground is Kellamergh Park.
+TEMPLATE: AGENT-1 , has PATIENT-2 members and its ground is PATIENT-1 .
+CORRECT: AGENT-1 has PATIENT-2 members and AGENT-1 ground is PATIENT-1 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id68 2 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | manager | Stuart_Parker_(footballer)
+Stuart_Parker_(footballer) | club | Stockport_County_F.C.
+
+
+ENTITY MAP
+BRIDGE-1 | Stuart_Parker_(footballer)
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | Stockport_County_F.C.
+
+
+LEX
+Id1
+TEXT: Stuart Parker, who plays football for Stockport County F.C. and has been manager for AFC Blackpool.
+TEMPLATE: BRIDGE-1 , who plays football for PATIENT-1 and has been manager for AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AFC Blackpool have had as their manager, Stuart Parker, whose football club was Stockport County F.C.
+TEMPLATE: AGENT-1 have had as their manager , BRIDGE-1 , whose football club was PATIENT-1
+CORRECT: AGENT-1 have had as AGENT-1 manager , BRIDGE-1 , whose football club was PATIENT-1
+COMMENT: coref
+-
+Id3
+TEXT: The manager of A.F.C. Blackpool is Stuart Parker (footballer) who plays for Stockport County F.C.
+TEMPLATE: The manager of AGENT-1 is BRIDGE-1 (footballer) who plays for PATIENT-1
+CORRECT: The manager of AGENT-1 is BRIDGE-1 who plays for PATIENT-1
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id67 2 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | manager | Stuart_Parker_(footballer)
+Stuart_Parker_(footballer) | club | KV_Mechelen
+
+
+ENTITY MAP
+BRIDGE-1 | Stuart_Parker_(footballer)
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | KV_Mechelen
+
+
+LEX
+Id1
+TEXT: Stuart Parker, who has managed AFC Blackpool, has represented the club KV Mechelen.
+TEMPLATE: BRIDGE-1 , who has managed AGENT-1 , has represented PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id66 2 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | manager | Stuart_Parker_(footballer)
+Stuart_Parker_(footballer) | club | Drogheda_United_F.C.
+
+
+ENTITY MAP
+BRIDGE-1 | Stuart_Parker_(footballer)
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | Drogheda_United_F.C.
+
+
+LEX
+Id1
+TEXT: AFC Blackpool have had Stuart Parker as their manager who also played football at Drogheda United FC.
+TEMPLATE: AGENT-1 have had BRIDGE-1 as their manager who also played football at PATIENT-1 .
+CORRECT: AGENT-1 have had BRIDGE-1 as AGENT-1 manager who also played football at PATIENT-1 .
+COMMENT: coref
+-
+Id2
+TEXT: The manager of A.F.C. Blackpool is Stuart Parker (footballer) who was at Drogheda United FC.
+TEMPLATE: The manager of AGENT-1 is BRIDGE-1 (footballer) who was at PATIENT-1 .
+CORRECT: The manager of AGENT-1 is BRIDGE-1 who was at PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: Stuart Parker, is a footballer with the Drogheda United F.C. and has been the manager of AFC Blackpool.
+TEMPLATE: BRIDGE-1 , is a footballer with PATIENT-1 and has been the manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id65 2 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | manager | Stuart_Parker_(footballer)
+Stuart_Parker_(footballer) | club | Chesterfield_F.C.
+
+
+ENTITY MAP
+BRIDGE-1 | Stuart_Parker_(footballer)
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | Chesterfield_F.C.
+
+
+LEX
+Id1
+TEXT: The footballer Stuart Parker is attached to Chesterfield football club and has been manager at AFC Blackpool.
+TEMPLATE: The footballer Stuart Parker is attached to BRIDGE-1 and has been manager at AGENT-1 .
+CORRECT: BRIDGE-1 is attached to PATIENT-1 club and has been manager at AGENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Footballer Stuart Parker is the manager of A.F.C. Blackpool and he is also attached to Chesterfield football club.
+TEMPLATE: Footballer Stuart Parker is the manager of AGENT-1 and AGENT-1 is also attached to BRIDGE-1 .
+CORRECT: BRIDGE-1 is the manager of AGENT-1 and BRIDGE-1 is also attached to PATIENT-1 club .
+COMMENT:
+-
+Id3
+TEXT: The manager of A.F.C. Blackpool is Stuart Parker, who is a member of the Chesterfield F.C.
+TEMPLATE: The manager of AGENT-1 is BRIDGE-1 , who is a member of PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id64 2 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | manager | Stuart_Parker_(footballer)
+Stuart_Parker_(footballer) | club | Bury_F.C.
+
+
+ENTITY MAP
+BRIDGE-1 | Stuart_Parker_(footballer)
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | Bury_F.C.
+
+
+LEX
+Id1
+TEXT: The manager of A.F.C. Blackpool is Stuart Parker, who played football for Bury FC.
+TEMPLATE: The manager of AGENT-1 is BRIDGE-1 , who played football for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The manager of A.F.C. Blackpool is Stuart Parker (footballer) who plays for the Bury FC.
+TEMPLATE: The manager of AGENT-1 is BRIDGE-1 (footballer) who plays for PATIENT-1 .
+CORRECT: The manager of AGENT-1 is BRIDGE-1 who plays for PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: AFC Blackpool have had Stuart Parker as their manager who played football for Bury FC.
+TEMPLATE: AGENT-1 have had BRIDGE-1 as their manager who played football for PATIENT-1 .
+CORRECT: AGENT-1 have had BRIDGE-1 as AGENT-1 manager who played football for PATIENT-1 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id63 2 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | manager | Stuart_Parker_(footballer)
+Stuart_Parker_(footballer) | club | Blackpool_F.C.
+
+
+ENTITY MAP
+BRIDGE-1 | Stuart_Parker_(footballer)
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | Blackpool_F.C.
+
+
+LEX
+Id1
+TEXT: Start Parker is manager at A.F.C. Blackpool and plays for Blackpool F.C..
+TEMPLATE: BRIDGE-1 is manager at AGENT-1 and plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Stuart Parker, who once managed AFC Blackpool, plays for Blackpool F.C.
+TEMPLATE: BRIDGE-1 , who once managed AGENT-1 , plays for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The manager of A.F.C. Blackpool is Stuart Parker (footballer) who plays for Blackpool F.C.
+TEMPLATE: The manager of AGENT-1 is BRIDGE-1 (footballer) who plays for PATIENT-1
+CORRECT: The manager of AGENT-1 is BRIDGE-1 who plays for PATIENT-1
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id62 2 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | ground | Blackpool
+A.F.C._Blackpool | numberOfMembers | 1500
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | Blackpool
+PATIENT-2 | 1500
+
+
+LEX
+Id1
+TEXT: AFC Blackpool have 1500 members and the ground is located in Blackpool.
+TEMPLATE: PATIENT-1 have PATIENT-2 members and AGENT-1 is located in PATIENT-1 .
+CORRECT: AGENT-1 have PATIENT-2 members and the ground is located in PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: AFC Blackpool have 1500 members and their ground is located in Blackpool.
+TEMPLATE: PATIENT-1 have PATIENT-2 members and AGENT-1 is located in PATIENT-1 .
+CORRECT: AGENT-1 have PATIENT-2 members and AGENT-1 ground is located in PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: AFC Blackpool is located in Blackpool and has 1500 members.
+TEMPLATE: PATIENT-1 is located in PATIENT-1 and has PATIENT-2 members .
+CORRECT: AGENT-1 is located in PATIENT-1 and has PATIENT-2 members .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id61 2 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | ground | Blackpool
+A.F.C._Blackpool | league | North_West_Counties_Football_League
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | Blackpool
+PATIENT-2 | North_West_Counties_Football_League
+
+
+LEX
+Id1
+TEXT: A.F.C. Blackpool play at their ground in Blackpool and is part of the North West Counties Football League.
+TEMPLATE: PATIENT-1 play at AGENT-1 in PATIENT-1 and is part of PATIENT-2 .
+CORRECT: AGENT-1 play at AGENT-1 in PATIENT-1 and is part of PATIENT-2 .
+COMMENT:
+-
+Id2
+TEXT: AFC Blackpool, whose ground is located in Blackpool, plays in the North West Counties Football League.
+TEMPLATE: PATIENT-1 , whose ground is located in PATIENT-1 , plays in PATIENT-2 .
+CORRECT: AGENT-1 , whose ground is located in PATIENT-1 , plays in PATIENT-2 .
+COMMENT:
+-
+Id3
+TEXT: AFC Blackpool (the grounds of which are in Blackpool), play in the North West Counties Football League.
+TEMPLATE: PATIENT-1 (AGENT-1 of which are in PATIENT-1) , play in PATIENT-2 .
+CORRECT: AGENT-1 (the grounds of which are in PATIENT-1) , play in PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id60 2 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | ground | Blackpool
+A.F.C._Blackpool | league | English_football_league_system
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | Blackpool
+PATIENT-2 | English_football_league_system
+
+
+LEX
+Id1
+TEXT: A.F.C. Blackpool, is in Blackpool, and play in the English Football League.
+TEMPLATE: PATIENT-1 , is in PATIENT-1 , and play in PATIENT-2 AGENT-1 .
+CORRECT: AGENT-1 , is in PATIENT-1 , and play in PATIENT-2 .
+COMMENT:
+-
+Id2
+TEXT: AFC Blackpool ground is located in Blackpool and they play in the English Football League.
+TEMPLATE: AFC PATIENT-1 ground is located in PATIENT-1 and AGENT-1 play in PATIENT-2 .
+CORRECT: AGENT-1 ground is located in PATIENT-1 and AGENT-1 play in PATIENT-2 .
+COMMENT:
+-
+Id3
+TEXT: English Football League club AFC Blackpool's ground is in Blackpool.
+TEMPLATE: PATIENT-1 's ground is in PATIENT-1 .
+CORRECT: PATIENT-2 club AGENT-1 ground is in PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id59 2 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | ground | "The Mechanics,"
+A.F.C._Blackpool | numberOfMembers | 1500
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | "The Mechanics,"
+PATIENT-2 | 1500
+
+
+LEX
+Id1
+TEXT: A.F.C. Blackpool's play area is The Mechanics. It has 1500 members.
+TEMPLATE: AGENT-1 play area is PATIENT-1 . AGENT-1 has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.F.C. Blackpool has 1500 members and their ground is The Mechanics.
+TEMPLATE: AGENT-1 has PATIENT-2 members and PATIENT-2 ground is PATIENT-1 .
+CORRECT: AGENT-1 has PATIENT-2 members and AGENT-1 ground is PATIENT-1 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id58 2 SportsTeam
+
+TRIPLES
+A.F.C._Blackpool | ground | "Jepson Way,"
+A.F.C._Blackpool | numberOfMembers | 1500
+
+
+ENTITY MAP
+AGENT-1 | A.F.C._Blackpool
+PATIENT-1 | "Jepson Way,"
+PATIENT-2 | 1500
+
+
+LEX
+Id1
+TEXT: A.F.C. Blackpool has 1500 members and play at their ground, Jepson Way.
+TEMPLATE: AGENT-1 has PATIENT-2 members and play at PATIENT-2 ground , PATIENT-1 .
+CORRECT: AGENT-1 has PATIENT-2 members and play at AGENT-1 ground , PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: AFC Blackpool has 1500 members and its grounds are called Jepson Way.
+TEMPLATE: AGENT-1 has PATIENT-2 members and AGENT-1 grounds are called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: A.F.C. Blackpool has its grounds at Jepson Way and has 1500 members.
+TEMPLATE: AGENT-1 has AGENT-1 grounds at PATIENT-1 and has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id57 2 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | numberOfMembers | 1500
+A.E_Dimitra_Efxeinoupolis | season | 2014
+
+
+ENTITY MAP
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | 1500
+PATIENT-2 | 2014
+
+
+LEX
+Id1
+TEXT: A.E. Dimitra Efxeinoupolis has 1500 members and played in season 2015.
+TEMPLATE: AGENT-1 has PATIENT-1 members and played in PATIENT-2 .
+CORRECT: AGENT-1 has PATIENT-1 members and played in season PATIENT-2 .
+COMMENT: mod
+-
+Id2
+TEXT: A.E. Dimitra Efxeinoupolis has 1500 members and they were in the 2014 season.
+TEMPLATE: AGENT-1 has PATIENT-1 members and PATIENT-1 were in the PATIENT-2 season .
+CORRECT: AGENT-1 has PATIENT-1 members and AGENT-1 were in the PATIENT-2 season .
+COMMENT: coref
+-
+Id3
+TEXT: A.E Dimitia Efxeinoupolis participated in the 2014 season. It has 1500 members.
+TEMPLATE: AGENT-1 participated in the PATIENT-2 season . AGENT-1 has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id56 2 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | numberOfMembers | 1500
+A.E_Dimitra_Efxeinoupolis | ground | Efxeinoupoli
+
+
+ENTITY MAP
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | 1500
+PATIENT-2 | Efxeinoupoli
+
+
+LEX
+Id1
+TEXT: AE Dimitra Efxeinoupolis has 1500 members and its ground is located in the town of Efxeinoupoli.
+TEMPLATE: AGENT-1 has PATIENT-1 members and its ground is located in the town of PATIENT-2 .
+CORRECT: AGENT-1 has PATIENT-1 members and AGENT-1 ground is located in PATIENT-2 .
+COMMENT: coref - mod
+-
+Id2
+TEXT: A.E Dimitra Efxeinoupolis is located in the town of Efxeinoupoli and has 1500 members.
+TEMPLATE: AGENT-1 is located in the town of PATIENT-2 and has PATIENT-1 members .
+CORRECT: AGENT-1 is located in PATIENT-2 and has PATIENT-1 members .
+COMMENT: mod
+-
+Id3
+TEXT: A.E. Dimitra Efxeinoupolis has 1500 members and its ground is located in the town of Efxeinoupoli.
+TEMPLATE: AGENT-1 has PATIENT-1 members and its ground is located in the town of PATIENT-2 .
+CORRECT: AGENT-1 has PATIENT-1 members and AGENT-1 ground is located in PATIENT-2 .
+COMMENT: coref - mod
+-
+
+**************************************************
+
+Entry: Id55 2 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | location | Greece
+Greece | leader | Prokopis_Pavlopoulos
+
+
+ENTITY MAP
+BRIDGE-1 | Greece
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | Prokopis_Pavlopoulos
+
+
+LEX
+Id1
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece where Prokopis Pavlopoulos is a leader.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 where PATIENT-1 is a leader .
+CORRECT: AGENT-1 is located in BRIDGE-1 where PATIENT-1 is a leader .
+COMMENT: mod
+-
+Id2
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece, where Prokopis Pavloopoulos is a leader.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 , where PATIENT-1 is a leader .
+CORRECT: AGENT-1 is located in BRIDGE-1 , where PATIENT-1 is a leader .
+COMMENT: mod
+-
+Id3
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece, where the leader is Prokopis Pavlopoulos.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 , where the leader is PATIENT-1 .
+CORRECT: AGENT-1 is located in BRIDGE-1 , where the leader is PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id54 2 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | location | Greece
+Greece | leader | Nikos_Voutsis
+
+
+ENTITY MAP
+BRIDGE-1 | Greece
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | Nikos_Voutsis
+
+
+LEX
+Id1
+TEXT: A.E Dimitra Efxeinoupolis is located in Greece, the leader of which is Nikos Voutsis.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , the leader of which is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece, and a Greek leader is Nikos Voutsis.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 , and a Greek leader is PATIENT-1 .
+CORRECT: AGENT-1 is located in BRIDGE-1 , and a BRIDGE-1 leader is PATIENT-1 .
+COMMENT: mod - coref
+-
+Id3
+TEXT: A.E. Dimitra Efxeinoupolis is located in Greece where the leader is Nikos Voutsis.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 where the leader is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id53 2 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | location | Greece
+Greece | leader | Alexis_Tsipras
+
+
+ENTITY MAP
+BRIDGE-1 | Greece
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | Alexis_Tsipras
+
+
+LEX
+Id1
+TEXT: A.E Dimitra Efxeinoupolis is located in Greece which is headed by Alexis Tsipras.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 which is headed by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece, where the leader is Alexis Tsipras.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 , where the leader is PATIENT-1 .
+CORRECT: AGENT-1 is located in BRIDGE-1 , where the leader is PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: A.E Dimitra Efxeinoupolis is located in Greece, where the leader is Alexis Tsipras.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , where the leader is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id52 2 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | location | Greece
+Greece | language | Greek_language
+
+
+ENTITY MAP
+BRIDGE-1 | Greece
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | Greek_language
+
+
+LEX
+Id1
+TEXT: A.E Dimitra Efxeinoupolis is located in Greece where the language is Greek.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 where PATIENT-1 is Greek .
+CORRECT: AGENT-1 is located in BRIDGE-1 where the language is PATIENT-1 .
+COMMENT: language
+-
+Id2
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece, the country where the language they speak is Greek.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 , the country where PATIENT-1 they speak is Greek .
+CORRECT: AGENT-1 is located in BRIDGE-1 where the language BRIDGE-1 speak is PATIENT-1 .
+COMMENT: mod - coref - language
+-
+Id3
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece, where Greek is spoken.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 , where PATIENT-1 is spoken .
+CORRECT: AGENT-1 is located in BRIDGE-1 , where PATIENT-1 is spoken .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id51 2 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | location | Greece
+Greece | demonym | Greeks
+
+
+ENTITY MAP
+BRIDGE-1 | Greece
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | Greeks
+
+
+LEX
+Id1
+TEXT: A.E Dimitra Efxeinoupolis is located in Greece, where the Greeks live.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , where PATIENT-1 live .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece where the locals are called Greeks.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 where the locals are called PATIENT-1 .
+CORRECT: AGENT-1 is located in BRIDGE-1 where the locals are called PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece, inhabited by Greeks.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 , inhabited by PATIENT-1 .
+CORRECT: AGENT-1 is located in BRIDGE-1 , inhabited by PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id50 2 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | location | Greece
+Greece | currency | Euro
+
+
+ENTITY MAP
+BRIDGE-1 | Greece
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | Euro
+
+
+LEX
+Id1
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece, and the Euro is the currency.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 , and PATIENT-1 is the currency .
+CORRECT: AGENT-1 is located in BRIDGE-1 , and PATIENT-1 is the currency .
+COMMENT: mod
+-
+Id2
+TEXT: A.E Dimitra Efxeinoupolis is located in Greece where the Euro is used as currency.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 where PATIENT-1 is used as currency .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece where the Euro is used as currency.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 where PATIENT-1 is used as currency .
+CORRECT: AGENT-1 is located in BRIDGE-1 where PATIENT-1 is used as currency .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id49 2 SportsTeam
+
+TRIPLES
+A.E_Dimitra_Efxeinoupolis | location | Greece
+Greece | capital | Athens
+
+
+ENTITY MAP
+BRIDGE-1 | Greece
+AGENT-1 | A.E_Dimitra_Efxeinoupolis
+PATIENT-1 | Athens
+
+
+LEX
+Id1
+TEXT: A.E Dimitra Efxeinoupolis is located in Greece, the capital of which is Athens.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , the capital of which is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The A.E Dimitra Efxeinoupolis club is located in Greece where the capital city is Athens.
+TEMPLATE: The AGENT-1 club is located in BRIDGE-1 where the capital city is PATIENT-1 .
+CORRECT: AGENT-1 is located in BRIDGE-1 where the capital city is PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id48 2 SportsTeam
+
+TRIPLES
+A.D._Isidro_Metapán | manager | Jorge_Humberto_Rodríguez
+Jorge_Humberto_Rodríguez | club | El_Salvador_national_football_team
+
+
+ENTITY MAP
+BRIDGE-1 | Jorge_Humberto_Rodríguez
+AGENT-1 | A.D._Isidro_Metapán
+PATIENT-1 | El_Salvador_national_football_team
+
+
+LEX
+Id1
+TEXT: Jorge Humberto Rodríguez manages the A.D. Isidro Metapan and plays for the El Salvador national football team.
+TEMPLATE: BRIDGE-1 manages AGENT-1 and plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Jorge Humberto Rodríguez, who is a member of the El Salvador National Football Team, also manages the team.
+TEMPLATE: BRIDGE-1 , who is a member of PATIENT-1 , also manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Once manager of A D Isidro Metapán, Jorge Humberto Rodriguez, plays for the El Salvador national football team.
+TEMPLATE: Once manager of AGENT-1 , BRIDGE-1 , plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id47 2 SportsTeam
+
+TRIPLES
+A.D._Isidro_Metapán | manager | Jorge_Humberto_Rodríguez
+Jorge_Humberto_Rodríguez | club | C.D._Águila
+
+
+ENTITY MAP
+BRIDGE-1 | Jorge_Humberto_Rodríguez
+AGENT-1 | A.D._Isidro_Metapán
+PATIENT-1 | C.D._Águila
+
+
+LEX
+Id1
+TEXT: A.D. Isidro Metapan's manager is Jorge Humberto Rodriguez who is attached to the club CD Aguila.
+TEMPLATE: AGENT-1 manager is BRIDGE-1 who is attached to PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.D. Isidro Metapan's manager is Jorge Humberto Rodriguez who is a member of C.D. Aguila.
+TEMPLATE: AGENT-1 manager is BRIDGE-1 who is a member of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Jorge Humberto Rodriguez has been a manager of A D Isidro Metapan and is now a member of C.D. Aguila.
+TEMPLATE: BRIDGE-1 has been a manager of AGENT-1 and is now a member of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id46 2 SportsTeam
+
+TRIPLES
+A.D._Isidro_Metapán | manager | Jorge_Humberto_Rodríguez
+Jorge_Humberto_Rodríguez | club | Alianza_F.C.
+
+
+ENTITY MAP
+BRIDGE-1 | Jorge_Humberto_Rodríguez
+AGENT-1 | A.D._Isidro_Metapán
+PATIENT-1 | Alianza_F.C.
+
+
+LEX
+Id1
+TEXT: Jorge Humberto Rodriguez, plays for Alianza F.C. and has been manager of A D Isidro Metapán.
+TEMPLATE: BRIDGE-1 , plays for PATIENT-1 and has been manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.D. Isidro Metapan's manager is Jorge Humberto Rodriguez whose club is Alianza F.C.
+TEMPLATE: AGENT-1 manager is BRIDGE-1 whose club is PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Jorge Humberto Rodríguez manages the A.D. Isidro Metapan and plays for the Alianza F.C. club.
+TEMPLATE: BRIDGE-1 manages AGENT-1 and plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id45 2 SportsTeam
+
+TRIPLES
+A.D._Isidro_Metapán | league | Salvadoran_Primera_División
+A.D._Isidro_Metapán | ground | Metapán
+
+
+ENTITY MAP
+AGENT-1 | A.D._Isidro_Metapán
+PATIENT-1 | Salvadoran_Primera_División
+PATIENT-2 | Metapán
+
+
+LEX
+Id1
+TEXT: A.D. Isidro Metapan play in the Salvadoran Primera Division at its ground at Metapan.
+TEMPLATE: AGENT-1 play in PATIENT-1 at PATIENT-2 ground at PATIENT-2 .
+CORRECT: AGENT-1 play in PATIENT-1 at AGENT-1 ground at PATIENT-2 .
+COMMENT: coref
+-
+Id2
+TEXT: A.D. Isidro Metapan play in the Salvadoran Primera Division and their ground is in Metapán.
+TEMPLATE: AGENT-1 play in PATIENT-1 and their ground is in PATIENT-2 .
+CORRECT: AGENT-1 play in PATIENT-1 and AGENT-1 ground is in PATIENT-2 .
+COMMENT: coref
+-
+Id3
+TEXT: A.D. Isidro Metapán is in the Salvadoran Primera División league, he is playing in it's ground at Metapán.
+TEMPLATE: AGENT-1 is in the PATIENT-1 league , PATIENT-2 is playing in PATIENT-1 's ground at PATIENT-2 .
+CORRECT: AGENT-1 is in the PATIENT-1 league , AGENT-1 is playing in PATIENT-1 ground at PATIENT-2 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id44 2 SportsTeam
+
+TRIPLES
+A.D._Isidro_Metapán | ground | Metapán
+A.D._Isidro_Metapán | numberOfMembers | 10000
+
+
+ENTITY MAP
+AGENT-1 | A.D._Isidro_Metapán
+PATIENT-1 | Metapán
+PATIENT-2 | 10000
+
+
+LEX
+Id1
+TEXT: A.D. Isidro Metapán's ground is in Metapán and the club has 10000 members.
+TEMPLATE: AGENT-1 's ground is in PATIENT-1 and the club has PATIENT-2 members .
+CORRECT: AGENT-1 ground is in PATIENT-1 and AGENT-1 has PATIENT-2 members .
+COMMENT:
+-
+Id2
+TEXT: 10000 members to date, AD Isidro Metapan's ground is in Metapan.
+TEMPLATE: PATIENT-2 members to date , AGENT-1 ground is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: A.D. Isidro Metapán is playing in it's ground at Metapán and has 10000 members.
+TEMPLATE: AGENT-1 is playing in PATIENT-1 's ground at PATIENT-1 and has PATIENT-2 members .
+CORRECT: AGENT-1 is playing in AGENT-1 ground at PATIENT-1 and has PATIENT-2 members .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id43 2 SportsTeam
+
+TRIPLES
+A.D._Isidro_Metapán | ground | Estadio_Jorge_Calero_Suárez
+A.D._Isidro_Metapán | numberOfMembers | 10000
+
+
+ENTITY MAP
+AGENT-1 | A.D._Isidro_Metapán
+PATIENT-1 | Estadio_Jorge_Calero_Suárez
+PATIENT-2 | 10000
+
+
+LEX
+Id1
+TEXT: A.D. Isidro Metapan have 10000 members and play at the Estadio Jorge Calero Suarez.
+TEMPLATE: AGENT-1 have PATIENT-2 members and play at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.D. Isidro Metapán, are at Estadio Jorge Calero Suárez and have 10000 members.
+TEMPLATE: AGENT-1 , are at PATIENT-1 and have PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: A.D. Isidro Metapan play at the Estadio Jorge Calero Suarez and they have 10000 members.
+TEMPLATE: AGENT-1 play at PATIENT-1 and they have PATIENT-2 members .
+CORRECT: AGENT-1 play at PATIENT-1 and AGENT-1 have PATIENT-2 members .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id42 2 SportsTeam
+
+TRIPLES
+A.D._Isidro_Metapán | ground | Estadio_Jorge_Calero_Suárez
+A.D._Isidro_Metapán | league | Salvadoran_Primera_División
+
+
+ENTITY MAP
+AGENT-1 | A.D._Isidro_Metapán
+PATIENT-1 | Estadio_Jorge_Calero_Suárez
+PATIENT-2 | Salvadoran_Primera_División
+
+
+LEX
+Id1
+TEXT: A D Isidro Metapán play in a league called the Salvadoran Primera Division and their home ground is the Estadio Jorge Calero Suárez.
+TEMPLATE: A D AGENT-1 play in a league called PATIENT-2 and their home ground is PATIENT-1 .
+CORRECT: AGENT-1 play in a league called PATIENT-2 and AGENT-1 home ground is PATIENT-1 .
+COMMENT: mod - coref
+-
+Id2
+TEXT: A.D. Isidro Metapán is in the Salvadoran Primera División league and are located at Estadio Jorge Calero Suárez.
+TEMPLATE: AGENT-1 is in the PATIENT-2 league and are located at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: A.D. Isidro Metapan play at the Estadio Jorge Calero Suarez in the Salvadoran Primera Division league.
+TEMPLATE: AGENT-1 play at PATIENT-1 in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id41 2 SportsTeam
+
+TRIPLES
+A.D._Isidro_Metapán | ground | "Metapán, El Salvador"
+A.D._Isidro_Metapán | numberOfMembers | 10000
+
+
+ENTITY MAP
+AGENT-1 | A.D._Isidro_Metapán
+PATIENT-1 | "Metapán, El Salvador"
+PATIENT-2 | 10000
+
+
+LEX
+Id1
+TEXT: With 10000 members, AD Isidro Metapán's grounds are located in Metapán, El Salvador.
+TEMPLATE: With PATIENT-2 members , AGENT-1 grounds are located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The ground of AD Isidro Metapán, with 10000 members, is located in Metapán, El Salvador.
+TEMPLATE: The ground of AGENT-1 , with PATIENT-2 members , is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: A.D. Isidro Metapan's is in Metapan, El Salvador and has 10000 members.
+TEMPLATE: AGENT-1 Metapan 's is in PATIENT-1 and has PATIENT-2 members .
+CORRECT: AGENT-1 is in PATIENT-1 and has PATIENT-2 members .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id40 2 SportsTeam
+
+TRIPLES
+A.D._Isidro_Metapán | ground | "Metapán, El Salvador"
+A.D._Isidro_Metapán | league | Salvadoran_Primera_División
+
+
+ENTITY MAP
+AGENT-1 | A.D._Isidro_Metapán
+PATIENT-1 | "Metapán, El Salvador"
+PATIENT-2 | Salvadoran_Primera_División
+
+
+LEX
+Id1
+TEXT: A. D. Isidro Metapán play in a league called the Salvadoran Primera Division and is based in Metapan, El Salvador.
+TEMPLATE: A. AGENT-1 play in a league called PATIENT-2 and is based in PATIENT-1 .
+CORRECT: AGENT-1 play in a league called PATIENT-2 and is based in PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: A.D. Isidro Metapan in the Salvadoran Primera Division is located in Metapan, El Salvador.
+TEMPLATE: AGENT-1 in PATIENT-2 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: A.D. Isidro Metapán is in the Salvadoran Primera División league and its ground is in Metapan, El Salvador.
+TEMPLATE: AGENT-1 is in the PATIENT-2 league and PATIENT-2 ground is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id39 2 SportsTeam
+
+TRIPLES
+A.C._Lumezzane | numberOfMembers | 4150
+A.C._Lumezzane | league | Lega_Pro
+
+
+ENTITY MAP
+AGENT-1 | A.C._Lumezzane
+PATIENT-1 | 4150
+PATIENT-2 | Lega_Pro
+
+
+LEX
+Id1
+TEXT: The A.C. Lumezzane has 4150 members and they play in the Lega Pro league.
+TEMPLATE: AGENT-1 has PATIENT-1 members and PATIENT-1 play in the PATIENT-2 league .
+CORRECT: AGENT-1 has PATIENT-1 members and AGENT-1 play in the PATIENT-2 league .
+COMMENT: coref
+-
+Id2
+TEXT: AC Lumezzane, play in the Lega Pro league, and have 4150 members.
+TEMPLATE: AGENT-1 , play in the PATIENT-2 league , and have PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The A.C. Lumezzane has 4150 members and play in the Lega Pro.
+TEMPLATE: AGENT-1 has PATIENT-1 members and play in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id38 2 SportsTeam
+
+TRIPLES
+A.C._Lumezzane | manager | Michele_Marcolini
+Michele_Marcolini | club | Vicenza_Calcio
+
+
+ENTITY MAP
+BRIDGE-1 | Michele_Marcolini
+AGENT-1 | A.C._Lumezzane
+PATIENT-1 | Vicenza_Calcio
+
+
+LEX
+Id1
+TEXT: Michele Marcolini played for Vicenza Calcio and manages A.C. Lumezzane.
+TEMPLATE: BRIDGE-1 played for PATIENT-1 and manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Michele Marcolini has been manager of AC Lumezzane and is in the Vicenza Calcio club.
+TEMPLATE: BRIDGE-1 has been manager of AGENT-1 and is in the PATIENT-1 club .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The manager of A.C. Lumezzane is Michele Marcolini who plays for Vicenza Calcio.
+TEMPLATE: The manager of AGENT-1 is BRIDGE-1 who plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id37 2 SportsTeam
+
+TRIPLES
+A.C._Lumezzane | manager | Michele_Marcolini
+Michele_Marcolini | club | Torino_F.C.
+
+
+ENTITY MAP
+BRIDGE-1 | Michele_Marcolini
+AGENT-1 | A.C._Lumezzane
+PATIENT-1 | Torino_F.C.
+
+
+LEX
+Id1
+TEXT: Michele Marcolini has been manager of AC Lumezzane and played for Torino FC.
+TEMPLATE: BRIDGE-1 has been manager of AGENT-1 and played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The manager of A.C. Lumezzane is Michele Marcolini who owns Torino FC.
+TEMPLATE: The manager of AGENT-1 is BRIDGE-1 who owns PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Michele Marcolini manages the A.C. Lumezzane and attends the Torino F.C. Club.
+TEMPLATE: BRIDGE-1 manages AGENT-1 and attends PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id36 2 SportsTeam
+
+TRIPLES
+A.C._Lumezzane | manager | Michele_Marcolini
+Michele_Marcolini | club | F.C._Bari_1908
+
+
+ENTITY MAP
+BRIDGE-1 | Michele_Marcolini
+AGENT-1 | A.C._Lumezzane
+PATIENT-1 | F.C._Bari_1908
+
+
+LEX
+Id1
+TEXT: Michele Marcolini was at FC Bari 1908 and manages the AC Lumezzane.
+TEMPLATE: BRIDGE-1 was at PATIENT-1 and manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Michele Marcolini has been associated with F.C. Bari 1908 and is now the manager of A.C. Lumezzane.
+TEMPLATE: BRIDGE-1 has been associated with PATIENT-1 and is now the manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Michele Marcolini manages the A.C. Lumezzane, he played for F.C. Bari 1908.
+TEMPLATE: BRIDGE-1 manages AGENT-1 , AGENT-1 played for PATIENT-1 .
+CORRECT: BRIDGE-1 manages AGENT-1 , BRIDGE-1 played for PATIENT-1 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id35 2 SportsTeam
+
+TRIPLES
+A.C._Lumezzane | manager | Michele_Marcolini
+Michele_Marcolini | club | Atalanta_B.C.
+
+
+ENTITY MAP
+BRIDGE-1 | Michele_Marcolini
+AGENT-1 | A.C._Lumezzane
+PATIENT-1 | Atalanta_B.C.
+
+
+LEX
+Id1
+TEXT: Michele Marcolini manages the A.C. Lumezzane and plays for Atalanta B.C.
+TEMPLATE: BRIDGE-1 manages AGENT-1 and plays for PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Michele Marcolini once managed AC Lumezzane. He played for Atalanta BC.
+TEMPLATE: BRIDGE-1 once managed AGENT-1 . He played for PATIENT-1 .
+CORRECT: BRIDGE-1 once managed AGENT-1 . BRIDGE-1 played for PATIENT-1 .
+COMMENT: coref
+-
+Id3
+TEXT: Michele Marcolini, who is in the Atalanta B.C. club, manages the A.C. Lumezzane.
+TEMPLATE: BRIDGE-1 , who is in PATIENT-1 , manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id34 2 SportsTeam
+
+TRIPLES
+A.C._Lumezzane | manager | Michele_Marcolini
+Michele_Marcolini | club | A.C._Chievo_Verona
+
+
+ENTITY MAP
+BRIDGE-1 | Michele_Marcolini
+AGENT-1 | A.C._Lumezzane
+PATIENT-1 | A.C._Chievo_Verona
+
+
+LEX
+Id1
+TEXT: Michele Marcolini's club is A.C> Chievo Verona and he manages the A.C. Lumezzane.
+TEMPLATE: BRIDGE-1 's club is > PATIENT-1 and AGENT-1 manages AGENT-1 .
+CORRECT: BRIDGE-1 club is PATIENT-1 and BRIDGE-1 manages AGENT-1 .
+COMMENT: coref
+-
+Id2
+TEXT: A.C Chievo Verona, is the club of Michele Marcolini, who has been the manager of AC Lumezzane.
+TEMPLATE: PATIENT-1 , is the club of BRIDGE-1 , who has been the manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Michele Marcolini, manager of AC Lumezzane, plays for A.C. Chievo Verona.
+TEMPLATE: BRIDGE-1 , manager of AGENT-1 , plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id33 2 SportsTeam
+
+TRIPLES
+A.C._Lumezzane | league | "Lega Pro/A"
+A.C._Lumezzane | numberOfMembers | 4150
+
+
+ENTITY MAP
+AGENT-1 | A.C._Lumezzane
+PATIENT-1 | "Lega Pro/A"
+PATIENT-2 | 4150
+
+
+LEX
+Id1
+TEXT: AC Lumezzane, has 4150 members, and play in the Lega Pro/A.
+TEMPLATE: AGENT-1 , has PATIENT-2 members , and play in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.C. Lumezzane is in the Lega Pro/A league and has 4150 members.
+TEMPLATE: AGENT-1 is in the PATIENT-1 league and has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id32 2 SportsTeam
+
+TRIPLES
+A.C._Lumezzane | fullname | "Associazione Calcio Lumezzane SpA"
+A.C._Lumezzane | numberOfMembers | 4150
+
+
+ENTITY MAP
+AGENT-1 | A.C._Lumezzane
+PATIENT-1 | "Associazione Calcio Lumezzane SpA"
+PATIENT-2 | 4150
+
+
+LEX
+Id1
+TEXT: Associazione Calcio Lumezzane SpA (abbreviated to A.C. Lumezzane) has 4150 members.
+TEMPLATE: PATIENT-1 (abbreviated to AGENT-1) has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The fullname of A.C. Lumezzane, which has 4150 members, is Associazione Calcio Lumezzane SpA.
+TEMPLATE: The fullname of AGENT-1 , which has PATIENT-2 members , is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The "Associazione Calcio Lumezzane SpA" is the complete name of the A.C. Lumezzane. It has 4150 members.
+TEMPLATE: `` PATIENT-1 '' is the complete name of AGENT-1 . PATIENT-1 has PATIENT-2 members .
+CORRECT: `` PATIENT-1 '' is the complete name of AGENT-1 . AGENT-1 has PATIENT-2 members .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id31 2 SportsTeam
+
+TRIPLES
+A.C._Chievo_Verona | manager | Rolando_Maran
+Rolando_Maran | club | Vicenza_Calcio
+
+
+ENTITY MAP
+BRIDGE-1 | Rolando_Maran
+AGENT-1 | A.C._Chievo_Verona
+PATIENT-1 | Vicenza_Calcio
+
+
+LEX
+Id1
+TEXT: Associazione Calcio ChievoVerona is managed by Rolando Maran who plays for Vicenza Calcio.
+TEMPLATE: AGENT-1 is managed by BRIDGE-1 who plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Rolando Maran has managed AC Chievo Verona and plays at the Vicenza Calcio.
+TEMPLATE: BRIDGE-1 has managed AGENT-1 and plays at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Rolando Maran, in the Vicenza Calcio club, has managed AC Chievo Verona.
+TEMPLATE: BRIDGE-1 , in the PATIENT-1 club , has managed AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id30 2 SportsTeam
+
+TRIPLES
+A.C._Chievo_Verona | manager | Rolando_Maran
+Rolando_Maran | club | Varese_Calcio_S.S.D.
+
+
+ENTITY MAP
+BRIDGE-1 | Rolando_Maran
+AGENT-1 | A.C._Chievo_Verona
+PATIENT-1 | Varese_Calcio_S.S.D.
+
+
+LEX
+Id1
+TEXT: Previously owning club Varese Calcio S.S.D., Rolando Maran now manages club Associazione Calcio Chievo Verona.
+TEMPLATE: Previously owning PATIENT-1 , BRIDGE-1 now manages AGENT-1 Associazione Calcio Chievo Verona .
+CORRECT: Previously owning PATIENT-1 , BRIDGE-1 now manages AGENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Rolando Moran manages A.C. Chievo and is in Varese Calcio S.S.D. club.
+TEMPLATE: BRIDGE-1 manages AGENT-1 and is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The manager of A.C. Chievo Verona is Rolando Maran who used to be at Varese Calcio S.S.D.
+TEMPLATE: The manager of AGENT-1 is BRIDGE-1 who used to be at PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id29 2 SportsTeam
+
+TRIPLES
+A.C._Chievo_Verona | manager | Rolando_Maran
+Rolando_Maran | club | Unione_Triestina_2012_S.S.D.
+
+
+ENTITY MAP
+BRIDGE-1 | Rolando_Maran
+AGENT-1 | A.C._Chievo_Verona
+PATIENT-1 | Unione_Triestina_2012_S.S.D.
+
+
+LEX
+Id1
+TEXT: Associazione Calcio Chievo Verona is managed by Rolando Maran, who is in the Unione Triestina 2012 S.S.D. club.
+TEMPLATE: Associazione Calcio Chievo Verona is managed by BRIDGE-1 , who is in PATIENT-1 .
+CORRECT: AGENT-1 is managed by BRIDGE-1 , who is in PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The manager of A.C. Chievo Verona is Rolando Maran, who played for Unione Triestina 2012 S.S.D.
+TEMPLATE: The manager of AGENT-1 is BRIDGE-1 , who played for PATIENT-1 2012 S.S.D.
+CORRECT: The manager of AGENT-1 is BRIDGE-1 , who played for PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: Associazione Calcio ChievoVerona is managed by Rolando Maran who plays for Unione Triestina 2012 SSD.
+TEMPLATE: Associazione Calcio ChievoVerona is managed by BRIDGE-1 who plays for PATIENT-1 .
+CORRECT: AGENT-1 is managed by BRIDGE-1 who plays for PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id28 2 SportsTeam
+
+TRIPLES
+A.C._Chievo_Verona | manager | Rolando_Maran
+Rolando_Maran | club | F.C._Bari_1908
+
+
+ENTITY MAP
+BRIDGE-1 | Rolando_Maran
+AGENT-1 | A.C._Chievo_Verona
+PATIENT-1 | F.C._Bari_1908
+
+
+LEX
+Id1
+TEXT: Associazione Calcio ChievoVerona is managed by Rolando Maran who worked at FC Bari 1908.
+TEMPLATE: Associazione Calcio ChievoVerona is managed by BRIDGE-1 who worked at AGENT-1 .
+CORRECT: AGENT-1 is managed by BRIDGE-1 who worked at PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The manager of A.C. Chievo Verona is Rolando Maran, who has worked at FC Bari 1908.
+TEMPLATE: The manager of AGENT-1 is BRIDGE-1 , who has worked at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Associazione Calcio ChievoVerona is managed by Rolando Maran, who plays for F.C. Bari 1908.
+TEMPLATE: Associazione Calcio ChievoVerona is managed by BRIDGE-1 , who plays for AGENT-1 .
+CORRECT: AGENT-1 is managed by BRIDGE-1 , who plays for PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id27 2 SportsTeam
+
+TRIPLES
+A.C._Chievo_Verona | manager | Rolando_Maran
+Rolando_Maran | club | Carrarese_Calcio
+
+
+ENTITY MAP
+BRIDGE-1 | Rolando_Maran
+AGENT-1 | A.C._Chievo_Verona
+PATIENT-1 | Carrarese_Calcio
+
+
+LEX
+Id1
+TEXT: Associazione Calcio ChievoVerona is managed by Rolando Maran who plays for Carrarese Calcio.
+TEMPLATE: AGENT-1 is managed by BRIDGE-1 who plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The manager of A.C. Chievo Verona is Rolando Maran, he played for Carrarese Calcio.
+TEMPLATE: The manager of AGENT-1 is BRIDGE-1 , BRIDGE-1 played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The manager of A.C. Chievo Verona is Rolando Maran who is in the Carrarese Calcio club.
+TEMPLATE: The manager of AGENT-1 is BRIDGE-1 who is in the PATIENT-1 club .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id26 2 SportsTeam
+
+TRIPLES
+A.C._Chievo_Verona | manager | Rolando_Maran
+Rolando_Maran | club | Calcio_Catania
+
+
+ENTITY MAP
+BRIDGE-1 | Rolando_Maran
+AGENT-1 | A.C._Chievo_Verona
+PATIENT-1 | Calcio_Catania
+
+
+LEX
+Id1
+TEXT: Rolando Maran is attached to the club Calcio Catania, and has also managed AC Chievo Verona.
+TEMPLATE: BRIDGE-1 is attached to PATIENT-1 , and has also managed AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Rolando Naran is a member of the Calio Cantania and is manager of A C Chievo Verona.
+TEMPLATE: BRIDGE-1 is a member of PATIENT-1 and is manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id25 2 SportsTeam
+
+TRIPLES
+A.C._Chievo_Verona | league | Serie_A
+A.C._Chievo_Verona | ground | Verona
+
+
+ENTITY MAP
+AGENT-1 | A.C._Chievo_Verona
+PATIENT-1 | Serie_A
+PATIENT-2 | Verona
+
+
+LEX
+Id1
+TEXT: A.C.Chievo Verona play at Verona in Serie A.
+TEMPLATE: AGENT-1 PATIENT-2 play at PATIENT-2 in PATIENT-1
+CORRECT: AGENT-1 play at PATIENT-2 in PATIENT-1
+COMMENT: mod
+-
+Id2
+TEXT: A.C. Chievo Verona, play in Verona, in Serie A.
+TEMPLATE: AGENT-1 , play in PATIENT-2 , in PATIENT-1 A.
+CORRECT: AGENT-1 , play in PATIENT-2 , in PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: A.C. Chievo Verona is in the league, Serie A and play in Verona.
+TEMPLATE: AGENT-1 is in the league , PATIENT-1 and play in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id24 2 SportsTeam
+
+TRIPLES
+A.C._Chievo_Verona | ground | Verona
+A.C._Chievo_Verona | numberOfMembers | 39371
+
+
+ENTITY MAP
+AGENT-1 | A.C._Chievo_Verona
+PATIENT-1 | Verona
+PATIENT-2 | 39371
+
+
+LEX
+Id1
+TEXT: A.C. Chievo Verona play in Verona and has 39371 members.
+TEMPLATE: AGENT-1 play in PATIENT-1 and has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.C. Chievo Verona, with 39371 members, plays in their ground at Verona.
+TEMPLATE: AGENT-1 , with PATIENT-2 members , plays in PATIENT-2 ground at PATIENT-1 .
+CORRECT: AGENT-1 , with PATIENT-2 members , plays in AGENT-1 ground at PATIENT-1 .
+COMMENT: coref
+-
+Id3
+TEXT: A.C. Chievo Verona is playing in his ground at Verona and has 39371 members.
+TEMPLATE: AGENT-1 is playing in his ground at PATIENT-1 and has PATIENT-2 members .
+CORRECT: AGENT-1 is playing in AGENT-1 ground at PATIENT-1 and has PATIENT-2 members .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id23 2 SportsTeam
+
+TRIPLES
+A.C._Chievo_Verona | ground | Stadio_MarcAntonio_Bentegodi
+A.C._Chievo_Verona | numberOfMembers | 39371
+
+
+ENTITY MAP
+AGENT-1 | A.C._Chievo_Verona
+PATIENT-1 | Stadio_MarcAntonio_Bentegodi
+PATIENT-2 | 39371
+
+
+LEX
+Id1
+TEXT: A.C.Chievo Verona has 39371 members and its home ground is Stadio Marc Anthonio Bentegodi.
+TEMPLATE: AGENT-1 has PATIENT-2 members and AGENT-1 home ground is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AC Chievo Verona's home ground is Stadio Marc Antonio Bentegodi and they have 39371 members.
+TEMPLATE: AGENT-1 home ground is PATIENT-1 and they have PATIENT-2 members .
+CORRECT: AGENT-1 home ground is PATIENT-1 and AGENT-1 have PATIENT-2 members .
+COMMENT: coref
+-
+Id3
+TEXT: With 39371 members, A.C. Chievo Verona's home ground is Stadio Marc'Antonio Bentegodi.
+TEMPLATE: With PATIENT-2 members , AGENT-1 's home ground is PATIENT-1 .
+CORRECT: With PATIENT-2 members , AGENT-1 home ground is PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id22 2 SportsTeam
+
+TRIPLES
+A.C._Chievo_Verona | ground | "Verona, Italy"
+A.C._Chievo_Verona | league | Serie_A
+
+
+ENTITY MAP
+AGENT-1 | A.C._Chievo_Verona
+PATIENT-1 | "Verona, Italy"
+PATIENT-2 | Serie_A
+
+
+LEX
+Id1
+TEXT: Verona, Italy is the home to A.C. Chievo Verona, which is in the league, Serie A.
+TEMPLATE: PATIENT-1 is the home to AGENT-1 , which is in the league , PATIENT-2
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Verona, Italy, is the home to A.C. Chievo Verona playing in the Serie A league.
+TEMPLATE: PATIENT-1 , is the home to AGENT-1 playing in the PATIENT-2 league .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Verona, Italy is the home to A.C. Chievo Verona, played in Serie A.
+TEMPLATE: PATIENT-1 is the home to AGENT-1 , played in PATIENT-2
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id21 2 SportsTeam
+
+TRIPLES
+A.C._Cesena | manager | Massimo_Drago
+Massimo_Drago | club | S.S.D._Potenza_Calcio
+
+
+ENTITY MAP
+BRIDGE-1 | Massimo_Drago
+AGENT-1 | A.C._Cesena
+PATIENT-1 | S.S.D._Potenza_Calcio
+
+
+LEX
+Id1
+TEXT: Massimo Drago, played for the club SSD Potenza Calcio, and manages A.C. Cesena.
+TEMPLATE: BRIDGE-1 , played for PATIENT-1 , and manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Massimo Drago, played for S.S.D. Potenza Calcio, and has been the manager of A C Cesena.
+TEMPLATE: BRIDGE-1 , played for PATIENT-1 , and has been the manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Massimo Drago has been the manager of A C Cesena and previously played for the club SSD Potenza Calcio.
+TEMPLATE: BRIDGE-1 has been the manager of AGENT-1 and previously played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id20 2 SportsTeam
+
+TRIPLES
+A.C._Cesena | manager | Massimo_Drago
+Massimo_Drago | club | Delfino_Pescara_1936
+
+
+ENTITY MAP
+BRIDGE-1 | Massimo_Drago
+AGENT-1 | A.C._Cesena
+PATIENT-1 | Delfino_Pescara_1936
+
+
+LEX
+Id1
+TEXT: Massimo Drago has been the manager of A C Cesena and is attached to the club Delfino Pescara 1936.
+TEMPLATE: BRIDGE-1 has been the manager of AGENT-1 and is attached to PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Massimo Drago is connected to Delfino Pescara 1936 and manages A.C. Cesena.
+TEMPLATE: BRIDGE-1 is connected to PATIENT-1 and manages AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Massimo Drago manages A.C. Cesena and is attached to the club Delfino Pescara 1936.
+TEMPLATE: BRIDGE-1 manages AGENT-1 and is attached to PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id19 2 SportsTeam
+
+TRIPLES
+A.C._Cesena | manager | Massimo_Drago
+Massimo_Drago | club | A.S.D._S.S._Nola_1925
+
+
+ENTITY MAP
+BRIDGE-1 | Massimo_Drago
+AGENT-1 | A.C._Cesena
+PATIENT-1 | A.S.D._S.S._Nola_1925
+
+
+LEX
+Id1
+TEXT: Massimo Drago has been the manager of A C Cesena, he played for A.S.D. S.S. Nola 1925.
+TEMPLATE: BRIDGE-1 has been the manager of AGENT-1 , BRIDGE-1 played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Massimo Drago, who played for A.S.D. S.S. Nola 1925 has been the manager of AC Cesena.
+TEMPLATE: BRIDGE-1 , who played for PATIENT-1 has been the manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Massimo Drago manages A.C. Cesena and played for A.S.D. S.S. Nola 1925.
+TEMPLATE: BRIDGE-1 manages AGENT-1 and played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id18 2 SportsTeam
+
+TRIPLES
+A.C._Cesena | manager | Massimo_Drago
+Massimo_Drago | club | A.S.D._Licata_1931
+
+
+ENTITY MAP
+BRIDGE-1 | Massimo_Drago
+AGENT-1 | A.C._Cesena
+PATIENT-1 | A.S.D._Licata_1931
+
+
+LEX
+Id1
+TEXT: Massimo Drago has been the manager of A C Cesena and plays for A.S.D. Licata 1931.
+TEMPLATE: BRIDGE-1 has been the manager of AGENT-1 and plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Massimo Drago was at the club ASD Licita 1931 and has been manager of A C Cesena.
+TEMPLATE: BRIDGE-1 was at PATIENT-1 and has been manager of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Massimo Drago manages A.C. Cesena and plays for A.S.D. Licata 1931.
+TEMPLATE: BRIDGE-1 manages AGENT-1 and plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id17 2 SportsTeam
+
+TRIPLES
+A.C._Cesena | league | Serie_B
+A.C._Cesena | ground | Stadio_Dino_Manuzzi
+
+
+ENTITY MAP
+AGENT-1 | A.C._Cesena
+PATIENT-1 | Serie_B
+PATIENT-2 | Stadio_Dino_Manuzzi
+
+
+LEX
+Id1
+TEXT: A.C. Cesana's ground is the Stadio Dino Manuzzi and they play in Serie B.
+TEMPLATE: AGENT-1 ground is PATIENT-2 and they play in PATIENT-1
+CORRECT: AGENT-1 ground is PATIENT-2 and AGENT-1 play in PATIENT-1
+COMMENT: coref
+-
+Id2
+TEXT: AC Cesena, who are in the Serie B league, have their grounds at the Stadio Dino Manuzzi.
+TEMPLATE: AGENT-1 , who are in the PATIENT-1 league , have their grounds at PATIENT-2 .
+CORRECT: AGENT-1 , who are in the PATIENT-1 league , have AGENT-1 grounds at PATIENT-2 .
+COMMENT: coref
+-
+Id3
+TEXT: A.C. Cesena's ground is Stadio Dino Manuzzi, he played in Serie B.
+TEMPLATE: AGENT-1 's ground is PATIENT-2 , AGENT-1 played in PATIENT-1
+CORRECT: AGENT-1 ground is PATIENT-2 , AGENT-1 played in PATIENT-1
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id16 2 SportsTeam
+
+TRIPLES
+A.C._Cesena | ground | Stadio_Dino_Manuzzi
+A.C._Cesena | numberOfMembers | 23900
+
+
+ENTITY MAP
+AGENT-1 | A.C._Cesena
+PATIENT-1 | Stadio_Dino_Manuzzi
+PATIENT-2 | 23900
+
+
+LEX
+Id1
+TEXT: A.C. Cesena's ground is Stadio Dino Manuzzi and they have 23900 members.
+TEMPLATE: AGENT-1 's ground is PATIENT-1 and they have PATIENT-2 members .
+CORRECT: AGENT-1 ground is PATIENT-1 and AGENT-1 have PATIENT-2 members .
+COMMENT: coref
+-
+Id2
+TEXT: A.C. Cesena has 23900 members and its ground is the Stadio Dino Manuzzi.
+TEMPLATE: AGENT-1 has PATIENT-2 members and PATIENT-2 ground is PATIENT-1 .
+CORRECT: AGENT-1 has PATIENT-2 members and AGENT-1 ground is PATIENT-1 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id15 2 SportsTeam
+
+TRIPLES
+A.C._Cesena | ground | Italy
+A.C._Cesena | numberOfMembers | 23900
+
+
+ENTITY MAP
+AGENT-1 | A.C._Cesena
+PATIENT-1 | Italy
+PATIENT-2 | 23900
+
+
+LEX
+Id1
+TEXT: A.C. Cesena is in Italy and has 23900 members.
+TEMPLATE: AGENT-1 is in PATIENT-1 and has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.C. Cesena has 23900 members, and its ground is located in Italy.
+TEMPLATE: AGENT-1 has PATIENT-2 members , and PATIENT-2 ground is located in PATIENT-1 .
+CORRECT: AGENT-1 has PATIENT-2 members , and AGENT-1 ground is located in PATIENT-1 .
+COMMENT: coref
+-
+Id3
+TEXT: Founded in Italy, A.C. Cesena has 23900 members.
+TEMPLATE: Founded in PATIENT-1 , AGENT-1 has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id14 2 SportsTeam
+
+TRIPLES
+A.C._Cesena | ground | Italy
+A.C._Cesena | league | Serie_B
+
+
+ENTITY MAP
+AGENT-1 | A.C._Cesena
+PATIENT-1 | Italy
+PATIENT-2 | Serie_B
+
+
+LEX
+Id1
+TEXT: A.C. Cesena, whose ground is located in Italy, are in the Serie B league.
+TEMPLATE: AGENT-1 , whose ground is located in PATIENT-1 , are in the PATIENT-2 league .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A.C. Cesena's ground is located in Italy and they are in the Serie B league.
+TEMPLATE: AGENT-1 's ground is located in PATIENT-1 and they are in the PATIENT-2 league .
+CORRECT: AGENT-1 ground is located in PATIENT-1 and AGENT-1 are in the PATIENT-2 league .
+COMMENT: coref
+-
+Id3
+TEXT: A. C. Cesana, whose ground is located in Italy, plays in Serie B.
+TEMPLATE: AGENT-1 , whose ground is located in PATIENT-1 , plays in PATIENT-2
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id13 2 SportsTeam
+
+TRIPLES
+A.C._Cesena | ground | Cesena
+A.C._Cesena | numberOfMembers | 23900
+
+
+ENTITY MAP
+AGENT-1 | A.C._Cesena
+PATIENT-1 | Cesena
+PATIENT-2 | 23900
+
+
+LEX
+Id1
+TEXT: A.C. Cesena has 23900 members and their ground is in Cesena.
+TEMPLATE: AGENT-1 has PATIENT-2 members and PATIENT-2 ground is in PATIENT-1 .
+CORRECT: AGENT-1 has PATIENT-2 members and AGENT-1 ground is in PATIENT-1 .
+COMMENT: coref
+-
+Id2
+TEXT: AC Cesena, whose ground is in Cesena, has 23900 members.
+TEMPLATE: PATIENT-1 , whose ground is in PATIENT-1 , has PATIENT-2 members .
+CORRECT: AGENT-1 , whose ground is in PATIENT-1 , has PATIENT-2 members .
+COMMENT:
+-
+Id3
+TEXT: A.C. Cesena has 23900 members and the ground is in Cesena.
+TEMPLATE: AGENT-1 has PATIENT-2 members and the ground is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id12 2 SportsTeam
+
+TRIPLES
+A.C._Cesena | ground | Cesena
+A.C._Cesena | league | Serie_B
+
+
+ENTITY MAP
+AGENT-1 | A.C._Cesena
+PATIENT-1 | Cesena
+PATIENT-2 | Serie_B
+
+
+LEX
+Id1
+TEXT: A>C Cesena ground is in Cesena, the team is in the Serie B league.
+TEMPLATE: A > C PATIENT-1 ground is in PATIENT-1 , AGENT-1 is in the PATIENT-2 league .
+CORRECT: AGENT-1 ground is in PATIENT-1 , AGENT-1 is in the PATIENT-2 league .
+COMMENT:
+-
+Id2
+TEXT: A.C. Cesena, in the Serie B league, ground is in Cesena.
+TEMPLATE: AGENT-1 , in the PATIENT-2 league , ground is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: AC Cesana play in Serie B and their ground is in Cesena.
+TEMPLATE: AC AGENT-1 play in PATIENT-2 and their ground is in PATIENT-1 .
+CORRECT: AGENT-1 play in PATIENT-2 and AGENT-1 ground is in PATIENT-1 .
+COMMENT: mod - coref
+-
+
+**************************************************
+
+Entry: Id11 2 SportsTeam
+
+TRIPLES
+1._FC_Magdeburg | season | 2014
+1._FC_Magdeburg | numberOfMembers | 27250
+
+
+ENTITY MAP
+AGENT-1 | 1._FC_Magdeburg
+PATIENT-1 | 2014
+PATIENT-2 | 27250
+
+
+LEX
+Id1
+TEXT: 1 FC Magdeburg played in the 2014 season and has 27250 members.
+TEMPLATE: AGENT-1 played in the PATIENT-1 season and has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 1 FC Magdeburg, played in the 2014 season and has 27250 members.
+TEMPLATE: AGENT-1 , played in the PATIENT-1 season and has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: 1 FC Magdeburg played in the 2014 season, the team has 27250 members.
+TEMPLATE: 1 AGENT-1 played in the PATIENT-1 season , the team has PATIENT-2 members .
+CORRECT: AGENT-1 played in the PATIENT-1 season , AGENT-1 has PATIENT-2 members .
+COMMENT: mod - coref
+-
+
+**************************************************
+
+Entry: Id10 2 SportsTeam
+
+TRIPLES
+1._FC_Magdeburg | manager | Jens_Härtel
+Jens_Härtel | club | SV_Babelsberg_03
+
+
+ENTITY MAP
+BRIDGE-1 | Jens_Härtel
+AGENT-1 | 1._FC_Magdeburg
+PATIENT-1 | SV_Babelsberg_03
+
+
+LEX
+Id1
+TEXT: Jens Härtel has been the manager of 1 FC Magdeburg and is part of the SV Babelsberg 03 club.
+TEMPLATE: BRIDGE-1 has been the manager of AGENT-1 and is part of the PATIENT-1 club .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The manager of FC Magdeburg is Jens Härtel who is part of the SV Babelsberg 03 club.
+TEMPLATE: The manager of AGENT-1 is BRIDGE-1 who is part of the PATIENT-1 club .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Jens Härtel has been the manager of 1 FC Magdeburg, but now plays for SV Babelsberg 03.
+TEMPLATE: BRIDGE-1 has been the manager of AGENT-1 , but now plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id9 2 SportsTeam
+
+TRIPLES
+1._FC_Magdeburg | manager | Jens_Härtel
+Jens_Härtel | club | FC_Sachsen_Leipzig
+
+
+ENTITY MAP
+BRIDGE-1 | Jens_Härtel
+AGENT-1 | 1._FC_Magdeburg
+PATIENT-1 | FC_Sachsen_Leipzig
+
+
+LEX
+Id1
+TEXT: The manager of FC Magdeburg is Jens Härtel, who has represented the club FC Sachsen Leipzig.
+TEMPLATE: The manager of AGENT-1 is BRIDGE-1 , who has represented PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Jens Härtel has managed the 1 FC Magdeburg. He has represented the club FC Sachsen Leipzig.
+TEMPLATE: BRIDGE-1 has managed AGENT-1 . BRIDGE-1 has represented PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The manager of FC Magdeburg is Jens Härtel who played for FC Sachsen Leipzig.
+TEMPLATE: The manager of AGENT-1 is BRIDGE-1 who played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id8 2 SportsTeam
+
+TRIPLES
+1._FC_Magdeburg | manager | Jens_Härtel
+Jens_Härtel | club | 1._FC_Union_Berlin
+
+
+ENTITY MAP
+BRIDGE-1 | Jens_Härtel
+AGENT-1 | 1._FC_Magdeburg
+PATIENT-1 | 1._FC_Union_Berlin
+
+
+LEX
+Id1
+TEXT: Jens Härtel, is part of the club 1. FC Union Berlin and has been the manager of 1 FC Magdeburg.
+TEMPLATE: BRIDGE-1 , is part of PATIENT-1 and has been the manager of 1 AGENT-1 .
+CORRECT: BRIDGE-1 , is part of PATIENT-1 and has been the manager of AGENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Jens Härtel, manager of FC Magdeburg, is also part of the club 1. FC Union Berlin.
+TEMPLATE: BRIDGE-1 , manager of AGENT-1 , is also part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Jens Härtel has been the manager of 1 FC Magdeburg and is part of the club 1. FC Union Berlin.
+TEMPLATE: BRIDGE-1 has been the manager of AGENT-1 and is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id7 2 SportsTeam
+
+TRIPLES
+1._FC_Magdeburg | manager | Jens_Härtel
+Jens_Härtel | club | 1._FC_Lokomotive_Leipzig
+
+
+ENTITY MAP
+BRIDGE-1 | Jens_Härtel
+AGENT-1 | 1._FC_Magdeburg
+PATIENT-1 | 1._FC_Lokomotive_Leipzig
+
+
+LEX
+Id1
+TEXT: The manager of FC Magdeburg is Jens Härtel who played for 1. FC Lokomotive Leipzig.
+TEMPLATE: The manager of AGENT-1 is BRIDGE-1 who played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The first club Jens Härtel played for was FC Lokomotive Leipzig and he is now manager of FC Magdeburg.
+TEMPLATE: first BRIDGE-1 played for was PATIENT-1 and AGENT-1 is now manager of AGENT-1 .
+CORRECT: The first club BRIDGE-1 played for was PATIENT-1 and BRIDGE-1 is now manager of AGENT-1 .
+COMMENT: mod - coref
+-
+Id3
+TEXT: Jens Härtel has been the manager of 1 FC Magdeburg; the first club he played for was FC Lokomotive Leipzig.
+TEMPLATE: BRIDGE-1 has been the manager of AGENT-1 ; first BRIDGE-1 played for was PATIENT-1 .
+CORRECT: BRIDGE-1 has been the manager of AGENT-1 ; the first club BRIDGE-1 played for was PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id6 2 SportsTeam
+
+TRIPLES
+1._FC_Magdeburg | league | 3._Liga
+1._FC_Magdeburg | numberOfMembers | 27250
+
+
+ENTITY MAP
+AGENT-1 | 1._FC_Magdeburg
+PATIENT-1 | 3._Liga
+PATIENT-2 | 27250
+
+
+LEX
+Id1
+TEXT: 3 Liga league team 1FC Magdeburg has 27250 members.
+TEMPLATE: AGENT-1 Liga league team 1FC Magdeburg has PATIENT-2 members .
+CORRECT: PATIENT-1 league team AGENT-1 has PATIENT-2 members .
+COMMENT:
+-
+Id2
+TEXT: 1 FC Magdeburg is in the 3 Liga league and has 27250 members.
+TEMPLATE: AGENT-PATIENT-1 is in the 3 Liga league and has PATIENT-2 members .
+CORRECT: AGENT-1 is in the PATIENT-1 league and has PATIENT-2 members .
+COMMENT:
+-
+Id3
+TEXT: 1FC Magdeburg is in the 3 Liga league and has 27250 members.
+TEMPLATE: AGENT-1 is in the 3 Liga league and has PATIENT-2 members .
+CORRECT: AGENT-1 is in the PATIENT-1 league and has PATIENT-2 members .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id5 2 SportsTeam
+
+TRIPLES
+1._FC_Köln | season | 2014
+1._FC_Köln | numberOfMembers | 50000
+
+
+ENTITY MAP
+AGENT-1 | 1._FC_Köln
+PATIENT-1 | 2014
+PATIENT-2 | 50000
+
+
+LEX
+Id1
+TEXT: 1. FC Köln has 50000 members and played in the 2014 season.
+TEMPLATE: AGENT-1 has PATIENT-2 members and played in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 2014 saw 1. FC Koln participating, and they have 50000 members.
+TEMPLATE: PATIENT-1 saw 1 . AGENT-1 participating , and they have PATIENT-2 members .
+CORRECT: PATIENT-1 saw AGENT-1 participating , and AGENT-1 have PATIENT-2 members .
+COMMENT: mod - coref
+-
+Id3
+TEXT: 2014 saw 1. FC Koln, with 50000 members, participating.
+TEMPLATE: PATIENT-1 saw 1 . AGENT-1 , with PATIENT-2 members , participating .
+CORRECT: PATIENT-1 saw AGENT-1 , with PATIENT-2 members , participating .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id4 2 SportsTeam
+
+TRIPLES
+1._FC_Köln | numberOfMembers | 50000
+1._FC_Köln | season | 2014–15_Bundesliga
+
+
+ENTITY MAP
+AGENT-1 | 1._FC_Köln
+PATIENT-1 | 50000
+PATIENT-2 | 2014–15_Bundesliga
+
+
+LEX
+Id1
+TEXT: FC Köln played the 2014-15 season in the Bundesliga, the team has 50000 members.
+TEMPLATE: AGENT-1 played the 2014-15 season in PATIENT-2 , the team has PATIENT-1 members .
+CORRECT: AGENT-1 played the PATIENT-2 season , AGENT-1 has PATIENT-1 members .
+COMMENT: mod - coref
+-
+Id2
+TEXT: 1. FC Köln has 50000 members and played the 2014-15 season in the Bundesliga.
+TEMPLATE: AGENT-1 has PATIENT-1 members and played the 2014-15 season in PATIENT-2 .
+CORRECT: AGENT-1 has PATIENT-1 members and played the PATIENT-2 season .
+COMMENT:
+-
+Id3
+TEXT: 1. FC Köln has 50000 members and were in the 2014–15 Bundesliga season.
+TEMPLATE: AGENT-1 has PATIENT-1 members and were in the 2014 -- PATIENT-2 Bundesliga season .
+CORRECT: AGENT-1 has PATIENT-1 members and were in the PATIENT-2 season .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id3 2 SportsTeam
+
+TRIPLES
+1._FC_Köln | manager | Peter_Stöger
+Peter_Stöger | club | LASK_Linz
+
+
+ENTITY MAP
+BRIDGE-1 | Peter_Stöger
+AGENT-1 | 1._FC_Köln
+PATIENT-1 | LASK_Linz
+
+
+LEX
+Id1
+TEXT: Peter Stöger is manager of 1. FC Köln and plays for LASK Linz.
+TEMPLATE: BRIDGE-1 is manager of AGENT-1 and plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The manager of 1. FC Koln is Peter Stoger, who plays for LASK Linz.
+TEMPLATE: The manager of 1 . AGENT-1 is BRIDGE-1 , who plays for PATIENT-1 .
+CORRECT: The manager of AGENT-1 is BRIDGE-1 , who plays for PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: Peter Stoger is the manager of FC Kolin and played for the club LASK Linz.
+TEMPLATE: BRIDGE-1 is the manager of AGENT-1 and played for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id2 2 SportsTeam
+
+TRIPLES
+1._FC_Köln | manager | Peter_Stöger
+Peter_Stöger | club | FK_Austria_Wien
+
+
+ENTITY MAP
+BRIDGE-1 | Peter_Stöger
+AGENT-1 | 1._FC_Köln
+PATIENT-1 | FK_Austria_Wien
+
+
+LEX
+Id1
+TEXT: Peter Stöger is at the FK Austria Wien club and manages 1 FC Koln.
+TEMPLATE: BRIDGE-1 is at the PATIENT-1 club and manages AGENT-1 Koln .
+CORRECT: BRIDGE-1 is at the PATIENT-1 club and manages AGENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: The manager of 1. FC Koln is Peter Stoger who plays for FK Austria Wien.
+TEMPLATE: The manager of 1 . AGENT-1 is BRIDGE-1 who plays for PATIENT-1 .
+CORRECT: The manager of AGENT-1 is BRIDGE-1 who plays for PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: Peter Stoger is the manager of FC Kolin as well as being a member of the FK Austria Wien soccer club.
+TEMPLATE: BRIDGE-1 is the manager of AGENT-1 as well as being a member of the PATIENT-1 soccer club .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id1 2 SportsTeam
+
+TRIPLES
+1._FC_Köln | manager | Peter_Stöger
+Peter_Stöger | club | Austria_national_football_team
+
+
+ENTITY MAP
+BRIDGE-1 | Peter_Stöger
+AGENT-1 | 1._FC_Köln
+PATIENT-1 | Austria_national_football_team
+
+
+LEX
+Id1
+TEXT: Pete Stoger is manager of 1. FC Koln and plays for the Austria national football team.
+TEMPLATE: BRIDGE-1 is manager of 1 . AGENT-1 and plays for PATIENT-1 .
+CORRECT: BRIDGE-1 is manager of AGENT-1 and plays for PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Peter Stoger is the manager of FC Kolin and plays for the Austria national football team.
+TEMPLATE: BRIDGE-1 is the manager of AGENT-1 and plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Peter Stöger is manager of 1. FC Köln and plays for the Austria National Football team.
+TEMPLATE: BRIDGE-1 is manager of AGENT-1 and plays for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id141 2 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | league | Campeonato_Brasileiro_Série_C
+Campeonato_Brasileiro_Série_C | champions | Vila_Nova_Futebol_Clube
+
+
+ENTITY MAP
+BRIDGE-1 | Campeonato_Brasileiro_Série_C
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | Vila_Nova_Futebol_Clube
+
+
+LEX
+Id1
+TEXT: Vila Nova Futebol Clube have been champions of Campeonato Brasileiro Série C and Agremiação Sportiva Arapiraquense also play in this league.
+TEMPLATE: PATIENT-1 have been champions of BRIDGE-1 and AGENT-1 also play in this league .
+CORRECT: PATIENT-1 have been champions of BRIDGE-1 and AGENT-1 also play in BRIDGE-1 .
+COMMENT: coref
+-
+Id2
+TEXT: The champions of Campeonato Brasileiro Serie C are Vila Nova Futebol Clube. The Agremiacao Sportiva Arapiraquense also play in this league.
+TEMPLATE: The champions of BRIDGE-1 are PATIENT-1 . AGENT-1 also play in this league .
+CORRECT: The champions of BRIDGE-1 are PATIENT-1 . AGENT-1 also play in BRIDGE-1 .
+COMMENT: coref
+-
+Id3
+TEXT: Agremiação Sportiva Arapiraquense play in the Campeonato Brasileiro Série C league, The Vila Nova Futebol Clube were champions at the league.
+TEMPLATE: AGENT-1 play in the BRIDGE-1 league , PATIENT-1 were champions at the league .
+CORRECT: AGENT-1 play in the BRIDGE-1 league , PATIENT-1 were champions at BRIDGE-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id140 2 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | ground | Estádio_Municipal_Coaracy_da_Mata_Fonseca
+Estádio_Municipal_Coaracy_da_Mata_Fonseca | location | Arapiraca
+
+
+ENTITY MAP
+BRIDGE-1 | Estádio_Municipal_Coaracy_da_Mata_Fonseca
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | Arapiraca
+
+
+LEX
+Id1
+TEXT: Agremiacao Sportiva Arapiraquense's ground is the Estadio Minicipal Coaracy da Mata Fonseca located in Arapiraca.
+TEMPLATE: AGENT-1 ground is BRIDGE-1 located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Estadio Municipal Coaracy de Mata Fonseca is the name of the ground of Agremiacao Sportive Arapiraquense and is located in Arapiraca.
+TEMPLATE: BRIDGE-1 is the name of the ground of AGENT-1 and is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Agremiacao Sportiva Arapiraquense's ground is the Estadio Minicipal Coaracy da Mata Fonseca, which is in Arapiraca.
+TEMPLATE: AGENT-1 ground is BRIDGE-1 , which is in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id139 2 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | ground | Estádio_Municipal_Coaracy_da_Mata_Fonseca
+Estádio_Municipal_Coaracy_da_Mata_Fonseca | location | Alagoas
+
+
+ENTITY MAP
+BRIDGE-1 | Estádio_Municipal_Coaracy_da_Mata_Fonseca
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | Alagoas
+
+
+LEX
+Id1
+TEXT: Agremiacao Sportiva Arapiraquense's ground is the Estadio Minicipal Coaracy da Mata Fonseca in Alagoas.
+TEMPLATE: AGENT-1 ground is BRIDGE-1 in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Agremiacao Sportiva Arapiraquense's ground is Estadio Minicipal Coaracy da Mata Fonseca. It is located in Alagoas.
+TEMPLATE: AGENT-1 ground is BRIDGE-1 . AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Estadio Municipal Coaracy da Mata Fonseca is the name of the ground of Agremiacao Sportiva Arapiraquense and is located in Alagoas.
+TEMPLATE: BRIDGE-1 is the name of the ground of AGENT-1 and is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id137 2 SportsTeam
+
+TRIPLES
+AZ_Alkmaar | owner | Max_Huiberts
+AZ_Alkmaar | numberOfMembers | 17023
+
+
+ENTITY MAP
+AGENT-1 | AZ_Alkmaar
+PATIENT-1 | Max_Huiberts
+PATIENT-2 | 17023
+
+
+LEX
+Id1
+TEXT: Max Huiberts is the owner of AZ Alkmaar, which has 17023 members.
+TEMPLATE: PATIENT-1 is the owner of AGENT-1 , which has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Max Huiberts owns AZ Alkmaar which has 17023 members.
+TEMPLATE: PATIENT-1 owns AGENT-1 which has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Owned by Max Huiberts, club AZ Alkmaar is the club of 17023 members.
+TEMPLATE: Owned by PATIENT-1 , AGENT-1 is the club of PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id113 2 SportsTeam
+
+TRIPLES
+AFC_Ajax | numberOfMembers | 53502
+AFC_Ajax | fullname | "Amsterdamsche Football Club Ajax"
+
+
+ENTITY MAP
+AGENT-1 | AFC_Ajax
+PATIENT-1 | 53502
+PATIENT-2 | "Amsterdamsche Football Club Ajax"
+
+
+LEX
+Id1
+TEXT: AFC stands for AFC Ajax is Amsterdamsche Football Club Ajax. Its current membership is 53502.
+TEMPLATE: AFC stands for AGENT-1 is PATIENT-2 . AGENT-1 current membership is PATIENT-1 .
+CORRECT: AGENT-1 is PATIENT-2 . AGENT-1 current membership is PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: AFC Ajax, full name, "Amsterdamsche Football Club Ajax" has 53502 members.
+TEMPLATE: AGENT-1 , full name , `` PATIENT-2 '' has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id142 2 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | league | Campeonato_Brasileiro_Série_C
+Campeonato_Brasileiro_Série_C | country | Brazil
+
+
+ENTITY MAP
+BRIDGE-1 | Campeonato_Brasileiro_Série_C
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | Brazil
+
+
+LEX
+Id1
+TEXT: Agremiação Sportiva Arapiraquense play in the Campeonato Brasileiro Série C league which is based in Brazil.
+TEMPLATE: AGENT-1 play in the BRIDGE-1 league which is based in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Agremiação Sportiva Arapiraquense play in the Campeonato Brasileiro Série C league, which is based in Brazil.
+TEMPLATE: AGENT-1 play in the BRIDGE-1 league , which is based in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Agremiação Sportiva Arapiraquense play in the Campeonato Brasileiro Série C league which is from Brazil.
+TEMPLATE: AGENT-1 play in the BRIDGE-1 league which is from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id143 2 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | nickname | "Alvinegro"
+Agremiação_Sportiva_Arapiraquense | numberOfMembers | 17000
+
+
+ENTITY MAP
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | "Alvinegro"
+PATIENT-2 | 17000
+
+
+LEX
+Id1
+TEXT: Agremiacao Sportiva Arapiraquense has 17000 members and are nicknamed Alvinegro.
+TEMPLATE: AGENT-1 has PATIENT-2 members and are nicknamed PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Agremiacao Sportiva Arapiraquense, nicknamed Alvinegro, has 17000 members.
+TEMPLATE: AGENT-1 , nicknamed PATIENT-1 , has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Alvinegro is the nickname of Agremiação Sportiva Arapiraquense which has 17000 members.
+TEMPLATE: PATIENT-1 is the nickname of AGENT-1 which has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id144 2 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | nickname | "Asa Gigante "
+Agremiação_Sportiva_Arapiraquense | numberOfMembers | 17000
+
+
+ENTITY MAP
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | "Asa Gigante "
+PATIENT-2 | 17000
+
+
+LEX
+Id1
+TEXT: Agremiacao Sportiva Arapiraquense which has 17000 members and the nickname Asa Gigante.
+TEMPLATE: AGENT-1 which has PATIENT-2 members and PATIENT-1 .
+CORRECT: AGENT-1 which has PATIENT-2 members and the nickname PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Agremiação Sportiva Arapiraquense's nickname is Asa Gigante, and has 17000 members.
+TEMPLATE: AGENT-1 's nickname is PATIENT-1 , and has PATIENT-2 members .
+CORRECT: AGENT-1 nickname is PATIENT-1 , and has PATIENT-2 members .
+COMMENT:
+-
+Id3
+TEXT: Agremiação Sportiva Arapiraquense has a nickname of Asa Gigante and contains 17000 members.
+TEMPLATE: AGENT-1 has a nickname of PATIENT-1 and contains PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id145 2 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | numberOfMembers | 17000
+Agremiação_Sportiva_Arapiraquense | manager | Vica
+
+
+ENTITY MAP
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | 17000
+PATIENT-2 | Vica
+
+
+LEX
+Id1
+TEXT: Agremiação Sportiva Arapiraquense, managed by Vica, has 17000 members.
+TEMPLATE: AGENT-1 , managed by PATIENT-2 , has PATIENT-1 members .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Agremiação Sportiva Arapiraquense club has 17000 members and are managed by Vica.
+TEMPLATE: AGENT-1 club has PATIENT-1 members and are managed by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Agremiacao Sportiva Arapiraquense, who are managed by Vica, has 17,000 members.
+TEMPLATE: AGENT-1 , who are managed by PATIENT-2 , has PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id146 2 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | season | 2015
+Agremiação_Sportiva_Arapiraquense | numberOfMembers | 17000
+
+
+ENTITY MAP
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | 2015
+PATIENT-2 | 17000
+
+
+LEX
+Id1
+TEXT: Agremiação Sportiva Arapiraquense played in the 2015 season and has 17000 members.
+TEMPLATE: AGENT-1 played in the PATIENT-1 season and has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Agremiação Sportiva Arapiraquense has 17000 members and play in 2015.
+TEMPLATE: AGENT-1 has PATIENT-2 members and play in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Agremiação Sportiva Arapiraquense which has 17000 members played in the 2015 season.
+TEMPLATE: AGENT-1 which has PATIENT-2 members played in the PATIENT-1 season .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id147 2 SportsTeam
+
+TRIPLES
+Agremiação_Sportiva_Arapiraquense | season | 2015_Campeonato_Brasileiro_Série_C
+Agremiação_Sportiva_Arapiraquense | numberOfMembers | 17000
+
+
+ENTITY MAP
+AGENT-1 | Agremiação_Sportiva_Arapiraquense
+PATIENT-1 | 2015_Campeonato_Brasileiro_Série_C
+PATIENT-2 | 17000
+
+
+LEX
+Id1
+TEXT: Agremiacao Sportiva Arapiraquense were in Campeonato Brasileiro Serie C in 2015, and they have 17000 members.
+TEMPLATE: AGENT-1 were in PATIENT-1 in 2015 , and they have PATIENT-2 members .
+CORRECT: AGENT-1 were in PATIENT-1 , and AGENT-1 have PATIENT-2 members .
+COMMENT: mod - coref
+-
+Id2
+TEXT: Agremiacao Sportiva Arapiraquense has 17000 members and they were in the Campeonato Brasileiro Serie C in 2015.
+TEMPLATE: AGENT-1 has PATIENT-2 members and PATIENT-2 were in PATIENT-1 in 2015 .
+CORRECT: AGENT-1 has PATIENT-2 members and AGENT-1 were in PATIENT-1 .
+COMMENT: coref - mod
+-
+Id3
+TEXT: Agremiacao Sportiva Arapiraquense have 17000 members and were in Campeonato Brasileiro Serie C in 2015.
+TEMPLATE: AGENT-1 have PATIENT-2 members and were in PATIENT-1 in 2015 .
+CORRECT: AGENT-1 have PATIENT-2 members and were in PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id148 2 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | chairman | Dave_Laughlin
+Akron_Summit_Assault | numberOfMembers | 3000
+
+
+ENTITY MAP
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | Dave_Laughlin
+PATIENT-2 | 3000
+
+
+LEX
+Id1
+TEXT: Akron Summit Assault has 3000 members and their chairman is Dave Laughlin.
+TEMPLATE: AGENT-1 has PATIENT-2 members and PATIENT-2 chairman is PATIENT-1 .
+CORRECT: AGENT-1 has PATIENT-2 members and AGENT-1 chairman is PATIENT-1 .
+COMMENT: coref
+-
+Id2
+TEXT: Akron Summit Assault has got 3000 members and the chairman is Dave Laughlin.
+TEMPLATE: AGENT-1 has got PATIENT-2 members and the chairman is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Akrons Summit Assault has 3000 members and the chairman is Dave Laughlin.
+TEMPLATE: AGENT-1 has PATIENT-2 members and the chairman is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id149 2 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | ground | St._Vincent–St._Mary_High_School
+St._Vincent–St._Mary_High_School | city | Akron,_Ohio
+
+
+ENTITY MAP
+BRIDGE-1 | St._Vincent–St._Mary_High_School
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | Akron,_Ohio
+
+
+LEX
+Id1
+TEXT: The ground of Akron Summit Assault is in St Vincent St Mary High School of Akron, Ohio.
+TEMPLATE: The ground of AGENT-1 is in BRIDGE-1 of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Akron Summit Assault's ground is St. Vincent-St. Mary High School, which is located in the city of Akron, Ohio.
+TEMPLATE: AGENT-1 's ground is St. Vincent-St . BRIDGE-1 , which is located in the city of PATIENT-1 .
+CORRECT: AGENT-1 ground is BRIDGE-1 , which is located in the city of PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: St. Vincent-St Mary High School in Akron, Ohio is where Akron Summit Assault is located.
+TEMPLATE: BRIDGE-1 in PATIENT-1 is where AGENT-1 is located .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id150 2 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | ground | St._Vincent–St._Mary_High_School
+St._Vincent–St._Mary_High_School | country | United_States
+
+
+ENTITY MAP
+BRIDGE-1 | St._Vincent–St._Mary_High_School
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Akron Summit Assault's ground is St. Vincent-St. Mary High School in the United States.
+TEMPLATE: AGENT-1 's ground is St. Vincent-St . BRIDGE-1 in PATIENT-1 .
+CORRECT: AGENT-1 ground is BRIDGE-1 in PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: St Vincent-St Mary High School is the ground of Akron Summit Assault and is located in United States.
+TEMPLATE: BRIDGE-1 is the ground of AGENT-1 and is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: St. Vincent-St.Mary High School in the United States is the ground of Akron Summit Assault.
+TEMPLATE: St. Vincent-St . BRIDGE-1 in PATIENT-1 is the ground of AGENT-1 .
+CORRECT: BRIDGE-1 in PATIENT-1 is the ground of AGENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id151 2 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | ground | St._Vincent–St._Mary_High_School
+St._Vincent–St._Mary_High_School | state | Ohio
+
+
+ENTITY MAP
+BRIDGE-1 | St._Vincent–St._Mary_High_School
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | Ohio
+
+
+LEX
+Id1
+TEXT: St Vincent-St Mary High School in Ohio is the ground of Akron Summit Assault.
+TEMPLATE: BRIDGE-1 in PATIENT-1 is the ground of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: St Vincent-St Mary High School, located in the state of Ohio, is the ground of Akron Summit Assault.
+TEMPLATE: BRIDGE-1 , located in the state of PATIENT-1 , is the ground of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: St. Vincent–St. Mary High School, in the state of Ohio, is the ground of Akron Summit Assault.
+TEMPLATE: St. Vincent -- St. Mary High School , in the state of PATIENT-1 , is BRIDGE-1 of AGENT-1 .
+CORRECT: BRIDGE-1 , in the state of PATIENT-1 , is the ground of AGENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id152 2 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | league | Premier_Development_League
+Premier_Development_League | champions | K-W_United_FC
+
+
+ENTITY MAP
+BRIDGE-1 | Premier_Development_League
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | K-W_United_FC
+
+
+LEX
+Id1
+TEXT: The Premier Development League has K-W United F.C., (who have been champions) and Akron Summit among its competing teams.
+TEMPLATE: BRIDGE-1 has PATIENT-1 (who have been champions) and AGENT-1 among BRIDGE-1 competing teams .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Akron Summit Assault play in the Premier Development League, which K-W United FC were once the champions of.
+TEMPLATE: AGENT-1 play in BRIDGE-1 , which PATIENT-1 were once the champions of .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: In the Premier Development League, Akron Summit Assault play and the champions are K-W United FC.
+TEMPLATE: In BRIDGE-1 , AGENT-1 play and the champions are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id153 2 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | manager | Denzil_Antonio
+Akron_Summit_Assault | numberOfMembers | 3000
+
+
+ENTITY MAP
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | Denzil_Antonio
+PATIENT-2 | 3000
+
+
+LEX
+Id1
+TEXT: Denzil Antonio is the manager of Akron Summit Assault which has 3000 members.
+TEMPLATE: PATIENT-1 is the manager of AGENT-1 which has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Denzil Antonio was the manager of Akron Summit Assault, it has 3000 members.
+TEMPLATE: PATIENT-1 was the manager of AGENT-1 , AGENT-1 has PATIENT-2 members .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Akron Summit Assault, which has got 3000 members, was managed by Denzil Antonio.
+TEMPLATE: AGENT-1 , which has got PATIENT-2 members , was managed by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id154 2 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | manager | Denzil_Antonio
+Akron_Summit_Assault | season | 2011_PDL_season
+
+
+ENTITY MAP
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | Denzil_Antonio
+PATIENT-2 | 2011_PDL_season
+
+
+LEX
+Id1
+TEXT: The manager of Akron Summit Assault, who play in the 2011 PDL season, is Denzil Antonio.
+TEMPLATE: The manager of AGENT-1 , who play in PATIENT-2 , is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Akron Summit Assault, (managed by Denzil Antonio), played in the 2011 PDL season.
+TEMPLATE: AGENT-1 , (managed by PATIENT-1) , played in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Denzil Antonio was the manager of Akron Summit Assault and they participated in the 2011 PDL season.
+TEMPLATE: PATIENT-1 was the manager of AGENT-1 and they participated in PATIENT-2 .
+CORRECT: PATIENT-1 was the manager of AGENT-1 and AGENT-1 participated in PATIENT-2 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id155 2 SportsTeam
+
+TRIPLES
+Akron_Summit_Assault | numberOfMembers | 3000
+Akron_Summit_Assault | season | 2011
+
+
+ENTITY MAP
+AGENT-1 | Akron_Summit_Assault
+PATIENT-1 | 3000
+PATIENT-2 | 2011
+
+
+LEX
+Id1
+TEXT: Akron Summit Assault has got 3000 members and are in season 2011.
+TEMPLATE: AGENT-1 has got PATIENT-1 members and are in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Akron Summit Assault has got 3000 members, he played in the 2011 season.
+TEMPLATE: AGENT-1 has got PATIENT-1 members , he played in the PATIENT-2 season .
+CORRECT: AGENT-1 has got PATIENT-1 members , AGENT-1 played in the PATIENT-2 season .
+COMMENT: coref
+-
+Id3
+TEXT: Akron Summit Assault, has 3000 members, and was in the 2011 season.
+TEMPLATE: AGENT-1 , has PATIENT-1 members , and was in PATIENT-2 season .
+CORRECT:
+COMMENT: g
+-
+

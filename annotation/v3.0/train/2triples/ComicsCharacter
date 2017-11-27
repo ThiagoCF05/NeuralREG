@@ -1,0 +1,2586 @@
+
+Entry: Id36 2 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Tim_Brooke-Taylor
+Bananaman | broadcastedBy | BBC
+
+
+ENTITY MAP
+AGENT-1 | Bananaman
+PATIENT-1 | Tim_Brooke-Taylor
+PATIENT-2 | BBC
+
+
+LEX
+Id1
+TEXT: Tim Brooke-Taylor starred in Bananaman, broadcasted by the BBC.
+TEMPLATE: PATIENT-1 starred in AGENT-1 , broadcasted by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Tim Brooke Tayler starred in Bananaman, broadcasted by the BBC.
+TEMPLATE: PATIENT-1 starred in AGENT-1 , broadcasted by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id28 2 ComicsCharacter
+
+TRIPLES
+Bananaman | broadcastedBy | BBC
+Bananaman | starring | Bill_Oddie
+
+
+ENTITY MAP
+AGENT-1 | Bananaman
+PATIENT-1 | BBC
+PATIENT-2 | Bill_Oddie
+
+
+LEX
+Id1
+TEXT: The BBC broadcasted Bananaman which starred Bill Oddie.
+TEMPLATE: PATIENT-1 broadcasted AGENT-1 which starred PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Bill Oddies stars in Bananaman, broadcasted by the BBC.
+TEMPLATE: PATIENT-2 stars in AGENT-1 , broadcasted by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id9 2 ComicsCharacter
+
+TRIPLES
+Arion_(comicsCharacter) | creator | Jan_Duursema
+Jan_Duursema | award | Eisner_Award
+
+
+ENTITY MAP
+BRIDGE-1 | Jan_Duursema
+AGENT-1 | Arion_(comicsCharacter)
+PATIENT-1 | Eisner_Award
+
+
+LEX
+Id1
+TEXT: The comic character, Arion, was created by Jan Duursema, who has won the Eisner Award.
+TEMPLATE: AGENT-1 , Arion , was created by BRIDGE-1 , who has won PATIENT-1 .
+CORRECT: AGENT-1 was created by BRIDGE-1 , who has won PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: The Eisner award winning Jan Duursema created the comic book character Arion.
+TEMPLATE: winning BRIDGE-1 created AGENT-1 PATIENT-1 .
+CORRECT: The PATIENT-1 winning BRIDGE-1 created AGENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id7 2 ComicsCharacter
+
+TRIPLES
+Arion_(comicsCharacter) | creator | Jan_Duursema
+Arion_(comicsCharacter) | alternativeName | "Ahriahn"
+
+
+ENTITY MAP
+AGENT-1 | Arion_(comicsCharacter)
+PATIENT-1 | Jan_Duursema
+PATIENT-2 | "Ahriahn"
+
+
+LEX
+Id1
+TEXT: The comic character Arion, also known as Ahri'ahn, was created by Jan Duursema.
+TEMPLATE: AGENT-1 , also known as PATIENT-2 , was created by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Created by Jan Duursema, the comic character Arion is also known as Ahri'ahn.
+TEMPLATE: Created by PATIENT-1 , AGENT-1 is also known as PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id77 2 ComicsCharacter
+
+TRIPLES
+The_Arrow_(comicsCharacter) | alternativeName | "Rick Parker"
+The_Arrow_(comicsCharacter) | creator | Paul_Gustavson
+
+
+ENTITY MAP
+AGENT-1 | The_Arrow_(comicsCharacter)
+PATIENT-1 | "Rick Parker"
+PATIENT-2 | Paul_Gustavson
+
+
+LEX
+Id1
+TEXT: Rick parker, aka the Arrow was created by Paul Gustavson.
+TEMPLATE: PATIENT-1 , aka AGENT-1 was created by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The character Arrow's alter ego is Rick Parker, created by Paul Gustavson.
+TEMPLATE: AGENT-1 Arrow 's alter ego is PATIENT-1 , created by PATIENT-2 .
+CORRECT: AGENT-1 alter ego is PATIENT-1 , created by PATIENT-2 .
+COMMENT: mod
+-
+Id3
+TEXT: Rick Parker, aka the Arrow, was created by Paul Gustavson.
+TEMPLATE: PATIENT-1 , aka AGENT-1 , was created by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id76 2 ComicsCharacter
+
+TRIPLES
+The_Arrow_(comicsCharacter) | alternativeName | "Ralph Payne"
+The_Arrow_(comicsCharacter) | creator | Paul_Gustavson
+
+
+ENTITY MAP
+AGENT-1 | The_Arrow_(comicsCharacter)
+PATIENT-1 | "Ralph Payne"
+PATIENT-2 | Paul_Gustavson
+
+
+LEX
+Id1
+TEXT: Paul Gustavson is the creator of " The Arrow", otherwise known as Ralph Payne.
+TEMPLATE: PATIENT-2 is the creator of '' AGENT-1 , otherwise known as PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Arrow, also known as Ralph Payne, was created by Paul Gustavson.
+TEMPLATE: AGENT-1 , also known as PATIENT-1 , was created by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Arrow, otherwise known as Ralph Payne, was created by Paul Gustavson.
+TEMPLATE: AGENT-1 , otherwise known as PATIENT-1 , was created by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id74 2 ComicsCharacter
+
+TRIPLES
+Roger_McKenzie_(comic_book_writer) | nationality | United_States
+Ben_Urich | creator | Roger_McKenzie_(comic_book_writer)
+
+
+ENTITY MAP
+BRIDGE-1 | Roger_McKenzie_(comic_book_writer)
+AGENT-1 | Ben_Urich
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: The American Roger McKenzie is a comic book writer who created the character Ben Urich.
+TEMPLATE: The American Roger McKenzie is BRIDGE-1 who created AGENT-1 .
+CORRECT: PATIENT-1 BRIDGE-1 is a comic book writer who created AGENT-1 .
+COMMENT:
+-
+Id2
+TEXT: A United States national, comic book writer, Roger McKenzie, is the creator of Ben Urich.
+TEMPLATE: PATIENT-1 national , BRIDGE-1 , Roger McKenzie , is the creator of AGENT-1 .
+CORRECT: PATIENT-1 national , BRIDGE-1 , is the creator of AGENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: Roger Mckenzie, the american comic book writer is the creator of Ben Urich.
+TEMPLATE: Roger Mckenzie , BRIDGE-1 is PATIENT-1 of AGENT-1 .
+CORRECT: BRIDGE-1 is the creator of AGENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id75 2 ComicsCharacter
+
+TRIPLES
+Sheldon_Moldoff | nationality | Americans
+Black_Pirate | creator | Sheldon_Moldoff
+
+
+ENTITY MAP
+BRIDGE-1 | Sheldon_Moldoff
+AGENT-1 | Black_Pirate
+PATIENT-1 | Americans
+
+
+LEX
+Id1
+TEXT: Sheldon Moldoff is the American creator of Black Pirate.
+TEMPLATE: BRIDGE-1 is PATIENT-1 of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Black Pirate was created by Sheldon Moldoff, who was an American national.
+TEMPLATE: AGENT-1 was created by BRIDGE-1 , who was PATIENT-1 .
+CORRECT: g
+COMMENT:
+-
+Id3
+TEXT: Sheldon Moldoff is an American who created the Black Pirate.
+TEMPLATE: BRIDGE-1 is PATIENT-1 who created AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id72 2 ComicsCharacter
+
+TRIPLES
+Gene_Colan | nationality | Americans
+Ben_Urich | creator | Gene_Colan
+
+
+ENTITY MAP
+BRIDGE-1 | Gene_Colan
+AGENT-1 | Ben_Urich
+PATIENT-1 | Americans
+
+
+LEX
+Id1
+TEXT: Gene Colan is the American national who created the character Ben Urich.
+TEMPLATE: BRIDGE-1 is PATIENT-1 who created AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Ben Urich was created by Gene Colan, an American.
+TEMPLATE: AGENT-1 was created by BRIDGE-1 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The American Gene Nolan created the character Ben Urich.
+TEMPLATE: BRIDGE-1 created AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id71 2 ComicsCharacter
+
+TRIPLES
+Duncan_Rouleau | nationality | Americans
+Baymax | creator | Duncan_Rouleau
+
+
+ENTITY MAP
+BRIDGE-1 | Duncan_Rouleau
+AGENT-1 | Baymax
+PATIENT-1 | Americans
+
+
+LEX
+Id1
+TEXT: Duncan Rouleau is an American national who created Baymax.
+TEMPLATE: BRIDGE-1 is PATIENT-1 who created AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Baymax was created by American, Duncan Rouleau.
+TEMPLATE: AGENT-1 was created by PATIENT-1 , BRIDGE-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id73 2 ComicsCharacter
+
+TRIPLES
+Karl_Kesel | nationality | Americans
+Auron_(comicsCharacter) | creator | Karl_Kesel
+
+
+ENTITY MAP
+BRIDGE-1 | Karl_Kesel
+AGENT-1 | Auron_(comicsCharacter)
+PATIENT-1 | Americans
+
+
+LEX
+Id1
+TEXT: The comic book character Auron was created by Karl Kesel, an American.
+TEMPLATE: The comic book character Auron was created by BRIDGE-1 , AGENT-1 .
+CORRECT: AGENT-1 was created by BRIDGE-1 , PATIENT-1 .
+COMMENT: nationality
+-
+Id2
+TEXT: American, Karl Kesel, is the creator of the comic character, Auron.
+TEMPLATE: PATIENT-1 , BRIDGE-1 , is the creator of AGENT-1 , Auron .
+CORRECT: PATIENT-1 , BRIDGE-1 , is the creator of AGENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: The American Karl Kesel created the comic character Auron.
+TEMPLATE: American BRIDGE-1 created AGENT-1 .
+CORRECT: PATIENT-1 BRIDGE-1 created AGENT-1 .
+COMMENT: nationality
+-
+
+**************************************************
+
+Entry: Id70 2 ComicsCharacter
+
+TRIPLES
+Dane_Whitman_Black_Knight_(comicsCharacter) | creator | Roy_Thomas
+Dane_Whitman_Black_Knight_(comicsCharacter) | alternativeName | "Dane Whitman"
+
+
+ENTITY MAP
+AGENT-1 | Dane_Whitman_Black_Knight_(comicsCharacter)
+PATIENT-1 | Roy_Thomas
+PATIENT-2 | "Dane Whitman"
+
+
+LEX
+Id1
+TEXT: Dane Whitman is the alternative name for the comic character, Dane Whitman Black Knight which was created by Roy Thomas.
+TEMPLATE: PATIENT-2 is the alternative name for AGENT-1 , PATIENT-2 Black Knight which was created by PATIENT-1 .
+CORRECT: PATIENT-2 is the alternative name for AGENT-1 , AGENT-1 which was created by PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: The comic book character Dane Whitman Black Knight is also known as simply Dane Whitman or the alter ego Black Knight, and was created by Roy Thomas.
+TEMPLATE: comic PATIENT-2 AGENT-1 is also known as simply PATIENT-2 or the alter AGENT-1 , and was created by PATIENT-1 .
+CORRECT: AGENT-1 is also known as simply PATIENT-2 , and was created by PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: Dane Whitman Black, also known as Dane Whitman was created by Roy Thomas.
+TEMPLATE: PATIENT-2 Black , also known as PATIENT-2 was created by PATIENT-1 .
+CORRECT: AGENT-1 , also known as PATIENT-2 was created by PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id69 2 ComicsCharacter
+
+TRIPLES
+Dane_Whitman_Black_Knight_(comicsCharacter) | creator | John_Buscema
+John_Buscema | nationality | Americans
+
+
+ENTITY MAP
+BRIDGE-1 | John_Buscema
+AGENT-1 | Dane_Whitman_Black_Knight_(comicsCharacter)
+PATIENT-1 | Americans
+
+
+LEX
+Id1
+TEXT: Dane Whitman, alter ego Black Knight, was created by the American, John Buscema.
+TEMPLATE: AGENT-1 , alter ego Black Knight , was created by PATIENT-1 , BRIDGE-1 .
+CORRECT: AGENT-1 was created by PATIENT-1 , BRIDGE-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Dane Whitman, a.k.a. Black Knight, was created by John Buscema (American) in the comics genre.
+TEMPLATE: AGENT-1 was created by BRIDGE-1 (American) in the comics genre .
+CORRECT: AGENT-1 was created by BRIDGE-1 (PATIENT-1) in the comics genre .
+COMMENT: nationality
+-
+Id3
+TEXT: Dane Whitman, a.k.a. Black Knight, was created by John Buscema (Amercian) and considered to be in the comics genre.
+TEMPLATE: AGENT-1 was created by BRIDGE-1 (PATIENT-1) and considered to be in the comics genre .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id68 2 ComicsCharacter
+
+TRIPLES
+Dane_Whitman_Black_Knight_(comicsCharacter) | creator | John_Buscema
+Dane_Whitman_Black_Knight_(comicsCharacter) | creator | Roy_Thomas
+
+
+ENTITY MAP
+AGENT-1 | Dane_Whitman_Black_Knight_(comicsCharacter)
+PATIENT-1 | John_Buscema
+PATIENT-2 | Roy_Thomas
+
+
+LEX
+Id1
+TEXT: The comic book character Dane Whitman ( otherwise known as the Black Knight ), was created by both Roy Thomas and John Buscema.
+TEMPLATE: The comic book character Dane Whitman (otherwise known as AGENT-1) , was created by both PATIENT-2 and PATIENT-1 .
+CORRECT: AGENT-1 was created by both PATIENT-2 and PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Dane Whitman, from the Black Knight was created by John Buscema and Roy Thomas.
+TEMPLATE: AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Dane Whitman, aka Black Night was created by John Buscema and Roy Thomas.
+TEMPLATE: AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id67 2 ComicsCharacter
+
+TRIPLES
+Dane_Whitman_Black_Knight_(comicsCharacter) | creator | John_Buscema
+Dane_Whitman_Black_Knight_(comicsCharacter) | alternativeName | "Dane Whitman"
+
+
+ENTITY MAP
+AGENT-1 | Dane_Whitman_Black_Knight_(comicsCharacter)
+PATIENT-1 | John_Buscema
+PATIENT-2 | "Dane Whitman"
+
+
+LEX
+Id1
+TEXT: Dane Whitman, aka the Black Knight was created by John Buscema.
+TEMPLATE: PATIENT-2 , AGENT-1 Knight was created by PATIENT-1 .
+CORRECT: PATIENT-2 , aka AGENT-1 was created by PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The Black Knight, ( also known as Dane Whitman ), was created in the comics genre by John Buscema.
+TEMPLATE: AGENT-1 (also known as PATIENT-2) , was created in the comics genre by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Dane Whitman is the alternative name for the comic character, Dane Whitman Black Knight, which was created by John Buscema.
+TEMPLATE: PATIENT-2 is the alternative name for AGENT-1 , PATIENT-2 Black Knight , which was created by PATIENT-1 .
+CORRECT: PATIENT-2 is the alternative name for AGENT-1 , which was created by PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id66 2 ComicsCharacter
+
+TRIPLES
+Bozo_the_Iron_Man | creator | George_Brenner
+Bozo_the_Iron_Man | fullName | "Hugh Hazzard"
+
+
+ENTITY MAP
+AGENT-1 | Bozo_the_Iron_Man
+PATIENT-1 | George_Brenner
+PATIENT-2 | "Hugh Hazzard"
+
+
+LEX
+Id1
+TEXT: Bozo the Iron Man's full name is Hugh Hazzard and he was created by Goerge Brenner.
+TEMPLATE: AGENT-1 's full name is PATIENT-2 and PATIENT-2 was created by PATIENT-1 .
+CORRECT: AGENT-1 full name is PATIENT-2 and AGENT-1 was created by PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Created by George Brenner, the full name of Bozo the Iron Man is "Hugh Hazzard".
+TEMPLATE: Created by PATIENT-1 , the full name of AGENT-1 is `` PATIENT-2 '' .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: George Brenner is the creator of Bozo the Iron Man whose alter ego is Hugh Hazzard.
+TEMPLATE: PATIENT-1 is the creator of AGENT-1 whose alter ego is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id65 2 ComicsCharacter
+
+TRIPLES
+Bolt_(comicsCharacter) | creator | Paris_Cullins
+Paris_Cullins | nationality | United_States
+
+
+ENTITY MAP
+BRIDGE-1 | Paris_Cullins
+AGENT-1 | Bolt_(comicsCharacter)
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: The creator of the comic character, Bolt, is Paris Cullins, A United States national.
+TEMPLATE: The creator of AGENT-1 , Bolt , is BRIDGE-1 , PATIENT-1 national .
+CORRECT: The creator of AGENT-1 is BRIDGE-1 , PATIENT-1 national .
+COMMENT: mod
+-
+Id2
+TEXT: Paris Cullins is an United States national that created the comic character "Bolt".
+TEMPLATE: BRIDGE-1 is PATIENT-1 national that created AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The character Bolt was created Paris Cullins, from the United States.
+TEMPLATE: AGENT-1 was created BRIDGE-1 , from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id64 2 ComicsCharacter
+
+TRIPLES
+Bolt_(comicsCharacter) | creator | Paris_Cullins
+Bolt_(comicsCharacter) | creator | Ernie_Colón
+
+
+ENTITY MAP
+AGENT-1 | Bolt_(comicsCharacter)
+PATIENT-1 | Paris_Cullins
+PATIENT-2 | Ernie_Colón
+
+
+LEX
+Id1
+TEXT: The comic character Bolt, was created by Paris Cullins and Ernie Colon.
+TEMPLATE: AGENT-1 , was created by PATIENT-1 and Ernie Colon .
+CORRECT: AGENT-1 , was created by PATIENT-1 and PATIENT-2 .
+COMMENT:
+-
+Id2
+TEXT: The creators of the comic character, Bolt, are Paris Cullins and Ernie Colon.
+TEMPLATE: The creators of AGENT-1 , PATIENT-2 , are PATIENT-1 and Ernie Colon .
+CORRECT: The creators of AGENT-1 are PATIENT-1 and PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id63 2 ComicsCharacter
+
+TRIPLES
+Bolt_(comicsCharacter) | creator | Paris_Cullins
+Bolt_(comicsCharacter) | creator | Dan_Mishkin
+
+
+ENTITY MAP
+AGENT-1 | Bolt_(comicsCharacter)
+PATIENT-1 | Paris_Cullins
+PATIENT-2 | Dan_Mishkin
+
+
+LEX
+Id1
+TEXT: The creators of the comic character, Bolt, were Paris Cullins and Dan Mishkin.
+TEMPLATE: The creators of AGENT-1 , Bolt , were PATIENT-1 and PATIENT-2 .
+CORRECT: The creators of AGENT-1 were PATIENT-1 and PATIENT-2 .
+COMMENT: mod
+-
+Id2
+TEXT: The character Bolt was created by Paris Cullins and Dan Mishkin.
+TEMPLATE: AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Dan Mishkin and Paris Cullins are creators of the comic character known as Bolt.
+TEMPLATE: PATIENT-2 and PATIENT-1 are creators of AGENT-1 known as Bolt .
+CORRECT: PATIENT-2 and PATIENT-1 are creators of AGENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id62 2 ComicsCharacter
+
+TRIPLES
+Bolt_(comicsCharacter) | creator | Ernie_Colón
+Ernie_Colón | nationality | Puerto_Ricans
+
+
+ENTITY MAP
+BRIDGE-1 | Ernie_Colón
+AGENT-1 | Bolt_(comicsCharacter)
+PATIENT-1 | Puerto_Ricans
+
+
+LEX
+Id1
+TEXT: Ernie Colon, one of the creators of the character Bolt is a Puerto Rican national.
+TEMPLATE: BRIDGE-1 , one of the creators of AGENT-1 is PATIENT-1 national .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Ernie Colon, a Puerto Rican national, created Bolt.
+TEMPLATE: PATIENT-1 , a Puerto Rican national , created AGENT-1 .
+CORRECT: BRIDGE-1 , a PATIENT-1 national , created AGENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id61 2 ComicsCharacter
+
+TRIPLES
+Bolt_(comicsCharacter) | creator | Ernie_Colón
+Bolt_(comicsCharacter) | creator | Gary_Cohn_(comics)
+
+
+ENTITY MAP
+AGENT-1 | Bolt_(comicsCharacter)
+PATIENT-1 | Ernie_Colón
+PATIENT-2 | Gary_Cohn_(comics)
+
+
+LEX
+Id1
+TEXT: Ernie Colon and Gary Cohn created the comic character Bolt.
+TEMPLATE: PATIENT-1 and PATIENT-2 created AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Ernie Colón and comic book writer Gary Cohn were the creators of the comic character Bolt.
+TEMPLATE: PATIENT-1 and comic book writer Gary Cohn were PATIENT-2 of AGENT-1 .
+CORRECT: PATIENT-1 and PATIENT-2 were the creators of AGENT-1 .
+COMMENT:
+-
+Id3
+TEXT: Ernie Colón and Gary Cohn are some of the creators of the comic character Bolt.
+TEMPLATE: PATIENT-1 and PATIENT-2 are some of the creators of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id60 2 ComicsCharacter
+
+TRIPLES
+Bolt_(comicsCharacter) | creator | Ernie_Colón
+Bolt_(comicsCharacter) | creator | Dan_Mishkin
+
+
+ENTITY MAP
+AGENT-1 | Bolt_(comicsCharacter)
+PATIENT-1 | Ernie_Colón
+PATIENT-2 | Dan_Mishkin
+
+
+LEX
+Id1
+TEXT: The character Bolt was created by Ernie Colon and Dan Mishkin.
+TEMPLATE: AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Ernie Colón and Dan Mishkin are among the creators of the comic character Bolt.
+TEMPLATE: PATIENT-1 and PATIENT-2 are among the creators of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The comic book character Bolt was created by both Dan Mishkin and Ernie Colon.
+TEMPLATE: AGENT-1 was created by both PATIENT-2 and PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id59 2 ComicsCharacter
+
+TRIPLES
+Bolt_(comicsCharacter) | creator | Dan_Mishkin
+Bolt_(comicsCharacter) | creator | Gary_Cohn_(comics)
+
+
+ENTITY MAP
+AGENT-1 | Bolt_(comicsCharacter)
+PATIENT-1 | Dan_Mishkin
+PATIENT-2 | Gary_Cohn_(comics)
+
+
+LEX
+Id1
+TEXT: The character Bolt was created by Dan Mishkin and Garcy Cohn.
+TEMPLATE: AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The comic character Bolt was created by Gary Cohn and Dan Mishkin.
+TEMPLATE: AGENT-1 was created by Gary Cohn and PATIENT-1 .
+CORRECT: AGENT-1 was created by PATIENT-2 and PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: Dan Mishkin created the comic book character Bolt while Gary Cohn is the creator of Bolf.
+TEMPLATE: PATIENT-1 created the comic book character Bolt while PATIENT-2 is AGENT-1 of Bolf .
+CORRECT: PATIENT-1 created AGENT-1 while PATIENT-2 is the creator of AGENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id58 2 ComicsCharacter
+
+TRIPLES
+Blockbuster_(comicsCharacter) | creator | Tom_Lyle
+Blockbuster_(comicsCharacter) | creator | Carmine_Infantino
+
+
+ENTITY MAP
+AGENT-1 | Blockbuster_(comicsCharacter)
+PATIENT-1 | Tom_Lyle
+PATIENT-2 | Carmine_Infantino
+
+
+LEX
+Id1
+TEXT: The character Blockbuster was created by Tom Lyle and Carmine Infantino.
+TEMPLATE: AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The creators of the comics character Blockbuster are Carmine Infantino and Tom Lyle.
+TEMPLATE: The creators of AGENT-1 Blockbuster are PATIENT-2 and PATIENT-1 .
+CORRECT: The creators of AGENT-1 are PATIENT-2 and PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: The comic character Blockbuster was created by both Tom Lyle and Carmine Infantino.
+TEMPLATE: AGENT-1 was created by both PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id57 2 ComicsCharacter
+
+TRIPLES
+Blockbuster_(comicsCharacter) | creator | Roger_Stern
+Blockbuster_(comicsCharacter) | creator | Carmine_Infantino
+
+
+ENTITY MAP
+AGENT-1 | Blockbuster_(comicsCharacter)
+PATIENT-1 | Roger_Stern
+PATIENT-2 | Carmine_Infantino
+
+
+LEX
+Id1
+TEXT: The comic book character Blockbuster was created by Roger Stern and Carmine Infantino.
+TEMPLATE: AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The comics character Blockbuster was created by Carmine Infantino and Roger Stern.
+TEMPLATE: AGENT-1 Blockbuster was created by PATIENT-2 and PATIENT-1 .
+CORRECT: AGENT-1 was created by PATIENT-2 and PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id56 2 ComicsCharacter
+
+TRIPLES
+Blockbuster_(comicsCharacter) | creator | Gardner_Fox
+Blockbuster_(comicsCharacter) | creator | Tom_Lyle
+
+
+ENTITY MAP
+AGENT-1 | Blockbuster_(comicsCharacter)
+PATIENT-1 | Gardner_Fox
+PATIENT-2 | Tom_Lyle
+
+
+LEX
+Id1
+TEXT: The creators of Blockbuster (comics character) are Gardner Fox and Tom Lyle.
+TEMPLATE: The creators of Blockbuster (AGENT-1) are PATIENT-1 and PATIENT-2 .
+CORRECT: AGENT-1 are PATIENT-1 and PATIENT-2 .
+COMMENT: mod
+-
+Id2
+TEXT: Both Gardner Fox and Tom Lyle were the creators of the comic character, Blockbuster.
+TEMPLATE: Both PATIENT-1 and PATIENT-2 were the creators of AGENT-1 , Blockbuster .
+CORRECT: Both PATIENT-1 and PATIENT-2 were the creators of AGENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: The comic book character Blockbuster was created by Gardner Fox and Tom Lyle.
+TEMPLATE: AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id55 2 ComicsCharacter
+
+TRIPLES
+Blockbuster_(comicsCharacter) | creator | Gardner_Fox
+Blockbuster_(comicsCharacter) | creator | Roger_Stern
+
+
+ENTITY MAP
+AGENT-1 | Blockbuster_(comicsCharacter)
+PATIENT-1 | Gardner_Fox
+PATIENT-2 | Roger_Stern
+
+
+LEX
+Id1
+TEXT: The character Blockbuster was created by Gardner Fox and Roger Stern.
+TEMPLATE: AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The comic character Blockbuster was created by Gardner Fox and Roger Stern.
+TEMPLATE: AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id54 2 ComicsCharacter
+
+TRIPLES
+Blockbuster_(comicsCharacter) | creator | Gardner_Fox
+Blockbuster_(comicsCharacter) | creator | Carmine_Infantino
+
+
+ENTITY MAP
+AGENT-1 | Blockbuster_(comicsCharacter)
+PATIENT-1 | Gardner_Fox
+PATIENT-2 | Carmine_Infantino
+
+
+LEX
+Id1
+TEXT: Blockbuster is a comic character that was created by Carmine Infantino and Gardner Fox.
+TEMPLATE: Blockbuster is AGENT-1 that was created by PATIENT-2 and PATIENT-1 .
+CORRECT: AGENT-1 is a comic character that was created by PATIENT-2 and PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The comic book character Blockbuster was created by both Gardner Fox and Carmine Infantino.
+TEMPLATE: AGENT-1 was created by both PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The character Blockbuster was created by Garnder Fox and Carmine INfantino.
+TEMPLATE: AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id53 2 ComicsCharacter
+
+TRIPLES
+Black_Pirate | creator | Sheldon_Moldoff
+Sheldon_Moldoff | award | Inkpot_Award
+
+
+ENTITY MAP
+BRIDGE-1 | Sheldon_Moldoff
+AGENT-1 | Black_Pirate
+PATIENT-1 | Inkpot_Award
+
+
+LEX
+Id1
+TEXT: Sheldon Moldoff created the Black Pirate and won the Inkpot Award.
+TEMPLATE: BRIDGE-1 created AGENT-1 and won PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Sheldon Moldoff, creator of the Black Pirate, has won the Inkpot Award.
+TEMPLATE: BRIDGE-1 , creator of AGENT-1 , has won PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Black Pirate was created by Sheldon Moldoff, who won the Inkpot Award.
+TEMPLATE: AGENT-1 was created by BRIDGE-1 , who won PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id52 2 ComicsCharacter
+
+TRIPLES
+Big_Hero_6_(film) | starring | Ryan_Potter
+Baymax | series | Big_Hero_6_(film)
+
+
+ENTITY MAP
+BRIDGE-1 | Big_Hero_6_(film)
+AGENT-1 | Baymax
+PATIENT-1 | Ryan_Potter
+
+
+LEX
+Id1
+TEXT: Baymax is a character in the film Big Hero 6, which starred Ryan Potter.
+TEMPLATE: AGENT-1 is a character in BRIDGE-1 6 , which starred PATIENT-1 .
+CORRECT: AGENT-1 is a character in BRIDGE-1 , which starred PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Baymax is a character in Big Hero 6 in which Ryan Potter stars.
+TEMPLATE: AGENT-1 is a character in BRIDGE-1 6 in which PATIENT-1 stars .
+CORRECT: AGENT-1 is a character in BRIDGE-1 in which PATIENT-1 stars .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id51 2 ComicsCharacter
+
+TRIPLES
+Big_Hero_6_(film) | starring | Alan_Tudyk
+Baymax | series | Big_Hero_6_(film)
+
+
+ENTITY MAP
+BRIDGE-1 | Big_Hero_6_(film)
+AGENT-1 | Baymax
+PATIENT-1 | Alan_Tudyk
+
+
+LEX
+Id1
+TEXT: Baymax is a character in the film Big Hero 6, which stars Alan Tudyk.
+TEMPLATE: AGENT-1 is a character in BRIDGE-1 6 , which stars PATIENT-1 .
+CORRECT: AGENT-1 is a character in BRIDGE-1 , which stars PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: The film Big Hero 6, starring Alan Tudyk, has a character called Baymax.
+TEMPLATE: BRIDGE-1 6 , starring PATIENT-1 , has a character called AGENT-1 .
+CORRECT: BRIDGE-1 , starring PATIENT-1 , has a character called AGENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: Baymax is a character in the film Big Hero 6, which starred Alan Tudyk.
+TEMPLATE: AGENT-1 is a character in BRIDGE-1 6 , which starred PATIENT-1 .
+CORRECT: AGENT-1 is a character in BRIDGE-1 , which starred PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id50 2 ComicsCharacter
+
+TRIPLES
+Bibbo_Bibbowski | creator | Jerry_Ordway
+Bibbo_Bibbowski | fullName | "Bo Bibbowski"
+
+
+ENTITY MAP
+AGENT-1 | Bibbo_Bibbowski
+PATIENT-1 | Jerry_Ordway
+PATIENT-2 | "Bo Bibbowski"
+
+
+LEX
+Id1
+TEXT: Bo Bibbowski (full name Bibbo Bibbowski) was created by Jerry Ordway.
+TEMPLATE: PATIENT-2 (full AGENT-1) was created by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Bo Bibbowski , otherwise known as Bibbo, was created by Jerry Ordway.
+TEMPLATE: PATIENT-2 , otherwise known as AGENT-1 , was created by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Bo Bibbowski is often called Bibbo and was created by Jerry Ordway.
+TEMPLATE: PATIENT-2 is often called AGENT-1 and was created by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id49 2 ComicsCharacter
+
+TRIPLES
+Ben_Urich | creator | Roger_McKenzie_(comic_book_writer)
+Ben_Urich | creator | Gene_Colan
+
+
+ENTITY MAP
+AGENT-1 | Ben_Urich
+PATIENT-1 | Roger_McKenzie_(comic_book_writer)
+PATIENT-2 | Gene_Colan
+
+
+LEX
+Id1
+TEXT: The Comic book character Ben Urich was created by Roger McKenzie and Gene Colan.
+TEMPLATE: Comic AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+CORRECT: AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+COMMENT: mod
+-
+Id2
+TEXT: comic book writer, Roger McKenzie, along with Gene Colan, created Ben Urich.
+TEMPLATE: PATIENT-1 , Roger McKenzie , along with PATIENT-2 , created AGENT-1 .
+CORRECT: PATIENT-1 , along with PATIENT-2 , created AGENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id48 2 ComicsCharacter
+
+TRIPLES
+Ben_Urich | creator | Gene_Colan
+Ben_Urich | fullName | "Benjamin Urich"
+
+
+ENTITY MAP
+AGENT-1 | Ben_Urich
+PATIENT-1 | Gene_Colan
+PATIENT-2 | "Benjamin Urich"
+
+
+LEX
+Id1
+TEXT: The character Ben Urich ( Benjamin Urich ) was created by Gene Colan.
+TEMPLATE: AGENT-1 (PATIENT-2) was created by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Ben Urich's full name is actually Benjamin Urich, the character was created by Gene Colan.
+TEMPLATE: AGENT-1 's full name is actually PATIENT-2 , the character was created by PATIENT-1 .
+CORRECT: AGENT-1 full name is actually PATIENT-2 , AGENT-1 was created by PATIENT-1 .
+COMMENT: coref
+-
+Id3
+TEXT: Ben Urich, full name Benjamin Urich, was created by Gene Colan.
+TEMPLATE: AGENT-1 , full PATIENT-2 , was created by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id47 2 ComicsCharacter
+
+TRIPLES
+Baymax | voice | Scott_Adsit
+Scott_Adsit | birthPlace | Northbrook,_Illinois
+
+
+ENTITY MAP
+BRIDGE-1 | Scott_Adsit
+AGENT-1 | Baymax
+PATIENT-1 | Northbrook,_Illinois
+
+
+LEX
+Id1
+TEXT: Scott Adsit was born in Northbrook, Illinois and does the voice for Baymax.
+TEMPLATE: BRIDGE-1 was born in PATIENT-1 and does the voice for AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The character Baymax is voiced by Scott Adsit, who was born in Northbrook, Illinois.
+TEMPLATE: AGENT-1 is voiced by BRIDGE-1 , who was born in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Born in Northbrook Illinois, Scott Adsit, provides the voice for the character Baymax.
+TEMPLATE: Born in PATIENT-1 , BRIDGE-1 , provides the voice for AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id46 2 ComicsCharacter
+
+TRIPLES
+Baymax | series | Big_Hero_6_(film)
+Big_Hero_6_(film) | starring | Scott_Adsit
+
+
+ENTITY MAP
+BRIDGE-1 | Big_Hero_6_(film)
+AGENT-1 | Baymax
+PATIENT-1 | Scott_Adsit
+
+
+LEX
+Id1
+TEXT: Baymax is a character in Big Hero 6, Scott Adsit starred in the movie version of Big Hero 6.
+TEMPLATE: AGENT-1 is a character in BRIDGE-1 , PATIENT-1 starred in the movie version of BRIDGE-1 .
+CORRECT: AGENT-1 is a character in BRIDGE-1 , PATIENT-1 starred in BRIDGE-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Baymax is a character in the film Big Hero 6 which stars Scott Adsit.
+TEMPLATE: AGENT-1 is a character in BRIDGE-1 6 which stars PATIENT-1 .
+CORRECT: AGENT-1 is a character in BRIDGE-1 which stars PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: Baymax is a character in Big Hero 6, starring Scott Adsit.
+TEMPLATE: AGENT-1 is a character in BRIDGE-1 , starring PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id45 2 ComicsCharacter
+
+TRIPLES
+Baymax | series | Big_Hero_6_(film)
+Big_Hero_6_(film) | starring | Maya_Rudolph
+
+
+ENTITY MAP
+BRIDGE-1 | Big_Hero_6_(film)
+AGENT-1 | Baymax
+PATIENT-1 | Maya_Rudolph
+
+
+LEX
+Id1
+TEXT: Baymax is a character in Big Hero 6 which also starred Maya Rudolph.
+TEMPLATE: AGENT-1 is a character in BRIDGE-1 which also starred PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Baymax is a character in Big Hero 6 that stars Maya Rudolph.
+TEMPLATE: AGENT-1 is a character in BRIDGE-1 that stars PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Maya Rudolph starred in the film Big Hero 6, in which Baymax is a character.
+TEMPLATE: PATIENT-1 starred in BRIDGE-1 6 , in which AGENT-1 is a character .
+CORRECT: PATIENT-1 starred in BRIDGE-1 , in which AGENT-1 is a character .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id44 2 ComicsCharacter
+
+TRIPLES
+Baymax | series | Big_Hero_6_(film)
+Big_Hero_6_(film) | starring | Jamie_Chung
+
+
+ENTITY MAP
+BRIDGE-1 | Big_Hero_6_(film)
+AGENT-1 | Baymax
+PATIENT-1 | Jamie_Chung
+
+
+LEX
+Id1
+TEXT: Baymax is a character in the film Big Hero 6 that starred Jamie Chung.
+TEMPLATE: AGENT-1 is a character in BRIDGE-1 6 that starred PATIENT-1 .
+CORRECT: AGENT-1 is a character in BRIDGE-1 that starred PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Baymax is a character in Big Hero 6, where Jamie Chung is the star.
+TEMPLATE: AGENT-1 is a character in BRIDGE-1 , where PATIENT-1 is the star .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Big Hero 6, starring Jamie Chung, features the character Baymax.
+TEMPLATE: BRIDGE-1 , starring PATIENT-1 , features AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id43 2 ComicsCharacter
+
+TRIPLES
+Baymax | series | Big_Hero_6_(film)
+Big_Hero_6_(film) | starring | Damon_Wayans,_Jr.
+
+
+ENTITY MAP
+BRIDGE-1 | Big_Hero_6_(film)
+AGENT-1 | Baymax
+PATIENT-1 | Damon_Wayans,_Jr.
+
+
+LEX
+Id1
+TEXT: Big Hero 6, starring Damon Wayans Jr., features the character Baymax.
+TEMPLATE: BRIDGE-1 , starring PATIENT-1 , features AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Baymax is a character in Big Hero 6 that stars the actor Damon Wayans Jr.
+TEMPLATE: AGENT-1 is a character in BRIDGE-1 that stars PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The film Big Hero 6, which stars Damon Wayans Jr, has a character called Baymax.
+TEMPLATE: BRIDGE-1 6 , which stars PATIENT-1 , has a character called AGENT-1 .
+CORRECT: BRIDGE-1 , which stars PATIENT-1 , has a character called AGENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id42 2 ComicsCharacter
+
+TRIPLES
+Baymax | series | Big_Hero_6_(film)
+Baymax | creator | Duncan_Rouleau
+
+
+ENTITY MAP
+AGENT-1 | Baymax
+PATIENT-1 | Big_Hero_6_(film)
+PATIENT-2 | Duncan_Rouleau
+
+
+LEX
+Id1
+TEXT: Duncan Rouleau created Baymax, a character in Big Hero 6.
+TEMPLATE: PATIENT-2 created AGENT-1 , a character in PATIENT-1 6 .
+CORRECT: PATIENT-2 created AGENT-1 , a character in PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Created by Duncan Rouleau, Baymax, is a character in Big Hero 6.
+TEMPLATE: Created by PATIENT-2 , AGENT-1 , is a character in PATIENT-1 6 .
+CORRECT: Created by PATIENT-2 , AGENT-1 , is a character in PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id41 2 ComicsCharacter
+
+TRIPLES
+Baymax | firstAppearanceInFilm | Big_Hero_6_(film)
+Big_Hero_6_(film) | starring | Ryan_Potter
+
+
+ENTITY MAP
+BRIDGE-1 | Big_Hero_6_(film)
+AGENT-1 | Baymax
+PATIENT-1 | Ryan_Potter
+
+
+LEX
+Id1
+TEXT: Baymax first appeared in Big Hero 6, starring Ryan Potter.
+TEMPLATE: AGENT-1 first appeared in BRIDGE-1 6 , starring PATIENT-1 .
+CORRECT: AGENT-1 first appeared in BRIDGE-1 , starring PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Baymax first appeared in the film Big Hero 6 which stars Ryan Potter.
+TEMPLATE: AGENT-1 first appeared in BRIDGE-1 6 which stars PATIENT-1 .
+CORRECT: AGENT-1 first appeared in BRIDGE-1 which stars PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: The first appearance in a film for the character Baymax was Big Hero 6 which starred Ryan Potter.
+TEMPLATE: The first appearance in a film for AGENT-1 was BRIDGE-1 which starred PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id40 2 ComicsCharacter
+
+TRIPLES
+Baymax | creator | Duncan_Rouleau
+Baymax | creator | Steven_T._Seagle
+
+
+ENTITY MAP
+AGENT-1 | Baymax
+PATIENT-1 | Duncan_Rouleau
+PATIENT-2 | Steven_T._Seagle
+
+
+LEX
+Id1
+TEXT: Duncan Rouleau and Steven T. Seagle created Baymax.
+TEMPLATE: PATIENT-1 and PATIENT-2 created AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Baymax was created by Duncan Rouleau and Steven T. Seagle.
+TEMPLATE: AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Baymax was created by both Duncan Rouleau and Steven T. Seagle.
+TEMPLATE: AGENT-1 was created by both PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id39 2 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Tim_Brooke-Taylor
+Tim_Brooke-Taylor | birthPlace | United_Kingdom
+
+
+ENTITY MAP
+BRIDGE-1 | Tim_Brooke-Taylor
+AGENT-1 | Bananaman
+PATIENT-1 | United_Kingdom
+
+
+LEX
+Id1
+TEXT: Tim Brooke-Taylor was born in the UK and starred in Bananaman.
+TEMPLATE: BRIDGE-1 was born in PATIENT-1 and starred in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Born in the United Kingdom, Tim Brooke-Taylor, starred in Bananaman.
+TEMPLATE: Born in PATIENT-1 , BRIDGE-1 , starred in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Tim Brooke-Taylor , originally from the U.K, starred in Bananaman.
+TEMPLATE: BRIDGE-1 , originally from PATIENT-1 , starred in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id38 2 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Tim_Brooke-Taylor
+Tim_Brooke-Taylor | birthPlace | England
+
+
+ENTITY MAP
+BRIDGE-1 | Tim_Brooke-Taylor
+AGENT-1 | Bananaman
+PATIENT-1 | England
+
+
+LEX
+Id1
+TEXT: Tim Brooke-Taylor, born in England, starred in Bananaman.
+TEMPLATE: BRIDGE-1 , born in PATIENT-1 , starred in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Tim Brooke Taylor, who starred in Bananaman, was born in England.
+TEMPLATE: BRIDGE-1 , who starred in AGENT-1 , was born in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Tim Brooke Taylor was born in England and starred in Bananaman.
+TEMPLATE: BRIDGE-1 was born in PATIENT-1 and starred in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id37 2 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Tim_Brooke-Taylor
+Tim_Brooke-Taylor | birthPlace | Buxton
+
+
+ENTITY MAP
+BRIDGE-1 | Tim_Brooke-Taylor
+AGENT-1 | Bananaman
+PATIENT-1 | Buxton
+
+
+LEX
+Id1
+TEXT: Buxton is the birthplace of Tim Brooke-Taylor, who starred in Bananaman.
+TEMPLATE: PATIENT-1 is the birthplace of BRIDGE-1 , who starred in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Tim Brooke-Tayler, born in Buxton, starred in bananaman.
+TEMPLATE: BRIDGE-1 , born in PATIENT-1 , starred in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Born in Buxton, Tim Brooke-Taylor, starred in Bananaman.
+TEMPLATE: Born in PATIENT-1 , BRIDGE-1 , starred in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id35 2 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Tim_Brooke-Taylor
+Bananaman | broadcastedBy | "STV"
+
+
+ENTITY MAP
+AGENT-1 | Bananaman
+PATIENT-1 | Tim_Brooke-Taylor
+PATIENT-2 | "STV"
+
+
+LEX
+Id1
+TEXT: Tim Brooke-Taylor starred in Bananaman, which was broadcasted by STV.
+TEMPLATE: PATIENT-1 starred in AGENT-1 , which was broadcasted by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Tim Brooke-Taylor starred in Bananaman, which is broadcast by STV.
+TEMPLATE: PATIENT-1 starred in AGENT-1 , which is broadcast by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Tim Brooke-Taylor starred as Bananaman, which was broadcast by STV.
+TEMPLATE: PATIENT-1 starred as AGENT-1 , which was broadcast by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id34 2 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Jill_Shilling
+Bananaman | broadcastedBy | "STV"
+
+
+ENTITY MAP
+AGENT-1 | Bananaman
+PATIENT-1 | Jill_Shilling
+PATIENT-2 | "STV"
+
+
+LEX
+Id1
+TEXT: Jill Shilling stared in Bananaman, broadcasted by STV.
+TEMPLATE: PATIENT-1 stared in AGENT-1 , broadcasted by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Jill Shilling starred in Bananaman, broadcasted by STV,.
+TEMPLATE: PATIENT-1 starred in AGENT-1 , broadcasted by PATIENT-2 , .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Bananaman which stars Jill Shilling is broadcasted by STV.
+TEMPLATE: AGENT-1 which stars PATIENT-1 is broadcasted by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id33 2 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Graeme_Garden
+Graeme_Garden | birthPlace | Aberdeen
+
+
+ENTITY MAP
+BRIDGE-1 | Graeme_Garden
+AGENT-1 | Bananaman
+PATIENT-1 | Aberdeen
+
+
+LEX
+Id1
+TEXT: Graeme Garden, one of the stars of Bananaman, was born in Aberdeen.
+TEMPLATE: BRIDGE-1 , one of the stars of AGENT-1 , was born in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Bananaman stars Graeme Garden who was born in Aberdeen.
+TEMPLATE: AGENT-1 BRIDGE-1 who was born in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Graeme Garden, born in Aberdeen, stars in Bananaman.
+TEMPLATE: BRIDGE-1 , born in PATIENT-1 , stars in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id32 2 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Graeme_Garden
+Bananaman | firstAired | "1983-10-03"
+
+
+ENTITY MAP
+AGENT-1 | Bananaman
+PATIENT-1 | Graeme_Garden
+PATIENT-2 | "1983-10-03"
+
+
+LEX
+Id1
+TEXT: Bananaman first aired on tv screens on the 3rd of October 1983, and starred Graeme Garden.
+TEMPLATE: AGENT-1 first aired on tv screens on PATIENT-2 , and starred PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Bananaman, first aired 3/10/1983, stars Graeme Garden.
+TEMPLATE: AGENT-1 , first aired PATIENT-2 , stars PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Bananaman was first aired on 10/03/1983 and starred Graeme Garden.
+TEMPLATE: AGENT-1 was first aired on PATIENT-2 and starred PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id31 2 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Bill_Oddie
+Bill_Oddie | birthPlace | Rochdale
+
+
+ENTITY MAP
+BRIDGE-1 | Bill_Oddie
+AGENT-1 | Bananaman
+PATIENT-1 | Rochdale
+
+
+LEX
+Id1
+TEXT: Bill Oddie (born in Rochdale) stars in Bananaman.
+TEMPLATE: BRIDGE-1 (born in PATIENT-1) in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Bill Oddie, who was born in Rochdale, starred in Bananaman.
+TEMPLATE: BRIDGE-1 , who was born in PATIENT-1 , starred in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Bananaman starred Bill Oddie, who was born in Rochdale.
+TEMPLATE: AGENT-1 starred BRIDGE-1 , who was born in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id30 2 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Bill_Oddie
+Bananaman | firstAired | "1983-10-03"
+
+
+ENTITY MAP
+AGENT-1 | Bananaman
+PATIENT-1 | Bill_Oddie
+PATIENT-2 | "1983-10-03"
+
+
+LEX
+Id1
+TEXT: Bananaman first aired on the 3rd of October 1983, and starred Bill Oddie.
+TEMPLATE: AGENT-1 first aired on PATIENT-2 , and starred PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Bill Oddie stars in Bananaman that was first aired on the 3rd of October, 1983.
+TEMPLATE: PATIENT-1 stars in AGENT-1 that was first aired on PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id29 2 ComicsCharacter
+
+TRIPLES
+Bananaman | starring | Bill_Oddie
+Bananaman | broadcastedBy | "STV"
+
+
+ENTITY MAP
+AGENT-1 | Bananaman
+PATIENT-1 | Bill_Oddie
+PATIENT-2 | "STV"
+
+
+LEX
+Id1
+TEXT: Bill Oddie starred in Bananaman broadcast by STV.
+TEMPLATE: PATIENT-1 starred in AGENT-1 broadcast by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: STV broadcast Bananaman starring Bill Oddie.
+TEMPLATE: PATIENT-2 AGENT-1 starring PATIENT-1 .
+CORRECT: PATIENT-2 broadcast AGENT-1 starring PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id27 2 ComicsCharacter
+
+TRIPLES
+Bananaman | broadcastedBy | BBC
+BBC | locationCity | London
+
+
+ENTITY MAP
+BRIDGE-1 | BBC
+AGENT-1 | Bananaman
+PATIENT-1 | London
+
+
+LEX
+Id1
+TEXT: Located in London, the BBC, broadcast Bananaman.
+TEMPLATE: Located in PATIENT-1 , BRIDGE-1 , AGENT-1 .
+CORRECT: Located in PATIENT-1 , BRIDGE-1 , broadcast AGENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Bananaman is broadcast by the BBC, which is based in London.
+TEMPLATE: AGENT-1 is broadcast by BRIDGE-1 , which is based in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Bananaman the TV series was shown on the BBC which is located in London.
+TEMPLATE: AGENT-1 the TV series was shown on BRIDGE-1 which is located in PATIENT-1 .
+CORRECT: AGENT-1 was shown on BRIDGE-1 which is located in PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id26 2 ComicsCharacter
+
+TRIPLES
+Bananaman | broadcastedBy | BBC
+BBC | locationCity | Broadcasting_House
+
+
+ENTITY MAP
+BRIDGE-1 | BBC
+AGENT-1 | Bananaman
+PATIENT-1 | Broadcasting_House
+
+
+LEX
+Id1
+TEXT: Bananaman is broadcast by the BBC which is headquartered in Broadcasting house.
+TEMPLATE: AGENT-1 is broadcast by BRIDGE-1 which is headquartered in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Bananaman the TV series was shown on the BBC, the BBC is headquartered in Broadcasting house.
+TEMPLATE: AGENT-1 the TV series was shown on BRIDGE-1 , BRIDGE-1 is headquartered in PATIENT-1 .
+CORRECT: AGENT-1 was shown on BRIDGE-1 , BRIDGE-1 is headquartered in PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: Bananaman is broadcasted by the BBC which is based in the Broadcasting House in London.
+TEMPLATE: AGENT-1 is broadcasted by BRIDGE-1 which is based in PATIENT-1 in London .
+CORRECT: AGENT-1 is broadcasted by BRIDGE-1 which is based in PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id25 2 ComicsCharacter
+
+TRIPLES
+Ballistic_(comicsCharacter) | creator | Doug_Moench
+Ballistic_(comicsCharacter) | creator | "Michael Manley"
+
+
+ENTITY MAP
+AGENT-1 | Ballistic_(comicsCharacter)
+PATIENT-1 | Doug_Moench
+PATIENT-2 | "Michael Manley"
+
+
+LEX
+Id1
+TEXT: The creators of the comic character Ballistic were Michael Manley and Doug Moench.
+TEMPLATE: The creators of AGENT-1 were PATIENT-2 and PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Doug Moench and Michael Manley, created the comic character Ballistic.
+TEMPLATE: PATIENT-1 and PATIENT-2 , created AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The comic book character Ballistic was created by Michael Manley and Doug Moench.
+TEMPLATE: AGENT-1 was created by PATIENT-2 and PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id24 2 ComicsCharacter
+
+TRIPLES
+Ballistic_(comicsCharacter) | alternativeName | "Kelvin Mao"
+Ballistic_(comicsCharacter) | creator | "Michael Manley"
+
+
+ENTITY MAP
+AGENT-1 | Ballistic_(comicsCharacter)
+PATIENT-1 | "Kelvin Mao"
+PATIENT-2 | "Michael Manley"
+
+
+LEX
+Id1
+TEXT: Michael Manley created the comic character, Ballistic, who has the alternative name, Kelvin Mao.
+TEMPLATE: PATIENT-2 created AGENT-1 , Ballistic , who has the alternative name , PATIENT-1 .
+CORRECT: PATIENT-2 created AGENT-1 , who has the alternative name , PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: The comic character, Ballistic, has the alternative name, Kelvin Mao, and was created by Michael Manley.
+TEMPLATE: AGENT-1 , Ballistic , has the alternative name , PATIENT-1 , and was created by PATIENT-2 .
+CORRECT: AGENT-1 has the alternative name , PATIENT-1 , and was created by PATIENT-2 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id23 2 ComicsCharacter
+
+TRIPLES
+Balder_(comicsCharacter) | creator | Jack_Kirby
+Jack_Kirby | nationality | Americans
+
+
+ENTITY MAP
+BRIDGE-1 | Jack_Kirby
+AGENT-1 | Balder_(comicsCharacter)
+PATIENT-1 | Americans
+
+
+LEX
+Id1
+TEXT: The comic character, Balder, was created by Jack Kirby, an American.
+TEMPLATE: AGENT-1 , Balder , was created by BRIDGE-1 , PATIENT-1 .
+CORRECT: AGENT-1 was created by BRIDGE-1 , PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The American Jack Kirby created the comic character Balder.
+TEMPLATE: American BRIDGE-1 created AGENT-1 .
+CORRECT: PATIENT-1 BRIDGE-1 created AGENT-1 .
+COMMENT: nationality
+-
+
+**************************************************
+
+Entry: Id22 2 ComicsCharacter
+
+TRIPLES
+Balder_(comicsCharacter) | creator | Jack_Kirby
+Balder_(comicsCharacter) | creator | Stan_Lee
+
+
+ENTITY MAP
+AGENT-1 | Balder_(comicsCharacter)
+PATIENT-1 | Jack_Kirby
+PATIENT-2 | Stan_Lee
+
+
+LEX
+Id1
+TEXT: Jack Kirby and Stan Lee are the creators of the comic character Balder.
+TEMPLATE: PATIENT-1 and PATIENT-2 are the creators of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The character Balder created by Jack Kirby and Stan Lee.
+TEMPLATE: AGENT-1 created by PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Jack Kirby and Stan Lee, created the comic character Balder.
+TEMPLATE: PATIENT-1 and PATIENT-2 , created AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id21 2 ComicsCharacter
+
+TRIPLES
+Balder_(comicsCharacter) | creator | Jack_Kirby
+Balder_(comicsCharacter) | alternativeName | "Balder Odinson"
+
+
+ENTITY MAP
+AGENT-1 | Balder_(comicsCharacter)
+PATIENT-1 | Jack_Kirby
+PATIENT-2 | "Balder Odinson"
+
+
+LEX
+Id1
+TEXT: The comic character Balder, also known as Balder Odinson was created by Jack Kirby.
+TEMPLATE: AGENT-1 Balder , also known as PATIENT-2 was created by PATIENT-1 .
+CORRECT: AGENT-1 , also known as PATIENT-2 was created by PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Balder, otherwise known as Balder Odinson, was created by Jack Kirby.
+TEMPLATE: AGENT-1 , otherwise known as PATIENT-2 , was created by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id20 2 ComicsCharacter
+
+TRIPLES
+Balder_(comicsCharacter) | alternativeName | "Balder Odinson"
+Balder_(comicsCharacter) | creator | Stan_Lee
+
+
+ENTITY MAP
+AGENT-1 | Balder_(comicsCharacter)
+PATIENT-1 | "Balder Odinson"
+PATIENT-2 | Stan_Lee
+
+
+LEX
+Id1
+TEXT: The comic character Balder, full name, Balder Odinson was created by Stan Lee.
+TEMPLATE: AGENT-1 , full name , PATIENT-1 was created by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: An alternative name for the comic character Balder (created by Stan Lee), is Balder Odinson.
+TEMPLATE: An alternative name for AGENT-1 (created by PATIENT-2) , is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id19 2 ComicsCharacter
+
+TRIPLES
+Auron_(comicsCharacter) | creator | Marv_Wolfman
+Auron_(comicsCharacter) | fullName | "Lambien"
+
+
+ENTITY MAP
+AGENT-1 | Auron_(comicsCharacter)
+PATIENT-1 | Marv_Wolfman
+PATIENT-2 | "Lambien"
+
+
+LEX
+Id1
+TEXT: Marv Wolfman created the comic book character Auron aka Lambien.
+TEMPLATE: PATIENT-1 created AGENT-1 aka PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The comic character Auron, whose full name is Lambien, was created by Marv Wolfman.
+TEMPLATE: AGENT-1 , whose full name is PATIENT-2 , was created by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The comic character Auron, otherwise known as "Lambien" was created by Marv Wolfman.
+TEMPLATE: AGENT-1 Auron , otherwise known as `` PATIENT-2 '' was created by PATIENT-1 .
+CORRECT: AGENT-1 , otherwise known as `` PATIENT-2 '' was created by PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id18 2 ComicsCharacter
+
+TRIPLES
+Auron_(comicsCharacter) | creator | Marv_Wolfman
+Auron_(comicsCharacter) | creator | Walt_Simonson
+
+
+ENTITY MAP
+AGENT-1 | Auron_(comicsCharacter)
+PATIENT-1 | Marv_Wolfman
+PATIENT-2 | Walt_Simonson
+
+
+LEX
+Id1
+TEXT: Auron was created by both Marv Wolfman and Walt Simonson.
+TEMPLATE: AGENT-1 was created by both PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The comic character auron was created by Marv Wolfman and Walt Simonson.
+TEMPLATE: AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The comic book character Auron was created by both Marv Wolfman and Walt Simonson.
+TEMPLATE: AGENT-1 was created by both PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id17 2 ComicsCharacter
+
+TRIPLES
+Auron_(comicsCharacter) | creator | Karl_Kesel
+Auron_(comicsCharacter) | creator | Walt_Simonson
+
+
+ENTITY MAP
+AGENT-1 | Auron_(comicsCharacter)
+PATIENT-1 | Karl_Kesel
+PATIENT-2 | Walt_Simonson
+
+
+LEX
+Id1
+TEXT: The comic character Auron was created by both Karl Kesel and Walt Simonson.
+TEMPLATE: AGENT-1 was created by both PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Walt Simonson and Karl Kesel created the comic character Auron.
+TEMPLATE: PATIENT-2 and PATIENT-1 created AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The character Auron was created by Karl Kesel and Walt Simonson.
+TEMPLATE: AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id16 2 ComicsCharacter
+
+TRIPLES
+Auron_(comicsCharacter) | creator | Karl_Kesel
+Auron_(comicsCharacter) | creator | Marv_Wolfman
+
+
+ENTITY MAP
+AGENT-1 | Auron_(comicsCharacter)
+PATIENT-1 | Karl_Kesel
+PATIENT-2 | Marv_Wolfman
+
+
+LEX
+Id1
+TEXT: The comic book character Auron was created by Karl Kesel and Marv Wolfman.
+TEMPLATE: AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The character Auron, was created by Kark Kesel and Marv Worlfman,.
+TEMPLATE: AGENT-1 Auron , was created by PATIENT-1 and PATIENT-2 , .
+CORRECT: AGENT-1 , was created by PATIENT-1 and PATIENT-2 , .
+COMMENT: mod
+-
+Id3
+TEXT: The creators of Auron (comics character) are Karl Kesel and Marv Wolfman.
+TEMPLATE: The creators of Auron (AGENT-1) are PATIENT-1 and PATIENT-2 .
+CORRECT: AGENT-1 are PATIENT-1 and PATIENT-2 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id15 2 ComicsCharacter
+
+TRIPLES
+Aurakles | creator | Dick_Dillin
+Dick_Dillin | nationality | United_States
+
+
+ENTITY MAP
+BRIDGE-1 | Dick_Dillin
+AGENT-1 | Aurakles
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Dick Dillian is an american who created the fictional character, Aurakles.
+TEMPLATE: BRIDGE-1 is PATIENT-1 who created the fictional character , AGENT-1 .
+CORRECT: BRIDGE-1 is PATIENT-1 who created AGENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Aurakles is a fictional character created by American national Dick Dillin.
+TEMPLATE: AGENT-1 is PATIENT-1 created by American national BRIDGE-1 .
+CORRECT: AGENT-1 is PATIENT-1 created by PATIENT-1 national BRIDGE-1 .
+COMMENT: nationality
+-
+Id3
+TEXT: Dick Dillin, the creator of Aurakles, is from the US.
+TEMPLATE: BRIDGE-1 , PATIENT-1 of AGENT-1 , is from the US .
+CORRECT: BRIDGE-1 , the creator of AGENT-1 , is from PATIENT-1 .
+COMMENT: nationality
+-
+
+**************************************************
+
+Entry: Id14 2 ComicsCharacter
+
+TRIPLES
+Aurakles | creator | Dick_Dillin
+Aurakles | creator | Len_Wein
+
+
+ENTITY MAP
+AGENT-1 | Aurakles
+PATIENT-1 | Dick_Dillin
+PATIENT-2 | Len_Wein
+
+
+LEX
+Id1
+TEXT: Aurakles was created by Dick Dillin and Len Wein.
+TEMPLATE: AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The comic book character, Aurakles, was created by Dick Dillin and Len Wein.
+TEMPLATE: The comic book character , AGENT-1 , was created by PATIENT-1 and PATIENT-2 .
+CORRECT: AGENT-1 , was created by PATIENT-1 and PATIENT-2 .
+COMMENT: mod
+-
+Id3
+TEXT: The comic book character Aurakles was created by both Dick Dillin and Len Wein.
+TEMPLATE: comic AGENT-1 was created by both PATIENT-1 and PATIENT-2 .
+CORRECT: AGENT-1 was created by both PATIENT-1 and PATIENT-2 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id13 2 ComicsCharacter
+
+TRIPLES
+Aurakles | creator | Dick_Dillin
+Aurakles | alternativeName | "Aurakles"
+
+
+ENTITY MAP
+AGENT-1 | Aurakles
+PATIENT-1 | Dick_Dillin
+PATIENT-2 | "Aurakles"
+
+
+LEX
+Id1
+TEXT: Dick Dillin is the creator of the comic book character Aurakles.
+TEMPLATE: PATIENT-1 is AGENT-1 of comic PATIENT-2 .
+CORRECT: PATIENT-1 is the creator of AGENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Dick Dillin was the creator of the comic book character Aurakles.
+TEMPLATE: PATIENT-1 was AGENT-1 of comic PATIENT-2 .
+CORRECT: PATIENT-1 was the creator of AGENT-1 .
+COMMENT:
+-
+Id3
+TEXT: Dick Dillin created the comic book character called Aurakles, whose alternative name is also Aurakles.
+TEMPLATE: PATIENT-1 created AGENT-1 called PATIENT-2 , whose alternative name is also PATIENT-2 .
+CORRECT: PATIENT-1 created AGENT-1 , whose alternative name is also PATIENT-2 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id12 2 ComicsCharacter
+
+TRIPLES
+Asterix_(comicsCharacter) | creator | René_Goscinny
+René_Goscinny | nationality | French_people
+
+
+ENTITY MAP
+BRIDGE-1 | René_Goscinny
+AGENT-1 | Asterix_(comicsCharacter)
+PATIENT-1 | French_people
+
+
+LEX
+Id1
+TEXT: The creator of Asterix , a comics character, is René Goscinny, who is French.
+TEMPLATE: PATIENT-1 of Asterix , AGENT-1 , is BRIDGE-1 , who is French .
+CORRECT: The creator of AGENT-1 is BRIDGE-1 , who is PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Asterix was created by Rene Goscinny, who is a frenchman.
+TEMPLATE: AGENT-1 was created by BRIDGE-1 , who is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Rene Goscinny is a French national and also the creator of the comic character Asterix.
+TEMPLATE: BRIDGE-1 is PATIENT-1 and also the creator of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id11 2 ComicsCharacter
+
+TRIPLES
+Asterix_(comicsCharacter) | creator | René_Goscinny
+Asterix_(comicsCharacter) | alternativeName | "Astérix"
+
+
+ENTITY MAP
+AGENT-1 | Asterix_(comicsCharacter)
+PATIENT-1 | René_Goscinny
+PATIENT-2 | "Astérix"
+
+
+LEX
+Id1
+TEXT: The creator of Asterix, the comics character also known as Astérix, is René Goscinny.
+TEMPLATE: The creator of Asterix , AGENT-1 also known as PATIENT-2 , is PATIENT-1 .
+CORRECT: The creator of AGENT-1 also known as PATIENT-2 , is PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: The comic character Asterix, sometimes called Astérix, was created by Rene Goscinny.
+TEMPLATE: AGENT-1 , sometimes called PATIENT-2 , was created by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The comic character Asterix (also known as Astérix), was created by Rene Goscinny.
+TEMPLATE: AGENT-1 Asterix (also known as PATIENT-2) , was created by PATIENT-1 .
+CORRECT: AGENT-1 (also known as PATIENT-2) , was created by PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id10 2 ComicsCharacter
+
+TRIPLES
+Asterix_(comicsCharacter) | alternativeName | "Astérix"
+Asterix_(comicsCharacter) | creator | Albert_Uderzo
+
+
+ENTITY MAP
+AGENT-1 | Asterix_(comicsCharacter)
+PATIENT-1 | "Astérix"
+PATIENT-2 | Albert_Uderzo
+
+
+LEX
+Id1
+TEXT: The comic character Asterix, sometimes called Astérix, was created by Albert Uderzo.
+TEMPLATE: AGENT-1 , sometimes called PATIENT-1 , was created by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The alternative name of Asterix (comics character) is "Astérix" and he was created by Albert Uderzo.
+TEMPLATE: The alternative name of Asterix (AGENT-1) is `` PATIENT-1 '' and PATIENT-1 was created by PATIENT-2 .
+CORRECT: The alternative name of AGENT-1 is `` PATIENT-1 '' and AGENT-1 was created by PATIENT-2 .
+COMMENT: coref
+-
+Id3
+TEXT: Albert Uderzo is the creator of the comic character, Asterix, which is also known as Astérix.
+TEMPLATE: PATIENT-2 is the creator of AGENT-1 , Asterix , which is also known as PATIENT-1 .
+CORRECT: PATIENT-2 is the creator of AGENT-1 , which is also known as PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id8 2 ComicsCharacter
+
+TRIPLES
+Arion_(comicsCharacter) | creator | Jan_Duursema
+Arion_(comicsCharacter) | creator | Paul_Kupperberg
+
+
+ENTITY MAP
+AGENT-1 | Arion_(comicsCharacter)
+PATIENT-1 | Jan_Duursema
+PATIENT-2 | Paul_Kupperberg
+
+
+LEX
+Id1
+TEXT: The character Arion was created by Jan Duursema and Paul Kupperberg.
+TEMPLATE: AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The comic character, Arion, was created by Jan Duursema and Paul Kupperberg.
+TEMPLATE: AGENT-1 , Arion , was created by PATIENT-1 and PATIENT-2 .
+CORRECT: AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+COMMENT: mod
+-
+Id3
+TEXT: The comic book character Arion was created by Jan Duursema and Paul Kupperberg.
+TEMPLATE: AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id6 2 ComicsCharacter
+
+TRIPLES
+Arion_(comicsCharacter) | alternativeName | "Ahriahn"
+Arion_(comicsCharacter) | creator | Paul_Kupperberg
+
+
+ENTITY MAP
+AGENT-1 | Arion_(comicsCharacter)
+PATIENT-1 | "Ahriahn"
+PATIENT-2 | Paul_Kupperberg
+
+
+LEX
+Id1
+TEXT: Paul Kupperberg is the creator of the comic character Arion, sometimes known as Ahri'ahn.
+TEMPLATE: PATIENT-2 is the creator of AGENT-1 Arion , sometimes known as PATIENT-1 .
+CORRECT: PATIENT-2 is the creator of AGENT-1 , sometimes known as PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: Created by Paul Kupperberg, the book character Arion is also known as Ahri'ahn.
+TEMPLATE: Created by PATIENT-2 , AGENT-1 is also known as PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Paul Kupperberg is the creator of the comic character Arion , otherwise known as Ahri'ahn.
+TEMPLATE: PATIENT-2 is the creator of AGENT-1 Arion , otherwise known as PATIENT-1 .
+CORRECT: PATIENT-2 is the creator of AGENT-1 , otherwise known as PATIENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id5 2 ComicsCharacter
+
+TRIPLES
+April_ONeil | creator | Peter_Laird
+April_ONeil | creator | Kevin_Eastman
+
+
+ENTITY MAP
+AGENT-1 | April_ONeil
+PATIENT-1 | Peter_Laird
+PATIENT-2 | Kevin_Eastman
+
+
+LEX
+Id1
+TEXT: The character April O'Neal was created by Peter Laird and Kevin Eastman.
+TEMPLATE: AGENT-1 was created by PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: April O'Neil was created by Kevin Eastman and Peter Laird.
+TEMPLATE: AGENT-1 was created by PATIENT-2 and PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Peter Laird and Kevin Eastman, created the character, April O'Neal.
+TEMPLATE: PATIENT-1 and PATIENT-2 , created the character , AGENT-1 .
+CORRECT: PATIENT-1 and PATIENT-2 , created AGENT-1 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id4 2 ComicsCharacter
+
+TRIPLES
+Amazing-Man_(comicsCharacter) | creator | Bill_Everett
+Amazing-Man_(comicsCharacter) | alternativeName | "John Aman"
+
+
+ENTITY MAP
+AGENT-1 | Amazing-Man_(comicsCharacter)
+PATIENT-1 | Bill_Everett
+PATIENT-2 | "John Aman"
+
+
+LEX
+Id1
+TEXT: John Aman (created by Bill Everett) is also known as Amazing-Man in the comics genre.
+TEMPLATE: PATIENT-2 (created by PATIENT-1) is also known as AGENT-1 in the comics genre .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Bill Everett is the creator of the comic character, Amazing-Man who has the alternative name, John Aman.
+TEMPLATE: PATIENT-1 is the creator of AGENT-1 , Amazing-Man who has the alternative name , PATIENT-2 .
+CORRECT: PATIENT-1 is the creator of AGENT-1 who has the alternative name , PATIENT-2 .
+COMMENT: mod
+-
+Id3
+TEXT: The comic book character Amazing-Man's alter ego is John Aman and it was created by Bill Everett.
+TEMPLATE: comic AGENT-1 alter ego is PATIENT-2 and it was created by PATIENT-1 .
+CORRECT: AGENT-1 alter ego is PATIENT-2 and AGENT-1 was created by PATIENT-1 .
+COMMENT: mod - coref
+-
+
+**************************************************
+
+Entry: Id3 2 ComicsCharacter
+
+TRIPLES
+Airman_(comicsCharacter) | creator | Harry_Sahle
+Airman_(comicsCharacter) | creator | George_Kapitan
+
+
+ENTITY MAP
+AGENT-1 | Airman_(comicsCharacter)
+PATIENT-1 | Harry_Sahle
+PATIENT-2 | George_Kapitan
+
+
+LEX
+Id1
+TEXT: The creators of the comic character Airman were Harry Sahle and George Kapitan.
+TEMPLATE: The creators of AGENT-1 were PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The comic book character Airman was created by both Harry Sahle and George Kapitan.
+TEMPLATE: AGENT-1 was created by both PATIENT-1 and PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The creators of the comic book character Airman were Harry Sahle and George Kapitan.
+TEMPLATE: AGENT-1 of the comic book character Airman were PATIENT-1 and PATIENT-2 .
+CORRECT: The creators of AGENT-1 were PATIENT-1 and PATIENT-2 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id2 2 ComicsCharacter
+
+TRIPLES
+Airman_(comicsCharacter) | alternativeName | "Drake Stevens"
+Airman_(comicsCharacter) | creator | Harry_Sahle
+
+
+ENTITY MAP
+AGENT-1 | Airman_(comicsCharacter)
+PATIENT-1 | "Drake Stevens"
+PATIENT-2 | Harry_Sahle
+
+
+LEX
+Id1
+TEXT: The comic book character Airman, AKA Drake Stephens, was created by Harry Sahle.
+TEMPLATE: The comic book character Airman , AGENT-1 , was created by PATIENT-2 .
+CORRECT: AGENT-1 , PATIENT-1 , was created by PATIENT-2 .
+COMMENT:
+-
+Id2
+TEXT: Drake Stevens is known as the comic character Airman, which was created by Harry Sahle.
+TEMPLATE: PATIENT-1 is known as AGENT-1 , which was created by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The comic character Airman, who has the alternative name Drake Stevens, was created by Harry Sahle.
+TEMPLATE: AGENT-1 , who has alternative PATIENT-1 , was created by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id1 2 ComicsCharacter
+
+TRIPLES
+Airman_(comicsCharacter) | alternativeName | "Drake Stevens"
+Airman_(comicsCharacter) | creator | George_Kapitan
+
+
+ENTITY MAP
+AGENT-1 | Airman_(comicsCharacter)
+PATIENT-1 | "Drake Stevens"
+PATIENT-2 | George_Kapitan
+
+
+LEX
+Id1
+TEXT: George Kapitan created the comic character Airman whose alter ego is Drake Stevens.
+TEMPLATE: PATIENT-2 created AGENT-1 whose alter ego is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: "Drake Stevens, known as Airman, was created by George Kapitan.
+TEMPLATE: `` PATIENT-1 , known as AGENT-1 , was created by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: George Kapitan is the creator of the comic character "Airman" or otherwise known as "Drake Stevens".
+TEMPLATE: PATIENT-2 is AGENT-1 of the comic character `` Airman '' or otherwise known as `` PATIENT-1 '' .
+CORRECT: PATIENT-2 is the creator of AGENT-1 or otherwise known as `` PATIENT-1 '' .
+COMMENT:
+-
+

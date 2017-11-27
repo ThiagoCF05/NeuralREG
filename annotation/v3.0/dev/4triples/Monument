@@ -1,0 +1,227 @@
+
+Entry: Id2 4 Monument
+
+TRIPLES
+Adams_County,_Pennsylvania | has to its west | Franklin_County,_Pennsylvania
+Adams_County,_Pennsylvania | has to its southeast | Carroll_County,_Maryland
+11th_Mississippi_Infantry_Monument | category | Contributing_property
+11th_Mississippi_Infantry_Monument | location | Adams_County,_Pennsylvania
+
+
+ENTITY MAP
+BRIDGE-1 | Adams_County,_Pennsylvania
+AGENT-1 | 11th_Mississippi_Infantry_Monument
+PATIENT-1 | Franklin_County,_Pennsylvania
+PATIENT-3 | Contributing_property
+PATIENT-2 | Carroll_County,_Maryland
+
+
+LEX
+Id1
+TEXT: The 11th Mississippi Infantry Monument is a Contributing Property located in Adams County, Pennsylvania, with Franklin County to its west and Carrol County, Maryland to its southeast.
+TEMPLATE: AGENT-1 is PATIENT-3 located in BRIDGE-1 , with PATIENT-1 and PATIENT-2 to AGENT-1 southeast .
+CORRECT: AGENT-1 is PATIENT-3 located in BRIDGE-1 , with PATIENT-1 and PATIENT-2 to BRIDGE-1 southeast .
+COMMENT: 
+-
+Id2
+TEXT: Pennsylvania's Franklin County is found to the west of Adams County while Carrol County Maryland is southeast of Adams County Pennsylvania. The location of the 11th Mississippi Infantry Monument is Adams County, Pennsylvania and falls under the category of Contributing property.
+TEMPLATE: PATIENT-1 is found to the west of BRIDGE-1 while PATIENT-2 is southeast of BRIDGE-1 . The location of AGENT-1 is BRIDGE-1 and falls under the category of PATIENT-3 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id1 4 Monument
+
+TRIPLES
+Adams_County,_Pennsylvania | has to its southeast | Carroll_County,_Maryland
+Adams_County,_Pennsylvania | has to its north | Cumberland_County,_Pennsylvania
+11th_Mississippi_Infantry_Monument | municipality | Gettysburg,_Pennsylvania
+11th_Mississippi_Infantry_Monument | location | Adams_County,_Pennsylvania
+
+
+ENTITY MAP
+BRIDGE-1 | Adams_County,_Pennsylvania
+AGENT-1 | 11th_Mississippi_Infantry_Monument
+PATIENT-1 | Carroll_County,_Maryland
+PATIENT-3 | Gettysburg,_Pennsylvania
+PATIENT-2 | Cumberland_County,_Pennsylvania
+
+
+LEX
+Id1
+TEXT: Adams County, Pennsylvania has Carrol County, Maryland to its southeast and Pennsylvania's Cumberland County is to the north of the Adams County. The 11th Mississippi Infantry Monument is in Adams County of the municipality of Gettysburg Pennsylvania. .
+TEMPLATE: BRIDGE-1 has PATIENT-1 to BRIDGE-1 southeast and PATIENT-2 is to the north of BRIDGE-1 . AGENT-1 is in BRIDGE-1 of the municipality of PATIENT-3 . .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: The 11th Mississippi Infantry Monument is located at Gettysburg, Adams County, Pennsylvania, which has Cumberland County, Pennsylvania to its north and Carrol County, Maryland to its southeast.
+TEMPLATE: AGENT-1 is located at PATIENT-3 , BRIDGE-1 , which has PATIENT-2 to PATIENT-2 north and PATIENT-1 to PATIENT-2 southeast .
+CORRECT: AGENT-1 is located at PATIENT-3 , BRIDGE-1 , which has PATIENT-2 to BRIDGE-1 north and PATIENT-1 to BRIDGE-1 southeast .
+COMMENT: 
+-
+Id3
+TEXT: The municipality of Gettysburg, Adams County, Pennsylvania is the location of the 11th Mississippi Infantry monument. Adams County is south of Cumberland County and to the northwest of Carroll County, Maryland.
+TEMPLATE: The municipality of PATIENT-3 , BRIDGE-1 is the location of AGENT-1 . BRIDGE-1 is south of PATIENT-2 and to the northwest of PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id3 4 Monument
+
+TRIPLES
+Azerbaijan | capital | Baku
+Baku_Turkish_Martyrs_Memorial | dedicatedTo | "Ottoman Army soldiers killed in the Battle of Baku"
+Baku_Turkish_Martyrs_Memorial | location | Azerbaijan
+Baku_Turkish_Martyrs_Memorial | designer | "Hüseyin Bütüner and Hilmi Güner"
+
+
+ENTITY MAP
+BRIDGE-1 | Azerbaijan
+AGENT-1 | Baku_Turkish_Martyrs_Memorial
+PATIENT-1 | Baku
+PATIENT-3 | "Hüseyin Bütüner and Hilmi Güner"
+PATIENT-2 | "Ottoman Army soldiers killed in the Battle of Baku"
+
+
+LEX
+Id1
+TEXT: Baku, the capital of Azerbaijan is the location of the Turkish Martyrs memorial dedicated to the soldiers of the Ottoman army killed in the Battle of Baku. The memorial was designed by Huseyin Butuner and Hilmi Guner.
+TEMPLATE: PATIENT-1 , the capital of BRIDGE-1 is the location of the Turkish Martyrs memorial dedicated to PATIENT-2 of the Ottoman army killed in the Battle of PATIENT-1 . AGENT-1 was designed by PATIENT-3 .
+CORRECT: PATIENT-1 , the capital of BRIDGE-1 is the location of AGENT-1 dedicated to PATIENT-2 . AGENT-1 was designed by PATIENT-3 .
+COMMENT: 
+-
+Id2
+TEXT: The Baku Turkish Martyrs Memorial has been dedicated to Ottoman Army soldiers killed in the Battle of Baku and is located in Azerbaijan's capital Baku. The Memorial was designed by Hüseyin Bütüner and Hilmi Güner.
+TEMPLATE: AGENT-1 has been dedicated to PATIENT-2 and is located in BRIDGE-1 's PATIENT-1 . PATIENT-1 Memorial was designed by PATIENT-3 .
+CORRECT: AGENT-1 has been dedicated to PATIENT-2 and is located in BRIDGE-1 capital PATIENT-1 . AGENT-1 was designed by PATIENT-3 .
+COMMENT: 
+-
+Id3
+TEXT: Baku is the capital of Azerbaijan and the location of the Turkish Martyrs memorial dedicated to the soldiers of the Ottoman army who died in the battle of Baku. The memorial was designed by Huseyin Butuner and Hilmi Guner.
+TEMPLATE: PATIENT-1 is the capital of BRIDGE-1 and the location of the Turkish Martyrs memorial dedicated to PATIENT-2 . AGENT-1 was designed by PATIENT-3 .
+CORRECT: PATIENT-1 is the capital of BRIDGE-1 and the location of AGENT-1 dedicated to PATIENT-2 . AGENT-1 was designed by PATIENT-3 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id4 4 Monument
+
+TRIPLES
+Azerbaijan | leader | Artur_Rasizade
+Azerbaijan | capital | Baku
+Baku_Turkish_Martyrs_Memorial | location | Azerbaijan
+Azerbaijan | legislature | National_Assembly_(Azerbaijan)
+
+
+ENTITY MAP
+BRIDGE-1 | Azerbaijan
+AGENT-1 | Baku_Turkish_Martyrs_Memorial
+PATIENT-1 | Artur_Rasizade
+PATIENT-3 | National_Assembly_(Azerbaijan)
+PATIENT-2 | Baku
+
+
+LEX
+Id1
+TEXT: Baku is the capital of Azerbaijan and the leader of the legislature (the National Assembly) is Artur Rasizade. Azerbaijan is the location of the Baku Turkish Martyrs memorial.
+TEMPLATE: PATIENT-2 is the capital of BRIDGE-1 and the leader of AGENT-1 ( PATIENT-3 ) is PATIENT-1 . BRIDGE-1 is the location of AGENT-1 .
+CORRECT: PATIENT-2 is the capital of BRIDGE-1 and the leader of PATIENT-3 is PATIENT-1 . BRIDGE-1 is the location of AGENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: The National Assembly is the legislative branch of government in Azerbaijan where the leader is Artur Rasizade. The Turkish martyrs memorial is located in the capital, Baku.
+TEMPLATE: PATIENT-3 is the legislative branch of government in BRIDGE-1 where the leader is PATIENT-1 . AGENT-1 is located in the capital , PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: The Baku Turkish Martyrs' Memorial is located in Baku, the capital of Azerbaijan, where leader is Artur Rasizade and the legislature is known as the National Assembly.
+TEMPLATE: AGENT-1 is located in PATIENT-2 , the capital of BRIDGE-1 , where leader is PATIENT-1 and AGENT-1 is known as PATIENT-3 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id5 4 Monument
+
+TRIPLES
+Azerbaijan | leader | Artur_Rasizade
+Baku_Turkish_Martyrs_Memorial | material | "Red granite and white marble"
+Baku_Turkish_Martyrs_Memorial | dedicatedTo | "Ottoman Army soldiers killed in the Battle of Baku"
+Baku_Turkish_Martyrs_Memorial | location | Azerbaijan
+
+
+ENTITY MAP
+BRIDGE-1 | Azerbaijan
+AGENT-1 | Baku_Turkish_Martyrs_Memorial
+PATIENT-1 | Artur_Rasizade
+PATIENT-3 | "Ottoman Army soldiers killed in the Battle of Baku"
+PATIENT-2 | "Red granite and white marble"
+
+
+LEX
+Id1
+TEXT: The red granite and white marble @ Baku Turkish Martyrs' Memorial is dedicated to the Ottoman Army Soldiers killed in the Battle of Baku, and is located in Baku, Azerbaijan, where the leader is Artur Rasizade.
+TEMPLATE: PATIENT-2 AGENT-1 is dedicated to PATIENT-3 , and is located in BRIDGE-1 , where PATIENT-2 leader is PATIENT-1 .
+CORRECT: PATIENT-2 @ AGENT-1 is dedicated to PATIENT-3 , and is located in BRIDGE-1 , where the leader is PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: Artur Rasizade was an Azerbaijan leader. Baku Turkish Martyrs' Memorial is made of red granite and white marble, is dedicated to the Ottoman Army soldiers killed in the Battle of Baku and located in Azerbaijan.
+TEMPLATE: PATIENT-1 was an BRIDGE-1 leader . AGENT-1 is made of PATIENT-2 , is dedicated to PATIENT-3 and located in BRIDGE-1 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Artur Rasizade is an Azerbaijan leader. The Baku Turkish Martyrs' Memorial located in Baku, Azerbaijan is made with red granite and white marble and has been dedicated to Ottoman Army soldiers killed in the Battle of Baku.
+TEMPLATE: PATIENT-1 is an BRIDGE-1 leader . AGENT-1 located in BRIDGE-1 is made with PATIENT-2 and has been dedicated to PATIENT-3 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id6 4 Monument
+
+TRIPLES
+Azerbaijan | leaderTitle | Prime_Minister_of_Azerbaijan
+Baku_Turkish_Martyrs_Memorial | dedicatedTo | "Ottoman Army soldiers killed in the Battle of Baku"
+Baku_Turkish_Martyrs_Memorial | location | Azerbaijan
+Azerbaijan | leaderName | Artur_Rasizade
+
+
+ENTITY MAP
+BRIDGE-1 | Azerbaijan
+AGENT-1 | Baku_Turkish_Martyrs_Memorial
+PATIENT-1 | Prime_Minister_of_Azerbaijan
+PATIENT-3 | Artur_Rasizade
+PATIENT-2 | "Ottoman Army soldiers killed in the Battle of Baku"
+
+
+LEX
+Id1
+TEXT: The Baku Turkish Martyrs' Memorial, which is dedicated to the Ottoman Army Soldiers killed in the Battle of Baku, is located in Azerbaijan, where the official leader (Prime Minister of Azerbaijan) is called Artur Rasizade.
+TEMPLATE: AGENT-1 , which is dedicated to PATIENT-2 , is located in BRIDGE-1 , where the official leader ( PATIENT-1 ) is called PATIENT-3 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: The Baku Turkish Martyr's Memorial is dedicated to the Ottoman Army soldiers killed in the Battle of Baku, and is located in Azerbaijan, which is led by the Prime Minister of Azerbaijan, Artur Rasizade.
+TEMPLATE: AGENT-1 is dedicated to PATIENT-2 , and is located in BRIDGE-1 , which is led by PATIENT-1 , PATIENT-3 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Artur Rasizade is the Prime Minister of Azerbaijan. Azerbaijan is the location of the Baku Turkish Martyrs memorial which is dedicated to the soldiers of the Ottoman army killed in the Battle of Baku.
+TEMPLATE: PATIENT-3 is PATIENT-1 . BRIDGE-1 is the location of AGENT-1 which is dedicated to PATIENT-2 of the Ottoman army killed in the Battle of Baku .
+CORRECT: PATIENT-3 is PATIENT-1 . BRIDGE-1 is the location of AGENT-1 which is dedicated to PATIENT-2 .
+COMMENT: 
+-
+

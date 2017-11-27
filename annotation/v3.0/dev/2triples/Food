@@ -1,0 +1,1164 @@
+
+Entry: Id4 2 Food
+
+TRIPLES
+Antioquia_Department | country | Colombia
+Bandeja_paisa | region | Antioquia_Department
+
+
+ENTITY MAP
+BRIDGE-1 | Antioquia_Department
+AGENT-1 | Bandeja_paisa
+PATIENT-1 | Colombia
+
+
+LEX
+Id1
+TEXT: Bandeja paisa comes from the Antioquia Department of Colombia.
+TEMPLATE: AGENT-1 comes from BRIDGE-1 of PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Bandeja paisa is a dish found in the Antioquia Department of Colombia.
+TEMPLATE: AGENT-1 is a dish found in BRIDGE-1 of PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id1 2 Food
+
+TRIPLES
+Ajoblanco | country | Spain
+Ajoblanco | ingredient | Bread
+
+
+ENTITY MAP
+AGENT-1 | Ajoblanco
+PATIENT-1 | Spain
+PATIENT-2 | Bread
+
+
+LEX
+Id1
+TEXT: Bread is an ingredient of Ajoblanco which originates from Spain.
+TEMPLATE: PATIENT-2 is an ingredient of AGENT-1 which originates from PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: One of the ingredients of Ajoblanco is bread and it originates from Spain.
+TEMPLATE: One of the ingredients of AGENT-1 is PATIENT-2 and AGENT-1 originates from PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Bread is an ingredient of Ajoblanco which comes from Spain.
+TEMPLATE: PATIENT-2 is an ingredient of AGENT-1 which comes from PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id2 2 Food
+
+TRIPLES
+Ajoblanco | ingredient | Almond
+Ajoblanco | region | Andalusia
+
+
+ENTITY MAP
+AGENT-1 | Ajoblanco
+PATIENT-1 | Almond
+PATIENT-2 | Andalusia
+
+
+LEX
+Id1
+TEXT: Ajoblanco, from Andalusia, has almond as one of its ingredients.
+TEMPLATE: AGENT-1 , from PATIENT-2 , has PATIENT-1 as PATIENT-1 of its ingredients .
+CORRECT: AGENT-1 , from PATIENT-2 , has PATIENT-1 as one of AGENT-1 ingredients .
+COMMENT: 
+-
+Id2
+TEXT: Almond is an ingredient in ajoblanco, from Andalusia.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 , from PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Ajoblanco is from the Andalusia region and has almond as one of its ingredients.
+TEMPLATE: AGENT-1 is from the PATIENT-2 region and has PATIENT-1 as PATIENT-1 of its ingredients .
+CORRECT: AGENT-1 is from the PATIENT-2 region and has PATIENT-1 as one of AGENT-1 ingredients .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id3 2 Food
+
+TRIPLES
+Amatriciana_sauce | region | Lazio
+Amatriciana_sauce | ingredient | Tomato
+
+
+ENTITY MAP
+AGENT-1 | Amatriciana_sauce
+PATIENT-1 | Lazio
+PATIENT-2 | Tomato
+
+
+LEX
+Id1
+TEXT: Tomato is an ingredient in Amatriciana sauce which comes from Lazio.
+TEMPLATE: PATIENT-2 is an ingredient in AGENT-1 which comes from PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Amatriciana sauce is from the Lazio region and tomato is one of the ingredients.
+TEMPLATE: AGENT-1 is from the PATIENT-1 region and PATIENT-2 is one of the ingredients .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Tomato is an ingredient in Amatriciana sauce which comes from the region of Lazio.
+TEMPLATE: PATIENT-2 is an ingredient in AGENT-1 which comes from the region of PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id5 2 Food
+
+TRIPLES
+Arem-arem | region | Indonesia
+Arem-arem | ingredient | Banana_leaf
+
+
+ENTITY MAP
+AGENT-1 | Arem-arem
+PATIENT-1 | Indonesia
+PATIENT-2 | Banana_leaf
+
+
+LEX
+Id1
+TEXT: Arem-arem uses the ingredient banana leaf, it is a common dish in Indonesia.
+TEMPLATE: AGENT-1 uses PATIENT-2 , PATIENT-2 is a common dish in PATIENT-1 .
+CORRECT: AGENT-1 uses the ingredient PATIENT-2 , AGENT-1 is a common dish in PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: Banana leaf is an ingredient in arem arem, which comes from Indonesia.
+TEMPLATE: PATIENT-2 is an ingredient in AGENT-1 , which comes from PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Arem arem which includes banana leaf, comes from Indonesia.
+TEMPLATE: AGENT-1 which includes PATIENT-2 , comes from PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id6 2 Food
+
+TRIPLES
+Arrabbiata_sauce | country | Italy
+Arrabbiata_sauce | ingredient | Olive_oil
+
+
+ENTITY MAP
+AGENT-1 | Arrabbiata_sauce
+PATIENT-1 | Italy
+PATIENT-2 | Olive_oil
+
+
+LEX
+Id1
+TEXT: Olive oil is an ingredient used in the preparation of Arrabbiata sauce, found in Italy.
+TEMPLATE: PATIENT-2 is an ingredient used in the preparation of AGENT-1 , found in PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Olive Oil is used to create Italian @ Arrabbiata sauce.
+TEMPLATE: PATIENT-2 is used to create PATIENT-1 AGENT-1 .
+CORRECT: PATIENT-2 is used to create PATIENT-1 @ AGENT-1 .
+COMMENT: 
+-
+Id3
+TEXT: Olive oil is an ingredient in Arrabbiata sauce, which can be found in Italy.
+TEMPLATE: PATIENT-2 is an ingredient in AGENT-1 , which can be found in PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id7 2 Food
+
+TRIPLES
+Arrabbiata_sauce | country | Italy
+Italy | capital | Rome
+
+
+ENTITY MAP
+BRIDGE-1 | Italy
+AGENT-1 | Arrabbiata_sauce
+PATIENT-1 | Rome
+
+
+LEX
+Id1
+TEXT: Arrabbiata sauce is found in Italy where the capital city is Rome.
+TEMPLATE: AGENT-1 is found in BRIDGE-1 where the capital city is PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Rome is the capital of Italy which is where Arrabbiata sauce comes from.
+TEMPLATE: PATIENT-1 is the capital of BRIDGE-1 which is where AGENT-1 comes from .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Arrabbiata sauce is from Italy which has the capital city of Rome.
+TEMPLATE: AGENT-1 is from BRIDGE-1 which has PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id8 2 Food
+
+TRIPLES
+Arrabbiata_sauce | ingredient | Tomato
+Arrabbiata_sauce | country | Italy
+
+
+ENTITY MAP
+AGENT-1 | Arrabbiata_sauce
+PATIENT-1 | Tomato
+PATIENT-2 | Italy
+
+
+LEX
+Id1
+TEXT: Tomatoes are found in Arrabbiata sauce which comes from Italy.
+TEMPLATE: PATIENT-1 are found in AGENT-1 which comes from PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Tomatoes are an ingredient of Arrabbiata sauce from Italy.
+TEMPLATE: PATIENT-1 are an ingredient of AGENT-1 from PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Tomatoes are found in Arrabbiata sauce, which originated in Italy.
+TEMPLATE: PATIENT-1 are found in AGENT-1 , which originated in PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id9 2 Food
+
+TRIPLES
+Arròs_negre | country | Spain
+Arròs_negre | ingredient | Squid
+
+
+ENTITY MAP
+AGENT-1 | Arròs_negre
+PATIENT-1 | Spain
+PATIENT-2 | Squid
+
+
+LEX
+Id1
+TEXT: Arròs negre is from Spain, it includes squid.
+TEMPLATE: AGENT-1 is from PATIENT-1 , AGENT-1 includes PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Arròs negre is a traditional dish from Spain, it includes squid.
+TEMPLATE: AGENT-1 is a traditional dish from PATIENT-1 , PATIENT-1 includes PATIENT-2 .
+CORRECT: AGENT-1 is a traditional dish from PATIENT-1 , AGENT-1 includes PATIENT-2 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id10 2 Food
+
+TRIPLES
+Arròs_negre | region | Valencian_Community
+Arròs_negre | ingredient | Cuttlefish
+
+
+ENTITY MAP
+AGENT-1 | Arròs_negre
+PATIENT-1 | Valencian_Community
+PATIENT-2 | Cuttlefish
+
+
+LEX
+Id1
+TEXT: Cuttlefish is an ingredient in Arros negre which comes from the region of Valencian Community.
+TEMPLATE: PATIENT-2 is an ingredient in AGENT-1 which comes from AGENT-1 of PATIENT-1 .
+CORRECT: PATIENT-2 is an ingredient in AGENT-1 which comes from the region of PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: An ingredient of arros negre is cuttlefish, the dish comes from the Valencian community region.
+TEMPLATE: An ingredient of AGENT-1 is PATIENT-2 , the dish comes from PATIENT-1 AGENT-1 .
+CORRECT: An ingredient of AGENT-1 is PATIENT-2 , AGENT-1 comes from PATIENT-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id11 2 Food
+
+TRIPLES
+Ayam_penyet | country | Java
+Ayam_penyet | mainIngredients | "Squeezed" or "smashed" fried chicken served with sambal
+
+
+ENTITY MAP
+AGENT-1 | Ayam_penyet
+PATIENT-1 | Java
+PATIENT-2 | "Squeezed" or "smashed" fried chicken served with sambal
+
+
+LEX
+Id1
+TEXT: Ayam penyet is a food found in Java and the main ingredients are "squeezed" or "smashed" chicken served with sambal.
+TEMPLATE: AGENT-1 is a food found in PATIENT-1 and the main ingredients are PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Ayam penyet (Javanese) includes squeezed/smashed fried chicken and is served with sambal.
+TEMPLATE: AGENT-1 ( Javanese ) includes squeezed/smashed fried PATIENT-2 and is served with PATIENT-1 .
+CORRECT: AGENT-1 ( PATIENT-1 ) includes PATIENT-2 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id12 2 Food
+
+TRIPLES
+Bacon_Explosion | country | United_States
+Bacon_Explosion | ingredient | Sausage
+
+
+ENTITY MAP
+AGENT-1 | Bacon_Explosion
+PATIENT-1 | United_States
+PATIENT-2 | Sausage
+
+
+LEX
+Id1
+TEXT: A sausage is used when making a Bacon Explosion which has The United states to thank for inventing it.
+TEMPLATE: PATIENT-2 is used when making AGENT-1 which has PATIENT-1 to thank for inventing PATIENT-1 .
+CORRECT: PATIENT-2 is used when making AGENT-1 which has PATIENT-1 to thank for inventing AGENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: Bacon Explosion is a dish from the United States that contains sausage.
+TEMPLATE: AGENT-1 is a dish from PATIENT-1 that contains PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Bacon Explosion comes from the United States and includes sausage among its ingredients.
+TEMPLATE: AGENT-1 comes from PATIENT-1 and includes PATIENT-2 among AGENT-1 PATIENT-2 .
+CORRECT: AGENT-1 comes from PATIENT-1 and includes PATIENT-2 among AGENT-1 ingredients .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id13 2 Food
+
+TRIPLES
+Bacon_Explosion | country | United_States
+United_States | leaderName | John_Roberts
+
+
+ENTITY MAP
+BRIDGE-1 | United_States
+AGENT-1 | Bacon_Explosion
+PATIENT-1 | John_Roberts
+
+
+LEX
+Id1
+TEXT: The United States, where John Roberts is a leader, is the country of the Bacon Explosion.
+TEMPLATE: BRIDGE-1 , wBRIDGE-1 PATIENT-1 is BRIDGE-1 , is BRIDGE-1 of AGENT-1 .
+CORRECT: BRIDGE-1 , where PATIENT-1 is a leader , is the country of AGENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: The Bacon Explosion comes from the United States where John Roberts is a leader.
+TEMPLATE: AGENT-1 comes from BRIDGE-1 wBRIDGE-1 PATIENT-1 is BRIDGE-1 .
+CORRECT: AGENT-1 comes from BRIDGE-1 where PATIENT-1 is a leader .
+COMMENT: 
+-
+Id3
+TEXT: The United States (with a leader, John Roberts) boasts the Bacon Explosion.
+TEMPLATE: BRIDGE-1 ( with BRIDGE-1 , PATIENT-1 ) boasts AGENT-1 .
+CORRECT: BRIDGE-1 ( with a leader , PATIENT-1 ) boasts AGENT-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id14 2 Food
+
+TRIPLES
+Bacon_Explosion | ingredient | Bacon
+Bacon_Explosion | course | "Main course"
+
+
+ENTITY MAP
+AGENT-1 | Bacon_Explosion
+PATIENT-1 | Bacon
+PATIENT-2 | "Main course"
+
+
+LEX
+Id1
+TEXT: Bacon is an ingredient in the main course dish 'Bacon Explosion'.
+TEMPLATE: PATIENT-1 is an ingredient in PATIENT-2 ` AGENT-1 ' .
+CORRECT: PATIENT-1 is an ingredient in the PATIENT-2 dish ` AGENT-1 ' .
+COMMENT: 
+-
+Id2
+TEXT: Bacon is an ingredient in a main course called Bacon Explosion.
+TEMPLATE: PATIENT-1 is an ingredient in PATIENT-2 called AGENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Bacon Explosion is an entree that includes bacon, the main ingredient.
+TEMPLATE: AGENT-1 is an entree that includes PATIENT-1 , the PATIENT-2 ingredient .
+CORRECT: AGENT-1 is PATIENT-2 that includes PATIENT-1 , the main ingredient .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id15 2 Food
+
+TRIPLES
+Bacon_sandwich | alternativeName | "Bacon butty, bacon sarnie, rasher sandwich, bacon sanger, piece n bacon, bacon cob, bacon barm, bacon muffin"
+Bacon_sandwich | ingredient | Bread
+
+
+ENTITY MAP
+AGENT-1 | Bacon_sandwich
+PATIENT-1 | "Bacon butty, bacon sarnie, rasher sandwich, bacon sanger, piece n bacon, bacon cob, bacon barm, bacon muffin"
+PATIENT-2 | Bread
+
+
+LEX
+Id1
+TEXT: A bacon sandwich on bread is also known as bacon butty, bacon sarnie, rasher sandwich, bacon sanger, piece 'n bacon, bacon cob, bacon barm, or bacon muffin.
+TEMPLATE: AGENT-1 on PATIENT-2 is also known as AGENT-1 butty , AGENT-1 sarnie , PATIENT-1 , AGENT-1 sanger , piece 'n AGENT-1 , AGENT-1 cob , AGENT-1 barm , or AGENT-1 muffin .
+CORRECT: AGENT-1 on PATIENT-2 is also known as PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: The bacon sandwich, which one of two ingedients is bread, has different names including: Bacon butty, bacon sarnie, rasher sandwich, bacon sanger, piece 'n bacon, bacon cob, bacon barm and bacon muffin.
+TEMPLATE: AGENT-1 , which one of two ingedients is PATIENT-2 , has different names including : PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id16 2 Food
+
+TRIPLES
+Baked_Alaska | country | "France, United States or China"
+Baked_Alaska | ingredient | Christmas_pudding
+
+
+ENTITY MAP
+AGENT-1 | Baked_Alaska
+PATIENT-1 | "France, United States or China"
+PATIENT-2 | Christmas_pudding
+
+
+LEX
+Id1
+TEXT: Baked Alaska is thought to have originated in the United States, France or China, and contains Christmas pudding as an ingredient.
+TEMPLATE: AGENT-1 is thought to have originated in PATIENT-1 , and contains PATIENT-2 as an ingredient .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: France, United States and China all claim to have invented Baked Alaska which can have Christmas pudding as an ingredient.
+TEMPLATE: PATIENT-1 claim to have invented AGENT-1 which can have PATIENT-2 as an ingredient .
+CORRECT: PATIENT-1 all claim to have invented AGENT-1 which can have PATIENT-2 as an ingredient .
+COMMENT: 
+-
+Id3
+TEXT: Christmas pudding is an ingredient in Baked Alaska which is from France, the United States and China.
+TEMPLATE: PATIENT-2 is an ingredient in AGENT-1 which is from PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id17 2 Food
+
+TRIPLES
+Baked_Alaska | country | China
+China | language | Standard_Chinese
+
+
+ENTITY MAP
+BRIDGE-1 | China
+AGENT-1 | Baked_Alaska
+PATIENT-1 | Standard_Chinese
+
+
+LEX
+Id1
+TEXT: Baked Alaska comes from China, where Standard Chinese is spoken.
+TEMPLATE: AGENT-1 comes from BRIDGE-1 , where PATIENT-1 is spoken .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Standard Chinese is spoken in China where baked Alaska is a dish.
+TEMPLATE: PATIENT-1 is spoken in BRIDGE-1 where AGENT-1 is a dish .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id18 2 Food
+
+TRIPLES
+Baked_Alaska | course | Dessert
+Dessert | dishVariation | Cookie
+
+
+ENTITY MAP
+BRIDGE-1 | Dessert
+AGENT-1 | Baked_Alaska
+PATIENT-1 | Cookie
+
+
+LEX
+Id1
+TEXT: Baked Alaska and cookies are types of dessert.
+TEMPLATE: AGENT-1 and PATIENT-1 are types of BRIDGE-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Baked Alaska and a cookie are both desserts.
+TEMPLATE: AGENT-1 and PATIENT-1 are BRIDGE-1 .
+CORRECT: AGENT-1 and PATIENT-1 are both BRIDGE-1 .
+COMMENT: 
+-
+Id3
+TEXT: A Baked Alaska is a dessert along with cookies which you can also eat as a dessert.
+TEMPLATE: AGENT-1 is BRIDGE-1 along with PATIENT-1 which you can also eat as BRIDGE-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id19 2 Food
+
+TRIPLES
+Bakewell_pudding | creator | "Rutland Arms, Bakewell, in 1820"
+Bakewell_pudding | mainIngredients | "Ground almond, jam, butter, eggs"
+
+
+ENTITY MAP
+AGENT-1 | Bakewell_pudding
+PATIENT-1 | "Rutland Arms, Bakewell, in 1820"
+PATIENT-2 | "Ground almond, jam, butter, eggs"
+
+
+LEX
+Id1
+TEXT: Bakewell pudding was created in 1820 at the Rutland Arms, Bakewell and has ground almond, jam, butter and eggs as main ingredients.
+TEMPLATE: AGENT-1 was created in 1820 at PATIENT-1 and has PATIENT-2 as main ingredients .
+CORRECT: AGENT-1 was created PATIENT-1 and has PATIENT-2 as main ingredients .
+COMMENT: 
+-
+Id2
+TEXT: The main ingredients of Bakewell pudding, which was invented in Rutland Arms, Bakewell, in 1820, are ground almond, jam, butter and eggs.
+TEMPLATE: The main ingredients of AGENT-1 , which was invented in PATIENT-1 , are PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id20 2 Food
+
+TRIPLES
+Bakewell_pudding | dishVariation | Bakewell_tart
+Bakewell_tart | ingredient | Shortcrust_pastry
+
+
+ENTITY MAP
+BRIDGE-1 | Bakewell_tart
+AGENT-1 | Bakewell_pudding
+PATIENT-1 | Shortcrust_pastry
+
+
+LEX
+Id1
+TEXT: Bakewell tart, made with shortcrust pastry, is a variation of Bakewell pudding.
+TEMPLATE: BRIDGE-1 , made with PATIENT-1 , is AGENT-1 variation of AGENT-1 .
+CORRECT: BRIDGE-1 , made with PATIENT-1 , is a variation of AGENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: A variant of bakewell pudding is bakewell tart, made with shortcrust pastry.
+TEMPLATE: A variant of AGENT-1 is BRIDGE-1 , made with PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: A variant of bakewell pudding is bakewell tart which uses shortcrust pastry.
+TEMPLATE: A variant of AGENT-1 is BRIDGE-1 which uses PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id21 2 Food
+
+TRIPLES
+Bandeja_paisa | ingredient | Lemon
+Lemon | genus | Citrus
+
+
+ENTITY MAP
+BRIDGE-1 | Lemon
+AGENT-1 | Bandeja_paisa
+PATIENT-1 | Citrus
+
+
+LEX
+Id1
+TEXT: Lemon (part of genus Citrus) is an ingredient in Bandeja paisa.
+TEMPLATE: BRIDGE-1 ( part of PATIENT-1 ) is an ingredient in AGENT-1 .
+CORRECT: BRIDGE-1 ( part of genus PATIENT-1 ) is an ingredient in AGENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: Lemon, from the genus citrus, is an ingredient in Bandeja paisa.
+TEMPLATE: BRIDGE-1 , from PATIENT-1 , is an ingredient in AGENT-1 .
+CORRECT: BRIDGE-1 , from the genus PATIENT-1 , is an ingredient in AGENT-1 .
+COMMENT: 
+-
+Id3
+TEXT: Lemon (genus; citrus) is an ingredient found in Bandeja paisa.
+TEMPLATE: BRIDGE-1 ( genus ; PATIENT-1 ) is an ingredient found in AGENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id22 2 Food
+
+TRIPLES
+Batchoy | country | Philippines
+Batchoy | ingredient | Shrimp
+
+
+ENTITY MAP
+AGENT-1 | Batchoy
+PATIENT-1 | Philippines
+PATIENT-2 | Shrimp
+
+
+LEX
+Id1
+TEXT: Batchoy is a food in the Philippines and one of its ingredient is shrimp.
+TEMPLATE: AGENT-1 is a food in PATIENT-1 and one of its ingredient is PATIENT-2 .
+CORRECT: AGENT-1 is a food in PATIENT-1 and one of AGENT-1 ingredient is PATIENT-2 .
+COMMENT: 
+-
+Id2
+TEXT: The Philippines is the country of origin for the dish Batchoy, of which shrimp is one of the main ingredients.
+TEMPLATE: PATIENT-1 is PATIENT-1 of origin for AGENT-1 , of which PATIENT-2 is one of PATIENT-1 main ingredients .
+CORRECT: PATIENT-1 is the country of origin for AGENT-1 , of which PATIENT-2 is one of AGENT-1 main ingredients .
+COMMENT: 
+-
+Id3
+TEXT: The Philippines is the country that Batchoy, a dish containing shrimp, comes from.
+TEMPLATE: PATIENT-1 is PATIENT-1 that AGENT-1 , a dish containing PATIENT-2 , comes from .
+CORRECT: PATIENT-1 is the country that AGENT-1 , a dish containing PATIENT-2 , comes from .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id23 2 Food
+
+TRIPLES
+Batchoy | country | Philippines
+Philippines | ethnicGroup | Chinese_Filipino
+
+
+ENTITY MAP
+BRIDGE-1 | Philippines
+AGENT-1 | Batchoy
+PATIENT-1 | Chinese_Filipino
+
+
+LEX
+Id1
+TEXT: The Chinese Filipino is an ethnic group in the Philippines, where batchoy is a traditional dish.
+TEMPLATE: PATIENT-1 is an ethnic group in BRIDGE-1 , where AGENT-1 is a traditional dish .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Chinese Filipino are from the Philippines, where batchoy is eaten.
+TEMPLATE: PATIENT-1 are from BRIDGE-1 , where AGENT-1 is eaten .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Batchoy is a food from the Philippines, the country where there is an ethnic group called the Chinese Filipino.
+TEMPLATE: AGENT-1 is a food from BRIDGE-1 , BRIDGE-1 where there is an ethnic group called PATIENT-1 .
+CORRECT: AGENT-1 is a food from BRIDGE-1 , the country where there is an ethnic group called PATIENT-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id24 2 Food
+
+TRIPLES
+Beef_kway_teow | region | Singapore
+Singapore | language | Standard_Chinese
+
+
+ENTITY MAP
+BRIDGE-1 | Singapore
+AGENT-1 | Beef_kway_teow
+PATIENT-1 | Standard_Chinese
+
+
+LEX
+Id1
+TEXT: Beef kway teow originates from Singapore, where Chinese is spoken.
+TEMPLATE: AGENT-1 originates from BRIDGE-1 , where PATIENT-1 is spoken .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Standard chinese speaking Singapore is the origin of beef kway teow.
+TEMPLATE: PATIENT-1 BRIDGE-1 is the origin of AGENT-1 .
+CORRECT: PATIENT-1 speaking BRIDGE-1 is the origin of AGENT-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id25 2 Food
+
+TRIPLES
+Beef_kway_teow | region | Singapore
+Singapore | leaderName | Tony_Tan
+
+
+ENTITY MAP
+BRIDGE-1 | Singapore
+AGENT-1 | Beef_kway_teow
+PATIENT-1 | Tony_Tan
+
+
+LEX
+Id1
+TEXT: Beef kway teow is a dish of Singapore where Tony Tan is a leader.
+TEMPLATE: AGENT-1 is BRIDGE-1 of BRIDGE-1 where PATIENT-1 is a leader .
+CORRECT: AGENT-1 is a dish of BRIDGE-1 where PATIENT-1 is a leader .
+COMMENT: 
+-
+Id2
+TEXT: Tony Tan is the leader of Singapore, from where Beef kway teow originates.
+TEMPLATE: PATIENT-1 is the leader of BRIDGE-1 , from where AGENT-1 originates .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Beef kway teow originates from Singapore and it's leader is Tony Tan.
+TEMPLATE: AGENT-1 originates from BRIDGE-1 and AGENT-1 's leader is PATIENT-1 .
+CORRECT: AGENT-1 originates from BRIDGE-1 and AGENT-1 leader is PATIENT-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id26 2 Food
+
+TRIPLES
+Bhajji | country | India
+India | leaderName | Sumitra_Mahajan
+
+
+ENTITY MAP
+BRIDGE-1 | India
+AGENT-1 | Bhajji
+PATIENT-1 | Sumitra_Mahajan
+
+
+LEX
+Id1
+TEXT: Bhajji originates from India and Sumitra Mahajan is it's leader.
+TEMPLATE: AGENT-1 originates from BRIDGE-1 and PATIENT-1 is BRIDGE-1 's leader .
+CORRECT: AGENT-1 originates from BRIDGE-1 and PATIENT-1 is BRIDGE-1 leader .
+COMMENT: 
+-
+Id2
+TEXT: Bhajji comes from India where the leader is Sumitra Mahajan.
+TEMPLATE: AGENT-1 comes from BRIDGE-1 where the leader is PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Bhajji originates from India where the leader is Sumitra Mahajan.
+TEMPLATE: AGENT-1 originates from BRIDGE-1 where the leader is PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id27 2 Food
+
+TRIPLES
+Bhajji | similarDish | "Pakora and other fritters made from wheat or corn flour"
+Bhajji | ingredient | Gram_flour
+
+
+ENTITY MAP
+AGENT-1 | Bhajji
+PATIENT-1 | "Pakora and other fritters made from wheat or corn flour"
+PATIENT-2 | Gram_flour
+
+
+LEX
+Id1
+TEXT: Bhajji, which uses gram flour, is a dish similar to pakora and other fritters made from wheat or corn flour.
+TEMPLATE: AGENT-1 , which uses PATIENT-2 , is a dish similar to PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Gram flour is an ingredient of a Bhajji, which is a similar dish to pakora and other fritters made from wheat or corn flour.
+TEMPLATE: PATIENT-2 is an ingredient of AGENT-1 , which is a similar dish to PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id28 2 Food
+
+TRIPLES
+Binignit | ingredient | Sweet_potato
+Binignit | mainIngredients | Banana
+
+
+ENTITY MAP
+AGENT-1 | Binignit
+PATIENT-1 | Sweet_potato
+PATIENT-2 | Banana
+
+
+LEX
+Id1
+TEXT: An ingredient of Binignit is sweet potato, and one of the main ingredients is the banana.
+TEMPLATE: An ingredient of AGENT-1 is PATIENT-1 , and one of the main ingredients is PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Banana is a main ingredient of Binignit and sweet potato is also an ingredient.
+TEMPLATE: PATIENT-2 is a main ingredient of AGENT-1 and PATIENT-1 is also an ingredient .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: The main ingredient of Binignit is banana, and also important is the inclusion of sweet potatoes.
+TEMPLATE: The main ingredient of AGENT-1 is PATIENT-2 , and also important is the inclusion of PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id29 2 Food
+
+TRIPLES
+Binignit | ingredient | Sweet_potato
+Binignit | mainIngredients | Sago
+
+
+ENTITY MAP
+AGENT-1 | Binignit
+PATIENT-1 | Sweet_potato
+PATIENT-2 | Sago
+
+
+LEX
+Id1
+TEXT: Sago is the main ingredient in binignit but sweet potatoes are also used in it.
+TEMPLATE: PATIENT-2 is the main ingredient in AGENT-1 but PATIENT-1 are also used in AGENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Binignit has the ingredients sweet potato and sago.
+TEMPLATE: AGENT-1 has PATIENT-1 and PATIENT-2 .
+CORRECT: AGENT-1 has the ingredients PATIENT-1 and PATIENT-2 .
+COMMENT: 
+-
+Id3
+TEXT: Sweet potato and sago are main ingredients in Binignit.
+TEMPLATE: PATIENT-1 and PATIENT-2 are main ingredients in AGENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id30 2 Food
+
+TRIPLES
+Binignit | ingredient | Sweet_potato
+Sweet_potato | division | Flowering_plant
+
+
+ENTITY MAP
+BRIDGE-1 | Sweet_potato
+AGENT-1 | Binignit
+PATIENT-1 | Flowering_plant
+
+
+LEX
+Id1
+TEXT: Sweet potatoes (a kind of flowering plant) are used in binignit recipes.
+TEMPLATE: BRIDGE-1 ( a kind of PATIENT-1 ) are used in AGENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Sweet potato belongs to flowering plants and is an ingredient of Binignit.
+TEMPLATE: BRIDGE-1 belongs to PATIENT-1 and is an ingredient of AGENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id31 2 Food
+
+TRIPLES
+Binignit | mainIngredients | Sweet_potato
+Sweet_potato | order | Solanales
+
+
+ENTITY MAP
+BRIDGE-1 | Sweet_potato
+AGENT-1 | Binignit
+PATIENT-1 | Solanales
+
+
+LEX
+Id1
+TEXT: Sweet potatoes are the main ingredient of binignit and the potatoes are part of the order of Solanales.
+TEMPLATE: BRIDGE-1 are the main ingredient of AGENT-1 and the potatoes are PATIENT-1 of the order of PATIENT-1 .
+CORRECT: BRIDGE-1 are the main ingredient of AGENT-1 and BRIDGE-1 are part of the order of PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: Sweet potatoes are members of the Solanales order of plants. They are the main ingredient of binignit.
+TEMPLATE: BRIDGE-1 are members of the PATIENT-1 order of PATIENT-1 . PATIENT-1 are the main ingredient of AGENT-1 .
+CORRECT: BRIDGE-1 are members of the PATIENT-1 order of plants . BRIDGE-1 are the main ingredient of AGENT-1 .
+COMMENT: 
+-
+Id3
+TEXT: Sweet potato is of the order Solanales and are a main ingredient of binignit.
+TEMPLATE: BRIDGE-1 is of PATIENT-1 and are a main ingredient of AGENT-1 .
+CORRECT: BRIDGE-1 is of the order PATIENT-1 and are a main ingredient of AGENT-1 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id32 2 Food
+
+TRIPLES
+Bionico | course | Dessert
+Bionico | ingredient | Granola
+
+
+ENTITY MAP
+AGENT-1 | Bionico
+PATIENT-1 | Dessert
+PATIENT-2 | Granola
+
+
+LEX
+Id1
+TEXT: Bionico is a dessert and it requires granola as one of it's ingredients.
+TEMPLATE: AGENT-1 is PATIENT-1 and PATIENT-2 requires PATIENT-2 as one of PATIENT-2 's ingredients .
+CORRECT: AGENT-1 is PATIENT-1 and AGENT-1 requires PATIENT-2 as one of AGENT-1 ingredients .
+COMMENT: 
+-
+Id2
+TEXT: Bionico is a dessert, requiring granola as one of its ingredients.
+TEMPLATE: AGENT-1 is PATIENT-1 , requiring PATIENT-2 as one of its ingredients .
+CORRECT: AGENT-1 is PATIENT-1 , requiring PATIENT-2 as one of AGENT-1 ingredients .
+COMMENT: 
+-
+Id3
+TEXT: Bionico is a dessert that includes the ingredient granola.
+TEMPLATE: AGENT-1 is PATIENT-1 that includes PATIENT-2 .
+CORRECT: AGENT-1 is PATIENT-1 that includes the ingredients PATIENT-2 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id33 2 Food
+
+TRIPLES
+Bionico | dishVariation | Honey
+Bionico | course | Dessert
+
+
+ENTITY MAP
+AGENT-1 | Bionico
+PATIENT-1 | Honey
+PATIENT-2 | Dessert
+
+
+LEX
+Id1
+TEXT: A popular dessert is Bionico and a variation of this dish can be honey.
+TEMPLATE: popular PATIENT-2 is AGENT-1 and a variation of AGENT-1 dish can be PATIENT-1 .
+CORRECT: A popular PATIENT-2 is AGENT-1 and a variation of AGENT-1 can be PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: Honey can be used as a variaton in Bionico which is a dessert.
+TEMPLATE: PATIENT-1 can be used as a variaton in AGENT-1 which is PATIENT-2 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Honey can be added to bionico, a dessert dish.
+TEMPLATE: PATIENT-1 can be added to AGENT-1 , PATIENT-2 dish .
+CORRECT: PATIENT-1 can be added to AGENT-1 , PATIENT-2 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id34 2 Food
+
+TRIPLES
+Dessert | dishVariation | Ice_cream
+Bionico | course | Dessert
+
+
+ENTITY MAP
+BRIDGE-1 | Dessert
+AGENT-1 | Bionico
+PATIENT-1 | Ice_cream
+
+
+LEX
+Id1
+TEXT: Bionico and ice cream are both served as a dessert course.
+TEMPLATE: AGENT-1 and PATIENT-1 are both served as BRIDGE-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Bionico and ice cream are types of dessert.
+TEMPLATE: AGENT-1 and PATIENT-1 are types of BRIDGE-1 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: Bionico and Ice Cream are served at the dessert course.
+TEMPLATE: AGENT-1 and PATIENT-1 are served at BRIDGE-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id35 2 Food
+
+TRIPLES
+Siomay | ingredient | Peanut_sauce
+Batagor | dishVariation | Siomay
+
+
+ENTITY MAP
+BRIDGE-1 | Siomay
+AGENT-1 | Batagor
+PATIENT-1 | Peanut_sauce
+
+
+LEX
+Id1
+TEXT: Batagor and Siomay (which has peanut sauce as an ingredient) are variations of the same dish.
+TEMPLATE: AGENT-1 and BRIDGE-1 ( which has PATIENT-1 as an ingredient ) are variations of the same dish .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Peanut sauce is an ingredient in Siomay and Batagor is a variation of this dish.
+TEMPLATE: PATIENT-1 is an ingredient in BRIDGE-1 and AGENT-1 is PATIENT-1 of this dish .
+CORRECT: PATIENT-1 is an ingredient in BRIDGE-1 and AGENT-1 is a variation of BRIDGE-1 .
+COMMENT: 
+-
+Id3
+TEXT: Batagor is a variation of the dish Siomay, of which peanut sauce is an ingredient.
+TEMPLATE: AGENT-1 is PATIENT-1 of BRIDGE-1 , of which PATIENT-1 is an ingredient .
+CORRECT: AGENT-1 is a variation of BRIDGE-1 , of which PATIENT-1 is an ingredient .
+COMMENT: 
+-
+

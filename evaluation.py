@@ -8,6 +8,7 @@ def evaluate(y_real, y_pred):
     edit_distances = []
     pronoun_num, pronoun_dem = 0.0, 0.0
     num, dem = 0.0, 0.0
+    wrong = []
 
     for real, pred in zip(y_real, y_pred):
         real = real.replace('eos', '').strip()
@@ -17,6 +18,8 @@ def evaluate(y_real, y_pred):
 
         if pred.strip() == real:
             num += 1
+        else:
+            wrong.append({'real': real, 'pred':pred})
         dem += 1
 
         if real in ['he', 'his', 'him',
@@ -31,6 +34,7 @@ def evaluate(y_real, y_pred):
     print('ACCURACY: ', str(round(num/dem, 4)))
     print('DISTANCE: ', str(round(np.mean(edit_distances), 4)))
     print('PRONOUN ACCURACY: ', str(round(pronoun_num/pronoun_dem, 4)))
+    return wrong
 
 if __name__ == '__main__':
     references = p.load(open('data/results/baseline_names.cPickle'))
@@ -47,18 +51,23 @@ if __name__ == '__main__':
     print 'BASELINE:'
     evaluate(y_real, y_pred)
 
-    with open('data/results/dev_best_1_300_1024_1024_2_False') as f:
+    with open('data/results/dev_best_1_300_512_512_2_False') as f:
         y_pred = f.read().split('\n')
 
     with open('data/dev/refex.txt') as f:
         y_real = f.read().split('\n')
-    print 'MODEL: dev_best_1_300_1024_1024_2_False'
+    print 'MODEL: dev_best_1_300_512_512_2_False'
     evaluate(y_real, y_pred)
 
-    with open('data/results/dev_best_1_300_1024_1024_3_False') as f:
+    with open('data/results/dev_best_1_300_512_512_3_False') as f:
         y_pred = f.read().split('\n')
 
     with open('data/dev/refex.txt') as f:
         y_real = f.read().split('\n')
-    print 'MODEL: dev_best_1_300_1024_1024_3_False'
-    evaluate(y_real, y_pred)
+    print 'MODEL: dev_best_1_300_512_512_3_False'
+    wrong = evaluate(y_real, y_pred)
+
+    for e in wrong:
+        print 'REAL: ', e['real']
+        print 'PRED: ', e['pred']
+        print 10 * '-'

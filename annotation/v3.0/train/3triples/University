@@ -1,0 +1,2007 @@
+
+Entry: Id57 3 University
+
+TRIPLES
+Visvesvaraya_Technological_University | city | Belgaum
+Acharya_Institute_of_Technology | established | 2000
+Acharya_Institute_of_Technology | affiliation | Visvesvaraya_Technological_University
+
+
+ENTITY MAP
+BRIDGE-1 | Visvesvaraya_Technological_University
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | Belgaum
+PATIENT-2 | 2000
+
+
+LEX
+Id1
+TEXT: The Acharya Institute of Technology was established in 2000, and is affiliated with the Visvesvaraya Technological University based in Belgaum.
+TEMPLATE: AGENT-1 was established in PATIENT-2 , and is affiliated with BRIDGE-1 based in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Acharya Institute of Technology was established in 2000 and is affiliated with the Visvesvaraya Technological University in Belgaum.
+TEMPLATE: AGENT-1 was established in PATIENT-2 and is affiliated with BRIDGE-1 in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id46 3 University
+
+TRIPLES
+Romania | leaderTitle | Prime_Minister_of_Romania
+Romania | capital | Bucharest
+1_Decembrie_1918_University | country | Romania
+
+
+ENTITY MAP
+BRIDGE-1 | Romania
+AGENT-1 | 1_Decembrie_1918_University
+PATIENT-1 | Prime_Minister_of_Romania
+PATIENT-2 | Bucharest
+
+
+LEX
+Id1
+TEXT: 1 Decembrie 1918 University is located in Romania. Romania has a Prime Minister as its leader, and its capital is Bucharest.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 . BRIDGE-1 has PATIENT-1 as BRIDGE-1 leader , and BRIDGE-1 capital is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 1 Decembrie 1918 University is located in Romania. Bucharest is the capital of the country, which is led by a Prime Minister.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 . PATIENT-2 is the capital of the country , which is led by PATIENT-1 .
+CORRECT: AGENT-1 is located in BRIDGE-1 . PATIENT-2 is the capital of BRIDGE-1 , which is led by PATIENT-1 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id45 3 University
+
+TRIPLES
+Romania | leaderName | Klaus_Iohannis
+Romania | capital | Bucharest
+1_Decembrie_1918_University | country | Romania
+
+
+ENTITY MAP
+BRIDGE-1 | Romania
+AGENT-1 | 1_Decembrie_1918_University
+PATIENT-1 | Klaus_Iohannis
+PATIENT-2 | Bucharest
+
+
+LEX
+Id1
+TEXT: 1 Decembrie 1918 University is located in Romania. The capital of the country is Bucharest and the leader's name is Klaus Johannis.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 . The capital of the country is PATIENT-2 and the leader 's name is PATIENT-1 .
+CORRECT: AGENT-1 is located in BRIDGE-1 . The capital of BRIDGE-1 is PATIENT-2 and the leader 's name is PATIENT-1 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id39 3 University
+
+TRIPLES
+Bangalore | founder | Kempe_Gowda_I
+Acharya_Institute_of_Technology | president | "B.M. Reddy"
+Acharya_Institute_of_Technology | city | Bangalore
+
+
+ENTITY MAP
+BRIDGE-1 | Bangalore
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | Kempe_Gowda_I
+PATIENT-2 | "B.M. Reddy"
+
+
+LEX
+Id1
+TEXT: Kempe Gowda is the founder of Bangalore, the location of the Acharya Institute of Technology whose President is B M Reddy.
+TEMPLATE: PATIENT-1 is the founder of BRIDGE-1 , the location of AGENT-1 whose President is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The President of the Acharya Institute of Technology is B.M. Reddy and the university is located in Bangalore. The city was foundered by Kempe Gowda I.
+TEMPLATE: The President of AGENT-1 is PATIENT-2 and the university is located in BRIDGE-1 . The city was foundered by PATIENT-1
+CORRECT: The President of AGENT-1 is PATIENT-2 and AGENT-1 is located in BRIDGE-1 . BRIDGE-1 was foundered by PATIENT-1
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id38 3 University
+
+TRIPLES
+Bangalore | founder | Kempe_Gowda_I
+Acharya_Institute_of_Technology | city | Bangalore
+Acharya_Institute_of_Technology | affiliation | Visvesvaraya_Technological_University
+
+
+ENTITY MAP
+BRIDGE-1 | Bangalore
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | Kempe_Gowda_I
+PATIENT-2 | Visvesvaraya_Technological_University
+
+
+LEX
+Id1
+TEXT: Acharya Institute of Technology is affiliated with Visvesaraya Technological University in Bangalore. Its founder is Kempe Gowda.
+TEMPLATE: AGENT-1 is affiliated with PATIENT-2 in BRIDGE-1 . AGENT-1 founder is PATIENT-1 .
+CORRECT: AGENT-1 is affiliated with PATIENT-2 in BRIDGE-1 . BRIDGE-1 founder is PATIENT-1 .
+COMMENT: coref
+-
+Id2
+TEXT: Bangalore was founded by Kempe Gowda and is the location of the Acharya Institute of Technology which is affiliated with Visvesvaraya Technological University.
+TEMPLATE: BRIDGE-1 was founded by PATIENT-1 and is the location of AGENT-1 which is affiliated with PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id36 3 University
+
+TRIPLES
+Alba_Iulia | country | Romania
+Romania | capital | Bucharest
+1_Decembrie_1918_University | city | Alba_Iulia
+
+
+ENTITY MAP
+BRIDGE-1 | Romania
+BRIDGE-2 | Alba_Iulia
+PATIENT-1 | Bucharest
+AGENT-1 | 1_Decembrie_1918_University
+
+
+LEX
+Id1
+TEXT: 1 Decembrie 1918 University is in Alba Iulia, Romania. Bucharest is the capital of Romania.
+TEMPLATE: AGENT-1 is in BRIDGE-2 , BRIDGE-1 . PATIENT-1 is the capital of BRIDGE-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The 1 Decembrie 1918 University is located in the city of Alba Iulia, Romania (capital Bucharest).
+TEMPLATE: AGENT-1 is located in the city of BRIDGE-2 , BRIDGE-1 (PATIENT-1) .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id56 3 University
+
+TRIPLES
+School of Business and Social Sciences at the Aarhus University | numberOfStudents | 16000
+School of Business and Social Sciences at the Aarhus University | country | Denmark
+School of Business and Social Sciences at the Aarhus University | established | 1928
+
+
+ENTITY MAP
+AGENT-1 | School of Business and Social Sciences at the Aarhus University
+PATIENT-1 | 16000
+PATIENT-3 | 1928
+PATIENT-2 | Denmark
+
+
+LEX
+Id1
+TEXT: The School of Business and Social Sciences at the Aarhus University is located in Denmark, has 16,000 students and was established in 1928.
+TEMPLATE: AGENT-1 is located in PATIENT-2 , has PATIENT-1 and was established in PATIENT-3 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The School of Business and Social Sciences at Aarhus University in Denmark was established in 1928 and has 16000 students.
+TEMPLATE: The School of AGENT-1 at Aarhus University in PATIENT-2 was established in PATIENT-3 and has PATIENT-1 students .
+CORRECT: AGENT-1 in PATIENT-2 was established in PATIENT-3 and has PATIENT-1 students .
+COMMENT: mod
+-
+Id3
+TEXT: School of Business and Social Sciences at the Aarhus University in Denmark was established in 1928 and currently has a student body of 16000.
+TEMPLATE: AGENT-1 in PATIENT-2 was established in PATIENT-3 and currently has a student body of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id53 3 University
+
+TRIPLES
+School of Business and Social Sciences at the Aarhus University | country | Denmark
+Denmark | leaderName | Lars_Løkke_Rasmussen
+Denmark | religion | Church_of_Denmark
+
+
+ENTITY MAP
+BRIDGE-1 | Denmark
+AGENT-1 | School of Business and Social Sciences at the Aarhus University
+PATIENT-1 | Lars_Løkke_Rasmussen
+PATIENT-2 | Church_of_Denmark
+
+
+LEX
+Id1
+TEXT: The School of Business and Social Sciences at the Aarhus University is located in Denmark. Denmark's leader is Lars Lokke Rasmussen and Denmark's religion is the Church of Denmark.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 . BRIDGE-1 's leader is PATIENT-1 and BRIDGE-1 's religion is PATIENT-2 .
+CORRECT: AGENT-1 is located in BRIDGE-1 . BRIDGE-1 leader is PATIENT-1 and BRIDGE-1 religion is PATIENT-2 .
+COMMENT:
+-
+Id2
+TEXT: The School of Business and Social Sciences at the Aarhus University is located in Denmark. The leader of the country is Lars Lokke Rasmussen, and the state religion is the Church of Denmark.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 . The leader of the country is PATIENT-1 , and the state religion is PATIENT-2 .
+CORRECT: AGENT-1 is located in BRIDGE-1 . The leader of BRIDGE-1 is PATIENT-1 , and the state religion is PATIENT-2 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id51 3 University
+
+TRIPLES
+School of Business and Social Sciences at the Aarhus University | city | Aarhus
+European_University_Association | headquarters | Brussels
+School of Business and Social Sciences at the Aarhus University | affiliation | European_University_Association
+
+
+ENTITY MAP
+BRIDGE-1 | European_University_Association
+AGENT-1 | School of Business and Social Sciences at the Aarhus University
+PATIENT-1 | Aarhus
+PATIENT-2 | Brussels
+
+
+LEX
+Id1
+TEXT: The School of Business and Social Sciences at the Aarhus University is in Aarhus. It is affiliated with the European University Association in Brussels.
+TEMPLATE: AGENT-1 is in PATIENT-1 . AGENT-1 is affiliated with BRIDGE-1 in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The School of Business and Social Sciences at the Aarhus University, Aarhus, is affiliated with the European University Association which has its headquarters in Brussels.
+TEMPLATE: AGENT-1 , PATIENT-1 , is affiliated with BRIDGE-1 which has AGENT-1 headquarters in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id58 3 University
+
+TRIPLES
+Visvesvaraya_Technological_University | city | Belgaum
+Acharya_Institute_of_Technology | numberOfPostgraduateStudents | 700
+Acharya_Institute_of_Technology | affiliation | Visvesvaraya_Technological_University
+
+
+ENTITY MAP
+BRIDGE-1 | Visvesvaraya_Technological_University
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | Belgaum
+PATIENT-2 | 700
+
+
+LEX
+Id1
+TEXT: Acharya Institute of Technology is affiliated with Visvesvaraya Technological University and has 700 postgraduate students. The university is located in Belgaum.
+TEMPLATE: AGENT-1 is affiliated with BRIDGE-1 and has PATIENT-2 postgraduate students . The university is located in PATIENT-1 .
+CORRECT: AGENT-1 is affiliated with BRIDGE-1 and has PATIENT-2 postgraduate students . AGENT-1 is located in PATIENT-1 .
+COMMENT: coref
+-
+Id2
+TEXT: The Visvesvaraya Technological university in Belgaum, is affiliated with the Acharya Institute of Technology, which has 700 postgraduate students.
+TEMPLATE: BRIDGE-1 in PATIENT-1 , is affiliated with AGENT-1 , which has PATIENT-2 postgraduate students .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id55 3 University
+
+TRIPLES
+School of Business and Social Sciences at the Aarhus University | latinName | "Universitas Aarhusiensis"
+School of Business and Social Sciences at the Aarhus University | affiliation | European_University_Association
+School of Business and Social Sciences at the Aarhus University | established | 1928
+
+
+ENTITY MAP
+AGENT-1 | School of Business and Social Sciences at the Aarhus University
+PATIENT-1 | "Universitas Aarhusiensis"
+PATIENT-3 | 1928
+PATIENT-2 | European_University_Association
+
+
+LEX
+Id1
+TEXT: The School of Business and Social Sciences at the Aarhus University (Latin name - "Universitas Aarhusiensis" was established in 1928 and it is affiliated with the European University Association.
+TEMPLATE: AGENT-1 (Latin name - `` PATIENT-1 '' was established in PATIENT-3 and AGENT-1 is affiliated with PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: "Universias Aarhusiensis" is the latin name of the School of Business and Social Sciences at Aarhus University which is affiliated to the European University Association. The School was established in 1928.
+TEMPLATE: `` PATIENT-1 '' is the latin name of AGENT-1 at Aarhus University which is affiliated to PATIENT-2 . The School was established in PATIENT-3 .
+CORRECT: `` PATIENT-1 '' is the latin name of AGENT-1 which is affiliated to PATIENT-2 . AGENT-1 was established in PATIENT-3 .
+COMMENT: mod - coref
+-
+Id3
+TEXT: The School of Business and Social Sciences at the Aarhus University, affiliated with the European University Association, was established in 1928. Its Latin name is Universitas Aarhusiensis.
+TEMPLATE: AGENT-1 , affiliated with PATIENT-2 , was established in PATIENT-3 . AGENT-1 Latin name is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id48 3 University
+
+TRIPLES
+School of Business and Social Sciences at the Aarhus University | academicStaffSize | 737
+School of Business and Social Sciences at the Aarhus University | country | Denmark
+School of Business and Social Sciences at the Aarhus University | established | 1928
+
+
+ENTITY MAP
+AGENT-1 | School of Business and Social Sciences at the Aarhus University
+PATIENT-1 | 737
+PATIENT-3 | 1928
+PATIENT-2 | Denmark
+
+
+LEX
+Id1
+TEXT: School of Business and Social Sciences at the Aarhus University is in Denmark. It was established in 1928 and has an academic staff of 737.
+TEMPLATE: AGENT-1 is in PATIENT-2 . AGENT-1 was established in PATIENT-3 and has an academic staff of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The School of Business and Social Sciences at the Aarhus University was established in 1928 in Denmark and has a staff of 737.
+TEMPLATE: AGENT-1 was established in PATIENT-3 in PATIENT-2 and has a staff of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The School of Business and Social Sciences at the Aarhus University, Denmark, has an academic staff of 737 and was established in 1928.
+TEMPLATE: AGENT-1 , PATIENT-2 , has an academic staff of PATIENT-1 and was established in PATIENT-3 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id47 3 University
+
+TRIPLES
+Romania | leaderTitle | Prime_Minister_of_Romania
+Romania | ethnicGroup | Germans_of_Romania
+1_Decembrie_1918_University | country | Romania
+
+
+ENTITY MAP
+BRIDGE-1 | Romania
+AGENT-1 | 1_Decembrie_1918_University
+PATIENT-1 | Prime_Minister_of_Romania
+PATIENT-2 | Germans_of_Romania
+
+
+LEX
+Id1
+TEXT: Romania is led by the Prime Minister; its ethnic group are Germans of Romania and its university is called the 1 Decembrie 1918 University.
+TEMPLATE: BRIDGE-1 is led by PATIENT-1 ; BRIDGE-1 ethnic group are PATIENT-2 and PATIENT-2 university is called AGENT-1 .
+CORRECT: BRIDGE-1 is led by PATIENT-1 ; BRIDGE-1 ethnic group are PATIENT-2 and BRIDGE-1 university is called AGENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The Germans of Romania are an ethnic group within Romania which has a Prime Minister as its leader. The country is the location for the 1 Decembrie 1918 University.
+TEMPLATE: PATIENT-2 are an ethnic group within BRIDGE-1 which has PATIENT-1 . The country is the location for AGENT-1 .
+CORRECT: PATIENT-2 are an ethnic group within BRIDGE-1 which has PATIENT-1 as BRIDGE-1 leader . BRIDGE-1 is the location for AGENT-1 .
+COMMENT: mod - coref
+-
+Id3
+TEXT: 1 Decembrie 1918 University is located in Romania, the leader of which is the Prime Minister and Romania has Germans as an ethnic group.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , the leader of which is PATIENT-1 and BRIDGE-1 has PATIENT-2 as an ethnic group .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id44 3 University
+
+TRIPLES
+Romania | ethnicGroup | Germans_of_Romania
+Romania | capital | Bucharest
+1_Decembrie_1918_University | country | Romania
+
+
+ENTITY MAP
+BRIDGE-1 | Romania
+AGENT-1 | 1_Decembrie_1918_University
+PATIENT-1 | Germans_of_Romania
+PATIENT-2 | Bucharest
+
+
+LEX
+Id1
+TEXT: The capital of Romania is Bucharest. The country is the location of the 1 Decembrie 1918 University and the home of one of the ethnic groups of Romania who are the Germans of Romania.
+TEMPLATE: The capital of BRIDGE-1 is PATIENT-2 . The country is the location of AGENT-1 and the home of one of the ethnic groups of BRIDGE-1 who are PATIENT-1 .
+CORRECT: The capital of BRIDGE-1 is PATIENT-2 . BRIDGE-1 is the location of AGENT-1 and the home of one of the ethnic groups of BRIDGE-1 who are PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The 1 Decembrie 1918 University is in Romania. Two facts about Romania are its capital is Bucharest, and one of its ethnic groups are known as the Germans of Romania.
+TEMPLATE: AGENT-1 is in BRIDGE-1 . Two facts about BRIDGE-1 are BRIDGE-1 capital is PATIENT-2 , and one of its ethnic groups are known as PATIENT-1 .
+CORRECT: AGENT-1 is in BRIDGE-1 . Two facts about BRIDGE-1 are BRIDGE-1 capital is PATIENT-2 , and one of BRIDGE-1 ethnic groups are known as PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id54 3 University
+
+TRIPLES
+School of Business and Social Sciences at the Aarhus University | country | Denmark
+Denmark | leaderTitle | Monarchy_of_Denmark
+Denmark | leaderName | Lars_Løkke_Rasmussen
+
+
+ENTITY MAP
+BRIDGE-1 | Denmark
+AGENT-1 | School of Business and Social Sciences at the Aarhus University
+PATIENT-1 | Monarchy_of_Denmark
+PATIENT-2 | Lars_Løkke_Rasmussen
+
+
+LEX
+Id1
+TEXT: The School of Business and Social Sciences at the Aarhus University is located in Denmark. Denmark has a monarch and Denmark's leader is called Lars Lokke Rasmussen.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 . BRIDGE-1 has PATIENT-1 and BRIDGE-1 's leader is called PATIENT-2 .
+CORRECT:  AGENT-1 is located in BRIDGE-1 . BRIDGE-1 has PATIENT-1 and BRIDGE-1 leader is called PATIENT-2 .
+COMMENT: g
+-
+Id2
+TEXT: Lars Lokke Rasmussen is the leader of Denmark and has the title of Monarchy of Denmark. The country is the location of the School of Business and Social Sciences at the Aarhus University.
+TEMPLATE: PATIENT-2 is the leader of BRIDGE-1 and has the title of PATIENT-1 . The country is the location of AGENT-1 .
+CORRECT: PATIENT-2 is the leader of BRIDGE-1 and has the title of PATIENT-1 . BRIDGE-1 is the location of AGENT-1 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id52 3 University
+
+TRIPLES
+School of Business and Social Sciences at the Aarhus University | city | Aarhus
+School of Business and Social Sciences at the Aarhus University | established | 1928
+Aarhus | governmentType | Magistrate
+
+
+ENTITY MAP
+BRIDGE-1 | Aarhus
+AGENT-1 | School of Business and Social Sciences at the Aarhus University
+PATIENT-1 | 1928
+PATIENT-2 | Magistrate
+
+
+LEX
+Id1
+TEXT: The School of Business and Social Sciences at the Aarhus University at Arhus was established in 1928. Arhus has a Magistrate government.
+TEMPLATE: AGENT-1 at BRIDGE-1 was established in PATIENT-1 . BRIDGE-1 has a PATIENT-2 government .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The city of Aarhus has a magistrate type of government and is the location of the School of Business and Social Sciences at Aarhus University which was established in 1928.
+TEMPLATE: The city of BRIDGE-1 has PATIENT-2 of government and is the location of AGENT-1 at BRIDGE-1 University which was established in PATIENT-1 .
+CORRECT: The city of BRIDGE-1 has PATIENT-2 of government and is the location of AGENT-1 which was established in PATIENT-1 .
+COMMENT: mod
+-
+Id3
+TEXT: The School of Business and Social Sciences at the Aarhus University was established in 1928. Aarus is governed by a magistrate.
+TEMPLATE: AGENT-1 was established in PATIENT-1 . BRIDGE-1 is governed by PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id41 3 University
+
+TRIPLES
+Kerala | leaderName | Kochi
+AWH_Engineering_College | academicStaffSize | 250
+AWH_Engineering_College | state | Kerala
+
+
+ENTITY MAP
+BRIDGE-1 | Kerala
+AGENT-1 | AWH_Engineering_College
+PATIENT-1 | Kochi
+PATIENT-2 | 250
+
+
+LEX
+Id1
+TEXT: AWH Engineering College at Kerala has 250 academic staff. Kerala's leader is Kochi.
+TEMPLATE: AGENT-1 at BRIDGE-1 has PATIENT-2 academic staff . BRIDGE-1 's leader is PATIENT-1 .
+CORRECT: AGENT-1 at BRIDGE-1 has PATIENT-2 academic staff . BRIDGE-1 leader is PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: Kochi is the leader of Kerala which is the location of the AWH Engineering College that has an academic staff of 250.
+TEMPLATE: PATIENT-1 is the leader of BRIDGE-1 which is the location of AGENT-1 that has an academic staff of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: With a staff compliment of 250, AWH Engineering College is located in Kerala, the leader of that state is named Kochi.
+TEMPLATE: With a staff compliment of PATIENT-2 , AGENT-1 is located in BRIDGE-1 , the leader of that state is named PATIENT-1 .
+CORRECT: With a staff compliment of PATIENT-2 , AGENT-1 is located in BRIDGE-1 , the leader of BRIDGE-1 is named PATIENT-1 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id50 3 University
+
+TRIPLES
+School of Business and Social Sciences at the Aarhus University | city | Aarhus
+Aarhus | has to its northeast | Mols
+Aarhus | governmentType | Magistrate
+
+
+ENTITY MAP
+BRIDGE-1 | Aarhus
+AGENT-1 | School of Business and Social Sciences at the Aarhus University
+PATIENT-1 | Mols
+PATIENT-2 | Magistrate
+
+
+LEX
+Id1
+TEXT: Aarhus has a magistrate government. To its northeast is Mols. The School of Business and Social Sciences at the Aarhus University is located in Aarhus.
+TEMPLATE: BRIDGE-1 has a magistrate government . To PATIENT-2 is PATIENT-1 . AGENT-1 is located in BRIDGE-1 .
+CORRECT: BRIDGE-1 has a PATIENT-2 government . To BRIDGE-1 is PATIENT-1 . AGENT-1 is located in BRIDGE-1 .
+COMMENT:
+-
+Id2
+TEXT: Mols is northeast of Aarhus where the government is that of magistrate. The city is the location of the School of Business and Social Sciences at Aarhus University.
+TEMPLATE: PATIENT-1 is northeast of BRIDGE-1 where the government is that of PATIENT-2 . The city is the location of AGENT-1 at BRIDGE-1 University .
+CORRECT: PATIENT-1 is northeast of BRIDGE-1 where the government is that of PATIENT-2 . BRIDGE-1 is the location of AGENT-1 .
+COMMENT: coref - mod
+-
+Id3
+TEXT: The School of Business and Social Sciences at the Aarhus University, located in Aarus which is governed by a magistrate and is southwest of Mols.
+TEMPLATE: AGENT-1 , located in BRIDGE-1 which is governed by PATIENT-2 and is southwest of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id49 3 University
+
+TRIPLES
+School of Business and Social Sciences at the Aarhus University | academicStaffSize | 737
+School of Business and Social Sciences at the Aarhus University | numberOfStudents | 16000
+School of Business and Social Sciences at the Aarhus University | affiliation | European_University_Association
+
+
+ENTITY MAP
+AGENT-1 | School of Business and Social Sciences at the Aarhus University
+PATIENT-1 | 737
+PATIENT-3 | European_University_Association
+PATIENT-2 | 16000
+
+
+LEX
+Id1
+TEXT: The School of Business and Social Sciences at the Aarhus University is affiliated to the European University Association. It has 737 staff and 16,000 students.
+TEMPLATE: AGENT-1 is affiliated to PATIENT-3 . PATIENT-2 has PATIENT-1 staff and 16,000 students .
+CORRECT: AGENT-1 is affiliated to PATIENT-3 . AGENT-1 has PATIENT-1 staff and PATIENT-2 students .
+COMMENT:
+-
+Id2
+TEXT: The School of Business and Social Sciences at the Aarhus University is affiliated to the European University Association. There are 737 academic staff and 16000 students.
+TEMPLATE: AGENT-1 is affiliated to PATIENT-3 . There are PATIENT-1 academic staff and PATIENT-2 students .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: With a staff of 737 and a student population of 1600, the School of Business and Social Sciences at the Aarhus University has an affiliation with the European University Association.
+TEMPLATE: With a staff of PATIENT-1 and a student population of PATIENT-2 , AGENT-1 has an affiliation with PATIENT-3 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id43 3 University
+
+TRIPLES
+Mendrisio | neighboringMunicipality | Meride
+Accademia_di_Architettura_di_Mendrisio | established | 1996
+Accademia_di_Architettura_di_Mendrisio | city | Mendrisio
+
+
+ENTITY MAP
+BRIDGE-1 | Mendrisio
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | Meride
+PATIENT-2 | 1996
+
+
+LEX
+Id1
+TEXT: Accademia di Architettura di Mendrisio was established in 1996. It is located in Mendrisio, which has Meride as its neighbouring municipality as Meride.
+TEMPLATE: AGENT-1 was established in PATIENT-2 . BRIDGE-1 is located in BRIDGE-1 , which has PATIENT-1 as BRIDGE-1 neighbouring municipality as PATIENT-1 .
+CORRECT: AGENT-1 was established in PATIENT-2 . AGENT-1 is located in BRIDGE-1 , which has PATIENT-1 as BRIDGE-1 neighbouring municipality as PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The .Accademia di Architettura di Mendrisio was established in 1996 within the city of Mendrisio , a neighbouring municipality to Meride .
+TEMPLATE: The . AGENT-1 was established in PATIENT-2 within the city of BRIDGE-1 , a neighbouring municipality to PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Accademia di Architettura di Mendrisio was established in 1996. It is situated in Mendrisio, which is near to Meride.
+TEMPLATE: AGENT-1 was established in PATIENT-2 . AGENT-1 is situated in BRIDGE-1 , which is near to PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id42 3 University
+
+TRIPLES
+Kerala | leaderName | Kochi
+AWH_Engineering_College | state | Kerala
+AWH_Engineering_College | city | "Kuttikkattoor"
+
+
+ENTITY MAP
+BRIDGE-1 | Kerala
+AGENT-1 | AWH_Engineering_College
+PATIENT-1 | Kochi
+PATIENT-2 | "Kuttikkattoor"
+
+
+LEX
+Id1
+TEXT: The AWH Engineering College is in Kuttikkattoor, Kerala. Kerala is led by Kochi.
+TEMPLATE: AGENT-1 is in PATIENT-2 , BRIDGE-1 . BRIDGE-1 is led by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AWH Engineering College is located in the city of Kuttikkattoor, Kerala. Kochi is the name of the leader of Kerala.
+TEMPLATE: AGENT-1 is located in the city of PATIENT-2 , BRIDGE-1 . PATIENT-1 is the name of the leader of BRIDGE-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id40 3 University
+
+TRIPLES
+Karnataka | has to its northeast | Telangana
+Karnataka | has to its west | Arabian_Sea
+Acharya_Institute_of_Technology | state | Karnataka
+
+
+ENTITY MAP
+BRIDGE-1 | Karnataka
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | Telangana
+PATIENT-2 | Arabian_Sea
+
+
+LEX
+Id1
+TEXT: The Archarya Institute of Technology is located in Karnatka. Karnatka has Telangana to its northeast and the Arabian Sea to its west.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 . BRIDGE-1 has PATIENT-1 to BRIDGE-1 northeast and PATIENT-2 to BRIDGE-1 west .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The state of Karnataka, the location of the Acharya Institute of Technology has Telangana to the northeast and the Arabian Sea to the west.
+TEMPLATE: The state of BRIDGE-1 , the location of AGENT-1 has PATIENT-1 to the northeast and PATIENT-2 to the west .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id37 3 University
+
+TRIPLES
+Alba_Iulia | isPartOf | Alba_County
+1_Decembrie_1918_University | city | Alba_Iulia
+1_Decembrie_1918_University | country | Romania
+
+
+ENTITY MAP
+BRIDGE-1 | Alba_Iulia
+AGENT-1 | 1_Decembrie_1918_University
+PATIENT-1 | Alba_County
+PATIENT-2 | Romania
+
+
+LEX
+Id1
+TEXT: The 1 Decembrie 1918 University is in Alba Iulia, Alba County, Romania.
+TEMPLATE: AGENT-1 is in BRIDGE-1 , PATIENT-1 , PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The 1 Decembrie 1918 University is located in the city of Alba Iulia, Alba County, Romania.
+TEMPLATE: AGENT-1 is located in the city of BRIDGE-1 , PATIENT-1 , PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id35 3 University
+
+TRIPLES
+Acharya_Institute_of_Technology | was given the 'Technical Campus' status by | All_India_Council_for_Technical_Education
+All_India_Council_for_Technical_Education | location | Mumbai
+Acharya_Institute_of_Technology | city | Bangalore
+
+
+ENTITY MAP
+BRIDGE-1 | All_India_Council_for_Technical_Education
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | Mumbai
+PATIENT-2 | Bangalore
+
+
+LEX
+Id1
+TEXT: The Acharya Institute is located in Bangalore. It was given the "Technical Campus" status by the All India Council for Technical Education, which is located in Mumbai.
+TEMPLATE: AGENT-1 is located in PATIENT-2 . PATIENT-2 was given the `` Technical Campus '' status by BRIDGE-1 , which is located in PATIENT-1 .
+CORRECT: AGENT-1 is located in PATIENT-2 . AGENT-1 was given the `` Technical Campus '' status by BRIDGE-1 , which is located in PATIENT-1 .
+COMMENT: coref
+-
+Id2
+TEXT: The Acharya Institute of Technology in Bangalore was given the "Technical Campus" status by the All India Council for Technical Education in Mumbai.
+TEMPLATE: AGENT-1 in PATIENT-2 was given the `` Technical Campus '' status by BRIDGE-1 in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Acharya Institute of Technology, Bangalore, was given 'Technical Campus' status by the All India Council for Technical Education in Mumbai.
+TEMPLATE: AGENT-1 , PATIENT-2 , was given ` Technical Campus ' status by BRIDGE-1 in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id30 3 University
+
+TRIPLES
+Acharya_Institute_of_Technology | city | Bangalore
+Acharya_Institute_of_Technology | established | 2000
+Acharya_Institute_of_Technology | numberOfPostgraduateStudents | 700
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | Bangalore
+PATIENT-3 | 700
+PATIENT-2 | 2000
+
+
+LEX
+Id1
+TEXT: The Acharya Institute of Technology was established at Bangalore in 2000. It has 700 postgraduate students.
+TEMPLATE: AGENT-1 was established at PATIENT-1 in PATIENT-2 . AGENT-1 has PATIENT-3 postgraduate students .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: There are 700 postgraduate students at the Acharya Institute of Technology which was established in 2000 in Bangalore.
+TEMPLATE: There are PATIENT-3 postgraduate students at AGENT-1 which was established in PATIENT-2 in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Acharya Institute of Technology in Bangalore was established in 2000 and has 700 post-graduate students.
+TEMPLATE: AGENT-1 in PATIENT-1 was established in PATIENT-2 and has PATIENT-3 post-graduate students .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id29 3 University
+
+TRIPLES
+Acharya_Institute_of_Technology | city | Bangalore
+Acharya_Institute_of_Technology | director | "Dr. G. P. Prabhukumar"
+Acharya_Institute_of_Technology | campus | "In Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090."
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | Bangalore
+PATIENT-3 | "In Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090."
+PATIENT-2 | "Dr. G. P. Prabhukumar"
+
+
+LEX
+Id1
+TEXT: The Acharya Institute of Technology is located in Soldevanahalli, at the address Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090. Its director is Dr. G. P. Prabhukumar.
+TEMPLATE: AGENT-1 is located in Soldevanahalli , at PATIENT-3 , Hessarghatta Main Road , PATIENT-1 -- 560090 . AGENT-1 director is PATIENT-2 .
+CORRECT: AGENT-1 is located in PATIENT-3 . AGENT-1 director is PATIENT-2 .
+COMMENT: mod
+-
+Id2
+TEXT: The director of the Acharya Institute of Technology is Dr. G. P. Prabhukumar and the university is located in Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090.
+TEMPLATE: The director of AGENT-1 is PATIENT-2 and the university is located in Soldevanahalli , PATIENT-3 , Hessarghatta Main Road , PATIENT-1 -- 560090 .
+CORRECT: The director of AGENT-1 is PATIENT-2 and the university is located in PATIENT-3 .
+COMMENT: mod
+-
+
+**************************************************
+
+Entry: Id34 3 University
+
+TRIPLES
+Acharya_Institute_of_Technology | sportsOffered | Tennis
+Tennis | sportsGoverningBody | International_Tennis_Federation
+Acharya_Institute_of_Technology | country | "India"
+
+
+ENTITY MAP
+BRIDGE-1 | Tennis
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | International_Tennis_Federation
+PATIENT-2 | "India"
+
+
+LEX
+Id1
+TEXT: The Acharya Institute of technology is located in India and the offered sport is tennis. The governing tennis body is the International Tennis Foundation.
+TEMPLATE: AGENT-1 is located in PATIENT-2 and the offered sport is tennis . PATIENT-1 is the International BRIDGE-1 Foundation .
+CORRECT: AGENT-1 is located in PATIENT-2 and the offered sport is BRIDGE-1 . The governing BRIDGE-1 body is PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The sport of tennis, governed by the International Tennis Federation, is offered at the Acharya Institute of Technology in India.
+TEMPLATE: The sport of BRIDGE-1 , governed by PATIENT-1 , is offered at AGENT-1 in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Acharya Institute of Technology is governed by the International Tennis Federation in India.
+TEMPLATE: AGENT-1 is governed by PATIENT-1 in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id27 3 University
+
+TRIPLES
+Acharya_Institute_of_Technology | affiliation | Visvesvaraya_Technological_University
+Visvesvaraya_Technological_University | city | Belgaum
+Acharya_Institute_of_Technology | campus | "In Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090."
+
+
+ENTITY MAP
+BRIDGE-1 | Visvesvaraya_Technological_University
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | Belgaum
+PATIENT-2 | "In Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090."
+
+
+LEX
+Id1
+TEXT: The Acharya Institute of Technology is in Soldevanahalli, its address is Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090. It is affiliated with the Visvesvaraya Technological University in Belgaum.
+TEMPLATE: AGENT-1 is in Soldevanahalli , AGENT-1 address is PATIENT-2 . AGENT-1 is affiliated with BRIDGE-1 in PATIENT-1 .
+CORRECT: AGENT-1 is in PATIENT-2 . AGENT-1 is affiliated with BRIDGE-1 in PATIENT-1 .
+COMMENT: mod
+-
+Id2
+TEXT: The Acharya Institute of Technology is affiliated with the Visvesvaraya Technological University in Belgaum and is located in Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090.
+TEMPLATE: AGENT-1 is affiliated with BRIDGE-1 in PATIENT-1 and is located in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id26 3 University
+
+TRIPLES
+Acharya_Institute_of_Technology | affiliation | Visvesvaraya_Technological_University
+Acharya_Institute_of_Technology | city | Bangalore
+Acharya_Institute_of_Technology | state | Karnataka
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | Visvesvaraya_Technological_University
+PATIENT-3 | Karnataka
+PATIENT-2 | Bangalore
+
+
+LEX
+Id1
+TEXT: The Acharya Institute of Technology is in Bangalore, Karnataka. It is associated with the Visvesvaraya Technological University.
+TEMPLATE: AGENT-1 is in PATIENT-2 , PATIENT-3 . AGENT-1 is associated with PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Acharya Institute of Technology of Bangalore, Karnataka is affiliated with Visvesvaraya Technological University.
+TEMPLATE: AGENT-1 of PATIENT-2 , PATIENT-3 is affiliated with PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id33 3 University
+
+TRIPLES
+Acharya_Institute_of_Technology | established | 2000
+Acharya_Institute_of_Technology | country | "India"
+Acharya_Institute_of_Technology | state | Karnataka
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | 2000
+PATIENT-3 | Karnataka
+PATIENT-2 | "India"
+
+
+LEX
+Id1
+TEXT: The Archarya Institute of Technology is located in Karnatka, India and it was established in 2000.
+TEMPLATE: AGENT-1 is located in PATIENT-3 , PATIENT-2 and AGENT-1 was established in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Acharya Institute of Technology was established in the state of Karnataka , India, in 2000.
+TEMPLATE: AGENT-1 was established in the state of PATIENT-3 , PATIENT-2 , in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Acharya Institute of Technology was established in 2000 in Karnataka, India.
+TEMPLATE: AGENT-1 was established in PATIENT-1 in PATIENT-3 , PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id24 3 University
+
+TRIPLES
+Acharya_Institute_of_Technology | academicStaffSize | "~500"
+Acharya_Institute_of_Technology | motto | "Nurturing Excellence"
+Acharya_Institute_of_Technology | country | "India"
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | "~500"
+PATIENT-3 | "India"
+PATIENT-2 | "Nurturing Excellence"
+
+
+LEX
+Id1
+TEXT: Acharya Institute of Technology has an academic staff of 500. It is located in India and its motto is "Nurturing Excellence".
+TEMPLATE: AGENT-1 has an academic staff of PATIENT-1 . AGENT-1 is located in PATIENT-3 and AGENT-1 motto is `` PATIENT-2 '' .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Acharya Institute of Technology in India was an academic staff of ~500. Its motto is "Nurturing Excellence.".
+TEMPLATE: AGENT-1 in PATIENT-3 was an academic staff of PATIENT-1 . AGENT-1 motto is `` PATIENT-2 . '' .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Acharya Institute of Technology in India has a staff of about 500, the university's motto is "Nurturing Excellence".
+TEMPLATE: AGENT-1 in PATIENT-3 has a staff of about PATIENT-1 , the university 's motto is `` PATIENT-2 '' .
+CORRECT: AGENT-1 in PATIENT-3 has a staff of about PATIENT-1 , AGENT-1 motto is `` PATIENT-2 '' .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id23 3 University
+
+TRIPLES
+Accademia_di_Architettura_di_Mendrisio | numberOfStudents | 600
+Accademia_di_Architettura_di_Mendrisio | established | 1996
+Accademia_di_Architettura_di_Mendrisio | academicStaffSize | 100
+
+
+ENTITY MAP
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | 600
+PATIENT-3 | 100
+PATIENT-2 | 1996
+
+
+LEX
+Id1
+TEXT: Accademia di Architettura di Mendrisio was established in 1996. It has 100 staff and 600 students.
+TEMPLATE: AGENT-1 was established in PATIENT-2 . AGENT-1 has PATIENT-3 staff and PATIENT-1 students .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: In 1996 the Academia di Architettura di Mendrisio was established. There are 600 students and an academic staff of 100.
+TEMPLATE: In PATIENT-2 AGENT-1 was established . There are PATIENT-1 students and an academic staff of PATIENT-3 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Accademia di Architettura, established 1996, has 600 students and 100 academic staff.
+TEMPLATE: AGENT-1 , established PATIENT-2 , has PATIENT-1 students and PATIENT-3 academic staff .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id22 3 University
+
+TRIPLES
+Accademia_di_Architettura_di_Mendrisio | numberOfStudents | 600
+Accademia_di_Architettura_di_Mendrisio | dean | Mario_Botta
+Accademia_di_Architettura_di_Mendrisio | city | Mendrisio
+
+
+ENTITY MAP
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | 600
+PATIENT-3 | Mendrisio
+PATIENT-2 | Mario_Botta
+
+
+LEX
+Id1
+TEXT: The Accademia di Architettura di Mendrisio is located in Mendrisio. Its dean is called Mario Botta and it has 600 students.
+TEMPLATE: AGENT-1 is located in PATIENT-3 . AGENT-1 dean is called PATIENT-2 and AGENT-1 has PATIENT-1 students .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: There are 600 students at the Accademia di Architettura di Mendrisio which has Mario Botta as Dean and is situated in the city of Mendrisio,.
+TEMPLATE: There are PATIENT-1 students at AGENT-1 which has PATIENT-2 as Dean and is situated in the city of PATIENT-3 , .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The dean of Accademia di Architettura di Mendrisio is Mario Botta and it has 600 students.
+TEMPLATE: PATIENT-3 of AGENT-1 is PATIENT-2 and AGENT-1 has PATIENT-1 students .
+CORRECT: The dean of AGENT-1 is PATIENT-2 and AGENT-1 has PATIENT-1 students .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id21 3 University
+
+TRIPLES
+Accademia_di_Architettura_di_Mendrisio | numberOfStudents | 600
+Accademia_di_Architettura_di_Mendrisio | academicStaffSize | 100
+Accademia_di_Architettura_di_Mendrisio | location | Ticino
+
+
+ENTITY MAP
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | 600
+PATIENT-3 | Ticino
+PATIENT-2 | 100
+
+
+LEX
+Id1
+TEXT: Accademia di Architettura di Mendrisio is located in Ticino. It has 600 students and 100 staff.
+TEMPLATE: AGENT-1 is located in PATIENT-3 . AGENT-1 has PATIENT-1 students and PATIENT-2 staff .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Accademia di Architettura di Mendrisio is located in Ticino. There are 600 students and 100 staff members.
+TEMPLATE: AGENT-1 is located in PATIENT-3 . There are PATIENT-1 students and PATIENT-2 staff members .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Accademia di Architettura di Mendrisio in Ticino has a staff of 100 and 600 students.
+TEMPLATE: AGENT-1 in PATIENT-3 has a staff of PATIENT-2 and PATIENT-1 students .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id20 3 University
+
+TRIPLES
+Accademia_di_Architettura_di_Mendrisio | dean | Mario_Botta
+Mendrisio | neighboringMunicipality | Meride
+Accademia_di_Architettura_di_Mendrisio | city | Mendrisio
+
+
+ENTITY MAP
+BRIDGE-1 | Mendrisio
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | Mario_Botta
+PATIENT-2 | Meride
+
+
+LEX
+Id1
+TEXT: The Accademia di Architettura di Mendrisio is located in Mendrisio and its dean is Mario Botta. The neighbouring municipality of Mendrisio is Meride.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 and AGENT-1 dean is PATIENT-1 . The neighbouring municipality of BRIDGE-1 is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Dean of the Accademia di Architettura di Mendrisio is Mario Botta. It is located in the city of Mendrisio , a neighbouring municipality of Meride.
+TEMPLATE: The Dean of AGENT-1 is PATIENT-1 . AGENT-1 is located in the city of BRIDGE-1 , a neighbouring municipality of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The dean of Accademia di Architettura di Mendrisio is Mario Botta. A neighbouring municipality to Mendrisio is Meride.
+TEMPLATE: The dean of AGENT-1 is PATIENT-1 . A neighbouring municipality to BRIDGE-1 is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id32 3 University
+
+TRIPLES
+Acharya_Institute_of_Technology | country | "India"
+Acharya_Institute_of_Technology | numberOfPostgraduateStudents | 700
+Acharya_Institute_of_Technology | campus | "In Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090."
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | "India"
+PATIENT-3 | "In Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090."
+PATIENT-2 | 700
+
+
+LEX
+Id1
+TEXT: The Acharya Institute of Technology is in Soldevanahalli, India its address is Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090. It has 700 postgraduate students.
+TEMPLATE: AGENT-1 is in Soldevanahalli , PATIENT-1 AGENT-1 address is PATIENT-3 . AGENT-1 has PATIENT-2 postgraduate students .
+CORRECT: AGENT-1 is in PATIENT-3 . AGENT-1 has PATIENT-2 postgraduate students .
+COMMENT:
+-
+Id2
+TEXT: The Acharya Institute of Technology has 700 post-graduate students and is located in Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090.
+TEMPLATE: AGENT-1 has PATIENT-2 post-graduate students and is located in PATIENT-3 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id18 3 University
+
+TRIPLES
+Accademia_di_Architettura_di_Mendrisio | dean | Mario_Botta
+Accademia_di_Architettura_di_Mendrisio | city | Mendrisio
+Accademia_di_Architettura_di_Mendrisio | established | 1996
+
+
+ENTITY MAP
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | Mario_Botta
+PATIENT-3 | 1996
+PATIENT-2 | Mendrisio
+
+
+LEX
+Id1
+TEXT: The Accademia di Architettura di Mendrisio was established in Mendrisio in 1996. Its dean is Mario Botta.
+TEMPLATE: AGENT-1 was established in PATIENT-2 in PATIENT-3 . AGENT-1 dean is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Mario Botta is Dean of the Accademia di Architettura di Mendrisio which is located in the city of Mendrisio and was established in 1996.
+TEMPLATE: PATIENT-1 is Dean of AGENT-1 which is located in the city of PATIENT-2 and was established in PATIENT-3 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The dean of the Accademia di Architettura di Mendrisio is Mario Botta and the university was established in 1996.
+TEMPLATE: PATIENT-2 of AGENT-1 is PATIENT-1 and the university was established in PATIENT-3 .
+CORRECT: The dean of AGENT-1 is PATIENT-1 and AGENT-1 was established in PATIENT-3 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id31 3 University
+
+TRIPLES
+Acharya_Institute_of_Technology | country | "India"
+Acharya_Institute_of_Technology | campus | "In Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090."
+Acharya_Institute_of_Technology | affiliation | Visvesvaraya_Technological_University
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | "India"
+PATIENT-3 | Visvesvaraya_Technological_University
+PATIENT-2 | "In Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090."
+
+
+LEX
+Id1
+TEXT: The Acharya Institute of Technology is located at Soldevanahalli, Acharya Dr. Sarcapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore, 560090, India. It is affiliated with the Visvesvaraya Technological University.
+TEMPLATE: AGENT-1 is located at Soldevanahalli , PATIENT-2 , Hessarghatta Main Road , Bangalore , 560090 , PATIENT-1 . AGENT-1 is affiliated with PATIENT-3 .
+CORRECT: AGENT-1 is located at PATIENT-2 , PATIENT-1 . AGENT-1 is affiliated with PATIENT-3 .
+COMMENT: mod
+-
+Id2
+TEXT: The Acharya Institute of Technology is affiliated to the Visvesvaraya Technological University and the campus is located in India at Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090.
+TEMPLATE: AGENT-1 is affiliated to PATIENT-3 and the campus is located in PATIENT-1 at PATIENT-2 Hessarghatta Main Road , Bangalore -- 560090 .
+CORRECT: AGENT-1 is affiliated to PATIENT-3 and AGENT-1 is located in PATIENT-1 at PATIENT-2 .
+COMMENT: mod
+-
+Id3
+TEXT: India's Acharya Institute of Technology is affiliated with Visvesvaraya Technological University and the campus is located in Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090.
+TEMPLATE: PATIENT-1 's AGENT-1 is affiliated with PATIENT-3 and the campus is located in PATIENT-2 .
+CORRECT: PATIENT-1 @ AGENT-1 is affiliated with PATIENT-3 and AGENT-1 is located in PATIENT-2 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id28 3 University
+
+TRIPLES
+Acharya_Institute_of_Technology | city | Bangalore
+Acharya_Institute_of_Technology | campus | "In Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090."
+Acharya_Institute_of_Technology | affiliation | Visvesvaraya_Technological_University
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | Bangalore
+PATIENT-3 | Visvesvaraya_Technological_University
+PATIENT-2 | "In Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090."
+
+
+LEX
+Id1
+TEXT: The Acharya Institute of Technology is located in Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore - 560090. It is affiliated with the Visvesvaraya Technological University.
+TEMPLATE: AGENT-1 is located in Soldevanahalli , PATIENT-2 , Hessarghatta Main Road , PATIENT-1 - 560090 . AGENT-1 is affiliated with PATIENT-3 .
+CORRECT: AGENT-1 is located in PATIENT-2 . AGENT-1 is affiliated with PATIENT-3 .
+COMMENT: mod
+-
+Id2
+TEXT: The Acharya Institute of Technology is located in Soldevanahalli, at the address Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090. It's affiliated with the Visvesvaraya Technological University.
+TEMPLATE: AGENT-1 is located in Soldevanahalli , at PATIENT-2 , Hessarghatta Main Road , PATIENT-1 -- 560090 . AGENT-1 's affiliated with PATIENT-3 .
+CORRECT: AGENT-1 is located in PATIENT-2 . AGENT-1 affiliated with PATIENT-3 .
+COMMENT: mod
+-
+Id3
+TEXT: The Acharya Institute of Technology is affiliated with Visvesvaraya Technological University it's campus is in Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090.
+TEMPLATE: AGENT-1 is affiliated with PATIENT-3 PATIENT-2 's campus is in PATIENT-2 Hessarghatta Main Road , PATIENT-1 -- 560090 .
+CORRECT: AGENT-1 is affiliated with PATIENT-3 AGENT-1 campus is in PATIENT-2 .
+COMMENT: coref - mod
+-
+
+**************************************************
+
+Entry: Id15 3 University
+
+TRIPLES
+Accademia_di_Architettura_di_Mendrisio | country | Switzerland
+Switzerland | anthem | Swiss_Psalm
+Switzerland | leaderName | Johann_Schneider-Ammann
+
+
+ENTITY MAP
+BRIDGE-1 | Switzerland
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | Swiss_Psalm
+PATIENT-2 | Johann_Schneider-Ammann
+
+
+LEX
+Id1
+TEXT: The Accademia di Architettura di Mendrisio is in Switzerland. The Swiss anthem is the Swiss Psalm and its leader is Johann Schneider-Ammann.
+TEMPLATE: AGENT-1 is in BRIDGE-1 . The Swiss anthem is PATIENT-1 and PATIENT-1 leader is PATIENT-2 .
+CORRECT: AGENT-1 is in BRIDGE-1 . The BRIDGE-1 anthem is PATIENT-1 and BRIDGE-1 leader is PATIENT-2 .
+COMMENT: coref
+-
+Id2
+TEXT: Accademia di Architettura di Mendrisio is located in Switzerland. The country's leader is Johann Schneider-Ammann and their national anthem is the Swiss Psalm.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 . The country 's leader is PATIENT-2 and their national anthem is PATIENT-1 .
+CORRECT: AGENT-1 is located in BRIDGE-1 . BRIDGE-1 leader is PATIENT-2 and BRIDGE-1 national anthem is PATIENT-1 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id14 3 University
+
+TRIPLES
+Accademia_di_Architettura_di_Mendrisio | country | Switzerland
+Accademia_di_Architettura_di_Mendrisio | numberOfStudents | 600
+Accademia_di_Architettura_di_Mendrisio | city | Mendrisio
+
+
+ENTITY MAP
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | Switzerland
+PATIENT-3 | Mendrisio
+PATIENT-2 | 600
+
+
+LEX
+Id1
+TEXT: Accademia di Architettura di Mendrisio is located in Mendrisio, Switzerland and has 600 students.
+TEMPLATE: AGENT-1 is located in PATIENT-3 , PATIENT-1 and has PATIENT-2 students .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Accademia di Architettura di Mendrisio is in Mendrisio, Switzerland. It has 600 students.
+TEMPLATE: AGENT-1 is in PATIENT-3 , PATIENT-1 . AGENT-1 has PATIENT-2 students .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Accademia di Architettura di Mendrisio in Switzerland, Mendrisio has a student count of 600.
+TEMPLATE: AGENT-1 in PATIENT-1 , PATIENT-3 has a student count of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id25 3 University
+
+TRIPLES
+Acharya_Institute_of_Technology | affiliation | Visvesvaraya_Technological_University
+Acharya_Institute_of_Technology | city | Bangalore
+Acharya_Institute_of_Technology | country | "India"
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | Visvesvaraya_Technological_University
+PATIENT-3 | "India"
+PATIENT-2 | Bangalore
+
+
+LEX
+Id1
+TEXT: The Acharya Institute of Technology is located in Banglaore, India. It is associated with the Visvesvaraya Technological University.
+TEMPLATE: AGENT-1 is located in PATIENT-2 , PATIENT-3 . AGENT-1 is associated with PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Acharya Institute of Technology is in Bangalore, India. It's affiliated with the Visvesvaraya Technological University.
+TEMPLATE: AGENT-1 is in PATIENT-2 , PATIENT-3 . AGENT-1 's affiliated with PATIENT-1 .
+CORRECT: AGENT-1 is in PATIENT-2 , PATIENT-3 . AGENT-1 affiliated with PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: The Acharya Institute of Technology in Bangalore, India is affiliated with the Visvesvaraya Technological University.
+TEMPLATE: AGENT-1 in PATIENT-2 , PATIENT-3 is affiliated with PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id19 3 University
+
+TRIPLES
+Accademia_di_Architettura_di_Mendrisio | dean | Mario_Botta
+Accademia_di_Architettura_di_Mendrisio | numberOfStudents | 600
+Accademia_di_Architettura_di_Mendrisio | academicStaffSize | 100
+
+
+ENTITY MAP
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | Mario_Botta
+PATIENT-3 | 100
+PATIENT-2 | 600
+
+
+LEX
+Id1
+TEXT: The Accademia di Architettura di Mendrisio has 100 academic staff and 600 students. Its dean is called Mario Botta.
+TEMPLATE: AGENT-1 has PATIENT-3 academic staff and PATIENT-2 students . AGENT-1 dean is called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Dean of Accademia di Architettura di Mendrisio is Mario Botta. There are 600 students and 100 academic staff.
+TEMPLATE: The Dean of AGENT-1 is PATIENT-1 . There are PATIENT-2 students and PATIENT-3 academic staff .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The dean of Accademia di Architettura di Mendrisio is Mario Botta. The University has a staff of 100 and 600 students.
+TEMPLATE: The dean of AGENT-1 is PATIENT-1 . The University has a staff of PATIENT-3 and PATIENT-2 students .
+CORRECT: The dean of AGENT-1 is PATIENT-1 . AGENT-1 has a staff of PATIENT-3 and PATIENT-2 students .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id17 3 University
+
+TRIPLES
+Accademia_di_Architettura_di_Mendrisio | country | Switzerland
+Switzerland | legislature | Federal_Assembly_(Switzerland)
+Switzerland | leaderName | Johann_Schneider-Ammann
+
+
+ENTITY MAP
+BRIDGE-1 | Switzerland
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | Federal_Assembly_(Switzerland)
+PATIENT-2 | Johann_Schneider-Ammann
+
+
+LEX
+Id1
+TEXT: The Accademia di Architettura di Mendrisio is located in Switzerland. The Swiss legislature is the Federal Assembly and its leader is Johann Schneider-Ammann.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 . The Swiss legislature is PATIENT-1 and BRIDGE-1 leader is PATIENT-2 .
+CORRECT: AGENT-1 is located in BRIDGE-1 . The BRIDGE-1 legislature is PATIENT-1 and BRIDGE-1 leader is PATIENT-2 .
+COMMENT: coref
+-
+Id2
+TEXT: Johann Schneider-Ammann is the leader of Switzerland where the Federal Assembly is the national legislature. The country is the home of the Accademia di Architettura di Mendrisio.
+TEMPLATE: PATIENT-2 is the leader of BRIDGE-1 where PATIENT-1 is the national legislature . The country is the home of AGENT-1 .
+CORRECT: PATIENT-2 is the leader of BRIDGE-1 where PATIENT-1 is the national legislature . BRIDGE-1 is the home of AGENT-1 .
+COMMENT: coref
+-
+Id3
+TEXT: Johann Schneider-Ammann is the leader of the Federal Assembly in that country. Accademia di Architettura di Mendrisio is located in Switzerland.
+TEMPLATE: PATIENT-2 is the leader of PATIENT-1 . AGENT-1 is located in BRIDGE-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id16 3 University
+
+TRIPLES
+Accademia_di_Architettura_di_Mendrisio | country | Switzerland
+Switzerland | leaderName | Johann_Schneider-Ammann
+Switzerland | leaderTitle | Federal_Chancellor_of_Switzerland
+
+
+ENTITY MAP
+BRIDGE-1 | Switzerland
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | Johann_Schneider-Ammann
+PATIENT-2 | Federal_Chancellor_of_Switzerland
+
+
+LEX
+Id1
+TEXT: The Federal Chancellor of Switzerland is called Johann Schneider-Ammann. The Accademia di Architettura di Mendrisio is located in Switzerland.
+TEMPLATE: PATIENT-2 is called PATIENT-1 . AGENT-1 is located in BRIDGE-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Switzerland's leader is Federal Chancellor Johann Schneider-Ammann . The country is the location of the Accademia di Architettura di Mendrisio,.
+TEMPLATE: BRIDGE-1 's leader is PATIENT-1 . The country is PATIENT-2 of AGENT-1 , .
+CORRECT: BRIDGE-1 leader is PATIENT-2 PATIENT-1 . BRIDGE-1 is the location of AGENT-1 , .
+COMMENT: coref
+-
+Id3
+TEXT: The Accademia di Architettura di Mendrisio is located in Switzerland. The country's leader Johann Schneider-Ammann is officially known as the Federal Chancellor.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 . The country 's PATIENT-1 is officially known as PATIENT-2 .
+CORRECT: AGENT-1 is located in BRIDGE-1 . BRIDGE-1 @ PATIENT-1 is officially known as PATIENT-2 .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id13 3 University
+
+TRIPLES
+Accademia_di_Architettura_di_Mendrisio | country | Switzerland
+Accademia_di_Architettura_di_Mendrisio | established | 1996
+Accademia_di_Architettura_di_Mendrisio | academicStaffSize | 100
+
+
+ENTITY MAP
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | Switzerland
+PATIENT-3 | 100
+PATIENT-2 | 1996
+
+
+LEX
+Id1
+TEXT: The Accadmia di Architettura di Mendrisio was established in Switzerland in 1996. It has 100 academic staff.
+TEMPLATE: AGENT-1 was established in PATIENT-1 in PATIENT-2 . AGENT-1 has PATIENT-3 academic staff .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Accademia di Architettura di Mendrisio was established in Switzerland in 1996 and has 100 academic staff.
+TEMPLATE: AGENT-1 was established in PATIENT-1 in PATIENT-2 and has PATIENT-3 academic staff .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Accademia di Architettura di Mendrisio in Switzerland was established in 1996 and has a staff of 100.
+TEMPLATE: AGENT-1 in PATIENT-1 was established in PATIENT-2 and has a staff of PATIENT-3 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id12 3 University
+
+TRIPLES
+Accademia_di_Architettura_di_Mendrisio | country | Switzerland
+Accademia_di_Architettura_di_Mendrisio | city | Mendrisio
+Switzerland | legislature | Federal_Assembly_(Switzerland)
+
+
+ENTITY MAP
+BRIDGE-1 | Switzerland
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | Mendrisio
+PATIENT-2 | Federal_Assembly_(Switzerland)
+
+
+LEX
+Id1
+TEXT: The Accademia di Architettura di Mendrisio is located in Mendrisio, Switzerland. Switzerland's legislature is the Federal Assembly.
+TEMPLATE: AGENT-1 is located in PATIENT-1 , BRIDGE-1 . BRIDGE-1 's legislature is PATIENT-2 .
+CORRECT: AGENT-1 is located in PATIENT-1 , BRIDGE-1 . BRIDGE-1 legislature is PATIENT-2 .
+COMMENT:
+-
+Id2
+TEXT: The Federal Assembly is the legislature of Switzerland where the Accademia di Architettura di Mendrisio is located in the city of Mendrisio,.
+TEMPLATE: PATIENT-2 is the legislature of BRIDGE-1 where AGENT-1 is located in the city of PATIENT-1 , .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Accademia di Architettura di Mendrisio is located in Medrisio, Switzerland which has a ferderal assembly.
+TEMPLATE: AGENT-1 is located in PATIENT-1 , BRIDGE-1 which has PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id11 3 University
+
+TRIPLES
+Accademia_di_Architettura_di_Mendrisio | country | Switzerland
+Accademia_di_Architettura_di_Mendrisio | academicStaffSize | 100
+Switzerland | leaderName | Johann_Schneider-Ammann
+
+
+ENTITY MAP
+BRIDGE-1 | Switzerland
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | 100
+PATIENT-2 | Johann_Schneider-Ammann
+
+
+LEX
+Id1
+TEXT: Accademia di Architettura in Switzerland has 100 academic staff. Switzerland's leader is Johann Schneider-Ammann.
+TEMPLATE: AGENT-1 in BRIDGE-1 has PATIENT-1 academic staff . BRIDGE-1 's leader is PATIENT-2 .
+CORRECT: AGENT-1 in BRIDGE-1 has PATIENT-1 academic staff . BRIDGE-1 leader is PATIENT-2 .
+COMMENT:
+-
+Id2
+TEXT: The Accademia di Architettura di Mendrisio has 100 academic staff and is located in Switzerland where Johann Schneider-Ammann is the country's leader.
+TEMPLATE: AGENT-1 has PATIENT-1 academic staff and is located in BRIDGE-1 where PATIENT-2 is the country 's leader .
+CORRECT: AGENT-1 has PATIENT-1 academic staff and is located in BRIDGE-1 where PATIENT-2 is BRIDGE-1 leader .
+COMMENT: coref
+-
+
+**************************************************
+
+Entry: Id6 3 University
+
+TRIPLES
+AWH_Engineering_College | country | India
+AWH_Engineering_College | established | 2001
+AWH_Engineering_College | academicStaffSize | 250
+
+
+ENTITY MAP
+AGENT-1 | AWH_Engineering_College
+PATIENT-1 | India
+PATIENT-3 | 250
+PATIENT-2 | 2001
+
+
+LEX
+Id1
+TEXT: The AWH Engineering College was established in India in 2001 and has 250 academic staff.
+TEMPLATE: AGENT-1 was established in PATIENT-1 in PATIENT-2 and has PATIENT-3 academic staff .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: AWH Engineering College was established in 2001 and is located in India. It currently has 250 members of staff.
+TEMPLATE: AGENT-1 was established in PATIENT-2 and is located in PATIENT-1 . AGENT-1 currently has PATIENT-3 members of staff .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id5 3 University
+
+TRIPLES
+AWH_Engineering_College | academicStaffSize | 250
+AWH_Engineering_College | state | Kerala
+AWH_Engineering_College | city | "Kuttikkattoor"
+
+
+ENTITY MAP
+AGENT-1 | AWH_Engineering_College
+PATIENT-1 | 250
+PATIENT-3 | "Kuttikkattoor"
+PATIENT-2 | Kerala
+
+
+LEX
+Id1
+TEXT: The AWH Engineering College is located in Kuttikkattoor, Kerala and it has 250 academic staff.
+TEMPLATE: AGENT-1 is located in PATIENT-3 , PATIENT-2 and AGENT-1 has PATIENT-1 academic staff .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: There is an academic staff of 250 at the AWH Engineering College which is located in Kuttikkattoor in the state of Kerala.
+TEMPLATE: There is an academic staff of PATIENT-1 at AGENT-1 which is located in PATIENT-3 in the state of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: AWH Engineering College is located in Kuttikkattoor, Kerala and has a staff of 250.
+TEMPLATE: AGENT-1 is located in PATIENT-3 , PATIENT-2 and has a staff of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id4 3 University
+
+TRIPLES
+1_Decembrie_1918_University | rector | "Breaz Valer Daniel"
+1_Decembrie_1918_University | city | Alba_Iulia
+1_Decembrie_1918_University | country | Romania
+
+
+ENTITY MAP
+AGENT-1 | 1_Decembrie_1918_University
+PATIENT-1 | "Breaz Valer Daniel"
+PATIENT-3 | Romania
+PATIENT-2 | Alba_Iulia
+
+
+LEX
+Id1
+TEXT: 1 Decembrie 1918 University is located in Alba Iulia, Romania and its rector is Breaz Valer Daniel.
+TEMPLATE: AGENT-1 is located in PATIENT-2 , PATIENT-3 and PATIENT-3 rector is PATIENT-1 .
+CORRECT: AGENT-1 is located in PATIENT-2 , PATIENT-3 and AGENT-1 rector is PATIENT-1 .
+COMMENT: coref
+-
+Id2
+TEXT: The rector of 1 Decembrie 1918 University in Alba Iulia in Romania is Breaz Valer Daniel.
+TEMPLATE: The rector of AGENT-1 in PATIENT-2 in PATIENT-3 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The rector of 1 Decembrie 1918 University, in Alba Iulia, Romania, is Breaz Valer Daniel.
+TEMPLATE: The rector of AGENT-1 , in PATIENT-2 , PATIENT-3 , is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id10 3 University
+
+TRIPLES
+Accademia_di_Architettura_di_Mendrisio | city | Mendrisio
+Accademia_di_Architettura_di_Mendrisio | numberOfStudents | 600
+Accademia_di_Architettura_di_Mendrisio | academicStaffSize | 100
+
+
+ENTITY MAP
+AGENT-1 | Accademia_di_Architettura_di_Mendrisio
+PATIENT-1 | Mendrisio
+PATIENT-3 | 100
+PATIENT-2 | 600
+
+
+LEX
+Id1
+TEXT: The Accademia di Architettura di Mendrisio is in Mendrisio. It has 600 students and an academic staff of 100.
+TEMPLATE: AGENT-1 is in PATIENT-1 . AGENT-1 has PATIENT-2 students and an academic staff of PATIENT-3 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Accademia di Architettura di Mendrisio has a staff compliment of 100 and 600 students.
+TEMPLATE: AGENT-1 has PATIENT-1 of PATIENT-3 and PATIENT-2 students .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Accademia di Architettura di Mendrisio is located in the city of Mendrisio. It has an academic staff of 100 and a total of 600 students.
+TEMPLATE: AGENT-1 is located in the city of PATIENT-1 . AGENT-1 has an academic staff of PATIENT-3 and a total of PATIENT-2 students .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id9 3 University
+
+TRIPLES
+AWH_Engineering_College | established | 2001
+AWH_Engineering_College | academicStaffSize | 250
+AWH_Engineering_College | state | Kerala
+
+
+ENTITY MAP
+AGENT-1 | AWH_Engineering_College
+PATIENT-1 | 2001
+PATIENT-3 | Kerala
+PATIENT-2 | 250
+
+
+LEX
+Id1
+TEXT: There are 250 academic staff at the AWH Engineering College in the state of Kerala. The College was established in 2001.
+TEMPLATE: There are PATIENT-2 academic staff at AGENT-1 in the state of PATIENT-3 . The College was established in PATIENT-1 .
+CORRECT: There are PATIENT-2 academic staff at AGENT-1 in the state of PATIENT-3 . AGENT-1 was established in PATIENT-1 .
+COMMENT: coref
+-
+Id2
+TEXT: AWH Engineering College was established in 2001 in Kerala. It has an academic staff of 250.
+TEMPLATE: AGENT-1 was established in PATIENT-1 in PATIENT-3 . AGENT-1 has an academic staff of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The AWH Engineering College was established in 2001 in Kerala and has a staff compliment of 250.
+TEMPLATE: AGENT-1 was established in PATIENT-1 in PATIENT-3 and has a staff compliment of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id1 3 University
+
+TRIPLES
+1_Decembrie_1918_University | latinName | "Universitas Apulensis"
+1_Decembrie_1918_University | country | Romania
+1_Decembrie_1918_University | state | Alba
+
+
+ENTITY MAP
+AGENT-1 | 1_Decembrie_1918_University
+PATIENT-1 | "Universitas Apulensis"
+PATIENT-3 | Alba
+PATIENT-2 | Romania
+
+
+LEX
+Id1
+TEXT: 1 Decembrie 1918 University is located in Alba, Romania and its Latin name is "Universitas Apulensis".
+TEMPLATE: AGENT-1 is located in PATIENT-3 , PATIENT-2 and PATIENT-2 Latin name is `` PATIENT-1 '' .
+CORRECT: AGENT-1 is located in PATIENT-3 , PATIENT-2 and AGENT-1 Latin name is `` PATIENT-1 '' .
+COMMENT: coref
+-
+Id2
+TEXT: The 1 Decembrie 1918 University is located in the state of Alba, Romania. The latin name for this university is "Universitas Apulensis".
+TEMPLATE: AGENT-1 is located in the state of PATIENT-3 , PATIENT-2 . The latin name for this university is `` PATIENT-1 '' .
+CORRECT: AGENT-1 is located in the state of PATIENT-3 , PATIENT-2 . The latin name for AGENT-1 is `` PATIENT-1 '' .
+COMMENT: coref
+-
+Id3
+TEXT: The Latin name of 1 Decembrie 1918 University in Alba, Romania, is Universitas Apulensis.
+TEMPLATE: The Latin name of AGENT-1 in PATIENT-3 , PATIENT-2 , is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id8 3 University
+
+TRIPLES
+AWH_Engineering_College | country | India
+AWH_Engineering_College | state | Kerala
+Kerala | has to its northwest | Mahé,_India
+
+
+ENTITY MAP
+BRIDGE-1 | Kerala
+AGENT-1 | AWH_Engineering_College
+PATIENT-1 | India
+PATIENT-2 | Mahé,_India
+
+
+LEX
+Id1
+TEXT: AWH Engineering College is located in Kerala, India. Kerala has Mahe, India to its northwest.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , PATIENT-1 . BRIDGE-1 has PATIENT-2 , PATIENT-1 to BRIDGE-1 northwest .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The AWH Engineering College is located in the state of Kerala in India which is southeast of Mahe, India.
+TEMPLATE: AGENT-1 is located in the state of BRIDGE-1 in PATIENT-1 which is southeast of PATIENT-2 , PATIENT-1 .
+CORRECT: AGENT-1 is located in the state of BRIDGE-1 in PATIENT-1 which is southeast of PATIENT-2 .
+COMMENT: mod
+-
+Id3
+TEXT: AWH Engineering College is located in Kerala, India which is southeast of Mahe.
+TEMPLATE: AGENT-1 is located in BRIDGE-1 , PATIENT-1 which is southeast of PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id7 3 University
+
+TRIPLES
+AWH_Engineering_College | country | India
+AWH_Engineering_College | established | 2001
+AWH_Engineering_College | city | "Kuttikkattoor"
+
+
+ENTITY MAP
+AGENT-1 | AWH_Engineering_College
+PATIENT-1 | India
+PATIENT-3 | "Kuttikkattoor"
+PATIENT-2 | 2001
+
+
+LEX
+Id1
+TEXT: AWH Engineering College was established in 2001 in Kuttikkattoor, India.
+TEMPLATE: AGENT-1 was established in PATIENT-2 in PATIENT-3 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Kuttikkattoor, India is the location of the AWH Engineering College which was established in 2001.
+TEMPLATE: PATIENT-3 , PATIENT-1 is the location of AGENT-1 which was established in PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The AWH Engineering College was established in 2001 in Kuttikkattoor, India.
+TEMPLATE: AGENT-1 was established in PATIENT-2 in PATIENT-3 , PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id3 3 University
+
+TRIPLES
+1_Decembrie_1918_University | nickname | Uab
+1_Decembrie_1918_University | rector | "Breaz Valer Daniel"
+1_Decembrie_1918_University | latinName | "Universitas Apulensis"
+
+
+ENTITY MAP
+AGENT-1 | 1_Decembrie_1918_University
+PATIENT-1 | Uab
+PATIENT-3 | "Universitas Apulensis"
+PATIENT-2 | "Breaz Valer Daniel"
+
+
+LEX
+Id1
+TEXT: The nickname of the 1 Decembrie 1918 University is Uab. The latin name is "Universitas Apulensis" and the rector is Breaz Valer Daniel.
+TEMPLATE: The nickname of AGENT-1 is PATIENT-1 . The latin name is `` PATIENT-3 '' and the rector is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: 1 Decembrie 1918 University is known informally as Uab and the latin name is Universitas Apulensis. The recor is Breaz Valer Daniel.
+TEMPLATE: AGENT-1 is known informally as PATIENT-1 and the latin name is PATIENT-3 . The recor is PATIENT-2 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id2 3 University
+
+TRIPLES
+1_Decembrie_1918_University | nickname | Uab
+1_Decembrie_1918_University | city | Alba_Iulia
+1_Decembrie_1918_University | state | Alba
+
+
+ENTITY MAP
+AGENT-1 | 1_Decembrie_1918_University
+PATIENT-1 | Uab
+PATIENT-3 | Alba
+PATIENT-2 | Alba_Iulia
+
+
+LEX
+Id1
+TEXT: The 1 Decembrie 1918 University is located in Alba lulia, Alba. Its nickname is Uab.
+TEMPLATE: AGENT-1 is located in PATIENT-3 lulia , PATIENT-3 . PATIENT-2 is PATIENT-1 .
+CORRECT: AGENT-1 is located in PATIENT-2 , PATIENT-3 . AGENT-1 nickname is PATIENT-1 .
+COMMENT: coref
+-
+Id2
+TEXT: The nickname of the 1 Decembrie 1918 University in Alba Iulia, Alba, is Uab.
+TEMPLATE: The nickname of AGENT-1 in PATIENT-2 , PATIENT-3 , is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The 1 Decembrie 1918 University is also known as Uab and located in Alba Iulia, Alba.
+TEMPLATE: AGENT-1 is also known as PATIENT-1 and located in PATIENT-2 , PATIENT-3 .
+CORRECT:
+COMMENT: g
+-
+

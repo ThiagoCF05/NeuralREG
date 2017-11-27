@@ -1,0 +1,7793 @@
+
+Entry: Id272 1 Food
+
+TRIPLES
+Valencian_Community | leaderName | Ximo_Puig
+
+
+ENTITY MAP
+AGENT-1 | Valencian_Community
+PATIENT-1 | Ximo_Puig
+
+
+LEX
+Id1
+TEXT: The leader of the community of Valencia is Ximo Puig.
+TEMPLATE: The leader of AGENT-1 of Valencia is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Ximo Puig is a leader in the Valencian Community.
+TEMPLATE: PATIENT-1 is a leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Ximo Puig is a leader of the Valencian Community.
+TEMPLATE: PATIENT-1 is a leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id271 1 Food
+
+TRIPLES
+United_States | leaderTitle | President_of_the_United_States
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | President_of_the_United_States
+
+
+LEX
+Id1
+TEXT: The leader of the United States is called the President.
+TEMPLATE: PATIENT-1 of AGENT-1 is called the President .
+CORRECT: The leader of AGENT-1 is called PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: The leader of the United States has a title of President.
+TEMPLATE: The leader of AGENT-1 has a title of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id270 1 Food
+
+TRIPLES
+United_States | leaderName | Paul_Ryan
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | Paul_Ryan
+
+
+LEX
+Id1
+TEXT: Paul Ryan is a leader in United States.
+TEMPLATE: PATIENT-1 is a leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: United States leader is called Paul Ryan.
+TEMPLATE: AGENT-1 leader is called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Paul Ryan is a leader in the U.S.
+TEMPLATE: PATIENT-1 is AGENT-1 in the U.S.
+CORRECT: PATIENT-1 is a leader in AGENT-1 .
+COMMENT: nationality
+-
+
+**************************************************
+
+Entry: Id269 1 Food
+
+TRIPLES
+United_States | leaderName | John_Roberts
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | John_Roberts
+
+
+LEX
+Id1
+TEXT: John Roberts is a leader in the United States.
+TEMPLATE: PATIENT-1 is a leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: John Roberts is the leader of the United States.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id268 1 Food
+
+TRIPLES
+United_States | leaderName | Joe_Biden
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | Joe_Biden
+
+
+LEX
+Id1
+TEXT: Joe Biden is a leader of the United States.
+TEMPLATE: PATIENT-1 is a leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Joe Biden is one of the leaders of the United States.
+TEMPLATE: PATIENT-1 is one of the leaders of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Joe Biden is a political leader in the U.S.
+TEMPLATE: PATIENT-1 is a political leader in AGENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id267 1 Food
+
+TRIPLES
+United_States | leaderName | Barack_Obama
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | Barack_Obama
+
+
+LEX
+Id1
+TEXT: Barack Obama is a leader of the United States.
+TEMPLATE: PATIENT-1 is a leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Barack Obama is the leader of the United States.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Barack Obama is the leader of United States.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id266 1 Food
+
+TRIPLES
+United_States | language | English_language
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | English_language
+
+
+LEX
+Id1
+TEXT: The English language is used in the United States.
+TEMPLATE: PATIENT-1 is used in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: English is the language of the United States.
+TEMPLATE: English is PATIENT-1 of AGENT-1 .
+CORRECT: PATIENT-1 is the language of AGENT-1 .
+COMMENT: language
+-
+Id3
+TEXT: English is a language spoken in the United States.
+TEMPLATE: English is PATIENT-1 spoken in AGENT-1 .
+CORRECT: PATIENT-1 is a language spoken in AGENT-1 .
+COMMENT: language
+-
+
+**************************************************
+
+Entry: Id265 1 Food
+
+TRIPLES
+United_States | ethnicGroup | White_Americans
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | White_Americans
+
+
+LEX
+Id1
+TEXT: White Americans are an ethnic group in the United States.
+TEMPLATE: PATIENT-1 are an ethnic group in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: White Americans are one of the ethnic groups in the United States.
+TEMPLATE: PATIENT-1 are one of the ethnic groups in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id264 1 Food
+
+TRIPLES
+United_States | ethnicGroup | Asian_Americans
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | Asian_Americans
+
+
+LEX
+Id1
+TEXT: Asian Americans are an ethnic group in the United States.
+TEMPLATE: PATIENT-1 are an ethnic group in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Asian Americans are one of the ethnic groups in the United States.
+TEMPLATE: PATIENT-1 are one of the ethnic groups in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id263 1 Food
+
+TRIPLES
+United_States | ethnicGroup | African_Americans
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | African_Americans
+
+
+LEX
+Id1
+TEXT: African Americans are an ethic group in the United States.
+TEMPLATE: PATIENT-1 are an ethic group in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: African Americans are one of the ethnic groups in the United States.
+TEMPLATE: PATIENT-1 are one of the ethnic groups in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: African Americans are an ethnic group in the U.S.
+TEMPLATE: PATIENT-1 are an ethnic group in AGENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id262 1 Food
+
+TRIPLES
+United_States | capital | Washington,_D.C.
+
+
+ENTITY MAP
+AGENT-1 | United_States
+PATIENT-1 | Washington,_D.C.
+
+
+LEX
+Id1
+TEXT: The capital of the U.S. is Washington, D.C.
+TEMPLATE: The capital of AGENT-1 is PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Washington, D.C is the capital of the United States.
+TEMPLATE: PATIENT-1 is the capital of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The capital of the United States is Washington, D.C.
+TEMPLATE: The capital of AGENT-1 is PATIENT-1
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id261 1 Food
+
+TRIPLES
+United_Kingdom | leaderName | Elizabeth_II
+
+
+ENTITY MAP
+AGENT-1 | United_Kingdom
+PATIENT-1 | Elizabeth_II
+
+
+LEX
+Id1
+TEXT: Elizabeth II is the leader of the United Kingdom.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Elizabeth II is the leader of the UK.
+TEMPLATE: PATIENT-1 is AGENT-1 of the UK .
+CORRECT: PATIENT-1 is the leader of AGENT-1 .
+COMMENT: nationality
+-
+Id3
+TEXT: Elizabeth II is the head of state in the United Kingdom.
+TEMPLATE: PATIENT-1 is the head of state in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id260 1 Food
+
+TRIPLES
+United_Kingdom | language | English_language
+
+
+ENTITY MAP
+AGENT-1 | United_Kingdom
+PATIENT-1 | English_language
+
+
+LEX
+Id1
+TEXT: The language of the United Kingdom is the English language.
+TEMPLATE: The language of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: English is the language spoken in the United Kingdom.
+TEMPLATE: English is PATIENT-1 spoken in AGENT-1 .
+CORRECT: PATIENT-1 is the language spoken in AGENT-1 .
+COMMENT: language
+-
+Id3
+TEXT: English is spoken in the UK.
+TEMPLATE: PATIENT-1 is spoken in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id259 1 Food
+
+TRIPLES
+United_Kingdom | capital | London
+
+
+ENTITY MAP
+AGENT-1 | United_Kingdom
+PATIENT-1 | London
+
+
+LEX
+Id1
+TEXT: London is the Capital of the United Kingdom.
+TEMPLATE: PATIENT-1 is the Capital of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: London is the capital city of the United Kingdom.
+TEMPLATE: PATIENT-1 is the capital city of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: London is the capital of the UK.
+TEMPLATE: PATIENT-1 is the capital of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id258 1 Food
+
+TRIPLES
+Tomato | order | Solanales
+
+
+ENTITY MAP
+AGENT-1 | Tomato
+PATIENT-1 | Solanales
+
+
+LEX
+Id1
+TEXT: The tomato is of the order Solanales.
+TEMPLATE: AGENT-1 is of PATIENT-1 .
+CORRECT: AGENT-1 is of order PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: Tomato is one of the members of the order Solanales.
+TEMPLATE: AGENT-1 is one of the members of PATIENT-1 .
+CORRECT: AGENT-1 is one of the members of the order PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id256 1 Food
+
+TRIPLES
+Tomato | family | Solanaceae
+
+
+ENTITY MAP
+AGENT-1 | Tomato
+PATIENT-1 | Solanaceae
+
+
+LEX
+Id1
+TEXT: Tomato belongs to the family of solanaceae.
+TEMPLATE: AGENT-1 belongs to the family of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The tomato comes from the Solanaceae family.
+TEMPLATE: AGENT-1 comes from the PATIENT-1 family .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The tomato belongs to the family of Solanaceae.
+TEMPLATE: AGENT-1 belongs to the family of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id257 1 Food
+
+TRIPLES
+Tomato | genus | Solanum
+
+
+ENTITY MAP
+AGENT-1 | Tomato
+PATIENT-1 | Solanum
+
+
+LEX
+Id1
+TEXT: Tomato belongs to the genus Solanum.
+TEMPLATE: AGENT-1 belongs to PATIENT-1 .
+CORRECT: AGENT-1 belongs to the genus PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id254 1 Food
+
+TRIPLES
+Sweet_potato | order | Solanales
+
+
+ENTITY MAP
+AGENT-1 | Sweet_potato
+PATIENT-1 | Solanales
+
+
+LEX
+Id1
+TEXT: Sweet potato belongs to the Solanales order of plants.
+TEMPLATE: AGENT-1 belongs to the PATIENT-1 order of plants .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Sweet potato are part of the order of Solanales.
+TEMPLATE: AGENT-1 are part of the order of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Sweet potato is of the order Solanales.
+TEMPLATE: AGENT-1 is of PATIENT-1 .
+CORRECT: AGENT-1 is of the order PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id255 1 Food
+
+TRIPLES
+Tomato | division | Flowering_plant
+
+
+ENTITY MAP
+AGENT-1 | Tomato
+PATIENT-1 | Flowering_plant
+
+
+LEX
+Id1
+TEXT: Tomato is part of the flowering plant division.
+TEMPLATE: AGENT-1 is PATIENT-1 of the flowering plant division .
+CORRECT: AGENT-1 is part of the PATIENT-1 division .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id252 1 Food
+
+TRIPLES
+Sumatra | ethnicGroup | Minangkabau_people
+
+
+ENTITY MAP
+AGENT-1 | Sumatra
+PATIENT-1 | Minangkabau_people
+
+
+LEX
+Id1
+TEXT: The Minangkabau people are an ethnic group of Sumatra.
+TEMPLATE: PATIENT-1 are an ethnic group of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Sumatra has an ethnic group called the Minangkabau people.
+TEMPLATE: AGENT-1 has an ethnic group called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id251 1 Food
+
+TRIPLES
+Sumatra | ethnicGroup | Batak
+
+
+ENTITY MAP
+AGENT-1 | Sumatra
+PATIENT-1 | Batak
+
+
+LEX
+Id1
+TEXT: Batak is the ethnic group in Sumatra.
+TEMPLATE: PATIENT-1 is the ethnic group in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Batak is an ethnic group found in Sumatra.
+TEMPLATE: PATIENT-1 is an ethnic group found in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Batak is an ethnic group in Sumatra.
+TEMPLATE: PATIENT-1 is an ethnic group in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id250 1 Food
+
+TRIPLES
+Sumatra | ethnicGroup | Acehnese_people
+
+
+ENTITY MAP
+AGENT-1 | Sumatra
+PATIENT-1 | Acehnese_people
+
+
+LEX
+Id1
+TEXT: One the ethnic groups on Sumatra is the Acehnese people.
+TEMPLATE: One the ethnic groups on AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Acehnese people form one of the ethnic groups in Sumatra.
+TEMPLATE: PATIENT-1 form one of the ethnic groups in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Acehnese people are an ethnic group in Sumatra.
+TEMPLATE: PATIENT-1 are an ethnic group in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id249 1 Food
+
+TRIPLES
+Spain | leaderName | Felipe_VI_of_Spain
+
+
+ENTITY MAP
+AGENT-1 | Spain
+PATIENT-1 | Felipe_VI_of_Spain
+
+
+LEX
+Id1
+TEXT: The leader of Spain is Felipe VI of Spain.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Felipe VI of Spain is the leader of Spain.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id248 1 Food
+
+TRIPLES
+Spain | language | Spanish_language
+
+
+ENTITY MAP
+AGENT-1 | Spain
+PATIENT-1 | Spanish_language
+
+
+LEX
+Id1
+TEXT: In Spain the language spoken is the Spanish language.
+TEMPLATE: In AGENT-1 the language spoken is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Spanish language is spoken in Spain.
+TEMPLATE: PATIENT-1 is spoken in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: the language of Spain is Spanish.
+TEMPLATE: PATIENT-1 of AGENT-1 is Spanish .
+CORRECT: The language of AGENT-1 is PATIENT-1 .
+COMMENT: language
+-
+
+**************************************************
+
+Entry: Id247 1 Food
+
+TRIPLES
+Spain | ethnicGroup | Spaniards
+
+
+ENTITY MAP
+AGENT-1 | Spain
+PATIENT-1 | Spaniards
+
+
+LEX
+Id1
+TEXT: Spaniards are the ethnic group of Spain.
+TEMPLATE: PATIENT-1 are the ethnic group of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The ethnic group for Spain is Spaniards.
+TEMPLATE: The ethnic group for AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id246 1 Food
+
+TRIPLES
+Spain | demonym | Spaniards
+
+
+ENTITY MAP
+AGENT-1 | Spain
+PATIENT-1 | Spaniards
+
+
+LEX
+Id1
+TEXT: Spaniards are from Spain.
+TEMPLATE: PATIENT-1 are from AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Spaniards is the name for the people of Spain.
+TEMPLATE: PATIENT-1 is the name for the people of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id245 1 Food
+
+TRIPLES
+Spain | currency | Euro
+
+
+ENTITY MAP
+AGENT-1 | Spain
+PATIENT-1 | Euro
+
+
+LEX
+Id1
+TEXT: Spain uses the euro for its currency.
+TEMPLATE: AGENT-1 uses PATIENT-1 for AGENT-1 currency .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Euro is the currency in Spain.
+TEMPLATE: PATIENT-1 is the currency in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The currency of Spain is Euro.
+TEMPLATE: The currency of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id244 1 Food
+
+TRIPLES
+Siomay | dishVariation | Batagor
+
+
+ENTITY MAP
+AGENT-1 | Siomay
+PATIENT-1 | Batagor
+
+
+LEX
+Id1
+TEXT: Batagor and Siomay are variation of the same dish.
+TEMPLATE: PATIENT-1 and AGENT-1 are variation of the same dish .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Batagor is a dish variation of Siomay.
+TEMPLATE: PATIENT-1 is a dish variation of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Batagor is a variation of Siomay.
+TEMPLATE: PATIENT-1 is a variation of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id243 1 Food
+
+TRIPLES
+Singapore | leaderName | Tony_Tan
+
+
+ENTITY MAP
+AGENT-1 | Singapore
+PATIENT-1 | Tony_Tan
+
+
+LEX
+Id1
+TEXT: The leader of Singapore is Tony Tan.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Tony Tan is a leader in Singapore.
+TEMPLATE: PATIENT-1 is a leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Tony Tan is the leader of Singapore.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id242 1 Food
+
+TRIPLES
+Singapore | leaderName | Halimah_Yacob
+
+
+ENTITY MAP
+AGENT-1 | Singapore
+PATIENT-1 | Halimah_Yacob
+
+
+LEX
+Id1
+TEXT: Halimah Yacob is a leader of Singapore.
+TEMPLATE: PATIENT-1 is a leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Halimah Yacob is the name of Singapore's leader.
+TEMPLATE: PATIENT-1 is the name of AGENT-1 's leader .
+CORRECT: PATIENT-1 is the name of AGENT-1 leader .
+COMMENT:
+-
+Id3
+TEXT: Halimah Yacob leads Singapore.
+TEMPLATE: PATIENT-1 leads AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id241 1 Food
+
+TRIPLES
+Singapore | language | Standard_Chinese
+
+
+ENTITY MAP
+AGENT-1 | Singapore
+PATIENT-1 | Standard_Chinese
+
+
+LEX
+Id1
+TEXT: Standard Chinese is a language spoken in Singapore.
+TEMPLATE: PATIENT-1 is a language spoken in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Standard Chinese is spoken in Singapore.
+TEMPLATE: PATIENT-1 is spoken in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id240 1 Food
+
+TRIPLES
+Singapore | language | English_language
+
+
+ENTITY MAP
+AGENT-1 | Singapore
+PATIENT-1 | English_language
+
+
+LEX
+Id1
+TEXT: The English language is spoken in Singapore.
+TEMPLATE: PATIENT-1 is spoken in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: One of the languages spoken in Singapore is English.
+TEMPLATE: One of PATIENT-1 spoken in AGENT-1 is English .
+CORRECT: One of the languages spoken in AGENT-1 is PATIENT-1 .
+COMMENT: language
+-
+Id3
+TEXT: English is spoken in Singapore.
+TEMPLATE: PATIENT-1 is spoken in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id239 1 Food
+
+TRIPLES
+Singapore | currency | Singapore_dollar
+
+
+ENTITY MAP
+AGENT-1 | Singapore
+PATIENT-1 | Singapore_dollar
+
+
+LEX
+Id1
+TEXT: The currency of Singapore is the Singapore dollar.
+TEMPLATE: The currency of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Singapore dollar is the currency in Singapore.
+TEMPLATE: PATIENT-1 is the currency in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id253 1 Food
+
+TRIPLES
+Sweet_potato | division | Flowering_plant
+
+
+ENTITY MAP
+AGENT-1 | Sweet_potato
+PATIENT-1 | Flowering_plant
+
+
+LEX
+Id1
+TEXT: Sweet potato belongs to flowering plants.
+TEMPLATE: AGENT-1 belongs to PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id237 1 Food
+
+TRIPLES
+Shumai | dishVariation | Siomay
+
+
+ENTITY MAP
+AGENT-1 | Shumai
+PATIENT-1 | Siomay
+
+
+LEX
+Id1
+TEXT: Siomay is a variation on shumai.
+TEMPLATE: PATIENT-1 is a variation on AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A variation of Shumai is Siomay.
+TEMPLATE: A variation of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Shumai is a variation of Siomay.
+TEMPLATE: AGENT-1 is a variation of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id236 1 Food
+
+TRIPLES
+Philippines | officialLanguage | Philippine_English
+
+
+ENTITY MAP
+AGENT-1 | Philippines
+PATIENT-1 | Philippine_English
+
+
+LEX
+Id1
+TEXT: The official language in the Philippines is Philippine English.
+TEMPLATE: The official language in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Philippine English is the official language of the Philippines.
+TEMPLATE: PATIENT-1 is the official language of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id235 1 Food
+
+TRIPLES
+Philippines | language | Philippine_Spanish
+
+
+ENTITY MAP
+AGENT-1 | Philippines
+PATIENT-1 | Philippine_Spanish
+
+
+LEX
+Id1
+TEXT: In the Philippines, the spoken language is Philippine Spanish.
+TEMPLATE: In AGENT-1 , the spoken language is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The language used in the Philippines is Philippine Spanish.
+TEMPLATE: The language used in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The language spoken in the Philippines is Philippine Spanish.
+TEMPLATE: The language spoken in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id234 1 Food
+
+TRIPLES
+Philippines | language | Philippine_English
+
+
+ENTITY MAP
+AGENT-1 | Philippines
+PATIENT-1 | Philippine_English
+
+
+LEX
+Id1
+TEXT: Philippine English is the language spoken in the Philippines.
+TEMPLATE: PATIENT-1 is the language spoken in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Philippine English is the language of the Philippines.
+TEMPLATE: PATIENT-1 is the language of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id233 1 Food
+
+TRIPLES
+Philippines | ethnicGroup | Zamboangans
+
+
+ENTITY MAP
+AGENT-1 | Philippines
+PATIENT-1 | Zamboangans
+
+
+LEX
+Id1
+TEXT: Zamboangans are a group in the Philippines.
+TEMPLATE: PATIENT-1 are a group in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: one of the ethnic groups of the Philippines is the Zamboangans.
+TEMPLATE: one of the ethnic groups of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id232 1 Food
+
+TRIPLES
+Philippines | ethnicGroup | Moro_people
+
+
+ENTITY MAP
+AGENT-1 | Philippines
+PATIENT-1 | Moro_people
+
+
+LEX
+Id1
+TEXT: The Moro people are an ethnic group in the Philippines.
+TEMPLATE: PATIENT-1 are an ethnic group in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Moro people is an ethnic group in the Philippines.
+TEMPLATE: PATIENT-1 is an ethnic group in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: people of Moro ethnicity are from the Philippines.
+TEMPLATE: PATIENT-1 of Moro ethnicity are from AGENT-1 .
+CORRECT: PATIENT-1 ethnicity are from AGENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id231 1 Food
+
+TRIPLES
+Philippines | ethnicGroup | Ilocano_people
+
+
+ENTITY MAP
+AGENT-1 | Philippines
+PATIENT-1 | Ilocano_people
+
+
+LEX
+Id1
+TEXT: Ilocano people are an ethnic group from the Philippines.
+TEMPLATE: PATIENT-1 are an ethnic group from AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The llocano people are an ethnic group from the Philippines.
+TEMPLATE: PATIENT-1 are an ethnic group from AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id230 1 Food
+
+TRIPLES
+Philippines | ethnicGroup | Igorot_people
+
+
+ENTITY MAP
+AGENT-1 | Philippines
+PATIENT-1 | Igorot_people
+
+
+LEX
+Id1
+TEXT: The Igorot people are an ethnic group in the Philippines.
+TEMPLATE: PATIENT-1 are an ethnic group in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Igorot people are part of one of the ethnic groups in the Philippines.
+TEMPLATE: PATIENT-1 are part of one of the ethnic groups in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: one of the ethnic groups of the Philippines is the Igorot people.
+TEMPLATE: one of the ethnic groups of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id229 1 Food
+
+TRIPLES
+Philippines | ethnicGroup | Chinese_Filipino
+
+
+ENTITY MAP
+AGENT-1 | Philippines
+PATIENT-1 | Chinese_Filipino
+
+
+LEX
+Id1
+TEXT: The Chinese Filipino is an ethnic group in the Philippines.
+TEMPLATE: PATIENT-1 is an ethnic group in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Chinese Filipino people are from the Philippines.
+TEMPLATE: PATIENT-1 people are from AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id238 1 Food
+
+TRIPLES
+Shumai | ingredient | Shiitake
+
+
+ENTITY MAP
+AGENT-1 | Shumai
+PATIENT-1 | Shiitake
+
+
+LEX
+Id1
+TEXT: Shiitake is an ingredient of Shumai.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id228 1 Food
+
+TRIPLES
+Pakora | dishVariation | Paneer
+
+
+ENTITY MAP
+AGENT-1 | Pakora
+PATIENT-1 | Paneer
+
+
+LEX
+Id1
+TEXT: Pakora can be varied by using paneer.
+TEMPLATE: AGENT-1 can be varied by using PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id226 1 Food
+
+TRIPLES
+New_York | language | French_language
+
+
+ENTITY MAP
+AGENT-1 | New_York
+PATIENT-1 | French_language
+
+
+LEX
+Id1
+TEXT: The French Language can be heard in New York.
+TEMPLATE: PATIENT-1 can be heard in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: French is a language in New York.
+TEMPLATE: French is PATIENT-1 in AGENT-1 .
+CORRECT: PATIENT-1 is a language in AGENT-1 .
+COMMENT: language
+-
+
+**************************************************
+
+Entry: Id225 1 Food
+
+TRIPLES
+New_York | language | Arabic
+
+
+ENTITY MAP
+AGENT-1 | New_York
+PATIENT-1 | Arabic
+
+
+LEX
+Id1
+TEXT: Arabic is one of the languages that is spoken in New York.
+TEMPLATE: PATIENT-1 is one of the languages that is spoken in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Arabic is one language spoken in New York.
+TEMPLATE: PATIENT-1 is one language spoken in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id227 1 Food
+
+TRIPLES
+Pakora | dishVariation | Cauliflower
+
+
+ENTITY MAP
+AGENT-1 | Pakora
+PATIENT-1 | Cauliflower
+
+
+LEX
+Id1
+TEXT: As a dish variation on a pakora, cauliflower can be used.
+TEMPLATE: As a dish variation on AGENT-1 , PATIENT-1 can be used .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id223 1 Food
+
+TRIPLES
+Mexico | leaderName | Enrique_Peña_Nieto
+
+
+ENTITY MAP
+AGENT-1 | Mexico
+PATIENT-1 | Enrique_Peña_Nieto
+
+
+LEX
+Id1
+TEXT: The leader of Mexico is Enrique Peña Nieto.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Enrique Pena Nieto is a leader in Mexico.
+TEMPLATE: PATIENT-1 is a leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Enrique Pena Nieto is the leader of Mexico.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id222 1 Food
+
+TRIPLES
+Mexico | language | Mexican_Spanish
+
+
+ENTITY MAP
+AGENT-1 | Mexico
+PATIENT-1 | Mexican_Spanish
+
+
+LEX
+Id1
+TEXT: In Mexico one of the languages spoken is Mexican Spanish.
+TEMPLATE: In AGENT-1 one of the languages spoken is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Mexican Spanish is the language spoken in Mexico.
+TEMPLATE: PATIENT-1 is the language spoken in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Mexican Spanish is spoken in Mexico.
+TEMPLATE: PATIENT-1 is spoken in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id221 1 Food
+
+TRIPLES
+Mexico | currency | Mexican_peso
+
+
+ENTITY MAP
+AGENT-1 | Mexico
+PATIENT-1 | Mexican_peso
+
+
+LEX
+Id1
+TEXT: The currency in Mexico is the peso.
+TEMPLATE: The currency in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The currency in Mexico is the Mexican peso.
+TEMPLATE: The currency in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The currency of Mexico is the peso.
+TEMPLATE: The currency of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id220 1 Food
+
+TRIPLES
+Malaysia | leaderName | Najib_Razak
+
+
+ENTITY MAP
+AGENT-1 | Malaysia
+PATIENT-1 | Najib_Razak
+
+
+LEX
+Id1
+TEXT: Najib Razak is the leader of Malaysia.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: the name of the leader of Malaysia is Najib Razak.
+TEMPLATE: the name of the leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id219 1 Food
+
+TRIPLES
+Malaysia | leaderName | Arifin_Zakaria
+
+
+ENTITY MAP
+AGENT-1 | Malaysia
+PATIENT-1 | Arifin_Zakaria
+
+
+LEX
+Id1
+TEXT: Arifin Zakaria is the name of the leader of Malaysia.
+TEMPLATE: PATIENT-1 is the name of the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Arifin Zakaria is the leader of Malaysia.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id218 1 Food
+
+TRIPLES
+Malaysia | leaderName | Abu_Zahar_Ujang
+
+
+ENTITY MAP
+AGENT-1 | Malaysia
+PATIENT-1 | Abu_Zahar_Ujang
+
+
+LEX
+Id1
+TEXT: Abu Zahar Ujang is a leader in Malaysia.
+TEMPLATE: PATIENT-1 is a leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Abu Zahar Ujang is the name of the leader of Malaysia.
+TEMPLATE: PATIENT-1 is the name of the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Abu Zahar Ujang is the leader of Malaysia.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id217 1 Food
+
+TRIPLES
+Malaysia | leaderName | Abdul_Halim_of_Kedah
+
+
+ENTITY MAP
+AGENT-1 | Malaysia
+PATIENT-1 | Abdul_Halim_of_Kedah
+
+
+LEX
+Id1
+TEXT: The leader of Malaysia is Abdul Halim of Kedah.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Abdul Halim of Kedah is the leader of Malaysia.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id216 1 Food
+
+TRIPLES
+Malaysia | ethnicGroup | Malaysian_Indian
+
+
+ENTITY MAP
+AGENT-1 | Malaysia
+PATIENT-1 | Malaysian_Indian
+
+
+LEX
+Id1
+TEXT: Malaysian Indian is one of the ethnic groups on Malaysia.
+TEMPLATE: PATIENT-1 is one of the ethnic groups on AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: one of the ethnic groups of Malaysia is Malaysian Indian.
+TEMPLATE: one of the ethnic groups of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id215 1 Food
+
+TRIPLES
+Malaysia | ethnicGroup | Malaysian_Chinese
+
+
+ENTITY MAP
+AGENT-1 | Malaysia
+PATIENT-1 | Malaysian_Chinese
+
+
+LEX
+Id1
+TEXT: The Malaysian chinese are an ethnic group from Malaysia.
+TEMPLATE: PATIENT-1 are an ethnic group from AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Malaysian Chinese is an ethnic group from Malaysia.
+TEMPLATE: PATIENT-1 is an ethnic group from AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id214 1 Food
+
+TRIPLES
+Malaysia | capital | Putrajaya
+
+
+ENTITY MAP
+AGENT-1 | Malaysia
+PATIENT-1 | Putrajaya
+
+
+LEX
+Id1
+TEXT: The capital of Malaysia is Putrajaya.
+TEMPLATE: The capital of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Putrajaya is the capital of Malaysia.
+TEMPLATE: PATIENT-1 is the capital of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id213 1 Food
+
+TRIPLES
+Malaysia | capital | Kuala_Lumpur
+
+
+ENTITY MAP
+AGENT-1 | Malaysia
+PATIENT-1 | Kuala_Lumpur
+
+
+LEX
+Id1
+TEXT: The capital of Malaysia is Kuala Lumpur.
+TEMPLATE: The capital of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Kuala Lumpur is the Malaysian capital.
+TEMPLATE: PATIENT-1 is AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Kuala Lumpur is the capital of Malaysia.
+TEMPLATE: PATIENT-1 is the capital of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id212 1 Food
+
+TRIPLES
+Lemon | order | Sapindales
+
+
+ENTITY MAP
+AGENT-1 | Lemon
+PATIENT-1 | Sapindales
+
+
+LEX
+Id1
+TEXT: A lemon is included in the order of Sapindales.
+TEMPLATE: AGENT-1 is included in the order of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Lemon comes from the plant order Sapindales.
+TEMPLATE: AGENT-1 comes from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: lemons are classified in the order sapindales.
+TEMPLATE: PATIENT-1 are classified in the order sapindales .
+CORRECT: AGENT-1 are classified in the order PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id211 1 Food
+
+TRIPLES
+Lemon | genus | Citrus
+
+
+ENTITY MAP
+AGENT-1 | Lemon
+PATIENT-1 | Citrus
+
+
+LEX
+Id1
+TEXT: Lemon is part of genus Citrus.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Lemon is from the genus citrus.
+TEMPLATE: AGENT-1 is from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id210 1 Food
+
+TRIPLES
+Lemon | family | Rutaceae
+
+
+ENTITY MAP
+AGENT-1 | Lemon
+PATIENT-1 | Rutaceae
+
+
+LEX
+Id1
+TEXT: The lemon belongs to the rutaceae family.
+TEMPLATE: PATIENT-1 belongs to the rutaceae family .
+CORRECT: AGENT-1 belongs to the PATIENT-1 family .
+COMMENT:
+-
+Id2
+TEXT: Lemon is a member of the family Rutaceae.
+TEMPLATE: AGENT-1 is a member of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id209 1 Food
+
+TRIPLES
+Karnataka | leaderName | Vajubhai_Vala
+
+
+ENTITY MAP
+AGENT-1 | Karnataka
+PATIENT-1 | Vajubhai_Vala
+
+
+LEX
+Id1
+TEXT: The leader of Karnataka is Vajubhai Vala.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Vajubhai Vala is a leader of Karnatka.
+TEMPLATE: PATIENT-1 is a leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Vajubhai Vala is the leader of Karnataka.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id208 1 Food
+
+TRIPLES
+Java | ethnicGroup | Javanese_people
+
+
+ENTITY MAP
+AGENT-1 | Java
+PATIENT-1 | Javanese_people
+
+
+LEX
+Id1
+TEXT: The Javanese people are an ethnic group of Java.
+TEMPLATE: PATIENT-1 are an ethnic group of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Javenese people are an ethnic group in Java.
+TEMPLATE: PATIENT-1 are an ethnic group in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id207 1 Food
+
+TRIPLES
+Jalisco | leaderName | Jesús_Casillas_Romero
+
+
+ENTITY MAP
+AGENT-1 | Jalisco
+PATIENT-1 | Jesús_Casillas_Romero
+
+
+LEX
+Id1
+TEXT: The leader of Jalisco is Jesús Casillas Romero.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Jesús Casillas Romero is the name of Jalisco's leader.
+TEMPLATE: PATIENT-1 is the name of AGENT-1 's leader .
+CORRECT: PATIENT-1 is the name of AGENT-1 leader .
+COMMENT:
+-
+Id3
+TEXT: The name of the leader in Jalisco is Jesus Casillas Romero.
+TEMPLATE: The name of the leader in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id206 1 Food
+
+TRIPLES
+Italy | leaderName | Sergio_Mattarella
+
+
+ENTITY MAP
+AGENT-1 | Italy
+PATIENT-1 | Sergio_Mattarella
+
+
+LEX
+Id1
+TEXT: Sergio Mattarella is a leader in Italy.
+TEMPLATE: PATIENT-1 is a leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Sergio Mattarella is the leader of Italy.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id205 1 Food
+
+TRIPLES
+Italy | leaderName | Pietro_Grasso
+
+
+ENTITY MAP
+AGENT-1 | Italy
+PATIENT-1 | Pietro_Grasso
+
+
+LEX
+Id1
+TEXT: Pietro Grasso is the leader of Italy.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Pietro Grasso leads Italy.
+TEMPLATE: PATIENT-1 leads AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id204 1 Food
+
+TRIPLES
+Italy | leaderName | Matteo_Renzi
+
+
+ENTITY MAP
+AGENT-1 | Italy
+PATIENT-1 | Matteo_Renzi
+
+
+LEX
+Id1
+TEXT: Matteo Renzi is a leader from Italy.
+TEMPLATE: PATIENT-1 is a leader from AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The leader of Italy is Matteo Renzi.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id203 1 Food
+
+TRIPLES
+Italy | leaderName | Laura_Boldrini
+
+
+ENTITY MAP
+AGENT-1 | Italy
+PATIENT-1 | Laura_Boldrini
+
+
+LEX
+Id1
+TEXT: The leader of Italy is Laura Boldrini.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Laura Boldrini is a key leader in Italy.
+TEMPLATE: PATIENT-1 is a key leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The leader in Italy is Laura Boldrini.
+TEMPLATE: The leader in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id202 1 Food
+
+TRIPLES
+Italy | language | Italian_language
+
+
+ENTITY MAP
+AGENT-1 | Italy
+PATIENT-1 | Italian_language
+
+
+LEX
+Id1
+TEXT: The spoken language in Italy is Italian.
+TEMPLATE: PATIENT-1 in AGENT-1 is Italian .
+CORRECT: The spoken language in AGENT-1 is PATIENT-1 .
+COMMENT: language
+-
+Id2
+TEXT: Italian is the language spoken in Italy.
+TEMPLATE: Italian is PATIENT-1 spoken in AGENT-1 .
+CORRECT: PATIENT-1 is language spoken in AGENT-1 .
+COMMENT: language
+-
+Id3
+TEXT: The language of Italy is Italian.
+TEMPLATE: PATIENT-1 of AGENT-1 is Italian .
+CORRECT: The language of AGENT-1 is PATIENT-1 .
+COMMENT: language
+-
+
+**************************************************
+
+Entry: Id201 1 Food
+
+TRIPLES
+Italy | capital | Rome
+
+
+ENTITY MAP
+AGENT-1 | Italy
+PATIENT-1 | Rome
+
+
+LEX
+Id1
+TEXT: Rome is the capital of Italy.
+TEMPLATE: PATIENT-1 is the capital of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The capital of Italy is Rome.
+TEMPLATE: The capital of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id200 1 Food
+
+TRIPLES
+Indonesia | leaderName | Joko_Widodo
+
+
+ENTITY MAP
+AGENT-1 | Indonesia
+PATIENT-1 | Joko_Widodo
+
+
+LEX
+Id1
+TEXT: Joko Widodo is the leader of Indonesia.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Joko Widodo is the leader in Indonesia.
+TEMPLATE: PATIENT-1 is the leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Indonesia's leader's name is Joko Widodo.
+TEMPLATE: AGENT-1 's leader 's name is PATIENT-1 .
+CORRECT: AGENT-1 leader 's name is PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id199 1 Food
+
+TRIPLES
+Indonesia | currency | Indonesian_rupiah
+
+
+ENTITY MAP
+AGENT-1 | Indonesia
+PATIENT-1 | Indonesian_rupiah
+
+
+LEX
+Id1
+TEXT: In Indonesia the currency is the Indonesian rupiah.
+TEMPLATE: In AGENT-1 the currency is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Money in Indonesia is called the Indonesian rupiah.
+TEMPLATE: Money in AGENT-1 is called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Indonesia's currency is the Indonesian rupiah.
+TEMPLATE: AGENT-1 's currency is PATIENT-1 .
+CORRECT: AGENT-1 currency is PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id198 1 Food
+
+TRIPLES
+Indonesia | capital | Jakarta
+
+
+ENTITY MAP
+AGENT-1 | Indonesia
+PATIENT-1 | Jakarta
+
+
+LEX
+Id1
+TEXT: The capital of Indonesia is Jakarta.
+TEMPLATE: The capital of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Jakarta is the capital of Indonesia.
+TEMPLATE: PATIENT-1 is the capital of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id197 1 Food
+
+TRIPLES
+India | leaderName | T._S._Thakur
+
+
+ENTITY MAP
+AGENT-1 | India
+PATIENT-1 | T._S._Thakur
+
+
+LEX
+Id1
+TEXT: T. S. Thakur is India's leader.
+TEMPLATE: PATIENT-1 is AGENT-1 's leader .
+CORRECT: PATIENT-1 is AGENT-1 leader .
+COMMENT: 
+-
+Id2
+TEXT: The leader of India is called T. S. Thakur.
+TEMPLATE: The leader of AGENT-1 is called PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: T.S. Thakur is the leader of India.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id196 1 Food
+
+TRIPLES
+India | leaderName | Narendra_Modi
+
+
+ENTITY MAP
+AGENT-1 | India
+PATIENT-1 | Narendra_Modi
+
+
+LEX
+Id1
+TEXT: Narendra Modi is a leader in India.
+TEMPLATE: PATIENT-1 is a leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Narendra Modi is the name of the leader of India.
+TEMPLATE: PATIENT-1 is the name of the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Narendra Modi is the leader of India.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id195 1 Food
+
+TRIPLES
+India | demonym | Indian_people
+
+
+ENTITY MAP
+AGENT-1 | India
+PATIENT-1 | Indian_people
+
+
+LEX
+Id1
+TEXT: Indian people are from India.
+TEMPLATE: PATIENT-1 are from AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Indians is the name given to people from India.
+TEMPLATE: PATIENT-1 is the name given to people from AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id194 1 Food
+
+TRIPLES
+Hong_Kong | leaderName | Carrie_Lam_(politician)
+
+
+ENTITY MAP
+AGENT-1 | Hong_Kong
+PATIENT-1 | Carrie_Lam_(politician)
+
+
+LEX
+Id1
+TEXT: Carrie Lam is a political leader in Hong Kong.
+TEMPLATE: PATIENT-1 is a political leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Politician Carrie Lam is the leader of Hong Kong.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Carrie Lam is the leader of Hong Kong.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id193 1 Food
+
+TRIPLES
+Hong_Kong | language | Chinese_language
+
+
+ENTITY MAP
+AGENT-1 | Hong_Kong
+PATIENT-1 | Chinese_language
+
+
+LEX
+Id1
+TEXT: In Hong Kong, the spoken language is Chinese.
+TEMPLATE: In AGENT-1 , PATIENT-1 is Chinese .
+CORRECT: In AGENT-1 , the spoken language is PATIENT-1 .
+COMMENT: language
+-
+Id2
+TEXT: Chinese is spoken in Hong Kong.
+TEMPLATE: PATIENT-1 is spoken in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Chinese is a language of Hong Kong.
+TEMPLATE: Chinese is PATIENT-1 of AGENT-1 .
+CORRECT: PATIENT-1 is a language of AGENT-1 .
+COMMENT: language
+-
+
+**************************************************
+
+Entry: Id192 1 Food
+
+TRIPLES
+Guadalajara | country | Mexico
+
+
+ENTITY MAP
+AGENT-1 | Guadalajara
+PATIENT-1 | Mexico
+
+
+LEX
+Id1
+TEXT: Guadalajara is in the country of Mexico.
+TEMPLATE: AGENT-1 is in the country of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Guadalajara is located in Mexico.
+TEMPLATE: AGENT-1 is located in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id191 1 Food
+
+TRIPLES
+Fried_chicken | mainIngredients | Chicken
+
+
+ENTITY MAP
+AGENT-1 | Fried_chicken
+PATIENT-1 | Chicken
+
+
+LEX
+Id1
+TEXT: A main ingredient of fried chicken is chicken.
+TEMPLATE: A main ingredient of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The main ingredient of fried chicken is chicken.
+TEMPLATE: The main ingredient of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id190 1 Food
+
+TRIPLES
+France | leaderName | Manuel_Valls
+
+
+ENTITY MAP
+AGENT-1 | France
+PATIENT-1 | Manuel_Valls
+
+
+LEX
+Id1
+TEXT: The leader of France is Manuel Valls.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Manuel Valls is a leader in France.
+TEMPLATE: PATIENT-1 is a leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Manual Valls is the leader of France.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id189 1 Food
+
+TRIPLES
+France | leaderName | Gérard_Larcher
+
+
+ENTITY MAP
+AGENT-1 | France
+PATIENT-1 | Gérard_Larcher
+
+
+LEX
+Id1
+TEXT: The leader of France is Gérard Larcher.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Gerard Larcher is the leader of France.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id188 1 Food
+
+TRIPLES
+France | leaderName | François_Hollande
+
+
+ENTITY MAP
+AGENT-1 | France
+PATIENT-1 | François_Hollande
+
+
+LEX
+Id1
+TEXT: The leader of France is Francois Hollande.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: François Hollande is the leader of France.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id187 1 Food
+
+TRIPLES
+France | leaderName | Claude_Bartolone
+
+
+ENTITY MAP
+AGENT-1 | France
+PATIENT-1 | Claude_Bartolone
+
+
+LEX
+Id1
+TEXT: Claude Bartolone is a leader of France.
+TEMPLATE: PATIENT-1 is a leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Claude Bartolone is France's leader.
+TEMPLATE: PATIENT-1 is AGENT-1 's leader .
+CORRECT: PATIENT-1 is AGENT-1 leader .
+COMMENT: 
+-
+Id3
+TEXT: Claude Bartolone leads France.
+TEMPLATE: PATIENT-1 leads AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id186 1 Food
+
+TRIPLES
+France | language | French_language
+
+
+ENTITY MAP
+AGENT-1 | France
+PATIENT-1 | French_language
+
+
+LEX
+Id1
+TEXT: The French language is spoken in France.
+TEMPLATE: PATIENT-1 is spoken in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: French is the national language of France.
+TEMPLATE: PATIENT-1 is the national language of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: French is a language spoken in France.
+TEMPLATE: French is PATIENT-1 spoken in AGENT-1 .
+CORRECT: PATIENT-1 is a language spoken in AGENT-1 .
+COMMENT: language
+-
+
+**************************************************
+
+Entry: Id185 1 Food
+
+TRIPLES
+France | currency | Euro
+
+
+ENTITY MAP
+AGENT-1 | France
+PATIENT-1 | Euro
+
+
+LEX
+Id1
+TEXT: In France the currency is the Euro.
+TEMPLATE: In AGENT-1 the currency is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Euro is the currency in France.
+TEMPLATE: PATIENT-1 is the currency in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: the currency of France is the Euro.
+TEMPLATE: the currency of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id184 1 Food
+
+TRIPLES
+Dessert | dishVariation | Sandesh_(confectionery)
+
+
+ENTITY MAP
+AGENT-1 | Dessert
+PATIENT-1 | Sandesh_(confectionery)
+
+
+LEX
+Id1
+TEXT: Sandesh (confectionery) is a dish that can be served as a dessert.
+TEMPLATE: PATIENT-1 is a dish that can be served as AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Sandesh is a nice confectionery dessert.
+TEMPLATE: AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: sandesh is a dessert.
+TEMPLATE: PATIENT-1 is AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id183 1 Food
+
+TRIPLES
+Dessert | dishVariation | Cookie
+
+
+ENTITY MAP
+AGENT-1 | Dessert
+PATIENT-1 | Cookie
+
+
+LEX
+Id1
+TEXT: Cookie is a type of dessert.
+TEMPLATE: PATIENT-1 is a type of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A cookie is a dessert.
+TEMPLATE: PATIENT-1 is AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id182 1 Food
+
+TRIPLES
+Derbyshire_Dales | isPartOf | Derbyshire
+
+
+ENTITY MAP
+AGENT-1 | Derbyshire_Dales
+PATIENT-1 | Derbyshire
+
+
+LEX
+Id1
+TEXT: Derbyshire Dales is part of Derbyshire.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Derbyshire Dales is part of Derbyshire.
+TEMPLATE: AGENT-1 is part of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id224 1 Food
+
+TRIPLES
+Mondelez_International | foundationPlace | Chicago
+
+
+ENTITY MAP
+AGENT-1 | Mondelez_International
+PATIENT-1 | Chicago
+
+
+LEX
+Id1
+TEXT: Mondelez International was founded in Chicago.
+TEMPLATE: AGENT-1 was founded in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id180 1 Food
+
+TRIPLES
+China | language | Standard_Chinese
+
+
+ENTITY MAP
+AGENT-1 | China
+PATIENT-1 | Standard_Chinese
+
+
+LEX
+Id1
+TEXT: Standard Chinese is the language of China.
+TEMPLATE: PATIENT-1 is the language of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Standard Chinese is a language in China.
+TEMPLATE: PATIENT-1 is a language in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id179 1 Food
+
+TRIPLES
+Chicharrón | region | Andalusia
+
+
+ENTITY MAP
+AGENT-1 | Chicharrón
+PATIENT-1 | Andalusia
+
+
+LEX
+Id1
+TEXT: Chicharrón is found in the Andalusia region.
+TEMPLATE: AGENT-1 is found in the PATIENT-1 region .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Chicharron is from the Andalusia region.
+TEMPLATE: AGENT-1 is from the PATIENT-1 region .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id178 1 Food
+
+TRIPLES
+Chicharrón | country | Spain
+
+
+ENTITY MAP
+AGENT-1 | Chicharrón
+PATIENT-1 | Spain
+
+
+LEX
+Id1
+TEXT: Chicharrón is a dish traditional in Spain.
+TEMPLATE: AGENT-1 is a dish traditional in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Chicharrón is a dish found in the country of Spain.
+TEMPLATE: AGENT-1 is a dish found in the country of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id177 1 Food
+
+TRIPLES
+Celery | genus | Apium
+
+
+ENTITY MAP
+AGENT-1 | Celery
+PATIENT-1 | Apium
+
+
+LEX
+Id1
+TEXT: Celery is a member of the genus Apium.
+TEMPLATE: AGENT-1 is a member of PATIENT-1 .
+CORRECT: AGENT-1 is a member of the genus PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: Celery is of the Apium genus.
+TEMPLATE: AGENT-1 is of the PATIENT-1 genus .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Celery is from the genus apium.
+TEMPLATE: AGENT-1 is from PATIENT-1 .
+CORRECT: AGENT-1 is from the genus PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id176 1 Food
+
+TRIPLES
+Celery | family | Apiaceae
+
+
+ENTITY MAP
+AGENT-1 | Celery
+PATIENT-1 | Apiaceae
+
+
+LEX
+Id1
+TEXT: Celery is in the family of Apiaceae.
+TEMPLATE: AGENT-1 is in the family of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Celery is a member of the family Apiaceae.
+TEMPLATE: AGENT-1 is a member of PATIENT-1 .
+CORRECT: AGENT-1 is a member of the family PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id175 1 Food
+
+TRIPLES
+Catalonia | leaderName | Parliament_of_Catalonia
+
+
+ENTITY MAP
+AGENT-1 | Catalonia
+PATIENT-1 | Parliament_of_Catalonia
+
+
+LEX
+Id1
+TEXT: Catalonia is led by the Parliament of Catalonia.
+TEMPLATE: AGENT-1 is led by PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The leaders of Catalonia are the Parliament of Catalonia.
+TEMPLATE: The leaders of AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id174 1 Food
+
+TRIPLES
+Catalonia | leaderName | Carles_Puigdemont
+
+
+ENTITY MAP
+AGENT-1 | Catalonia
+PATIENT-1 | Carles_Puigdemont
+
+
+LEX
+Id1
+TEXT: The leader of Catalonia is Carles Puigdemont.
+TEMPLATE: The leader of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Carles Puigdemont is a leader in Catalonia.
+TEMPLATE: PATIENT-1 is a leader in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Carles Puigdemont is the leader of Catalonia.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id173 1 Food
+
+TRIPLES
+Bionico | region | Guadalajara
+
+
+ENTITY MAP
+AGENT-1 | Bionico
+PATIENT-1 | Guadalajara
+
+
+LEX
+Id1
+TEXT: Bionico can be found in Guadalajara.
+TEMPLATE: AGENT-1 can be found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Bionico is from the Guadalajara region.
+TEMPLATE: AGENT-1 is from the PATIENT-1 region .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id172 1 Food
+
+TRIPLES
+Bionico | mainIngredients | "Chopped Fruits, Sour Cream, Condensed Milk, Granola, Shredded Coconut, Raisins"
+
+
+ENTITY MAP
+AGENT-1 | Bionico
+PATIENT-1 | "Chopped Fruits, Sour Cream, Condensed Milk, Granola, Shredded Coconut, Raisins"
+
+
+LEX
+Id1
+TEXT: Sour cream, chopped fruits, condensed milk. granola, raisins and shredded coconut are the main ingredients in Bionico.
+TEMPLATE: Sour cream , chopped fruits , condensed milk . PATIENT-1 are the main ingredients in AGENT-1 .
+CORRECT: PATIENT-1 are the main ingredients in AGENT-1 .
+COMMENT: list
+-
+Id2
+TEXT: The main ingredients of Bionico are chopped fruits, sour cream, condensed milk, granola, shredded coconut and raisins.
+TEMPLATE: The main ingredients of AGENT-1 are chopped PATIENT-1 shredded coconut and raisins .
+CORRECT: The main ingredients of AGENT-1 are PATIENT-1 .
+COMMENT: list
+-
+Id3
+TEXT: Chopped Fruits, sour cream, condensed milk, granola, shredded coconut and raisins are the main ingredients in bionico.
+TEMPLATE: Chopped Fruits , PATIENT-1 shredded coconut and raisins are the main ingredients in AGENT-1 .
+CORRECT: PATIENT-1 are the main ingredients in AGENT-1 .
+COMMENT: list
+-
+
+**************************************************
+
+Entry: Id171 1 Food
+
+TRIPLES
+Bionico | ingredient | Sour_cream
+
+
+ENTITY MAP
+AGENT-1 | Bionico
+PATIENT-1 | Sour_cream
+
+
+LEX
+Id1
+TEXT: Sour cream is an ingredient of Bionico.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Sour cream is an ingredient used in the preparation of Bionico.
+TEMPLATE: PATIENT-1 is an ingredient used in the preparation of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: sour cream is an ingredient in Bionico.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id181 1 Food
+
+TRIPLES
+Derbyshire_Dales | administrativeCounty | Derbyshire
+
+
+ENTITY MAP
+AGENT-1 | Derbyshire_Dales
+PATIENT-1 | Derbyshire
+
+
+LEX
+Id1
+TEXT: Derbyshire Dales is found in the County of Derbyshire.
+TEMPLATE: AGENT-1 is found in the County of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id169 1 Food
+
+TRIPLES
+Bionico | ingredient | Granola
+
+
+ENTITY MAP
+AGENT-1 | Bionico
+PATIENT-1 | Granola
+
+
+LEX
+Id1
+TEXT: Bionico requires granola as one of its ingredients.
+TEMPLATE: AGENT-1 requires PATIENT-1 as one of its ingredients .
+CORRECT: AGENT-1 requires PATIENT-1 as one of AGENT-1 ingredients .
+COMMENT: coreference
+-
+Id2
+TEXT: Granola is an ingredient of Bionico.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id168 1 Food
+
+TRIPLES
+Bionico | ingredient | Condensed_milk
+
+
+ENTITY MAP
+AGENT-1 | Bionico
+PATIENT-1 | Condensed_milk
+
+
+LEX
+Id1
+TEXT: Condensed milk is an ingredient of Bionico.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Condensed milk is an ingredient in Bionico.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Condensed milk is used in bionico,.
+TEMPLATE: PATIENT-1 is used in AGENT-1 , .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id167 1 Food
+
+TRIPLES
+Bionico | dishVariation | Honey
+
+
+ENTITY MAP
+AGENT-1 | Bionico
+PATIENT-1 | Honey
+
+
+LEX
+Id1
+TEXT: Honey can be used as a variation in the dish Bionico.
+TEMPLATE: PATIENT-1 can be used as a variation in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Honey can be added to bionico.
+TEMPLATE: PATIENT-1 can be added to AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id166 1 Food
+
+TRIPLES
+Bionico | course | Dessert
+
+
+ENTITY MAP
+AGENT-1 | Bionico
+PATIENT-1 | Dessert
+
+
+LEX
+Id1
+TEXT: Bionico is served at the dessert course.
+TEMPLATE: AGENT-1 is served at PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Bionico is a dish served for dessert.
+TEMPLATE: AGENT-1 is a dish served for PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Bionico is a dessert.
+TEMPLATE: AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id170 1 Food
+
+TRIPLES
+Bionico | ingredient | Raisin
+
+
+ENTITY MAP
+AGENT-1 | Bionico
+PATIENT-1 | Raisin
+
+
+LEX
+Id1
+TEXT: Bionico contains raisins.
+TEMPLATE: AGENT-1 contains PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id165 1 Food
+
+TRIPLES
+Bionico | country | Mexico
+
+
+ENTITY MAP
+AGENT-1 | Bionico
+PATIENT-1 | Mexico
+
+
+LEX
+Id1
+TEXT: Bionico is a food found in Mexico.
+TEMPLATE: AGENT-1 is a food found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id163 1 Food
+
+TRIPLES
+Binignit | mainIngredients | Taro
+
+
+ENTITY MAP
+AGENT-1 | Binignit
+PATIENT-1 | Taro
+
+
+LEX
+Id1
+TEXT: Taro is a main ingredient of Binignit.
+TEMPLATE: PATIENT-1 is a main ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: One of the main ingredients of Binignit is Taro.
+TEMPLATE: One of the main ingredients of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Taro is a main ingredient in Binignit.
+TEMPLATE: PATIENT-1 is a main ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id162 1 Food
+
+TRIPLES
+Binignit | mainIngredients | Sweet_potato
+
+
+ENTITY MAP
+AGENT-1 | Binignit
+PATIENT-1 | Sweet_potato
+
+
+LEX
+Id1
+TEXT: The main ingredients of binignit are sweet potatotes.
+TEMPLATE: The main ingredients of AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: One of the main ingredients of Binignit is the sweet potato.
+TEMPLATE: One of the main ingredients of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id161 1 Food
+
+TRIPLES
+Binignit | mainIngredients | Sago
+
+
+ENTITY MAP
+AGENT-1 | Binignit
+PATIENT-1 | Sago
+
+
+LEX
+Id1
+TEXT: One of the main ingredients in Binignit is sago.
+TEMPLATE: One of the main ingredients in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Sago is the main ingredient in binignit.
+TEMPLATE: PATIENT-1 is the main ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Sago is the main ingredient of binignit.
+TEMPLATE: PATIENT-1 is the main ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id160 1 Food
+
+TRIPLES
+Binignit | mainIngredients | Coconut_milk
+
+
+ENTITY MAP
+AGENT-1 | Binignit
+PATIENT-1 | Coconut_milk
+
+
+LEX
+Id1
+TEXT: One of the main ingredients of binignit is coconut milk.
+TEMPLATE: One of the main ingredients of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The main ingredient of Bingnit is coconut milk.
+TEMPLATE: The main ingredient of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id159 1 Food
+
+TRIPLES
+Binignit | mainIngredients | Banana
+
+
+ENTITY MAP
+AGENT-1 | Binignit
+PATIENT-1 | Banana
+
+
+LEX
+Id1
+TEXT: One of the main ingredients in binignit is banana.
+TEMPLATE: One of the main ingredients in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The main ingredient of Binignit is banana.
+TEMPLATE: The main ingredient of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id158 1 Food
+
+TRIPLES
+Binignit | ingredient | Sweet_potato
+
+
+ENTITY MAP
+AGENT-1 | Binignit
+PATIENT-1 | Sweet_potato
+
+
+LEX
+Id1
+TEXT: Sweet potato is and ingredient in Binignit.
+TEMPLATE: PATIENT-1 is and ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Sweet potatoes are in binignit recipes.
+TEMPLATE: PATIENT-1 are in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: one of the ingredients of Binignit is Sweet potato.
+TEMPLATE: one of the ingredients of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id157 1 Food
+
+TRIPLES
+Binignit | ingredient | Sago
+
+
+ENTITY MAP
+AGENT-1 | Binignit
+PATIENT-1 | Sago
+
+
+LEX
+Id1
+TEXT: Sago is an ingredient of Binignit.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Sago is one of the ingredients used to make Binignit.
+TEMPLATE: PATIENT-1 is one of the ingredients used to make AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: sago is an ingredient in Binignit.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id156 1 Food
+
+TRIPLES
+Binignit | ingredient | Coconut_milk
+
+
+ENTITY MAP
+AGENT-1 | Binignit
+PATIENT-1 | Coconut_milk
+
+
+LEX
+Id1
+TEXT: Coconut milk is an ingredient of Binignit.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: coconut milk is an ingredient in Binignit.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id164 1 Food
+
+TRIPLES
+Binignit | region | Mindanao
+
+
+ENTITY MAP
+AGENT-1 | Binignit
+PATIENT-1 | Mindanao
+
+
+LEX
+Id1
+TEXT: Binignit comes from the region Mindanao.
+TEMPLATE: AGENT-1 comes from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id154 1 Food
+
+TRIPLES
+Binignit | course | Dessert
+
+
+ENTITY MAP
+AGENT-1 | Binignit
+PATIENT-1 | Dessert
+
+
+LEX
+Id1
+TEXT: Binignit should be served as the dessert course.
+TEMPLATE: AGENT-1 should be served as PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Binignit is a type of dessert.
+TEMPLATE: AGENT-1 is a type of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Binignit is a dessert.
+TEMPLATE: AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id153 1 Food
+
+TRIPLES
+Binignit | country | Philippines
+
+
+ENTITY MAP
+AGENT-1 | Binignit
+PATIENT-1 | Philippines
+
+
+LEX
+Id1
+TEXT: The county Binignit comes from is the Philippines.
+TEMPLATE: AGENT-1 comes from is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The binignit dish can be found in the Philippines.
+TEMPLATE: AGENT-1 can be found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id152 1 Food
+
+TRIPLES
+Bhajji | similarDish | "Pakora and other fritters made from wheat or corn flour"
+
+
+ENTITY MAP
+AGENT-1 | Bhajji
+PATIENT-1 | "Pakora and other fritters made from wheat or corn flour"
+
+
+LEX
+Id1
+TEXT: Bhajji is a dish similar to pakora and other fritters made from whet or corn flour.
+TEMPLATE: AGENT-1 is a dish similar to PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Pakora and other fritters made from wheat or corn flour are similar to bhajji.
+TEMPLATE: PATIENT-1 are similar to AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Bhajji is a similar dish to pakora and other fritters made from wheat or corn flour.
+TEMPLATE: AGENT-1 is a similar dish to PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id151 1 Food
+
+TRIPLES
+Bhajji | related | Pakora
+
+
+ENTITY MAP
+AGENT-1 | Bhajji
+PATIENT-1 | Pakora
+
+
+LEX
+Id1
+TEXT: The dish bhajji is related to pakora.
+TEMPLATE: The dish bhajji is related to AGENT-1 .
+CORRECT: AGENT-1 is related to PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Bhajji is a snack that is similar to Pakora.
+TEMPLATE: AGENT-1 is a snack that is similar to PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: bhajji and pakora are related.
+TEMPLATE: AGENT-1 are related .
+CORRECT: AGENT-1 and PATIENT-1 are related .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id150 1 Food
+
+TRIPLES
+Bhajji | region | Karnataka
+
+
+ENTITY MAP
+AGENT-1 | Bhajji
+PATIENT-1 | Karnataka
+
+
+LEX
+Id1
+TEXT: Bhajji are found in the region of Karnataka.
+TEMPLATE: AGENT-1 are found in the region of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Bhajji come from the Karnataka region.
+TEMPLATE: AGENT-1 come from the PATIENT-1 region .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Bhajji is from the Karnataka region.
+TEMPLATE: AGENT-1 is from the PATIENT-1 region .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id149 1 Food
+
+TRIPLES
+Bhajji | mainIngredients | "Gram flour, vegetables"
+
+
+ENTITY MAP
+AGENT-1 | Bhajji
+PATIENT-1 | "Gram flour, vegetables"
+
+
+LEX
+Id1
+TEXT: The main ingredients in Bhajji are gram flour and vegetables.
+TEMPLATE: The main ingredients in AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Gram flour and vegetables are main ingredients in bhajji.
+TEMPLATE: PATIENT-1 are main ingredients in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id155 1 Food
+
+TRIPLES
+Binignit | ingredient | Banana
+
+
+ENTITY MAP
+AGENT-1 | Binignit
+PATIENT-1 | Banana
+
+
+LEX
+Id1
+TEXT: Banana is an ingredient in binignit.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id147 1 Food
+
+TRIPLES
+Bhajji | ingredient | Gram_flour
+
+
+ENTITY MAP
+AGENT-1 | Bhajji
+PATIENT-1 | Gram_flour
+
+
+LEX
+Id1
+TEXT: Gram flour is an ingredient in Bhajji.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Gram flour is an ingredient of a Bhajji.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id146 1 Food
+
+TRIPLES
+Bhajji | country | India
+
+
+ENTITY MAP
+AGENT-1 | Bhajji
+PATIENT-1 | India
+
+
+LEX
+Id1
+TEXT: Bhajji comes from the country India.
+TEMPLATE: AGENT-1 comes from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Bhajji originates from India.
+TEMPLATE: AGENT-1 originates from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id145 1 Food
+
+TRIPLES
+Beef_kway_teow | region | Singapore
+
+
+ENTITY MAP
+AGENT-1 | Beef_kway_teow
+PATIENT-1 | Singapore
+
+
+LEX
+Id1
+TEXT: Beef kway teow comes from the Singapore region.
+TEMPLATE: AGENT-1 comes from the PATIENT-1 region .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Beef kway teow originates from Singapore.
+TEMPLATE: AGENT-1 originates from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Beef kway teow is a dish of Singapore.
+TEMPLATE: AGENT-1 is a dish of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id144 1 Food
+
+TRIPLES
+Beef_kway_teow | region | "Nationwide in Singapore and Indonesia"
+
+
+ENTITY MAP
+AGENT-1 | Beef_kway_teow
+PATIENT-1 | "Nationwide in Singapore and Indonesia"
+
+
+LEX
+Id1
+TEXT: Beef kway teow is a dish that is popular nationwide in Singapore and Indonesia.
+TEMPLATE: AGENT-1 is a dish that is popular nationwide in PATIENT-1 .
+CORRECT: AGENT-1 is a dish that is popular PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Beef kway teow is available nationwide in Singapore and Indonesia.
+TEMPLATE: AGENT-1 is available nationwide in PATIENT-1 .
+CORRECT: AGENT-1 is available PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id143 1 Food
+
+TRIPLES
+Beef_kway_teow | mainIngredients | "Kway teow, beef tender loin, gula Melaka, sliced, dried black beans, garlic, dark soy sauce, lengkuas, oyster sauce, soya sauce, chilli and sesame oil"
+
+
+ENTITY MAP
+AGENT-1 | Beef_kway_teow
+PATIENT-1 | "Kway teow, beef tender loin, gula Melaka, sliced, dried black beans, garlic, dark soy sauce, lengkuas, oyster sauce, soya sauce, chilli and sesame oil"
+
+
+LEX
+Id1
+TEXT: Kway teow, beef tender loin, gula Melaka, sliced, dried black beans, garlic, dark soy sauce, lengkuas, oyster sauce, soya sauce, chilli and sesame oil are the main ingredients of Beef kway teow.
+TEMPLATE: PATIENT-1 are the main ingredients of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The main ingredients for Beef Kway Teow are: Kway teow, beef tender loin, gula Melaka, sliced, dried black beans, garlic, dark soy sauce, lengkuas, oyster sauce, soya sauce, chilli and sesame oil.
+TEMPLATE: The main ingredients for AGENT-1 are : PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Kway teow, beef tender loin, gula Melaka, sliced, dried black beans, garlic, dark soy sauce, lengkuas, oyster sauce, soya sauce, chilli and sesame oil are main ingredients in beef kway teow.
+TEMPLATE: PATIENT-1 are main ingredients in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id148 1 Food
+
+TRIPLES
+Bhajji | ingredient | Vegetable
+
+
+ENTITY MAP
+AGENT-1 | Bhajji
+PATIENT-1 | Vegetable
+
+
+LEX
+Id1
+TEXT: Bhajji includes the ingredient vegetables.
+TEMPLATE: AGENT-1 includes PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id141 1 Food
+
+TRIPLES
+Beef_kway_teow | ingredient | Palm_sugar
+
+
+ENTITY MAP
+AGENT-1 | Beef_kway_teow
+PATIENT-1 | Palm_sugar
+
+
+LEX
+Id1
+TEXT: Palm sugar is an ingredient in beef kway teow.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Palm sugar is an ingredient of Beef kway teow.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id140 1 Food
+
+TRIPLES
+Beef_kway_teow | ingredient | Oyster_sauce
+
+
+ENTITY MAP
+AGENT-1 | Beef_kway_teow
+PATIENT-1 | Oyster_sauce
+
+
+LEX
+Id1
+TEXT: Oyster sauce is an ingredient in Beef kway teow.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Oyster sauce is contained in Beef kway teow.
+TEMPLATE: PATIENT-1 is contained in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id139 1 Food
+
+TRIPLES
+Beef_kway_teow | country | Singapore
+
+
+ENTITY MAP
+AGENT-1 | Beef_kway_teow
+PATIENT-1 | Singapore
+
+
+LEX
+Id1
+TEXT: Beef kway teow is a dish from the country of Singapore.
+TEMPLATE: AGENT-1 is a dish from the country of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Beef kway teow is a popular dish in Singapore.
+TEMPLATE: AGENT-1 is a popular dish in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id138 1 Food
+
+TRIPLES
+Beef_kway_teow | country | Indonesia
+
+
+ENTITY MAP
+AGENT-1 | Beef_kway_teow
+PATIENT-1 | Indonesia
+
+
+LEX
+Id1
+TEXT: Beef kway teow is a dish in Indonesia.
+TEMPLATE: AGENT-1 is a dish in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Beef kway teow comes from the country of Indonesia.
+TEMPLATE: AGENT-1 comes from the country of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Beef kway teow is a popular food of Indonesia.
+TEMPLATE: AGENT-1 is a popular food of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id137 1 Food
+
+TRIPLES
+Beef_kway_teow | country | "Singapore and Indonesia"
+
+
+ENTITY MAP
+AGENT-1 | Beef_kway_teow
+PATIENT-1 | "Singapore and Indonesia"
+
+
+LEX
+Id1
+TEXT: Beef kway teow is found in the countries of Indonesia and Singapore.
+TEMPLATE: AGENT-1 is found in the countries of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Beef kway teow is a dish commonly found in Singapore and Indonesia.
+TEMPLATE: AGENT-1 is a dish commonly found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Beef Kway Teow is made in Singapore and Indonesia.
+TEMPLATE: AGENT-1 is made in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id136 1 Food
+
+TRIPLES
+Batchoy | region | La_Paz,_Iloilo_City
+
+
+ENTITY MAP
+AGENT-1 | Batchoy
+PATIENT-1 | La_Paz,_Iloilo_City
+
+
+LEX
+Id1
+TEXT: Batchoy is a food found in La Paz, Iloilo City.
+TEMPLATE: AGENT-1 is a food found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Batchoy originated from the region of La Paz, Iloilo City.
+TEMPLATE: AGENT-1 originated from the region of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id135 1 Food
+
+TRIPLES
+Batchoy | mainIngredients | "noodles, pork organs, vegetables, chicken, shrimp, beef"
+
+
+ENTITY MAP
+AGENT-1 | Batchoy
+PATIENT-1 | "noodles, pork organs, vegetables, chicken, shrimp, beef"
+
+
+LEX
+Id1
+TEXT: The main ingredients of batchoy are noodles, pork organs, vegetables, chicken, shrimp, and beef.
+TEMPLATE: The main ingredients of AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The main ingredients of Batchoy are noodles, pork organs, vegetables, chicken, shrimp and beef.
+TEMPLATE: The main ingredients of AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The main ingredients of Batchoy are noodles, pork organs, vegetables, chicken, shrimp, beef.
+TEMPLATE: The main ingredients of AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id134 1 Food
+
+TRIPLES
+Batchoy | ingredient | Pork
+
+
+ENTITY MAP
+AGENT-1 | Batchoy
+PATIENT-1 | Pork
+
+
+LEX
+Id1
+TEXT: Pork is an ingredient of Batchoy.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Pork is an ingredient in Batchoy.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: one of the ingredients of Batchoy is Pork.
+TEMPLATE: one of the ingredients of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id142 1 Food
+
+TRIPLES
+Beef_kway_teow | ingredient | Sesame_oil
+
+
+ENTITY MAP
+AGENT-1 | Beef_kway_teow
+PATIENT-1 | Sesame_oil
+
+
+LEX
+Id1
+TEXT: Sesame oil is an ingredient in beef kway teow.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id132 1 Food
+
+TRIPLES
+Batchoy | ingredient | Beef
+
+
+ENTITY MAP
+AGENT-1 | Batchoy
+PATIENT-1 | Beef
+
+
+LEX
+Id1
+TEXT: Beef is an ingredient of Batchoy.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: beef is an ingredient in batchoy.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id131 1 Food
+
+TRIPLES
+Batchoy | course | Soup
+
+
+ENTITY MAP
+AGENT-1 | Batchoy
+PATIENT-1 | Soup
+
+
+LEX
+Id1
+TEXT: Batchoy is a dish served as a soup course.
+TEMPLATE: AGENT-1 is PATIENT-1 served as a soup course .
+CORRECT: AGENT-1 is a dish served as PATIENT-1 course .
+COMMENT:
+-
+Id2
+TEXT: Batchoy is a type of soup.
+TEMPLATE: AGENT-1 is a type of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id130 1 Food
+
+TRIPLES
+Batagor | servingTemperature | "hot"
+
+
+ENTITY MAP
+AGENT-1 | Batagor
+PATIENT-1 | "hot"
+
+
+LEX
+Id1
+TEXT: Batagor should be served hot.
+TEMPLATE: AGENT-1 should be served PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Batagor is a dish best served hot.
+TEMPLATE: AGENT-1 is a dish best served PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Batagor should be served "hot".
+TEMPLATE: AGENT-1 should be served `` PATIENT-1 '' .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id133 1 Food
+
+TRIPLES
+Batchoy | ingredient | Noodle
+
+
+ENTITY MAP
+AGENT-1 | Batchoy
+PATIENT-1 | Noodle
+
+
+LEX
+Id1
+TEXT: Noodles are an ingredient in batchoy.
+TEMPLATE: PATIENT-1 are an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id124 1 Food
+
+TRIPLES
+Barny_Cakes | fat | 4.8 g
+
+
+ENTITY MAP
+AGENT-1 | Barny_Cakes
+PATIENT-1 | 4.8 g
+
+
+LEX
+Id1
+TEXT: Barny cakes contain 4.8 g of fat.
+TEMPLATE: AGENT-1 contain PATIENT-1 of fat .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Barny cakes contain 4.8g of fat.
+TEMPLATE: AGENT-1 contain PATIENT-1 of fat .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id128 1 Food
+
+TRIPLES
+Batagor | dishVariation | Siomay
+
+
+ENTITY MAP
+AGENT-1 | Batagor
+PATIENT-1 | Siomay
+
+
+LEX
+Id1
+TEXT: Batagor is a variation of the Siomay dish.
+TEMPLATE: AGENT-1 is a variation of the PATIENT-1 dish .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Batagor and Siomay are variations of the same dish.
+TEMPLATE: AGENT-1 and PATIENT-1 are variations of the same dish .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id125 1 Food
+
+TRIPLES
+Barny_Cakes | ingredient | Sponge_cake
+
+
+ENTITY MAP
+AGENT-1 | Barny_Cakes
+PATIENT-1 | Sponge_cake
+
+
+LEX
+Id1
+TEXT: Barny cakes are made with sponge cake.
+TEMPLATE: AGENT-1 are made with PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id127 1 Food
+
+TRIPLES
+Batagor | country | Indonesia
+
+
+ENTITY MAP
+AGENT-1 | Batagor
+PATIENT-1 | Indonesia
+
+
+LEX
+Id1
+TEXT: Batagor comes from the country of Indonesia.
+TEMPLATE: AGENT-1 comes from the country of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Batagor is found in Indonesia.
+TEMPLATE: AGENT-1 is found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Batagor is found in the country of Indonesia.
+TEMPLATE: AGENT-1 is found in the country of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id126 1 Food
+
+TRIPLES
+Barny_Cakes | year | 1999
+
+
+ENTITY MAP
+AGENT-1 | Barny_Cakes
+PATIENT-1 | 1999
+
+
+LEX
+Id1
+TEXT: Barny cakes were invented in 1999.
+TEMPLATE: AGENT-1 were invented in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Barny Cakes were introduced in 1999.
+TEMPLATE: AGENT-1 were introduced in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id129 1 Food
+
+TRIPLES
+Batagor | ingredient | Peanut_sauce
+
+
+ENTITY MAP
+AGENT-1 | Batagor
+PATIENT-1 | Peanut_sauce
+
+
+LEX
+Id1
+TEXT: Peanut sauce is an ingredient of batagor.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id123 1 Food
+
+TRIPLES
+Barny_Cakes | dishVariation | Strawberry
+
+
+ENTITY MAP
+AGENT-1 | Barny_Cakes
+PATIENT-1 | Strawberry
+
+
+LEX
+Id1
+TEXT: Strawberries can be added to barny cakes.
+TEMPLATE: PATIENT-1 can be added to barny AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: a variation of Barny Cakes is to use Strawberry.
+TEMPLATE: a variation of AGENT-1 is to use PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id122 1 Food
+
+TRIPLES
+Barny_Cakes | dishVariation | Milk
+
+
+ENTITY MAP
+AGENT-1 | Barny_Cakes
+PATIENT-1 | Milk
+
+
+LEX
+Id1
+TEXT: One dish variation called Barny Cakes is the use of milk in the recipe.
+TEMPLATE: One dish variation called AGENT-1 is the use of PATIENT-1 in the recipe .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id120 1 Food
+
+TRIPLES
+Barny_Cakes | country | France
+
+
+ENTITY MAP
+AGENT-1 | Barny_Cakes
+PATIENT-1 | France
+
+
+LEX
+Id1
+TEXT: The country Barny Cakes come from is France.
+TEMPLATE: AGENT-1 come from is PATIENT-1 .
+CORRECT: The country AGENT-1 come from is PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: Barny cakes can be found in France.
+TEMPLATE: AGENT-1 can be found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id119 1 Food
+
+TRIPLES
+Barny_Cakes | carbohydrate | 18.0 g
+
+
+ENTITY MAP
+AGENT-1 | Barny_Cakes
+PATIENT-1 | 18.0 g
+
+
+LEX
+Id1
+TEXT: Barny cakes have 18 grams of carbs.
+TEMPLATE: AGENT-1 have 18 grams of PATIENT-1 .
+CORRECT: AGENT-1 have PATIENT-1 of carbs .
+COMMENT:
+-
+Id2
+TEXT: Barny Cakes have 18.0g of carbohydrates.
+TEMPLATE: AGENT-1 have PATIENT-1 of carbohydrates .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id118 1 Food
+
+TRIPLES
+Bandeja_paisa | region | Antioquia_Department
+
+
+ENTITY MAP
+AGENT-1 | Bandeja_paisa
+PATIENT-1 | Antioquia_Department
+
+
+LEX
+Id1
+TEXT: Bandeja paisa is found in the Antioquia Department.
+TEMPLATE: AGENT-1 is found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Antioquia Department is the regions where Bandeja paisa comes from.
+TEMPLATE: PATIENT-1 is the regions where AGENT-1 comes from .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Bandeja paisa is a dish from the Antioquia Department region.
+TEMPLATE: AGENT-1 is a dish from the PATIENT-1 region .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id113 1 Food
+
+TRIPLES
+Bandeja_paisa | ingredient | Kidney_bean
+
+
+ENTITY MAP
+AGENT-1 | Bandeja_paisa
+PATIENT-1 | Kidney_bean
+
+
+LEX
+Id1
+TEXT: The kidney bean is an ingredient in Bandeja paisa.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Kidney beans are an ingredient in Bandeja paisa.
+TEMPLATE: PATIENT-1 are an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id117 1 Food
+
+TRIPLES
+Bandeja_paisa | mainIngredients | "red beans, pork belly, white rice, ground meat, chicharon, fried egg, plantain (patacones), chorizo, arepa, hogao sauce, black pudding (morcilla), avocado and lemon"
+
+
+ENTITY MAP
+AGENT-1 | Bandeja_paisa
+PATIENT-1 | "red beans, pork belly, white rice, ground meat, chicharon, fried egg, plantain (patacones), chorizo, arepa, hogao sauce, black pudding (morcilla), avocado and lemon"
+
+
+LEX
+Id1
+TEXT: The main ingredients in bandeja paisa are red beans, pork belly, white rice, ground meat, chicharon, fried egg, plantain (patacones), chorizo, arepa, hogao sauce, black pudding (morcilla), avocado and lemon.
+TEMPLATE: The main ingredients in AGENT-1 are red beans , pork belly , white rice , ground meat , chicharon , fried PATIENT-1 .
+CORRECT: The main ingredients in AGENT-1 are PATIENT-1 .
+COMMENT: list
+-
+Id2
+TEXT: The main ingredients of Bandeja paisa are: red beans, pork belly, white rice, ground meat, chicharon, fried egg, plantain (patacones), chorizo, arepa, hogao sauce, black pudding (morcilla), avocado and lemon".
+TEMPLATE: The main ingredients of AGENT-1 are : red beans , pork belly , white rice , ground meat , chicharon , fried PATIENT-1 '' .
+CORRECT: The main ingredients of AGENT-1 are : PATIENT-1 .
+COMMENT: list
+-
+Id3
+TEXT: The main ingredients of Bandeja paisa are red beans, pork belly, white rice, ground meat, chicharon, fried egg, plantain (patacones), chorizo, arepa, hogao sauce, black pudding (morcilla), avocado and lemon.
+TEMPLATE: The main ingredients of AGENT-1 are red beans , pork belly , white rice , ground meat , chicharon , fried PATIENT-1 .
+CORRECT: The main ingredients of AGENT-1 are PATIENT-1 .
+COMMENT: list
+-
+
+**************************************************
+
+Entry: Id116 1 Food
+
+TRIPLES
+Bandeja_paisa | ingredient | Rice
+
+
+ENTITY MAP
+AGENT-1 | Bandeja_paisa
+PATIENT-1 | Rice
+
+
+LEX
+Id1
+TEXT: Rice is an ingredient in bandeja paisa.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Rice is an ingredient of Bandeja paisa.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Rice is included in Bandeja paisa.
+TEMPLATE: PATIENT-1 is included in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id112 1 Food
+
+TRIPLES
+Bandeja_paisa | ingredient | Hogao
+
+
+ENTITY MAP
+AGENT-1 | Bandeja_paisa
+PATIENT-1 | Hogao
+
+
+LEX
+Id1
+TEXT: Hogao is an ingredient of Bandeja paisa.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id115 1 Food
+
+TRIPLES
+Bandeja_paisa | ingredient | Pork_belly
+
+
+ENTITY MAP
+AGENT-1 | Bandeja_paisa
+PATIENT-1 | Pork_belly
+
+
+LEX
+Id1
+TEXT: Pork belly is an ingredient in the dish Bandeja paisa.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Pork belly is an ingredient in Bandeja paisa.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: one of the ingredients of Bandeja paisa is Pork belly.
+TEMPLATE: one of the ingredients of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id114 1 Food
+
+TRIPLES
+Bandeja_paisa | ingredient | Lemon
+
+
+ENTITY MAP
+AGENT-1 | Bandeja_paisa
+PATIENT-1 | Lemon
+
+
+LEX
+Id1
+TEXT: Lemon is an ingredient of Bandeja paisa.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: One of the ingredients in Bandeja paisa is lemon.
+TEMPLATE: PATIENT-1 of the ingredients in AGENT-1 is lemon .
+CORRECT: One of the ingredients in AGENT-1 is PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: Lemon is an ingredient in Bandeja paisa.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id121 1 Food
+
+TRIPLES
+Barny_Cakes | dishVariation | Apple
+
+
+ENTITY MAP
+AGENT-1 | Barny_Cakes
+PATIENT-1 | Apple
+
+
+LEX
+Id1
+TEXT: barny cakes can be made with apple.
+TEMPLATE: AGENT-1 can be made with PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id110 1 Food
+
+TRIPLES
+Bandeja_paisa | ingredient | Fried_egg
+
+
+ENTITY MAP
+AGENT-1 | Bandeja_paisa
+PATIENT-1 | Fried_egg
+
+
+LEX
+Id1
+TEXT: Fried egg is an ingredient of Bandeja paisa.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Fried egg is one of the ingredients of Bandeja paisa.
+TEMPLATE: PATIENT-1 is one of the ingredients of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: fried egg is an ingredient in bandeja paisa.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id109 1 Food
+
+TRIPLES
+Bandeja_paisa | ingredient | Cooking_plantain
+
+
+ENTITY MAP
+AGENT-1 | Bandeja_paisa
+PATIENT-1 | Cooking_plantain
+
+
+LEX
+Id1
+TEXT: Plantain is one of the ingredients in the dish Bandeja paisa.
+TEMPLATE: PATIENT-1 is one of the ingredients in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Cooking plantain is an ingredient in bandeja paisa.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id108 1 Food
+
+TRIPLES
+Bandeja_paisa | ingredient | Black_pudding
+
+
+ENTITY MAP
+AGENT-1 | Bandeja_paisa
+PATIENT-1 | Black_pudding
+
+
+LEX
+Id1
+TEXT: Black pudding is an ingredient in Bandeja paisa.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Black pudding is included in the list of ingredients needed to make Bandeja paisa.
+TEMPLATE: PATIENT-1 is included in the list of ingredients needed to make AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id106 1 Food
+
+TRIPLES
+Bandeja_paisa | ingredient | Arepa
+
+
+ENTITY MAP
+AGENT-1 | Bandeja_paisa
+PATIENT-1 | Arepa
+
+
+LEX
+Id1
+TEXT: Arepa is an ingredient of Bandeja paisa.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Arepa is one of the ingredients in Bandeja paisa.
+TEMPLATE: PATIENT-1 is one of the ingredients in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id105 1 Food
+
+TRIPLES
+Bakso | region | Indonesia
+
+
+ENTITY MAP
+AGENT-1 | Bakso
+PATIENT-1 | Indonesia
+
+
+LEX
+Id1
+TEXT: Bakso is a food found in Indonesia.
+TEMPLATE: AGENT-1 is a food found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Bakso is food found in Indonesia.
+TEMPLATE: AGENT-1 is food found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id104 1 Food
+
+TRIPLES
+Bakso | region | "Nationwide in Indonesia, also popular in neighboring Southeast Asian countries"
+
+
+ENTITY MAP
+AGENT-1 | Bakso
+PATIENT-1 | "Nationwide in Indonesia, also popular in neighboring Southeast Asian countries"
+
+
+LEX
+Id1
+TEXT: Bakso is popular in the Indonesian region and also in the neighbouring Southeast Asian countries.
+TEMPLATE: AGENT-1 is popular in the Indonesian region and also in PATIENT-1 .
+CORRECT: AGENT-1 is popular PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: Bakso is a traditional dish throughout the whole of Indonesia and is popular in neighbouring Southeast Asian countries too.
+TEMPLATE: AGENT-1 is a traditional dish throughout the whole of Indonesia and is popular in neighbouring PATIENT-1 too .
+CORRECT: AGENT-1 is a traditional dish PATIENT-1 .
+COMMENT: list
+-
+Id3
+TEXT: Bakso is popular all over Indonesia and Southeastern Asian countries.
+TEMPLATE: AGENT-1 is popular all over PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id103 1 Food
+
+TRIPLES
+Bakso | mainIngredients | "Ground beef, tapioca, noodle, rice vermicelli, beef broth, kailan, celery, salted vegetables, fried shallots"
+
+
+ENTITY MAP
+AGENT-1 | Bakso
+PATIENT-1 | "Ground beef, tapioca, noodle, rice vermicelli, beef broth, kailan, celery, salted vegetables, fried shallots"
+
+
+LEX
+Id1
+TEXT: Ground beef, tapioca, noodle, rice vermicelli, beef broth, kailan, celery, salted vegetables, fried shallots are the main ingredients of Bakso.
+TEMPLATE: PATIENT-1 are the main ingredients of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The main ingredients of Bakso are ground beef, tapioca, noodle, rice vermicelli, beef broth, kailan, celery, salted vegetables and fried shallots.
+TEMPLATE: The main ingredients of AGENT-1 are PATIENT-1 and fried shallots .
+CORRECT: The main ingredients of AGENT-1 are PATIENT-1 .
+COMMENT: list
+-
+Id3
+TEXT: Ground beef, tapioca, noodle, rice vermicelli, beef broth, kailan, celery, salted vegetables, and fried shallots are main ingredients in Bakso.
+TEMPLATE: PATIENT-1 are main ingredients in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id101 1 Food
+
+TRIPLES
+Bakso | ingredient | Ground_beef
+
+
+ENTITY MAP
+AGENT-1 | Bakso
+PATIENT-1 | Ground_beef
+
+
+LEX
+Id1
+TEXT: Ground beef is an ingredient in Basko.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Ground beef is one ingredient in Bakso.
+TEMPLATE: PATIENT-1 is one ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Ground beef is an ingredient of Bakso.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id111 1 Food
+
+TRIPLES
+Bandeja_paisa | ingredient | Ground_meat
+
+
+ENTITY MAP
+AGENT-1 | Bandeja_paisa
+PATIENT-1 | Ground_meat
+
+
+LEX
+Id1
+TEXT: Ground meat is an ingredient in bandeja paisa.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id107 1 Food
+
+TRIPLES
+Bandeja_paisa | ingredient | Avocado
+
+
+ENTITY MAP
+AGENT-1 | Bandeja_paisa
+PATIENT-1 | Avocado
+
+
+LEX
+Id1
+TEXT: Avocado is one of the ingredients in the dish Bandeja paisa.
+TEMPLATE: PATIENT-1 is one of the ingredients in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id100 1 Food
+
+TRIPLES
+Bakso | ingredient | Celery
+
+
+ENTITY MAP
+AGENT-1 | Bakso
+PATIENT-1 | Celery
+
+
+LEX
+Id1
+TEXT: Celery is an ingredient of Bakso.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Celery is an ingredient in Bakso.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id98 1 Food
+
+TRIPLES
+Bakso | country | Indonesia
+
+
+ENTITY MAP
+AGENT-1 | Bakso
+PATIENT-1 | Indonesia
+
+
+LEX
+Id1
+TEXT: Indonesia is the country Bakso comes from.
+TEMPLATE: PATIENT-1 is AGENT-1 comes from .
+CORRECT: PATIENT-1 is the country AGENT-1 comes from .
+COMMENT: modifier
+-
+Id2
+TEXT: Bakso is a dish from the country of Indonesia.
+TEMPLATE: AGENT-1 is a dish from the country of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id97 1 Food
+
+TRIPLES
+Bakso | country | Chinese_cuisine
+
+
+ENTITY MAP
+AGENT-1 | Bakso
+PATIENT-1 | Chinese_cuisine
+
+
+LEX
+Id1
+TEXT: Bakso is from the Chinese cuisine.
+TEMPLATE: AGENT-1 is from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Bakso is made in China.
+TEMPLATE: AGENT-1 is made in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id96 1 Food
+
+TRIPLES
+Bakewell_tart | region | Derbyshire_Dales
+
+
+ENTITY MAP
+AGENT-1 | Bakewell_tart
+PATIENT-1 | Derbyshire_Dales
+
+
+LEX
+Id1
+TEXT: Bakewell tart comes from the Derbyshire Dales region.
+TEMPLATE: AGENT-1 comes from the PATIENT-1 region .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Bakewell Tart is a dish that comes from the Derbyshire Dales region.
+TEMPLATE: AGENT-1 is a dish that comes from the PATIENT-1 region .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The bakewell tart is popular in the Derbyshire Dales area.
+TEMPLATE: AGENT-1 is popular in the PATIENT-1 area .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id95 1 Food
+
+TRIPLES
+Bakewell_tart | ingredient | Shortcrust_pastry
+
+
+ENTITY MAP
+AGENT-1 | Bakewell_tart
+PATIENT-1 | Shortcrust_pastry
+
+
+LEX
+Id1
+TEXT: An ingredient of bakewell tart is shortcrust pastry.
+TEMPLATE: An ingredient of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Shortcrust pastry is a main ingredient of a Bakewell tart.
+TEMPLATE: PATIENT-1 is a main ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Shortcrust pastry is a key ingredient in a Bakewell tart.
+TEMPLATE: PATIENT-1 is a key ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id94 1 Food
+
+TRIPLES
+Bakewell_tart | ingredient | Fruit_preserves
+
+
+ENTITY MAP
+AGENT-1 | Bakewell_tart
+PATIENT-1 | Fruit_preserves
+
+
+LEX
+Id1
+TEXT: Fruit preserves are an ingredient in the bakewell tart.
+TEMPLATE: PATIENT-1 are an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Fruit preserves are an ingredient in Bakewell tart.
+TEMPLATE: PATIENT-1 are an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id92 1 Food
+
+TRIPLES
+Bakewell_pudding | region | Derbyshire_Dales
+
+
+ENTITY MAP
+AGENT-1 | Bakewell_pudding
+PATIENT-1 | Derbyshire_Dales
+
+
+LEX
+Id1
+TEXT: Bakewell pudding is from the Derbyshire Dales region.
+TEMPLATE: AGENT-1 is from the PATIENT-1 region .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Bakewell pudding originates from the Derbyshire Dales.
+TEMPLATE: AGENT-1 originates from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id91 1 Food
+
+TRIPLES
+Bakewell_pudding | mainIngredients | "Ground almond, jam, butter, eggs"
+
+
+ENTITY MAP
+AGENT-1 | Bakewell_pudding
+PATIENT-1 | "Ground almond, jam, butter, eggs"
+
+
+LEX
+Id1
+TEXT: Some main ingredients in Bakewell pudding are ground almonds, jam, butter and eggs.
+TEMPLATE: Some main ingredients in AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Bakewell pudding has ground almond, jam, butter and eggs as main ingredients.
+TEMPLATE: AGENT-1 has PATIENT-1 as main ingredients .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The main ingredients of Bakewell pudding are ground almond, jam, butter, eggs.
+TEMPLATE: The main ingredients of AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id90 1 Food
+
+TRIPLES
+Bakewell_pudding | dishVariation | Bakewell_tart
+
+
+ENTITY MAP
+AGENT-1 | Bakewell_pudding
+PATIENT-1 | Bakewell_tart
+
+
+LEX
+Id1
+TEXT: A variant of bakewell pudding is bakewell tart.
+TEMPLATE: A variant of AGENT-1 is bakewell tart .
+CORRECT: A variant of AGENT-1 is PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Bakewell tart is a variation of Bakewell pudding.
+TEMPLATE: PATIENT-1 is a variation of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id89 1 Food
+
+TRIPLES
+Bakewell_pudding | creator | "Rutland Arms, Bakewell, in 1820"
+
+
+ENTITY MAP
+AGENT-1 | Bakewell_pudding
+PATIENT-1 | "Rutland Arms, Bakewell, in 1820"
+
+
+LEX
+Id1
+TEXT: Bakewell pudding was created in 1820 at the Rutland Arms, Bakewell.
+TEMPLATE: AGENT-1 was created in 1820 at PATIENT-1 .
+CORRECT: AGENT-1 was created at PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: Bakewell pudding was created in Rutland Arms, Bakewell, in 1820.
+TEMPLATE: AGENT-1 was created in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id102 1 Food
+
+TRIPLES
+Bakso | ingredient | Tapioca
+
+
+ENTITY MAP
+AGENT-1 | Bakso
+PATIENT-1 | Tapioca
+
+
+LEX
+Id1
+TEXT: Tapioca is an ingredient in bakso.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id86 1 Food
+
+TRIPLES
+Baked_Alaska | region | "Paris, New York or Hong Kong"
+
+
+ENTITY MAP
+AGENT-1 | Baked_Alaska
+PATIENT-1 | "Paris, New York or Hong Kong"
+
+
+LEX
+Id1
+TEXT: Hong Kong or New York or Paris are the regions where Baked Alaska is found.
+TEMPLATE: Hong Kong or PATIENT-1 are the regions where AGENT-1 is found .
+CORRECT: PATIENT-1 are the regions where AGENT-1 is found .
+COMMENT: list
+-
+Id2
+TEXT: Baked Alaska comes from either Paris, New York or Hong Kong.
+TEMPLATE: AGENT-1 comes from either PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Baked Alaska is popular in Paris, New York and Hong Kong.
+TEMPLATE: AGENT-1 is popular in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id85 1 Food
+
+TRIPLES
+Baked_Alaska | mainIngredients | "Meringue, ice cream, sponge cake or Christmas pudding"
+
+
+ENTITY MAP
+AGENT-1 | Baked_Alaska
+PATIENT-1 | "Meringue, ice cream, sponge cake or Christmas pudding"
+
+
+LEX
+Id1
+TEXT: Meringue, ice cream, sponge cake or Christmas pudding are the main ingredients of Baked Alaska.
+TEMPLATE: PATIENT-1 are the main ingredients of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The main ingredients of a Baked Alaska are meringue, ice cream and sponge cake (or Christmas pudding).
+TEMPLATE: The main ingredients of AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Meringue, ice cream, sponge cake or Christmas pudding are main ingredients in baked Alaska.
+TEMPLATE: PATIENT-1 are main ingredients in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id84 1 Food
+
+TRIPLES
+Baked_Alaska | ingredient | Sponge_cake
+
+
+ENTITY MAP
+AGENT-1 | Baked_Alaska
+PATIENT-1 | Sponge_cake
+
+
+LEX
+Id1
+TEXT: Sponge cake is an ingredient of Baked Alaska.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: One of the ingredients of Baked Alaska is Sponge Cake.
+TEMPLATE: One of the ingredients of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: sponge cake is an ingredient in baked alaska.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id99 1 Food
+
+TRIPLES
+Bakso | ingredient | Beef
+
+
+ENTITY MAP
+AGENT-1 | Bakso
+PATIENT-1 | Beef
+
+
+LEX
+Id1
+TEXT: Beef is an ingredient of Bakso.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id80 1 Food
+
+TRIPLES
+Baked_Alaska | country | United_States
+
+
+ENTITY MAP
+AGENT-1 | Baked_Alaska
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: Baked Alaska is a dish from the United States.
+TEMPLATE: AGENT-1 is a dish from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Baked Alaska is a dish found in the U.S.
+TEMPLATE: AGENT-1 is a dish found in PATIENT-1
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Baked Alaska is from the United States.
+TEMPLATE: AGENT-1 is from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id79 1 Food
+
+TRIPLES
+Baked_Alaska | country | France
+
+
+ENTITY MAP
+AGENT-1 | Baked_Alaska
+PATIENT-1 | France
+
+
+LEX
+Id1
+TEXT: Baked Alaska is from the country of France.
+TEMPLATE: AGENT-1 is from the country of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Baked Alaska comes from the country of France.
+TEMPLATE: AGENT-1 comes from the country of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Baked Alaska is from France.
+TEMPLATE: AGENT-1 is from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id93 1 Food
+
+TRIPLES
+Bakewell_pudding | servingTemperature | "Warm (freshly baked) or cold"
+
+
+ENTITY MAP
+AGENT-1 | Bakewell_pudding
+PATIENT-1 | "Warm (freshly baked) or cold"
+
+
+LEX
+Id1
+TEXT: Bakewell pudding can be served warm (freshly baked) or cold.
+TEMPLATE: AGENT-1 can be served PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id88 1 Food
+
+TRIPLES
+Bakewell_pudding | course | "Dessert"
+
+
+ENTITY MAP
+AGENT-1 | Bakewell_pudding
+PATIENT-1 | "Dessert"
+
+
+LEX
+Id1
+TEXT: Bakewell pudding is a dessert.
+TEMPLATE: AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Bakewell pudding is classed as a Dessert.
+TEMPLATE: AGENT-1 is classed as PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id87 1 Food
+
+TRIPLES
+Baked_Alaska | region | New_York
+
+
+ENTITY MAP
+AGENT-1 | Baked_Alaska
+PATIENT-1 | New_York
+
+
+LEX
+Id1
+TEXT: Baked Alaska comes from the region of New York.
+TEMPLATE: AGENT-1 comes from the region of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Baked Alaska is from the New York region.
+TEMPLATE: AGENT-1 is from the PATIENT-1 region .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id76 1 Food
+
+TRIPLES
+Bacon_sandwich | mainIngredients | "Bread and bacon, with a condiment, often ketchup or brown sauce"
+
+
+ENTITY MAP
+AGENT-1 | Bacon_sandwich
+PATIENT-1 | "Bread and bacon, with a condiment, often ketchup or brown sauce"
+
+
+LEX
+Id1
+TEXT: The main ingredients of a bacon sandwich are bread and bacon and a condiment, often ketchup or brown sauce.
+TEMPLATE: The main ingredients of AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: the main ingredients in a Bacon sandwich are bread and bacon with ketchup or brown sauce as a condiment.
+TEMPLATE: the main ingredients in AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id82 1 Food
+
+TRIPLES
+Baked_Alaska | ingredient | Ice_cream
+
+
+ENTITY MAP
+AGENT-1 | Baked_Alaska
+PATIENT-1 | Ice_cream
+
+
+LEX
+Id1
+TEXT: Ice cream is an ingredient of Baked Alaska.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Ice cream is an ingredient in Baked Alaska.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id83 1 Food
+
+TRIPLES
+Baked_Alaska | ingredient | Meringue
+
+
+ENTITY MAP
+AGENT-1 | Baked_Alaska
+PATIENT-1 | Meringue
+
+
+LEX
+Id1
+TEXT: Meringue is an ingredient of a Baked Alaska.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id74 1 Food
+
+TRIPLES
+Bacon_sandwich | ingredient | Condiment
+
+
+ENTITY MAP
+AGENT-1 | Bacon_sandwich
+PATIENT-1 | Condiment
+
+
+LEX
+Id1
+TEXT: Condiments are an ingredient in a bacon sandwich.
+TEMPLATE: PATIENT-1 are an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Condiments are used in the preparation of a bacon sandwich.
+TEMPLATE: PATIENT-1 are used in the preparation of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: condiments are ingredients in bacon sandwiches.
+TEMPLATE: PATIENT-1 are ingredients in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id73 1 Food
+
+TRIPLES
+Bacon_sandwich | ingredient | Brown_sauce
+
+
+ENTITY MAP
+AGENT-1 | Bacon_sandwich
+PATIENT-1 | Brown_sauce
+
+
+LEX
+Id1
+TEXT: An ingredient in a bacon sandwich is brown sauce.
+TEMPLATE: An ingredient in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Brown sauce is an ingredient in a bacon sandwich.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Brown sauce is an ingredient of a Bacon Sandwich.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id72 1 Food
+
+TRIPLES
+Bacon_sandwich | ingredient | Bread
+
+
+ENTITY MAP
+AGENT-1 | Bacon_sandwich
+PATIENT-1 | Bread
+
+
+LEX
+Id1
+TEXT: An ingredient in a bacon sandwich is bread.
+TEMPLATE: An ingredient in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: One ingredient of a bacon sandwich is bread.
+TEMPLATE: One ingredient of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Bread is an ingredient of a bacon sandwich.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id81 1 Food
+
+TRIPLES
+Baked_Alaska | ingredient | Christmas_pudding
+
+
+ENTITY MAP
+AGENT-1 | Baked_Alaska
+PATIENT-1 | Christmas_pudding
+
+
+LEX
+Id1
+TEXT: Christmas pudding is an ingredient in Baked Alaska.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id70 1 Food
+
+TRIPLES
+Bacon_sandwich | dishVariation | BLT
+
+
+ENTITY MAP
+AGENT-1 | Bacon_sandwich
+PATIENT-1 | BLT
+
+
+LEX
+Id1
+TEXT: A variation of a bacon sandwich is the BLT.
+TEMPLATE: A variation of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Another variation for a bacon sandwich is a BLT.
+TEMPLATE: Another variation for AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Bacon sandwich is a variation of BLT.
+TEMPLATE: AGENT-1 is a variation of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id69 1 Food
+
+TRIPLES
+Bacon_sandwich | country | United_Kingdom
+
+
+ENTITY MAP
+AGENT-1 | Bacon_sandwich
+PATIENT-1 | United_Kingdom
+
+
+LEX
+Id1
+TEXT: Bacon sandwich is a dish from the United Kingdom.
+TEMPLATE: AGENT-1 is a dish from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The country that bacon sandwich comes from is the United Kingdom.
+TEMPLATE: The country that AGENT-1 comes from is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Bacon sandwiches are popular in the UK.
+TEMPLATE: AGENT-1 are popular in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id68 1 Food
+
+TRIPLES
+Bacon_sandwich | alternativeName | "Bacon butty, bacon sarnie, rasher sandwich, bacon sanger, piece n bacon, bacon cob, bacon barm, bacon muffin"
+
+
+ENTITY MAP
+AGENT-1 | Bacon_sandwich
+PATIENT-1 | "Bacon butty, bacon sarnie, rasher sandwich, bacon sanger, piece n bacon, bacon cob, bacon barm, bacon muffin"
+
+
+LEX
+Id1
+TEXT: The bacon sandwich has different names including: Bacon butty, bacon sarnie, rasher sandwich, bacon sanger, piece 'n bacon, bacon cob, bacon barm and bacon muffin.
+TEMPLATE: The bacon sandwich has PATIENT-1 .
+CORRECT: AGENT-1 has different names including: PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: a bacon sandwich can also be known as a bacon butty, bacon sarnie, rasher sandwich, bacon sanger, piece 'n bacon, bacon cob, bacon barm, or bacon muffin.
+TEMPLATE: AGENT-1 can also be known as PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id71 1 Food
+
+TRIPLES
+Bacon_sandwich | ingredient | Bacon
+
+
+ENTITY MAP
+AGENT-1 | Bacon_sandwich
+PATIENT-1 | Bacon
+
+
+LEX
+Id1
+TEXT: A bacon sandwich includes the ingredient bacon.
+TEMPLATE: AGENT-1 includes the ingredient bacon .
+CORRECT: AGENT-1 includes the ingredient PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id66 1 Food
+
+TRIPLES
+Bacon_Explosion | mainIngredients | Sausage
+
+
+ENTITY MAP
+AGENT-1 | Bacon_Explosion
+PATIENT-1 | Sausage
+
+
+LEX
+Id1
+TEXT: Sausage is a main ingredient of Bacon Explosion.
+TEMPLATE: PATIENT-1 is a main ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: sausage is a main ingredient in bacon explosion.
+TEMPLATE: PATIENT-1 is a main ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id64 1 Food
+
+TRIPLES
+Bacon_Explosion | mainIngredients | "Bacon,sausage"
+
+
+ENTITY MAP
+AGENT-1 | Bacon_Explosion
+PATIENT-1 | "Bacon,sausage"
+
+
+LEX
+Id1
+TEXT: The main ingredients in a bacon explosion are bacon and sausage.
+TEMPLATE: The main ingredients in AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The main ingredients of Bacon Explosion are bacon and sausage.
+TEMPLATE: The main ingredients of AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Bacon and sausage are the main ingredients of a Bacon Explosion.
+TEMPLATE: PATIENT-1 are the main ingredients of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id67 1 Food
+
+TRIPLES
+Bacon_Explosion | region | Kansas_City_metropolitan_area
+
+
+ENTITY MAP
+AGENT-1 | Bacon_Explosion
+PATIENT-1 | Kansas_City_metropolitan_area
+
+
+LEX
+Id1
+TEXT: Bacon Explosion is from the Kansas City metropolitan area.
+TEMPLATE: AGENT-1 is from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id63 1 Food
+
+TRIPLES
+Bacon_Explosion | ingredient | Sausage
+
+
+ENTITY MAP
+AGENT-1 | Bacon_Explosion
+PATIENT-1 | Sausage
+
+
+LEX
+Id1
+TEXT: An ingredient of a bacon explosion is sausage.
+TEMPLATE: An ingredient of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Sausage in an ingredient in bacon explosion.
+TEMPLATE: PATIENT-1 in an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Sausage is an ingredient of a Bacon Explosion.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id62 1 Food
+
+TRIPLES
+Bacon_Explosion | ingredient | Bacon
+
+
+ENTITY MAP
+AGENT-1 | Bacon_Explosion
+PATIENT-1 | Bacon
+
+
+LEX
+Id1
+TEXT: Bacon is an ingredient in a Bacon Explosion.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Bacon is an ingredient in the dish 'Bacon Explosion'.
+TEMPLATE: PATIENT-1 is an ingredient in ` AGENT-1 ' .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id60 1 Food
+
+TRIPLES
+Bacon_Explosion | country | United_States
+
+
+ENTITY MAP
+AGENT-1 | Bacon_Explosion
+PATIENT-1 | United_States
+
+
+LEX
+Id1
+TEXT: The country Bacon Explosion comes from is the United States.
+TEMPLATE: AGENT-1 comes from is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The United States is the country of the Bacon Explosion.
+TEMPLATE: PATIENT-1 is the country of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Bacon Explosion comes from the United States.
+TEMPLATE: AGENT-1 comes from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id59 1 Food
+
+TRIPLES
+BLT | ingredient | Lettuce
+
+
+ENTITY MAP
+AGENT-1 | BLT
+PATIENT-1 | Lettuce
+
+
+LEX
+Id1
+TEXT: one of the ingredients of the BLT sandwich is Lettuce.
+TEMPLATE: one of the ingredients of the AGENT-1 sandwich is PATIENT-1 .
+CORRECT: one of the ingredients of AGENT-1 is PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: Lettuce is an ingredient in a BLT.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id65 1 Food
+
+TRIPLES
+Bacon_Explosion | mainIngredients | Bacon
+
+
+ENTITY MAP
+AGENT-1 | Bacon_Explosion
+PATIENT-1 | Bacon
+
+
+LEX
+Id1
+TEXT: The main ingredient in a Bacon Explosion is bacon.
+TEMPLATE: The main ingredient in AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id78 1 Food
+
+TRIPLES
+Baked_Alaska | country | China
+
+
+ENTITY MAP
+AGENT-1 | Baked_Alaska
+PATIENT-1 | China
+
+
+LEX
+Id1
+TEXT: Baked Alaska is a dish in China.
+TEMPLATE: AGENT-1 is a dish in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Baked Alaska is from China.
+TEMPLATE: AGENT-1 is from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Baked Alaska comes from China.
+TEMPLATE: AGENT-1 comes from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id56 1 Food
+
+TRIPLES
+Ayam_penyet | region | "Nationwide, also can be found in Malaysia and Singapore"
+
+
+ENTITY MAP
+AGENT-1 | Ayam_penyet
+PATIENT-1 | "Nationwide, also can be found in Malaysia and Singapore"
+
+
+LEX
+Id1
+TEXT: Ayam penyet can be found nationwide and also in Malaysia and Singapore.
+TEMPLATE: AGENT-1 can be found nationwide and also in PATIENT-1 .
+CORRECT: AGENT-1 can be found PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Ayam penyet is made nationwide, and can also be found in Malaysia and Singapore.
+TEMPLATE: AGENT-1 is made nationwide , and can also be found in PATIENT-1 .
+CORRECT: AGENT-1 is made PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id55 1 Food
+
+TRIPLES
+Ayam_penyet | mainIngredients | "Squeezed" or "smashed" fried chicken served with sambal
+
+
+ENTITY MAP
+AGENT-1 | Ayam_penyet
+PATIENT-1 | "Squeezed" or "smashed" fried chicken served with sambal
+
+
+LEX
+Id1
+TEXT: The main ingredients of Ayam penyet are "squeezed" or "smashed" chicken served with sambal.
+TEMPLATE: The main ingredients of AGENT-1 are `` squeezed '' or `` smashed '' PATIENT-1 with sambal .
+CORRECT: The main ingredients of AGENT-1 are PATIENT-1 .
+COMMENT: modifier
+-
+Id2
+TEXT: Ayam penyet's main ingredients are squeezed or smashed fried chicken served with sambal.
+TEMPLATE: AGENT-1 's main ingredients are squeezed or smashed PATIENT-1 served with sambal .
+CORRECT: AGENT-1 main ingredients are PATIENT-1 .
+COMMENT:
+-
+Id3
+TEXT: "Squeezed" or "smashed" fried chicken served with sambal is a main ingredient in ayam penyet.
+TEMPLATE: `` Squeezed '' or `` smashed '' fried chicken served with sambal is PATIENT-1 in AGENT-1 .
+CORRECT: PATIENT-1 is a main ingredient in AGENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id54 1 Food
+
+TRIPLES
+Ayam_penyet | ingredient | Fried_chicken
+
+
+ENTITY MAP
+AGENT-1 | Ayam_penyet
+PATIENT-1 | Fried_chicken
+
+
+LEX
+Id1
+TEXT: Fried chicken is an ingredient in Ayam penyet.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Fried chicken is one of the ingredients in the dish 'Ayam Penyet'.
+TEMPLATE: PATIENT-1 is one of the ingredients in ` AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Ayam penyet has fried chicken in it.
+TEMPLATE: AGENT-1 has fried PATIENT-1 in AGENT-1 .
+CORRECT: AGENT-1 has PATIENT-1 in AGENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id53 1 Food
+
+TRIPLES
+Ayam_penyet | country | Java
+
+
+ENTITY MAP
+AGENT-1 | Ayam_penyet
+PATIENT-1 | Java
+
+
+LEX
+Id1
+TEXT: Ayam penyet is a food found in Java.
+TEMPLATE: AGENT-1 is a food found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The country of Ayam penyet is Java.
+TEMPLATE: The country of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id61 1 Food
+
+TRIPLES
+Bacon_Explosion | course | "Main course"
+
+
+ENTITY MAP
+AGENT-1 | Bacon_Explosion
+PATIENT-1 | "Main course"
+
+
+LEX
+Id1
+TEXT: Bacon Explosion is a main course.
+TEMPLATE: AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id51 1 Food
+
+TRIPLES
+Avocado | order | Laurales
+
+
+ENTITY MAP
+AGENT-1 | Avocado
+PATIENT-1 | Laurales
+
+
+LEX
+Id1
+TEXT: Avocado is under the order of laurales.
+TEMPLATE: AGENT-1 is under the order of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The avocado is a member of the Laurales plant order.
+TEMPLATE: AGENT-1 is a member of the PATIENT-1 plant order .
+CORRECT: AGENT-1 is a member of the PATIENT-1 order .
+COMMENT: modifier
+-
+Id3
+TEXT: Avocado is a fruit of the order Laurales.
+TEMPLATE: AGENT-1 is a fruit of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id50 1 Food
+
+TRIPLES
+Avocado | family | Lauraceae
+
+
+ENTITY MAP
+AGENT-1 | Avocado
+PATIENT-1 | Lauraceae
+
+
+LEX
+Id1
+TEXT: The avocado is a member of the Lauraceae family.
+TEMPLATE: AGENT-1 is a member of the PATIENT-1 family .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Avocado is part of the Lauraceae family.
+TEMPLATE: AGENT-1 is part of the PATIENT-1 family .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The avocado plant belongs to the Lauraceae family.
+TEMPLATE: AGENT-1 belongs to the PATIENT-1 family .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id52 1 Food
+
+TRIPLES
+Ayam_penyet | country | Indonesia
+
+
+ENTITY MAP
+AGENT-1 | Ayam_penyet
+PATIENT-1 | Indonesia
+
+
+LEX
+Id1
+TEXT: Ayam penyet is from Indonesia.
+TEMPLATE: AGENT-1 is from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id48 1 Food
+
+TRIPLES
+Asam_pedas | region | Malay_Peninsula
+
+
+ENTITY MAP
+AGENT-1 | Asam_pedas
+PATIENT-1 | Malay_Peninsula
+
+
+LEX
+Id1
+TEXT: Asam pedas is a food found in the Malay Peninsula.
+TEMPLATE: AGENT-1 is a food found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Asam pedas is from the Malay Peninsula region.
+TEMPLATE: AGENT-1 is from the PATIENT-1 region .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Asam pedas hails from Malay Peninsula.
+TEMPLATE: AGENT-1 hails from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id47 1 Food
+
+TRIPLES
+Asam_pedas | region | "Sumatra and Malay Peninsula"
+
+
+ENTITY MAP
+AGENT-1 | Asam_pedas
+PATIENT-1 | "Sumatra and Malay Peninsula"
+
+
+LEX
+Id1
+TEXT: Asam pedas is found in the region of Sumatra and Malay peninsula.
+TEMPLATE: AGENT-1 is found in the region of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The dish Asam pedas comes from the region of Sumatra and the Malay Peninsula.
+TEMPLATE: AGENT-1 comes from the region of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Asam pedas is from the Sumatra and Malay Peninsula regions.
+TEMPLATE: AGENT-1 is from the PATIENT-1 regions .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id46 1 Food
+
+TRIPLES
+Asam_pedas | mainIngredients | "Fish cooked in sour and hot sauce"
+
+
+ENTITY MAP
+AGENT-1 | Asam_pedas
+PATIENT-1 | "Fish cooked in sour and hot sauce"
+
+
+LEX
+Id1
+TEXT: The main ingredients of Asam pedas are fish cooked in sour and hot sauce.
+TEMPLATE: The main ingredients of AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The main ingredients of asam pedas consist of fish cooked in a sour and hot sauce.
+TEMPLATE: The main ingredients of AGENT-1 consist of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Asam pedas is a dish of fish cooked in a sour and hot sauce.
+TEMPLATE: AGENT-1 is a dish of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id49 1 Food
+
+TRIPLES
+Asam_pedas | region | Sumatra
+
+
+ENTITY MAP
+AGENT-1 | Asam_pedas
+PATIENT-1 | Sumatra
+
+
+LEX
+Id1
+TEXT: Asam pedas is a dish from Sumatra.
+TEMPLATE: AGENT-1 is a dish from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id45 1 Food
+
+TRIPLES
+Asam_pedas | creatorOfDish | Padang_cuisine
+
+
+ENTITY MAP
+AGENT-1 | Asam_pedas
+PATIENT-1 | Padang_cuisine
+
+
+LEX
+Id1
+TEXT: Padang cuisine has resulted in the creation of the dish Asam pedas.
+TEMPLATE: PATIENT-1 has resulted in the creation of AGENT-1 .
+CORRECT: PATIENT-1 has resulted in the creation of the dish AGENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id43 1 Food
+
+TRIPLES
+Asam_pedas | country | Indonesia
+
+
+ENTITY MAP
+AGENT-1 | Asam_pedas
+PATIENT-1 | Indonesia
+
+
+LEX
+Id1
+TEXT: Indonesia is the country Asam pedas comes from.
+TEMPLATE: PATIENT-1 is AGENT-1 comes from .
+CORRECT: PATIENT-1 is the country AGENT-1 comes from .
+COMMENT:
+-
+Id2
+TEXT: Asam pedas is a dish that is popular in Indonesia.
+TEMPLATE: AGENT-1 is a dish that is popular in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The Asam pedas is popular in Indonesia.
+TEMPLATE: AGENT-1 is popular in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id42 1 Food
+
+TRIPLES
+Asam_pedas | country | "Indonesia and Malaysia"
+
+
+ENTITY MAP
+AGENT-1 | Asam_pedas
+PATIENT-1 | "Indonesia and Malaysia"
+
+
+LEX
+Id1
+TEXT: Asam pedas comes from the countries of Indonesia and Malaysia.
+TEMPLATE: AGENT-1 comes from the countries of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Asam pedas is from Indonesia and Malaysia.
+TEMPLATE: AGENT-1 is from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id41 1 Food
+
+TRIPLES
+Asam_pedas | alternativeName | "Asam padeh"
+
+
+ENTITY MAP
+AGENT-1 | Asam_pedas
+PATIENT-1 | "Asam padeh"
+
+
+LEX
+Id1
+TEXT: The alternative name for asam pedas is asam padeh.
+TEMPLATE: The alternative name for AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Asam padeh is also known as Asam pedas.
+TEMPLATE: PATIENT-1 is also known as AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: An alternative name for Asam pedas is Asam padeh.
+TEMPLATE: An alternative name for AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id40 1 Food
+
+TRIPLES
+Arròs_negre | mainIngredients | "White rice, cuttlefish or squid, cephalopod ink, cubanelle peppers"
+
+
+ENTITY MAP
+AGENT-1 | Arròs_negre
+PATIENT-1 | "White rice, cuttlefish or squid, cephalopod ink, cubanelle peppers"
+
+
+LEX
+Id1
+TEXT: The main ingredients in arròs negre are white rice, cuttlefish or squid, cephalopod ink and cubanelle peppers.
+TEMPLATE: The main ingredients in AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The main ingredients of Arròs negre are white rice, cuttlefish or squid, cephalopod ink, cubanelle peppers.
+TEMPLATE: The main ingredients of AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The main ingredients of Arros negre are white rice, cuttlefish or squid, cephalopod ink, cubanelle peppers.
+TEMPLATE: The main ingredients of AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id39 1 Food
+
+TRIPLES
+Arròs_negre | ingredient | Cubanelle
+
+
+ENTITY MAP
+AGENT-1 | Arròs_negre
+PATIENT-1 | Cubanelle
+
+
+LEX
+Id1
+TEXT: Cubanelle is an ingredient in Arros negre.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Cubanelle is one of the ingredients in Arros negre.
+TEMPLATE: PATIENT-1 is one of the ingredients in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id38 1 Food
+
+TRIPLES
+Arròs_negre | ingredient | Cephalopod_ink
+
+
+ENTITY MAP
+AGENT-1 | Arròs_negre
+PATIENT-1 | Cephalopod_ink
+
+
+LEX
+Id1
+TEXT: Cephalopod ink is an ingredient of Arròs negre.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Cephalopod ink is an ingredient in the dish Arròs negre.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Cephalopod ink is an ingredient in Arròs negre.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id37 1 Food
+
+TRIPLES
+Arròs_negre | country | Spain
+
+
+ENTITY MAP
+AGENT-1 | Arròs_negre
+PATIENT-1 | Spain
+
+
+LEX
+Id1
+TEXT: Arròs negre is a traditional dish from Spain.
+TEMPLATE: AGENT-1 is a traditional dish from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Arròs negre is from Spain.
+TEMPLATE: AGENT-1 is from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id36 1 Food
+
+TRIPLES
+Arrabbiata_sauce | region | Rome
+
+
+ENTITY MAP
+AGENT-1 | Arrabbiata_sauce
+PATIENT-1 | Rome
+
+
+LEX
+Id1
+TEXT: Arrabbiata sauce originates from the region of Rome.
+TEMPLATE: AGENT-1 originates from the region of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Arrabbiata sauce is a traditional dish from Rome.
+TEMPLATE: AGENT-1 is a traditional dish from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Arrabbiata sauce is from the Rome region.
+TEMPLATE: AGENT-1 is from the PATIENT-1 region .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id35 1 Food
+
+TRIPLES
+Arrabbiata_sauce | ingredient | Tomato
+
+
+ENTITY MAP
+AGENT-1 | Arrabbiata_sauce
+PATIENT-1 | Tomato
+
+
+LEX
+Id1
+TEXT: Tomato is an ingredient in Arrabbiata sauce.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Tomatoes are found in Arrabbiata sauce.
+TEMPLATE: PATIENT-1 are found in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Arrabbiata sauce includes tomatoes.
+TEMPLATE: AGENT-1 includes PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id34 1 Food
+
+TRIPLES
+Arrabbiata_sauce | ingredient | Olive_oil
+
+
+ENTITY MAP
+AGENT-1 | Arrabbiata_sauce
+PATIENT-1 | Olive_oil
+
+
+LEX
+Id1
+TEXT: Olive oil is an ingredient in Arrabbiata sauce.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Olive oil is an ingredient used in the preparation of Arrabbiata sauce.
+TEMPLATE: PATIENT-1 is an ingredient used in the preparation of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id33 1 Food
+
+TRIPLES
+Arrabbiata_sauce | ingredient | Garlic
+
+
+ENTITY MAP
+AGENT-1 | Arrabbiata_sauce
+PATIENT-1 | Garlic
+
+
+LEX
+Id1
+TEXT: Garlic is an ingredient in arrabbiata sauce.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: An ingredient of arrabbiata sauce is garlic.
+TEMPLATE: PATIENT-1 of AGENT-1 is garlic .
+CORRECT: An ingredient of AGENT-1 is PATIENT-1 .
+COMMENT:
+-
+
+**************************************************
+
+Entry: Id77 1 Food
+
+TRIPLES
+Baked_Alaska | country | "France, United States or China"
+
+
+ENTITY MAP
+AGENT-1 | Baked_Alaska
+PATIENT-1 | "France, United States or China"
+
+
+LEX
+Id1
+TEXT: Baked Alaska is thought to have originated in the United States, France or China.
+TEMPLATE: AGENT-1 is thought to have originated in PATIENT-1 , France or China .
+CORRECT: AGENT-1 is thought to have originated in PATIENT-1 .
+COMMENT: list
+-
+Id2
+TEXT: France, United States and China all claim to have invented Baked Alaska.
+TEMPLATE: PATIENT-1 claim to have invented AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Baked Alaska is from France, the United States or China.
+TEMPLATE: AGENT-1 is from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id75 1 Food
+
+TRIPLES
+Bacon_sandwich | ingredient | Ketchup
+
+
+ENTITY MAP
+AGENT-1 | Bacon_sandwich
+PATIENT-1 | Ketchup
+
+
+LEX
+Id1
+TEXT: Ketchup can be an ingredient in a bacon sandwich.
+TEMPLATE: PATIENT-1 can be an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Ketchup can be added to a bacon sandwich.
+TEMPLATE: PATIENT-1 can be added to AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: one of the ingredients of a Bacon Sandwich is Ketchup.
+TEMPLATE: one of the ingredients of AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id58 1 Food
+
+TRIPLES
+BLT | dishVariation | Club_sandwich
+
+
+ENTITY MAP
+AGENT-1 | BLT
+PATIENT-1 | Club_sandwich
+
+
+LEX
+Id1
+TEXT: The BLT is a variation on the club sandwich.
+TEMPLATE: AGENT-1 is a variation on PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: BLT is a variation of a Club Sandwich.
+TEMPLATE: AGENT-1 is a variation of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: BLT is a variation of club sandwich.
+TEMPLATE: AGENT-1 is a variation of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id57 1 Food
+
+TRIPLES
+Ayam_penyet | region | Malaysia
+
+
+ENTITY MAP
+AGENT-1 | Ayam_penyet
+PATIENT-1 | Malaysia
+
+
+LEX
+Id1
+TEXT: Ayam penyet comes from the region of Malaysia.
+TEMPLATE: AGENT-1 comes from the region of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Ayam Penyet is a dish from Malaysia.
+TEMPLATE: AGENT-1 is a dish from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Ayam penyet is a popular dish in Malaysia.
+TEMPLATE: AGENT-1 is a popular dish in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id32 1 Food
+
+TRIPLES
+Arrabbiata_sauce | dishVariation | Oregano
+
+
+ENTITY MAP
+AGENT-1 | Arrabbiata_sauce
+PATIENT-1 | Oregano
+
+
+LEX
+Id1
+TEXT: Oregano is one of the ingredients that can be used in a variation of Arrabbiata sauce.
+TEMPLATE: PATIENT-1 is one of the ingredients that can be used in a variation of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Oregano can be added to Arrabbiata sauce.
+TEMPLATE: PATIENT-1 can be added to AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id31 1 Food
+
+TRIPLES
+Arrabbiata_sauce | dishVariation | Basil
+
+
+ENTITY MAP
+AGENT-1 | Arrabbiata_sauce
+PATIENT-1 | Basil
+
+
+LEX
+Id1
+TEXT: Arrabbiata sauce has basil as a variation.
+TEMPLATE: AGENT-1 has PATIENT-1 as a variation .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: To vary arrabbiata sauce, basil may be used.
+TEMPLATE: To vary AGENT-1 , PATIENT-1 may be used .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Basil can be included in Arrabbiaita sauce.
+TEMPLATE: PATIENT-1 can be included in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id30 1 Food
+
+TRIPLES
+Arrabbiata_sauce | country | Italy
+
+
+ENTITY MAP
+AGENT-1 | Arrabbiata_sauce
+PATIENT-1 | Italy
+
+
+LEX
+Id1
+TEXT: Arrabbiata sauce can be found in Italy.
+TEMPLATE: AGENT-1 can be found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Arrabbiata sauce is from Italy.
+TEMPLATE: AGENT-1 is from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id44 1 Food
+
+TRIPLES
+Asam_pedas | creatorOfDish | Malay_cuisine
+
+
+ENTITY MAP
+AGENT-1 | Asam_pedas
+PATIENT-1 | Malay_cuisine
+
+
+LEX
+Id1
+TEXT: Asam pedas is a dish that was created within Malay cuisine.
+TEMPLATE: AGENT-1 is a dish that was created within PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id24 1 Food
+
+TRIPLES
+Arem-arem | country | Indonesia
+
+
+ENTITY MAP
+AGENT-1 | Arem-arem
+PATIENT-1 | Indonesia
+
+
+LEX
+Id1
+TEXT: Arem-arem is a food found in Indonesia.
+TEMPLATE: AGENT-1 is a food found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Arem arem originates from the country of Indonesia.
+TEMPLATE: AGENT-1 originates from the country of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: The country of Indonesia commonly serves Arem-arem.
+TEMPLATE: The country of PATIENT-1 commonly serves AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id29 1 Food
+
+TRIPLES
+Arem-arem | region | Javanese_cuisine
+
+
+ENTITY MAP
+AGENT-1 | Arem-arem
+PATIENT-1 | Javanese_cuisine
+
+
+LEX
+Id1
+TEXT: Arem-arem is a dish of Javanese cuisine.
+TEMPLATE: AGENT-1 is a dish of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id22 1 Food
+
+TRIPLES
+Andalusia | leaderName | Susana_Díaz
+
+
+ENTITY MAP
+AGENT-1 | Andalusia
+PATIENT-1 | Susana_Díaz
+
+
+LEX
+Id1
+TEXT: Susana Diaz is a leader of Andalusia.
+TEMPLATE: PATIENT-1 is a leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Susana Diaz is the leader of Andalusia.
+TEMPLATE: PATIENT-1 is the leader of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id27 1 Food
+
+TRIPLES
+Arem-arem | ingredient | Banana_leaf
+
+
+ENTITY MAP
+AGENT-1 | Arem-arem
+PATIENT-1 | Banana_leaf
+
+
+LEX
+Id1
+TEXT: Banana leaf is an ingredient in Arem arem.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Arem-arem uses the ingredient banana leaf.
+TEMPLATE: AGENT-1 uses PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Arem-arem have banana leaf in it.
+TEMPLATE: AGENT-1 have PATIENT-1 in it .
+CORRECT: AGENT-1 have PATIENT-1 in AGENT-1 .
+COMMENT: coreference
+-
+
+**************************************************
+
+Entry: Id26 1 Food
+
+TRIPLES
+Arem-arem | dishVariation | Lemper
+
+
+ENTITY MAP
+AGENT-1 | Arem-arem
+PATIENT-1 | Lemper
+
+
+LEX
+Id1
+TEXT: Lemper is a dish variation of Arem-Arem.
+TEMPLATE: PATIENT-1 is a dish variation of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Lemper is a variation of Arem arem.
+TEMPLATE: PATIENT-1 is a variation of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id25 1 Food
+
+TRIPLES
+Arem-arem | course | "Main course"
+
+
+ENTITY MAP
+AGENT-1 | Arem-arem
+PATIENT-1 | "Main course"
+
+
+LEX
+Id1
+TEXT: Arem-arem can be served as a main course.
+TEMPLATE: AGENT-1 can be served as PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Arem arem is a main course.
+TEMPLATE: AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id23 1 Food
+
+TRIPLES
+Antioquia_Department | country | Colombia
+
+
+ENTITY MAP
+AGENT-1 | Antioquia_Department
+PATIENT-1 | Colombia
+
+
+LEX
+Id1
+TEXT: The Antioquia Department is found in Colombia.
+TEMPLATE: AGENT-1 is found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: The Antioquia Department can be found in the country of Colombia.
+TEMPLATE: AGENT-1 can be found in the country of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id21 1 Food
+
+TRIPLES
+Amatriciana_sauce | region | Lazio
+
+
+ENTITY MAP
+AGENT-1 | Amatriciana_sauce
+PATIENT-1 | Lazio
+
+
+LEX
+Id1
+TEXT: Amatriciana sauce comes from the region of Lazio.
+TEMPLATE: AGENT-1 comes from the region of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Amatriciana is a sauce from Lazio.
+TEMPLATE: AGENT-1 is a sauce from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Amatriciana sauce is from the Lazio region.
+TEMPLATE: AGENT-1 is from the PATIENT-1 region .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id28 1 Food
+
+TRIPLES
+Arem-arem | mainIngredients | "compressed rice cooked in banana leaf with vegetables or minced meat fillings"
+
+
+ENTITY MAP
+AGENT-1 | Arem-arem
+PATIENT-1 | "compressed rice cooked in banana leaf with vegetables or minced meat fillings"
+
+
+LEX
+Id1
+TEXT: The main ingredients of Arem-arem are compressed rice cooked in banana leaf with vegetables or minced meat fillings.
+TEMPLATE: The main ingredients of AGENT-1 are PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id19 1 Food
+
+TRIPLES
+Amatriciana_sauce | ingredient | Tomato
+
+
+ENTITY MAP
+AGENT-1 | Amatriciana_sauce
+PATIENT-1 | Tomato
+
+
+LEX
+Id1
+TEXT: Amatriciana sauce has tomato as one of its ingredients.
+TEMPLATE: AGENT-1 has PATIENT-1 as one of its ingredients .
+CORRECT: AGENT-1 has PATIENT-1 as one of AGENT-1 ingredients .
+COMMENT: coreference
+-
+Id2
+TEXT: Tomato is an ingredient in Amatriciana sauce.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Tomato is an ingredient of Amatriciana sauce.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id18 1 Food
+
+TRIPLES
+Amatriciana_sauce | ingredient | Olive_oil
+
+
+ENTITY MAP
+AGENT-1 | Amatriciana_sauce
+PATIENT-1 | Olive_oil
+
+
+LEX
+Id1
+TEXT: Olive oil is one ingredient in Amatriciana sauce.
+TEMPLATE: PATIENT-1 is one ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Olive oil is an ingredient of Amatriciana sauce.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id17 1 Food
+
+TRIPLES
+Amatriciana_sauce | ingredient | Guanciale
+
+
+ENTITY MAP
+AGENT-1 | Amatriciana_sauce
+PATIENT-1 | Guanciale
+
+
+LEX
+Id1
+TEXT: Guanciale is an ingredient of Amatriciana sauce.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Guanciale is an ingredient used in the preparation of Amatriciana sauce.
+TEMPLATE: PATIENT-1 is an ingredient used in the preparation of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Guanciale is an ingredient in Amatriciana sauce.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id20 1 Food
+
+TRIPLES
+Amatriciana_sauce | mainIngredients | "Tomatoes, guanciale, cheese, olive oil"
+
+
+ENTITY MAP
+AGENT-1 | Amatriciana_sauce
+PATIENT-1 | "Tomatoes, guanciale, cheese, olive oil"
+
+
+LEX
+Id1
+TEXT: Tomatoes, guanciale, cheese, olive oil are the main ingredients of Amatriciana sauce.
+TEMPLATE: PATIENT-1 are the main ingredients of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id15 1 Food
+
+TRIPLES
+Amatriciana_sauce | dishVariation | Garlic
+
+
+ENTITY MAP
+AGENT-1 | Amatriciana_sauce
+PATIENT-1 | Garlic
+
+
+LEX
+Id1
+TEXT: Amatriciana sauce can be varied by adding garlic.
+TEMPLATE: AGENT-1 can be varied by adding PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: One variation of Amatriciana sauce uses garlic as part of its dish.
+TEMPLATE: One variation of AGENT-1 uses PATIENT-1 as part of AGENT-1 dish .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id14 1 Food
+
+TRIPLES
+Amatriciana_sauce | dishVariation | "Onion, garlic, black pepper, chili"
+
+
+ENTITY MAP
+AGENT-1 | Amatriciana_sauce
+PATIENT-1 | "Onion, garlic, black pepper, chili"
+
+
+LEX
+Id1
+TEXT: A variation of Amatriciana sauce includes onion, garlic, black pepper, and chili.
+TEMPLATE: A variation of AGENT-1 includes PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: A variation of Amatriciana sauce contains onion, garlic, black pepper, chili.
+TEMPLATE: A variation of AGENT-1 contains PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id16 1 Food
+
+TRIPLES
+Amatriciana_sauce | dishVariation | Onion
+
+
+ENTITY MAP
+AGENT-1 | Amatriciana_sauce
+PATIENT-1 | Onion
+
+
+LEX
+Id1
+TEXT: Onion is one variation of ingredients in Amatriciana sauce.
+TEMPLATE: PATIENT-1 is one variation of ingredients in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id12 1 Food
+
+TRIPLES
+Amatriciana_sauce | country | Italy
+
+
+ENTITY MAP
+AGENT-1 | Amatriciana_sauce
+PATIENT-1 | Italy
+
+
+LEX
+Id1
+TEXT: Italy is the country Amatriciana sauce comes from.
+TEMPLATE: PATIENT-1 is AGENT-1 comes from .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Amatriciana sauce is a traditional Italian sauce.
+TEMPLATE: AGENT-1 is PATIENT-1 .
+CORRECT:
+COMMENT: wrong
+-
+Id3
+TEXT: Amatriciana sauce can be found in Italy.
+TEMPLATE: AGENT-1 can be found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id11 1 Food
+
+TRIPLES
+Almond | order | Rosids
+
+
+ENTITY MAP
+AGENT-1 | Almond
+PATIENT-1 | Rosids
+
+
+LEX
+Id1
+TEXT: Almond is part of the order of Rosids.
+TEMPLATE: AGENT-1 is part of the order of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Almonds are from the order Rosids.
+TEMPLATE: AGENT-1 are from PATIENT-1 .
+CORRECT: AGENT-1 are from the order PATIENT-1 .
+COMMENT: modifier
+-
+
+**************************************************
+
+Entry: Id13 1 Food
+
+TRIPLES
+Amatriciana_sauce | course | Italian_meal_structure
+
+
+ENTITY MAP
+AGENT-1 | Amatriciana_sauce
+PATIENT-1 | Italian_meal_structure
+
+
+LEX
+Id1
+TEXT: Amatriciana sauce can be found in an Italian meal.
+TEMPLATE: AGENT-1 can be found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id9 1 Food
+
+TRIPLES
+Almond | family | Rosaceae
+
+
+ENTITY MAP
+AGENT-1 | Almond
+PATIENT-1 | Rosaceae
+
+
+LEX
+Id1
+TEXT: Almond is part of the Rosaceae family.
+TEMPLATE: AGENT-1 is part of the PATIENT-1 family .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Almonds are from the Rosaceae family.
+TEMPLATE: AGENT-1 are from the PATIENT-1 family .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id8 1 Food
+
+TRIPLES
+Almond | division | Flowering_plant
+
+
+ENTITY MAP
+AGENT-1 | Almond
+PATIENT-1 | Flowering_plant
+
+
+LEX
+Id1
+TEXT: Almond is classed as a flowering plant.
+TEMPLATE: AGENT-1 is classed as PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Almonds are in the division of flowering plants.
+TEMPLATE: AGENT-1 are in the division of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id7 1 Food
+
+TRIPLES
+Ajoblanco | region | Andalusia
+
+
+ENTITY MAP
+AGENT-1 | Ajoblanco
+PATIENT-1 | Andalusia
+
+
+LEX
+Id1
+TEXT: Ajoblanco is a food found in Andalusia.
+TEMPLATE: AGENT-1 is a food found in PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Ajoblanco is from the Andalusia region.
+TEMPLATE: AGENT-1 is from the PATIENT-1 region .
+CORRECT:
+COMMENT: g
+-
+Id3
+TEXT: Ajoblanco is from Andalusia.
+TEMPLATE: AGENT-1 is from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id10 1 Food
+
+TRIPLES
+Almond | order | Rosales
+
+
+ENTITY MAP
+AGENT-1 | Almond
+PATIENT-1 | Rosales
+
+
+LEX
+Id1
+TEXT: Almond is one of the members of the Rosales order.
+TEMPLATE: AGENT-1 is one of the members of the PATIENT-1 order .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id4 1 Food
+
+TRIPLES
+Ajoblanco | ingredient | Garlic
+
+
+ENTITY MAP
+AGENT-1 | Ajoblanco
+PATIENT-1 | Garlic
+
+
+LEX
+Id1
+TEXT: An ingredient of Ajoblanco is garlic.
+TEMPLATE: PATIENT-1 of AGENT-1 is garlic .
+CORRECT: An ingredient of AGENT-1 is PATIENT-1 .
+COMMENT:
+-
+Id2
+TEXT: Garlic is an ingredient used in Ajoblanco.
+TEMPLATE: PATIENT-1 is an ingredient used in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id2 1 Food
+
+TRIPLES
+Ajoblanco | ingredient | Almond
+
+
+ENTITY MAP
+AGENT-1 | Ajoblanco
+PATIENT-1 | Almond
+
+
+LEX
+Id1
+TEXT: Ajoblanco has almond as one of its ingredients.
+TEMPLATE: AGENT-1 has almond as PATIENT-1 of its ingredients .
+CORRECT: AGENT-1 has almond as PATIENT-1 of AGENT-1 ingredients .
+COMMENT: coreference
+-
+Id2
+TEXT: Almond is an ingredient in ajoblanco.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id1 1 Food
+
+TRIPLES
+Ajoblanco | country | Spain
+
+
+ENTITY MAP
+AGENT-1 | Ajoblanco
+PATIENT-1 | Spain
+
+
+LEX
+Id1
+TEXT: Ajoblanco originates from the country of Spain.
+TEMPLATE: AGENT-1 originates from the country of PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Ajoblanco is from Spain.
+TEMPLATE: AGENT-1 is from PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id6 1 Food
+
+TRIPLES
+Ajoblanco | ingredient | Water
+
+
+ENTITY MAP
+AGENT-1 | Ajoblanco
+PATIENT-1 | Water
+
+
+LEX
+Id1
+TEXT: Ajoblanco contains water.
+TEMPLATE: AGENT-1 contains PATIENT-1 .
+CORRECT:
+COMMENT: g
+-
+Id2
+TEXT: Water is an ingredient in Ajoblanco.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id5 1 Food
+
+TRIPLES
+Ajoblanco | ingredient | Olive_oil
+
+
+ENTITY MAP
+AGENT-1 | Ajoblanco
+PATIENT-1 | Olive_oil
+
+
+LEX
+Id1
+TEXT: Olive oil is an ingredient in Ajoblanco.
+TEMPLATE: PATIENT-1 is an ingredient in AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id3 1 Food
+
+TRIPLES
+Ajoblanco | ingredient | Bread
+
+
+ENTITY MAP
+AGENT-1 | Ajoblanco
+PATIENT-1 | Bread
+
+
+LEX
+Id1
+TEXT: Bread is an ingredient of Ajoblanco.
+TEMPLATE: PATIENT-1 is an ingredient of AGENT-1 .
+CORRECT:
+COMMENT: g
+-
+

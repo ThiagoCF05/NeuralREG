@@ -1,0 +1,162 @@
+
+Entry: Id1 2 University
+
+TRIPLES
+Acharya_Institute_of_Technology | director | "Dr. G. P. Prabhukumar"
+Acharya_Institute_of_Technology | campus | "In Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090."
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | "Dr. G. P. Prabhukumar"
+PATIENT-2 | "In Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090."
+
+
+LEX
+Id1
+TEXT: Acharya Institute of Technology's campus is located in Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090 and the director is Dr. G. P. Prabhukumar.
+TEMPLATE: AGENT-1 's campus is located in PATIENT-2 and the director is PATIENT-1 .
+CORRECT: AGENT-1 campus is located in PATIENT-2 and the director is PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: The director of the Acharya Institute of Technology is Dr G P Prabhukumar. The campus is located at In Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore - 560090.
+TEMPLATE: The director of AGENT-1 is PATIENT-1 . The campus is located at In PATIENT-2 .
+CORRECT: The director of AGENT-1 is PATIENT-1 . AGENT-1 is located at PATIENT-2 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id2 2 University
+
+TRIPLES
+Acharya_Institute_of_Technology | officialSchoolColour | "Blue, White and Orange"
+Acharya_Institute_of_Technology | was given the 'Technical Campus' status by | All_India_Council_for_Technical_Education
+
+
+ENTITY MAP
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | "Blue, White and Orange"
+PATIENT-2 | All_India_Council_for_Technical_Education
+
+
+LEX
+Id1
+TEXT: The All India Council for Technical Education gave the Acharya Institute of Technology the status of "Technical Campus". The official school colours are blue, white and orange.
+TEMPLATE: PATIENT-2 gave AGENT-1 the status of `` Technical Campus '' . The official school colours are PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: The official school colours for Acharya Institute of Technology are blue, white and orange and the school got its Technical Campus status from the All India Council.
+TEMPLATE: The official school colours for AGENT-1 are PATIENT-1 and the school got PATIENT-1 Technical Campus status from PATIENT-2 .
+CORRECT: The official school colours for AGENT-1 are PATIENT-1 and AGENT-1 got AGENT-1 Technical Campus status from PATIENT-2 .
+COMMENT: 
+-
+Id3
+TEXT: The Acharya Institute of Technology (official colour blue, white and orange) has been given the 'Technical Campus' status by All India Council for Technical Education.
+TEMPLATE: AGENT-1 ( official PATIENT-1 ) has been given the ` Technical Campus ' status by PATIENT-2 .
+CORRECT: AGENT-1 ( official colour PATIENT-1 ) has been given the ` Technical Campus ' status by PATIENT-2 .
+COMMENT: 
+-
+
+**************************************************
+
+Entry: Id3 2 University
+
+TRIPLES
+Acharya_Institute_of_Technology | sportsOffered | Tennis
+Tennis | sportsGoverningBody | International_Tennis_Federation
+
+
+ENTITY MAP
+BRIDGE-1 | Tennis
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | International_Tennis_Federation
+
+
+LEX
+Id1
+TEXT: The International Tennis Federation, which is the sport's governing body, has agreed to let Acharya Institute of Technology offer tennis at the school.
+TEMPLATE: PATIENT-1 , which is BRIDGE-1 's governing body , has agreed to let AGENT-1 BRIDGE-1 at the school .
+CORRECT: PATIENT-1 , which is the sport 's governing body , has agreed to let AGENT-1 offer BRIDGE-1 at AGENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: Tennis, as governed by the International Tennis Federation, is a sport offered at the Acharya Institute of Technology.
+TEMPLATE: BRIDGE-1 , as governed by PATIENT-1 , is a sport offered at AGENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id4 2 University
+
+TRIPLES
+European_University_Association | headquarters | Brussels
+School of Business and Social Sciences at the Aarhus University | affiliation | European_University_Association
+
+
+ENTITY MAP
+BRIDGE-1 | European_University_Association
+AGENT-1 | School of Business and Social Sciences at the Aarhus University
+PATIENT-1 | Brussels
+
+
+LEX
+Id1
+TEXT: The School of Business and Social Sciences at the Aarhus University is affiliated to the European University Association which has its headquarters in Brussels.
+TEMPLATE: AGENT-1 is affiliated to BRIDGE-1 which has AGENT-1 headquarters in PATIENT-1 .
+CORRECT: AGENT-1 is affiliated to BRIDGE-1 which has BRIDGE-1 headquarters in PATIENT-1 .
+COMMENT: 
+-
+Id2
+TEXT: The School of Business and Social Sciences at Aarhus University is affiliated with the European University Association in Brussels.
+TEMPLATE: AGENT-1 is affiliated with BRIDGE-1 in PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+Id3
+TEXT: School of Business and Social Sciences at the Aarhus University is affiliated with the European University Association and is located in Brussels.
+TEMPLATE: AGENT-1 is affiliated with BRIDGE-1 and is located in PATIENT-1 .
+CORRECT: 
+COMMENT: g
+-
+
+**************************************************
+
+Entry: Id5 2 University
+
+TRIPLES
+Karnataka | has to its west | Arabian_Sea
+Acharya_Institute_of_Technology | state | Karnataka
+
+
+ENTITY MAP
+BRIDGE-1 | Karnataka
+AGENT-1 | Acharya_Institute_of_Technology
+PATIENT-1 | Arabian_Sea
+
+
+LEX
+Id1
+TEXT: Acharya Institue of Technology is located in the state of Karnataka which has the Arabian Sea to the west.
+TEMPLATE: AGENT-1 is located in the state of BRIDGE-1 which has PATIENT-1 to the west .
+CORRECT: 
+COMMENT: g
+-
+Id2
+TEXT: Acharya Institute of Technology is in the state of Karnataka which has the Arabian Sea to its west.
+TEMPLATE: AGENT-1 is in the state of BRIDGE-1 which has PATIENT-1 to AGENT-1 west .
+CORRECT: AGENT-1 is in the state of BRIDGE-1 which has PATIENT-1 to BRIDGE-1 west .
+COMMENT: 
+-
+Id3
+TEXT: Acharya Institute of Technology is located in the state of Karnataka, which has to its west the Arabian Sea.
+TEMPLATE: AGENT-1 is located in the state of BRIDGE-1 , which has to AGENT-1 PATIENT-1 .
+CORRECT: AGENT-1 is located in the state of BRIDGE-1 , which has to BRIDGE-1 west PATIENT-1 .
+COMMENT: 
+-
+
