@@ -355,7 +355,7 @@ class HierAttention():
         if not os.path.exists(fname):
             os.mkdir(fname)
 
-        for i in range(outputs[0]):
+        for i in range(len(outputs[0])):
             f = open(os.path.join(fname, str(i)), 'w')
             for output in outputs:
                 f.write(output[i])
