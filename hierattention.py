@@ -337,7 +337,7 @@ class HierAttention():
             output['prob'] = output['prob'] / lp_y
 
         outputs = sorted(outputs, key=lambda x: x['prob'], reverse=True)
-        return map(lambda x: x['sentence'], outputs)
+        return list(map(lambda x: x['sentence'], outputs))
 
 
     def get_loss(self, pre_context, pos_context, refex, entity):
@@ -466,10 +466,10 @@ class HierAttention():
             if best_acc == 0.0 or acc > best_acc:
                 best_acc = acc
 
-                fname = 'data/results/dev_best_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1] + '_' + str(self.character) + '_' + str(self.BEAM)
+                fname = 'data/hier/results/dev_best_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1] + '_' + str(self.character) + '_' + str(self.BEAM)
                 self.write(fname, outputs)
 
-                fname = 'data/models/best_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1] + '_' + str(self.character) + '_' + str(self.BEAM)
+                fname = 'data/hier/models/best_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1] + '_' + str(self.character) + '_' + str(self.BEAM)
                 self.model.save(fname)
 
                 repeat = 0
@@ -481,7 +481,7 @@ class HierAttention():
                 break
 
         # self.test()
-        fname = 'data/models/' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1] + '_' + str(self.character) + '_' + str(self.BEAM)
+        fname = 'data/hier/models/' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1] + '_' + str(self.character) + '_' + str(self.BEAM)
         self.model.save(fname)
 
 

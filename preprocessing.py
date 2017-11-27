@@ -83,7 +83,7 @@ class Preprocessing(object):
 
     def testset(self):
         test = []
-        test_info = [], []
+        test_info = []
 
         dirs = filter(lambda x: x != '.DS_Store', os.listdir(self.in_dev))
         for path in dirs:
