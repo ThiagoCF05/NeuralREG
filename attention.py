@@ -341,8 +341,8 @@ class Attention():
             delimiter = ' '
             if self.character:
                 delimiter = ''
-            for i, output in enumerate(outputs):
-                outputs[i] = delimiter.join(output).replace('eos', '').strip()
+            for j, output in enumerate(outputs):
+                outputs[j] = delimiter.join(output).replace('eos', '').strip()
             refex = delimiter.join(self.devset['refex'][i]).replace('eos', '').strip()
 
             best_candidate = outputs[0]
@@ -379,8 +379,8 @@ class Attention():
             delimiter = ' '
             if self.character:
                 delimiter = ''
-            for i, output in enumerate(outputs):
-                outputs[i] = delimiter.join(output).replace('eos', '').strip()
+            for j, output in enumerate(outputs):
+                outputs[j] = delimiter.join(output).replace('eos', '').strip()
 
             if i % 40:
                 dy.renew_cg()
