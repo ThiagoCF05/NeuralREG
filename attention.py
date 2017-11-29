@@ -91,8 +91,14 @@ class Attention():
 
 
     def embed_sentence(self, sentence):
-        sentence = list(sentence)
-        sentence = [self.input2int[c] for c in sentence]
+        _sentence = list(sentence)
+        sentence = []
+        for w in _sentence:
+            try:
+                sentence.append(self.input2int[w])
+            except:
+                sentence.append(self.input2int[self.EOS])
+        # sentence = [self.input2int[c] for c in sentence]
 
         return [self.input_lookup[char] for char in sentence]
 
