@@ -11,7 +11,6 @@ import cPickle as p
 import nltk
 import sys
 sys.path.append('../')
-from db.model import *
 
 lemma = {
     'he':'he', 'his':'he', 'him': 'he',
@@ -26,8 +25,11 @@ pronouns, names, descriptions, demonstratives = {}, {}, {}, {}
 references = p.load(open('../../data/train/data.cPickle'))
 
 # Retrieve all wiki entities and normalize their names
-entities = Entity.objects(type='wiki')
-entities = map(lambda entity: '_'.join(entity.name.replace('\"', '').replace('\'', '').lower().split()), entities)
+entities = set()
+for reference in references:
+    entities = entities.union([reference['entity']])
+
+print 'Number of entities: ', len(list(entities))
 
 for entity in entities:
     print 'Entity: ', entity

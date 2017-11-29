@@ -362,7 +362,7 @@ class Attention():
 
 
     def test(self, fin, fout):
-        self.model.load(fname)
+        self.model.populate(fin)
         results = []
 
         dy.renew_cg()

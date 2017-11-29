@@ -93,8 +93,7 @@ class Preprocessing(object):
 
                 data, in_vocab, out_vocab, c_vocab = self.annotation_parse(f)
 
-                info = len(data) * [path + ' ' + fname]
-                test_info.extend(info)
+                test.extend(data)
 
                 info = len(data) * [path + ' ' + fname]
                 test_info.extend(info)

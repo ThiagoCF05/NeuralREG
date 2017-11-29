@@ -115,10 +115,14 @@ class REG(object):
         sentence_status = reference['sentence_status']
         entity = reference['entity']
 
-        names = data[(syntax, text_status, sentence_status, entity)]
-        if len(names) > 0:
-            name = names[0][0]
-        else:
+        try:
+            names = data[(syntax, text_status, sentence_status, entity)]
+            if len(names) > 0:
+                name = names[0][0]
+            else:
+                name = ' '.join(entity.replace('\'', '').replace('\"', '').split('_'))
+        except Exception as e:
+            print(e.message)
             name = ' '.join(entity.replace('\'', '').replace('\"', '').split('_'))
 
         return name
@@ -189,10 +193,10 @@ class REG(object):
 
             # if reference['no_pronoun']:
             #     return self._realize_name(reference, self.model['names'])
-            if isCompetitor:
-                return self._realize_description(prev_references, reference, self.model['descriptions'])
-            else:
-                return pronoun
+            # if isCompetitor:
+            #     return self._realize_description(prev_references, reference, self.model['descriptions'])
+            # else:
+            return pronoun
         elif reference['form'] == 'name':
             return self._realize_name(reference, self.model['names'])
         elif reference['form'] == 'description':

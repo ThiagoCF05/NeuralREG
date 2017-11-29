@@ -6,7 +6,7 @@ class Baseline():
         self.references = p.load(open('../data/dev/data.cPickle'))
 
     def only_names(self):
-        fname = '../data/results/baseline_names.cPickle'
+        fname = 'baseline_names.cPickle'
         results = []
 
         for i, testinst in enumerate(self.references):
