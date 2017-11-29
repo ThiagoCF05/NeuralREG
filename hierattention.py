@@ -232,7 +232,10 @@ class HierAttention():
         w1dt_pos = None
 
         last_output_embeddings = self.output_lookup[self.output2int[self.EOS]]
-        entity_embedding = self.input_lookup[self.input2int[entity]]
+        try:
+            entity_embedding = self.input_lookup[self.input2int[entity]]
+        except:
+            entity_embedding = self.input_lookup[self.input2int[self.EOS]]
         s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.STATE_SIZE*2), last_output_embeddings, entity_embedding]))
 
         out = []
@@ -401,7 +404,8 @@ class HierAttention():
         return results, num, dem
 
 
-    def test(self):
+    def test(self, fin, fout):
+        self.model.populate(fin)
         results = []
 
         dy.renew_cg()
@@ -425,7 +429,7 @@ class HierAttention():
                 dy.renew_cg()
 
             results.append(outputs)
-        return results
+        self.write(fout, results)
 
 
     def train(self, config):
