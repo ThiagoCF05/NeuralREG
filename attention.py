@@ -40,7 +40,6 @@ class Attention():
         self.output2int = {c:i for i, c in enumerate(self.vocab['output'])}
 
         self.init(config)
-        self.train(config)
 
 
     def init(self, config):
@@ -362,7 +361,8 @@ class Attention():
         return results, num, dem
 
 
-    def test(self):
+    def test(self, fin, fout):
+        self.model.load(fname)
         results = []
 
         dy.renew_cg()
@@ -386,7 +386,7 @@ class Attention():
                 dy.renew_cg()
 
             results.append(outputs)
-        return results
+        self.write(fout, results)
 
 
     def train(self, config):
@@ -449,11 +449,18 @@ class Attention():
 
 if __name__ == '__main__':
     configs = [
-        # {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':1},
-        # {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':1},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':1},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':1},
         {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':5},
         {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':5},
     ]
 
-    for config in configs:
-        Attention(config)
+    fin = '/home/tcastrof/NeuralREG/data/att/models/best_1_300_512_512_2_False_1'
+    fout = '/home/tcastrof/NeuralREG/data/att/results/dev_best_1_300_512_512_2_False_1'
+    m = Attention(configs[0])
+    m.test(fin, fout)
+
+    fin = '/home/tcastrof/NeuralREG/data/att/models/best_1_300_512_512_3_False_1'
+    fout = '/home/tcastrof/NeuralREG/data/att/results/dev_best_1_300_512_512_3_False_1'
+    m = Attention(configs[1])
+    m.test(fin, fout)
