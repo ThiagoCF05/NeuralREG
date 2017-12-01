@@ -76,25 +76,25 @@ if __name__ == '__main__':
     print 'BASELINE:'
     evaluate(y_real, y_pred)
 
-    # with open('data/results/dev_best_1_300_512_512_2_False') as f:
-    #     y_pred = f.read().split('\n')
-    #
-    # with open('data/dev/refex.txt') as f:
-    #     y_real = f.read().split('\n')
-    # print 'MODEL: dev_best_1_300_512_512_2_False'
-    # evaluate(y_real, y_pred)
-    #
-    # with open('data/results/dev_best_1_300_512_512_3_False') as f:
-    #     y_pred = f.read().split('\n')
-    #
-    # with open('data/dev/refex.txt') as f:
-    #     y_real = f.read().split('\n')
-    # print 'MODEL: dev_best_1_300_512_512_3_False'
-    # wrong = evaluate(y_real, y_pred)
-    #
-    # for e in wrong:
-    #     print 'REAL: ', e['real']
-    #     print 'PRED: ', e['pred']
-    #     print 10 * '-'
+    with open('data/att/results/test_best_1_300_512_512_2_False_1/0') as f:
+        y_pred = f.read().split('\n')
+
+    with open('data/test/refex.txt') as f:
+        y_real = f.read().split('\n')
+    print 'MODEL: test_best_1_300_512_512_2_False_1'
+    evaluate(y_real, y_pred)
+
+    with open('data/att/results/test_best_1_300_512_512_3_False_1/0') as f:
+        y_pred = f.read().split('\n')
+
+    with open('data/test/refex.txt') as f:
+        y_real = f.read().split('\n')
+    print 'MODEL: test_best_1_300_512_512_3_False_1'
+    wrong = evaluate(y_real, y_pred)
+
+    for e in wrong:
+        print 'REAL: ', e['real']
+        print 'PRED: ', e['pred']
+        print 10 * '-'
 
     corpus_evaluation()

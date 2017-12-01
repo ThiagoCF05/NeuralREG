@@ -212,7 +212,10 @@ class REG(object):
 
         prev_references = []
         for reference in references:
-            realization = self._realize(prev_references, reference).lower()
+            try:
+                realization = self._realize(prev_references, reference).lower()
+            except:
+                realization = ' '.join(reference['entity'].replace('\'', '').replace('\"', '').split('_'))
             reference['realization'] = realization
             prev_references.append(reference)
 
@@ -233,7 +236,7 @@ class REG(object):
 
 if __name__ == '__main__':
     fmodel = 'reg.cPickle'
-    freferences = '../../data/dev/data.cPickle'
+    freferences = '../../data/test/data.cPickle'
     dir_out = ''
     reg = REG(fmodel=fmodel, freferences=freferences, dir_out='')
     reg.run()

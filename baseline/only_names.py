@@ -3,7 +3,7 @@ import cPickle as p
 
 class Baseline():
     def __init__(self):
-        self.references = p.load(open('../data/dev/data.cPickle'))
+        self.references = p.load(open('../data/test/data.cPickle'))
 
     def only_names(self):
         fname = 'baseline_names.cPickle'

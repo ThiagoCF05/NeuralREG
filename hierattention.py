@@ -41,7 +41,6 @@ class HierAttention():
         self.output2int = {c:i for i, c in enumerate(self.vocab['output'])}
 
         self.init(config)
-        self.train(config)
 
 
     def init(self, config):
@@ -437,8 +436,8 @@ class HierAttention():
         self.write(fout, results)
 
 
-    def train(self, config):
-        self.init(config)
+    def train(self, fdir):
+        # self.init(config)
 
         trainer = dy.AdadeltaTrainer(self.model)
 
@@ -476,11 +475,31 @@ class HierAttention():
             if best_acc == 0.0 or acc > best_acc:
                 best_acc = acc
 
-                fname = 'data/hier/results/dev_best_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1] + '_' + str(self.character) + '_' + str(self.BEAM)
-                self.write(fname, outputs)
+                fresults = os.path.join(fdir, 'results')
+                if not os.path.exists(fresults):
+                    os.mkdir(fresults)
+                fname = 'dev_best_' + \
+                        str(self.LSTM_NUM_OF_LAYERS) + '_' + \
+                        str(self.EMBEDDINGS_SIZE) + '_' + \
+                        str(self.STATE_SIZE) + '_' + \
+                        str(self.ATTENTION_SIZE) + '_' + \
+                        str(self.DROPOUT).split('.')[1] + '_' + \
+                        str(self.character) + '_' + \
+                        str(self.BEAM)
+                self.write(os.path.join(fresults, fname), outputs)
 
-                fname = 'data/hier/models/best_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1] + '_' + str(self.character) + '_' + str(self.BEAM)
-                self.model.save(fname)
+                fmodels = os.path.join(fdir, 'models')
+                if not os.path.exists(fmodels):
+                    os.mkdir(fmodels)
+                fname = 'best_' + \
+                        str(self.LSTM_NUM_OF_LAYERS) + '_' + \
+                        str(self.EMBEDDINGS_SIZE) + '_' + \
+                        str(self.STATE_SIZE) + '_' + \
+                        str(self.ATTENTION_SIZE) + '_' + \
+                        str(self.DROPOUT).split('.')[1] + '_' + \
+                        str(self.character) + '_' + \
+                        str(self.BEAM)
+                self.model.save(os.path.join(fmodels, fname))
 
                 repeat = 0
             else:
@@ -490,9 +509,15 @@ class HierAttention():
             if repeat == 20:
                 break
 
-        # self.test()
-        fname = 'data/hier/models/' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1] + '_' + str(self.character) + '_' + str(self.BEAM)
-        self.model.save(fname)
+        fmodels = os.path.join(fdir, 'models')
+        fname = str(self.LSTM_NUM_OF_LAYERS) + '_' + \
+                str(self.EMBEDDINGS_SIZE) + '_' + \
+                str(self.STATE_SIZE) + '_' + \
+                str(self.ATTENTION_SIZE) + '_' + \
+                str(self.DROPOUT).split('.')[1] + '_' + \
+                str(self.character) + '_' + \
+                str(self.BEAM)
+        self.model.save(os.path.join(fmodels, fname))
 
 
 if __name__ == '__main__':
@@ -503,5 +528,31 @@ if __name__ == '__main__':
         {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':5}
     ]
 
+    fdir = 'data/hier'
+
     for config in configs:
-        HierAttention(config)
+        h = HierAttention(config)
+        h.train(fdir)
+
+        fmodels = os.path.join(fdir, 'models')
+        fname = 'best_' + \
+              str(config['LSTM_NUM_OF_LAYERS']) + '_' + \
+              str(config['EMBEDDINGS_SIZE']) + '_' + \
+              str(config['STATE_SIZE']) + '_' + \
+              str(config['ATTENTION_SIZE']) + '_' + \
+              str(config['DROPOUT']).split('.')[1] + '_' + \
+              str(config['character']) + '_' + \
+              str(config['BEAM'])
+        fin = os.path.join(fmodels, fname)
+
+        fresults = os.path.join(fdir, 'results')
+        fname = 'test_best_' + \
+                str(config['LSTM_NUM_OF_LAYERS']) + '_' + \
+                str(config['EMBEDDINGS_SIZE']) + '_' + \
+                str(config['STATE_SIZE']) + '_' + \
+                str(config['ATTENTION_SIZE']) + '_' + \
+                str(config['DROPOUT']).split('.')[1] + '_' + \
+                str(config['character']) + '_' + \
+                str(config['BEAM'])
+        fout = os.path.join(fresults, fname)
+        h.test(fin, fout)

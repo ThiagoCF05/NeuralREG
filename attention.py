@@ -398,9 +398,7 @@ class Attention():
         self.write(fout, results)
 
 
-    def train(self, config):
-        self.init(config)
-
+    def train(self, fdir):
         trainer = dy.AdadeltaTrainer(self.model)
 
         best_acc, repeat = 0.0, 0
@@ -437,11 +435,31 @@ class Attention():
             if best_acc == 0.0 or acc > best_acc:
                 best_acc = acc
 
-                fname = 'data/att/results/dev_best_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1] + '_' + str(self.character) + '_' + str(self.BEAM)
-                self.write(fname, outputs)
+                fresults = os.path.join(fdir, 'results')
+                if not os.path.exists(fresults):
+                    os.mkdir(fresults)
+                fname = 'dev_best_' + \
+                        str(self.LSTM_NUM_OF_LAYERS) + '_' + \
+                        str(self.EMBEDDINGS_SIZE) + '_' + \
+                        str(self.STATE_SIZE) + '_' + \
+                        str(self.ATTENTION_SIZE) + '_' + \
+                        str(self.DROPOUT).split('.')[1] + '_' + \
+                        str(self.character) + '_' + \
+                        str(self.BEAM)
+                self.write(os.path.join(fresults, fname), outputs)
 
-                fname = 'data/att/models/best_' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1] + '_' + str(self.character) + '_' + str(self.BEAM)
-                self.model.save(fname)
+                fmodels = os.path.join(fdir, 'models')
+                if not os.path.exists(fmodels):
+                    os.mkdir(fmodels)
+                fname = 'best_' + \
+                        str(self.LSTM_NUM_OF_LAYERS) + '_' + \
+                        str(self.EMBEDDINGS_SIZE) + '_' + \
+                        str(self.STATE_SIZE) + '_' + \
+                        str(self.ATTENTION_SIZE) + '_' + \
+                        str(self.DROPOUT).split('.')[1] + '_' + \
+                        str(self.character) + '_' + \
+                        str(self.BEAM)
+                self.model.save(os.path.join(fmodels, fname))
 
                 repeat = 0
             else:
@@ -451,9 +469,15 @@ class Attention():
             if repeat == 20:
                 break
 
-        # self.test()
-        fname = 'data/att/models/' + str(self.LSTM_NUM_OF_LAYERS) + '_' + str(self.EMBEDDINGS_SIZE) + '_' + str(self.STATE_SIZE) + '_' + str(self.ATTENTION_SIZE) + '_' + str(self.DROPOUT).split('.')[1] + '_' + str(self.character) + '_' + str(self.BEAM)
-        self.model.save(fname)
+        fmodels = os.path.join(fdir, 'models')
+        fname = str(self.LSTM_NUM_OF_LAYERS) + '_' + \
+                str(self.EMBEDDINGS_SIZE) + '_' + \
+                str(self.STATE_SIZE) + '_' + \
+                str(self.ATTENTION_SIZE) + '_' + \
+                str(self.DROPOUT).split('.')[1] + '_' + \
+                str(self.character) + '_' + \
+                str(self.BEAM)
+        self.model.save(os.path.join(fmodels, fname))
 
 
 if __name__ == '__main__':
@@ -464,12 +488,31 @@ if __name__ == '__main__':
         {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':5},
     ]
 
-    fin = '/home/tcastrof/NeuralREG/data/att/models/best_1_300_512_512_2_False_1'
-    fout = '/home/tcastrof/NeuralREG/data/att/results/dev_best_1_300_512_512_2_False_1'
-    m = Attention(configs[0])
-    m.test(fin, fout)
+    fdir = 'data/att'
 
-    fin = '/home/tcastrof/NeuralREG/data/att/models/best_1_300_512_512_3_False_1'
-    fout = '/home/tcastrof/NeuralREG/data/att/results/dev_best_1_300_512_512_3_False_1'
-    m = Attention(configs[1])
-    m.test(fin, fout)
+    for config in configs:
+        h = Attention(config)
+        h.train(fdir)
+
+        fmodels = os.path.join(fdir, 'models')
+        fname = 'best_' + \
+                str(config['LSTM_NUM_OF_LAYERS']) + '_' + \
+                str(config['EMBEDDINGS_SIZE']) + '_' + \
+                str(config['STATE_SIZE']) + '_' + \
+                str(config['ATTENTION_SIZE']) + '_' + \
+                str(config['DROPOUT']).split('.')[1] + '_' + \
+                str(config['character']) + '_' + \
+                str(config['BEAM'])
+        fin = os.path.join(fmodels, fname)
+
+        fresults = os.path.join(fdir, 'results')
+        fname = 'test_best_' + \
+                str(config['LSTM_NUM_OF_LAYERS']) + '_' + \
+                str(config['EMBEDDINGS_SIZE']) + '_' + \
+                str(config['STATE_SIZE']) + '_' + \
+                str(config['ATTENTION_SIZE']) + '_' + \
+                str(config['DROPOUT']).split('.')[1] + '_' + \
+                str(config['character']) + '_' + \
+                str(config['BEAM'])
+        fout = os.path.join(fresults, fname)
+        h.test(fin, fout)
