@@ -19,6 +19,10 @@ Description:
         CHARACTER: character- (True) or word-based decoder
         GENERATION: max output limit
         BEAM_SIZE: beam search size
+
+        train()
+            :param fdir
+                Directory to save best results and model
 """
 
 import dynet as dy
@@ -552,7 +556,7 @@ if __name__ == '__main__':
                 str(config['STATE_SIZE']) + '_' + \
                 str(config['ATTENTION_SIZE']) + '_' + \
                 str(config['DROPOUT']).split('.')[1] + '_' + \
-                str(config['character']) + '_' + \
+                str(config['CHARACTER']) + '_' + \
                 str(config['BEAM'])
         fout = os.path.join(fresults, fname)
         h.test(fin, fout)
