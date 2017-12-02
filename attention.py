@@ -505,7 +505,7 @@ if __name__ == '__main__':
                 str(config['STATE_SIZE']) + '_' + \
                 str(config['ATTENTION_SIZE']) + '_' + \
                 str(config['DROPOUT']).split('.')[1] + '_' + \
-                str(config['character']) + '_' + \
+                str(config['CHARACTER']) + '_' + \
                 str(config['BEAM'])
         fin = os.path.join(fmodels, fname)
 
