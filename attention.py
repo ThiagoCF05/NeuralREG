@@ -506,7 +506,7 @@ if __name__ == '__main__':
                 str(config['ATTENTION_SIZE']) + '_' + \
                 str(config['DROPOUT']).split('.')[1] + '_' + \
                 str(config['CHARACTER']) + '_' + \
-                str(config['BEAM'])
+                str(config['BEAM_SIZE'])
         fin = os.path.join(fmodels, fname)
 
         fresults = os.path.join(fdir, 'results')
@@ -517,6 +517,6 @@ if __name__ == '__main__':
                 str(config['ATTENTION_SIZE']) + '_' + \
                 str(config['DROPOUT']).split('.')[1] + '_' + \
                 str(config['CHARACTER']) + '_' + \
-                str(config['BEAM'])
+                str(config['BEAM_SIZE'])
         fout = os.path.join(fresults, fname)
         h.test(fin, fout)

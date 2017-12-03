@@ -21,11 +21,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="hierattention.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hierattention.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hierattention.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="547" column="35" lean-forward="false" selection-start-line="547" selection-start-column="35" selection-end-line="547" selection-end-column="35" />
+            <state relative-caret-position="162">
+              <caret line="530" column="89" lean-forward="false" selection-start-line="530" selection-start-column="75" selection-end-line="530" selection-end-column="89" />
               <folding>
                 <element signature="e#875#893#0" expanded="true" />
                 <element signature="e#1510#4605#0" expanded="false" />
@@ -48,7 +48,7 @@
       <file leaf-file-name="reg_main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/baseline/reg/reg_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3405">
+            <state relative-caret-position="432">
               <caret line="229" column="16" lean-forward="false" selection-start-line="229" selection-start-column="16" selection-end-line="229" selection-end-column="16" />
               <folding />
             </state>
@@ -58,7 +58,7 @@
       <file leaf-file-name="preprocessing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3510">
+            <state relative-caret-position="672">
               <caret line="329" column="34" lean-forward="false" selection-start-line="329" selection-start-column="34" selection-end-line="329" selection-end-column="34" />
               <folding>
                 <element signature="e#6333#7008#0" expanded="false" />
@@ -71,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="attention.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="attention.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/attention.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="507" column="37" lean-forward="false" selection-start-line="507" selection-start-column="37" selection-end-line="507" selection-end-column="37" />
+            <state relative-caret-position="147">
+              <caret line="491" column="67" lean-forward="false" selection-start-line="491" selection-start-column="57" selection-end-line="491" selection-end-column="67" />
               <folding>
                 <element signature="e#871#889#0" expanded="true" />
                 <element signature="e#4436#4652#0" expanded="false" />
@@ -152,8 +152,8 @@
         <option value="$PROJECT_DIR$/baseline/only_names.py" />
         <option value="$PROJECT_DIR$/evaluation.py" />
         <option value="$PROJECT_DIR$/baseline/reg/reg_main.py" />
-        <option value="$PROJECT_DIR$/attention.py" />
         <option value="$PROJECT_DIR$/hierattention.py" />
+        <option value="$PROJECT_DIR$/attention.py" />
       </list>
     </option>
   </component>
@@ -176,6 +176,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -202,29 +204,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NeuralREG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NeuralREG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -817,7 +799,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.134895" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1365105" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1107,9 +1089,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/evaluation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1245">
+          <caret line="86" column="24" lean-forward="false" selection-start-line="86" selection-start-column="24" selection-end-line="86" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/baseline/reg/reg_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3405">
+        <state relative-caret-position="432">
           <caret line="229" column="16" lean-forward="false" selection-start-line="229" selection-start-column="16" selection-end-line="229" selection-end-column="16" />
           <folding />
         </state>
@@ -1117,7 +1107,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3510">
+        <state relative-caret-position="672">
           <caret line="329" column="34" lean-forward="false" selection-start-line="329" selection-start-column="34" selection-end-line="329" selection-end-column="34" />
           <folding>
             <element signature="e#6333#7008#0" expanded="false" />
@@ -1129,36 +1119,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/evaluation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="86" column="24" lean-forward="false" selection-start-line="86" selection-start-column="24" selection-end-line="86" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/attention.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="507" column="37" lean-forward="false" selection-start-line="507" selection-start-column="37" selection-end-line="507" selection-end-column="37" />
-          <folding>
-            <element signature="e#871#889#0" expanded="true" />
-            <element signature="e#4436#4652#0" expanded="false" />
-            <element signature="e#4732#5085#0" expanded="false" />
-            <element signature="e#5161#5690#0" expanded="false" />
-            <element signature="e#5765#7309#0" expanded="false" />
-            <element signature="e#7378#9470#0" expanded="false" />
-            <element signature="e#9548#13028#0" expanded="false" />
-            <element signature="e#13104#13487#0" expanded="false" />
-            <element signature="e#13881#15037#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hierattention.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="547" column="35" lean-forward="false" selection-start-line="547" selection-start-column="35" selection-end-line="547" selection-end-column="35" />
+        <state relative-caret-position="162">
+          <caret line="530" column="89" lean-forward="false" selection-start-line="530" selection-start-column="75" selection-end-line="530" selection-end-column="89" />
           <folding>
             <element signature="e#875#893#0" expanded="true" />
             <element signature="e#1510#4605#0" expanded="false" />
@@ -1173,6 +1137,24 @@
             <element signature="e#14662#15045#0" expanded="false" />
             <element signature="e#15439#16595#0" expanded="false" />
             <element signature="e#16637#17563#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/attention.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="491" column="67" lean-forward="false" selection-start-line="491" selection-start-column="57" selection-end-line="491" selection-end-column="67" />
+          <folding>
+            <element signature="e#871#889#0" expanded="true" />
+            <element signature="e#4436#4652#0" expanded="false" />
+            <element signature="e#4732#5085#0" expanded="false" />
+            <element signature="e#5161#5690#0" expanded="false" />
+            <element signature="e#5765#7309#0" expanded="false" />
+            <element signature="e#7378#9470#0" expanded="false" />
+            <element signature="e#9548#13028#0" expanded="false" />
+            <element signature="e#13104#13487#0" expanded="false" />
+            <element signature="e#13881#15037#0" expanded="false" />
           </folding>
         </state>
       </provider>
