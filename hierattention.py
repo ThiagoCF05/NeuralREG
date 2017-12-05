@@ -290,7 +290,10 @@ class HierAttention():
         h_pos = dy.concatenate_cols(pos_encoded)
         w1dt_pos = None
 
-        entity_embedding = self.input_lookup[self.input2int[entity]]
+        try:
+            entity_embedding = self.input_lookup[self.input2int[entity]]
+        except:
+            entity_embedding = self.input_lookup[self.input2int[self.EOS]]
         last_output_embeddings = self.output_lookup[self.output2int[self.EOS]]
         s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.STATE_SIZE*2), last_output_embeddings, entity_embedding]))
         candidates = [{'sentence':[self.EOS], 'prob':0.0, 'count_EOS':0, 's':s}]
@@ -441,8 +444,6 @@ class HierAttention():
 
 
     def train(self, fdir):
-        # self.init(config)
-
         trainer = dy.AdadeltaTrainer(self.model)
 
         best_acc, repeat = 0.0, 0
