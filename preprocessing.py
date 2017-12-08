@@ -408,7 +408,8 @@ class Preprocessing(object):
                             'text_id':self.text_id,
                             'general_pos':reference['general_pos'],
                             'sentence':reference['sentence'],
-                            'pos':reference['pos']
+                            'pos':reference['pos'],
+                            'text':text
                         }
                         data.append(row)
                         output_vocab = output_vocab.union(set(refex))
