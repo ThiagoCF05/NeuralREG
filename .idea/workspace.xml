@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0ea0bc8-9834-485a-926b-8fd7a4b15589" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eval/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seq2seq.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/evaluation.py" afterPath="$PROJECT_DIR$/eval/evaluation.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/multi-bleu.perl" afterPath="$PROJECT_DIR$/eval/multi-bleu.perl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extract_attention.py" afterPath="$PROJECT_DIR$/extract_attention.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attention.py" afterPath="$PROJECT_DIR$/attention.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eval/evaluation.py" afterPath="$PROJECT_DIR$/eval/evaluation.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hierattention.py" afterPath="$PROJECT_DIR$/hierattention.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seq2seq.py" afterPath="$PROJECT_DIR$/seq2seq.py" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -27,11 +26,21 @@
       <file leaf-file-name="evaluation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/eval/evaluation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="31" column="11" lean-forward="false" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+            <state relative-caret-position="2715">
+              <caret line="193" column="50" lean-forward="false" selection-start-line="193" selection-start-column="50" selection-end-line="193" selection-end-column="50" />
               <folding>
                 <element signature="e#314#361#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="info.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/test/info.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-106120">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -61,8 +70,8 @@
       <file leaf-file-name="attention.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/attention.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="492" column="43" lean-forward="false" selection-start-line="492" selection-start-column="43" selection-end-line="492" selection-end-column="43" />
+            <state relative-caret-position="288">
+              <caret line="497" column="30" lean-forward="false" selection-start-line="497" selection-start-column="30" selection-end-line="497" selection-end-column="30" />
               <folding>
                 <element signature="e#871#889#0" expanded="true" />
                 <element signature="e#4033#4377#0" expanded="false" />
@@ -80,8 +89,8 @@
       <file leaf-file-name="hierattention.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hierattention.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2277">
-              <caret line="295" column="74" lean-forward="false" selection-start-line="295" selection-start-column="74" selection-end-line="295" selection-end-column="74" />
+            <state relative-caret-position="198">
+              <caret line="535" column="31" lean-forward="false" selection-start-line="535" selection-start-column="31" selection-end-line="535" selection-end-column="31" />
               <folding>
                 <element signature="e#1510#4605#0" expanded="false" />
                 <element signature="e#4656#4941#0" expanded="false" />
@@ -101,12 +110,11 @@
       <file leaf-file-name="seq2seq.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/seq2seq.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="434" column="39" lean-forward="true" selection-start-line="434" selection-start-column="39" selection-end-line="434" selection-end-column="39" />
+            <state relative-caret-position="708">
+              <caret line="435" column="27" lean-forward="true" selection-start-line="435" selection-start-column="27" selection-end-line="435" selection-end-column="27" />
               <folding>
                 <element signature="e#818#836#0" expanded="true" />
                 <element signature="e#3277#3621#0" expanded="false" />
-                <element signature="e#3680#3896#0" expanded="false" />
                 <element signature="e#10607#11763#0" expanded="false" />
               </folding>
             </state>
@@ -194,7 +202,6 @@
         <option value="$PROJECT_DIR$/annotation/final/train/1triples/Airport.xml" />
         <option value="$PROJECT_DIR$/baseline/reg/reg_train.py" />
         <option value="$PROJECT_DIR$/baseline/only_names.py" />
-        <option value="$PROJECT_DIR$/hierattention.py" />
         <option value="$PROJECT_DIR$/preprocessing.py" />
         <option value="$PROJECT_DIR$/corpus.py" />
         <option value="$PROJECT_DIR$/baseline/reg/form_choice.py" />
@@ -203,8 +210,9 @@
         <option value="$PROJECT_DIR$/evaluation.py" />
         <option value="$PROJECT_DIR$/extract_attention.py" />
         <option value="$PROJECT_DIR$/eval/evaluation.py" />
-        <option value="$PROJECT_DIR$/attention.py" />
         <option value="$PROJECT_DIR$/seq2seq.py" />
+        <option value="$PROJECT_DIR$/hierattention.py" />
+        <option value="$PROJECT_DIR$/attention.py" />
       </list>
     </option>
   </component>
@@ -240,6 +248,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="NeuralREG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeuralREG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeuralREG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eval" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -903,11 +925,16 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/eval/evaluation.py</url>
-          <line>101</line>
+          <line>137</line>
           <option name="timeStamp" value="140" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/eval/evaluation.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="141" />
+      <option name="time" value="142" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -1207,14 +1234,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/test/info.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3300">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/test/size.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-97308">
@@ -1223,10 +1242,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/info.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-106120">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/eval/evaluation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="31" column="11" lean-forward="false" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+        <state relative-caret-position="2715">
+          <caret line="193" column="50" lean-forward="false" selection-start-line="193" selection-start-column="50" selection-end-line="193" selection-end-column="50" />
           <folding>
             <element signature="e#314#361#0" expanded="true" />
           </folding>
@@ -1235,8 +1262,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/attention.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="492" column="43" lean-forward="false" selection-start-line="492" selection-start-column="43" selection-end-line="492" selection-end-column="43" />
+        <state relative-caret-position="288">
+          <caret line="497" column="30" lean-forward="false" selection-start-line="497" selection-start-column="30" selection-end-line="497" selection-end-column="30" />
           <folding>
             <element signature="e#871#889#0" expanded="true" />
             <element signature="e#4033#4377#0" expanded="false" />
@@ -1252,8 +1279,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hierattention.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2277">
-          <caret line="295" column="74" lean-forward="false" selection-start-line="295" selection-start-column="74" selection-end-line="295" selection-end-column="74" />
+        <state relative-caret-position="198">
+          <caret line="535" column="31" lean-forward="false" selection-start-line="535" selection-start-column="31" selection-end-line="535" selection-end-column="31" />
           <folding>
             <element signature="e#1510#4605#0" expanded="false" />
             <element signature="e#4656#4941#0" expanded="false" />
@@ -1271,12 +1298,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/seq2seq.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="434" column="39" lean-forward="true" selection-start-line="434" selection-start-column="39" selection-end-line="434" selection-end-column="39" />
+        <state relative-caret-position="708">
+          <caret line="435" column="27" lean-forward="true" selection-start-line="435" selection-start-column="27" selection-end-line="435" selection-end-column="27" />
           <folding>
             <element signature="e#818#836#0" expanded="true" />
             <element signature="e#3277#3621#0" expanded="false" />
-            <element signature="e#3680#3896#0" expanded="false" />
             <element signature="e#10607#11763#0" expanded="false" />
           </folding>
         </state>

@@ -22,6 +22,7 @@ import os
 
 # ORIGINAL
 ORIGINAL = 'data/test/data.cPickle'
+ORIGINAL_INFO = 'data/test/info.txt'
 # ONLY NAMES RESULTS PATH
 ONLYNAMES = 'baseline/baseline_names.cPickle'
 # FERREIRA RESULTS PATH
@@ -33,6 +34,10 @@ HIERATT = 'data/hier/results/test_best_1_300_512_512_3_False_5/0'
 
 original = p.load(open(ORIGINAL))
 y_real = map(lambda x: x['refex'].lower(), original)
+
+with open(ORIGINAL_INFO) as f:
+    original_info = f.read().split('\n')
+    original_info = map(lambda x: x.split(), original_info)
 
 # ONLY NAMES RESULTS AND GOLD-STANDARDS
 only = p.load(open(ONLYNAMES))
@@ -90,6 +95,37 @@ def evaluate(y_real, y_pred):
     print('PRONOUN ACCURACY: ', str(round(pronoun_num/pronoun_dem, 4)))
     return wrong
 
+def domain_evaluate(y_real, y_pred, info):
+    domains = {}
+    for i in range(len(y_real)):
+        domain = info[i][1]
+        if domain not in domains:
+            domains[domain] = {'num':0.0, 'dem':0.00000001, 'pronoun_num':0.0, 'pronoun_dem':0.00000001, 'distance':[]}
+
+        real = y_real[i].replace('eos', '').strip()
+        pred = y_pred[i].replace('eos', '').strip()
+
+        domains[domain]['distance'].append(edit_distance(real, pred.strip()))
+
+        if pred.strip() == real:
+            domains[domain]['num'] += 1
+        domains[domain]['dem'] += 1
+
+        if real.lower() in ['he', 'his', 'him',
+                            'she', 'her', 'hers',
+                            'it', 'its', 'we', 'us', 'our', 'ours',
+                            'they', 'them', 'their', 'theirs']:
+            # print(real)
+            if pred.strip() == real:
+                domains[domain]['pronoun_num'] += 1
+            domains[domain]['pronoun_dem'] += 1
+
+    for domain in domains:
+        print(domain.upper())
+        print('ACCURACY: ', str(round(domains[domain]['num']/domains[domain]['dem'], 4)))
+        print('DISTANCE: ', str(round(np.mean(domains[domain]['distance']), 4)))
+        print('PRONOUN ACCURACY: ', str(round(domains[domain]['pronoun_num']/domains[domain]['pronoun_dem'], 4)))
+
 def generate_text(data, y_pred):
     originals = []
     templates = []
@@ -120,7 +156,7 @@ def generate_text(data, y_pred):
     with open('output', 'w') as f:
         f.write('\n'.join(templates).lower().encode('utf-8'))
 
-    os.system('perl multi-bleu.perl reference < output')
+    os.system('perl eval/multi-bleu.perl reference < output')
 
     os.remove('reference')
     os.remove('output')
@@ -145,6 +181,8 @@ if __name__ == '__main__':
     evaluate(y_real, y_catt)
     print '\n'
     generate_text(original, y_catt)
+    print '\n'
+    domain_evaluate(y_real, y_catt, original_info)
     print 10 * '-'
 
     # HIER
@@ -152,4 +190,6 @@ if __name__ == '__main__':
     evaluate(y_real, y_hieratt)
     print '\n'
     generate_text(original, y_hieratt)
+    print '\n'
+    domain_evaluate(y_real, y_catt, original_info)
     print 10 * '-'
