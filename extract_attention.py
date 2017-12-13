@@ -28,7 +28,7 @@ import dynet as dy
 import load_data
 import os
 
-import cPickle as p
+import pickle as p
 
 class Attention():
     def __init__(self, config):
@@ -262,7 +262,7 @@ class Attention():
                 'pos_weights':pos_weights
             }
             results.append(result)
-        p.dump(results, open(fout, 'w'))
+        p.dump(results, open(fout, 'wb'), protocol=p.HIGHEST_PROTOCOL)
 
 
 if __name__ == '__main__':
