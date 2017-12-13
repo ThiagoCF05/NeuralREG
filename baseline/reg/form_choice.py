@@ -20,7 +20,8 @@ def rule_form_choice(text_status):
     else:
         return 'pronoun'
 
-def regular_bayes(references, distributions=DISTRIBUTIONS):
+def regular_bayes(references):
+    distributions = p.load(open('pronoun_data/form_distributions.cPickle'))
     for reference in references:
         X = (reference['syntax'], reference['text_status'], reference['sentence_status'])
 

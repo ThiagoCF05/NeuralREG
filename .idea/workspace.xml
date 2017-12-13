@@ -2,40 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0ea0bc8-9834-485a-926b-8fd7a4b15589" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/att/results/dev_best_1_300_512_512_2_False_5/0" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/att/results/dev_best_1_300_512_512_2_False_5/1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/att/results/dev_best_1_300_512_512_2_False_5/2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/att/results/dev_best_1_300_512_512_2_False_5/3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/att/results/dev_best_1_300_512_512_2_False_5/4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/att/results/test_best_1_300_512_512_2_False_1/0" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/att/results/test_best_1_300_512_512_3_False_1/0" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/dev/data.cPickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/dev/entity.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/dev/info.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/dev/pos_context.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/dev/pre_context.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/dev/refex.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/dev/size.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/input_vocab.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output_vocab.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/test/data.cPickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/test/entity.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/test/info.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/test/pos_context.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/test/pre_context.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/test/refex.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/test/size.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/train/data.cPickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/train/entity.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/train/info.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/train/pos_context.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/train/pre_context.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/train/refex.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/train/size.txt" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/corpus.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extract_attention.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/multi-bleu.perl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation/final.zip" afterPath="$PROJECT_DIR$/annotation/final.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseline/reg/form_choice.py" afterPath="$PROJECT_DIR$/baseline/reg/form_choice.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseline/reg/reg.cPickle" afterPath="$PROJECT_DIR$/baseline/reg/reg.cPickle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseline/reg/reg_main.py" afterPath="$PROJECT_DIR$/baseline/reg/reg_main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseline/reg/result.cPickle" afterPath="$PROJECT_DIR$/baseline/reg/result.cPickle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/evaluation.py" afterPath="$PROJECT_DIR$/evaluation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/preprocessing.py" afterPath="$PROJECT_DIR$/preprocessing.py" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -52,26 +28,26 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="reg_main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/baseline/reg/reg_main.py">
+      <file leaf-file-name="evaluation.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/evaluation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3405">
-              <caret line="229" column="16" lean-forward="false" selection-start-line="229" selection-start-column="16" selection-end-line="229" selection-end-column="16" />
-              <folding />
+            <state relative-caret-position="465">
+              <caret line="31" column="54" lean-forward="false" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
+              <folding>
+                <element signature="e#314#361#0" expanded="true" />
+                <element signature="e#1478#2592#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="preprocessing.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/preprocessing.py">
+      <file leaf-file-name="corpus.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/corpus.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3893">
-              <caret line="36" column="8" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+            <state relative-caret-position="330">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
-                <element signature="e#520#531#0" expanded="true" />
-                <element signature="e#1092#2810#0" expanded="false" />
-                <element signature="e#6333#7008#0" expanded="false" />
-                <element signature="e#9453#10185#0" expanded="false" />
+                <element signature="e#368#377#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,14 +56,16 @@
       <file leaf-file-name="attention.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/attention.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2543">
-              <caret line="257" column="74" lean-forward="false" selection-start-line="257" selection-start-column="74" selection-end-line="257" selection-end-column="74" />
+            <state relative-caret-position="198">
+              <caret line="239" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="525" selection-end-column="0" />
               <folding>
                 <element signature="e#871#889#0" expanded="true" />
+                <element signature="e#4033#4377#0" expanded="false" />
                 <element signature="e#4436#4652#0" expanded="false" />
                 <element signature="e#4732#5085#0" expanded="false" />
                 <element signature="e#5161#5690#0" expanded="false" />
                 <element signature="e#5765#7309#0" expanded="false" />
+                <element signature="e#7378#9470#0" expanded="false" />
                 <element signature="e#13212#13595#0" expanded="false" />
                 <element signature="e#13989#15145#0" expanded="false" />
               </folding>
@@ -95,48 +73,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="evaluation.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/evaluation.py">
+      <file leaf-file-name="extract_attention.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/extract_attention.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="66" column="59" lean-forward="false" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
+            <state relative-caret-position="-938">
+              <caret line="147" column="0" lean-forward="true" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
               <folding>
-                <element signature="e#1#48#0" expanded="true" />
-                <element signature="e#2347#3381#0" expanded="false" />
-                <element signature="e#3417#4393#0" expanded="false" />
-                <element signature="e#4458#6352#0" expanded="false" />
+                <element signature="e#871#889#0" expanded="true" />
+                <element signature="e#4035#4379#0" expanded="false" />
+                <element signature="e#4438#4654#0" expanded="false" />
+                <element signature="e#4734#5087#0" expanded="false" />
+                <element signature="e#5780#7324#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hierattention.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hierattention.py">
+      <file leaf-file-name="preprocessing.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2153">
-              <caret line="295" column="74" lean-forward="false" selection-start-line="295" selection-start-column="74" selection-end-line="295" selection-end-column="74" />
+            <state relative-caret-position="2700">
+              <caret line="349" column="67" lean-forward="false" selection-start-line="349" selection-start-column="67" selection-end-line="349" selection-end-column="67" />
               <folding>
-                <element signature="e#1510#4605#0" expanded="false" />
-                <element signature="e#4656#4941#0" expanded="false" />
-                <element signature="e#5000#5216#0" expanded="false" />
-                <element signature="e#5296#5649#0" expanded="false" />
-                <element signature="e#5725#6254#0" expanded="false" />
-                <element signature="e#6325#7172#0" expanded="false" />
-                <element signature="e#7247#8812#0" expanded="false" />
-                <element signature="e#14770#15153#0" expanded="false" />
-                <element signature="e#15547#16703#0" expanded="false" />
-                <element signature="e#16745#17671#0" expanded="false" />
+                <element signature="e#520#531#0" expanded="true" />
+                <element signature="e#1092#2810#0" expanded="false" />
+                <element signature="e#6333#7008#0" expanded="false" />
+                <element signature="e#8279#9400#0" expanded="false" />
+                <element signature="e#9453#10185#0" expanded="false" />
+                <element signature="e#10248#11322#0" expanded="false" />
+                <element signature="e#11369#12960#0" expanded="false" />
+                <element signature="e#13039#16793#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="only_names.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/baseline/only_names.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -178,7 +145,6 @@
         <option value="$PROJECT_DIR$/baseline/reg/pronoun.py" />
         <option value="$PROJECT_DIR$/baseline/reg/proper_name.py" />
         <option value="$PROJECT_DIR$/baseline/reg/description.py" />
-        <option value="$PROJECT_DIR$/baseline/reg/form_choice.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/load_data.py" />
@@ -189,11 +155,15 @@
         <option value="$PROJECT_DIR$/annotation/final/train/1triples/Airport.xml" />
         <option value="$PROJECT_DIR$/baseline/reg/reg_train.py" />
         <option value="$PROJECT_DIR$/baseline/only_names.py" />
-        <option value="$PROJECT_DIR$/baseline/reg/reg_main.py" />
         <option value="$PROJECT_DIR$/hierattention.py" />
         <option value="$PROJECT_DIR$/attention.py" />
-        <option value="$PROJECT_DIR$/evaluation.py" />
         <option value="$PROJECT_DIR$/preprocessing.py" />
+        <option value="$PROJECT_DIR$/corpus.py" />
+        <option value="$PROJECT_DIR$/baseline/reg/form_choice.py" />
+        <option value="$PROJECT_DIR$/baseline/reg/reg_main.py" />
+        <option value="$PROJECT_DIR$/multi-bleu.perl" />
+        <option value="$PROJECT_DIR$/evaluation.py" />
+        <option value="$PROJECT_DIR$/extract_attention.py" />
       </list>
     </option>
   </component>
@@ -218,9 +188,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -247,40 +216,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NeuralREG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NeuralREG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NeuralREG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NeuralREG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baseline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -311,7 +249,7 @@
       <recent name="$PROJECT_DIR$/annotation" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.evaluation">
+  <component name="RunManager" selected="Python.corpus">
     <configuration default="false" name="evaluation" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -325,23 +263,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="NeuralREG" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/evaluation.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="preprocessing" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="NeuralREG" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/preprocessing.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -393,6 +314,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="NeuralREG" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/baseline/only_names.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="corpus" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NeuralREG" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/corpus.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -804,18 +742,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.evaluation" />
-      <item index="1" class="java.lang.String" itemvalue="Python.preprocessing" />
-      <item index="2" class="java.lang.String" itemvalue="Python.reg_train" />
-      <item index="3" class="java.lang.String" itemvalue="Python.reg_main" />
-      <item index="4" class="java.lang.String" itemvalue="Python.only_names" />
+      <item index="1" class="java.lang.String" itemvalue="Python.reg_train" />
+      <item index="2" class="java.lang.String" itemvalue="Python.reg_main" />
+      <item index="3" class="java.lang.String" itemvalue="Python.only_names" />
+      <item index="4" class="java.lang.String" itemvalue="Python.corpus" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.evaluation" />
-        <item index="1" class="java.lang.String" itemvalue="Python.reg_main" />
-        <item index="2" class="java.lang.String" itemvalue="Python.only_names" />
-        <item index="3" class="java.lang.String" itemvalue="Python.preprocessing" />
-        <item index="4" class="java.lang.String" itemvalue="Python.reg_train" />
+        <item index="0" class="java.lang.String" itemvalue="Python.corpus" />
+        <item index="1" class="java.lang.String" itemvalue="Python.evaluation" />
+        <item index="2" class="java.lang.String" itemvalue="Python.reg_main" />
+        <item index="3" class="java.lang.String" itemvalue="Python.reg_train" />
+        <item index="4" class="java.lang.String" itemvalue="Python.only_names" />
       </list>
     </recent_temporary>
   </component>
@@ -866,14 +804,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6070234" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35612243" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24236874" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1910867" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -887,7 +825,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3265306" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3260274" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -900,11 +838,6 @@
           <url>file://$PROJECT_DIR$/annotation/annotate.py</url>
           <line>13</line>
           <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/evaluation.py</url>
-          <line>94</line>
-          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/load_data.py</url>
@@ -942,26 +875,11 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/evaluation.py</url>
-          <line>87</line>
-          <option name="timeStamp" value="117" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/evaluation.py</url>
-          <line>57</line>
-          <option name="timeStamp" value="126" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/evaluation.py</url>
-          <line>133</line>
-          <option name="timeStamp" value="130" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/evaluation.py</url>
-          <line>145</line>
-          <option name="timeStamp" value="132" />
+          <line>101</line>
+          <option name="timeStamp" value="140" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="133" />
+      <option name="time" value="141" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -974,30 +892,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/train/size.txt" />
-    <entry file="file://$PROJECT_DIR$/db/operations.py" />
-    <entry file="file://$PROJECT_DIR$/data/v1/train/refex.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-683516">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/results/dev_best_1_300_1024_1024_2_False" />
     <entry file="file://$PROJECT_DIR$/data/dev.txt" />
     <entry file="file://$PROJECT_DIR$/data/character_vocab.txt" />
     <entry file="file://$PROJECT_DIR$/main.py" />
     <entry file="file://$PROJECT_DIR$/data/results/dev_best_1_300_512_512_2_False" />
     <entry file="file://$PROJECT_DIR$/seq2seq.py" />
     <entry file="file://$PROJECT_DIR$/run.sh" />
-    <entry file="file://$PROJECT_DIR$/load_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="7" lean-forward="false" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda/lib/python2.7/posixpath.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -1040,14 +940,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/annotation/annotate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="28" lean-forward="false" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/annotation/final/train/3triples/SportsTeam.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1170">
@@ -1060,13 +952,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="91620">
           <caret line="6108" column="16" lean-forward="false" selection-start-line="6108" selection-start-column="13" selection-end-line="6108" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/train/refex.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1091,41 +976,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/baseline/reg/reg_train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="31" column="47" lean-forward="false" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
-          <folding>
-            <element signature="e#183#202#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/baseline/reg/form_choice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-175">
-          <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annotation/create_xml.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="69" column="34" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#9#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/baseline/reg/reg_main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3405">
-          <caret line="229" column="16" lean-forward="false" selection-start-line="229" selection-start-column="16" selection-end-line="229" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/annotation/final/train/6triples/Monument.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1133,34 +983,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/test/entity.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/test/pos_context.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/output_vocab.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/input_vocab.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-48878">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/entity.txt" />
+    <entry file="file://$PROJECT_DIR$/data/test/pos_context.txt" />
+    <entry file="file://$PROJECT_DIR$/data/output_vocab.txt" />
+    <entry file="file://$PROJECT_DIR$/data/input_vocab.txt" />
     <entry file="file://$PROJECT_DIR$/annotation/final/train/2triples/Building.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-16753">
@@ -1186,24 +1012,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="82" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="82" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/dev/refex.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/test/pre_context.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95292">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/pre_context.txt" />
     <entry file="file://$PROJECT_DIR$/annotation/final/dev/1triples/Airport.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1212,10 +1024,74 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/test1/refex.txt" />
-    <entry file="file://$PROJECT_DIR$/data/test/refex.txt">
+    <entry file="file://$PROJECT_DIR$/data/only" />
+    <entry file="file://$PROJECT_DIR$/data/neural" />
+    <entry file="file://$PROJECT_DIR$/data/original" />
+    <entry file="file://$PROJECT_DIR$/hierattention.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125456">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="2085">
+          <caret line="295" column="74" lean-forward="false" selection-start-line="295" selection-start-column="74" selection-end-line="295" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/cyber/train/5triples/SportsTeam.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="67" column="41" lean-forward="false" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annotation/annotate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="28" lean-forward="false" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annotation/create_xml.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="69" column="34" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/load_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baseline/reg/form_choice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baseline/reg/reg_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405">
+          <caret line="46" column="4" lean-forward="false" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baseline/reg/reg_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="208" column="48" lean-forward="false" selection-start-line="208" selection-start-column="33" selection-end-line="208" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/multi-bleu.perl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="848">
+          <caret line="176" column="1" lean-forward="false" selection-start-line="176" selection-start-column="1" selection-end-line="176" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1227,66 +1103,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/only" />
-    <entry file="file://$PROJECT_DIR$/data/neural" />
-    <entry file="file://$PROJECT_DIR$/data/original" />
     <entry file="file://$PROJECT_DIR$/preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3893">
-          <caret line="36" column="8" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+        <state relative-caret-position="2700">
+          <caret line="349" column="67" lean-forward="false" selection-start-line="349" selection-start-column="67" selection-end-line="349" selection-end-column="67" />
           <folding>
             <element signature="e#520#531#0" expanded="true" />
             <element signature="e#1092#2810#0" expanded="false" />
             <element signature="e#6333#7008#0" expanded="false" />
+            <element signature="e#8279#9400#0" expanded="false" />
             <element signature="e#9453#10185#0" expanded="false" />
+            <element signature="e#10248#11322#0" expanded="false" />
+            <element signature="e#11369#12960#0" expanded="false" />
+            <element signature="e#13039#16793#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/evaluation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="66" column="59" lean-forward="false" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
+        <state relative-caret-position="465">
+          <caret line="31" column="54" lean-forward="false" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
           <folding>
-            <element signature="e#1#48#0" expanded="true" />
-            <element signature="e#2347#3381#0" expanded="false" />
-            <element signature="e#3417#4393#0" expanded="false" />
-            <element signature="e#4458#6352#0" expanded="false" />
+            <element signature="e#314#361#0" expanded="true" />
+            <element signature="e#1478#2592#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/train/refex.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-945052">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/dev/refex.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-105592">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/refex.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-130132">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#368#377#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/attention.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2543">
-          <caret line="257" column="74" lean-forward="false" selection-start-line="257" selection-start-column="74" selection-end-line="257" selection-end-column="74" />
+        <state relative-caret-position="198">
+          <caret line="239" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="525" selection-end-column="0" />
           <folding>
             <element signature="e#871#889#0" expanded="true" />
+            <element signature="e#4033#4377#0" expanded="false" />
             <element signature="e#4436#4652#0" expanded="false" />
             <element signature="e#4732#5085#0" expanded="false" />
             <element signature="e#5161#5690#0" expanded="false" />
             <element signature="e#5765#7309#0" expanded="false" />
+            <element signature="e#7378#9470#0" expanded="false" />
             <element signature="e#13212#13595#0" expanded="false" />
             <element signature="e#13989#15145#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hierattention.py">
+    <entry file="file://$PROJECT_DIR$/extract_attention.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2153">
-          <caret line="295" column="74" lean-forward="false" selection-start-line="295" selection-start-column="74" selection-end-line="295" selection-end-column="74" />
+        <state relative-caret-position="-938">
+          <caret line="147" column="0" lean-forward="true" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
           <folding>
-            <element signature="e#1510#4605#0" expanded="false" />
-            <element signature="e#4656#4941#0" expanded="false" />
-            <element signature="e#5000#5216#0" expanded="false" />
-            <element signature="e#5296#5649#0" expanded="false" />
-            <element signature="e#5725#6254#0" expanded="false" />
-            <element signature="e#6325#7172#0" expanded="false" />
-            <element signature="e#7247#8812#0" expanded="false" />
-            <element signature="e#14770#15153#0" expanded="false" />
-            <element signature="e#15547#16703#0" expanded="false" />
-            <element signature="e#16745#17671#0" expanded="false" />
+            <element signature="e#871#889#0" expanded="true" />
+            <element signature="e#4035#4379#0" expanded="false" />
+            <element signature="e#4438#4654#0" expanded="false" />
+            <element signature="e#4734#5087#0" expanded="false" />
+            <element signature="e#5780#7324#0" expanded="false" />
           </folding>
         </state>
       </provider>

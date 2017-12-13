@@ -231,6 +231,7 @@ class REG(object):
 
             results.extend(self.generate(text_references))
 
+        results.sort(key=lambda x: (x['text_id'], x['general_pos']))
         p.dump(results, open('result.cPickle', 'w'))
 
 
