@@ -1,10 +1,16 @@
-__author__ = 'thiagocastroferreira'
+__author__ = ''
 
 """
-Author: Thiago Castro Ferreira
+Author: ANONYMOUS
 Date: 12/12/2017
 Description:
-    Evaluation script to obtain accuracy, pronoun accuracy, string edit distance and BLEU scores.
+    Evaluation script to obtain accuracy, pronoun measures, string edit distance and BLEU scores.
+
+    PYTHON VERSION :2.7
+
+    DEPENDENCIES:
+        NLTK:           http://www.nltk.org/
+        SciKit learn:   http://scikit-learn.org/stable/
 
     UPDATE CONSTANT PATHS:
         ORIGINAL
@@ -27,15 +33,15 @@ import os
 ORIGINAL = 'data/test/data.cPickle'
 ORIGINAL_INFO = 'data/test/info.txt'
 # ONLY NAMES RESULTS PATH
-ONLYNAMES = 'baselines/baseline_names.cPickle'
+ONLYNAMES = 'eval/onlynames.cPickle'
 # FERREIRA RESULTS PATH
-FERREIRA = 'baselines/ferreira/result.cPickle'
+FERREIRA = 'eval/ferreira.cPickle'
 # NEURAL-SEQ2SEQ RESULTS PATH
-SEQ2SEQ = 'data/seq2seq/results/test_best_1_300_512_3_False_5/0'
+SEQ2SEQ = 'eval/seq2seq/results/test_best_1_300_512_3_False_5/0'
 # NEURAL-CATT RESULTS PATH
-CATT = 'data/att/results/test_best_1_300_512_512_3_False_5/0'
+CATT = 'eval/att/results/test_best_1_300_512_512_3_False_5/0'
 # NEURAL-HIERATT RESULTS PATH
-HIERATT = 'data/hier/results/test_best_1_300_512_512_2_False_1/0'
+HIERATT = 'eval/hier/results/test_best_1_300_512_512_2_False_1/0'
 
 MULTIBLEU = 'eval/multi-bleu.perl'
 

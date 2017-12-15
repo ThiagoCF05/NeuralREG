@@ -1,7 +1,7 @@
-__author__ = 'thiagocastroferreira'
+__author__ = ''
 
 """
-Author: Thiago Castro Ferreira
+Author: ANONYMOUS
 Date: 24/07/2017
 Description:
     REFERRING EXPRESSION COLLECTION:
@@ -12,6 +12,13 @@ Description:
 
     For each instance, context (pre and pos), status (text and sentence), syntax, entity id, referential form,
     referring expression and domain info are extracted
+
+    PYTHON VERSION: 2.7
+
+    DEPENDENCIES:
+        cPickle
+        xml.etree.ElementTree: https://docs.python.org/2/library/xml.etree.elementtree.html
+        stanford_corenlp_pywrapper: https://github.com/brendano/stanford_corenlp_pywrapper
 
     UPDATE CONSTANTS:
         TRAIN_PATH: directory for training set of the delexicalized WebNLG
@@ -445,12 +452,12 @@ class Preprocessing(object):
         return data, input_vocab, output_vocab, character_vocab
 
 if __name__ == '__main__':
-    TRAIN_PATH = 'annotation/final/train'
-    TRAIN_DEV = 'annotation/final/dev'
+    TRAIN_PATH = 'webnlg/delexicalized/train'
+    TRAIN_DEV = 'webnlg/delexicalized/dev'
 
     VOCAB_PATH = 'data/'
-    TRAIN_REFEX_PATH = 'data/train'
-    DEV_REFEX_PATH = 'data/dev'
-    TEST_REFEX_PATH = 'data/test'
+    TRAIN_REFEX_PATH = 'data/train1'
+    DEV_REFEX_PATH = 'data/dev1'
+    TEST_REFEX_PATH = 'data/test1'
 
     Preprocessing(TRAIN_PATH, TRAIN_DEV, VOCAB_PATH, TRAIN_REFEX_PATH, DEV_REFEX_PATH, TEST_REFEX_PATH)

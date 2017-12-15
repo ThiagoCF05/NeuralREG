@@ -1,7 +1,7 @@
-__author__ = 'thiagocastroferreira'
+__author__ = ''
 
 """
-Author: Thiago Castro Ferreira
+Author: ANONYMOUS
 Date: 12/12/2017
 Description:
     Script for generating information about the corpus as number of distinct sets of triples,

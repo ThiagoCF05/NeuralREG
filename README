@@ -1,0 +1,48 @@
+Author: ANONYMOUS
+Date: 15/12/2017
+
+FILES and DIRECTORIES:
+
+webnlg/
+    Original and Delexicalized versions of WebNLG corpus
+
+preprocessing.py
+    Script to extraction the referring expression collection from WebNLG corpus. Update the variable paths in the script
+    and the following command:
+
+    python2.7 preprocessing.py
+
+data/
+    Training, development and test referring expressions sets and vocabularies.
+
+only_names.py
+    OnlyNames model: update variable paths in the script and run the following command:
+
+    python2.7 only_names
+
+ferreira/
+    (Castro Ferreira et al., 2016) model: update variable paths in the scripts and and execute them in following order:
+
+    reg_train.py
+        Train the model
+    reg_main.py
+        Produce the referring expressions to the references
+
+seq2seq.py
+    NeuralREG+Seq2Seq model: update the variable paths in the script and run the following command:
+
+    python3 seq2seq.py --dynet-autobatch 1 --dynet-mem 8192 --dynet-gpu
+
+attention.py
+    NeuralREG+CAtt model: update the variable paths in the script and run the following command:
+
+    python3 attention.py --dynet-autobatch 1 --dynet-mem 8192 --dynet-gpu
+
+hierattention.py
+    NeuralREG+HierAtt model: update the variable paths in the script and run the following command:
+
+    python3 hierattention.py --dynet-autobatch 1 --dynet-mem 8192 --dynet-gpu
+
+eval/
+    Evaluation scripts for extract information about referring expression collection (corpus.py) and obtain results
+    depicted in the paper (evaluation.py)

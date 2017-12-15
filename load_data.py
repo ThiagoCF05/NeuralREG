@@ -1,10 +1,12 @@
-__author__ = 'thiagocastroferreira'
+__author__ = ''
 
 """
-Author: Thiago Castro Ferreira
+Author: ANONYMOUS
 Date: 12/12/2017
 Description:
     Script for loading the referring expressions collection.
+
+    PYTHON VERSION: 2.7
 
     UPDATE CONSTANTS:
         VOCAB_PATH

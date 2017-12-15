@@ -1,7 +1,7 @@
-__author__ = 'thiagocastroferreira'
+__author__ = ''
 
 """
-Author: Thiago Castro Ferreira
+Author: ANONYMOUS
 Date: 25/11/2017
 Description:
     NeuralREG+CAtt model concatenating the attention contexts from pre- and pos-contexts
@@ -22,6 +22,12 @@ Description:
         train()
             :param fdir
                 Directory to save best results and model
+
+    PYTHON VERSION: 3
+
+    DEPENDENCIES:
+        Dynet: https://github.com/clab/dynet
+        NumPy: http://www.numpy.org/
 
     UPDATE CONSTANTS:
         FDIR: directory to save results and trained models
