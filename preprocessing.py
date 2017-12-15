@@ -4,6 +4,7 @@ __author__ = 'thiagocastroferreira'
 Author: Thiago Castro Ferreira
 Date: 24/07/2017
 Description:
+    REFERRING EXPRESSION COLLECTION:
     Preprocessing script in order to have a train, dev and test set as well as input, output
     (word- and character-based) vocabularies.
 
@@ -11,6 +12,15 @@ Description:
 
     For each instance, context (pre and pos), status (text and sentence), syntax, entity id, referential form,
     referring expression and domain info are extracted
+
+    UPDATE CONSTANTS:
+        TRAIN_PATH: directory for training set of the delexicalized WebNLG
+        TRAIN_DEV: directory for dev set of the delexicalized WebNLG
+
+        VOCAB_PATH: path to write vocabularies
+        TRAIN_REFEX_PATH: path to write training referring expressions
+        DEV_REFEX_PATH: path to write development referring expressions
+        TEST_REFEX_PATH: path to write test referring expressions
 """
 
 import copy
@@ -26,11 +36,16 @@ sys.path.append('/home/tcastrof/workspace/stanford_corenlp_pywrapper')
 from stanford_corenlp_pywrapper import CoreNLP
 
 class Preprocessing(object):
-    def __init__(self, in_train, in_dev):
+    def __init__(self, in_train, in_dev, out_vocab, out_train, out_dev, out_test):
         self.proc = CoreNLP('ssplit')
         self.parser = CoreNLP('parse')
         self.in_train = in_train
         self.in_dev = in_dev
+
+        self.out_vocab = out_vocab
+        self.out_train = out_train
+        self.out_dev = out_dev
+        self.out_test = out_test
 
         self.text_id = 0
         self.trainset()
@@ -68,16 +83,16 @@ class Preprocessing(object):
                 info = len(dev) * [path + ' ' + fname]
                 dev_info.extend(info)
 
-        self.write('data/train', train, train_info)
-        self.write('data/dev', dev, dev_info)
+        self.write(self.out_train, train, train_info)
+        self.write(self.out_dev, dev, dev_info)
 
-        with open('data/input_vocab.txt', 'w') as f:
+        with open(os.path.join(self.out_vocab, 'input_vocab.txt'), 'w') as f:
             f.write(('\n'.join(list(input_vocab))).encode("utf-8"))
 
-        with open('data/output_vocab.txt', 'w') as f:
+        with open(os.path.join(self.out_vocab, 'output_vocab.txt'), 'w') as f:
             f.write(('\n'.join(list(output_vocab))).encode("utf-8"))
 
-        with open('data/character_vocab.txt', 'w') as f:
+        with open(os.path.join(self.out_vocab, 'character_vocab.txt'), 'w') as f:
             f.write(('\n'.join(list(character_vocab))).encode("utf-8"))
 
 
@@ -98,7 +113,7 @@ class Preprocessing(object):
                 info = len(data) * [path + ' ' + fname]
                 test_info.extend(info)
 
-        self.write('data/test', test, test_info)
+        self.write(self.out_test, test, test_info)
 
     def extract_entity_type(self, entity):
         aux = entity.split('^^')
@@ -430,7 +445,12 @@ class Preprocessing(object):
         return data, input_vocab, output_vocab, character_vocab
 
 if __name__ == '__main__':
-    ftrain = 'annotation/final/train'
-    fdev = 'annotation/final/dev'
+    TRAIN_PATH = 'annotation/final/train'
+    TRAIN_DEV = 'annotation/final/dev'
 
-    Preprocessing(ftrain, fdev)
+    VOCAB_PATH = 'data/'
+    TRAIN_REFEX_PATH = 'data/train'
+    DEV_REFEX_PATH = 'data/dev'
+    TEST_REFEX_PATH = 'data/test'
+
+    Preprocessing(TRAIN_PATH, TRAIN_DEV, VOCAB_PATH, TRAIN_REFEX_PATH, DEV_REFEX_PATH, TEST_REFEX_PATH)

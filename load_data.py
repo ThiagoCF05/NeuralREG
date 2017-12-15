@@ -1,3 +1,27 @@
+__author__ = 'thiagocastroferreira'
+
+"""
+Author: Thiago Castro Ferreira
+Date: 12/12/2017
+Description:
+    Script for loading the referring expressions collection.
+
+    UPDATE CONSTANTS:
+        VOCAB_PATH
+        TRAIN_REFEX_PATH
+        DEV_REFEX_PATH
+        TEST_REFEX_PATH
+"""
+
+import os
+
+# PATH FOR VOCABULARY
+VOCAB_PATH = 'data/'
+
+# PATH FOR REFERRING EXPRESSION COLLECTIONS
+TRAIN_REFEX_PATH = 'data/train'
+DEV_REFEX_PATH = 'data/dev'
+TEST_REFEX_PATH = 'data/test'
 
 def load(fpre_context, fpos_context, fentity, frefex, fsize, character):
     with open(fpre_context) as f:
@@ -28,39 +52,39 @@ def load(fpre_context, fpos_context, fentity, frefex, fsize, character):
 
 def run(character=False):
     # VOCABULARY
-    with open('data/input_vocab.txt') as f:
+    with open(os.path.join(VOCAB_PATH, 'input_vocab.txt')) as f:
         input_vocab = f.read().split('\n')
 
     if character:
-        with open('data/character_vocab.txt') as f:
+        with open(os.path.join(VOCAB_PATH, 'character_vocab.txt')) as f:
             output_vocab = f.read().split('\n')
     else:
-        with open('data/output_vocab.txt') as f:
+        with open(os.path.join(VOCAB_PATH, 'output_vocab.txt')) as f:
             output_vocab = f.read().split('\n')
     vocab = {'input':input_vocab, 'output':output_vocab}
 
     # TRAINSET
-    fprecontext = 'data/train/pre_context.txt'
-    fposcontext = 'data/train/pos_context.txt'
-    fentity = 'data/train/entity.txt'
-    frefex = 'data/train/refex.txt'
-    fsize = 'data/train/size.txt'
+    fprecontext = os.path.join(TRAIN_REFEX_PATH, 'pre_context.txt')
+    fposcontext = os.path.join(TRAIN_REFEX_PATH, 'pos_context.txt')
+    fentity = os.path.join(TRAIN_REFEX_PATH, 'entity.txt')
+    frefex = os.path.join(TRAIN_REFEX_PATH, 'refex.txt')
+    fsize = os.path.join(TRAIN_REFEX_PATH, 'size.txt')
     trainset = load(fprecontext, fposcontext, fentity, frefex, fsize, character)
 
     # DEVSET
-    fprecontext = 'data/dev/pre_context.txt'
-    fposcontext = 'data/dev/pos_context.txt'
-    fentity = 'data/dev/entity.txt'
-    frefex = 'data/dev/refex.txt'
-    fsize = 'data/dev/size.txt'
+    fprecontext = os.path.join(DEV_REFEX_PATH, 'pre_context.txt')
+    fposcontext = os.path.join(DEV_REFEX_PATH, 'pos_context.txt')
+    fentity = os.path.join(DEV_REFEX_PATH, 'entity.txt')
+    frefex = os.path.join(DEV_REFEX_PATH, 'refex.txt')
+    fsize = os.path.join(DEV_REFEX_PATH, 'size.txt')
     devset = load(fprecontext, fposcontext, fentity, frefex, fsize, character)
 
     # TESTSET
-    fprecontext = 'data/test/pre_context.txt'
-    fposcontext = 'data/test/pos_context.txt'
-    fentity = 'data/test/entity.txt'
-    frefex = 'data/test/refex.txt'
-    fsize = 'data/test/size.txt'
+    fprecontext = os.path.join(TEST_REFEX_PATH, 'pre_context.txt')
+    fposcontext = os.path.join(TEST_REFEX_PATH, 'pos_context.txt')
+    fentity = os.path.join(TEST_REFEX_PATH, 'entity.txt')
+    frefex = os.path.join(TEST_REFEX_PATH, 'refex.txt')
+    fsize = os.path.join(TEST_REFEX_PATH, 'size.txt')
     testset = load(fprecontext, fposcontext, fentity, frefex, fsize, character)
 
     return vocab, trainset, devset, testset

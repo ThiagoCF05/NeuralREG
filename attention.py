@@ -4,7 +4,7 @@ __author__ = 'thiagocastroferreira'
 Author: Thiago Castro Ferreira
 Date: 25/11/2017
 Description:
-    NeuralREG model concatenating the attention contexts from pre- and pos-contexts
+    NeuralREG+CAtt model concatenating the attention contexts from pre- and pos-contexts
 
     Based on https://github.com/clab/dynet/blob/master/examples/sequence-to-sequence/attention.py
 
@@ -22,6 +22,9 @@ Description:
         train()
             :param fdir
                 Directory to save best results and model
+
+    UPDATE CONSTANTS:
+        FDIR: directory to save results and trained models
 """
 
 import dynet as dy
@@ -410,7 +413,7 @@ class Attention():
 
         best_acc, repeat = 0.0, 0
         batch = 40
-        for epoch in range(200):
+        for epoch in range(60):
             dy.renew_cg()
             losses = []
             closs = 0.0
@@ -489,21 +492,22 @@ class Attention():
 
 if __name__ == '__main__':
     configs = [
-        # {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':1},
-        # {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':1},
-        # {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':5},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':1},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':1},
+        {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.2, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':5},
         {'LSTM_NUM_OF_LAYERS':1, 'EMBEDDINGS_SIZE':300, 'STATE_SIZE':512, 'ATTENTION_SIZE':512, 'DROPOUT':0.3, 'CHARACTER':False, 'GENERATION':30, 'BEAM_SIZE':5},
     ]
 
-    fdir = 'data/att_200epochs'
-    if not os.path.exists(fdir):
-        os.mkdir(fdir)
+    # DIRECTORY TO SAVE RESULTS AND TRAINED MODELS
+    FDIR = 'data/att'
+    if not os.path.exists(FDIR):
+        os.mkdir(FDIR)
 
     for config in configs:
         h = Attention(config)
-        h.train(fdir)
+        h.train(FDIR)
 
-        fmodels = os.path.join(fdir, 'models')
+        fmodels = os.path.join(FDIR, 'models')
         fname = 'best_' + \
                 str(config['LSTM_NUM_OF_LAYERS']) + '_' + \
                 str(config['EMBEDDINGS_SIZE']) + '_' + \
@@ -514,7 +518,7 @@ if __name__ == '__main__':
                 str(config['BEAM_SIZE'])
         fin = os.path.join(fmodels, fname)
 
-        fresults = os.path.join(fdir, 'results')
+        fresults = os.path.join(FDIR, 'results')
         fname = 'test_best_' + \
                 str(config['LSTM_NUM_OF_LAYERS']) + '_' + \
                 str(config['EMBEDDINGS_SIZE']) + '_' + \
