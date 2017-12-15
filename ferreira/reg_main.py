@@ -22,7 +22,7 @@ Description:
 import cPickle as p
 import sys
 sys.path.append('../')
-sys.path.append('/home/tcastrof/workspace/stanford_corenlp_pywrapper')
+sys.path.append('~/workspace/stanford_corenlp_pywrapper')
 from stanford_corenlp_pywrapper import CoreNLP
 
 import form_choice

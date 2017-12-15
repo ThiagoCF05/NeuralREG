@@ -38,7 +38,7 @@ import re
 import xml.etree.ElementTree as ET
 import sys
 sys.path.append('../')
-sys.path.append('/home/tcastrof/workspace/stanford_corenlp_pywrapper')
+sys.path.append('~/workspace/stanford_corenlp_pywrapper')
 
 from stanford_corenlp_pywrapper import CoreNLP
 
