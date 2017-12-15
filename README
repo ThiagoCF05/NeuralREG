@@ -1,14 +1,19 @@
 Author: ANONYMOUS
 Date: 15/12/2017
 
+PYTHON VERSIONS: 2.7 and 3
+
+REQUIREMENTS:
+Depicted in each script accordingly
+
 FILES and DIRECTORIES:
 
 webnlg/
     Original and Delexicalized versions of WebNLG corpus
 
 preprocessing.py
-    Script to extraction the referring expression collection from WebNLG corpus. Update the variable paths in the script
-    and the following command:
+    Script for extracting the referring expression collection from the WebNLG corpus.
+    Update the variable paths in the script and run the command:
 
     python2.7 preprocessing.py
 
@@ -23,9 +28,9 @@ only_names.py
 ferreira/
     (Castro Ferreira et al., 2016) model: update variable paths in the scripts and and execute them in following order:
 
-    reg_train.py
+    python2.7 reg_train.py
         Train the model
-    reg_main.py
+    python2.7 reg_main.py
         Produce the referring expressions to the references
 
 seq2seq.py

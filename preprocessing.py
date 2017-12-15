@@ -456,8 +456,8 @@ if __name__ == '__main__':
     TRAIN_DEV = 'webnlg/delexicalized/dev'
 
     VOCAB_PATH = 'data/'
-    TRAIN_REFEX_PATH = 'data/train1'
-    DEV_REFEX_PATH = 'data/dev1'
-    TEST_REFEX_PATH = 'data/test1'
+    TRAIN_REFEX_PATH = 'data/train'
+    DEV_REFEX_PATH = 'data/dev'
+    TEST_REFEX_PATH = 'data/test'
 
     Preprocessing(TRAIN_PATH, TRAIN_DEV, VOCAB_PATH, TRAIN_REFEX_PATH, DEV_REFEX_PATH, TEST_REFEX_PATH)
