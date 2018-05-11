@@ -1,7 +1,7 @@
-__author__ = ''
+__author__ = 'thiagocastroferreira'
 
 """
-Author: ANONYMOUS
+Author: Thiago Castro Ferreira
 Date: 25/11/2017
 Description:
     NeuralREG+CAtt model concatenating the attention contexts from pre- and pos-contexts

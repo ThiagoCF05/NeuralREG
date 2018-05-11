@@ -1,7 +1,7 @@
-__author__ = ''
+__author__ = 'thiagocastroferreira'
 
 """
-Author: ANONYMOUS
+Author: Thiago Castro Ferreira
 Date: 12/12/2017
 Description:
     Only Names model

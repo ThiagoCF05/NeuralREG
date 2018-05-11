@@ -1,7 +1,7 @@
-__author__ = ''
+__author__ = 'thiagocastroferreira'
 
 """
-Author: ANONYMOUS
+Author: Thiago Castro Ferreira
 Date: 24/07/2017
 Description:
     REFERRING EXPRESSION COLLECTION:

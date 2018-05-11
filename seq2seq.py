@@ -1,7 +1,7 @@
-__author__ = ''
+__author__ = 'thiagocastroferreira'
 
 """
-Author: ANONYMOUS
+Author: Thiago Castro Ferreira
 Date: 25/11/2017
 Description:
     NeuralREG+Seq2Seq model concatenating the average encoding representations from pre- and pos-contexts
