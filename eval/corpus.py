@@ -1,7 +1,7 @@
-__author__ = ''
+__author__ = 'thiagocastroferreira'
 
 """
-Author: ANONYMOUS
+Author: Thiago Castro Ferreira
 Date: 12/12/2017
 Description:
     Script for generating information about the corpus as number of distinct sets of triples,
@@ -20,15 +20,18 @@ import os
 import xml.etree.ElementTree as ET
 
 import cPickle as p
+import nltk
+
+from stanford_corenlp_pywrapper import CoreNLP
 
 # PATHS FOR TRAINING AND DEVELOPMENT SETS OF DELEXICALIZED WEBNLG
-TRAIN_FILE = 'annotation/final/train'
-DEV_FILE = 'annotation/final/dev'
+TRAIN_FILE = '../annotation/final/train'
+DEV_FILE = '../annotation/final/dev'
 
 # PATH FOR REFERRING EXPRESSION COLLECTIONS
-TRAIN_REFEX_FILE = 'data/train/data.cPickle'
-DEV_REFEX_FILE = 'data/dev/data.cPickle'
-TEST_REFEX_FILE = 'data/test/data.cPickle'
+TRAIN_REFEX_FILE = '../data/train/data.cPickle'
+DEV_REFEX_FILE = '../data/dev/data.cPickle'
+TEST_REFEX_FILE = '../data/test/data.cPickle'
 
 def corpus_info():
     '''
@@ -106,9 +109,130 @@ def corpus_entities_count():
     test_intersect = train_entities.intersection(test_entities)
     print 'Train intersect test: ', str(len(list(test_intersect)))
 
+def entity_forms():
+    '''
+    Number of entities per referential form
+    :return:
+    '''
+    train_data = p.load(open(TRAIN_REFEX_FILE))
+    dev_data = p.load(open(DEV_REFEX_FILE))
+    test_data = p.load(open(TEST_REFEX_FILE))
+
+    train_entities = map(lambda x: x['reftype'], train_data)
+    dev_entities = map(lambda x: x['reftype'], dev_data)
+    test_entities = map(lambda x: x['reftype'], test_data)
+
+    print 'TRAIN:'
+    count = len(filter(lambda x: x == 'name', train_entities))
+    print 'Proper Names:', count, float(count)/len(train_entities)
+
+    count = len(filter(lambda x: x == 'pronoun', train_entities))
+    print 'Pronoun:', count, float(count)/len(train_entities)
+
+    count = len(filter(lambda x: x == 'description', train_entities))
+    print 'Description:', count, float(count)/len(train_entities)
+
+    count = len(filter(lambda x: x == 'demonstrative', train_entities))
+    print 'Demonstrative:', count, float(count)/len(train_entities)
+
+    print 'DEV:'
+    count = len(filter(lambda x: x == 'name', dev_entities))
+    print 'Proper Names:', count, float(count)/len(dev_entities)
+
+    count = len(filter(lambda x: x == 'pronoun', dev_entities))
+    print 'Pronoun:', count, float(count)/len(dev_entities)
+
+    count = len(filter(lambda x: x == 'description', dev_entities))
+    print 'Description:', count, float(count)/len(dev_entities)
+
+    count = len(filter(lambda x: x == 'demonstrative', dev_entities))
+    print 'Demonstrative:', count, float(count)/len(dev_entities)
+
+    print 'TEST:'
+    count = len(filter(lambda x: x == 'name', test_entities))
+    print 'Proper Names:', count, float(count)/len(test_entities)
+
+    count = len(filter(lambda x: x == 'pronoun', test_entities))
+    print 'Pronoun:', count, float(count)/len(test_entities)
+
+    count = len(filter(lambda x: x == 'description', test_entities))
+    print 'Description:', count, float(count)/len(test_entities)
+
+    count = len(filter(lambda x: x == 'demonstrative', test_entities))
+    print 'Demonstrative:', count, float(count)/len(test_entities)
+
+    total_entities = train_entities + dev_entities + test_entities
+    print '\nTOTAL:'
+    count = len(filter(lambda x: x == 'name', total_entities))
+    print 'Proper Names:', count, float(count)/len(total_entities)
+
+    count = len(filter(lambda x: x == 'pronoun', total_entities))
+    print 'Pronoun:', count, float(count)/len(total_entities)
+
+    count = len(filter(lambda x: x == 'description', total_entities))
+    print 'Description:', count, float(count)/len(total_entities)
+
+    count = len(filter(lambda x: x == 'demonstrative', total_entities))
+    print 'Demonstrative:', count, float(count)/len(total_entities)
+
+def entity_ner():
+    '''
+    Named entity types of the entities
+    :return:
+    '''
+    def get_stats(dataset, setname):
+        stats = []
+        for text, refex in dataset:
+            refex_tokens = refex.split()
+            out = proc.parse_doc(text)
+
+            tokens, ners = [], []
+            for snt in out['sentences']:
+                tokens.extend(snt['tokens'])
+                ners.extend(snt['ner'])
+
+            for i, token in enumerate(tokens):
+                found = True
+                if refex_tokens[0] == token:
+                    for j, refex_token in enumerate(refex_tokens):
+                        if refex_token != tokens[i+j]:
+                            found = False
+                            break
+
+                    if found:
+                        ner = ners[i]
+                        stats.append(ner)
+                        break
+
+        print setname
+        freq = dict(nltk.FreqDist(stats))
+        total = sum(freq.values())
+        for name, freq in freq.iteritems():
+            print name, freq, float(freq)/total
+        print 10 * '-'
+
+    proc = CoreNLP('ner')
+
+    train_data = p.load(open(TRAIN_REFEX_FILE))
+    dev_data = p.load(open(DEV_REFEX_FILE))
+    test_data = p.load(open(TEST_REFEX_FILE))
+
+    train_refex = map(lambda x: (x['text'], x['refex'].replace('eos', '').strip()), train_data)
+    dev_refex = map(lambda x: (x['text'], x['refex'].replace('eos', '').strip()), dev_data)
+    test_refex = map(lambda x: (x['text'], x['refex'].replace('eos', '').strip()), test_data)
+
+    get_stats(train_refex, 'TRAIN')
+    get_stats(dev_refex, 'DEV')
+    get_stats(test_refex, 'TEST')
+
 if __name__ == '__main__':
     corpus_info()
-
     print '\n\n'
 
     corpus_entities_count()
+    print '\n\n'
+
+    entity_forms()
+    print '\n\n'
+
+    entity_ner()

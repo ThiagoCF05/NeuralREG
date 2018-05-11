@@ -1,0 +1,26 @@
+  text_id    size  difficult    list1     list2     list3     list4     list5     list6
+---------  ------  -----------  --------  --------  --------  --------  --------  --------
+    18665       2  critical     hieratt   original  only      ferreira  seq2seq   catt
+    18815       2  median       hieratt   original  only      ferreira  seq2seq   catt
+    18821       2  median       original  only      ferreira  seq2seq   catt      hieratt
+    18844       2  critical     original  only      ferreira  seq2seq   catt      hieratt
+    18939       3  critical     seq2seq   catt      hieratt   original  only      ferreira
+    18940       3  median       seq2seq   catt      hieratt   original  only      ferreira
+    19073       3  critical     catt      hieratt   original  only      ferreira  seq2seq
+    19273       3  median       catt      hieratt   original  only      ferreira  seq2seq
+    19554       4  critical     ferreira  seq2seq   catt      hieratt   original  only
+    19579       4  critical     only      ferreira  seq2seq   catt      hieratt   original
+    19606       4  median       only      ferreira  seq2seq   catt      hieratt   original
+    19768       4  median       ferreira  seq2seq   catt      hieratt   original  only
+    19855       5  median       hieratt   original  only      ferreira  seq2seq   catt
+    19953       5  critical     hieratt   original  only      ferreira  seq2seq   catt
+    20063       5  critical     original  only      ferreira  seq2seq   catt      hieratt
+    20094       5  median       original  only      ferreira  seq2seq   catt      hieratt
+    20126       6  critical     seq2seq   catt      hieratt   original  only      ferreira
+    20130       6  median       catt      hieratt   original  only      ferreira  seq2seq
+    20139       6  median       seq2seq   catt      hieratt   original  only      ferreira
+    20173       6  critical     catt      hieratt   original  only      ferreira  seq2seq
+    20182       7  critical     only      ferreira  seq2seq   catt      hieratt   original
+    20185       7  critical     ferreira  seq2seq   catt      hieratt   original  only
+    20193       7  median       ferreira  seq2seq   catt      hieratt   original  only
+    20207       7  median       only      ferreira  seq2seq   catt      hieratt   original

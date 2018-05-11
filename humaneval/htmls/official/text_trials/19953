@@ -1,0 +1,17 @@
+original
+103 colmore row was designed by the architect john madin , who was born in birmingham , where the postal code is ` b ' . andrew mitchell is the leader of the city and birmingham city council is the governing body .
+
+only
+103 colmore row was designed by john madin , who was born in birmingham , where the postal code is ` b postcode area ' . andrew mitchell is the leader of birmingham and birmingham city council is the governing body .
+
+ferreira
+103 colmore row was designed by john madin , who was born in birmingham , where the postal code is ` postcode area ` b ' ' . andrew mitchell is the leader of birmingham and birmingham city council is the governing body .
+
+seq2seq
+103 colmore row was designed by the architect john madin , who was born in birmingham , where the postal code is ` postcode area ` b ' ' . andrew mitchell is the leader of birmingham and birmingham city council is the governing body .
+
+catt
+103 colmore row was designed by the architect john madin , who was born in birmingham , where the postal code is ` `` b ` b ' . andrew mitchell is the leader of birmingham and birmingham city council is the governing body .
+
+hieratt
+103 colmore row was designed by the architect john madin , who was born in birmingham , where the postal code is ` postal code ` b ' ' . andrew mitchell is the leader of birmingham and the birmingham council is the governing body .

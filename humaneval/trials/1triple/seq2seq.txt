@@ -1,0 +1,532 @@
+position	text_id	difference	html
+360 	18339 	15 	<span style="background-color: #ffff00">the ataturk monument ( izmir )</span> is made from bronze .
+353 	18332 	15 	<span style="background-color: #ffff00">the ataturk monument ( izmir )</span> was designed by <span style="background-color: #ffff00">pietro canonica</span> .
+216 	18195 	15 	<span style="background-color: #ffff00">atlantic county , airport</span> is located in <span style="background-color: #ffff00">the united states</span> .
+149 	18128 	15 	<span style="background-color: #ffff00">chicago</span> is part of <span style="background-color: #ffff00">du page county in illinois</span> .
+184 	18163 	15 	<span style="background-color: #ffff00">cleveland city council</span> has a leadership role in <span style="background-color: #ffff00">albuquerque</span> .
+90 	18069 	15 	<span style="background-color: #ffff00">alan shepard</span> was awarded <span style="background-color: #ffff00">the distinguished service medal by the us navy</span> .
+180 	18159 	15 	the total area of <span style="background-color: #ffff00">albany</span> is <span style="background-color: #ffff00">malays</span> .
+13 	17992 	15 	<span style="background-color: #ffff00">14r/32l</span> is the runway name of <span style="background-color: #ffff00">adolfo suárez madrid -- barajas airport</span> .
+170 	18149 	15 	the area code of <span style="background-color: #ffff00">abilene</span> , is <span style="background-color: #ffff00">kempe</span> .
+382 	18361 	15 	<span style="background-color: #ffff00">fc magdeburg</span> played in <span style="background-color: #ffff00">the 2014</span> season .
+160 	18139 	15 	<span style="background-color: #ffff00">american</span> official language is <span style="background-color: #ffff00">english</span> .
+237 	18216 	15 	<span style="background-color: #ffff00">taro</span> is in united states .
+236 	18215 	15 	<span style="background-color: #ffff00">tarrant county</span> is situated in <span style="background-color: #ffff00">the united states</span> .
+199 	18178 	15 	<span style="background-color: #ffff00">angola , indiana</span> is part of <span style="background-color: #ffff00">rebellion</span> .
+229 	18208 	15 	<span style="background-color: #ffff00">philippines</span> is in <span style="background-color: #ffff00">alabama</span> .
+178 	18157 	15 	<span style="background-color: #ffff00">albany , oregon</span> has a total area of <span style="background-color: #ffff00">malays</span> .
+139 	18118 	15 	<span style="background-color: #ffff00">alan v doshi</span> designed <span style="background-color: #ffff00">amdavad ni gufa</span> .
+217 	18196 	15 	<span style="background-color: #ffff00">attica regional airport</span> is part of <span style="background-color: #ffff00">alba county</span> .
+198 	18177 	15 	<span style="background-color: #ffff00">angola</span> is in <span style="background-color: #ffff00">johannesburg</span> .
+49 	18028 	15 	<span style="background-color: #ffff00">the ardmore airport</span> is in <span style="background-color: #ffff00">auckland</span> .
+231 	18210 	15 	<span style="background-color: #ffff00">banana</span> is situated within the state of <span style="background-color: #ffff00">alabama</span> .
+89 	18068 	15 	<span style="background-color: #ffff00">alan shepard</span> was awarded <span style="background-color: #ffff00">a distinguished service medal by the united states navy</span> .
+150 	18129 	15 	<span style="background-color: #ffff00">chicago</span> is part of <span style="background-color: #ffff00">du page county in illinois</span> .
+272 	18251 	15 	<span style="background-color: #ffff00">john buscema</span> received <span style="background-color: #ffff00">the liberal award</span> for <span style="background-color: #ffff00">john buscema 's</span> work in comics .
+212 	18191 	15 	the leader title of <span style="background-color: #ffff00">antioch , california</span> is <span style="background-color: #ffff00">`` prime filipino</span> .
+194 	18173 	15 	<span style="background-color: #ffff00">anaheim , ca</span> has the area code <span style="background-color: #ffff00">grantville gazette iii</span> .
+172 	18151 	15 	the area code for <span style="background-color: #ffff00">abilene , texas</span> is <span style="background-color: #ffff00">enaire</span> .
+36 	18015 	15 	<span style="background-color: #ffff00">andrews county , texas</span> has <span style="background-color: #ffff00">andrews county , texas</span> county seat in <span style="background-color: #ffff00">andrews , texas</span> .
+384 	18363 	15 	<span style="background-color: #ffff00">ac lumezzane</span> played in <span style="background-color: #ffff00">the 2014-15 serie pro season</span> .
+355 	18334 	15 	<span style="background-color: #ffff00">the ataturk monument</span> was designed by <span style="background-color: #ffff00">pietro canonica</span> .
+211 	18190 	15 	the leader title of <span style="background-color: #ffff00">antioch california</span> , is <span style="background-color: #ffff00">mols</span> .
+407 	18387 	15 	<span style="background-color: #ffff00">afc ajax</span> team 's nickname is joden , godenzonen .
+171 	18150 	15 	<span style="background-color: #ffff00">malays</span> is the area code for <span style="background-color: #ffff00">abilene , texas</span> .
+350 	18329 	14 	<span style="background-color: #ffff00">the ataturk monument</span> was designed by <span style="background-color: #ffff00">pietro canonica</span> .
+175 	18154 	14 	<span style="background-color: #ffff00">albany , georgia</span> has mayor as leader .
+227 	18206 	14 	the state of <span style="background-color: #ffff00">georgia , united states</span> is located within <span style="background-color: #ffff00">the united states</span> .
+513 	18493 	14 	<span style="background-color: #ffff00">the novel castle</span> is followed by <span style="background-color: #ffff00">aenir</span> .
+10 	17989 	14 	<span style="background-color: #ffff00">adolfo suárez madrid -- barajas airport</span> runway name is <span style="background-color: #ffff00">14l/32r</span> .
+186 	18165 	14 	<span style="background-color: #ffff00">amarillo , washington</span> is in <span style="background-color: #ffff00">the united states</span> .
+200 	18179 	14 	city administrator leads <span style="background-color: #ffff00">ann arbor</span> .
+11 	17990 	14 	<span style="background-color: #ffff00">14l/32r</span> is the runway name of <span style="background-color: #ffff00">adolfo suarez madrid-barajas airport</span> .
+275 	18254 	14 	<span style="background-color: #ffff00">marv wolfman</span> has received <span style="background-color: #ffff00">an e-book</span> for comics .
+361 	18340 	14 	<span style="background-color: #ffff00">the ataturk monument ( izmir )</span> is made of bronze .
+525 	18505 	14 	<span style="background-color: #ffff00">elizabeth ii</span> is <span style="background-color: #ffff00">the united kingdom</span> leader in the uk .
+240 	18219 	14 	the largest town in <span style="background-color: #ffff00">arrabbiata</span> is <span style="background-color: #ffff00">ann abe</span> .
+270 	18249 	14 	<span style="background-color: #ffff00">the comic character , the spoken</span> 's alter ego is hugh hazzard .
+417 	18397 	14 	<span style="background-color: #ffff00">akron summit assault</span> 's ground is <span style="background-color: #ffff00">st vincent-st mary high school</span> .
+475 	18455 	14 	<span style="background-color: #ffff00">the book</span> has the isbn number of <span style="background-color: #ffff00">1-56947-301-3</span> .
+50 	18029 	14 	<span style="background-color: #ffff00">the ardmore airport in new zealand</span> is located in <span style="background-color: #ffff00">auckland , new zealand</span> .
+185 	18164 	14 	<span style="background-color: #ffff00">albuquerque , new mexico</span> is led by <span style="background-color: #ffff00">the city city council</span> .
+359 	18338 	14 	the material of <span style="background-color: #ffff00">the ataturk monument</span> is bronze .
+230 	18209 	14 	<span style="background-color: #ffff00">lee</span> is in the state of <span style="background-color: #ffff00">alabama</span> .
+352 	18331 	14 	<span style="background-color: #ffff00">pietro canonica</span> is the designer of <span style="background-color: #ffff00">the ataturk monument ( izmir )</span> .
+232 	18211 	14 	<span style="background-color: #ffff00">vila nova futebol clube</span> is the capital of <span style="background-color: #ffff00">new jersey</span> .
+114 	18093 	14 	<span style="background-color: #ffff00">hook 'em</span> is the mascot of <span style="background-color: #ffff00">the university of texas at austin</span> .
+271 	18250 	14 	<span style="background-color: #ffff00">john buscema</span> has won the comic book award , <span style="background-color: #ffff00">the uk language</span> .
+161 	18140 	14 	<span style="background-color: #ffff00">english</span> is the main language of <span style="background-color: #ffff00">the republic of ireland</span> .
+205 	18184 	14 	the city of <span style="background-color: #ffff00">ann arbor in michigan</span> , has a population of 1580.7 (inhabitants per square kilometre) .
+196 	18175 	14 	the area code for <span style="background-color: #ffff00">anaheim , california</span> , is <span style="background-color: #ffff00">enaire</span> .
+393 	18373 	14 	<span style="background-color: #ffff00">a.e dimitra efxeinoupolis</span> were in <span style="background-color: #ffff00">the 2014 -- 15</span> season .
+356 	18335 	14 	the designer of <span style="background-color: #ffff00">the atatürk monument</span> is <span style="background-color: #ffff00">pietro canonica</span> .
+503 	18483 	14 	<span style="background-color: #ffff00">alcatraz versus the evil librarians 's</span> oclc number is <span style="background-color: #ffff00">78771100</span> .
+235 	18214 	14 	<span style="background-color: #ffff00">tamil</span> is in the state of <span style="background-color: #ffff00">texas</span> .
+195 	18174 	14 	the area code of <span style="background-color: #ffff00">anaheim california</span> is <span style="background-color: #ffff00">enaire</span> .
+242 	18221 	14 	<span style="background-color: #ffff00">the comic character asterix</span> was created by <span style="background-color: #ffff00">rene goscinny</span> .
+239 	18218 	14 	<span style="background-color: #ffff00">ann arbor</span> is the largest city in <span style="background-color: #ffff00">washtenaw county in california</span> .
+233 	18212 	14 	the capital of the state of <span style="background-color: #ffff00">new jersey</span> is <span style="background-color: #ffff00">amahe9</span> .
+86 	18065 	14 	the united states navy awarded <span style="background-color: #ffff00">the distinguished service medal by the united states navy</span> to <span style="background-color: #ffff00">alan shepard</span> .
+388 	18367 	14 	<span style="background-color: #ffff00">a.e. dimitra efxeinoupolis</span> 's full name is <span style="background-color: #ffff00">a.e dimitra efxeinoupolis</span> .
+207 	18186 	14 	the population density of <span style="background-color: #ffff00">ann arbor</span> is 1580.7 (inhabitants per square kilometre) .
+380 	18359 	14 	<span style="background-color: #ffff00">peter stöger</span> is manager of <span style="background-color: #ffff00">1 fc koln</span> .
+383 	18362 	14 	<span style="background-color: #ffff00">ac lumezzane</span> played <span style="background-color: #ffff00">the 2014 season</span> .
+111 	18090 	14 	<span style="background-color: #ffff00">the university of texas</span> 's mascot is called <span style="background-color: #ffff00">hook 'em</span> .
+266 	18245 	14 	<span style="background-color: #ffff00">the character bolt</span> was created by <span style="background-color: #ffff00">dan mishkin</span> .
+349 	18328 	14 	<span style="background-color: #ffff00">native americans</span> are one of the ethnic groups of <span style="background-color: #ffff00">the usa</span> .
+88 	18067 	14 	<span style="background-color: #ffff00">alan shepard</span> was awarded <span style="background-color: #ffff00">a distinguished service medal by the united states navy</span> .
+351 	18330 	14 	<span style="background-color: #ffff00">pietro canonica</span> designed <span style="background-color: #ffff00">the ataturk monument ( izmir )</span> .
+148 	18127 	14 	<span style="background-color: #ffff00">the b postcode area</span> is <span style="background-color: #ffff00">birmingham</span> postal code of birmingham .
+273 	18252 	14 	<span style="background-color: #ffff00">marv wolfman</span> is a recipient of <span style="background-color: #ffff00">the square party ( uk )</span> .
+218 	18197 	14 	<span style="background-color: #ffff00">attica</span> is in <span style="background-color: #ffff00">essex county</span> .
+225 	18204 	14 	the state of <span style="background-color: #ffff00">the u.s.</span> is in united states .
+440 	18420 	14 	<span style="background-color: #ffff00">stuart parker ( footballer )</span> plays for <span style="background-color: #ffff00">bury fc</span> .
+6 	17985 	14 	<span style="background-color: #ffff00">adolfo suárez madrid -- barajas airport</span> is found in <span style="background-color: #ffff00">san sebastián</span>
+354 	18333 	14 	<span style="background-color: #ffff00">the ataturk monument</span> was designed by <span style="background-color: #ffff00">pietro canonica</span> .
+246 	18225 	13 	<span style="background-color: #ffff00">the comic character , auron</span> was created by marv wolfman .
+526 	18506 	13 	<span style="background-color: #ffff00">joe biden</span> is <span style="background-color: #ffff00">the united states</span> leader .
+274 	18253 	13 	<span style="background-color: #ffff00">marv wolfman</span> won <span style="background-color: #ffff00">the eagle award ( comics )</span> for comics .
+362 	18341 	13 	<span style="background-color: #ffff00">the atatürk monument</span> is made of bronze .
+394 	18374 	13 	<span style="background-color: #ffff00">a.e dimitra efxeinoupolis</span> were in <span style="background-color: #ffff00">the 2014-15 -- league</span> .
+219 	18198 	13 	<span style="background-color: #ffff00">auburn alabama</span> is part of <span style="background-color: #ffff00">alabama</span> .
+376 	18355 	13 	<span style="background-color: #ffff00">the baku turkish martyrs ' memorial</span> is made of red granite and white marble .
+358 	18337 	13 	<span style="background-color: #ffff00">the ataturk monument ( izmir )</span> is made of bronze .
+113 	18092 	13 	the mascot of <span style="background-color: #ffff00">the university of texas at austin</span> is <span style="background-color: #ffff00">hook 'em</span> .
+176 	18155 	13 	<span style="background-color: #ffff00">albany , georgia</span> is lead by mayor .
+379 	18358 	13 	<span style="background-color: #ffff00">peter stoger</span> is the manager of <span style="background-color: #ffff00">1 fc koln</span> .
+298 	18277 	13 	<span style="background-color: #ffff00">frangipane</span> is an ingredient in <span style="background-color: #ffff00">the bakewell tart</span> .
+424 	18404 	13 	<span style="background-color: #ffff00">gus poyet</span> plays for <span style="background-color: #ffff00">aek</span> f.c.
+245 	18224 	13 	<span style="background-color: #ffff00">the comic character auron</span> was created by marv wolfman .
+283 	18262 	13 	<span style="background-color: #ffff00">the dish arem arem</span> is nationwide in nationwide in indonesia, but more specific to java .
+466 	18446 	13 	<span style="background-color: #ffff00">1634 the ram rebellion</span> was followed by <span style="background-color: #ffff00">1635 : the dish</span> .
+197 	18176 	13 	<span style="background-color: #ffff00">anderson</span> is part of adams, fall creek, lafayette, richland, union .
+234 	18213 	13 	<span style="background-color: #ffff00">meringue</span> is in <span style="background-color: #ffff00">texas</span> .
+428 	18408 	13 	<span style="background-color: #ffff00">jorge humberto rodriguez</span> 's club is <span style="background-color: #ffff00">ad isidro metapan</span> .
+7 	17986 	13 	<span style="background-color: #ffff00">adolfo suarez madrid-barejas airport</span> is located at <span style="background-color: #ffff00">san sebastian de los reyes</span> .
+34 	18013 	13 	<span style="background-color: #ffff00">andrews county , texas</span> is country seat to <span style="background-color: #ffff00">andrews</span> .
+367 	18346 	13 	<span style="background-color: #ffff00">baku turkish martyrs ' memorial</span> is located in <span style="background-color: #ffff00">azerbaijan</span> .
+455 	18435 	13 	the academic staff of <span style="background-color: #ffff00">the school of business and social sciences at the aarhus university</span> number 737 .
+426 	18406 	13 	<span style="background-color: #ffff00">john van den brom</span> plays at <span style="background-color: #ffff00">the az alkmaair</span> .
+131 	18110 	13 	<span style="background-color: #ffff00">the 3arena</span> is located on east link bridge .
+181 	18160 	13 	<span style="background-color: #ffff00">albany , oregon</span> is in united states .
+187 	18166 	13 	<span style="background-color: #ffff00">the united states</span> is the home country to <span style="background-color: #ffff00">austin</span> .
+28 	18007 	13 	<span style="background-color: #ffff00">alpena county regional airport 's</span> runway name is <span style="background-color: #ffff00">1/19</span> / .
+112 	18091 	13 	<span style="background-color: #ffff00">the hook 'em</span> is the mascot for <span style="background-color: #ffff00">the university of texas at austin</span> .
+39 	18018 	13 	<span style="background-color: #ffff00">andrews county airport</span> serves the city of <span style="background-color: #ffff00">andrews , texas</span> .
+208 	18187 	13 	<span style="background-color: #ffff00">antioch , ca</span> is 13.0 above sea level .
+201 	18180 	13 	city administrator leads <span style="background-color: #ffff00">ann arbor</span> .
+390 	18370 	13 	<span style="background-color: #ffff00">a.e dimitra efxeinoupolis</span> played in <span style="background-color: #ffff00">the 2014</span> season .
+423 	18403 	13 	<span style="background-color: #ffff00">gus poyet</span> is in <span style="background-color: #ffff00"></span> f.c.
+193 	18172 	13 	<span style="background-color: #ffff00">amarillo , texas</span> , is part of united states .
+190 	18169 	13 	<span style="background-color: #ffff00">amarillo , texas</span> is part of <span style="background-color: #ffff00">potter county , texas</span> .
+366 	18345 	12 	<span style="background-color: #ffff00">the baku turkish martyrs ' memorial</span> is in <span style="background-color: #ffff00">azerbaijan</span> .
+204 	18183 	12 	the leader title of <span style="background-color: #ffff00">ann abe</span> , is mayor .
+177 	18156 	12 	the leader of <span style="background-color: #ffff00">albany , georgia</span> is mayor .
+470 	18450 	12 	<span style="background-color: #ffff00">a fortress of grey ice</span> is <span style="background-color: #ffff00">a hardcover book</span> .
+506 	18486 	12 	<span style="background-color: #ffff00">alcatraz versus the evil librarians</span> is followed by <span style="background-color: #ffff00">alcatraz versus the scrivener 's bones</span> .
+147 	18126 	12 	<span style="background-color: #ffff00">birmingham</span> has <span style="background-color: #ffff00">the b postcode</span> .
+469 	18449 	12 	the eissn number of <span style="background-color: #ffff00">aip advances</span> is <span style="background-color: #ffff00">mols</span> .
+191 	18170 	12 	<span style="background-color: #ffff00">amarillo , texas</span> is in united states .
+244 	18223 	12 	<span style="background-color: #ffff00">the comic character asterix</span> , was created by <span style="background-color: #ffff00">rené goscinny</span> .
+214 	18193 	12 	<span style="background-color: #ffff00">arlington</span> is located at 184.0 above sea level .
+429 	18409 	12 	<span style="background-color: #ffff00">jorge humberto rodriguez</span> is with the <span style="background-color: #ffff00">ad isidro metapan</span> club .
+467 	18447 	12 	<span style="background-color: #ffff00">1634 : the ram rebellion</span> is followed by <span style="background-color: #ffff00">1635 : the dish</span> .
+433 	18413 	12 	<span style="background-color: #ffff00">massimo drago</span> 's club is <span style="background-color: #ffff00">uab</span> .
+375 	18354 	12 	<span style="background-color: #ffff00">the baku turkish martyrs ' memorial</span> is made from red granite and white marble .
+494 	18474 	12 	<span style="background-color: #ffff00">addiction ( journal )</span> has an oclc number <span style="background-color: #ffff00">27367194</span> .
+338 	18317 	12 	<span style="background-color: #ffff00">mexico</span> is inhabited by <span style="background-color: #ffff00">moro</span> .
+402 	18382 	12 	<span style="background-color: #ffff00">a.s. roma</span> were in <span style="background-color: #ffff00">serie a in 2014-15</span> .
+435 	18415 	12 	<span style="background-color: #ffff00">the olympic stadium</span> is located at <span style="background-color: #ffff00">marousi</span> .
+81 	18060 	12 	<span style="background-color: #ffff00">saranac , new york</span> is part of <span style="background-color: #ffff00">the united states</span> .
+248 	18227 	12 	<span style="background-color: #ffff00">the comic character balder</span> was created by <span style="background-color: #ffff00">jack kirby</span> .
+249 	18228 	12 	<span style="background-color: #ffff00">the comic character balder</span> was created by <span style="background-color: #ffff00">jack kirby</span> .
+373 	18352 	12 	<span style="background-color: #ffff00">the baku turkish martyrs memorial</span> is created in red granite and white marble .
+370 	18349 	12 	<span style="background-color: #ffff00">the baku turkish martyrs ' memorial</span> is in <span style="background-color: #ffff00">azerbaijan</span> .
+166 	18145 	12 	<span style="background-color: #ffff00">london</span> is the capital of <span style="background-color: #ffff00">the united kingdom</span> .
+206 	18185 	12 	<span style="background-color: #ffff00">ann arbor</span> has a population of 1580.7 (inhabitants per square kilometre) .
+238 	18217 	12 	<span style="background-color: #ffff00">texas</span> is located within <span style="background-color: #ffff00">the united states</span> .
+285 	18264 	12 	<span style="background-color: #ffff00">arrabbiata sauce</span> is made with <span style="background-color: #ffff00">tomatoes , red chili</span> .
+512 	18492 	12 	<span style="background-color: #ffff00">aenir</span> followed <span style="background-color: #ffff00">the novel castle</span> .
+12 	17991 	12 	<span style="background-color: #ffff00">14r/32l</span> is the name of the runway for <span style="background-color: #ffff00">adolfo suarez madrid-barajas airport</span> .
+156 	18135 	12 	<span style="background-color: #ffff00">the brazilians</span> are an ethnic group found in <span style="background-color: #ffff00">japan</span> .
+408 	18388 	12 	<span style="background-color: #ffff00">afc ajax ( amateurs ) 's</span> nickname is joden , godenzonen .
+522 	18502 	12 	<span style="background-color: #ffff00">wolf solent</span> is a notable work of <span style="background-color: #ffff00">author author john cowper powys</span> .
+493 	18473 	12 	the oclc number for <span style="background-color: #ffff00">the addiction journal</span> is <span style="background-color: #ffff00">27367194</span> .
+210 	18189 	12 	<span style="background-color: #ffff00">antioch , ca</span> is located at 13.0 above sea level .
+396 	18376 	12 	<span style="background-color: #ffff00">the fylde of england</span> is the home ground of <span style="background-color: #ffff00">afc fylde</span> .
+72 	18051 	12 	<span style="background-color: #ffff00">harrietstown , new york</span> is part of <span style="background-color: #ffff00">the united states</span> .
+25 	18004 	12 	<span style="background-color: #ffff00">the allama iqbal international airport 's</span> runway name is `` <span style="background-color: #ffff00">18r/36l</span> '' .
+228 	18207 	12 	<span style="background-color: #ffff00">enaire</span> is the capital of <span style="background-color: #ffff00">indiana</span> .
+179 	18158 	12 	the total area of <span style="background-color: #ffff00">albany</span> is 45.97 (square kilometres) .
+167 	18146 	12 	<span style="background-color: #ffff00">the native americans</span> are an ethnic group in <span style="background-color: #ffff00">the united states</span> .
+243 	18222 	12 	the creator of <span style="background-color: #ffff00">asterix , a comics character</span> is <span style="background-color: #ffff00">rené goscinny</span> .
+87 	18066 	12 	<span style="background-color: #ffff00">alan shepard</span> was awarded <span style="background-color: #ffff00">the distinguished service medal by the us navy</span> .
+174 	18153 	12 	<span style="background-color: #ffff00">abilene</span> , is part of <span style="background-color: #ffff00">texas</span> .
+477 	18457 	12 	<span style="background-color: #ffff00">madeleine l'engle</span> is the author of <span style="background-color: #ffff00">a severed wasp</span> .
+153 	18132 	12 	<span style="background-color: #ffff00">sumitra mahajan</span> is <span style="background-color: #ffff00">india 's</span> leader .
+38 	18017 	12 	<span style="background-color: #ffff00">andrews county airport</span> serves <span style="background-color: #ffff00">andrews , texas</span> .
+213 	18192 	12 	<span style="background-color: #ffff00">arlington</span> is has an elevation of 184.0 above sea level .
+511 	18491 	12 	<span style="background-color: #ffff00">the novel castle</span> is followed by <span style="background-color: #ffff00">aenir</span> .
+188 	18167 	12 	<span style="background-color: #ffff00">amarillo , texas</span> is located within <span style="background-color: #ffff00">the united states</span> .
+209 	18188 	12 	<span style="background-color: #ffff00">antioch , ca</span> is 13.0 metres above sea level .
+247 	18226 	12 	<span style="background-color: #ffff00">the comic character auron</span> was created by marv wolfman .
+265 	18244 	12 	<span style="background-color: #ffff00">dan mishkin</span> is one of the creators of <span style="background-color: #ffff00">the comic character bolt</span> .
+468 	18448 	12 	<span style="background-color: #ffff00">aip advances</span> had the eissnnumber <span style="background-color: #ffff00">12</span> .
+203 	18182 	12 	<span style="background-color: #ffff00">ann arbor</span> is led by mayor .
+415 	18395 	12 	<span style="background-color: #ffff00">the agremiação sportiva arapiraquense</span> competed in 2015 campeonato brasileiro série c .
+8 	17987 	12 	<span style="background-color: #ffff00">adolfo suárez madrid -- barajas airport</span> is in <span style="background-color: #ffff00">san sebastián de los reyes</span> .
+374 	18353 	12 	the material of <span style="background-color: #ffff00">the baku turkish martyrs ' memorial</span> is red granite and white marble .
+192 	18171 	12 	<span style="background-color: #ffff00">amarillo , texas</span> is part of united states .
+495 	18475 	12 	<span style="background-color: #ffff00">wiley-blackwell</span> is the publisher of <span style="background-color: #ffff00">the addiction journal</span> .
+492 	18472 	12 	the oclc number of <span style="background-color: #ffff00">addiction journal</span> is <span style="background-color: #ffff00">27367194</span> .
+122 	18101 	12 	the building at <span style="background-color: #ffff00">20 fenchurch street</span> was started in <span style="background-color: #ffff00">elliot</span> .
+223 	18202 	12 	<span style="background-color: #ffff00">atlanta</span> is the largest city of <span style="background-color: #ffff00">fulton county , georgia</span> .
+497 	18477 	12 	<span style="background-color: #ffff00">addiction journal</span> is published by <span style="background-color: #ffff00">wiley-blackwell</span> .
+430 	18410 	12 	<span style="background-color: #ffff00">jorge humberto rodriguez</span> was a member of <span style="background-color: #ffff00">the a.d. isidro metapan</span> .
+241 	18220 	12 	the largest city in <span style="background-color: #ffff00">the 2014 season</span> is <span style="background-color: #ffff00">ann abe</span> .
+202 	18181 	12 	mayor , is the title of the leader in <span style="background-color: #ffff00">hong kong</span> .
+220 	18199 	12 	<span style="background-color: #ffff00">auburn alabama</span> is located in <span style="background-color: #ffff00">alabama</span> .
+215 	18194 	12 	<span style="background-color: #ffff00">atlantic county , new jersey</span> is located in <span style="background-color: #ffff00">the united states</span> .
+189 	18168 	12 	<span style="background-color: #ffff00">amarillo</span> is part of <span style="background-color: #ffff00">potter county , texas</span> .
+267 	18246 	12 	<span style="background-color: #ffff00">the comic character bolt</span> was created by <span style="background-color: #ffff00">dan mishkin</span> .
+123 	18102 	12 	the construction of <span style="background-color: #ffff00">20 fenchurch street</span> began in <span style="background-color: #ffff00">1</span> .
+357 	18336 	12 	<span style="background-color: #ffff00">pietro canonica</span> is the designer of <span style="background-color: #ffff00">the ataturk monument in izmir</span> .
+488 	18468 	12 	<span style="background-color: #ffff00">acta mathematica hungarica</span> discipline is <span style="background-color: #ffff00">math</span> .
+73 	18052 	12 	<span style="background-color: #ffff00">harrietstown , new york</span> is part of united states .
+268 	18247 	12 	<span style="background-color: #ffff00">the comic character of business</span> 's full name is hugh hazzard .
+387 	18366 	12 	the fullname of <span style="background-color: #ffff00">a.d. isidro metapan</span> is asociación deportiva .
+416 	18396 	11 	<span style="background-color: #ffff00">agremiação sportiva arapiraquense</span> were in <span style="background-color: #ffff00">campeonato brasileiro serie c in 2015</span> .
+446 	18426 	11 	the campus of <span style="background-color: #ffff00">the acharya institute of technology</span> is located at in soldevanahalli, acharya dr. sarvapalli radhakrishnan road, hessarghatta main road, bangalore – 560090. .
+9 	17988 	11 	<span style="background-color: #ffff00">adolfo suárez madrid -- barajas airport</span> runway name is <span style="background-color: #ffff00">14l/32r</span> .
+377 	18356 	11 	<span style="background-color: #ffff00">the baku turkish martyrs ' memorial</span> is made from red granite and white marble .
+137 	18116 	11 	<span style="background-color: #ffff00">the akita museum of art</span> was inaugurated on 2013-09-28 .
+40 	18019 	11 	<span style="background-color: #ffff00">andrews country airport 's</span> runway name is <span style="background-color: #ffff00">11/29</span> .
+490 	18470 	11 	<span style="background-color: #ffff00">acta palaeontologica polonica</span> coden code is `` apgpac '' .
+487 	18467 	11 	<span style="background-color: #ffff00">acta mathematica hungarica</span> covers the academic discipline of <span style="background-color: #ffff00">mathematics</span> .
+136 	18115 	11 	<span style="background-color: #ffff00">adare manor</span> is in <span style="background-color: #ffff00">the republic of ireland</span> .
+226 	18205 	11 	georgia (u.s. state) is the country of <span style="background-color: #ffff00">the united states</span> .
+64 	18043 	11 	<span style="background-color: #ffff00">denmark 's</span> leader name is <span style="background-color: #ffff00">lars løkke rasmussen</span> .
+436 	18416 	11 	<span style="background-color: #ffff00">the olympic stadium ( athens )</span> is located in <span style="background-color: #ffff00">marousi</span> .
+444 	18424 	11 	the campus address for <span style="background-color: #ffff00">acharya institute of technology</span> is : in soldevanahalli, acharya dr. sarvapalli radhakrishnan road, hessarghatta main road, bangalore – 560090. .
+115 	18094 	11 	<span style="background-color: #ffff00">103 colmore row</span> was designed by <span style="background-color: #ffff00">the architect john madin</span> .
+328 	18307 	11 	<span style="background-color: #ffff00">ice cream</span> is <span style="background-color: #ffff00">a dessert</span> .
+110 	18089 	11 	<span style="background-color: #ffff00">the university of texas at austin</span> is affiliated to <span style="background-color: #ffff00">the university of texas system</span> .
+496 	18476 	11 	<span style="background-color: #ffff00">wiley-blackwell</span> is the publisher of <span style="background-color: #ffff00">the addiction journal</span> .
+68 	18047 	11 	<span style="background-color: #ffff00">flemish government</span> leads <span style="background-color: #ffff00">the flemish region</span> .
+386 	18365 	11 	<span style="background-color: #ffff00">ad isidro metapán</span> 's full name is asociación deportiva .
+77 	18056 	11 	<span style="background-color: #ffff00">port authority of new york and new jersey 's</span> headquarter is <span style="background-color: #ffff00">four world trade center</span> .
+458 	18438 	11 	<span style="background-color: #ffff00">the school of business and social sciences at the aarhus university</span> is in <span style="background-color: #ffff00">denmark</span> .
+365 	18344 	11 	<span style="background-color: #ffff00">baku turkish martyrs ' memorial</span> is located in <span style="background-color: #ffff00">azerbaijan</span> .
+438 	18418 	11 	<span style="background-color: #ffff00">k-w united f.c.</span> were champions at <span style="background-color: #ffff00">the premier development league</span> .
+479 	18459 	9 	<span style="background-color: #ffff00">a wizard of mars</span> is written in <span style="background-color: #ffff00">english</span> .
+250 	18229 	9 	<span style="background-color: #ffff00">jack kirby</span> created <span style="background-color: #ffff00">the comic character balder</span> .
+385 	18364 	9 	<span style="background-color: #ffff00">a.d. isidro metapan 's</span> full name is `` asociación deportiva '' .
+441 	18421 	9 	the academic staff size of <span style="background-color: #ffff00">the accademia di architettura di mendrisio</span> is 100 .
+514 	18494 	9 	<span style="background-color: #ffff00">cornell university</span> is nicknamed <span style="background-color: #ffff00">cornell big red</span> .
+23 	18002 	9 	<span style="background-color: #ffff00">18r/36l</span> is the runway name at <span style="background-color: #ffff00">the allama iqbal international airport</span> .
+101 	18080 	9 	<span style="background-color: #ffff00">buzz aldrin</span> 's nationality is <span style="background-color: #ffff00">the united states</span> .
+221 	18200 	9 	<span style="background-color: #ffff00">california</span> is in <span style="background-color: #ffff00">the united states</span> .
+140 	18119 	9 	<span style="background-color: #ffff00">b v doshi</span> is the architect who designed <span style="background-color: #ffff00">amdavad ni gufa</span> .
+182 	18161 	9 	<span style="background-color: #ffff00">albany , oregon</span> is located within <span style="background-color: #ffff00">the united states</span> .
+409 	18389 	9 	<span style="background-color: #ffff00">afc ajax ( amateurs )</span> has 5000 members .
+484 	18464 	9 	<span style="background-color: #ffff00">the acta mathematica hungarica</span> is also known as acta math. hungar. .
+278 	18257 	9 	ajo blanco is an alternative name of <span style="background-color: #ffff00">ajoblanco</span> .
+345 	18324 	9 	one of the languages in <span style="background-color: #ffff00">the philippines</span> is <span style="background-color: #ffff00">arabic</span> .
+368 	18347 	9 	<span style="background-color: #ffff00">baku turkish martyrs ' memorial</span> is located in <span style="background-color: #ffff00">azerbaijan</span> .
+508 	18488 	9 	<span style="background-color: #ffff00">alcatraz versus the evil librarians</span> is followed by <span style="background-color: #ffff00">alcatraz versus the scrivener 's bones</span> .
+85 	18064 	9 	<span style="background-color: #ffff00">stephen dilts</span> is the chief of <span style="background-color: #ffff00">the south jersey transportation authority</span> .
+478 	18458 	9 	<span style="background-color: #ffff00">a wizard of mars</span> is published in <span style="background-color: #ffff00">english</span> .
+65 	18044 	9 	<span style="background-color: #ffff00">lars løkke rasmussen</span> leads <span style="background-color: #ffff00">denmark</span> .
+312 	18291 	9 	<span style="background-color: #ffff00">meringue</span> is one variation of the <span style="background-color: #ffff00">barny cakes</span> dish .
+138 	18117 	9 	<span style="background-color: #ffff00">the mason school of business</span> are the current tenants of <span style="background-color: #ffff00">alan b miller hall</span> .
+410 	18390 	9 	<span style="background-color: #ffff00">afc ajax ( amateurs )</span> has 5000 members .
+476 	18456 	9 	<span style="background-color: #ffff00">madeleine l'engle</span> wrote `` <span style="background-color: #ffff00">a severed wasp</span> '' .
+369 	18348 	9 	<span style="background-color: #ffff00">the baku turkish martyrs ' memorial</span> can be found is <span style="background-color: #ffff00">azerbaijan</span> .
+371 	18350 	9 	<span style="background-color: #ffff00">the baku turkish martyrs ' memorial</span> is found in <span style="background-color: #ffff00">azerbaijan</span> .
+132 	18111 	9 	<span style="background-color: #ffff00">the 3arena</span> is located at east link bridge .
+381 	18360 	9 	the manager of <span style="background-color: #ffff00">1 . fc koln</span> is <span style="background-color: #ffff00">peter stoger</span> .
+327 	18306 	9 	a type of <span style="background-color: #ffff00">dessert</span> is <span style="background-color: #ffff00">ice cream</span> .
+129 	18108 	9 	hok sve was the architect of <span style="background-color: #ffff00">the 3arena</span> .
+108 	18087 	9 	<span style="background-color: #ffff00">elliot see</span> 's occupation was <span style="background-color: #ffff00">a test pilot</span> .
+391 	18371 	9 	<span style="background-color: #ffff00">a.e dimitra efxeinoupolis</span> were in <span style="background-color: #ffff00">the 2014</span> season .
+173 	18152 	9 	<span style="background-color: #ffff00">abilene</span> is a part of <span style="background-color: #ffff00">texas</span> .
+456 	18436 	9 	<span style="background-color: #ffff00">the school of business and social sciences at the aarhus university</span> has academic staff size of 737 .
+133 	18112 	9 	<span style="background-color: #ffff00">the adare manor</span> 's building start was in <span style="background-color: #ffff00">1700</span> .
+289 	18268 	9 	<span style="background-color: #ffff00">garlic</span> is an ingredient of <span style="background-color: #ffff00">arros negre</span> .
+519 	18499 	9 	<span style="background-color: #ffff00">hiv</span> genus is categorised as <span style="background-color: #ffff00">admin</span> .
+445 	18425 	9 	<span style="background-color: #ffff00">acharya institute of technology</span> campus is located in in soldevanahalli, acharya dr. sarvapalli radhakrishnan road, hessarghatta main road, bangalore – 560090. .
+155 	18134 	9 	one of the ethnic groups in <span style="background-color: #ffff00">japan</span> in <span style="background-color: #ffff00">the brazilians</span> .
+37 	18016 	9 	<span style="background-color: #ffff00">andrews county airport</span> city is served by <span style="background-color: #ffff00">andrews</span> .
+224 	18203 	9 	<span style="background-color: #ffff00">atlanta</span> is the largest city in <span style="background-color: #ffff00">fulton county , georgia</span> .
+277 	18256 	9 	ajo blanco is an alternative name to <span style="background-color: #ffff00">ajoblanco</span> .
+300 	18279 	9 	<span style="background-color: #ffff00">bakso</span> contains <span style="background-color: #ffff00">noodles</span> .
+162 	18141 	9 	one language used in <span style="background-color: #ffff00">the republic of ireland</span> is <span style="background-color: #ffff00">english</span> .
+82 	18061 	9 	<span style="background-color: #ffff00">saranac lake , new york</span> , is part of <span style="background-color: #ffff00">the united states</span> .
+425 	18405 	9 	<span style="background-color: #ffff00">jens hartel</span> plays for <span style="background-color: #ffff00">sv germania schoneiche</span> .
+144 	18123 	9 	<span style="background-color: #ffff00">asher and mary isabelle richardson house</span> was added to the national register of historic places , on 1988-11-22 .
+461 	18441 	9 	<span style="background-color: #ffff00">the school of business and social sciences at the aarhus university</span> is in <span style="background-color: #ffff00">denmark</span> .
+339 	18318 	9 	<span style="background-color: #ffff00">mexican people</span> are people from <span style="background-color: #ffff00">mexico</span> .
+120 	18099 	9 	<span style="background-color: #ffff00">the 200 public square</span> was completed in <span style="background-color: #ffff00">1985</span> .
+222 	18201 	9 	<span style="background-color: #ffff00">california</span> is in united states .
+33 	18012 	9 	<span style="background-color: #ffff00">amsterdam airport schiphol</span> serves <span style="background-color: #ffff00">amsterdam</span> .
+378 	18357 	9 	<span style="background-color: #ffff00">the baku turkish martyrs ' memorial</span> is made with red granite and white marble .
+76 	18055 	9 	<span style="background-color: #ffff00">paracuellos de jarama</span> is part of <span style="background-color: #ffff00">the community of madrid</span> .
+372 	18351 	9 	the materials used for <span style="background-color: #ffff00">the baku turkish martyrs ' memorial</span> is red granite and white marble .
+56 	18035 	9 	<span style="background-color: #ffff00">belguim 's</span> language is <span style="background-color: #ffff00">german</span> language .
+260 	18239 	9 	<span style="background-color: #ffff00">baymax</span> is a character in <span style="background-color: #ffff00">the film big hero 6</span> .
+1 	17980 	9 	<span style="background-color: #ffff00">aarhus airport</span> runway length is 2702.0 .
+35 	18014 	9 	<span style="background-color: #ffff00">andrews , texas</span> is the country seat of <span style="background-color: #ffff00">andrews county , texas</span> .
+439 	18419 	9 	<span style="background-color: #ffff00">footballer stuart parker</span> played football for <span style="background-color: #ffff00">bury fc</span> .
+183 	18162 	9 	<span style="background-color: #ffff00">albuquerque , new mexico</span> is led by state senate .
+2 	17981 	9 	<span style="background-color: #ffff00">aarhus airport</span> has a runway length of 2702.0 .
+47 	18026 	9 	<span style="background-color: #ffff00">angola international airport</span> serves <span style="background-color: #ffff00">luanda</span> of <span style="background-color: #ffff00">luanda</span> .
+459 	18439 	9 	<span style="background-color: #ffff00">the school of business and social sciences at the aarhus university</span> is situated in <span style="background-color: #ffff00">denmark</span> .
+288 	18267 	9 	<span style="background-color: #ffff00">cuttlefish</span> is an ingredient of <span style="background-color: #ffff00">arros negre</span> .
+54 	18033 	9 	<span style="background-color: #ffff00">athens international airport</span> is in <span style="background-color: #ffff00">sparta</span> .
+333 	18312 	8 	<span style="background-color: #ffff00">the baduy</span> is the ethnic group of <span style="background-color: #ffff00">java</span> .
+109 	18088 	8 	<span style="background-color: #ffff00">elliot see</span> performed as <span style="background-color: #ffff00">a test pilot</span> .
+442 	18422 	8 	the academic staff number 100 at <span style="background-color: #ffff00">the accademia di architettura di mendrisio</span> .
+116 	18095 	8 	<span style="background-color: #ffff00">103 colmore row</span> was designed by <span style="background-color: #ffff00">the architect john madin</span> .
+523 	18503 	8 	<span style="background-color: #ffff00">elizabeth ii</span> is a leader in <span style="background-color: #ffff00">the united kingdom</span> .
+135 	18114 	8 	<span style="background-color: #ffff00">adare manor</span> is located in <span style="background-color: #ffff00">the republic of ireland</span> .
+107 	18086 	8 	<span style="background-color: #ffff00">elliot see</span> flew as <span style="background-color: #ffff00">a test pilot</span> .
+510 	18490 	8 	<span style="background-color: #ffff00">the american journal of mathematics</span> has an impact factor of 1.337 .
+125 	18104 	8 	<span style="background-color: #ffff00">20 fenchurch street</span> is located within <span style="background-color: #ffff00">the united kingdom</span> .
+106 	18085 	8 	<span style="background-color: #ffff00">elliot see</span> served as <span style="background-color: #ffff00">a test pilot</span> .
+301 	18280 	8 	<span style="background-color: #ffff00">noodles</span> is an ingredient in <span style="background-color: #ffff00">bakso</span> .
+437 	18417 	8 	<span style="background-color: #ffff00">k-w united fc</span> have been champions of <span style="background-color: #ffff00">the premier development league</span> .
+79 	18058 	8 	<span style="background-color: #ffff00">san sebastian de los reyes</span> is in <span style="background-color: #ffff00">spain</span> .
+102 	18081 	8 	<span style="background-color: #ffff00">buzz aldrin</span> was <span style="background-color: #ffff00">a united states</span> national .
+291 	18270 	8 	the genus of <span style="background-color: #ffff00">avocado</span> is <span style="background-color: #ffff00">persea</span> .
+491 	18471 	8 	the coden code for <span style="background-color: #ffff00">the acta palaeontologica polonica</span> is apgpac .
+346 	18325 	8 	<span style="background-color: #ffff00">arabic</span> is one of the languages spoken in <span style="background-color: #ffff00">the philippines</span> .
+431 	18411 	8 	<span style="background-color: #ffff00">massimo drago</span> is attached to <span style="background-color: #ffff00">the club delfino pescara 1936</span> .
+78 	18057 	8 	<span style="background-color: #ffff00">the four world trade center</span> is the headquarters of <span style="background-color: #ffff00">the port authority of new york and new jersey</span> .
+80 	18059 	8 	<span style="background-color: #ffff00">san sebastián de los reyes</span> is located in <span style="background-color: #ffff00">spain</span> .
+292 	18271 	8 	the genus of <span style="background-color: #ffff00">the avocado</span> is <span style="background-color: #ffff00">persea</span> .
+337 	18316 	8 	the order of <span style="background-color: #ffff00">lemons</span> is <span style="background-color: #ffff00">rosids</span> .
+344 	18323 	8 	<span style="background-color: #ffff00">arabic</span> is a language spoken in <span style="background-color: #ffff00">the philippines</span> .
+296 	18275 	8 	<span style="background-color: #ffff00">baked alaska</span> is <span style="background-color: #ffff00">a dessert</span> .
+524 	18504 	8 	the leader of <span style="background-color: #ffff00">the united kingdom</span> is <span style="background-color: #ffff00">elizabeth ii</span> .
+130 	18109 	8 	<span style="background-color: #ffff00">the 3arena</span> is located at east link bridge .
+460 	18440 	8 	<span style="background-color: #ffff00">the school of business and social sciences at the aarhus university</span> is located in <span style="background-color: #ffff00">denmark</span> .
+284 	18263 	8 	<span style="background-color: #ffff00">arem arem</span> comes from <span style="background-color: #ffff00">indonesia</span> .
+67 	18046 	8 	<span style="background-color: #ffff00">the flemish region</span> is led by <span style="background-color: #ffff00">the flemish government</span> .
+165 	18144 	8 	the capital of <span style="background-color: #ffff00">the united kingdom</span> is <span style="background-color: #ffff00">london</span> .
+395 	18375 	8 	<span style="background-color: #ffff00">afc blackpool</span> has 1500 members .
+145 	18124 	8 	<span style="background-color: #ffff00">the asser levy public baths</span> was built in <span style="background-color: #ffff00">1904</span> .
+104 	18083 	8 	<span style="background-color: #ffff00">buzz aldrin</span> is <span style="background-color: #ffff00">a us</span> national .
+169 	18148 	8 	the leader of <span style="background-color: #ffff00">the united states</span> is <span style="background-color: #ffff00">paul ryan</span> .
+83 	18062 	8 	<span style="background-color: #ffff00">south jersey transportation authority</span> chief is <span style="background-color: #ffff00">stephen dilts</span> .
+443 	18423 	8 	<span style="background-color: #ffff00">the accademia di architettura di mendrisio</span> has an academic staff of 100 .
+261 	18240 	8 	<span style="background-color: #ffff00">bill everett</span> has won <span style="background-color: #ffff00">the eisner award</span> .
+151 	18130 	8 	<span style="background-color: #ffff00">dublin</span> is in <span style="background-color: #ffff00">the republic of ireland</span> .
+343 	18322 	8 	one of the languages used in <span style="background-color: #ffff00">the philippines</span> is <span style="background-color: #ffff00">arabic</span> .
+124 	18103 	8 	<span style="background-color: #ffff00">20 fenchurch street</span> is located in <span style="background-color: #ffff00">the united kingdom</span> .
+168 	18147 	8 	<span style="background-color: #ffff00">paul ryan</span> is the leader of <span style="background-color: #ffff00">the united states</span> .
+262 	18241 	8 	<span style="background-color: #ffff00">bill everett</span> has been awarded <span style="background-color: #ffff00">the eisner award</span> .
+528 	18508 	8 	a leader in <span style="background-color: #ffff00">the united states</span> is <span style="background-color: #ffff00">joe biden</span> .
+315 	18294 	8 	<span style="background-color: #ffff00">batchoy</span> is eaten in <span style="background-color: #ffff00">the philippines</span> .
+403 	18383 	8 	<span style="background-color: #ffff00">frank de boer</span> manages <span style="background-color: #ffff00">the afc ajax</span> team .
+334 	18313 	8 	<span style="background-color: #ffff00">the baduy</span> is an ethnic group in <span style="background-color: #ffff00">java</span> .
+457 	18437 	8 	<span style="background-color: #ffff00">the school of business and social sciences at the aarhus university</span> has an academic staff of 737 .
+319 	18298 	8 	<span style="background-color: #ffff00">vegetables</span> are used in the preparation of <span style="background-color: #ffff00">batchoy</span> .
+103 	18082 	8 	<span style="background-color: #ffff00">buzz aldrin</span> was <span style="background-color: #ffff00">an american</span> .
+509 	18489 	8 	the impact factor of <span style="background-color: #ffff00">the american journal of mathematics</span> is 1.337 .
+105 	18084 	8 	<span style="background-color: #ffff00">elliot see</span> was <span style="background-color: #ffff00">a test pilot</span> .
+392 	18372 	8 	<span style="background-color: #ffff00">a.e dimitra efxeinoupolis</span> played in <span style="background-color: #ffff00">season 2014</span> .
+84 	18063 	8 	<span style="background-color: #ffff00">stephen dilts</span> is the chief of <span style="background-color: #ffff00">the south jersey transportation authority</span> .
+322 	18301 	8 	<span style="background-color: #ffff00">patrick mcloughlin</span> is a leader in <span style="background-color: #ffff00">derbyshire dales</span> .
+21 	18000 	8 	<span style="background-color: #ffff00">alderney airport</span> serves <span style="background-color: #ffff00">alderney</span> .
+66 	18045 	8 	<span style="background-color: #ffff00">lars lokke rasmussen</span> is the leader of <span style="background-color: #ffff00">denmark</span> .
+450 	18430 	5 	<span style="background-color: #ffff00">alba iulia</span> os part of <span style="background-color: #ffff00">alba county</span> .
+397 	18377 	5 	<span style="background-color: #ffff00">afc fylde</span> has the home ground called <span style="background-color: #ffff00">the fylde</span> .
+341 	18320 	5 	<span style="background-color: #ffff00">spanish</span> is the language spoken in <span style="background-color: #ffff00">mexico</span> .
+517 	18497 	5 	<span style="background-color: #ffff00">hiv</span> is from the genus <span style="background-color: #ffff00">lentivirus</span> .
+363 	18342 	5 	<span style="background-color: #ffff00">azerbaijan 's</span> leader 's name is <span style="background-color: #ffff00">artur rasizade</span> .
+306 	18285 	5 	<span style="background-color: #ffff00">chorizo</span> is an ingredient in <span style="background-color: #ffff00">bandeja paisa</span> .
+302 	18281 	5 	<span style="background-color: #ffff00">bakso</span> contains <span style="background-color: #ffff00">noodles</span> .
+498 	18478 	5 	the lccn number of <span style="background-color: #ffff00">administrative science quarterly</span> is <span style="background-color: #ffff00">57059226</span> .
+527 	18507 	5 	<span style="background-color: #ffff00">joe biden</span> is a leader in united states .
+279 	18258 	5 	the main ingredients in <span style="background-color: #ffff00">ajoblanco</span> are bread, almonds, garlic, water, olive oil .
+499 	18479 	5 	<span style="background-color: #ffff00">administrative science quarterly</span> 's llcn number is <span style="background-color: #ffff00">57059226</span> .
+464 	18444 	5 	<span style="background-color: #ffff00">1634 : the bavarian crisis</span> is the sequel to <span style="background-color: #ffff00">the grantville gazettes</span> .
+521 	18501 	5 	<span style="background-color: #ffff00">wolf solent</span> is one of <span style="background-color: #ffff00">john cowper powys</span> notable works .
+30 	18009 	5 	the runway name of <span style="background-color: #ffff00">alpena county regional airport</span> is <span style="background-color: #ffff00">1/19 /</span> .
+254 	18233 	5 	<span style="background-color: #ffff00">bananaman</span> first aired on 1983-10-03 .
+401 	18381 	5 	<span style="background-color: #ffff00">a.s. livorno calcio</span> has <span style="background-color: #ffff00">19238</span> members .
+463 	18443 	5 	<span style="background-color: #ffff00">1634 : the bavarian crisis</span> was written by <span style="background-color: #ffff00">eric flint</span> .
+340 	18319 	5 	in <span style="background-color: #ffff00">mexico</span> , the spoken language is <span style="background-color: #ffff00">spanish</span> .
+282 	18261 	5 	<span style="background-color: #ffff00">arem-arem</span> is found nationwide in indonesia, but more specific to java .
+320 	18299 	5 	<span style="background-color: #ffff00">vegetables</span> are an ingredient in <span style="background-color: #ffff00">batchoy</span> .
+389 	18368 	5 	`` <span style="background-color: #ffff00">a.e dimitra efxeinoupolis</span> '' is the full name of <span style="background-color: #ffff00">a.e dimitra efxeinoupolis</span> .
+18 	17997 	5 	<span style="background-color: #ffff00">al-taqaddum air base</span> is 84.0 above sea level .
+293 	18272 	5 	<span style="background-color: #ffff00">ayam penyet</span> should be served <span style="background-color: #ffff00">hot</span> .
+5 	17984 	5 	<span style="background-color: #ffff00">adirondack regional airport</span> is located in <span style="background-color: #ffff00">harrietstown , new york</span> .
+297 	18276 	5 	an ingredient of <span style="background-color: #ffff00">bakewell tart</span> is <span style="background-color: #ffff00">frangipane</span> .
+414 	18394 	5 	<span style="background-color: #ffff00">agremiação sportiva arapiraquense</span> are managed by <span style="background-color: #ffff00">vica</span> .
+485 	18465 	5 	<span style="background-color: #ffff00">acta mathematica hungarica</span> has the abbreviation of `` acta math. hungar. '' .
+419 	18399 	5 	<span style="background-color: #ffff00">akron summit assault</span> has 3000 members .
+57 	18036 	5 	<span style="background-color: #ffff00">german</span> is the language of <span style="background-color: #ffff00">belgium</span> .
+32 	18011 	5 	<span style="background-color: #ffff00">amsterdam airport schiphol</span> serves the city of <span style="background-color: #ffff00">amsterdam</span> .
+347 	18326 	5 	<span style="background-color: #ffff00">shumai</span> is a variation of <span style="background-color: #ffff00">siomay</span> .
+454 	18434 	5 	<span style="background-color: #ffff00">andrew the apostle</span> is the patron saint of <span style="background-color: #ffff00">romania</span> .
+465 	18445 	5 	<span style="background-color: #ffff00">1634 : the bavarian crisis</span> is preceded by <span style="background-color: #ffff00">the grantville gazettes</span> .
+255 	18234 	5 	<span style="background-color: #ffff00">bananaman</span> first aired on 1983-10-03 .
+482 	18462 	5 	the lccn number of <span style="background-color: #ffff00">abhandlungen aus dem mathematischen seminar</span> is <span style="background-color: #ffff00">32024459</span> .
+432 	18412 	5 	<span style="background-color: #ffff00">massimo drago</span> plays for <span style="background-color: #ffff00">s.s. chieti calcio</span> .
+520 	18500 	5 	<span style="background-color: #ffff00">wolf solent</span> is a notable work by <span style="background-color: #ffff00">author john cowper powys</span> .
+269 	18248 	5 	the full name of <span style="background-color: #ffff00">bozo the iron man 's</span> is `` hugh hazzard '' .
+69 	18048 	5 	<span style="background-color: #ffff00">greek</span> is the language spoken in <span style="background-color: #ffff00">greece</span> .
+451 	18431 	5 	<span style="background-color: #ffff00">alba iulia</span> is part of <span style="background-color: #ffff00">alba county</span> .
+264 	18243 	5 	<span style="background-color: #ffff00">kate</span> is <span style="background-color: #ffff00">a oddie</span> 's child .
+504 	18484 	5 	<span style="background-color: #ffff00">alcatraz versus the evil librarians</span> has the oclc number of <span style="background-color: #ffff00">78771100</span> .
+276 	18255 	5 	the alternative name for <span style="background-color: #ffff00">ajoblanco</span> is `` ajo blanco '' .
+58 	18037 	5 	the language spoken is <span style="background-color: #ffff00">belgium</span> is <span style="background-color: #ffff00">german</span> .
+61 	18040 	5 	the leader of <span style="background-color: #ffff00">belgium</span> is <span style="background-color: #ffff00">philippe of belgium</span> .
+134 	18113 	5 	the building of <span style="background-color: #ffff00">adare manor</span> was started in <span style="background-color: #ffff00">1700</span> .
+96 	18075 	5 	<span style="background-color: #ffff00">nasa</span> operated <span style="background-color: #ffff00">apollo 14</span> .
+143 	18122 	5 	<span style="background-color: #ffff00">asher and mary isabelle richardson house</span> was added to the national register of historic places on `` 1988-11-22 '' .
+412 	18392 	5 	<span style="background-color: #ffff00">azal pfk</span> is located in shuvalan, baku, azerbaijan .
+19 	17998 	5 	<span style="background-color: #ffff00">al-taqaddum air base</span> is 84.0 above sea level .
+305 	18284 	5 	<span style="background-color: #ffff00">vermicelli</span> is included in <span style="background-color: #ffff00">bakso</span> .
+287 	18266 	5 	<span style="background-color: #ffff00">cuttlefish</span> is an ingredient in <span style="background-color: #ffff00">arros negre</span> .
+20 	17999 	5 	the elevation above the sea level ( in metres ) of <span style="background-color: #ffff00">al-taqaddum air base</span> is 84.0 .
+310 	18289 	5 	<span style="background-color: #ffff00">barny cakes</span> is created by <span style="background-color: #ffff00">mondelez international</span> .
+481 	18461 	5 	<span style="background-color: #ffff00">abhandlungen aus dem mathematischen seminar der universität hamburg</span> has an lccn number of <span style="background-color: #ffff00">32024459</span> .
+406 	18386 	5 	<span style="background-color: #ffff00">afc ajax ( amateurs )</span> have the nickname `` joden , godenzonen '' .
+280 	18259 	5 	bread, almonds, garlic, water, olive oil are the main ingredients in <span style="background-color: #ffff00">ajoblanco</span> .
+98 	18077 	5 	<span style="background-color: #ffff00">apollo 8</span> operator is <span style="background-color: #ffff00">nasa</span> .
+411 	18391 	5 	<span style="background-color: #ffff00">azal pfk</span> is located at shuvalan, baku, azerbaijan .
+400 	18380 	5 	<span style="background-color: #ffff00">a.s. livorno calcio</span> has <span style="background-color: #ffff00">19238</span> members .
+26 	18005 	5 	the runway length of <span style="background-color: #ffff00">alpena county regional airport</span> is 1533.0 .
+95 	18074 	5 	<span style="background-color: #ffff00">apollo 14</span> was operated by <span style="background-color: #ffff00">nasa</span> .
+159 	18138 	5 	one of the key people in <span style="background-color: #ffff00">marriott international</span> is <span style="background-color: #ffff00">bill marriott</span> .
+486 	18466 	5 	the abbreviation of <span style="background-color: #ffff00">acta mathematica hungarica</span> is acta math. hungar. .
+502 	18482 	5 	the oclc number of <span style="background-color: #ffff00">aenir</span> is <span style="background-color: #ffff00">45644811</span> .
+342 	18321 	5 	the language of <span style="background-color: #ffff00">mexico</span> is <span style="background-color: #ffff00">spanish</span> .
+364 	18343 	5 	the name of the leader of <span style="background-color: #ffff00">azerbaijan</span> is <span style="background-color: #ffff00">artur rasizade</span> .
+4 	17983 	5 	<span style="background-color: #ffff00">adirondack regional airport</span> is located at <span style="background-color: #ffff00">harrietstown , new york</span> .
+418 	18398 	5 	<span style="background-color: #ffff00">st vincent-st mary high school</span> is the ground of <span style="background-color: #ffff00">akron summit assault</span> .
+256 	18235 	5 	<span style="background-color: #ffff00">bananaman</span> was first aired on 1983-10-03 .
+299 	18278 	5 	<span style="background-color: #ffff00">frangipane</span> is an ingredient of <span style="background-color: #ffff00">bakewell tart</span> .
+44 	18023 	5 	<span style="background-color: #ffff00">arlington</span> is the runway name of <span style="background-color: #ffff00">andrews county airport</span> .
+286 	18265 	5 	the main ingredients in <span style="background-color: #ffff00">arrabbiata sauce</span> are <span style="background-color: #ffff00">tomatoes , red chili , garlic and olive oil</span> .
+462 	18442 	5 	<span style="background-color: #ffff00">eric flint</span> is the author of <span style="background-color: #ffff00">1634 : the bavarian crisis</span> .
+70 	18049 	5 	the language spoken in <span style="background-color: #ffff00">greece</span> is <span style="background-color: #ffff00">greek</span> .
+507 	18487 	5 	<span style="background-color: #ffff00">alcatraz versus the evil librarians</span> was followed by <span style="background-color: #ffff00">alcatraz versus the scrivener 's bones</span> .
+281 	18260 	5 	the main ingredients of <span style="background-color: #ffff00">ajoblanco</span> are bread, almonds, garlic, water, olive oil .
+304 	18283 	5 	<span style="background-color: #ffff00">vermicelli</span> is an ingredient of <span style="background-color: #ffff00">bakso</span> .
+308 	18287 	0 	<span style="background-color: #ffff00">mondelez international</span> is the creator of <span style="background-color: #ffff00">barny cakes</span> .
+41 	18020 	0 	<span style="background-color: #ffff00">11/29</span> is the runway name of <span style="background-color: #ffff00">andrews county airport</span> .
+253 	18232 	0 	<span style="background-color: #ffff00">bananaman</span> was broadcasted by stv .
+317 	18296 	0 	<span style="background-color: #ffff00">chicken</span> is an ingredient in <span style="background-color: #ffff00">batchoy</span> .
+420 	18400 	0 	<span style="background-color: #ffff00">akron summit assault</span> has got 3000 members .
+154 	18133 	0 	the name of the leader in <span style="background-color: #ffff00">india</span> is <span style="background-color: #ffff00">sumitra mahajan</span> .
+157 	18136 	0 	the leader of <span style="background-color: #ffff00">japan</span> is <span style="background-color: #ffff00">tarō asō</span> .
+118 	18097 	0 	<span style="background-color: #ffff00">103 colmore row</span> is located in <span style="background-color: #ffff00">colmore row</span> .
+94 	18073 	0 	<span style="background-color: #ffff00">apollo 11</span> 's backup pilot was <span style="background-color: #ffff00">william anders</span> .
+422 	18402 	0 	the leader of <span style="background-color: #ffff00">greece</span> is <span style="background-color: #ffff00">nikos voutsis</span> .
+434 	18414 	0 	<span style="background-color: #ffff00">massimo drago</span> plays for <span style="background-color: #ffff00">s.s. chieti calcio</span> .
+14 	17993 	0 	the operating organization for <span style="background-color: #ffff00">afonso pena international airport</span> is <span style="background-color: #ffff00">infraero</span> .
+45 	18024 	0 	the runway at <span style="background-color: #ffff00">andrews county airport</span> is called <span style="background-color: #ffff00">helipad</span> .
+348 	18327 	0 	<span style="background-color: #ffff00">siomay</span> and <span style="background-color: #ffff00">shumai</span> are variations of the same dish .
+336 	18315 	0 	<span style="background-color: #ffff00">lemon</span> is under the order of <span style="background-color: #ffff00">rosids</span> .
+303 	18282 	0 	<span style="background-color: #ffff00">vermicelli</span> is an ingredient in <span style="background-color: #ffff00">bakso</span> .
+515 	18495 	0 	<span style="background-color: #ffff00">cornell big red</span> is the nickname of <span style="background-color: #ffff00">cornell university</span> .
+128 	18107 	0 	hok sve was the architect of <span style="background-color: #ffff00">3arena</span> .
+483 	18463 	0 	<span style="background-color: #ffff00">above the veil</span> is available in <span style="background-color: #ffff00">hardcover</span> .
+263 	18242 	0 	<span style="background-color: #ffff00">bill oddie</span> 's daughter is <span style="background-color: #ffff00">kate hardie</span> .
+126 	18105 	0 	there are 60 floors at <span style="background-color: #ffff00">300 north lasalle</span> .
+316 	18295 	0 	<span style="background-color: #ffff00">philippines</span> is the country <span style="background-color: #ffff00">batchoy</span> comes from .
+399 	18379 	0 	<span style="background-color: #ffff00">a.s. livorno calcio</span> has <span style="background-color: #ffff00">19238</span> members .
+152 	18131 	0 	<span style="background-color: #ffff00">dublin</span> is part of <span style="background-color: #ffff00">leinster</span> .
+43 	18022 	0 	the name of the runway at <span style="background-color: #ffff00">andrews county airport</span> is <span style="background-color: #ffff00">helipad</span> .
+48 	18027 	0 	<span style="background-color: #ffff00">angola international airport</span> serves <span style="background-color: #ffff00">luanda</span> .
+91 	18070 	0 	<span style="background-color: #ffff00">alan shepard</span> died in <span style="background-color: #ffff00">california</span> .
+330 	18309 	0 	<span style="background-color: #ffff00">jusuf kalla</span> is the leader of <span style="background-color: #ffff00">indonesia</span> .
+318 	18297 	0 	<span style="background-color: #ffff00">batchoy</span> includes <span style="background-color: #ffff00">chicken</span> .
+449 	18429 	0 	<span style="background-color: #ffff00">alba iulia</span> is in <span style="background-color: #ffff00">romania</span> .
+22 	18001 	0 	<span style="background-color: #ffff00">alderney airport</span> serves the city of <span style="background-color: #ffff00">alderney</span> .
+97 	18076 	0 	<span style="background-color: #ffff00">apollo 14</span> was operated by <span style="background-color: #ffff00">nasa</span> .
+92 	18071 	0 	<span style="background-color: #ffff00">william anders</span> was the backup pilot on <span style="background-color: #ffff00">apollo 11</span> .
+146 	18125 	0 	<span style="background-color: #ffff00">asser levy public baths</span> were constructed in <span style="background-color: #ffff00">1904</span> .
+121 	18100 	0 	<span style="background-color: #ffff00">200 public square</span> was completed in <span style="background-color: #ffff00">1985</span> .
+529 	18509 	0 	<span style="background-color: #ffff00">john cowper powys</span> is the author of <span style="background-color: #ffff00">wolf solent</span> .
+0 	17979 	0 	the leader of <span style="background-color: #ffff00">aarhus</span> is <span style="background-color: #ffff00">jacob bundsgaard</span> .
+55 	18034 	0 	<span style="background-color: #ffff00">athens international airport</span> is located in <span style="background-color: #ffff00">spata</span> .
+474 	18454 	0 	the isbn number to <span style="background-color: #ffff00">a long long way</span> is <span style="background-color: #ffff00">0-670-03380-4</span> .
+323 	18302 	0 	<span style="background-color: #ffff00">patrick mcloughlin</span> is a leader in <span style="background-color: #ffff00">derbyshire dales</span> .
+472 	18452 	0 	<span style="background-color: #ffff00">a fortress of grey ice</span> was produced in <span style="background-color: #ffff00">hardcover</span> .
+29 	18008 	0 	<span style="background-color: #ffff00">1/19</span> is the runway name of <span style="background-color: #ffff00">alpena county regional airport</span> .
+100 	18079 	0 	<span style="background-color: #ffff00">apollo 8</span> was operated by <span style="background-color: #ffff00">nasa</span> .
+3 	17982 	0 	<span style="background-color: #ffff00">adirondack regional airport</span> is <span style="background-color: #ffff00">507</span> metres above sea level .
+24 	18003 	0 	<span style="background-color: #ffff00">allama iqbal international airport</span> has a runway named <span style="background-color: #ffff00">18r/36l</span> .
+59 	18038 	0 	<span style="background-color: #ffff00">philippe of belgium</span> is the leader of <span style="background-color: #ffff00">belgium</span> .
+290 	18269 	0 	<span style="background-color: #ffff00">asam pedas</span> is a food found in <span style="background-color: #ffff00">malaysia</span> .
+321 	18300 	0 	<span style="background-color: #ffff00">binignit</span> is a dish from the region of <span style="background-color: #ffff00">visayas</span> .
+257 	18236 	0 	<span style="background-color: #ffff00">bill oddie</span> stars in <span style="background-color: #ffff00">bananaman</span> .
+142 	18121 	0 	<span style="background-color: #ffff00">ampara hospital</span> is in <span style="background-color: #ffff00">sri lanka</span> .
+307 	18286 	0 	<span style="background-color: #ffff00">chorizo</span> is an ingredient in <span style="background-color: #ffff00">bandeja paisa</span> .
+335 	18314 	0 	<span style="background-color: #ffff00">baduy</span> is an ethnic group of <span style="background-color: #ffff00">java</span> .
+501 	18481 	0 	oclc number <span style="background-color: #ffff00">45644811</span> is for <span style="background-color: #ffff00">aenir</span> .
+51 	18030 	0 	<span style="background-color: #ffff00">athens</span> mayor is <span style="background-color: #ffff00">giorgos kaminis</span> .
+480 	18460 	0 	<span style="background-color: #ffff00">abhandlungen aus dem mathematischen seminar der universität hamburg</span> has the lccn number <span style="background-color: #ffff00">32024459</span> .
+404 	18384 	0 	<span style="background-color: #ffff00">afc ajax</span> 's manager is <span style="background-color: #ffff00">frank de boer</span> .
+259 	18238 	0 	<span style="background-color: #ffff00">bill oddie</span> starred in <span style="background-color: #ffff00">bananaman</span> .
+27 	18006 	0 	the runway length of <span style="background-color: #ffff00">alpena county regional airport</span> is 1533.0 .
+505 	18485 	0 	<span style="background-color: #ffff00">alcatraz versus the evil librarians</span> has an oclc number of <span style="background-color: #ffff00">78771100</span> .
+332 	18311 	0 	<span style="background-color: #ffff00">italians</span> is the name given to people from <span style="background-color: #ffff00">italy</span> .
+398 	18378 	0 	the ground of <span style="background-color: #ffff00">a.s. gubbio 1910</span> is located in <span style="background-color: #ffff00">italy</span> .
+46 	18025 	0 	<span style="background-color: #ffff00">angola international airport</span> city served is <span style="background-color: #ffff00">luanda</span> .
+331 	18310 	0 	<span style="background-color: #ffff00">italians</span> are from <span style="background-color: #ffff00">italy</span> .
+251 	18230 	0 	<span style="background-color: #ffff00">bananaman</span> is broadcast by stv .
+99 	18078 	0 	<span style="background-color: #ffff00">apollo 8</span> is operated by <span style="background-color: #ffff00">nasa</span> .
+473 	18453 	0 	the isbn number of <span style="background-color: #ffff00">a long long way</span> is <span style="background-color: #ffff00">0-670-03380-4</span> .
+17 	17996 	0 	<span style="background-color: #ffff00">agra airport</span> is located in <span style="background-color: #ffff00">agra</span> .
+62 	18041 	0 	the capital of <span style="background-color: #ffff00">denmark</span> is <span style="background-color: #ffff00">copenhagen</span> .
+258 	18237 	0 	<span style="background-color: #ffff00">bananaman</span> starred <span style="background-color: #ffff00">bill oddie</span> .
+52 	18031 	0 	<span style="background-color: #ffff00">giorgos kaminis</span> is the mayor of <span style="background-color: #ffff00">athens</span> .
+314 	18293 	0 	<span style="background-color: #ffff00">barny cakes</span> contain 1.8 g of protein .
+309 	18288 	0 	<span style="background-color: #ffff00">barny cakes</span> were created by <span style="background-color: #ffff00">mondelez international</span> .
+530 	18510 	0 	<span style="background-color: #ffff00">john cowper powys</span> is the author of `` <span style="background-color: #ffff00">wolf solent</span> '' .
+117 	18096 	0 	<span style="background-color: #ffff00">103 colmore row</span> is located at <span style="background-color: #ffff00">colmore row</span> .
+421 	18401 	0 	<span style="background-color: #ffff00">amsterdam-centrum</span> is part of <span style="background-color: #ffff00">amsterdam</span> .
+63 	18042 	0 	<span style="background-color: #ffff00">copenhagen</span> is the capital of <span style="background-color: #ffff00">denmark</span> .
+74 	18053 	0 	the leader of <span style="background-color: #ffff00">pakistan</span> is <span style="background-color: #ffff00">anwar zaheer jamali</span> .
+31 	18010 	0 	<span style="background-color: #ffff00">amsterdam airport schiphol</span> serves the city of <span style="background-color: #ffff00">amsterdam</span> .
+164 	18143 	0 	the capital of <span style="background-color: #ffff00">south africa</span> is <span style="background-color: #ffff00">cape town</span> .
+447 	18427 	0 	<span style="background-color: #ffff00">alba iulia</span> is located in <span style="background-color: #ffff00">romania</span> .
+427 	18407 	0 	<span style="background-color: #ffff00">john van den brom</span> plays for <span style="background-color: #ffff00">az alkmaar</span> .
+71 	18050 	0 	the leader of <span style="background-color: #ffff00">greece</span> is <span style="background-color: #ffff00">nikos voutsis</span> .
+500 	18480 	0 	oclc number <span style="background-color: #ffff00">45644811</span> is <span style="background-color: #ffff00">aenir</span> .
+141 	18120 	0 	<span style="background-color: #ffff00">ampara hospital</span> is located in <span style="background-color: #ffff00">sri lanka</span> .
+42 	18021 	0 	the runway name of <span style="background-color: #ffff00">andrews county airport</span> is <span style="background-color: #ffff00">11/29</span> .
+325 	18304 	0 	a variation on <span style="background-color: #ffff00">dessert</span> is <span style="background-color: #ffff00">cake</span> .
+93 	18072 	0 	<span style="background-color: #ffff00">william anders</span> was a backup pilot on the <span style="background-color: #ffff00">apollo 11</span> mission .
+311 	18290 	0 	<span style="background-color: #ffff00">barny cakes</span> can be <span style="background-color: #ffff00">chocolate</span> flavoured .
+158 	18137 	0 	<span style="background-color: #ffff00">bill marriott</span> is the key person at <span style="background-color: #ffff00">marriott international</span> .
+518 	18498 	0 	<span style="background-color: #ffff00">hiv</span> is genus <span style="background-color: #ffff00">lentivirus</span> .
+16 	17995 	0 	<span style="background-color: #ffff00">agra airport</span> is in <span style="background-color: #ffff00">agra</span> .
+326 	18305 	0 	<span style="background-color: #ffff00">ice cream</span> is a type of <span style="background-color: #ffff00">dessert</span> .
+324 	18303 	0 	<span style="background-color: #ffff00">patrick mcloughlin</span> is the leader of <span style="background-color: #ffff00">derbyshire dales</span> .
+294 	18273 	0 	<span style="background-color: #ffff00">ayam penyet</span> is a dish that should be served <span style="background-color: #ffff00">hot</span> .
+119 	18098 	0 	<span style="background-color: #ffff00">11 diagonal street</span> was completed in <span style="background-color: #ffff00">1983</span> .
+329 	18308 	0 	<span style="background-color: #ffff00">jusuf kalla</span> is a leader in <span style="background-color: #ffff00">indonesia</span> .
+295 	18274 	0 	<span style="background-color: #ffff00">ayam penyet</span> is served <span style="background-color: #ffff00">hot</span> .
+489 	18469 	0 	<span style="background-color: #ffff00">acta palaeontologica polonica</span> has the coden code apgpac .
+60 	18039 	0 	the leader of <span style="background-color: #ffff00">belgium</span> is <span style="background-color: #ffff00">philippe of belgium</span> .
+453 	18433 	0 	the patron saint of <span style="background-color: #ffff00">romania</span> is <span style="background-color: #ffff00">andrew the apostle</span> .
+252 	18231 	0 	<span style="background-color: #ffff00">bananaman</span> is broadcasted by `` stv '' .
+413 	18393 	0 	<span style="background-color: #ffff00">az alkmaar</span> has 17023 members .
+15 	17994 	0 	<span style="background-color: #ffff00">afonso pena international airport</span> is operated by <span style="background-color: #ffff00">infraero</span> .
+53 	18032 	0 	the mayor of <span style="background-color: #ffff00">athens</span> is <span style="background-color: #ffff00">giorgos kaminis</span> .
+471 	18451 	0 	<span style="background-color: #ffff00">a fortress of grey ice</span> was made in <span style="background-color: #ffff00">hardcover</span> .
+313 	18292 	0 	<span style="background-color: #ffff00">barny cakes</span> contain 1.8 g of protein .
+516 	18496 	0 	<span style="background-color: #ffff00">cornell big red</span> is the nickname for <span style="background-color: #ffff00">cornell university</span> .
+452 	18432 	0 	<span style="background-color: #ffff00">alba iulia</span> is part of <span style="background-color: #ffff00">alba county</span> .
+163 	18142 	0 	<span style="background-color: #ffff00">cape town</span> is the capital of <span style="background-color: #ffff00">south africa</span> .
+75 	18054 	0 	<span style="background-color: #ffff00">pakistan</span> has a leader called <span style="background-color: #ffff00">anwar zaheer jamali</span> .
+405 	18385 	0 	the manager of <span style="background-color: #ffff00">afc ajax</span> is <span style="background-color: #ffff00">frank de boer</span> .
+448 	18428 	0 	<span style="background-color: #ffff00">alba iulia</span> is in the country of <span style="background-color: #ffff00">romania</span> .
+127 	18106 	0 	<span style="background-color: #ffff00">300 north lasalle</span> has 60 floors .

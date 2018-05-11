@@ -1,10 +1,11 @@
-__author__ = ''
+__author__ = 'thiagocastroferreira'
 
 """
-Author: ANONYMOUS
+Author: Thiago Castro Ferreira
 Date: 12/12/2017
 Description:
-    Evaluation script to obtain accuracy, pronoun measures, string edit distance and BLEU scores.
+    Automatic evaluation scripts to obtain accuracy, pronoun measures, string edit distance and BLEU scores.
+    Moreover, it saves .csv files to test statistica significance in R.
 
     PYTHON VERSION :2.7
 
@@ -72,7 +73,7 @@ def load_models():
 
     return original, original_info, only, ferreira, y_seq2seq, y_catt, y_hieratt
 
-def evaluate(y_real, y_pred):
+def evaluate_references(y_real, y_pred):
     '''
     Accuracy, String Edit Distance and Pronoun Accuracy for the models
     :param y_real:
@@ -84,6 +85,7 @@ def evaluate(y_real, y_pred):
     num, dem = 0.0, 0.0
     wrong = []
 
+    pron_acc = []
     pron_real, pron_pred = [], []
 
     for real, pred in zip(y_real, y_pred):
@@ -106,6 +108,9 @@ def evaluate(y_real, y_pred):
 
             if pred.strip() == real:
                 pronoun_num += 1
+                pron_acc.append(1)
+            else:
+                pron_acc.append(0)
             pronoun_dem += 1
         else:
             pron_real.append('non_pronoun')
@@ -124,9 +129,16 @@ def evaluate(y_real, y_pred):
     print('\n')
 
     print(classification_report(pron_real, pron_pred))
-    return wrong
+    return wrong, edit_distances, pron_acc
 
 def domain_evaluate(y_real, y_pred, info):
+    '''
+    Accuracy, String Edit Distance and Pronoun Accuracy for the models per domain
+    :param y_real:
+    :param y_pred:
+    :param info:
+    :return:
+    '''
     domains = {}
     for i in range(len(y_real)):
         domain = info[i][1]
@@ -157,9 +169,10 @@ def domain_evaluate(y_real, y_pred, info):
         print('DISTANCE: ', str(round(np.mean(domains[domain]['distance']), 4)))
         print('PRONOUN ACCURACY: ', str(round(domains[domain]['pronoun_num']/domains[domain]['pronoun_dem'], 4)))
 
-def generate_text(data, y_pred):
+def evaluate_text(data, y_pred):
     originals = []
     templates = []
+    text_acc = []
 
     for i, reference in enumerate(data):
         reference['pred'] = y_pred[i]
@@ -173,13 +186,25 @@ def generate_text(data, y_pred):
         template = references[0]['pre_context'] + ' ' + references[0]['entity'] + ' ' + references[0]['pos_context']
 
         for reference in references:
-            entity = reference['entity']
+            entity = reference['entity'] + ' '
 
-            refex = reference['pred'].replace('eos', '').strip()
+            refex = '~'.join(reference['pred'].replace('eos', '').strip().split()) + ' '
             template = template.replace(entity, refex, 1)
 
         originals.append(text)
-        templates.append(template.replace('_', ' ').replace('eos', '').strip())
+        templates.append(template.replace('_', ' ').replace('~', ' ').replace('eos', '').strip())
+
+    # Original accuracy
+    num = len(filter(lambda x: x[0].lower().replace('@', '')==x[1].lower().replace('@', ''), zip(originals, templates)))
+    dem = len(originals)
+    for original, template in zip(originals, templates):
+        if original.lower().replace('@', '')==template.lower().replace('@', ''):
+            num += 1
+            text_acc.append(1)
+        else:
+            text_acc.append(0)
+        dem+= 1
+
 
     with open('reference', 'w') as f:
         f.write('\n'.join(originals).lower().replace('@', '').encode('utf-8'))
@@ -188,56 +213,145 @@ def generate_text(data, y_pred):
         f.write('\n'.join(templates).lower().encode('utf-8'))
 
     os.system('perl ' + MULTIBLEU + ' reference < output')
-
     os.remove('reference')
     os.remove('output')
 
-if __name__ == '__main__':
+    with open('eval/stats/refs.txt', 'w') as f:
+        f.write('\n'.join(originals).encode('utf-8'))
+
+    return originals, templates, num, dem, text_acc
+
+def model_report(model_name, original, y_real, y_pred):
+    print model_name
+    wrong, edit_distances, pron_acc = evaluate_references(y_real, y_pred)
+    print '\n'
+    originals, templates, num, dem, text_acc = evaluate_text(original, y_pred)
+    print('TEXT ACCURACY: ', str(round(float(num)/dem, 4)), str(num), str(dem))
+    print 10 * '-'
+    return originals, templates, edit_distances, pron_acc, text_acc
+
+def run():
     original, original_info, only, ferreira, y_seq2seq, y_catt, y_hieratt = load_models()
 
     y_real = map(lambda x: x['refex'].lower(), original)
     y_only = map(lambda x: x['y_pred'], only)
     # RESULTS ARE SAVE IN A DIFFERENT ORDER THAN OTHERS
-    y_real_ferreira = map(lambda x: x['refex'].lower(), ferreira)
+    # y_real_ferreira = map(lambda x: x['refex'].lower(), ferreira)
+    _ferreira = []
+    for inst in original:
+        reference = filter(lambda x: x['text_id'] == inst['text_id'] and
+                         x['sentence'] == inst['sentence'] and
+                         x['pos'] == inst['pos'] and
+                         x['refex'] == inst['refex'], ferreira)[0]
+        _ferreira.append(reference)
+    ferreira = _ferreira
     y_ferreira = map(lambda x: x['realization'].lower(), ferreira)
 
-    # ONLY NAMES ACCURACY, STRING EDIT DISTANCE AND PRONOUN ACCURACY
-    print 'ONLY NAMES'
-    evaluate(y_real, y_only)
-    print '\n'
-    generate_text(original, y_only)
-    print 10 * '-'
+
+    # ONLY - NAMES ACCURACY, STRING EDIT DISTANCE AND PRONOUN ACCURACY
+    originals, templates, only_distances, only_pron_acc, only_text_acc = model_report('ONLY NAMES', original, y_real, y_only)
+    with open('eval/stats/only.txt', 'w') as f:
+        f.write('\n'.join(templates).encode('utf-8'))
+
+    only_ref_acc = []
+    for real, pred in zip(y_real, y_only):
+        if real.replace('eos', '').strip() == pred.replace('eos', '').strip():
+            only_ref_acc.append(1)
+        else:
+            only_ref_acc.append(0)
 
     # FERREIRA ET AL., 2016 - ACCURACY, STRING EDIT DISTANCE AND PRONOUN ACCURACY
-    print 'FERREIRA ET AL. 2016:'
-    evaluate(y_real_ferreira, y_ferreira)
-    print '\n'
-    generate_text(ferreira, y_ferreira)
-    print 10 * '-'
+    originals, templates, ferreira_distances, ferreira_pron_acc, ferreira_text_acc = model_report('FERREIRA ET AL. 2016', original, y_real, y_ferreira)
+    with open('eval/stats/ferreira.txt', 'w') as f:
+        f.write('\n'.join(templates).encode('utf-8'))
 
-    # SEQ2SEQ
-    print 'NEURAL SEQ2SEQ'
-    evaluate(y_real, y_seq2seq)
-    print '\n'
-    generate_text(original, y_seq2seq)
-    # print '\n'
-    # domain_evaluate(y_real, y_seq2seq, original_info)
-    print 10 * '-'
+    ferreira_ref_acc = []
+    for real, pred in zip(y_real, y_ferreira):
+        if real.replace('eos', '').strip() == pred.replace('eos', '').strip():
+            ferreira_ref_acc.append(1)
+        else:
+            ferreira_ref_acc.append(0)
 
-    # ATT
-    print 'NEURAL CATT'
-    evaluate(y_real, y_catt)
-    print '\n'
-    generate_text(original, y_catt)
-    # print '\n'
-    # domain_evaluate(y_real, y_catt, original_info)
-    print 10 * '-'
+    # SEQ2SEQ - ACCURACY, STRING EDIT DISTANCE AND PRONOUN ACCURACY
+    originals, templates, seq2seq_distances, seq2seq_pron_acc, seq2seq_text_acc = model_report('NEURAL SEQ2SEQ', original, y_real, y_seq2seq)
+    with open('eval/stats/seq2seq.txt', 'w') as f:
+        f.write('\n'.join(templates).encode('utf-8'))
 
-    # HIER
-    print 'NEURAL HIERATT'
-    evaluate(y_real, y_hieratt)
-    print '\n'
-    generate_text(original, y_hieratt)
-    # print '\n'
-    # domain_evaluate(y_real, y_catt, original_info)
-    print 10 * '-'
+    seq2seq_ref_acc = []
+    for real, pred in zip(y_real, y_seq2seq):
+        if real.replace('eos', '').strip() == pred.replace('eos', '').strip():
+            seq2seq_ref_acc.append(1)
+        else:
+            seq2seq_ref_acc.append(0)
+
+    # CATT - ACCURACY, STRING EDIT DISTANCE AND PRONOUN ACCURACY
+    originals, templates, catt_distances, catt_pron_acc, catt_text_acc = model_report('NEURAL CATT', original, y_real, y_catt)
+    with open('eval/stats/catt.txt', 'w') as f:
+        f.write('\n'.join(templates).encode('utf-8'))
+
+    catt_ref_acc = []
+    for real, pred in zip(y_real, y_catt):
+        if real.replace('eos', '').strip() == pred.replace('eos', '').strip():
+            catt_ref_acc.append(1)
+        else:
+            catt_ref_acc.append(0)
+
+    # HIER - ACCURACY, STRING EDIT DISTANCE AND PRONOUN ACCURACY
+    originals, templates, hieratt_distances, hier_pron_acc, hier_text_acc = model_report('NEURAL HIERATT', original, y_real, y_hieratt)
+    with open('eval/stats/hieratt.txt', 'w') as f:
+        f.write('\n'.join(templates).encode('utf-8'))
+
+    hier_ref_acc = []
+    for real, pred in zip(y_real, y_hieratt):
+        if real.replace('eos', '').strip() == pred.replace('eos', '').strip():
+            hier_ref_acc.append(1)
+        else:
+            hier_ref_acc.append(0)
+
+    # Save files to perform statistical tests in R
+    # Reference accuracy file
+    resp = np.arange(1, len(y_real)+1)
+    ref_acc = np.concatenate([[resp], [only_ref_acc], [ferreira_ref_acc], [seq2seq_ref_acc], [catt_ref_acc], [hier_ref_acc]])
+    ref_acc = ref_acc.transpose().tolist()
+
+    with open('eval/stats/r_ref_acc.csv', 'w') as f:
+        f.write('resp;only;ferreira;seq2seq;catt;hieratt\n')
+        for row in ref_acc:
+            f.write(';'.join(map(lambda x: str(x), row)))
+            f.write('\n')
+
+    # Pronoun accuracy
+    resp = np.arange(1, len(only_pron_acc)+1)
+    pron_acc = np.concatenate([[resp], [only_pron_acc], [ferreira_pron_acc], [seq2seq_pron_acc], [catt_pron_acc], [hier_pron_acc]])
+    pron_acc = pron_acc.transpose().tolist()
+
+    with open('eval/stats/r_pron_acc.csv', 'w') as f:
+        f.write('resp;only;ferreira;seq2seq;catt;hieratt\n')
+        for row in pron_acc:
+            f.write(';'.join(map(lambda x: str(x), row)))
+            f.write('\n')
+
+    # Text accuracy
+    resp = np.arange(1, len(only_text_acc)+1)
+    pron_acc = np.concatenate([[resp], [only_text_acc], [ferreira_text_acc], [seq2seq_text_acc], [catt_text_acc], [hier_text_acc]])
+    pron_acc = pron_acc.transpose().tolist()
+
+    with open('eval/stats/r_text_acc.csv', 'w') as f:
+        f.write('resp;only;ferreira;seq2seq;catt;hieratt\n')
+        for row in pron_acc:
+            f.write(';'.join(map(lambda x: str(x), row)))
+            f.write('\n')
+
+    # String edit distance
+    resp = np.arange(1, len(y_real)+1)
+    r_distances = np.concatenate([[resp], [only_distances], [ferreira_distances], [seq2seq_distances], [catt_distances], [hieratt_distances]])
+    r_distances = r_distances.transpose().tolist()
+
+    with open('eval/stats/r_distances.csv', 'w') as f:
+        f.write('resp;only;ferreira;seq2seq;catt;hieratt\n')
+        for row in r_distances:
+            f.write(';'.join(map(lambda x: str(x), row)))
+            f.write('\n')
+
+if __name__ == '__main__':
+    run()

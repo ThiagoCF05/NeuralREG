@@ -23,7 +23,7 @@ import sys
 sys.path.append('../')
 
 TRAIN_REFEX_PATH = '../data/train/data.cPickle'
-MODEL_PATH = 'reg1.cPickle'
+MODEL_PATH = 'reg.cPickle'
 
 lemma = {
     'he':'he', 'his':'he', 'him': 'he',
@@ -47,6 +47,7 @@ print 'Number of entities: ', len(list(entities))
 for entity in entities:
     print 'Entity: ', entity
     pronouns[entity] = []
+    # backoff properties
     bnames, bdescriptions, bdemonstratives = [], [], []
 
     for syntax in ['np-subj', 'np-obj', 'subj-det']:
@@ -66,8 +67,9 @@ for entity in entities:
                         reftype = refex['reftype']
                         reg = refex['refex'].strip().lower()
 
-                        if reftype == 'pronoun' and reg in lemma:
-                            pronouns[entity].append(lemma[reg])
+                        if reftype == 'pronoun' and reg.replace('eos', '').strip() in lemma:
+                            prn = reg.replace('eos', '').strip()
+                            pronouns[entity].append(lemma[prn])
                         elif reftype == 'name':
                             names[(syntax, text_status, sentence_status, entity)].append(reg)
                         elif reftype == 'description':
@@ -82,7 +84,7 @@ for entity in entities:
                 if len(demonstratives[(syntax, text_status, sentence_status, entity)]) == 0:
                     bdemonstratives.append((syntax, text_status, sentence_status, entity))
 
-            # First backoff
+            # First backoff (sentence status off)
             reference = filter(lambda x: x['entity'] == entity and x['syntax'] == syntax and x['text_status'] == text_status, references)
             if len(reference) > 0:
                 for refex in reference:
@@ -102,7 +104,7 @@ for entity in entities:
                             demonstratives[key].append(reg)
                         bdemonstratives = []
 
-        # Second backoff
+        # Second backoff (text status off)
         reference = filter(lambda x: x['entity'] == entity and x['syntax'] == syntax, references)
         if len(reference) > 0:
             for refex in reference:
@@ -122,7 +124,7 @@ for entity in entities:
                         demonstratives[key].append(reg)
                     bdemonstratives = []
 
-    # Third backoff
+    # Third backoff (syntax off)
     reference = filter(lambda x: x['entity'] == entity, references)
     if len(reference) > 0:
         for refex in reference:

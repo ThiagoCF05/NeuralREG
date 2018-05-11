@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0ea0bc8-9834-485a-926b-8fd7a4b15589" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eval/corpus.py" afterPath="$PROJECT_DIR$/eval/corpus.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eval/evaluation.py" afterPath="$PROJECT_DIR$/eval/evaluation.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eval/ferreira.cPickle" afterPath="$PROJECT_DIR$/eval/ferreira.cPickle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferreira/reg.cPickle" afterPath="$PROJECT_DIR$/ferreira/reg.cPickle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferreira/reg_main.py" afterPath="$PROJECT_DIR$/ferreira/reg_main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/preprocessing.py" afterPath="$PROJECT_DIR$/preprocessing.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferreira/reg_train.py" afterPath="$PROJECT_DIR$/ferreira/reg_train.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/humaneval/generate_trials.py" afterPath="$PROJECT_DIR$/humaneval/generate_trials.py" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -20,22 +27,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="preprocessing.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/preprocessing.py">
+      <file leaf-file-name="README" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
-              <folding>
-                <element signature="e#1191#1202#0" expanded="true" />
-                <element signature="e#4634#7191#0" expanded="false" />
-                <element signature="e#7248#7923#0" expanded="false" />
-                <element signature="e#7979#9134#0" expanded="false" />
-                <element signature="e#9194#10315#0" expanded="false" />
-                <element signature="e#10368#11100#0" expanded="false" />
-                <element signature="e#11163#12237#0" expanded="false" />
-                <element signature="e#12284#13875#0" expanded="false" />
-                <element signature="e#13954#17708#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="540">
+              <caret line="51" column="123" lean-forward="false" selection-start-line="51" selection-start-column="123" selection-end-line="51" selection-end-column="123" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -44,112 +41,27 @@
         <entry file="file://$PROJECT_DIR$/only_names.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+              <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="attention.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/attention.py">
+      <file leaf-file-name="stats.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/humaneval/stats.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="24" />
+            <state relative-caret-position="120">
+              <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
-                <element signature="e#1049#1067#0" expanded="true" />
-                <element signature="e#4211#4555#0" expanded="false" />
-                <element signature="e#4614#4830#0" expanded="false" />
-                <element signature="e#5339#5868#0" expanded="false" />
-                <element signature="e#5943#7487#0" expanded="false" />
-                <element signature="e#7556#9648#0" expanded="false" />
-                <element signature="e#13390#13773#0" expanded="false" />
-                <element signature="e#14167#15323#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form_choice.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ferreira/form_choice.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reg_main.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ferreira/reg_main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-              <folding>
-                <element signature="e#932#1987#0" expanded="false" />
-                <element signature="e#2067#3273#0" expanded="false" />
-                <element signature="e#3329#4062#0" expanded="false" />
-                <element signature="e#4138#5939#0" expanded="false" />
-                <element signature="e#6011#7120#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reg_train.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ferreira/reg_train.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="load_data.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/load_data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hierattention.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hierattention.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="21" />
-              <folding>
-                <element signature="e#1056#1074#0" expanded="true" />
-                <element signature="e#1691#4786#0" expanded="false" />
-                <element signature="e#4837#5122#0" expanded="false" />
-                <element signature="e#5181#5397#0" expanded="false" />
-                <element signature="e#5477#5830#0" expanded="false" />
-                <element signature="e#5906#6435#0" expanded="false" />
-                <element signature="e#6506#7353#0" expanded="false" />
-                <element signature="e#7428#8993#0" expanded="false" />
-                <element signature="e#9062#11175#0" expanded="false" />
-                <element signature="e#11253#14875#0" expanded="false" />
-                <element signature="e#14951#15334#0" expanded="false" />
-                <element signature="e#15382#15693#0" expanded="false" />
-                <element signature="e#15728#16884#0" expanded="false" />
-                <element signature="e#16926#17852#0" expanded="false" />
-                <element signature="e#17890#21144#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="seq2seq.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seq2seq.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="21" />
-              <folding>
-                <element signature="e#997#1015#0" expanded="true" />
-                <element signature="e#3454#3798#0" expanded="false" />
-                <element signature="e#10784#11940#0" expanded="false" />
+                <element signature="e#266#277#0" expanded="true" />
+                <element signature="e#461#2196#0" expanded="false" />
+                <element signature="e#2236#2750#0" expanded="false" />
+                <element signature="e#2798#3628#0" expanded="false" />
+                <element signature="e#3666#4578#0" expanded="false" />
+                <element signature="e#4621#5424#0" expanded="false" />
+                <element signature="e#5442#6483#0" expanded="false" />
+                <element signature="e#10697#14230#0" expanded="false" />
+                <element signature="e#10784#11467#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -168,7 +80,11 @@
     <findStrings>
       <find>Atlantic City International Airport serves the city of Atlantic City, New Jersey.</find>
       <find>normalize_entities</find>
+      <find>\r</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -206,27 +122,34 @@
         <option value="$PROJECT_DIR$/multi-bleu.perl" />
         <option value="$PROJECT_DIR$/evaluation.py" />
         <option value="$PROJECT_DIR$/extract_attention.py" />
-        <option value="$PROJECT_DIR$/eval/evaluation.py" />
-        <option value="$PROJECT_DIR$/eval/corpus.py" />
         <option value="$PROJECT_DIR$/ferreira/__init__.py" />
         <option value="$PROJECT_DIR$/ferreira/form_choice.py" />
-        <option value="$PROJECT_DIR$/ferreira/reg_train.py" />
-        <option value="$PROJECT_DIR$/attention.py" />
-        <option value="$PROJECT_DIR$/hierattention.py" />
-        <option value="$PROJECT_DIR$/load_data.py" />
-        <option value="$PROJECT_DIR$/only_names.py" />
+        <option value="$PROJECT_DIR$/humaneval.py" />
+        <option value="$PROJECT_DIR$/humaneval/htmls/layout.html" />
+        <option value="$PROJECT_DIR$/humaneval/htmls/list1/s2-id18650-original.html" />
+        <option value="$PROJECT_DIR$/eval/stats/refs.txt" />
+        <option value="$PROJECT_DIR$/humaneval/htmls/trial_info" />
+        <option value="$PROJECT_DIR$/humaneval/correlation.py" />
+        <option value="$PROJECT_DIR$/humaneval/update.py" />
         <option value="$PROJECT_DIR$/seq2seq.py" />
-        <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/preprocessing.py" />
+        <option value="$PROJECT_DIR$/only_names.py" />
+        <option value="$PROJECT_DIR$/load_data.py" />
+        <option value="$PROJECT_DIR$/hierattention.py" />
+        <option value="$PROJECT_DIR$/attention.py" />
+        <option value="$PROJECT_DIR$/eval/evaluation.py" />
         <option value="$PROJECT_DIR$/ferreira/reg_main.py" />
+        <option value="$PROJECT_DIR$/ferreira/reg_train.py" />
+        <option value="$PROJECT_DIR$/eval/corpus.py" />
+        <option value="$PROJECT_DIR$/humaneval/stats.py" />
+        <option value="$PROJECT_DIR$/humaneval/generate_trials.py" />
+        <option value="$PROJECT_DIR$/README" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1680" />
-    <option name="y" value="-143" />
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -243,9 +166,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -268,7 +191,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ferreira" />
+              <option name="myItemId" value="humaneval" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeuralREG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeuralREG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eval" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -291,22 +228,22 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/anaconda/bin" />
-    <property name="FullScreen" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/annotation/v1.0" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/db" />
-      <recent name="$PROJECT_DIR$/baseline" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/eval" />
       <recent name="$PROJECT_DIR$/baseline" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/annotation" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/db" />
+      <recent name="$PROJECT_DIR$/baseline" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.reg_main">
+  <component name="RunManager" selected="Python.update">
     <configuration default="false" name="evaluation" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -324,57 +261,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="preprocessing" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="NeuralREG" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/preprocessing.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="only_names" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="NeuralREG" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/only_names.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="reg_train" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ferreira" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="NeuralREG" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ferreira/reg_train.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="reg_main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -388,6 +274,57 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="NeuralREG" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ferreira/reg_main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="generate_trials" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/humaneval" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NeuralREG" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/humaneval/generate_trials.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="update" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/humaneval" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NeuralREG" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/humaneval/stats.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="corpus" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/eval" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NeuralREG" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/eval/corpus.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -799,18 +736,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.evaluation" />
-      <item index="1" class="java.lang.String" itemvalue="Python.preprocessing" />
-      <item index="2" class="java.lang.String" itemvalue="Python.only_names" />
-      <item index="3" class="java.lang.String" itemvalue="Python.reg_train" />
-      <item index="4" class="java.lang.String" itemvalue="Python.reg_main" />
+      <item index="1" class="java.lang.String" itemvalue="Python.reg_main" />
+      <item index="2" class="java.lang.String" itemvalue="Python.generate_trials" />
+      <item index="3" class="java.lang.String" itemvalue="Python.update" />
+      <item index="4" class="java.lang.String" itemvalue="Python.corpus" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.reg_main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.reg_train" />
-        <item index="2" class="java.lang.String" itemvalue="Python.only_names" />
-        <item index="3" class="java.lang.String" itemvalue="Python.preprocessing" />
-        <item index="4" class="java.lang.String" itemvalue="Python.evaluation" />
+        <item index="0" class="java.lang.String" itemvalue="Python.update" />
+        <item index="1" class="java.lang.String" itemvalue="Python.evaluation" />
+        <item index="2" class="java.lang.String" itemvalue="Python.corpus" />
+        <item index="3" class="java.lang.String" itemvalue="Python.generate_trials" />
+        <item index="4" class="java.lang.String" itemvalue="Python.reg_main" />
       </list>
     </recent_temporary>
   </component>
@@ -849,7 +786,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1680" y="-143" width="1680" height="1050" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -864,17 +801,17 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33561644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3489796" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3890411" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1965812" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3255102" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2003231" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32465753" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -927,21 +864,41 @@
           <option name="timeStamp" value="116" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/eval/evaluation.py</url>
-          <line>168</line>
-          <option name="timeStamp" value="140" />
+          <url>file://$PROJECT_DIR$/humaneval/generate_trials.py</url>
+          <line>155</line>
+          <option name="timeStamp" value="147" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/eval/evaluation.py</url>
-          <line>48</line>
-          <option name="timeStamp" value="141" />
+          <url>file://$PROJECT_DIR$/ferreira/reg_train.py</url>
+          <line>71</line>
+          <option name="timeStamp" value="152" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/humaneval/stats.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="164" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/humaneval/stats.py</url>
+          <line>282</line>
+          <option name="timeStamp" value="171" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/eval/corpus.py</url>
+          <line>183</line>
+          <option name="timeStamp" value="179" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/eval/corpus.py</url>
+          <line>207</line>
+          <option name="timeStamp" value="180" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="143" />
+      <option name="time" value="182" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="references[-1]" language="Python" />
+        <watch expression="filter(lambda x: x['list_id'] == str(trials_['list']), evaluations)" language="Python" />
       </configuration>
     </watches-manager>
   </component>
@@ -950,193 +907,222 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/annotation/final/train/3triples/SportsTeam.xml">
+    <entry file="file://$PROJECT_DIR$/humaneval/htmls/text_trials/18849" />
+    <entry file="file://$PROJECT_DIR$/humaneval/htmls/text_trials/19031" />
+    <entry file="file://$PROJECT_DIR$/humaneval/htmls/text_trials/18697" />
+    <entry file="file://$PROJECT_DIR$/humaneval/htmls/text_trials/18605" />
+    <entry file="file://$PROJECT_DIR$/humaneval/htmls/text_trials/19628" />
+    <entry file="file://$PROJECT_DIR$/humaneval/htmls/text_trials/18828" />
+    <entry file="file://$PROJECT_DIR$/humaneval/htmls/text_trials/18569" />
+    <entry file="file://$PROJECT_DIR$/humaneval/trials/3triple/original.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1170">
-          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        <state relative-caret-position="618">
+          <caret line="302" column="18" lean-forward="false" selection-start-line="302" selection-start-column="18" selection-end-line="302" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/init.py" />
-    <entry file="file://$PROJECT_DIR$/annotation/final/train/3triples/Airport.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91620">
-          <caret line="6108" column="16" lean-forward="false" selection-start-line="6108" selection-start-column="13" selection-end-line="6108" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annotation/final/dev/1triples/City.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annotation/final/dev/1triples/SportsTeam.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annotation/final/dev/1triples/WrittenWork.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annotation/final/train/6triples/Monument.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/test/pos_context.txt" />
-    <entry file="file://$PROJECT_DIR$/data/output_vocab.txt" />
-    <entry file="file://$PROJECT_DIR$/data/input_vocab.txt" />
-    <entry file="file://$PROJECT_DIR$/annotation/final/train/2triples/Building.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16753">
-          <caret line="84" column="8" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annotation/final/train/2triples/Astronaut.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/xml/etree/ElementTree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="646" column="0" lean-forward="false" selection-start-line="646" selection-start-column="0" selection-end-line="646" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annotation/final/train/2triples/ComicsCharacter.xml">
+    <entry file="file://$PROJECT_DIR$/humaneval/htmls/text_trials/trial_info" />
+    <entry file="file://$PROJECT_DIR$/humaneval/trials/5triple/hieratt.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" column="82" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="82" />
+          <caret line="130" column="504" lean-forward="true" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="504" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/annotation/final/dev/1triples/Airport.xml">
+    <entry file="file://$PROJECT_DIR$/humaneval/trials/5triple/original.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="130" column="517" lean-forward="true" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="517" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humaneval/trials/5triple/only.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="130" column="556" lean-forward="true" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="556" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humaneval/trials/5triple/ferreira.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="130" column="530" lean-forward="true" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="530" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humaneval/trials/5triple/seq2seq.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="130" column="515" lean-forward="true" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="515" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humaneval/trials/5triple/catt.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="130" column="504" lean-forward="true" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="504" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humaneval/website/list1/18821.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="145" column="64" lean-forward="false" selection-start-line="145" selection-start-column="6" selection-end-line="145" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humaneval/website/list1/18939.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2004">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humaneval/htmls/official/list1/18665.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="159" column="10" lean-forward="false" selection-start-line="121" selection-start-column="4" selection-end-line="159" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humaneval/website/list5/20185.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="170" column="64" lean-forward="false" selection-start-line="170" selection-start-column="6" selection-end-line="170" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humaneval/htmls/official/list4/18815.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-951">
+          <caret line="65" column="43" lean-forward="true" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humaneval/htmls/official/text_trials/trial_info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humaneval/statistics.R">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/test1/refex.txt" />
-    <entry file="file://$PROJECT_DIR$/data/only" />
-    <entry file="file://$PROJECT_DIR$/data/neural" />
-    <entry file="file://$PROJECT_DIR$/data/original" />
-    <entry file="file://$PROJECT_DIR$/data/cyber/train/5triples/SportsTeam.xml">
+    <entry file="file://$PROJECT_DIR$/humaneval/trials/1triple/ferreira.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5985">
+          <caret line="399" column="60" lean-forward="false" selection-start-line="399" selection-start-column="0" selection-end-line="400" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humaneval/trials/3triple/hieratt.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humaneval/trials/1triple/original.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3690">
+          <caret line="246" column="30" lean-forward="false" selection-start-line="246" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humaneval/texts/catt.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-315">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humaneval/correlation.py" />
+    <entry file="file://$PROJECT_DIR$/humaneval/trials/1triple/catt.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="67" column="41" lean-forward="false" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="41" />
+          <caret line="1" column="60" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/annotation/annotate.py">
+    <entry file="file://$PROJECT_DIR$/webnlg/info">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="28" lean-forward="false" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+        <state relative-caret-position="-60">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seq2seq.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/annotation/create_xml.py">
+    <entry file="file://$PROJECT_DIR$/load_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="69" column="34" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="34" />
+        <state relative-caret-position="45">
+          <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/baselines/ferreira/form_choice.py">
+    <entry file="file://$PROJECT_DIR$/hierattention.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/baselines/ferreira/reg_train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-405">
-          <caret line="46" column="4" lean-forward="false" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+        <state relative-caret-position="45">
+          <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/baselines/ferreira/reg_main.py">
+    <entry file="file://$PROJECT_DIR$/attention.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="208" column="48" lean-forward="false" selection-start-line="208" selection-start-column="33" selection-end-line="208" selection-end-column="48" />
+        <state relative-caret-position="45">
+          <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/eval/multi-bleu.perl">
+    <entry file="file://$PROJECT_DIR$/preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="848">
-          <caret line="176" column="1" lean-forward="false" selection-start-line="176" selection-start-column="1" selection-end-line="176" selection-end-column="1" />
+        <state relative-caret-position="-6273">
+          <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+          <folding>
+            <element signature="e#1224#1235#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/baselines/only_names.py">
+    <entry file="file://$PROJECT_DIR$/eval/stats/ferreira.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/train/refex.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-945052">
+        <state relative-caret-position="-33198">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/dev/refex.txt">
+    <entry file="file://$PROJECT_DIR$/eval/seq2seq/results/test_best_1_300_512_2_False_1/0">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105592">
+        <state relative-caret-position="-8670">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/test/entity.txt">
+    <entry file="file://$PROJECT_DIR$/eval/stats/r_text_acc.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3555">
+        <state relative-caret-position="-13230">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/att/results/test_best_1_300_512_512_3_False_5/0">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="4370" column="6" lean-forward="true" selection-start-line="4370" selection-start-column="0" selection-end-line="4371" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/test/pre_context.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="7619" column="3" lean-forward="true" selection-start-line="7619" selection-start-column="0" selection-end-line="7620" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/test/size.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-97308">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/test/info.txt">
+    <entry file="file://$PROJECT_DIR$/eval/bleu.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1144,47 +1130,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/test/refex.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="4370" column="7" lean-forward="false" selection-start-line="4370" selection-start-column="0" selection-end-line="4371" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extract_attention.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="230" column="24" lean-forward="false" selection-start-line="230" selection-start-column="16" selection-end-line="230" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eval/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ferreira/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ferreira/reg.cPickle">
+    <entry file="file://$PROJECT_DIR$/eval/stats/refs.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1194,139 +1140,123 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/eval/corpus.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        <state relative-caret-position="795">
+          <caret line="237" column="4" lean-forward="false" selection-start-line="237" selection-start-column="4" selection-end-line="237" selection-end-column="4" />
+          <folding>
+            <element signature="e#368#377#0" expanded="true" />
+            <element signature="e#846#2352#0" expanded="false" />
+            <element signature="e#2387#3485#0" expanded="false" />
+            <element signature="e#3511#6165#0" expanded="false" />
+            <element signature="e#6189#7813#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eval/statistics.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/eval/evaluation.py">
+    <entry file="file://$PROJECT_DIR$/ferreira/reg_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="17" />
-          <folding>
-            <element signature="e#445#492#0" expanded="true" />
-            <element signature="e#2278#3335#0" expanded="false" />
-            <element signature="e#3658#4916#0" expanded="false" />
-            <element signature="e#4955#6113#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seq2seq.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="21" />
-          <folding>
-            <element signature="e#997#1015#0" expanded="true" />
-            <element signature="e#3454#3798#0" expanded="false" />
-            <element signature="e#10784#11940#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/only_names.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/load_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hierattention.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="21" />
-          <folding>
-            <element signature="e#1056#1074#0" expanded="true" />
-            <element signature="e#1691#4786#0" expanded="false" />
-            <element signature="e#4837#5122#0" expanded="false" />
-            <element signature="e#5181#5397#0" expanded="false" />
-            <element signature="e#5477#5830#0" expanded="false" />
-            <element signature="e#5906#6435#0" expanded="false" />
-            <element signature="e#6506#7353#0" expanded="false" />
-            <element signature="e#7428#8993#0" expanded="false" />
-            <element signature="e#9062#11175#0" expanded="false" />
-            <element signature="e#11253#14875#0" expanded="false" />
-            <element signature="e#14951#15334#0" expanded="false" />
-            <element signature="e#15382#15693#0" expanded="false" />
-            <element signature="e#15728#16884#0" expanded="false" />
-            <element signature="e#16926#17852#0" expanded="false" />
-            <element signature="e#17890#21144#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/attention.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="24" />
-          <folding>
-            <element signature="e#1049#1067#0" expanded="true" />
-            <element signature="e#4211#4555#0" expanded="false" />
-            <element signature="e#4614#4830#0" expanded="false" />
-            <element signature="e#5339#5868#0" expanded="false" />
-            <element signature="e#5943#7487#0" expanded="false" />
-            <element signature="e#7556#9648#0" expanded="false" />
-            <element signature="e#13390#13773#0" expanded="false" />
-            <element signature="e#14167#15323#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ferreira/form_choice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        <state relative-caret-position="582">
+          <caret line="249" column="32" lean-forward="false" selection-start-line="249" selection-start-column="32" selection-end-line="249" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ferreira/reg_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        <state relative-caret-position="345">
+          <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/preprocessing.py">
+    <entry file="file://$PROJECT_DIR$/eval/evaluation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+        <state relative-caret-position="-180">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="3" />
           <folding>
-            <element signature="e#1191#1202#0" expanded="true" />
-            <element signature="e#4634#7191#0" expanded="false" />
-            <element signature="e#7248#7923#0" expanded="false" />
-            <element signature="e#7979#9134#0" expanded="false" />
-            <element signature="e#9194#10315#0" expanded="false" />
-            <element signature="e#10368#11100#0" expanded="false" />
-            <element signature="e#11163#12237#0" expanded="false" />
-            <element signature="e#12284#13875#0" expanded="false" />
-            <element signature="e#13954#17708#0" expanded="false" />
+            <element signature="e#561#608#0" expanded="true" />
+            <element signature="e#1256#2034#0" expanded="false" />
+            <element signature="e#2081#3868#0" expanded="false" />
+            <element signature="e#3917#5341#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ferreira/reg_main.py">
+    <entry file="file://$PROJECT_DIR$/humaneval/generate_trials.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+        <state relative-caret-position="45">
+          <caret line="6" column="89" lean-forward="false" selection-start-line="6" selection-start-column="89" selection-end-line="6" selection-end-column="89" />
           <folding>
-            <element signature="e#932#1987#0" expanded="false" />
-            <element signature="e#2067#3273#0" expanded="false" />
-            <element signature="e#3329#4062#0" expanded="false" />
-            <element signature="e#4138#5939#0" expanded="false" />
-            <element signature="e#6011#7120#0" expanded="false" />
+            <element signature="e#272#283#0" expanded="true" />
+            <element signature="e#910#2203#0" expanded="false" />
+            <element signature="e#3714#4835#0" expanded="false" />
+            <element signature="e#4928#6919#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humaneval/official_results.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humaneval/participants_info.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1860">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humaneval/stats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#266#277#0" expanded="true" />
+            <element signature="e#461#2196#0" expanded="false" />
+            <element signature="e#2236#2750#0" expanded="false" />
+            <element signature="e#2798#3628#0" expanded="false" />
+            <element signature="e#3666#4578#0" expanded="false" />
+            <element signature="e#4621#5424#0" expanded="false" />
+            <element signature="e#5442#6483#0" expanded="false" />
+            <element signature="e#10697#14230#0" expanded="false" />
+            <element signature="e#10784#11467#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humaneval/experiment_results.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/only_names.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="51" column="123" lean-forward="false" selection-start-line="51" selection-start-column="123" selection-end-line="51" selection-end-column="123" />
+          <folding />
         </state>
       </provider>
     </entry>

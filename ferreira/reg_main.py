@@ -247,6 +247,6 @@ class REG(object):
 if __name__ == '__main__':
     MODEL_PATH = 'reg.cPickle'
     IN_FILE = '../data/test/data.cPickle'
-    OUT_FILE = 'ferreira.cPickle'
+    OUT_FILE = '../eval/ferreira.cPickle'
     reg = REG(fmodel=MODEL_PATH, freferences=IN_FILE, fout=OUT_FILE)
     reg.run()

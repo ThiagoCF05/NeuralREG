@@ -1,0 +1,553 @@
+{
+    "RECORDS": [
+        {
+            "id": "1",
+            "age": "36",
+            "gender": "F",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "1"
+        },
+        {
+            "id": "7",
+            "age": "37",
+            "gender": "F",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "1"
+        },
+        {
+            "id": "9",
+            "age": "18",
+            "gender": "M",
+            "native_language": "english",
+            "english_proficiency_level": "basic",
+            "country": "Afghanistan",
+            "list_id": "3"
+        },
+        {
+            "id": "12",
+            "age": "50",
+            "gender": "F",
+            "native_language": "english",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "6"
+        },
+        {
+            "id": "17",
+            "age": "31",
+            "gender": "M",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "5"
+        },
+        {
+            "id": "18",
+            "age": "38",
+            "gender": "M",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "6"
+        },
+        {
+            "id": "19",
+            "age": "27",
+            "gender": "F",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "1"
+        },
+        {
+            "id": "20",
+            "age": "32",
+            "gender": "F",
+            "native_language": "Hindi",
+            "english_proficiency_level": "fluent",
+            "country": "India",
+            "list_id": "2"
+        },
+        {
+            "id": "21",
+            "age": "42",
+            "gender": "F",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "3"
+        },
+        {
+            "id": "22",
+            "age": "41",
+            "gender": "F",
+            "native_language": "english",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "4"
+        },
+        {
+            "id": "24",
+            "age": "28",
+            "gender": "M",
+            "native_language": "english",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "6"
+        },
+        {
+            "id": "27",
+            "age": "65",
+            "gender": "F",
+            "native_language": "english",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "3"
+        },
+        {
+            "id": "29",
+            "age": "34",
+            "gender": "F",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "5"
+        },
+        {
+            "id": "30",
+            "age": "34",
+            "gender": "F",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "India",
+            "list_id": "6"
+        },
+        {
+            "id": "31",
+            "age": "28",
+            "gender": "F",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "India",
+            "list_id": "1"
+        },
+        {
+            "id": "32",
+            "age": "24",
+            "gender": "M",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "2"
+        },
+        {
+            "id": "33",
+            "age": "30",
+            "gender": "M",
+            "native_language": "English",
+            "english_proficiency_level": "fluent",
+            "country": "Afghanistan",
+            "list_id": "4"
+        },
+        {
+            "id": "34",
+            "age": "26",
+            "gender": "M",
+            "native_language": "english",
+            "english_proficiency_level": "fluent",
+            "country": "India",
+            "list_id": "2"
+        },
+        {
+            "id": "35",
+            "age": "38",
+            "gender": "F",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "Canada",
+            "list_id": "4"
+        },
+        {
+            "id": "36",
+            "age": "27",
+            "gender": "M",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "5"
+        },
+        {
+            "id": "37",
+            "age": "27",
+            "gender": "F",
+            "native_language": "TAMIL",
+            "english_proficiency_level": "fluent",
+            "country": "India",
+            "list_id": "2"
+        },
+        {
+            "id": "39",
+            "age": "32",
+            "gender": "M",
+            "native_language": "Tamil",
+            "english_proficiency_level": "fluent",
+            "country": "India",
+            "list_id": "4"
+        },
+        {
+            "id": "40",
+            "age": "31",
+            "gender": "F",
+            "native_language": "TAMIL",
+            "english_proficiency_level": "fluent",
+            "country": "India",
+            "list_id": "5"
+        },
+        {
+            "id": "41",
+            "age": "44",
+            "gender": "F",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "1"
+        },
+        {
+            "id": "44",
+            "age": "51",
+            "gender": "M",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "4"
+        },
+        {
+            "id": "46",
+            "age": "26",
+            "gender": "M",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "2"
+        },
+        {
+            "id": "47",
+            "age": "61",
+            "gender": "M",
+            "native_language": "english",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "3"
+        },
+        {
+            "id": "49",
+            "age": "41",
+            "gender": "M",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "6"
+        },
+        {
+            "id": "51",
+            "age": "37",
+            "gender": "M",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "2"
+        },
+        {
+            "id": "54",
+            "age": "44",
+            "gender": "M",
+            "native_language": "english",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "5"
+        },
+        {
+            "id": "55",
+            "age": "41",
+            "gender": "M",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "Afghanistan",
+            "list_id": "6"
+        },
+        {
+            "id": "56",
+            "age": "18",
+            "gender": "M",
+            "native_language": "english",
+            "english_proficiency_level": "native",
+            "country": "India",
+            "list_id": "1"
+        },
+        {
+            "id": "58",
+            "age": "37",
+            "gender": "M",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "3"
+        },
+        {
+            "id": "63",
+            "age": "31",
+            "gender": "M",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "2"
+        },
+        {
+            "id": "64",
+            "age": "57",
+            "gender": "F",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "3"
+        },
+        {
+            "id": "65",
+            "age": "33",
+            "gender": "F",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "4"
+        },
+        {
+            "id": "67",
+            "age": "27",
+            "gender": "F",
+            "native_language": "ENGLISH",
+            "english_proficiency_level": "fluent",
+            "country": "India",
+            "list_id": "6"
+        },
+        {
+            "id": "68",
+            "age": "24",
+            "gender": "F",
+            "native_language": "english",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "5"
+        },
+        {
+            "id": "69",
+            "age": "30",
+            "gender": "F",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "1"
+        },
+        {
+            "id": "70",
+            "age": "45",
+            "gender": "F",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "3"
+        },
+        {
+            "id": "71",
+            "age": "32",
+            "gender": "F",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "4"
+        },
+        {
+            "id": "73",
+            "age": "29",
+            "gender": "M",
+            "native_language": "English",
+            "english_proficiency_level": "fluent",
+            "country": "United States",
+            "list_id": "1"
+        },
+        {
+            "id": "74",
+            "age": "27",
+            "gender": "F",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "2"
+        },
+        {
+            "id": "75",
+            "age": "33",
+            "gender": "M",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "3"
+        },
+        {
+            "id": "76",
+            "age": "18",
+            "gender": "M",
+            "native_language": "english",
+            "english_proficiency_level": "basic",
+            "country": "India",
+            "list_id": "4"
+        },
+        {
+            "id": "79",
+            "age": "34",
+            "gender": "F",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "India",
+            "list_id": "1"
+        },
+        {
+            "id": "80",
+            "age": "35",
+            "gender": "M",
+            "native_language": "English/Tamil",
+            "english_proficiency_level": "fluent",
+            "country": "India",
+            "list_id": "2"
+        },
+        {
+            "id": "85",
+            "age": "26",
+            "gender": "M",
+            "native_language": "hindi",
+            "english_proficiency_level": "fluent",
+            "country": "India",
+            "list_id": "4"
+        },
+        {
+            "id": "86",
+            "age": "37",
+            "gender": "M",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "5"
+        },
+        {
+            "id": "87",
+            "age": "24",
+            "gender": "M",
+            "native_language": "tamil",
+            "english_proficiency_level": "fluent",
+            "country": "India",
+            "list_id": "6"
+        },
+        {
+            "id": "88",
+            "age": "48",
+            "gender": "F",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "Afghanistan",
+            "list_id": "1"
+        },
+        {
+            "id": "89",
+            "age": "24",
+            "gender": "M",
+            "native_language": "tamil",
+            "english_proficiency_level": "fluent",
+            "country": "India",
+            "list_id": "2"
+        },
+        {
+            "id": "90",
+            "age": "47",
+            "gender": "M",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "3"
+        },
+        {
+            "id": "91",
+            "age": "26",
+            "gender": "M",
+            "native_language": "tamil",
+            "english_proficiency_level": "fluent",
+            "country": "India",
+            "list_id": "4"
+        },
+        {
+            "id": "93",
+            "age": "56",
+            "gender": "M",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "India",
+            "list_id": "6"
+        },
+        {
+            "id": "95",
+            "age": "33",
+            "gender": "M",
+            "native_language": "ENGLISH",
+            "english_proficiency_level": "native",
+            "country": "India",
+            "list_id": "2"
+        },
+        {
+            "id": "96",
+            "age": "35",
+            "gender": "F",
+            "native_language": "english",
+            "english_proficiency_level": "fluent",
+            "country": "India",
+            "list_id": "3"
+        },
+        {
+            "id": "98",
+            "age": "34",
+            "gender": "F",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "India",
+            "list_id": "5"
+        },
+        {
+            "id": "101",
+            "age": "51",
+            "gender": "M",
+            "native_language": "english",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "5"
+        },
+        {
+            "id": "104",
+            "age": "42",
+            "gender": "M",
+            "native_language": "English",
+            "english_proficiency_level": "native",
+            "country": "United States",
+            "list_id": "6"
+        },
+        {
+            "id": "105",
+            "age": "48",
+            "gender": "F",
+            "native_language": "Tamil",
+            "english_proficiency_level": "native",
+            "country": "India",
+            "list_id": "5"
+        }
+    ]
+}

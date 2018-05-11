@@ -1,0 +1,17 @@
+original
+a key person at the bbc , which is located in london and broadcast bananaman , is baron hall of birkenhead , tony hall .
+
+only
+a key person at bbc , which is located in london and broadcast bananaman , is tony hall, baron hall of birkenhead .
+
+ferreira
+a key person at bbc , which is located in london and broadcast bananaman , is tony hall , baron hall of birkenhead .
+
+seq2seq
+a key person at the bbc , which is located in london and broadcast bananaman , is tony hall , baron hall of birkenhead .
+
+catt
+a key person at the bbc , which is located in london and broadcast bananaman , is tony hall .
+
+hieratt
+a key person at the bbc , which is located in london and broadcast bananaman , is the london of birkenhead of tony sciences .
