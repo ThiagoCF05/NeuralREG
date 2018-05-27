@@ -28,11 +28,11 @@ Update variable paths in the script and run the following command:
 
 Update variable paths in the scripts and execute them in the following order to train the model and to generate the referring expressions:
 
-`
+```
 python2.7 reg_train.py
 
 python2.7 reg_main.py
-`
+```
 
 **seq2seq.py** NeuralREG+Seq2Seq model 
 
