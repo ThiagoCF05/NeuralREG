@@ -58,6 +58,25 @@ Automatic evaluation scripts to extract information about the referring expressi
 
 **humaneval/** Human evaluation scripts to obtain results depicted in the paper (stats.py) and to test statistical significance (statistics.R)
 
+**Citation:**
+
+```Tex
+@InProceedings{ferreiraetal2018b,
+  author = 	"Castro Ferreira, Thiago
+		and Moussallem, Diego
+		and K{\'a}d{\'a}r, {\'A}kos
+		and Wubben, Sander
+		and Krahmer, Emiel",
+  title = 	"NeuralREG: An end-to-end approach to referring expression generation",
+  booktitle = 	"Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+  year = 	"2018",
+  publisher = 	"Association for Computational Linguistics",
+  pages = 	"1959--1969",
+  location = 	"Melbourne, Australia",
+  url = 	"http://aclweb.org/anthology/P18-1182"
+}
+```
+
 **Author:** Thiago Castro Ferreira
 
 **Date:** 15/12/2017
