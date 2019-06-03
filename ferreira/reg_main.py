@@ -20,6 +20,7 @@ Description:
 """
 
 import cPickle as p
+import json
 import sys
 sys.path.append('../')
 sys.path.append('~/workspace/stanford_corenlp_pywrapper')
@@ -30,7 +31,7 @@ import re
 
 class REG(object):
     def __init__(self, freferences, fmodel, fout):
-        self.references = p.load(open(freferences))
+        self.references = json.load(open(freferences))
         self.model = p.load(open(fmodel))
         self.fout = fout
 
@@ -246,7 +247,7 @@ class REG(object):
 
 if __name__ == '__main__':
     MODEL_PATH = 'reg.cPickle'
-    IN_FILE = '../data/test/data.cPickle'
+    IN_FILE = '../data/test/data.json'
     OUT_FILE = '../eval/ferreira.cPickle'
     reg = REG(fmodel=MODEL_PATH, freferences=IN_FILE, fout=OUT_FILE)
     reg.run()

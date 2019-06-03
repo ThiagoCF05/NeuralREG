@@ -13,50 +13,46 @@ Description:
     For each instance, context (pre and pos), status (text and sentence), syntax, entity id, referential form,
     referring expression and domain info are extracted
 
-    PYTHON VERSION: 2.7
-
-    DEPENDENCIES:
-        cPickle
-        xml.etree.ElementTree: https://docs.python.org/2/library/xml.etree.elementtree.html
-        stanford_corenlp_pywrapper: https://github.com/brendano/stanford_corenlp_pywrapper
-
-    UPDATE CONSTANTS:
-        TRAIN_PATH: directory for training set of the delexicalized WebNLG
-        TRAIN_DEV: directory for dev set of the delexicalized WebNLG
-
-        VOCAB_PATH: path to write vocabularies
-        TRAIN_REFEX_PATH: path to write training referring expressions
-        DEV_REFEX_PATH: path to write development referring expressions
-        TEST_REFEX_PATH: path to write test referring expressions
+    INPUT CONSTANTS:
+        IN_PATH: directory for the delexicalized WebNLG
+        OUT_PATH: path to write the result
+        STANFORD_PATH: path to StanfordCoreNLP (https://stanfordnlp.github.io/CoreNLP/)
 """
 
+import argparse
 import copy
-import cPickle as p
+import json
 import os
 import random
 import re
+import traceback
 import xml.etree.ElementTree as ET
-import sys
-sys.path.append('../')
-sys.path.append('~/workspace/stanford_corenlp_pywrapper')
 
-from stanford_corenlp_pywrapper import CoreNLP
+from stanfordcorenlp import StanfordCoreNLP
 
-class Preprocessing(object):
-    def __init__(self, in_train, in_dev, out_vocab, out_train, out_dev, out_test):
-        self.proc = CoreNLP('ssplit')
-        self.parser = CoreNLP('parse')
-        self.in_train = in_train
-        self.in_dev = in_dev
+class Preprocessing:
+    def __init__(self, in_file, out_file, stanford_path):
+        # self.proc = CoreNLP('ssplit')
+        # self.parser = CoreNLP('parse')
+        try:
+            self.corenlp = StanfordCoreNLP(stanford_path)
+            self.in_train = os.path.join(in_file, 'train')
+            self.in_dev = os.path.join(in_file, 'dev')
 
-        self.out_vocab = out_vocab
-        self.out_train = out_train
-        self.out_dev = out_dev
-        self.out_test = out_test
+            if not os.path.exists(out_file):
+                os.mkdir(out_file)
+            self.out_vocab = out_file
+            self.out_train = os.path.join(out_file, 'train')
+            self.out_dev = os.path.join(out_file, 'dev')
+            self.out_test = os.path.join(out_file, 'test')
 
-        self.text_id = 0
-        self.trainset()
-        self.testset()
+            self.text_id = 0
+            self.trainset()
+            self.testset()
+            self.corenlp.close()
+        except:
+            print(traceback.format_exc())
+            self.corenlp.close()
 
 
     def trainset(self):
@@ -64,9 +60,9 @@ class Preprocessing(object):
         train, dev = [], []
         train_info, dev_info = [], []
 
-        dirs = filter(lambda x: x != '.DS_Store', os.listdir(self.in_train))
+        dirs = filter(lambda x: not str(x).startswith('.'), os.listdir(self.in_train))
         for path in dirs:
-            dirs2 = filter(lambda x: x != '.DS_Store', os.listdir(os.path.join(self.in_train, path)))
+            dirs2 = filter(lambda x: not str(x).startswith('.'), os.listdir(os.path.join(self.in_train, path)))
             for fname in dirs2:
                 f = open(os.path.join(self.in_train, path, fname))
 
@@ -94,22 +90,22 @@ class Preprocessing(object):
         self.write(self.out_dev, dev, dev_info)
 
         with open(os.path.join(self.out_vocab, 'input_vocab.txt'), 'w') as f:
-            f.write(('\n'.join(list(input_vocab))).encode("utf-8"))
+            f.write('\n'.join(list(input_vocab)))
 
         with open(os.path.join(self.out_vocab, 'output_vocab.txt'), 'w') as f:
-            f.write(('\n'.join(list(output_vocab))).encode("utf-8"))
+            f.write('\n'.join(list(output_vocab)))
 
         with open(os.path.join(self.out_vocab, 'character_vocab.txt'), 'w') as f:
-            f.write(('\n'.join(list(character_vocab))).encode("utf-8"))
+            f.write('\n'.join(list(character_vocab)))
 
 
     def testset(self):
         test = []
         test_info = []
 
-        dirs = filter(lambda x: x != '.DS_Store', os.listdir(self.in_dev))
+        dirs = filter(lambda x: not str(x).startswith('.'), os.listdir(self.in_dev))
         for path in dirs:
-            dirs2 = filter(lambda x: x != '.DS_Store', os.listdir(os.path.join(self.in_dev, path)))
+            dirs2 = filter(lambda x: not str(x).startswith('.'), os.listdir(os.path.join(self.in_dev, path)))
             for fname in dirs2:
                 f = open(os.path.join(self.in_dev, path, fname))
 
@@ -193,9 +189,8 @@ class Preprocessing(object):
                         input_vocab = input_vocab.union(in_vocab)
                         output_vocab = output_vocab.union(out_vocab)
                         character_vocab = character_vocab.union(c_vocab)
-                except Exception as e:
-                    print('ERROR')
-                    print(e.message)
+                except:
+                    print(traceback.format_exc())
 
         return data, input_vocab, output_vocab, character_vocab
 
@@ -207,17 +202,32 @@ class Preprocessing(object):
         :param template: original template
         :return: Tokenized text and template
         '''
-        out = self.proc.parse_doc(text)
+        props = {'annotators': 'tokenize,ssplit','pipelineLanguage':'en','outputFormat':'json'}
+        out = self.corenlp.annotate(text.strip(), properties=props)
+        out = json.loads(out)
         text = []
-        for i, snt in enumerate(out['sentences']):
-            text.extend(snt['tokens'])
+        for snt in out['sentences']:
+            text.extend(map(lambda w: w['originalText'], snt['tokens']))
         text = ' '.join(text).replace('-LRB-', '(').replace('-RRB-', ')').strip()
 
-        out = self.proc.parse_doc(template)
+        # out = self.proc.parse_doc(text)
+        # text = []
+        # for i, snt in enumerate(out['sentences']):
+        #     text.extend(snt['tokens'])
+        # text = ' '.join(text).replace('-LRB-', '(').replace('-RRB-', ')').strip()
+
+        out = self.corenlp.annotate(template.strip(), properties=props)
+        out = json.loads(out)
         temp = []
-        for i, snt in enumerate(out['sentences']):
-            temp.extend(snt['tokens'])
+        for snt in out['sentences']:
+            temp.extend(map(lambda w: w['originalText'], snt['tokens']))
         template = ' '.join(temp).replace('-LRB-', '(').replace('-RRB-', ')').strip()
+
+        # out = self.proc.parse_doc(template)
+        # temp = []
+        # for i, snt in enumerate(out['sentences']):
+        #     temp.extend(snt['tokens'])
+        # template = ' '.join(temp).replace('-LRB-', '(').replace('-RRB-', ')').strip()
 
         return text, template
 
@@ -226,26 +236,26 @@ class Preprocessing(object):
         if not os.path.exists(fname):
             os.mkdir(fname)
 
-        pre_context = '\n'.join(map(lambda x: x['pre_context'], instances)).encode('utf-8')
+        pre_context = '\n'.join(map(lambda x: x['pre_context'], instances))
         with open(os.path.join(fname, 'pre_context.txt'), 'w') as f:
             f.write(pre_context)
-        pos_context = '\n'.join(map(lambda x: x['pos_context'], instances)).encode('utf-8')
+        pos_context = '\n'.join(map(lambda x: x['pos_context'], instances))
         with open(os.path.join(fname, 'pos_context.txt'), 'w') as f:
             f.write(pos_context)
-        entity = '\n'.join(map(lambda x: x['entity'], instances)).encode('utf-8')
+        entity = '\n'.join(map(lambda x: x['entity'], instances))
         with open(os.path.join(fname, 'entity.txt'), 'w') as f:
             f.write(entity)
-        refex = '\n'.join(map(lambda x: x['refex'], instances)).encode('utf-8')
+        refex = '\n'.join(map(lambda x: x['refex'], instances))
         with open(os.path.join(fname, 'refex.txt'), 'w') as f:
             f.write(refex)
         size = '\n'.join(map(lambda x: str(x['size']), instances))
         with open(os.path.join(fname, 'size.txt'), 'w') as f:
             f.write(size)
-        info = '\n'.join(info).encode('utf-8')
+        info = '\n'.join(info)
         with open(os.path.join(fname, 'info.txt'), 'w') as f:
             f.write(info)
 
-        p.dump(instances, open(os.path.join(fname, 'data.cPickle'), 'w'))
+        json.dump(instances, open(os.path.join(fname, 'data.json'), 'w'))
 
 
     def get_reference_info(self, template, tag):
@@ -256,18 +266,21 @@ class Preprocessing(object):
         :param entity: wikipedia id
         :return:
         '''
-        out = self.parser.parse_doc(template)['sentences']
+        props = {'annotators': 'tokenize,ssplit,pos,depparse','pipelineLanguage':'en','outputFormat':'json'}
+
+        out = self.corenlp.annotate(template.strip(), properties=props)
+        out = json.loads(out)
+
         reference = {'syntax':'', 'sentence':-1, 'pos':-1, 'general_pos':-1, 'tag':tag}
         general_pos = 0
-        for i, snt in enumerate(out):
-            deps = snt['deps_cc']
-            for dep in deps:
+        for i, snt in enumerate(out['sentences']):
+            for token in snt['enhancedDependencies']:
                 # get syntax
-                if snt['tokens'][dep[2]] == tag:
-                    reference = {'syntax':'', 'sentence':i, 'pos':dep[2], 'general_pos':general_pos+dep[2], 'tag':tag}
-                    if 'nsubj' in dep[0] or 'nsubjpass' in dep[0]:
+                if token['dependentGloss'] == tag:
+                    reference = {'syntax':'', 'sentence':i, 'pos':int(token['dependent']), 'general_pos':general_pos+int(token['dependent']), 'tag':tag}
+                    if 'nsubj' in token['dep'] or 'nsubjpass' in token['dep']:
                         reference['syntax'] = 'np-subj'
-                    elif 'nmod:poss' in dep[0] or 'compound' in dep[0]:
+                    elif 'nmod:poss' in token['dep'] or 'compound' in token['dep']:
                         reference['syntax'] = 'subj-det'
                     else:
                         reference['syntax'] = 'np-obj'
@@ -320,7 +333,7 @@ class Preprocessing(object):
 
         pre_context = ' '.join(['EOS'] + pre_context)
         pos_context = ' '.join(pos_context + ['EOS'])
-        for tag, entity in entity_map.iteritems():
+        for tag in entity_map:
             # pre_context = pre_context.replace(tag, entity_map[tag])
             # pos_context = pos_context.replace(tag, entity_map[tag])
             pre_context = pre_context.replace(tag, '_'.join(entity_map[tag].replace('\"', '').replace('\'', '').lower().split()))
@@ -452,12 +465,18 @@ class Preprocessing(object):
         return data, input_vocab, output_vocab, character_vocab
 
 if __name__ == '__main__':
-    TRAIN_PATH = 'webnlg/delexicalized/train'
-    TRAIN_DEV = 'webnlg/delexicalized/dev'
+    parser = argparse.ArgumentParser(description='Preprocessing train, dev and test sets.')
+    parser.add_argument('in_path', help='directory for the delexicalized WebNLG dataset')
+    parser.add_argument('out_path', help='path to write the result')
+    parser.add_argument('stanford_path', help='path to the StanfordCoreNLP software (https://stanfordnlp.github.io/CoreNLP/)')
 
-    VOCAB_PATH = 'data/'
-    TRAIN_REFEX_PATH = 'data/train'
-    DEV_REFEX_PATH = 'data/dev'
-    TEST_REFEX_PATH = 'data/test'
-
-    Preprocessing(TRAIN_PATH, TRAIN_DEV, VOCAB_PATH, TRAIN_REFEX_PATH, DEV_REFEX_PATH, TEST_REFEX_PATH)
+    args = parser.parse_args()
+    try:
+        IN_PATH = args.in_path
+        OUT_PATH = args.out_path
+        STANFORD_PATH=args.stanford_path
+    except:
+        IN_PATH = 'webnlg/delexicalized'
+        OUT_PATH='data/'
+        STANFORD_PATH=r'/home/tcastrof/workspace/stanford/stanford-corenlp-full-2018-02-27'
+    Preprocessing(in_file=IN_PATH, out_file=OUT_PATH, stanford_path=STANFORD_PATH)
