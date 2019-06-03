@@ -16,11 +16,11 @@ Description:
         OUT_FILE: path to save results
 """
 
-import cPickle as p
+import json
 
 class OnlyNames():
     def __init__(self, in_file, out_file):
-        self.references = p.load(open(in_file))
+        self.references = json.load(open(in_file))
         self.out_file = out_file
 
         self.run()
@@ -36,11 +36,11 @@ class OnlyNames():
 
             results.append({'y_real':refex, 'y_pred':output})
 
-        p.dump(results, open(self.out_file, 'w'))
+        json.dump(results, open(self.out_file, 'w'))
 
 
 if __name__ == '__main__':
-    IN_FILE = 'data/test/data.cPickle'
-    OUT_FILE = 'onlynames.cPickle'
+    IN_FILE = 'data/test/data.json'
+    OUT_FILE = 'onlynames.json'
 
     b = OnlyNames(in_file=IN_FILE, out_file=OUT_FILE)

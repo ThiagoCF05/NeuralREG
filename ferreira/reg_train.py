@@ -18,11 +18,12 @@ Description:
 """
 
 import cPickle as p
+import json
 import nltk
 import sys
 sys.path.append('../')
 
-TRAIN_REFEX_PATH = '../data/train/data.cPickle'
+TRAIN_REFEX_PATH = '../data/train/data.json'
 MODEL_PATH = 'reg.cPickle'
 
 lemma = {
@@ -35,7 +36,7 @@ lemma = {
 pronouns, names, descriptions, demonstratives = {}, {}, {}, {}
 
 # References extracted on preprocessing
-references = p.load(open(TRAIN_REFEX_PATH))
+references = json.load(open(TRAIN_REFEX_PATH))
 
 # Retrieve all wiki entities and normalize their names
 entities = set()
