@@ -1,3 +1,4 @@
+
 # Created by https://www.gitignore.io/api/python,pycharm
 # Edit at https://www.gitignore.io/?templates=python,pycharm
 
@@ -6,13 +7,14 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
 .idea/**/modules.xml
-.idea/nlptoolbox.iml
+.idea/NeuralREG.iml
 
 # Generated files
 .idea/**/contentModel.xml
