@@ -594,7 +594,7 @@ if __name__ == '__main__':
     ]
 
     # DIRECTORY TO SAVE RESULTS AND TRAINED MODELS
-    FDIR = 'data/att'
+    FDIR = 'data/v1.0/att'
     if not os.path.exists(FDIR):
         os.mkdir(FDIR)
 
