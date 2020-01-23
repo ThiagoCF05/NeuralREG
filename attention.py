@@ -115,7 +115,6 @@ class Attention:
         self.copy_decoder = self.model.add_parameters((1, self.STATE_SIZE * self.LSTM_NUM_OF_LAYERS * 2))
         self.copy_context = self.model.add_parameters((1, self.STATE_SIZE * 4))
         self.copy_b = self.model.add_parameters((1))
-        # self.copy_entity = entity embedding or -- second thoughts: entity separated from the context?
         self.copy_entity = self.model.add_parameters((1, self.STATE_SIZE * 2))
 
         # SOFTMAX
@@ -132,19 +131,6 @@ class Attention:
                 sentence.append(self.input2int[self.EOS])
 
         return [self.input_lookup[char] for char in sentence]
-
-    def embed_entity(self, entity):
-        _entity = entity.replace('\"', '').replace('\'', '').replace(',', '').split('_')
-        entity = []
-
-        for w in _entity:
-            try:
-                entity.append(self.input2int[w])
-            except:
-                entity.append(self.input2int[self.EOS])
-
-        # Look at WebNLG and get the id
-        return [self.input_lookup[char] for char in entity]
 
     def run_lstm(self, init_state, input_vecs):
         s = init_state
@@ -183,15 +169,18 @@ class Attention:
         context = h * att_weights
         return context, att_weights
 
-    def copy(self, x, decoder_state, context, entity):
+    def copy(self, x, decoder_state, entity):
+        state = dy.concatenate(list(decoder_state.s()))
+        return dy.logistic((self.copy_entity * entity) + (self.copy_decoder * state) + (self.copy_x * x) + self.copy_b)[0]
+
+    def copy_with_context(self, x, decoder_state, context, entity):
         state = dy.concatenate(list(decoder_state.s()))
         return dy.logistic((self.copy_context * context) + (self.copy_entity * entity) + (self.copy_decoder * state) + (self.copy_x * x) + self.copy_b)[0]
 
     def decode(self, pre_encoded, pos_encoded, entity_encoded, output, entity):
-        # nex_snt = list(output)
-        # output = [self.output2int[c] for c in nex_snt]
         output = list(output)
         output = [self.output2int[c] for c in output]
+        _entity = entity.replace('\"', '').replace('\'', '').replace(',', '').lower().split('_')
 
         w = dy.parameter(self.decoder_w)
         b = dy.parameter(self.decoder_b)
@@ -223,10 +212,9 @@ class Attention:
             attention_pos, attention_w_pos = self.attend(h_pos, s, w1dt_pos, self.attention_w2_pos, self.attention_v_pos)
             attention_entity, attention_w_entity = self.attend(h_entity, s, w1dt_entity, self.attention_w2_entity, self.attention_v_entity)
 
-            p_gen = self.copy(last_output_embeddings, s, dy.concatenate([attention_pre, attention_pos]), attention_entity)
+            p_gen = self.copy(last_output_embeddings, s, attention_entity)
 
             entity_prob = dy.scalarInput(0)
-            _entity = entity.replace('\"', '').replace('\'', '').replace(',', '').lower().split('_')
             lookup_word = self.int2output[word].lower()
             if lookup_word in _entity:
                 idx = _entity.index(lookup_word)
@@ -252,7 +240,7 @@ class Attention:
         embedded = self.embed_sentence(pos_context)
         pos_encoded = self.encode_sentence(self.encpos_fwd_lstm, self.encpos_bwd_lstm, embedded)
 
-        embedded = self.embed_entity(entity)
+        embedded = self.embed_sentence(entity.replace('\"', '').replace('\'', '').replace(',', '').split('_'))
         entity_encoded = self.encode_sentence(self.encentity_fwd_lstm, self.encentity_bwd_lstm, embedded)
 
         w = dy.parameter(self.decoder_w)
@@ -292,8 +280,7 @@ class Attention:
             attention_entity, attention_w_entity = self.attend(h_entity, s, w1dt_entity, self.attention_w2_entity,
                                               self.attention_v_entity)
 
-            p_gen = self.copy(last_output_embeddings, s, dy.concatenate([attention_pre, attention_pos]),
-                              attention_entity)
+            p_gen = self.copy(last_output_embeddings, s, attention_entity)
 
             input_probs = dy.cmult(attention_w_pre, 1 - p_gen).vec_value()
             input_prob_max = max(input_probs)
@@ -336,7 +323,7 @@ class Attention:
         embedded = self.embed_sentence(pos_context)
         pos_encoded = self.encode_sentence(self.encpos_fwd_lstm, self.encpos_bwd_lstm, embedded)
 
-        embedded = self.embed_entity(entity)
+        embedded = self.embed_sentence(entity.replace('\"', '').replace('\'', '').replace(',', '').split('_'))
         entity_encoded = self.encode_sentence(self.encentity_fwd_lstm, self.encentity_bwd_lstm, embedded)
 
         w = dy.parameter(self.decoder_w)
@@ -383,7 +370,7 @@ class Attention:
                     attention_pos, attention_w_pos = self.attend(h_pos, candidate['s'], w1dt_pos, self.attention_w2_pos, self.attention_v_pos)
                     attention_entity, attention_w_entity = self.attend(h_entity, candidate['s'], w1dt_entity, self.attention_w2_entity, self.attention_v_entity)
 
-                    p_gen = self.copy(last_output_embeddings, s, dy.concatenate([attention_pre, attention_pos]), attention_entity)
+                    p_gen = self.copy(last_output_embeddings, s, attention_entity)
 
                     last_output_embeddings = self.output_lookup[self.output2int[candidate['sentence'][-1]]]
                     vector = dy.concatenate([attention_pre, attention_pos, attention_entity, last_output_embeddings, entity_embedding])
@@ -431,7 +418,7 @@ class Attention:
         embedded = self.embed_sentence(pos_context)
         pos_encoded = self.encode_sentence(self.encpos_fwd_lstm, self.encpos_bwd_lstm, embedded)
 
-        embedded = self.embed_entity(entity)
+        embedded = self.embed_sentence(entity.replace('\"', '').replace('\'', '').replace(',', '').split('_'))
         entity_encoded = self.encode_sentence(self.encentity_fwd_lstm, self.encentity_bwd_lstm, embedded)
 
         return self.decode(pre_encoded, pos_encoded, entity_encoded, refex, entity)
