@@ -121,6 +121,7 @@ class Attention:
         self.copy_decoder = self.model.add_parameters((1, self.config.state_dim * self.config.lstm_depth * 2))
         self.copy_context = self.model.add_parameters((1, self.config.state_dim * 4))
         self.copy_b = self.model.add_parameters((1))
+
         # self.copy_entity = entity embedding or -- second thoughts: entity separated from the context?
         self.copy_entity = self.model.add_parameters((1, self.config.state_dim * 2))
 
@@ -173,15 +174,18 @@ class Attention:
         context = h * att_weights
         return context, att_weights
 
-    def copy(self, x, decoder_state, context, entity):
+    def copy(self, x, decoder_state, entity):
+        state = dy.concatenate(list(decoder_state.s()))
+        return dy.logistic((self.copy_entity * entity) + (self.copy_decoder * state) + (self.copy_x * x) + self.copy_b)[0]
+
+    def copy_with_context(self, x, decoder_state, context, entity):
         state = dy.concatenate(list(decoder_state.s()))
         return dy.logistic((self.copy_context * context) + (self.copy_entity * entity) + (self.copy_decoder * state) + (self.copy_x * x) + self.copy_b)[0]
 
     def decode(self, pre_encoded, pos_encoded, entity_encoded, output, entity):
-        # nex_snt = list(output)
-        # output = [self.output2int[c] for c in nex_snt]
         output = list(output)
         output = [self.output2int[c] for c in output]
+        _entity = entity.replace('\"', '').replace('\'', '').replace(',', '').lower().split('_')
 
         h_pre = dy.concatenate_cols(pre_encoded)
         w1dt_pre = None
@@ -206,7 +210,7 @@ class Attention:
             attention_pos, _ = self.attend(h_pos, s, w1dt_pos, self.attention_w2_pos, self.attention_v_pos)
             attention_entity, att_weights = self.attend(h_entity, s, w1dt_entity, self.attention_w2_entity, self.attention_v_entity)
 
-            p_gen = self.copy(last_output_embeddings, s, dy.concatenate([attention_pre, attention_pos]), attention_entity)
+            p_gen = self.copy(last_output_embeddings, s, attention_entity)
 
             entity_prob = dy.scalarInput(0)
             lookup_word = self.int2output[word].lower()
@@ -265,8 +269,7 @@ class Attention:
             attention_entity, att_weights = self.attend(h_entity, s, w1dt_entity, self.attention_w2_entity,
                                               self.attention_v_entity)
 
-            p_gen = self.copy(last_output_embeddings, s, dy.concatenate([attention_pre, attention_pos]),
-                              attention_entity)
+            p_gen = self.copy(last_output_embeddings, s, attention_entity)
 
             input_probs = dy.cmult(att_weights, 1 - p_gen).vec_value()
             input_prob_max = max(input_probs)
@@ -352,7 +355,7 @@ class Attention:
                     except:
                         last_output_embeddings = self.output_lookup[self.output2int[self.EOS]]
 
-                    p_gen = self.copy(last_output_embeddings, s, dy.concatenate([attention_pre, attention_pos]), attention_entity)
+                    p_gen = self.copy(last_output_embeddings, s, attention_entity)
 
                     # INPUT WORDS
                     input_probs = dy.cmult(att_weights, 1 - p_gen).vec_value()
@@ -575,7 +578,7 @@ if __name__ == '__main__':
     }
 
     # DIRECTORY TO SAVE RESULTS AND TRAINED MODELS
-    FDIR = 'data/att'
+    FDIR = 'data/v1.0/att'
     if not os.path.exists(FDIR):
         os.mkdir(FDIR)
 

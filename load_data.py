@@ -18,12 +18,12 @@ Description:
 import os
 
 # PATH FOR VOCABULARY
-VOCAB_PATH = 'data/'
+VOCAB_PATH = 'data/v1.0/'
 
 # PATH FOR REFERRING EXPRESSION COLLECTIONS
-TRAIN_REFEX_PATH = 'data/train'
-DEV_REFEX_PATH = 'data/dev'
-TEST_REFEX_PATH = 'data/test'
+TRAIN_REFEX_PATH = 'data/v1.0/train'
+DEV_REFEX_PATH = 'data/v1.0/dev'
+TEST_REFEX_PATH = 'data/v1.0/test'
 
 def load(fpre_context, fpos_context, fentity, frefex, fsize, character):
     with open(fpre_context) as f:

@@ -29,9 +29,9 @@ TRAIN_FILE = '../annotation/final/train'
 DEV_FILE = '../annotation/final/dev'
 
 # PATH FOR REFERRING EXPRESSION COLLECTIONS
-TRAIN_REFEX_FILE = '../data/train/data.cPickle'
-DEV_REFEX_FILE = '../data/dev/data.cPickle'
-TEST_REFEX_FILE = '../data/test/data.cPickle'
+TRAIN_REFEX_FILE = '../data/v1.0/train/data.cPickle'
+DEV_REFEX_FILE = '../data/v1.0/dev/data.cPickle'
+TEST_REFEX_FILE = '../data/v1.0/test/data.cPickle'
 
 def corpus_info():
     '''

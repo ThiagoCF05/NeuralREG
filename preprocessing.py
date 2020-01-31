@@ -476,7 +476,7 @@ if __name__ == '__main__':
         OUT_PATH = args.out_path
         STANFORD_PATH=args.stanford_path
     except:
-        IN_PATH = 'webnlg/delexicalized'
+        IN_PATH = 'webnlg/dependencies/delexicalized'
         OUT_PATH='data/'
         STANFORD_PATH=r'/home/tcastrof/workspace/stanford/stanford-corenlp-full-2018-02-27'
     Preprocessing(in_file=IN_PATH, out_file=OUT_PATH, stanford_path=STANFORD_PATH)
