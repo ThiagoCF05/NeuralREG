@@ -25,6 +25,7 @@ TRAIN_REFEX_PATH = 'data/v1.0/train'
 DEV_REFEX_PATH = 'data/v1.0/dev'
 TEST_REFEX_PATH = 'data/v1.0/test'
 
+
 def load(fpre_context, fpos_context, fentity, frefex, fsize, character):
     with open(fpre_context) as f:
         pre_context = map(lambda x: x.split(), f.read().split('\n'))
@@ -45,12 +46,13 @@ def load(fpre_context, fpos_context, fentity, frefex, fsize, character):
         size = f.read().split('\n')
 
     return {
-        'pre_context':list(pre_context),
-        'pos_context':list(pos_context),
-        'entity':list(entity),
-        'refex':list(refex),
-        'size':list(size)
+        'pre_context': list(pre_context),
+        'pos_context': list(pos_context),
+        'entity': list(entity),
+        'refex': list(refex),
+        'size': list(size)
     }
+
 
 def run(character=False):
     # VOCABULARY
@@ -63,7 +65,7 @@ def run(character=False):
     else:
         with open(os.path.join(VOCAB_PATH, 'output_vocab.txt')) as f:
             output_vocab = f.read().split('\n')
-    vocab = {'input':input_vocab, 'output':output_vocab}
+    vocab = {'input': input_vocab, 'output': output_vocab}
 
     # TRAINSET
     fprecontext = os.path.join(TRAIN_REFEX_PATH, 'pre_context.txt')
