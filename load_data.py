@@ -1,5 +1,7 @@
 __author__ = 'thiagocastroferreira'
 
+import json
+
 """
 Author: Thiago Castro Ferreira
 Date: 12/12/2017
@@ -67,6 +69,10 @@ def run(character=False):
             output_vocab = f.read().split('\n')
     vocab = {'input': input_vocab, 'output': output_vocab}
 
+    # ENTITY INFORMATION
+    entity_types = json.load(open(os.path.join(VOCAB_PATH, 'entity_types.json')))
+    entity_gender = json.load(open(os.path.join(VOCAB_PATH, 'gender.json')))
+
     # TRAINSET
     fprecontext = os.path.join(TRAIN_REFEX_PATH, 'pre_context.txt')
     fposcontext = os.path.join(TRAIN_REFEX_PATH, 'pos_context.txt')
@@ -91,4 +97,17 @@ def run(character=False):
     fsize = os.path.join(TEST_REFEX_PATH, 'size.txt')
     testset = load(fprecontext, fposcontext, fentity, frefex, fsize, character)
 
-    return vocab, trainset, devset, testset
+    return vocab, entity_types, entity_gender, trainset, devset, testset
+
+
+def run_json(path):
+    vocab = json.load(open(os.path.join(path, 'vocab.json')))
+    trainset = json.load(open(os.path.join(path, 'train.json')))
+    devset = json.load(open(os.path.join(path, 'dev.json')))
+    testset = json.load(open(os.path.join(path, 'test.json')))
+
+    # ENTITY INFORMATION
+    entity_types = json.load(open(os.path.join(path, 'entity_types.json')))
+    entity_gender = json.load(open(os.path.join(path, 'gender.json')))
+
+    return vocab, entity_types, entity_gender, trainset, devset, testset
