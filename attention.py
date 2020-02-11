@@ -1,5 +1,7 @@
 __author__ = 'thiagocastroferreira'
 
+import utils
+
 """
 Author: Thiago Castro Ferreira
 Date: 25/11/2017
@@ -20,7 +22,7 @@ Description:
             BEAM_SIZE: beam search size
 
         train()
-            :param fdir
+            :param path
                 Directory to save best results and model
 
     PYTHON VERSION: 3
@@ -30,7 +32,7 @@ Description:
         NumPy: http://www.numpy.org/
 
     UPDATE CONSTANTS:
-        FDIR: directory to save results and trained models
+        PATH: directory to save results and trained models
 """
 
 import dynet as dy
@@ -55,11 +57,14 @@ class Config:
 
 class Attention:
     def __init__(self, config, path):
+        self.path = path
+        self.write_path = utils.get_log_path(path, 'att')  # Directory to save results and trained models
+
         self.config = Config(config=config)
         self.character = False
 
         self.EOS = "eos"
-        self.vocab, self.entity_types, self.entity_gender, self.trainset, self.devset, self.testset = load_data.run_json(path)
+        self.vocab, self.entity_types, self.entity_gender, self.trainset, self.devset, self.testset = load_data.run_json(self.path)
 
         self.input_vocab = self.vocab['input']
         self.output_vocab = self.vocab['output']
@@ -70,11 +75,9 @@ class Attention:
         self.int2output = list(self.output_vocab)
         self.output2int = {c: i for i, c in enumerate(self.output_vocab)}
 
-        # ENTITY
         self.int2entity = list(self.entity_types)
         self.entity2int = {c: i for i, c in enumerate(self.entity_types)}
 
-        # ENTITY INFORMATION
         self.types = list(set(self.entity_types.values()))
         self.gender = list(set(self.entity_gender.values()))
         self.entity2type = [self.types.index(t) for t in self.entity_types.values()]
@@ -87,7 +90,8 @@ class Attention:
 
         self.INPUT_VOCAB_SIZE = len(self.input_vocab)
         self.OUTPUT_VOCAB_SIZE = len(self.output_vocab)
-        self.ENTITY_INFO_SIZE = len(self.entity_types)
+        self.ENTITY_TYPES_SIZE = len(self.entity_types)
+        self.ENTITY_GENDER_SIZE = len(self.entity_gender)
 
         self.model = dy.Model()
 
@@ -114,8 +118,8 @@ class Attention:
         # EMBEDDINGS
         self.input_lookup = self.model.add_lookup_parameters((self.INPUT_VOCAB_SIZE, self.config.embedding_dim))
         self.output_lookup = self.model.add_lookup_parameters((self.OUTPUT_VOCAB_SIZE, self.config.embedding_dim))
-        self.entity_type_lookup = self.model.add_lookup_parameters((self.ENTITY_INFO_SIZE, self.config.embedding_dim))
-        self.entity_gender_lookup = self.model.add_lookup_parameters((self.ENTITY_INFO_SIZE, self.config.embedding_dim))
+        self.entity_type_lookup = self.model.add_lookup_parameters((self.ENTITY_TYPES_SIZE, self.config.embedding_dim))
+        self.entity_gender_lookup = self.model.add_lookup_parameters((self.ENTITY_GENDER_SIZE, self.config.embedding_dim))
 
         # ATTENTION
         self.attention_w1_pre = self.model.add_parameters((self.config.attention_dim, self.config.state_dim * 2))
@@ -212,8 +216,12 @@ class Attention:
         w1dt_entity = None
 
         last_output_embeddings = self.output_lookup[self.output2int[self.EOS]]
-        entity_type_embedding = self.entity_type_lookup[self.entity2type[self.entity2int[entity]]]
-        entity_gender_embedding = self.entity_gender_lookup[self.entity2gender[self.entity2int[entity]]]
+
+        entity_type = self.entity2type[self.entity2int[entity]]
+        entity_type_embedding = self.entity_type_lookup[entity_type]
+
+        entity_gender = self.entity2gender[self.entity2int[entity]]
+        entity_gender_embedding = self.entity_gender_lookup[entity_gender]
 
         s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.config.state_dim * 6), last_output_embeddings, entity_type_embedding, entity_gender_embedding]))
         loss = []
@@ -269,8 +277,14 @@ class Attention:
         w1dt_entity = None
 
         last_output_embeddings = self.output_lookup[self.output2int[self.EOS]]
-        s = self.dec_lstm.initial_state().add_input(
-            dy.concatenate([dy.vecInput(self.config.state_dim * 6), last_output_embeddings]))
+
+        entity_type = self.entity2type[self.entity2int[entity]]
+        entity_type_embedding = self.entity_type_lookup[entity_type]
+
+        entity_gender = self.entity2gender[self.entity2int[entity]]
+        entity_gender_embedding = self.entity_gender_lookup[entity_gender]
+
+        s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.config.state_dim * 6), last_output_embeddings, entity_type_embedding, entity_gender_embedding]))
 
         out = []
         count_EOS = 0
@@ -292,7 +306,7 @@ class Attention:
             input_prob_max = max(input_probs)
             input_next_word = input_probs.index(input_prob_max)
 
-            vector = dy.concatenate([attention_pre, attention_pos, attention_entity, last_output_embeddings])
+            vector = dy.concatenate([attention_pre, attention_pos, attention_entity, last_output_embeddings, entity_type_embedding, entity_gender_embedding])
             s = s.add_input(vector)
             out_vector = self.decoder_w * s.output() + self.decoder_b
             probs = dy.cmult(dy.softmax(out_vector), p_gen).vec_value()
@@ -343,7 +357,13 @@ class Attention:
 
         last_output_embeddings = self.output_lookup[self.output2int[self.EOS]]
 
-        s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.config.state_dim * 6), last_output_embeddings]))
+        entity_type = self.entity2type[self.entity2int[entity]]
+        entity_type_embedding = self.entity_type_lookup[entity_type]
+
+        entity_gender = self.entity2gender[self.entity2int[entity]]
+        entity_gender_embedding = self.entity_gender_lookup[entity_gender]
+
+        s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.config.state_dim * 6), last_output_embeddings, entity_type_embedding, entity_gender_embedding]))
         candidates = [{'sentence': [self.EOS], 'prob': 0.0, 'count_EOS': 0, 's': s}]
         outputs = []
 
@@ -354,18 +374,16 @@ class Attention:
             for candidate in candidates:
                 if candidate['count_EOS'] == 2:
                     outputs.append(candidate)
-
-                    if len(outputs) == self.config.beam: break
+                    if len(outputs) == self.config.beam:
+                        break
                 else:
                     # w1dt can be computed and cached once for the entire decoding phase
                     w1dt_pre = w1dt_pre or self.attention_w1_pre * h_pre
                     w1dt_pos = w1dt_pos or self.attention_w1_pos * h_pos
                     w1dt_entity = w1dt_entity or self.attention_w1_entity * h_entity
 
-                    attention_pre, _ = self.attend(h_pre, candidate['s'], w1dt_pre, self.attention_w2_pre,
-                                                   self.attention_v_pre)
-                    attention_pos, _ = self.attend(h_pos, candidate['s'], w1dt_pos, self.attention_w2_pos,
-                                                   self.attention_v_pos)
+                    attention_pre, _ = self.attend(h_pre, candidate['s'], w1dt_pre, self.attention_w2_pre, self.attention_v_pre)
+                    attention_pos, _ = self.attend(h_pos, candidate['s'], w1dt_pos, self.attention_w2_pos, self.attention_v_pos)
                     attention_entity, att_weights = self.attend(h_entity, candidate['s'], w1dt_entity, self.attention_w2_entity, self.attention_v_entity)
 
                     try:
@@ -381,7 +399,7 @@ class Attention:
                                         for e in sorted(input_probs, reverse=True)]
 
                     # VOCABULARY WORDS
-                    vector = dy.concatenate([attention_pre, attention_pos, attention_entity, last_output_embeddings])
+                    vector = dy.concatenate([attention_pre, attention_pos, attention_entity, last_output_embeddings, entity_type_embedding, entity_gender_embedding])
                     s = candidate['s'].add_input(vector)
                     out_vector = self.decoder_w * s.output() + self.decoder_b
                     probs = dy.cmult(dy.softmax(out_vector), p_gen).vec_value()
@@ -393,8 +411,7 @@ class Attention:
                     vocab_next_words = [{'prob': e, 'word': self.int2output[probs.index(e)]}
                                         for e in sorted(probs, reverse=True)]
 
-                    next_words = sorted(input_next_words + vocab_next_words, key=lambda x: x['prob'], reverse=True)[
-                        self.config.beam]
+                    next_words = [sorted(input_next_words + vocab_next_words, key=lambda x: x['prob'], reverse=True)[self.config.beam]]
                     for next_word in next_words:
                         word = next_word['word']
 
@@ -559,17 +576,11 @@ class Attention:
             if best_acc == 0.0 or acc > best_acc:
                 best_acc = acc
 
-                # fresults = os.path.join(fdir, 'results')
-                # if not os.path.exists(fresults):
-                #     os.mkdir(fresults)
-                # fname = 'dev_best'
-                # self.write(os.path.join(fresults, fname), outputs)
-                #
-                # fmodels = os.path.join(fdir, 'models')
-                # if not os.path.exists(fmodels):
-                #     os.mkdir(fmodels)
-                # fname = 'best'
-                # self.model.save(os.path.join(fmodels, fname))
+                results_path = utils.get_log_path(self.write_path, 'results', 'dev_best')
+                self.write(results_path, outputs)
+
+                model_path = utils.get_log_path(self.write_path, 'models', 'best')
+                self.model.save(model_path)
 
                 repeat = 0
             else:
@@ -579,9 +590,8 @@ class Attention:
             if repeat == self.config.early_stop:
                 break
 
-        # fmodels = os.path.join(fdir, 'models')
-        # fname = 'model'
-        # self.model.save(os.path.join(fmodels, fname))
+        model_path = utils.get_log_path(self.write_path, 'models', 'model')
+        self.model.save(model_path)
 
 
 if __name__ == '__main__':
@@ -598,13 +608,8 @@ if __name__ == '__main__':
         'EARLY_STOP': 10
     }
 
-    # DIRECTORY TO SAVE RESULTS AND TRAINED MODELS
-    FDIR = 'data/v1.5/att'
-    if not os.path.exists(FDIR):
-        os.mkdir(FDIR)
-
-    path = 'data/v1.5/'
-    h = Attention(config=config, path=path)
+    PATH = 'data/v1.5/'
+    h = Attention(config=config, path=PATH)
     h.train()
 
 
