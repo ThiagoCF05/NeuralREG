@@ -36,6 +36,7 @@ Description:
 """
 
 import dynet as dy
+import json
 import load_data
 import numpy as np
 import os
@@ -54,44 +55,94 @@ class Config:
         self.early_stop = config['EARLY_STOP']
         self.epochs = config['EPOCHS']
 
+class Logger:
+    def __init__(self, result_path, model_path):
+        if not os.path.exists(result_path):
+            os.mkdir(result_path)
+
+        self.result_path = result_path
+        self.model_path = model_path
+
+    def save_result(self, fname, results, beam):
+        for i in range(beam):
+            f = open(os.path.join(self.result_path, fname + '_' + str(i+1)), 'w')
+            for output in results:
+                if i < len(output):
+                    f.write(output[i])
+                f.write('\n')
+            f.close()
+
 
 class Attention:
-    def __init__(self, config, path):
+    def __init__(self, config, path, logger):
         self.path = path
         self.write_path = utils.get_log_path(path, 'att')  # Directory to save results and trained models
 
+        self.logger = logger
         self.config = Config(config=config)
         self.character = False
 
         self.EOS = "eos"
         self.vocab, self.entity_types, self.entity_gender, self.trainset, self.devset, self.testset = load_data.run_json(self.path)
 
-        self.input_vocab = self.vocab['input']
-        self.output_vocab = self.vocab['output']
-
-        self.int2input = list(self.input_vocab)
-        self.input2int = {c: i for i, c in enumerate(self.input_vocab)}
-
-        self.int2output = list(self.output_vocab)
-        self.output2int = {c: i for i, c in enumerate(self.output_vocab)}
-
-        self.int2entity = list(self.entity_types)
-        self.entity2int = {c: i for i, c in enumerate(self.entity_types)}
-
-        self.types = list(set(self.entity_types.values()))
-        self.gender = list(set(self.entity_gender.values()))
-        self.entity2type = [self.types.index(t) for t in self.entity_types.values()]
-        self.entity2gender = [self.gender.index(g) for g in self.entity_gender.values()]
-
+        self.build_vocab()
         self.init()
+
+    def build_vocab(self):
+        vocab_path = os.path.join(self.path, 'new_vocab.json')
+        if not os.path.exists(vocab_path):
+            self.vocab = []
+            for i, row in enumerate(self.trainset):
+                pre_context = [self.EOS] + row['pre_context']
+                pos_context = row['pos_context'] + [self.EOS]
+                refex = [self.EOS] + row['refex'] + [self.EOS]
+                entity = row['entity']
+                entity_tokens = entity.replace('\"', '').replace('\'', '').replace(',', '').split('_')
+
+                self.vocab.extend(pre_context)
+                self.vocab.extend(pos_context)
+                self.vocab.extend(refex)
+                self.vocab.append(entity)
+                self.vocab.extend(entity_tokens)
+
+            for i, row in enumerate(self.devset):
+                pre_context = [self.EOS] + row['pre_context']
+                pos_context = row['pos_context'] + [self.EOS]
+                refex = [self.EOS] + row['refex'] + [self.EOS]
+                entity = row['entity']
+                entity_tokens = entity.replace('\"', '').replace('\'', '').replace(',', '').split('_')
+
+                self.vocab.extend(pre_context)
+                self.vocab.extend(pos_context)
+                self.vocab.extend(refex)
+                self.vocab.append(entity)
+                self.vocab.extend(entity_tokens)
+
+            _types = self.entity_types.values()
+            self.vocab.extend(_types)
+            gender = self.entity_gender.values()
+            self.vocab.extend(gender)
+
+            self.vocab = list(set(self.vocab))
+            self.int2token = list(self.vocab)
+            self.token2int = {c: i for i, c in enumerate(self.vocab)}
+
+            general_vocab = {
+                'vocab': self.vocab,
+                'int2token': self.int2token,
+                'token2int': self.token2int
+            }
+            json.dump(general_vocab, open(vocab_path, 'w'))
+        else:
+            general_vocab = json.load(open(vocab_path))
+            self.vocab = general_vocab['vocab']
+            self.int2token = general_vocab['int2token']
+            self.token2int = general_vocab['token2int']
 
     def init(self):
         dy.renew_cg()
 
-        self.INPUT_VOCAB_SIZE = len(self.input_vocab)
-        self.OUTPUT_VOCAB_SIZE = len(self.output_vocab)
-        self.ENTITY_TYPES_SIZE = len(self.entity_types)
-        self.ENTITY_GENDER_SIZE = len(self.entity_gender)
+        self.VOCAB_SIZE = len(self.vocab)
 
         self.model = dy.Model()
 
@@ -116,10 +167,7 @@ class Attention:
         self.dec_lstm.set_dropout(self.config.dropout)
 
         # EMBEDDINGS
-        self.input_lookup = self.model.add_lookup_parameters((self.INPUT_VOCAB_SIZE, self.config.embedding_dim))
-        self.output_lookup = self.model.add_lookup_parameters((self.OUTPUT_VOCAB_SIZE, self.config.embedding_dim))
-        self.entity_type_lookup = self.model.add_lookup_parameters((self.ENTITY_TYPES_SIZE, self.config.embedding_dim))
-        self.entity_gender_lookup = self.model.add_lookup_parameters((self.ENTITY_GENDER_SIZE, self.config.embedding_dim))
+        self.lookup = self.model.add_lookup_parameters((self.VOCAB_SIZE, self.config.embedding_dim))
 
         # ATTENTION
         self.attention_w1_pre = self.model.add_parameters((self.config.attention_dim, self.config.state_dim * 2))
@@ -144,19 +192,19 @@ class Attention:
         self.copy_entity = self.model.add_parameters((1, self.config.state_dim * 2))
 
         # SOFTMAX
-        self.decoder_w = self.model.add_parameters((self.OUTPUT_VOCAB_SIZE, self.config.state_dim))
-        self.decoder_b = self.model.add_parameters((self.OUTPUT_VOCAB_SIZE))
+        self.decoder_w = self.model.add_parameters((self.VOCAB_SIZE, self.config.state_dim))
+        self.decoder_b = self.model.add_parameters((self.VOCAB_SIZE))
 
     def embed_sentence(self, sentence):
         _sentence = list(sentence)
         sentence = []
         for w in _sentence:
             try:
-                sentence.append(self.input2int[w])
+                sentence.append(self.token2int[w])
             except:
-                sentence.append(self.input2int[self.EOS])
+                sentence.append(self.token2int[self.EOS])
 
-        return [self.input_lookup[char] for char in sentence]
+        return [self.lookup[char] for char in sentence]
 
     def run_lstm(self, init_state, input_vecs):
         s = init_state
@@ -202,9 +250,9 @@ class Attention:
         return dy.logistic((self.copy_context * context) + (self.copy_entity * entity) + (self.copy_decoder * state) + (
                 self.copy_x * x) + self.copy_b)[0]
 
-    def decode(self, pre_encoded, pos_encoded, entity_encoded, output, entity, entity_tokens):
-        output = list(output)
-        output = [self.output2int[c] for c in output]
+    def decode(self, pre_encoded, pos_encoded, entity_encoded, refex, entity, entity_tokens):
+        refex = list(refex)
+        refex = [self.token2int[c] for c in refex]
 
         h_pre = dy.concatenate_cols(pre_encoded)
         w1dt_pre = None
@@ -215,18 +263,18 @@ class Attention:
         h_entity = dy.concatenate_cols(entity_encoded)
         w1dt_entity = None
 
-        last_output_embeddings = self.output_lookup[self.output2int[self.EOS]]
+        last_output_embeddings = self.lookup[self.token2int[self.EOS]]
 
-        entity_type = self.entity2type[self.entity2int[entity]]
-        entity_type_embedding = self.entity_type_lookup[entity_type]
+        entity_type = self.token2int[self.entity_types[entity]]
+        entity_type_embedding = self.lookup[entity_type]
 
-        entity_gender = self.entity2gender[self.entity2int[entity]]
-        entity_gender_embedding = self.entity_gender_lookup[entity_gender]
+        entity_gender = self.token2int[self.entity_gender[entity]]
+        entity_gender_embedding = self.lookup[entity_gender]
 
         s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.config.state_dim * 6), last_output_embeddings, entity_type_embedding, entity_gender_embedding]))
         loss = []
 
-        for word in output:
+        for word in refex:
             # w1dt can be computed and cached once for the entire decoding phase
             w1dt_pre = w1dt_pre or self.attention_w1_pre * h_pre
             w1dt_pos = w1dt_pos or self.attention_w1_pos * h_pos
@@ -239,7 +287,7 @@ class Attention:
             p_gen = self.copy(last_output_embeddings, s, attention_entity)
 
             entity_prob = dy.scalarInput(0)
-            lookup_word = self.int2output[word].lower()
+            lookup_word = self.int2token[word]
             if lookup_word in entity_tokens:
                 idx = entity_tokens.index(lookup_word)
                 entity_prob = dy.pick(att_weights, idx)
@@ -249,7 +297,7 @@ class Attention:
             out_vector = self.decoder_w * s.output() + self.decoder_b
             probs = dy.softmax(out_vector)
             context_prob = dy.pick(probs, word)
-            last_output_embeddings = self.output_lookup[word]
+            last_output_embeddings = self.lookup[word]
 
             prob = dy.cmult(p_gen, context_prob) + dy.cmult(1 - p_gen, entity_prob)
             loss.append(-dy.log(prob))
@@ -276,13 +324,13 @@ class Attention:
         h_entity = dy.concatenate_cols(entity_encoded)
         w1dt_entity = None
 
-        last_output_embeddings = self.output_lookup[self.output2int[self.EOS]]
+        last_output_embeddings = self.lookup[self.token2int[self.EOS]]
 
-        entity_type = self.entity2type[self.entity2int[entity]]
-        entity_type_embedding = self.entity_type_lookup[entity_type]
+        entity_type = self.token2int[self.entity_types[entity]]
+        entity_type_embedding = self.lookup[entity_type]
 
-        entity_gender = self.entity2gender[self.entity2int[entity]]
-        entity_gender_embedding = self.entity_gender_lookup[entity_gender]
+        entity_gender = self.token2int[self.entity_gender[entity]]
+        entity_gender_embedding = self.lookup[entity_gender]
 
         s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.config.state_dim * 6), last_output_embeddings, entity_type_embedding, entity_gender_embedding]))
 
@@ -312,8 +360,8 @@ class Attention:
             probs = dy.cmult(dy.softmax(out_vector), p_gen).vec_value()
 
             for i, token in enumerate(entity_tokens):
-                if token in self.output_vocab:
-                    probs[self.output2int[token]] += input_probs[i]
+                if token in self.vocab:
+                    probs[self.token2int[token]] += input_probs[i]
             vocab_prob_max = max(probs)
             vocab_next_word = probs.index(vocab_prob_max)
 
@@ -321,12 +369,12 @@ class Attention:
             if input_prob_max > vocab_prob_max:
                 word = entity_tokens[input_next_word]
                 try:
-                    last_output_embeddings = self.output_lookup[self.output2int[word]]
+                    last_output_embeddings = self.lookup[self.token2int[word]]
                 except:
-                    last_output_embeddings = self.output_lookup[self.output2int[self.EOS]]
+                    last_output_embeddings = self.lookup[self.token2int[self.EOS]]
             else:
-                last_output_embeddings = self.output_lookup[vocab_next_word]
-                word = self.int2output[vocab_next_word]
+                last_output_embeddings = self.lookup[vocab_next_word]
+                word = self.int2token[vocab_next_word]
 
             if word == self.EOS:
                 count_EOS += 1
@@ -355,13 +403,13 @@ class Attention:
         h_entity = dy.concatenate_cols(entity_encoded)
         w1dt_entity = None
 
-        last_output_embeddings = self.output_lookup[self.output2int[self.EOS]]
+        last_output_embeddings = self.lookup[self.token2int[self.EOS]]
 
-        entity_type = self.entity2type[self.entity2int[entity]]
-        entity_type_embedding = self.entity_type_lookup[entity_type]
+        entity_type = self.token2int[self.entity_types[entity]]
+        entity_type_embedding = self.lookup[entity_type]
 
-        entity_gender = self.entity2gender[self.entity2int[entity]]
-        entity_gender_embedding = self.entity_gender_lookup[entity_gender]
+        entity_gender = self.token2int[self.entity_gender[entity]]
+        entity_gender_embedding = self.lookup[entity_gender]
 
         s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.config.state_dim * 6), last_output_embeddings, entity_type_embedding, entity_gender_embedding]))
         candidates = [{'sentence': [self.EOS], 'prob': 0.0, 'count_EOS': 0, 's': s}]
@@ -387,9 +435,9 @@ class Attention:
                     attention_entity, att_weights = self.attend(h_entity, candidate['s'], w1dt_entity, self.attention_w2_entity, self.attention_v_entity)
 
                     try:
-                        last_output_embeddings = self.output_lookup[self.output2int[candidate['sentence'][-1]]]
+                        last_output_embeddings = self.lookup[self.token2int[candidate['sentence'][-1]]]
                     except:
-                        last_output_embeddings = self.output_lookup[self.output2int[self.EOS]]
+                        last_output_embeddings = self.lookup[self.token2int[self.EOS]]
 
                     p_gen = self.copy(last_output_embeddings, s, attention_entity)
 
@@ -405,10 +453,10 @@ class Attention:
                     probs = dy.cmult(dy.softmax(out_vector), p_gen).vec_value()
 
                     for i, token in enumerate(entity_tokens):
-                        if token in self.output_vocab:
-                            probs[self.output2int[token]] += input_probs[i]
+                        if token in self.vocab:
+                            probs[self.token2int[token]] += input_probs[i]
 
-                    vocab_next_words = [{'prob': e, 'word': self.int2output[probs.index(e)]}
+                    vocab_next_words = [{'prob': e, 'word': self.int2token[probs.index(e)]}
                                         for e in sorted(probs, reverse=True)]
 
                     next_words = [sorted(input_next_words + vocab_next_words, key=lambda x: x['prob'], reverse=True)[self.config.beam]]
@@ -460,19 +508,6 @@ class Attention:
 
         return self.decode(pre_encoded, pos_encoded, entity_encoded, refex, entity, entity_tokens)
 
-    def write(self, fname, outputs):
-        if not os.path.exists(fname):
-            os.mkdir(fname)
-
-        for i in range(self.config.beam):
-            f = open(os.path.join(fname, str(i)), 'w')
-            for output in outputs:
-                if i < len(output):
-                    f.write(output[i])
-                f.write('\n')
-
-            f.close()
-
     def validate(self):
         results = []
         num, dem = 0.0, 0.0
@@ -480,7 +515,7 @@ class Attention:
             pre_context = [self.EOS] + devinst['pre_context']
             pos_context = devinst['pos_context'] + [self.EOS]
             entity = devinst['entity']
-            entity_tokens = entity.replace('\"', '').replace('\'', '').replace(',', '').lower().split('_')
+            entity_tokens = entity.replace('\"', '').replace('\'', '').replace(',', '').split('_')
             if self.config.beam == 1:
                 outputs = [self.generate(pre_context, pos_context, entity, entity_tokens)]
             else:
@@ -509,8 +544,7 @@ class Attention:
 
         return results, num, dem
 
-    def test(self, fin, fout):
-        self.model.populate(fin)
+    def test(self):
         results = []
 
         dy.renew_cg()
@@ -519,7 +553,7 @@ class Attention:
             pos_context = testinst['pos_context'] + [self.EOS]
             # refex = [self.EOS] + testinst['refex'] + [self.EOS]
             entity = testinst['entity']
-            entity_tokens = entity.replace('\"', '').replace('\'', '').replace(',', '').lower().split('_')
+            entity_tokens = entity.replace('\"', '').replace('\'', '').replace(',', '').split('_')
 
             if self.config.beam == 1:
                 outputs = [self.generate(pre_context, pos_context, entity, entity_tokens)]
@@ -535,7 +569,9 @@ class Attention:
                 dy.renew_cg()
 
             results.append(outputs)
-        self.write(fout, results)
+
+            print("Progress: {0}".format(round(i / len(self.testset), 2)), end='\r')
+        self.logger.save_result(fname='test', results=results, beam=self.config.beam)
 
     def train(self):
         trainer = dy.AdadeltaTrainer(self.model)
@@ -550,7 +586,7 @@ class Attention:
                 pos_context = traininst['pos_context'] + [self.EOS]
                 refex = [self.EOS] + traininst['refex'] + [self.EOS]
                 entity = traininst['entity']
-                entity_tokens = entity.replace('\"', '').replace('\'', '').replace(',', '').lower().split('_')
+                entity_tokens = entity.replace('\"', '').replace('\'', '').replace(',', '').split('_')
 
                 loss = self.get_loss(pre_context, pos_context, refex, entity, entity_tokens)
                 losses.append(loss)
@@ -576,11 +612,8 @@ class Attention:
             if best_acc == 0.0 or acc > best_acc:
                 best_acc = acc
 
-                results_path = utils.get_log_path(self.write_path, 'results', 'dev_best')
-                self.write(results_path, outputs)
-
-                model_path = utils.get_log_path(self.write_path, 'models', 'best')
-                self.model.save(model_path)
+                self.logger.save_result(fname='dev_best', results=outputs, beam=self.config.beam)
+                self.model.save(self.logger.model_path)
 
                 repeat = 0
             else:
@@ -589,9 +622,6 @@ class Attention:
             # In case the accuracy does not increase in 20 epochs, break the process
             if repeat == self.config.early_stop:
                 break
-
-        model_path = utils.get_log_path(self.write_path, 'models', 'model')
-        self.model.save(model_path)
 
 
 if __name__ == '__main__':
@@ -608,9 +638,11 @@ if __name__ == '__main__':
         'EARLY_STOP': 10
     }
 
+    logger = Logger(model_path='best.dy', result_path='results/')
+
     PATH = 'data/v1.5/'
-    h = Attention(config=config, path=PATH)
+    h = Attention(config=config, path=PATH, logger=logger)
     h.train()
 
-
-
+    h.model.populate(logger.model_path)
+    h.test()
