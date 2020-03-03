@@ -157,7 +157,7 @@ def get_similar(entity_info, sparql, max_filter, limit=10):
     query = query.replace('%FILTER%', query_filter)
     query = query.replace('%LIMIT%', str(limit))
 
-    print(query)
+    # print(query)
 
     sparql.setQuery(query.encode('UTF-8'))
     sparql.setReturnFormat(JSON)
@@ -220,8 +220,9 @@ def get_entities(entity_path):
     return list(set(entities))
 
 
-def run(entities, max_filter=5, max_entities=5, max_range=100, max_intersection=2):
+def run(entities, max_filter=5, max_range=100, max_intersection=2):
     sparql = SPARQLWrapper("http://dbpedia.org/sparql")
+    max_entities = len(entities)
 
     print('#ENTITIES: ', len(entities))
     entity_info, entity_similar = {}, {}
@@ -284,6 +285,6 @@ if __name__ == '__main__':
     path = '/NeuralREG/data/v1.5'
     entities = get_entities(path)
 
-    info, similar = run(entities=entities, max_filter=5, max_entities=100)
+    info, similar = run(entities=entities, max_filter=5)
     json.dump(info, open(os.path.join(path, 'entity_similar_info.json'), 'w'), ensure_ascii=False)
     json.dump(similar, open(os.path.join(path, 'entity_similar.json'), 'w'), ensure_ascii=False)

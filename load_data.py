@@ -23,9 +23,9 @@ import os
 VOCAB_PATH = 'data/v1.0/'
 
 # PATH FOR REFERRING EXPRESSION COLLECTIONS
-TRAIN_REFEX_PATH = 'data/v1.0/train'
-DEV_REFEX_PATH = 'data/v1.0/dev'
-TEST_REFEX_PATH = 'data/v1.0/test'
+TRAIN_REFEX_PATH = 'data/v1.0/old_format/train'
+DEV_REFEX_PATH = 'data/v1.0/old_format/dev'
+TEST_REFEX_PATH = 'data/v1.0/old_format/test'
 
 
 def load(fpre_context, fpos_context, fentity, frefex, fsize, character):
