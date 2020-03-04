@@ -23,7 +23,7 @@ import nltk
 import sys
 sys.path.append('../')
 
-TRAIN_REFEX_PATH = '../data/v1.0/train/data.json'
+TRAIN_REFEX_PATH = '../data/v1.0/old_format/train/data.json'
 MODEL_PATH = 'reg.cPickle'
 
 lemma = {
