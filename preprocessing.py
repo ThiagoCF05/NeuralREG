@@ -30,6 +30,7 @@ import xml.etree.ElementTree as ET
 
 from stanfordcorenlp import StanfordCoreNLP
 
+
 class Preprocessing:
     def __init__(self, in_file, out_file, stanford_path):
         # self.proc = CoreNLP('ssplit')
@@ -43,17 +44,16 @@ class Preprocessing:
                 os.mkdir(out_file)
             self.out_vocab = out_file
             self.out_train = os.path.join(out_file, 'train')
-            self.out_dev = os.path.join(out_file, 'dev')
-            self.out_test = os.path.join(out_file, 'test')
+            # self.out_dev = os.path.join(out_file, 'dev')
+            # self.out_test = os.path.join(out_file, 'test')
 
             self.text_id = 0
             self.trainset()
-            self.testset()
+            # self.testset()
             self.corenlp.close()
         except:
             print(traceback.format_exc())
             self.corenlp.close()
-
 
     def trainset(self):
         input_vocab, output_vocab, character_vocab = set(), set(), set()
@@ -66,7 +66,8 @@ class Preprocessing:
             for fname in dirs2:
                 f = open(os.path.join(self.in_train, path, fname))
 
-                data, in_vocab, out_vocab, c_vocab = self.annotation_parse(f)
+                filename = [path + ' ' + fname]
+                data, in_vocab, out_vocab, c_vocab = self.annotation_parse(f, filename)
 
                 input_vocab = input_vocab.union(in_vocab)
                 output_vocab = output_vocab.union(out_vocab)
@@ -98,7 +99,6 @@ class Preprocessing:
         with open(os.path.join(self.out_vocab, 'character_vocab.txt'), 'w') as f:
             f.write('\n'.join(list(character_vocab)))
 
-
     def testset(self):
         test = []
         test_info = []
@@ -109,7 +109,8 @@ class Preprocessing:
             for fname in dirs2:
                 f = open(os.path.join(self.in_dev, path, fname))
 
-                data, in_vocab, out_vocab, c_vocab = self.annotation_parse(f)
+                filename = [path + ' ' + fname]
+                data, in_vocab, out_vocab, c_vocab = self.annotation_parse(f, filename)
 
                 test.extend(data)
 
@@ -129,14 +130,14 @@ class Preprocessing:
 
         return 'wiki'
 
-    def annotation_parse(self, doc):
+    def annotation_parse(self, doc, filename):
         '''
         Parse an annotation document and extract references from the texts
         :param doc:
         :return:
         '''
         tree = ET.parse(doc)
-        root =  tree.getroot()
+        root = tree.getroot()
 
         data = []
         input_vocab, output_vocab, character_vocab = set(), set(), set()
@@ -145,7 +146,7 @@ class Preprocessing:
         for entry in entries:
             entryId = entry.attrib['eid']
             size = entry.attrib['size']
-            semcategory = entry.attrib['category']
+            category = entry.attrib['category']
 
             # get entity map
             entitymap_xml = entry.find('entitymap')
@@ -163,7 +164,7 @@ class Preprocessing:
                 entity1_type = self.extract_entity_type(e1.strip())
                 entity2_type = self.extract_entity_type(e2.strip())
 
-                types.append({'e1_type':entity1_type, 'e2_type':entity2_type})
+                types.append({'e1_type': entity1_type, 'e2_type': entity2_type})
 
             # Reading modified triples to extract entities and classify them according to type
             mtripleset = entry.find('modifiedtripleset')
@@ -184,7 +185,8 @@ class Preprocessing:
                     if template:
                         print('{}\r'.format(template))
                         text, template = self.stanford_parse(text, template)
-                        references, in_vocab, out_vocab, c_vocab = self.get_refexes(text, template, entity_map, entity_type)
+                        references, in_vocab, out_vocab, c_vocab = self.get_refexes(text, template, entity_map,
+                                                                                    entity_type, category, filename)
                         data.extend(references)
                         input_vocab = input_vocab.union(in_vocab)
                         output_vocab = output_vocab.union(out_vocab)
@@ -194,7 +196,6 @@ class Preprocessing:
 
         return data, input_vocab, output_vocab, character_vocab
 
-
     def stanford_parse(self, text, template):
         '''
         Tokenizing text and template
@@ -202,7 +203,7 @@ class Preprocessing:
         :param template: original template
         :return: Tokenized text and template
         '''
-        props = {'annotators': 'tokenize,ssplit','pipelineLanguage':'en','outputFormat':'json'}
+        props = {'annotators': 'tokenize,ssplit', 'pipelineLanguage': 'en', 'outputFormat': 'json'}
         out = self.corenlp.annotate(text.strip(), properties=props)
         out = json.loads(out)
         text = []
@@ -231,7 +232,6 @@ class Preprocessing:
 
         return text, template
 
-
     def write(self, fname, instances, info):
         if not os.path.exists(fname):
             os.mkdir(fname)
@@ -257,7 +257,6 @@ class Preprocessing:
 
         json.dump(instances, open(os.path.join(fname, 'data.json'), 'w'))
 
-
     def get_reference_info(self, template, tag):
         '''
         get info about a reference like syntactic position
@@ -266,18 +265,19 @@ class Preprocessing:
         :param entity: wikipedia id
         :return:
         '''
-        props = {'annotators': 'tokenize,ssplit,pos,depparse','pipelineLanguage':'en','outputFormat':'json'}
+        props = {'annotators': 'tokenize,ssplit,pos,depparse', 'pipelineLanguage': 'en', 'outputFormat': 'json'}
 
         out = self.corenlp.annotate(template.strip(), properties=props)
         out = json.loads(out)
 
-        reference = {'syntax':'', 'sentence':-1, 'pos':-1, 'general_pos':-1, 'tag':tag}
+        reference = {'syntax': '', 'sentence': -1, 'pos': -1, 'general_pos': -1, 'tag': tag}
         general_pos = 0
         for i, snt in enumerate(out['sentences']):
             for token in snt['enhancedDependencies']:
                 # get syntax
                 if token['dependentGloss'] == tag:
-                    reference = {'syntax':'', 'sentence':i, 'pos':int(token['dependent']), 'general_pos':general_pos+int(token['dependent']), 'tag':tag}
+                    reference = {'syntax': '', 'sentence': i, 'pos': int(token['dependent']),
+                                 'general_pos': general_pos + int(token['dependent']), 'tag': tag}
                     if 'nsubj' in token['dep'] or 'nsubjpass' in token['dep']:
                         reference['syntax'] = 'np-subj'
                     elif 'nmod:poss' in token['dep'] or 'compound' in token['dep']:
@@ -287,7 +287,6 @@ class Preprocessing:
                     break
             general_pos += len(snt['tokens'])
         return reference
-
 
     def process_template(self, template):
         '''
@@ -313,7 +312,6 @@ class Preprocessing:
                 pre_tag.append(token)
         return pre_tag, tag, pos_tag
 
-
     def process_context(self, context, entity_map):
         '''
         Return pre- and pos- wikified context
@@ -336,11 +334,12 @@ class Preprocessing:
         for tag in entity_map:
             # pre_context = pre_context.replace(tag, entity_map[tag])
             # pos_context = pos_context.replace(tag, entity_map[tag])
-            pre_context = pre_context.replace(tag, '_'.join(entity_map[tag].replace('\"', '').replace('\'', '').lower().split()))
-            pos_context = pos_context.replace(tag, '_'.join(entity_map[tag].replace('\"', '').replace('\'', '').lower().split()))
+            pre_context = pre_context.replace(tag, '_'.join(
+                entity_map[tag].replace('\"', '').replace('\'', '').lower().split()))
+            pos_context = pos_context.replace(tag, '_'.join(
+                entity_map[tag].replace('\"', '').replace('\'', '').lower().split()))
 
         return pre_context.lower(), pos_context.lower()
-
 
     def classify(self, references):
         '''
@@ -353,7 +352,7 @@ class Preprocessing:
         sentence_statuses = {}
         for i, reference in enumerate(references):
             # text status
-            if i == 0 or (reference['entity'] != references[i-1]['entity']):
+            if i == 0 or (reference['entity'] != references[i - 1]['entity']):
                 reference['text_status'] = 'new'
             else:
                 reference['text_status'] = 'given'
@@ -372,7 +371,8 @@ class Preprocessing:
             # referential form
             reg = reference['refex'].replace('eos', '').strip()
             reference['reftype'] = 'name'
-            if reg.lower().strip() in ['he', 'his', 'him', 'she', 'hers', 'her', 'it', 'its', 'we', 'our', 'ours', 'they', 'theirs', 'them']:
+            if reg.lower().strip() in ['he', 'his', 'him', 'she', 'hers', 'her', 'it', 'its', 'we', 'our', 'ours',
+                                       'they', 'theirs', 'them']:
                 reference['reftype'] = 'pronoun'
             elif reg.lower().strip().split()[0] in ['the', 'a', 'an']:
                 reference['reftype'] = 'description'
@@ -381,8 +381,7 @@ class Preprocessing:
 
         return references
 
-
-    def get_refexes(self, text, template, entity_map, entity_type):
+    def get_refexes(self, text, template, entity_map, entity_type, category, filename):
         '''
         Extract referring expressions for each reference overlapping text and template
         :param text: original text
@@ -409,7 +408,8 @@ class Preprocessing:
                     template = begin + ' ' + template
                     pre_tag, tag, pos_tag = self.process_template(template)
 
-                    regex = re.escape(' '.join(pre_tag[-i:]).strip()) + ' (.+?) ' + re.escape(' '.join(pos_tag[:i]).strip())
+                    regex = re.escape(' '.join(pre_tag[-i:]).strip()) + ' (.+?) ' + re.escape(
+                        ' '.join(pos_tag[:i]).strip())
                     f = re.findall(regex, text)
 
                     template = template.replace('BEGIN', '').strip()
@@ -434,17 +434,19 @@ class Preprocessing:
                         character = ['eos'] + list(refex) + ['eos']
                         refex = ['eos'] + refex.split() + ['eos']
                         row = {
-                            'pre_context':pre_context.replace('@', ''),
-                            'pos_context':pos_context.replace('@', ''),
-                            'entity':normalized,
-                            'refex':' '.join(refex),
-                            'size':len(entity_map.keys()),
-                            'syntax':reference['syntax'],
-                            'text_id':self.text_id,
-                            'general_pos':reference['general_pos'],
-                            'sentence':reference['sentence'],
-                            'pos':reference['pos'],
-                            'text':text
+                            'pre_context': pre_context.replace('@', ''),
+                            'pos_context': pos_context.replace('@', ''),
+                            'entity': normalized,
+                            'refex': ' '.join(refex),
+                            'size': len(entity_map.keys()),
+                            'syntax': reference['syntax'],
+                            'text_id': self.text_id,
+                            'general_pos': reference['general_pos'],
+                            'sentence': reference['sentence'],
+                            'pos': reference['pos'],
+                            'text': text,
+                            'category': category,
+                            'filename': filename
                         }
                         data.append(row)
                         output_vocab = output_vocab.union(set(refex))
@@ -455,28 +457,33 @@ class Preprocessing:
 
                         context = context.replace(tag, normalized, 1)
                     else:
-                        context = context.replace(tag, '_'.join(entity_map[tag].replace('\"', '').replace('\'', '').lower().split()), 1)
+                        context = context.replace(tag, '_'.join(
+                            entity_map[tag].replace('\"', '').replace('\'', '').lower().split()), 1)
                 else:
                     template = template.replace(tag, ' ', 1)
-                    context = context.replace(tag, '_'.join(entity_map[tag].replace('\"', '').replace('\'', '').lower().split()), 1)
+                    context = context.replace(tag, '_'.join(
+                        entity_map[tag].replace('\"', '').replace('\'', '').lower().split()), 1)
 
         self.text_id += 1
         data = self.classify(data)
         return data, input_vocab, output_vocab, character_vocab
 
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Preprocessing train, dev and test sets.')
     parser.add_argument('in_path', help='directory for the delexicalized WebNLG dataset')
     parser.add_argument('out_path', help='path to write the result')
-    parser.add_argument('stanford_path', help='path to the StanfordCoreNLP software (https://stanfordnlp.github.io/CoreNLP/)')
+    parser.add_argument('stanford_path',
+                        help='path to the StanfordCoreNLP software (https://stanfordnlp.github.io/CoreNLP/)')
 
     args = parser.parse_args()
     try:
         IN_PATH = args.in_path
         OUT_PATH = args.out_path
-        STANFORD_PATH=args.stanford_path
+        STANFORD_PATH = args.stanford_path
     except:
-        IN_PATH = 'webnlg/dependencies/delexicalized'
-        OUT_PATH='data/'
-        STANFORD_PATH=r'/home/tcastrof/workspace/stanford/stanford-corenlp-full-2018-02-27'
+        IN_PATH = '/home/rossana/Projects/NeuralREG/webnlg/data/v1.0/en'
+        OUT_PATH = 'data/'
+        STANFORD_PATH = r'/home/rossana/Projects/stanford/stanford-corenlp-full-2018-10-05'
+
     Preprocessing(in_file=IN_PATH, out_file=OUT_PATH, stanford_path=STANFORD_PATH)
