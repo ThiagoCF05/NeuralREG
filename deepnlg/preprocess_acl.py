@@ -187,7 +187,6 @@ class REGPrecACL:
 
         self.traindata, self.vocab = self.process(entry_path=os.path.join(data_path, 'train'))
         self.testdata, _ = self.process(entry_path=os.path.join(data_path, 'test'))
-        # self.testdata, self.vocab = self.process(entry_path=os.path.join(data_path, 'temp'))
 
         self.corenlp.close()
         self.temp_extractor.close()
@@ -198,6 +197,11 @@ class REGPrecACL:
 
     def process(self, entry_path):
         data, in_vocab, out_vocab = self.run_parser(entry_path)
+
+        in_vocab.add('unk')
+        out_vocab.add('unk')
+        in_vocab.add('eos')
+        out_vocab.add('eos')
 
         in_vocab = list(set(in_vocab))
         out_vocab = list(set(out_vocab))
@@ -327,11 +331,9 @@ class REGPrecACL:
                         entity = entity_map[tag]
 
                         if entity_type[entity] == 'wiki':
-                            refex = ['eos'] + refex.split() + ['eos']
+                            refex = refex.replace('eos', '').split()
 
-                            # TODO: Check if these replacements are necessary and if we need to lowercase the entity
-                            # normalized = '_'.join(entity.replace('\"', '').replace('\'', '').lower().split())
-                            normalized = '_'.join(entity.replace('\"', '').replace('\'', '').split())
+                            normalized = '_'.join(entity.replace('\"', '').replace('\'', '').lower().split())
                             # aux = context.replace(tag, 'ENTITY', 1)
                             # reference_info = self.process_reference_info(aux, 'ENTITY')
 
@@ -342,8 +344,8 @@ class REGPrecACL:
                                     mapped_reference = {
                                         'entity': normalized,
                                         'category': category,
-                                        'pre_context': pre_context.replace('@', '').split(),
-                                        'pos_context': pos_context.replace('@', '').split(),
+                                        'pre_context': pre_context.replace('@', '').replace('eos', '').split(),
+                                        'pos_context': pos_context.replace('@', '').replace('eos', '').split(),
                                         'refex': refex
                                         # 'size': len(entity_map.keys()),
                                         # 'syntax': reference_info['syntax'],
@@ -387,8 +389,6 @@ class REGPrecACL:
                 i += 1
                 token_tag = re.search(re_tag, token)
 
-                # if token.split('-')[0] in ['AGENT', 'PATIENT', 'BRIDGE']:
-                #     tag = ' '.join(token_tag[0]).strip()
                 if token_tag:
                     if token != token_tag.group():
                         print('Token error: ', token)
@@ -396,7 +396,7 @@ class REGPrecACL:
                     tag = token_tag.group()
                     for pos_token in template[i:]:
                         pos_token_tag = re.search(re_tag, pos_token)
-                        # if pos_token.split('-')[0] in ['AGENT', 'PATIENT', 'BRIDGE']:
+
                         if pos_token_tag:
                             break
                         else:
@@ -417,16 +417,14 @@ class REGPrecACL:
                 i += 1
 
                 token_tag = re.search(re_tag, token)
-                # if len(token_tag) > 0:
-                # token.split('-')[0] in ['AGENT', 'PATIENT', 'BRIDGE']:
                 if token_tag:
                     pos_context = context[i:]
                     break
                 else:
                     pre_context.append(token)
 
-            pre_context = ' '.join(['EOS'] + pre_context)
-            pos_context = ' '.join(pos_context + ['EOS'])
+            pre_context = ' '.join(['eos'] + pre_context)
+            pos_context = ' '.join(pos_context + ['eos'])
             for tag in entity_map:
                 pre_context = pre_context.replace(tag, '_'.join(
                     entity_map[tag].replace('\"', '').replace('\'', '').lower().split()))

@@ -186,10 +186,10 @@ class REGPrecACL:
         self.temp_extractor = TemplateExtraction(stanford_path)
         self.corenlp = StanfordCoreNLP(stanford_path)
 
-        self.traindata, self.vocab = self.process(entry_path=os.path.join(data_path, 'train'))
+        # self.traindata, self.vocab = self.process(entry_path=os.path.join(data_path, 'train'))
         self.devdata, _ = self.process(entry_path=os.path.join(data_path, 'dev'),
                                        original_path=os.path.join(data_path, 'dev', 'reference'))
-        self.testdata, _ = self.process(entry_path=os.path.join(data_path, 'test'))
+        # self.testdata, _ = self.process(entry_path=os.path.join(data_path, 'test'))
 
         self.corenlp.close()
         self.temp_extractor.close()
@@ -214,13 +214,12 @@ class REGPrecACL:
             template = reference['pre_context'] + reference['entity'] + reference['pos_context']
             template = template.split(' ')
 
-            pre_context = str(reference['pre_context']).split(' ')
-            pos_context = str(reference['pos_context']).split(' ')
+            pre_context = str(reference['pre_context']).replace('eos', '').split(' ')
+            pos_context = str(reference['pos_context']).replace('eos', '').split(' ')
 
-            # entity = '_'.join(reference['entity'].replace('\"', '').replace('\'', '').lower().split())
-            entity = '_'.join(reference['entity'].replace('\"', '').replace('\'', '').split())
+            entity = '_'.join(reference['entity'].replace('\"', '').replace('\'', '').lower().split())
             if entity != '':
-                refex = str(reference['refex']).split(' ')
+                refex = str(reference['refex']).replace('eos', '').split(' ')
 
                 isDigit = entity.replace('.', '').strip().isdigit()
                 isDate = len(re.findall(re_date, entity)) > 0
