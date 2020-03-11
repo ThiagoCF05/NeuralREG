@@ -249,8 +249,7 @@ class Attention:
             attention_pre, _ = self.attend(h_pre, s, w1dt_pre, self.attention_w2_pre, self.attention_v_pre)
             attention_pos, _ = self.attend(h_pos, s, w1dt_pos, self.attention_w2_pos, self.attention_v_pos)
 
-            vector = dy.concatenate(
-                [attention_pre, attention_pos, last_output_embeddings, entity_embedding])
+            vector = dy.concatenate([attention_pre, attention_pos, last_output_embeddings, entity_embedding])
             s = s.add_input(vector)
             out_vector = self.decoder_w * s.output() + self.decoder_b
             probs = dy.softmax(out_vector)
@@ -261,7 +260,7 @@ class Attention:
         loss = dy.esum(loss)
         return loss
 
-    def generate(self, pre_context, pos_context, entity, entity_tokens):
+    def generate(self, pre_context, pos_context, entity):
         embedded = self.embed_sentence(pre_context)
         pre_encoded = self.encode_sentence(self.encpre_fwd_lstm, self.encpre_bwd_lstm, embedded)
 
@@ -276,12 +275,11 @@ class Attention:
 
         last_output_embeddings = self.lookup[self.token2int[self.EOS]]
         try:
-            entity_embedding = self.input_lookup[self.token2int[entity]]
+            entity_embedding = self.lookup[self.token2int[entity]]
         except:
-            entity_embedding = self.input_lookup[self.token2int[self.EOS]]
+            entity_embedding = self.lookup[self.token2int[self.EOS]]
 
-        s = self.dec_lstm.initial_state().add_input(dy.concatenate(
-            [dy.vecInput(self.config.state_dim * 4), last_output_embeddings, entity_embedding]))
+        s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.config.state_dim * 4), last_output_embeddings, entity_embedding]))
 
         out = []
         count_EOS = 0
@@ -294,8 +292,7 @@ class Attention:
             attention_pre, _ = self.attend(h_pre, s, w1dt_pre, self.attention_w2_pre, self.attention_v_pre)
             attention_pos, _ = self.attend(h_pos, s, w1dt_pos, self.attention_w2_pos, self.attention_v_pos)
 
-            vector = dy.concatenate(
-                [attention_pre, attention_pos, last_output_embeddings, entity_embedding])
+            vector = dy.concatenate([attention_pre, attention_pos, last_output_embeddings, entity_embedding])
             s = s.add_input(vector)
             out_vector = self.decoder_w * s.output() + self.decoder_b
             probs = dy.softmax(out_vector).vec_value()
@@ -314,7 +311,7 @@ class Attention:
 
         return out
 
-    def beam_search(self, pre_context, pos_context, entity, entity_tokens):
+    def beam_search(self, pre_context, pos_context, entity):
         embedded = self.embed_sentence(pre_context)
         pre_encoded = self.encode_sentence(self.encpre_fwd_lstm, self.encpre_bwd_lstm, embedded)
 
@@ -330,12 +327,11 @@ class Attention:
         last_output_embeddings = self.lookup[self.token2int[self.EOS]]
 
         try:
-            entity_embedding = self.input_lookup[self.token2int[entity]]
+            entity_embedding = self.lookup[self.token2int[entity]]
         except:
-            entity_embedding = self.input_lookup[self.token2int[self.EOS]]
+            entity_embedding = self.lookup[self.token2int[self.EOS]]
 
-        s = self.dec_lstm.initial_state().add_input(dy.concatenate(
-            [dy.vecInput(self.config.state_dim * 4), last_output_embeddings, entity_embedding]))
+        s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.config.state_dim * 4), last_output_embeddings, entity_embedding]))
         candidates = [{'sentence': [self.EOS], 'prob': 0.0, 'count_EOS': 0, 's': s}]
         outputs = []
 
@@ -361,6 +357,7 @@ class Attention:
                     except:
                         last_output_embeddings = self.lookup[self.token2int[self.EOS]]
 
+                    # VOCABULARY WORDS
                     vector = dy.concatenate([attention_pre, attention_pos, last_output_embeddings, entity_embedding])
                     s = candidate['s'].add_input(vector)
                     out_vector = self.decoder_w * s.output() + self.decoder_b
@@ -464,6 +461,7 @@ class Attention:
                 outputs = [self.generate(pre_context, pos_context, entity)]
             else:
                 outputs = self.beam_search(pre_context, pos_context, entity)
+
             delimiter = ' '
             if self.character:
                 delimiter = ''
@@ -528,6 +526,8 @@ class Attention:
             if repeat == self.config.early_stop:
                 break
 
+    def populate(self, path):
+        self.model.populate(path)
 
 if __name__ == '__main__':
     config = {
@@ -542,16 +542,6 @@ if __name__ == '__main__':
         'EPOCHS': 60,
         'EARLY_STOP': 10
     }
-
-    # Original setup
-    # {'LSTM_NUM_OF_LAYERS': 1, 'EMBEDDINGS_SIZE': 300, 'STATE_SIZE': 512, 'ATTENTION_SIZE': 512, 'DROPOUT': 0.2,
-    #  'CHARACTER': False, 'GENERATION': 30, 'BEAM_SIZE': 1},
-    # {'LSTM_NUM_OF_LAYERS': 1, 'EMBEDDINGS_SIZE': 300, 'STATE_SIZE': 512, 'ATTENTION_SIZE': 512, 'DROPOUT': 0.3,
-    #  'CHARACTER': False, 'GENERATION': 30, 'BEAM_SIZE': 1},
-    # {'LSTM_NUM_OF_LAYERS': 1, 'EMBEDDINGS_SIZE': 300, 'STATE_SIZE': 512, 'ATTENTION_SIZE': 512, 'DROPOUT': 0.2,
-    #  'CHARACTER': False, 'GENERATION': 30, 'BEAM_SIZE': 5},
-    # {'LSTM_NUM_OF_LAYERS': 1, 'EMBEDDINGS_SIZE': 300, 'STATE_SIZE': 512, 'ATTENTION_SIZE': 512, 'DROPOUT': 0.3,
-    #  'CHARACTER': False, 'GENERATION': 30, 'BEAM_SIZE': 5}
 
     logger = Logger(model_path='best.dy', result_path='results/')
 
