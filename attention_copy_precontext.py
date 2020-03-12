@@ -176,10 +176,7 @@ class Attention:
         # COPY
         self.copy_x = self.model.add_parameters((1, self.config.embedding_dim))
         self.copy_decoder = self.model.add_parameters((1, self.config.state_dim * self.config.lstm_depth * 2))
-        self.copy_context = self.model.add_parameters((1, self.config.state_dim * 2))
         self.copy_b = self.model.add_parameters((1))
-
-        # self.copy_entity = entity embedding or -- second thoughts: entity separated from the context?
         self.copy_entity = self.model.add_parameters((1, self.config.state_dim * 2))
 
         # SOFTMAX
@@ -235,11 +232,6 @@ class Attention:
         state = dy.concatenate(list(decoder_state.s()))
         return dy.logistic((self.copy_entity * entity) + (self.copy_decoder * state) + (self.copy_x * x) + self.copy_b)[
             0]
-
-    def copy_with_context(self, x, decoder_state, context, entity):
-        state = dy.concatenate(list(decoder_state.s()))
-        return dy.logistic((self.copy_context * context) + (self.copy_entity * entity) + (self.copy_decoder * state) + (
-                self.copy_x * x) + self.copy_b)[0]
 
     def decode(self, pre_encoded, entity_encoded, refex, entity, entity_tokens):
         refex = list(refex)
@@ -627,7 +619,7 @@ if __name__ == '__main__':
 
     logger = Logger(model_path='best.dy', result_path='results/')
 
-    PATH = 'data/v1.5/'
+    PATH = 'data/v1.0/'
     h = Attention(config=config, path=PATH, logger=logger)
     h.train()
 

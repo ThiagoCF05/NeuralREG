@@ -55,6 +55,7 @@ class Config:
         self.early_stop = config['EARLY_STOP']
         self.epochs = config['EPOCHS']
 
+
 class Logger:
     def __init__(self, result_path, model_path):
         if not os.path.exists(result_path):
@@ -65,7 +66,7 @@ class Logger:
 
     def save_result(self, fname, results, beam):
         for i in range(beam):
-            f = open(os.path.join(self.result_path, fname + '_' + str(i+1)), 'w')
+            f = open(os.path.join(self.result_path, fname + '_' + str(i + 1)), 'w')
             for output in results:
                 if i < len(output):
                     f.write(output[i])
@@ -83,7 +84,8 @@ class Attention:
         self.character = False
 
         self.EOS = "eos"
-        self.vocab, self.entity_types, self.entity_gender, self.trainset, self.devset, self.testset = load_data.run_json(self.path)
+        self.vocab, self.entity_types, self.entity_gender, self.trainset, self.devset, self.testset = load_data.run_json(
+            self.path)
 
         self.build_vocab()
         self.init()
@@ -157,13 +159,8 @@ class Attention:
         self.encpos_fwd_lstm.set_dropout(self.config.dropout)
         self.encpos_bwd_lstm.set_dropout(self.config.dropout)
 
-        self.encentity_fwd_lstm = dy.LSTMBuilder(self.config.lstm_depth, self.config.embedding_dim, self.config.state_dim, self.model)
-        self.encentity_bwd_lstm = dy.LSTMBuilder(self.config.lstm_depth, self.config.embedding_dim, self.config.state_dim, self.model)
-        self.encentity_fwd_lstm.set_dropout(self.config.dropout)
-        self.encentity_bwd_lstm.set_dropout(self.config.dropout)
-
         # DECODER
-        self.dec_lstm = dy.LSTMBuilder(self.config.lstm_depth, (self.config.state_dim * 6) + (self.config.embedding_dim * 3), self.config.state_dim, self.model)
+        self.dec_lstm = dy.LSTMBuilder(self.config.lstm_depth, (self.config.state_dim * 4) + (self.config.embedding_dim * 4), self.config.state_dim, self.model)
         self.dec_lstm.set_dropout(self.config.dropout)
 
         # EMBEDDINGS
@@ -177,19 +174,6 @@ class Attention:
         self.attention_w1_pos = self.model.add_parameters((self.config.attention_dim, self.config.state_dim * 2))
         self.attention_w2_pos = self.model.add_parameters((self.config.attention_dim, self.config.state_dim * self.config.lstm_depth * 2))
         self.attention_v_pos = self.model.add_parameters((1, self.config.attention_dim))
-
-        self.attention_w1_entity = self.model.add_parameters((self.config.attention_dim, self.config.state_dim * 2))
-        self.attention_w2_entity = self.model.add_parameters((self.config.attention_dim, self.config.state_dim * self.config.lstm_depth * 2))
-        self.attention_v_entity = self.model.add_parameters((1, self.config.attention_dim))
-
-        # COPY
-        self.copy_x = self.model.add_parameters((1, self.config.embedding_dim))
-        self.copy_decoder = self.model.add_parameters((1, self.config.state_dim * self.config.lstm_depth * 2))
-        self.copy_context = self.model.add_parameters((1, self.config.state_dim * 4))
-        self.copy_b = self.model.add_parameters((1))
-
-        # self.copy_entity = entity embedding or -- second thoughts: entity separated from the context?
-        self.copy_entity = self.model.add_parameters((1, self.config.state_dim * 2))
 
         # SOFTMAX
         self.decoder_w = self.model.add_parameters((self.VOCAB_SIZE, self.config.state_dim))
@@ -240,17 +224,7 @@ class Attention:
         context = h * att_weights
         return context, att_weights
 
-    def copy(self, x, decoder_state, entity):
-        state = dy.concatenate(list(decoder_state.s()))
-        return dy.logistic((self.copy_entity * entity) + (self.copy_decoder * state) + (self.copy_x * x) + self.copy_b)[
-            0]
-
-    def copy_with_context(self, x, decoder_state, context, entity):
-        state = dy.concatenate(list(decoder_state.s()))
-        return dy.logistic((self.copy_context * context) + (self.copy_entity * entity) + (self.copy_decoder * state) + (
-                self.copy_x * x) + self.copy_b)[0]
-
-    def decode(self, pre_encoded, pos_encoded, entity_encoded, refex, entity, entity_tokens):
+    def decode(self, pre_encoded, pos_encoded, refex, entity):
         refex = list(refex)
         refex = [self.token2int[c] for c in refex]
 
@@ -260,60 +234,51 @@ class Attention:
         h_pos = dy.concatenate_cols(pos_encoded)
         w1dt_pos = None
 
-        h_entity = dy.concatenate_cols(entity_encoded)
-        w1dt_entity = None
-
         last_output_embeddings = self.lookup[self.token2int[self.EOS]]
+        entity_embedding = self.lookup[self.token2int[entity]]
 
-        entity_type = self.token2int[self.entity_types[entity]]
-        entity_type_embedding = self.lookup[entity_type]
+        try:
+            entity_type = self.token2int[self.entity_types[entity]]
+            entity_type_embedding = self.lookup[entity_type]
+        except:
+            entity_type = self.token2int['other']
+            entity_type_embedding = self.lookup[entity_type]
 
-        entity_gender = self.token2int[self.entity_gender[entity]]
-        entity_gender_embedding = self.lookup[entity_gender]
+        try:
+            entity_gender = self.token2int[self.entity_gender[entity]]
+            entity_gender_embedding = self.lookup[entity_gender]
+        except:
+            entity_gender = self.token2int['neutral']
+            entity_gender_embedding = self.lookup[entity_gender]
 
-        s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.config.state_dim * 6), last_output_embeddings, entity_type_embedding, entity_gender_embedding]))
+        s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.config.state_dim * 4), last_output_embeddings, entity_embedding, entity_type_embedding, entity_gender_embedding]))
         loss = []
 
         for word in refex:
             # w1dt can be computed and cached once for the entire decoding phase
             w1dt_pre = w1dt_pre or self.attention_w1_pre * h_pre
             w1dt_pos = w1dt_pos or self.attention_w1_pos * h_pos
-            w1dt_entity = w1dt_entity or self.attention_w1_entity * h_entity
 
             attention_pre, _ = self.attend(h_pre, s, w1dt_pre, self.attention_w2_pre, self.attention_v_pre)
             attention_pos, _ = self.attend(h_pos, s, w1dt_pos, self.attention_w2_pos, self.attention_v_pos)
-            attention_entity, att_weights = self.attend(h_entity, s, w1dt_entity, self.attention_w2_entity, self.attention_v_entity)
 
-            p_gen = self.copy(last_output_embeddings, s, attention_entity)
-
-            entity_prob = dy.scalarInput(0)
-            lookup_word = self.int2token[word]
-            if lookup_word in entity_tokens:
-                idx = entity_tokens.index(lookup_word)
-                entity_prob = dy.pick(att_weights, idx)
-
-            vector = dy.concatenate([attention_pre, attention_pos, attention_entity, last_output_embeddings, entity_type_embedding, entity_gender_embedding])
+            vector = dy.concatenate([attention_pre, attention_pos, last_output_embeddings, entity_embedding, entity_type_embedding, entity_gender_embedding])
             s = s.add_input(vector)
             out_vector = self.decoder_w * s.output() + self.decoder_b
             probs = dy.softmax(out_vector)
-            context_prob = dy.pick(probs, word)
+            prob = dy.pick(probs, word)
             last_output_embeddings = self.lookup[word]
-
-            prob = dy.cmult(p_gen, context_prob) + dy.cmult(1 - p_gen, entity_prob)
             loss.append(-dy.log(prob))
 
         loss = dy.esum(loss)
         return loss
 
-    def generate(self, pre_context, pos_context, entity, entity_tokens):
+    def generate(self, pre_context, pos_context, entity):
         embedded = self.embed_sentence(pre_context)
         pre_encoded = self.encode_sentence(self.encpre_fwd_lstm, self.encpre_bwd_lstm, embedded)
 
         embedded = self.embed_sentence(pos_context)
         pos_encoded = self.encode_sentence(self.encpos_fwd_lstm, self.encpos_bwd_lstm, embedded)
-
-        embedded = self.embed_sentence(entity_tokens)
-        entity_encoded = self.encode_sentence(self.encentity_fwd_lstm, self.encentity_bwd_lstm, embedded)
 
         h_pre = dy.concatenate_cols(pre_encoded)
         w1dt_pre = None
@@ -321,18 +286,27 @@ class Attention:
         h_pos = dy.concatenate_cols(pos_encoded)
         w1dt_pos = None
 
-        h_entity = dy.concatenate_cols(entity_encoded)
-        w1dt_entity = None
-
         last_output_embeddings = self.lookup[self.token2int[self.EOS]]
+        try:
+            entity_embedding = self.lookup[self.token2int[entity]]
+        except:
+            entity_embedding = self.lookup[self.token2int[self.EOS]]
 
-        entity_type = self.token2int[self.entity_types[entity]]
-        entity_type_embedding = self.lookup[entity_type]
+        try:
+            entity_type = self.token2int[self.entity_types[entity]]
+            entity_type_embedding = self.lookup[entity_type]
+        except:
+            entity_type = self.token2int['other']
+            entity_type_embedding = self.lookup[entity_type]
 
-        entity_gender = self.token2int[self.entity_gender[entity]]
-        entity_gender_embedding = self.lookup[entity_gender]
+        try:
+            entity_gender = self.token2int[self.entity_gender[entity]]
+            entity_gender_embedding = self.lookup[entity_gender]
+        except:
+            entity_gender = self.token2int['neutral']
+            entity_gender_embedding = self.lookup[entity_gender]
 
-        s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.config.state_dim * 6), last_output_embeddings, entity_type_embedding, entity_gender_embedding]))
+        s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.config.state_dim * 4), last_output_embeddings, entity_embedding, entity_type_embedding, entity_gender_embedding]))
 
         out = []
         count_EOS = 0
@@ -341,40 +315,20 @@ class Attention:
             # w1dt can be computed and cached once for the entire decoding phase
             w1dt_pre = w1dt_pre or self.attention_w1_pre * h_pre
             w1dt_pos = w1dt_pos or self.attention_w1_pos * h_pos
-            w1dt_entity = w1dt_entity or self.attention_w1_entity * h_entity
 
-            attention_pre, _ = self.attend(h_pre, s, w1dt_pre, self.attention_w2_pre,
-                                           self.attention_v_pre)
+            attention_pre, _ = self.attend(h_pre, s, w1dt_pre, self.attention_w2_pre, self.attention_v_pre)
             attention_pos, _ = self.attend(h_pos, s, w1dt_pos, self.attention_w2_pos, self.attention_v_pos)
-            attention_entity, att_weights = self.attend(h_entity, s, w1dt_entity, self.attention_w2_entity, self.attention_v_entity)
 
-            p_gen = self.copy(last_output_embeddings, s, attention_entity)
-
-            input_probs = dy.cmult(att_weights, 1 - p_gen).vec_value()
-            input_prob_max = max(input_probs)
-            input_next_word = input_probs.index(input_prob_max)
-
-            vector = dy.concatenate([attention_pre, attention_pos, attention_entity, last_output_embeddings, entity_type_embedding, entity_gender_embedding])
+            vector = dy.concatenate([attention_pre, attention_pos, last_output_embeddings, entity_embedding, entity_type_embedding, entity_gender_embedding])
             s = s.add_input(vector)
             out_vector = self.decoder_w * s.output() + self.decoder_b
-            probs = dy.cmult(dy.softmax(out_vector), p_gen).vec_value()
+            probs = dy.softmax(out_vector).vec_value()
 
-            for i, token in enumerate(entity_tokens):
-                if token in self.vocab:
-                    probs[self.token2int[token]] += input_probs[i]
             vocab_prob_max = max(probs)
             vocab_next_word = probs.index(vocab_prob_max)
 
-            # If probability of input greater than the vocabulary
-            if input_prob_max > vocab_prob_max:
-                word = entity_tokens[input_next_word]
-                try:
-                    last_output_embeddings = self.lookup[self.token2int[word]]
-                except:
-                    last_output_embeddings = self.lookup[self.token2int[self.EOS]]
-            else:
-                last_output_embeddings = self.lookup[vocab_next_word]
-                word = self.int2token[vocab_next_word]
+            last_output_embeddings = self.lookup[vocab_next_word]
+            word = self.int2token[vocab_next_word]
 
             if word == self.EOS:
                 count_EOS += 1
@@ -384,15 +338,12 @@ class Attention:
 
         return out
 
-    def beam_search(self, pre_context, pos_context, entity, entity_tokens):
+    def beam_search(self, pre_context, pos_context, entity):
         embedded = self.embed_sentence(pre_context)
         pre_encoded = self.encode_sentence(self.encpre_fwd_lstm, self.encpre_bwd_lstm, embedded)
 
         embedded = self.embed_sentence(pos_context)
         pos_encoded = self.encode_sentence(self.encpos_fwd_lstm, self.encpos_bwd_lstm, embedded)
-
-        embedded = self.embed_sentence(entity_tokens)
-        entity_encoded = self.encode_sentence(self.encentity_fwd_lstm, self.encentity_bwd_lstm, embedded)
 
         h_pre = dy.concatenate_cols(pre_encoded)
         w1dt_pre = None
@@ -400,18 +351,28 @@ class Attention:
         h_pos = dy.concatenate_cols(pos_encoded)
         w1dt_pos = None
 
-        h_entity = dy.concatenate_cols(entity_encoded)
-        w1dt_entity = None
-
         last_output_embeddings = self.lookup[self.token2int[self.EOS]]
 
-        entity_type = self.token2int[self.entity_types[entity]]
-        entity_type_embedding = self.lookup[entity_type]
+        try:
+            entity_embedding = self.lookup[self.token2int[entity]]
+        except:
+            entity_embedding = self.lookup[self.token2int[self.EOS]]
 
-        entity_gender = self.token2int[self.entity_gender[entity]]
-        entity_gender_embedding = self.lookup[entity_gender]
+        try:
+            entity_type = self.token2int[self.entity_types[entity]]
+            entity_type_embedding = self.lookup[entity_type]
+        except:
+            entity_type = self.token2int['other']
+            entity_type_embedding = self.lookup[entity_type]
 
-        s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.config.state_dim * 6), last_output_embeddings, entity_type_embedding, entity_gender_embedding]))
+        try:
+            entity_gender = self.token2int[self.entity_gender[entity]]
+            entity_gender_embedding = self.lookup[entity_gender]
+        except:
+            entity_gender = self.token2int['neutral']
+            entity_gender_embedding = self.lookup[entity_gender]
+
+        s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.config.state_dim * 4), last_output_embeddings, entity_embedding, entity_type_embedding, entity_gender_embedding]))
         candidates = [{'sentence': [self.EOS], 'prob': 0.0, 'count_EOS': 0, 's': s}]
         outputs = []
 
@@ -428,38 +389,25 @@ class Attention:
                     # w1dt can be computed and cached once for the entire decoding phase
                     w1dt_pre = w1dt_pre or self.attention_w1_pre * h_pre
                     w1dt_pos = w1dt_pos or self.attention_w1_pos * h_pos
-                    w1dt_entity = w1dt_entity or self.attention_w1_entity * h_entity
 
                     attention_pre, _ = self.attend(h_pre, candidate['s'], w1dt_pre, self.attention_w2_pre, self.attention_v_pre)
                     attention_pos, _ = self.attend(h_pos, candidate['s'], w1dt_pos, self.attention_w2_pos, self.attention_v_pos)
-                    attention_entity, att_weights = self.attend(h_entity, candidate['s'], w1dt_entity, self.attention_w2_entity, self.attention_v_entity)
 
                     try:
                         last_output_embeddings = self.lookup[self.token2int[candidate['sentence'][-1]]]
                     except:
                         last_output_embeddings = self.lookup[self.token2int[self.EOS]]
 
-                    p_gen = self.copy(last_output_embeddings, s, attention_entity)
-
-                    # INPUT WORDS
-                    input_probs = dy.cmult(att_weights, 1 - p_gen).vec_value()
-                    input_next_words = [{'prob': e, 'word': entity_tokens[input_probs.index(e)]}
-                                        for e in sorted(input_probs, reverse=True)]
-
                     # VOCABULARY WORDS
-                    vector = dy.concatenate([attention_pre, attention_pos, attention_entity, last_output_embeddings, entity_type_embedding, entity_gender_embedding])
+                    vector = dy.concatenate([attention_pre, attention_pos, last_output_embeddings, entity_embedding, entity_type_embedding, entity_gender_embedding])
                     s = candidate['s'].add_input(vector)
                     out_vector = self.decoder_w * s.output() + self.decoder_b
-                    probs = dy.cmult(dy.softmax(out_vector), p_gen).vec_value()
-
-                    for i, token in enumerate(entity_tokens):
-                        if token in self.vocab:
-                            probs[self.token2int[token]] += input_probs[i]
+                    probs = dy.softmax(out_vector).vec_value()
 
                     vocab_next_words = [{'prob': e, 'word': self.int2token[probs.index(e)]}
                                         for e in sorted(probs, reverse=True)]
+                    next_words = [sorted(vocab_next_words, key=lambda x: x['prob'], reverse=True)[self.config.beam]]
 
-                    next_words = [sorted(input_next_words + vocab_next_words, key=lambda x: x['prob'], reverse=True)[self.config.beam]]
                     for next_word in next_words:
                         word = next_word['word']
 
@@ -496,17 +444,14 @@ class Attention:
         outputs = sorted(outputs, key=lambda x: x['prob'], reverse=True)
         return list(map(lambda x: x['sentence'], outputs))
 
-    def get_loss(self, pre_context, pos_context, refex, entity, entity_tokens):
+    def get_loss(self, pre_context, pos_context, refex, entity):
         embedded = self.embed_sentence(pre_context)
         pre_encoded = self.encode_sentence(self.encpre_fwd_lstm, self.encpre_bwd_lstm, embedded)
 
         embedded = self.embed_sentence(pos_context)
         pos_encoded = self.encode_sentence(self.encpos_fwd_lstm, self.encpos_bwd_lstm, embedded)
 
-        embedded = self.embed_sentence(entity_tokens)
-        entity_encoded = self.encode_sentence(self.encentity_fwd_lstm, self.encentity_bwd_lstm, embedded)
-
-        return self.decode(pre_encoded, pos_encoded, entity_encoded, refex, entity, entity_tokens)
+        return self.decode(pre_encoded, pos_encoded, refex, entity)
 
     def validate(self):
         results = []
@@ -515,11 +460,10 @@ class Attention:
             pre_context = [self.EOS] + devinst['pre_context']
             pos_context = devinst['pos_context'] + [self.EOS]
             entity = devinst['entity']
-            entity_tokens = entity.replace('\"', '').replace('\'', '').replace(',', '').split('_')
             if self.config.beam == 1:
-                outputs = [self.generate(pre_context, pos_context, entity, entity_tokens)]
+                outputs = [self.generate(pre_context, pos_context, entity)]
             else:
-                outputs = self.beam_search(pre_context, pos_context, entity, entity_tokens)
+                outputs = self.beam_search(pre_context, pos_context, entity)
 
             delimiter = ' '
             if self.character:
@@ -553,12 +497,12 @@ class Attention:
             pos_context = testinst['pos_context'] + [self.EOS]
             # refex = [self.EOS] + testinst['refex'] + [self.EOS]
             entity = testinst['entity']
-            entity_tokens = entity.replace('\"', '').replace('\'', '').replace(',', '').split('_')
 
             if self.config.beam == 1:
-                outputs = [self.generate(pre_context, pos_context, entity, entity_tokens)]
+                outputs = [self.generate(pre_context, pos_context, entity)]
             else:
-                outputs = self.beam_search(pre_context, pos_context, entity, entity_tokens)
+                outputs = self.beam_search(pre_context, pos_context, entity)
+
             delimiter = ' '
             if self.character:
                 delimiter = ''
@@ -586,9 +530,8 @@ class Attention:
                 pos_context = traininst['pos_context'] + [self.EOS]
                 refex = [self.EOS] + traininst['refex'] + [self.EOS]
                 entity = traininst['entity']
-                entity_tokens = entity.replace('\"', '').replace('\'', '').replace(',', '').split('_')
 
-                loss = self.get_loss(pre_context, pos_context, refex, entity, entity_tokens)
+                loss = self.get_loss(pre_context, pos_context, refex, entity)
                 losses.append(loss)
 
                 if len(losses) == self.config.batch:
@@ -599,7 +542,8 @@ class Attention:
                     dy.renew_cg()
 
                     print("Epoch: {0} \t Loss: {1} \t Progress: {2}".
-                          format(epoch, round(closs / self.config.batch, 2), round(i / len(self.trainset), 2)), end='       \r')
+                          format(epoch, round(closs / self.config.batch, 2), round(i / len(self.trainset), 2)),
+                          end='       \r')
                     losses = []
                     closs = 0.0
 
@@ -640,7 +584,7 @@ if __name__ == '__main__':
 
     logger = Logger(model_path='best.dy', result_path='results/')
 
-    PATH = 'data/v1.5/'
+    PATH = 'data/v1.0/'
     h = Attention(config=config, path=PATH, logger=logger)
     h.train()
 
