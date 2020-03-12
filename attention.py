@@ -265,11 +265,19 @@ class Attention:
 
         last_output_embeddings = self.lookup[self.token2int[self.EOS]]
 
-        entity_type = self.token2int[self.entity_types[entity]]
-        entity_type_embedding = self.lookup[entity_type]
+        try:
+            entity_type = self.token2int[self.entity_types[entity]]
+            entity_type_embedding = self.lookup[entity_type]
+        except:
+            entity_type = self.token2int['other']
+            entity_type_embedding = self.lookup[entity_type]
 
-        entity_gender = self.token2int[self.entity_gender[entity]]
-        entity_gender_embedding = self.lookup[entity_gender]
+        try:
+            entity_gender = self.token2int[self.entity_gender[entity]]
+            entity_gender_embedding = self.lookup[entity_gender]
+        except:
+            entity_gender = self.token2int['neutral']
+            entity_gender_embedding = self.lookup[entity_gender]
 
         s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.config.state_dim * 6), last_output_embeddings, entity_type_embedding, entity_gender_embedding]))
         loss = []
@@ -326,11 +334,19 @@ class Attention:
 
         last_output_embeddings = self.lookup[self.token2int[self.EOS]]
 
-        entity_type = self.token2int[self.entity_types[entity]]
-        entity_type_embedding = self.lookup[entity_type]
+        try:
+            entity_type = self.token2int[self.entity_types[entity]]
+            entity_type_embedding = self.lookup[entity_type]
+        except:
+            entity_type = self.token2int['other']
+            entity_type_embedding = self.lookup[entity_type]
 
-        entity_gender = self.token2int[self.entity_gender[entity]]
-        entity_gender_embedding = self.lookup[entity_gender]
+        try:
+            entity_gender = self.token2int[self.entity_gender[entity]]
+            entity_gender_embedding = self.lookup[entity_gender]
+        except:
+            entity_gender = self.token2int['neutral']
+            entity_gender_embedding = self.lookup[entity_gender]
 
         s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.config.state_dim * 6), last_output_embeddings, entity_type_embedding, entity_gender_embedding]))
 
@@ -405,11 +421,19 @@ class Attention:
 
         last_output_embeddings = self.lookup[self.token2int[self.EOS]]
 
-        entity_type = self.token2int[self.entity_types[entity]]
-        entity_type_embedding = self.lookup[entity_type]
+        try:
+            entity_type = self.token2int[self.entity_types[entity]]
+            entity_type_embedding = self.lookup[entity_type]
+        except:
+            entity_type = self.token2int['other']
+            entity_type_embedding = self.lookup[entity_type]
 
-        entity_gender = self.token2int[self.entity_gender[entity]]
-        entity_gender_embedding = self.lookup[entity_gender]
+        try:
+            entity_gender = self.token2int[self.entity_gender[entity]]
+            entity_gender_embedding = self.lookup[entity_gender]
+        except:
+            entity_gender = self.token2int['neutral']
+            entity_gender_embedding = self.lookup[entity_gender]
 
         s = self.dec_lstm.initial_state().add_input(dy.concatenate([dy.vecInput(self.config.state_dim * 6), last_output_embeddings, entity_type_embedding, entity_gender_embedding]))
         candidates = [{'sentence': [self.EOS], 'prob': 0.0, 'count_EOS': 0, 's': s}]
