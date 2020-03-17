@@ -78,8 +78,9 @@ class Logger:
 
 
 class Attention:
-    def __init__(self, config, path, logger):
+    def __init__(self, config, path, logger, lowercase=False):
         self.path = path
+        self.lowercase = lowercase
         self.write_path = utils.get_log_path(path, 'att')  # Directory to save results and trained models
 
         self.logger = logger
@@ -100,7 +101,8 @@ class Attention:
             for i, row in enumerate(self.trainset):
                 pre_context = [self.EOS] + row['pre_context']
                 pos_context = row['pos_context'] + [self.EOS]
-                refex = [self.EOS] + row['refex'] + [self.EOS]
+                refex = row['refex'].lower() if self.lowercase else row['refex']
+                refex = [self.EOS] + refex + [self.EOS]
                 entity = row['entity']
                 entity_tokens = entity.replace('\"', '').replace('\'', '').replace(',', '').split('_')
 
@@ -113,7 +115,8 @@ class Attention:
             for i, row in enumerate(self.devset):
                 pre_context = [self.EOS] + row['pre_context']
                 pos_context = row['pos_context'] + [self.EOS]
-                refex = [self.EOS] + row['refex'] + [self.EOS]
+                refex = row['refex'].lower() if self.lowercase else row['refex']
+                refex = [self.EOS] + refex + [self.EOS]
                 entity = row['entity']
                 entity_tokens = entity.replace('\"', '').replace('\'', '').replace(',', '').split('_')
 
@@ -531,7 +534,8 @@ class Attention:
             for i, traininst in enumerate(self.trainset):
                 pre_context = [self.EOS] + traininst['pre_context']
                 pos_context = traininst['pos_context'] + [self.EOS]
-                refex = [self.EOS] + traininst['refex'] + [self.EOS]
+                refex = traininst['refex'].lower() if self.lowercase else traininst['refex']
+                refex = [self.EOS] + refex + [self.EOS]
                 entity = traininst['entity']
 
                 loss = self.get_loss(pre_context, pos_context, refex, entity)
@@ -594,11 +598,11 @@ if __name__ == '__main__':
     logger = Logger(path=path, model_path=os.path.join(path, 'best.dy'), result_path=os.path.join(path, 'results/'))
 
     PATH = 'data/v1.0/'
-    h = Attention(config=config, path=PATH, logger=logger)
+    h = Attention(config=config, path=PATH, logger=logger, lowercase=True)
     h.train()
 
     # config['BEAM_SIZE'] = 4
-    h = Attention(config=config, path=PATH, logger=logger)
+    h = Attention(config=config, path=PATH, logger=logger, lowercase=True)
     h.model.populate(logger.model_path)
     h.test()
 
