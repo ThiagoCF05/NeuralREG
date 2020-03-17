@@ -57,16 +57,19 @@ class Config:
 
 
 class Logger:
-    def __init__(self, result_path, model_path):
+    def __init__(self, path, result_path, model_path):
+        if not os.path.exists(path):
+            os.mkdir(path)
         if not os.path.exists(result_path):
             os.mkdir(result_path)
 
+        self.path = path
         self.result_path = result_path
         self.model_path = model_path
 
     def save_result(self, fname, results, beam):
         for i in range(beam):
-            f = open(os.path.join(self.result_path, fname + '_' + str(i + 1)), 'w')
+            f = open(os.path.join(self.result_path, fname + '_' + str(i+1)), 'w')
             for output in results:
                 if i < len(output):
                     f.write(output[i])
@@ -91,7 +94,7 @@ class Attention:
         self.init()
 
     def build_vocab(self):
-        vocab_path = os.path.join(self.path, 'new_vocab.json')
+        vocab_path = os.path.join(self.logger.path, 'new_vocab.json')
         if not os.path.exists(vocab_path):
             self.vocab = []
             for i, row in enumerate(self.trainset):
@@ -468,12 +471,11 @@ class Attention:
             for j, output in enumerate(outputs):
                 outputs[j] = delimiter.join(output).replace(self.EOS, '').strip()
 
-            if i % self.config.batch == 0:
-                dy.renew_cg()
+            dy.renew_cg()
 
             results.append(outputs)
 
-            print("Progress: {0}".format(round(i / len(self.testset), 2)), end='\r')
+            print("Progress: {0}, {1}".format(round(i / len(self.testset), 2), i), end='\r')
         self.logger.save_result(fname='test', results=results, beam=self.config.beam)
 
     def train(self):
@@ -541,11 +543,32 @@ if __name__ == '__main__':
         'EARLY_STOP': 10
     }
 
-    logger = Logger(model_path='best.dy', result_path='results/')
+    coling_path = 'coling'
+    if not os.path.exists(coling_path):
+        os.mkdir(coling_path)
+
+    ##### VERSION 1.0 #####
+    path = os.path.join(coling_path, 'attention_acl_v1.0/')
+    logger = Logger(path=path, model_path=os.path.join(path, 'best.dy'), result_path=os.path.join(path, 'results/'))
+
+    PATH = 'data/v1.0/'
+    h = Attention(config=config, path=PATH, logger=logger)
+    h.train()
+
+    # config['BEAM_SIZE'] = 4
+    h = Attention(config=config, path=PATH, logger=logger)
+    h.model.populate(logger.model_path)
+    h.test()
+
+    ##### VERSION 1.5 #####
+    path = os.path.join(coling_path, 'attention_acl/')
+    logger = Logger(path=path, model_path=os.path.join(path, 'best.dy'), result_path=os.path.join(path, 'results/'))
 
     PATH = 'data/v1.5/'
     h = Attention(config=config, path=PATH, logger=logger)
     h.train()
 
+    # config['BEAM_SIZE'] = 4
+    h = Attention(config=config, path=PATH, logger=logger)
     h.model.populate(logger.model_path)
     h.test()
