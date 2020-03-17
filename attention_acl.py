@@ -101,7 +101,7 @@ class Attention:
             for i, row in enumerate(self.trainset):
                 pre_context = [self.EOS] + row['pre_context']
                 pos_context = row['pos_context'] + [self.EOS]
-                refex = row['refex'].lower() if self.lowercase else row['refex']
+                refex = [w.lower() for w in row['refex']] if self.lowercase else row['refex']
                 refex = [self.EOS] + refex + [self.EOS]
                 entity = row['entity']
                 entity_tokens = entity.replace('\"', '').replace('\'', '').replace(',', '').split('_')
@@ -115,7 +115,7 @@ class Attention:
             for i, row in enumerate(self.devset):
                 pre_context = [self.EOS] + row['pre_context']
                 pos_context = row['pos_context'] + [self.EOS]
-                refex = row['refex'].lower() if self.lowercase else row['refex']
+                refex = [w.lower() for w in row['refex']] if self.lowercase else row['refex']
                 refex = [self.EOS] + refex + [self.EOS]
                 entity = row['entity']
                 entity_tokens = entity.replace('\"', '').replace('\'', '').replace(',', '').split('_')
@@ -492,7 +492,7 @@ class Attention:
             for i, traininst in enumerate(self.trainset):
                 pre_context = [self.EOS] + traininst['pre_context']
                 pos_context = traininst['pos_context'] + [self.EOS]
-                refex = traininst['refex'].lower() if self.lowercase else traininst['refex']
+                refex = [w.lower() for w in traininst['refex']] if self.lowercase else traininst['refex']
                 refex = [self.EOS] + refex + [self.EOS]
                 entity = traininst['entity']
 
