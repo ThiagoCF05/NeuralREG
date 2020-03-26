@@ -40,7 +40,7 @@ class OnlyNames():
 
 
 if __name__ == '__main__':
-    IN_FILE = 'data/v1.0/old_format/test/data.json'
+    IN_FILE = 'data/v1.0/acl_format/test/data.json'
     OUT_FILE = 'onlynames.json'
 
     b = OnlyNames(in_file=IN_FILE, out_file=OUT_FILE)
