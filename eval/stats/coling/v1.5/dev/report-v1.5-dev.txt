@@ -1,0 +1,107 @@
+ATTENTION ACL
+ACCURACY:  0.7277
+DISTANCE:  2.3501
+PRONOUN ACCURACY:  0.7318
+
+
+              precision    recall  f1-score   support
+
+ non_pronoun       0.98      0.98      0.98      7715
+     pronoun       0.78      0.78      0.78       563
+
+    accuracy                           0.97      8278
+   macro avg       0.88      0.88      0.88      8278
+weighted avg       0.97      0.97      0.97      8278
+
+
+
+BLEU = 97.06, 98.8/97.7/96.7/95.8 (BP=0.998, ratio=0.998, hyp_len=218006, ref_len=218359)
+TEXT ACCURACY:  0.7277 12048 16556
+----------
+
+ATTENTION COPY
+ACCURACY:  0.7167
+DISTANCE:  2.4284
+PRONOUN ACCURACY:  0.6838
+
+
+              precision    recall  f1-score   support
+
+ non_pronoun       0.98      0.98      0.98      7715
+     pronoun       0.77      0.75      0.76       563
+
+    accuracy                           0.97      8278
+   macro avg       0.87      0.87      0.87      8278
+weighted avg       0.97      0.97      0.97      8278
+
+
+
+
+BLEU = 96.88, 98.8/97.6/96.6/95.6 (BP=0.997, ratio=0.997, hyp_len=217811, ref_len=218359)
+TEXT ACCURACY:  0.7167 11866 16556
+----------
+ATTENTION COPY CONTEXT
+ACCURACY:  0.7103
+DISTANCE:  2.4924
+PRONOUN ACCURACY:  0.7815
+
+
+              precision    recall  f1-score   support
+
+ non_pronoun       0.99      0.97      0.98      7715
+     pronoun       0.70      0.83      0.76       563
+
+    accuracy                           0.96      8278
+   macro avg       0.84      0.90      0.87      8278
+weighted avg       0.97      0.96      0.97      8278
+
+
+
+BLEU = 96.79, 98.8/97.6/96.5/95.5 (BP=0.997, ratio=0.997, hyp_len=217681, ref_len=218359)
+
+TEXT ACCURACY:  0.7103 11760 16556
+----------
+ATTENTION COPY PRECONTEXT
+ACCURACY:  0.6377
+DISTANCE:  3.8041
+PRONOUN ACCURACY:  0.0284
+
+
+              precision    recall  f1-score   support
+
+ non_pronoun       0.93      1.00      0.97      7715
+     pronoun       0.72      0.03      0.06       563
+
+    accuracy                           0.93      8278
+   macro avg       0.83      0.52      0.51      8278
+weighted avg       0.92      0.93      0.90      8278
+
+
+
+
+BLEU = 95.77, 97.9/96.4/95.1/93.7 (BP=1.000, ratio=1.003, hyp_len=218975, ref_len=218359)
+TEXT ACCURACY:  0.6377 10558 16556
+----------
+ATTENTION COPY POSCONTEXT
+ACCURACY:  0.6377
+DISTANCE:  3.8041
+PRONOUN ACCURACY:  0.0284
+
+
+              precision    recall  f1-score   support
+
+ non_pronoun       0.93      1.00      0.97      7715
+     pronoun       0.72      0.03      0.06       563
+
+    accuracy                           0.93      8278
+   macro avg       0.83      0.52      0.51      8278
+weighted avg       0.92      0.93      0.90      8278
+
+
+
+
+BLEU = 95.77, 97.9/96.4/95.1/93.7 (BP=1.000, ratio=1.003, hyp_len=218975, ref_len=218359)
+TEXT ACCURACY:  0.6377 10558 16556
+----------
+
+Process finished with exit code 0
