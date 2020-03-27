@@ -235,9 +235,11 @@ def model_report(model_name, original, y_real, y_pred):
     print('\n')
     originals, templates, num, dem, text_acc = evaluate_text(original, y_pred)
     print('TEXT ACCURACY: ', str(round(float(num) / dem, 4)), str(num), str(dem))
-    print(10 * '-')
+    print('\n')
     print('DOMAIN ACCURACY:')
     domain_evaluate(y_real, y_pred, original)
+    print(10 * '-')
+
     return originals, templates, edit_distances, pron_acc, text_acc
 
 
@@ -293,7 +295,7 @@ def run():
 
     # ATTENTION COPY PRE CONTEXT - ACCURACY, STRING EDIT DISTANCE AND PRONOUN ACCURACY
     originals, templates, attcpre_distances, attcpre_pron_acc, attcpre_text_acc = model_report(
-        'ATTENTION COPY PRECONTEXT', original, y_real, y_attcpos)
+        'ATTENTION COPY PRECONTEXT', original, y_real, y_attcpre)
 
     with codecs.open(os.path.join(OUTPUT_PATH, 'attcpre.txt'), 'w', encoding='utf8') as f:
         f.write('\n'.join(templates).lower())
