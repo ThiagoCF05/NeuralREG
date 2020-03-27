@@ -1,4 +1,3 @@
-/home/rossana/Projects/NeuralREG/venv/bin/python /home/rossana/Projects/NeuralREG/eval/evaluation_coling.py
 ATTENTION ACL
 ACCURACY:  0.7104
 DISTANCE:  2.7008
@@ -18,8 +17,15 @@ weighted avg       0.97      0.96      0.97      8450
 
 BLEU = 96.80, 98.6/97.5/96.5/95.5 (BP=0.998, ratio=0.998, hyp_len=226360, ref_len=226908)
 TEXT ACCURACY:  0.7104 12006 16900
-----------
 
+
+DOMAIN ACCURACY:
+
+
+ACCURACY:  0.7104
+DISTANCE:  2.7008
+PRONOUN ACCURACY:  0.7548
+----------
 ATTENTION COPY
 ACCURACY:  0.7263
 DISTANCE:  2.3885
@@ -39,8 +45,15 @@ weighted avg       0.97      0.97      0.97      8450
 
 BLEU = 96.99, 98.8/97.7/96.7/95.8 (BP=0.998, ratio=0.998, hyp_len=226347, ref_len=226908)
 TEXT ACCURACY:  0.7263 12274 16900
-----------
 
+
+DOMAIN ACCURACY:
+
+
+ACCURACY:  0.7263
+DISTANCE:  2.3885
+PRONOUN ACCURACY:  0.7617
+----------
 ATTENTION COPY CONTEXT
 ACCURACY:  0.7259
 DISTANCE:  2.4156
@@ -58,28 +71,44 @@ weighted avg       0.97      0.96      0.96      8450
 
 
 
+
 BLEU = 97.05, 98.7/97.6/96.6/95.7 (BP=0.999, ratio=0.999, hyp_len=226617, ref_len=226908)
 TEXT ACCURACY:  0.7259 12268 16900
+
+
+DOMAIN ACCURACY:
+
+ACCURACY:  0.7259
+DISTANCE:  2.4156
+PRONOUN ACCURACY:  0.7287
 ----------
 ATTENTION COPY PRECONTEXT
-ACCURACY:  0.618
-DISTANCE:  4.3643
-PRONOUN ACCURACY:  0.647
+ACCURACY:  0.6817
+DISTANCE:  2.8018
+PRONOUN ACCURACY:  0.6035
 
 
               precision    recall  f1-score   support
 
- non_pronoun       0.98      0.91      0.94      7875
-     pronoun       0.36      0.71      0.48       575
+ non_pronoun       0.98      0.97      0.98      7875
+     pronoun       0.67      0.80      0.73       575
 
-    accuracy                           0.90      8450
-   macro avg       0.67      0.81      0.71      8450
-weighted avg       0.94      0.90      0.91      8450
+    accuracy                           0.96      8450
+   macro avg       0.83      0.88      0.85      8450
+weighted avg       0.96      0.96      0.96      8450
 
 
 
-BLEU = 95.38, 98.3/96.9/95.7/94.5 (BP=0.990, ratio=0.990, hyp_len=224620, ref_len=226908)
-TEXT ACCURACY:  0.618 10444 16900
+
+BLEU = 96.49, 98.8/97.5/96.4/95.3 (BP=0.995, ratio=0.995, hyp_len=225757, ref_len=226908)
+TEXT ACCURACY:  0.6817 11520 16900
+
+
+DOMAIN ACCURACY:
+
+ACCURACY:  0.6817
+DISTANCE:  2.8018
+PRONOUN ACCURACY:  0.6035
 ----------
 ATTENTION COPY POSCONTEXT
 ACCURACY:  0.618
@@ -100,6 +129,14 @@ weighted avg       0.94      0.90      0.91      8450
 
 BLEU = 95.38, 98.3/96.9/95.7/94.5 (BP=0.990, ratio=0.990, hyp_len=224620, ref_len=226908)
 TEXT ACCURACY:  0.618 10444 16900
+
+
+DOMAIN ACCURACY:
+
+
+ACCURACY:  0.618
+DISTANCE:  4.3643
+PRONOUN ACCURACY:  0.647
 ----------
 
 Process finished with exit code 0
