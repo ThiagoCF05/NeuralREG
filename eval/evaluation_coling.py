@@ -17,6 +17,7 @@ Description:
         ORIGINAL
         ATTENTION
         ATTENTION_ACL
+        ATTENTION_PRECONTEXT
         ATTENTION_COPY_CONTEXT
         ATTENTION_COPY_PRECONTEXT
         ATTENTION_COPY_POSCONTEXT
@@ -43,6 +44,8 @@ ORIGINAL = os.path.join(DATA_PATH, 'dev.json')
 ATTENTION_ACL = EVAL_PATH + 'attention_acl/results/dev_best_1'
 # ATTENTION COPY NAMES RESULTS FOLDER
 ATTENTION_COPY = EVAL_PATH + 'attention/results/dev_best_1'
+# ATTENTION PRECONTEXT RESULTS FOLDER
+ATTENTION_PRECONTEXT = EVAL_PATH + 'attention_precontext/results/dev_best_1'
 # ATTENTION COPY CONTEXT RESULTS FOLDER
 ATTENTION_COPY_CONTEXT = EVAL_PATH + 'attention_copy_context/results/dev_best_1'
 # ATTENTION COPY PRECONTEXT RESULTS FOLDER
@@ -64,6 +67,10 @@ def load_models():
     with open(ATTENTION_COPY, encoding='utf-8') as f:
         y_attcopy = f.read().lower().split('\n')
 
+    # NEURAL ATTENTION_PRECONTEXT RESULTS
+    with open(ATTENTION_PRECONTEXT, encoding='utf-8') as f:
+        y_attpre = f.read().lower().split('\n')
+
     # NEURAL ATTENTION_COPY_CONTEXT RESULTS
     with open(ATTENTION_COPY_CONTEXT, encoding='utf-8') as f:
         y_attctxt = f.read().lower().split('\n')
@@ -76,7 +83,7 @@ def load_models():
     with open(ATTENTION_COPY_POSCONTEXT, encoding='utf-8') as f:
         y_attcpos = f.read().lower().split('\n')
 
-    return original, y_attacl, y_attcopy, y_attctxt, y_attcpre, y_attcpos
+    return original, y_attacl, y_attcopy, y_attpre, y_attctxt, y_attcpre, y_attcpos
 
 
 def evaluate_references(y_real, y_pred):
@@ -244,12 +251,12 @@ def model_report(model_name, original, y_real, y_pred):
 
 
 def run():
-    original, y_attacl, y_attcopy, y_attctxt, y_attcpre, y_attcpos = load_models()
+    original, y_attacl, y_attcopy, y_attprectxt, y_attctxt, y_attcpre, y_attcpos = load_models()
 
     y_real = []
     for i, row in enumerate(original):
         refex = [w.lower() for w in row['refex']]
-        refex = ' '.join(refex)
+        refex = ' '.join(refex).strip()
         y_real.append(refex)
 
     # ATTENTION ACL - NAMES ACCURACY, STRING EDIT DISTANCE AND PRONOUN ACCURACY
@@ -279,6 +286,20 @@ def run():
         else:
             attcopy_ref_acc.append(0)
 
+    # ATTENTION PRE CONTEXT - ACCURACY, STRING EDIT DISTANCE AND PRONOUN ACCURACY
+    originals, templates, attprectxt_distances, attprectxt_pron_acc, attprectxt_text_acc = model_report(
+        'ATTENTION PRECONTEXT', original, y_real, y_attprectxt)
+
+    with codecs.open(os.path.join(OUTPUT_PATH, 'attprectxt.txt'), 'w', encoding='utf8') as f:
+        f.write('\n'.join(templates).lower())
+
+    attprectxt_ref_acc = []
+    for real, pred in zip(y_real, y_attprectxt):
+        if real.replace('eos', '').strip() == pred.replace('eos', '').strip():
+            attprectxt_ref_acc.append(1)
+        else:
+            attprectxt_ref_acc.append(0)
+
     # ATTENTION_COPY_CONTEXT - ACCURACY, STRING EDIT DISTANCE AND PRONOUN ACCURACY
     originals, templates, attctxt_distances, attctxt_pron_acc, attctxt_text_acc = model_report('ATTENTION COPY CONTEXT',
                                                                                                original, y_real,
@@ -301,7 +322,7 @@ def run():
         f.write('\n'.join(templates).lower())
 
     attcpre_ref_acc = []
-    for real, pred in zip(y_real, y_attcpos):
+    for real, pred in zip(y_real, y_attcpre):
         if real.replace('eos', '').strip() == pred.replace('eos', '').strip():
             attcpre_ref_acc.append(1)
         else:
@@ -325,11 +346,11 @@ def run():
     # Reference accuracy file
     resp = np.arange(1, len(y_real) + 1)
     ref_acc = np.concatenate(
-        [[resp], [attacl_ref_acc], [attcopy_ref_acc], [attctxt_ref_acc], [attcpre_ref_acc], [attcpos_ref_acc]])
+        [[resp], [attacl_ref_acc], [attcopy_ref_acc], [attprectxt_ref_acc], [attctxt_ref_acc], [attcpre_ref_acc], [attcpos_ref_acc]])
     ref_acc = ref_acc.transpose().tolist()
 
     with open(os.path.join(OUTPUT_PATH, 'r_ref_acc.csv'), 'w') as f:
-        f.write('resp;attacl;attcopy;attctxt;attcpre;attcpos\n')
+        f.write('resp;attacl;attcopy;attprectxt;attctxt;attcpre;attcpos\n')
         for row in ref_acc:
             f.write(';'.join(map(lambda x: str(x), row)))
             f.write('\n')
@@ -337,11 +358,11 @@ def run():
     # Pronoun accuracy
     resp = np.arange(1, len(attcopy_pron_acc) + 1)
     pron_acc = np.concatenate(
-        [[resp], [attacl_pron_acc], [attcopy_pron_acc], [attctxt_pron_acc], [attcpre_pron_acc], [attcpos_pron_acc]])
+        [[resp], [attacl_pron_acc], [attcopy_pron_acc], [attprectxt_pron_acc], [attctxt_pron_acc], [attcpre_pron_acc], [attcpos_pron_acc]])
     pron_acc = pron_acc.transpose().tolist()
 
     with open(os.path.join(OUTPUT_PATH, 'r_pron_acc.csv'), 'w') as f:
-        f.write('resp;attacl;attcopy;attctxt;attcpre;attcpos\n')
+        f.write('resp;attacl;attcopy;attprectxt;attctxt;attcpre;attcpos\n')
         for row in pron_acc:
             f.write(';'.join(map(lambda x: str(x), row)))
             f.write('\n')
@@ -349,11 +370,11 @@ def run():
     # Text accuracy
     resp = np.arange(1, len(attcopy_text_acc) + 1)
     pron_acc = np.concatenate(
-        [[resp], [attacl_text_acc], [attcopy_text_acc], [attctxt_text_acc], [attcpre_text_acc], [attcpos_text_acc]])
+        [[resp], [attacl_text_acc], [attcopy_text_acc], [attprectxt_ref_acc], [attctxt_text_acc], [attcpre_text_acc], [attcpos_text_acc]])
     pron_acc = pron_acc.transpose().tolist()
 
     with open(os.path.join(OUTPUT_PATH, 'r_text_acc.csv'), 'w') as f:
-        f.write('resp;attacl;attcopy;attctxt;attcpre;attcpos\n')
+        f.write('resp;attacl;attcopy;attprectxt;attctxt;attcpre;attcpos\n')
         for row in pron_acc:
             f.write(';'.join(map(lambda x: str(x), row)))
             f.write('\n')
@@ -361,12 +382,12 @@ def run():
     # String edit distance
     resp = np.arange(1, len(y_real) + 1)
     r_distances = np.concatenate(
-        [[resp], [attacl_distances], [attcopy_distances], [attctxt_distances], [attcpre_distances],
+        [[resp], [attacl_distances], [attcopy_distances], [attprectxt_distances],  [attctxt_distances], [attcpre_distances],
          [attcpos_distances]])
     r_distances = r_distances.transpose().tolist()
 
     with open(os.path.join(OUTPUT_PATH, 'r_distances.csv'), 'w') as f:
-        f.write('resp;attacl;attcopy;attctxt;attcpre;attcpos\n')
+        f.write('resp;attacl;attcopy;attprectxt;attctxt;attcpre;attcpos\n')
         for row in r_distances:
             f.write(';'.join(map(lambda x: str(x), row)))
             f.write('\n')
