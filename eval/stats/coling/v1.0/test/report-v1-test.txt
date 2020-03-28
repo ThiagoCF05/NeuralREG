@@ -15,12 +15,12 @@ weighted avg       0.97      0.96      0.97      8450
 
 
 
+
 BLEU = 96.80, 98.6/97.5/96.5/95.5 (BP=0.998, ratio=0.998, hyp_len=226360, ref_len=226908)
 TEXT ACCURACY:  0.7104 12006 16900
 
 
 DOMAIN ACCURACY:
-
 
 ACCURACY:  0.7104
 DISTANCE:  2.7008
@@ -54,6 +54,34 @@ ACCURACY:  0.7263
 DISTANCE:  2.3885
 PRONOUN ACCURACY:  0.7617
 ----------
+ATTENTION PRECONTEXT
+ACCURACY:  0.7179
+DISTANCE:  2.5937
+PRONOUN ACCURACY:  0.7478
+
+
+              precision    recall  f1-score   support
+
+ non_pronoun       0.98      0.98      0.98      7875
+     pronoun       0.73      0.78      0.76       575
+
+    accuracy                           0.97      8450
+   macro avg       0.86      0.88      0.87      8450
+weighted avg       0.97      0.97      0.97      8450
+
+
+
+
+BLEU = 96.97, 98.6/97.5/96.6/95.6 (BP=0.999, ratio=0.999, hyp_len=226675, ref_len=226908)
+TEXT ACCURACY:  0.7179 12132 16900
+
+
+DOMAIN ACCURACY:
+
+ACCURACY:  0.7179
+DISTANCE:  2.5937
+PRONOUN ACCURACY:  0.7478
+----------
 ATTENTION COPY CONTEXT
 ACCURACY:  0.7259
 DISTANCE:  2.4156
@@ -71,12 +99,12 @@ weighted avg       0.97      0.96      0.96      8450
 
 
 
-
 BLEU = 97.05, 98.7/97.6/96.6/95.7 (BP=0.999, ratio=0.999, hyp_len=226617, ref_len=226908)
 TEXT ACCURACY:  0.7259 12268 16900
 
 
 DOMAIN ACCURACY:
+
 
 ACCURACY:  0.7259
 DISTANCE:  2.4156
@@ -99,12 +127,12 @@ weighted avg       0.96      0.96      0.96      8450
 
 
 
-
 BLEU = 96.49, 98.8/97.5/96.4/95.3 (BP=0.995, ratio=0.995, hyp_len=225757, ref_len=226908)
 TEXT ACCURACY:  0.6817 11520 16900
 
 
 DOMAIN ACCURACY:
+
 
 ACCURACY:  0.6817
 DISTANCE:  2.8018
@@ -127,12 +155,12 @@ weighted avg       0.94      0.90      0.91      8450
 
 
 
+
 BLEU = 95.38, 98.3/96.9/95.7/94.5 (BP=0.990, ratio=0.990, hyp_len=224620, ref_len=226908)
 TEXT ACCURACY:  0.618 10444 16900
 
 
 DOMAIN ACCURACY:
-
 
 ACCURACY:  0.618
 DISTANCE:  4.3643
