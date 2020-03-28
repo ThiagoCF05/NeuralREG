@@ -135,18 +135,20 @@ class REGPrecACL:
         self.temp_extractor = TemplateExtraction(stanford_path)
         self.corenlp = StanfordCoreNLP(stanford_path)
 
-        # self.traindata, self.vocab = self.process(entry_path=os.path.join(data_path, 'train'))
+        self.traindata, self.vocab = self.process(entry_path=os.path.join(data_path, 'train'),
+                                                  original_path=os.path.join(data_path, 'dev', 'reference'))
         self.devdata, _ = self.process(entry_path=os.path.join(data_path, 'dev'),
                                        original_path=os.path.join(data_path, 'dev', 'reference'))
-        # self.testdata, _ = self.process(entry_path=os.path.join(data_path, 'test'))
+        self.testdata, _ = self.process(entry_path=os.path.join(data_path, 'test'),
+                                        original_path=os.path.join(data_path, 'dev', 'reference'))
 
         self.corenlp.close()
         self.temp_extractor.close()
 
-        # json.dump(self.traindata, open(os.path.join(write_path, 'train.json'), 'w'))
-        # json.dump(self.vocab, open(os.path.join(write_path, 'vocab.json'), 'w'))
+        json.dump(self.traindata, open(os.path.join(write_path, 'train.json'), 'w'))
+        json.dump(self.vocab, open(os.path.join(write_path, 'vocab.json'), 'w'))
         json.dump(self.devdata, open(os.path.join(write_path, 'dev.json'), 'w'))
-        # json.dump(self.testdata, open(os.path.join(write_path, 'test.json'), 'w'))
+        json.dump(self.testdata, open(os.path.join(write_path, 'test.json'), 'w'))
 
     def process(self, entry_path, original_path=''):
         data_set = load_data(entry_path, original_path)
@@ -163,12 +165,16 @@ class REGPrecACL:
             template = reference['pre_context'] + reference['entity'] + reference['pos_context']
             template = template.split(' ')
 
-            pre_context = str(reference['pre_context']).replace('eos', '').split(' ')
-            pos_context = str(reference['pos_context']).replace('eos', '').split(' ')
+            pre = re.split(' ', reference['pre_context'].replace('eos', '').strip())
+            pre_context = [elem for elem in pre if elem != '']
 
-            entity = '_'.join(reference['entity'].replace('\"', '').replace('\'', '').lower().split())
+            pos = re.split(' ', reference['pos_context'].replace('eos', '').strip())
+            pos_context = [elem for elem in pos if elem != '']
+
+            entity = '_'.join(reference['entity'].replace('\"', '').replace('\'', '').lower().strip().split())
             if entity != '':
-                refex = str(reference['refex']).replace('eos', '').split(' ')
+                _refex = re.split(' ', reference['refex'].replace('eos', '').strip())
+                refex = [elem for elem in _refex if elem != '']
 
                 isDigit = entity.replace('.', '').strip().isdigit()
                 isDate = len(re.findall(re_date, entity)) > 0
@@ -200,11 +206,11 @@ class REGPrecACL:
 
 
 if __name__ == '__main__':
-    data_path = '/home/rossana/Projects/NeuralREG/data/v1.0/acl_format'
-    write_path = '/home/rossana/Projects/NeuralREG/data/v1.0'
-    stanford_path = r'/home/rossana/Projects/stanford/stanford-corenlp-full-2018-10-05'
+    # data_path = '../data/v1.0/acl_format'
+    # write_path = '../data/v1.0'
+    # stanford_path = r'../stanford/stanford-corenlp-full-2018-10-05'
 
-    # data_path = sys.argv[1]
-    # write_path = sys.argv[2]
-    # stanford_path = sys.argv[3]
+    data_path = sys.argv[1]
+    write_path = sys.argv[2]
+    stanford_path = sys.argv[3]
     s = REGPrecACL(data_path=data_path, write_path=write_path, stanford_path=stanford_path)
