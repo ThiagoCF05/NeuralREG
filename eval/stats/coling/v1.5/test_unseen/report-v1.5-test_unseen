@@ -1,0 +1,266 @@
+ATTENTION ACL
+ACCURACY:  0.0691
+DISTANCE:  16.7025
+PRONOUN ACCURACY:  0.2094
+
+
+              precision    recall  f1-score   support
+
+ non_pronoun       0.95      0.97      0.96      8668
+     pronoun       0.67      0.55      0.61       898
+
+    accuracy                           0.93      9566
+   macro avg       0.81      0.76      0.79      9566
+weighted avg       0.93      0.93      0.93      9566
+
+
+
+BLEU = 82.60, 87.7/84.0/81.1/78.0 (BP=1.000, ratio=1.043, hyp_len=242839, ref_len=232728)
+TEXT ACCURACY:  0.0691 1322 19132
+
+
+DOMAIN ACCURACY:
+
+CELESTIALBODY
+ACCURACY:  0.0403
+DISTANCE:  18.3481
+PRONOUN ACCURACY:  0.2837
+MEANOFTRANSPORTATION
+ACCURACY:  0.1017
+DISTANCE:  16.137
+PRONOUN ACCURACY:  0.4663
+POLITICIAN
+ACCURACY:  0.0659
+DISTANCE:  16.6371
+PRONOUN ACCURACY:  0.0606
+ATHLETE
+ACCURACY:  0.0491
+DISTANCE:  17.6772
+PRONOUN ACCURACY:  0.1892
+ARTIST
+ACCURACY:  0.0685
+DISTANCE:  15.9523
+PRONOUN ACCURACY:  0.1395
+----------
+ATTENTION COPY
+ACCURACY:  0.4544
+DISTANCE:  4.4914
+PRONOUN ACCURACY:  0.3497
+
+
+              precision    recall  f1-score   support
+
+ non_pronoun       0.94      0.99      0.96      8668
+     pronoun       0.79      0.42      0.54       898
+
+    accuracy                           0.93      9566
+   macro avg       0.86      0.70      0.75      9566
+weighted avg       0.93      0.93      0.93      9566
+
+
+
+
+BLEU = 93.17, 98.0/95.4/93.3/91.3 (BP=0.986, ratio=0.986, hyp_len=229557, ref_len=232728)
+TEXT ACCURACY:  0.4544 8694 19132
+
+
+DOMAIN ACCURACY:
+CELESTIALBODY
+ACCURACY:  0.3943
+DISTANCE:  4.5329
+PRONOUN ACCURACY:  0.4823
+MEANOFTRANSPORTATION
+ACCURACY:  0.3194
+DISTANCE:  5.2312
+PRONOUN ACCURACY:  0.5092
+POLITICIAN
+ACCURACY:  0.5218
+DISTANCE:  4.2734
+PRONOUN ACCURACY:  0.2338
+ATHLETE
+ACCURACY:  0.4826
+DISTANCE:  4.0
+PRONOUN ACCURACY:  0.2973
+ARTIST
+ACCURACY:  0.5154
+DISTANCE:  4.3528
+PRONOUN ACCURACY:  0.3023
+----------
+ATTENTION PRECONTEXT
+ACCURACY:  0.0941
+DISTANCE:  15.3943
+PRONOUN ACCURACY:  0.4944
+
+
+              precision    recall  f1-score   support
+
+ non_pronoun       0.96      0.98      0.97      8668
+     pronoun       0.71      0.58      0.63       898
+
+    accuracy                           0.94      9566
+   macro avg       0.83      0.78      0.80      9566
+weighted avg       0.93      0.94      0.93      9566
+
+
+
+BLEU = 84.20, 89.1/85.5/82.7/79.7 (BP=1.000, ratio=1.028, hyp_len=239309, ref_len=232728)
+TEXT ACCURACY:  0.0941 1800 19132
+
+
+DOMAIN ACCURACY:
+
+CELESTIALBODY
+ACCURACY:  0.0393
+DISTANCE:  17.001
+PRONOUN ACCURACY:  0.2837
+MEANOFTRANSPORTATION
+ACCURACY:  0.0915
+DISTANCE:  16.2892
+PRONOUN ACCURACY:  0.3436
+POLITICIAN
+ACCURACY:  0.1271
+DISTANCE:  14.1803
+PRONOUN ACCURACY:  0.7013
+ATHLETE
+ACCURACY:  0.0852
+DISTANCE:  15.7817
+PRONOUN ACCURACY:  0.6014
+ARTIST
+ACCURACY:  0.0941
+DISTANCE:  14.8318
+PRONOUN ACCURACY:  0.4512
+----------
+ATTENTION COPY CONTEXT
+ACCURACY:  0.2819
+DISTANCE:  6.19
+PRONOUN ACCURACY:  0.2517
+
+
+              precision    recall  f1-score   support
+
+ non_pronoun       0.96      0.97      0.96      8668
+     pronoun       0.67      0.63      0.65       898
+
+    accuracy                           0.94      9566
+   macro avg       0.82      0.80      0.81      9566
+weighted avg       0.93      0.94      0.93      9566
+
+
+
+
+BLEU = 91.12, 98.2/94.7/92.2/89.9 (BP=0.973, ratio=0.973, hyp_len=226430, ref_len=232728)
+TEXT ACCURACY:  0.2819 5394 19132
+
+
+DOMAIN ACCURACY:
+CELESTIALBODY
+ACCURACY:  0.233
+DISTANCE:  6.3776
+PRONOUN ACCURACY:  0.4965
+MEANOFTRANSPORTATION
+ACCURACY:  0.2586
+DISTANCE:  6.6667
+PRONOUN ACCURACY:  0.6442
+POLITICIAN
+ACCURACY:  0.293
+DISTANCE:  6.1646
+PRONOUN ACCURACY:  0.013
+ATHLETE
+ACCURACY:  0.2301
+DISTANCE:  6.6754
+PRONOUN ACCURACY:  0.1081
+ARTIST
+ACCURACY:  0.3452
+DISTANCE:  5.4133
+PRONOUN ACCURACY:  0.1488
+----------
+ATTENTION COPY PRECONTEXT
+ACCURACY:  0.4135
+DISTANCE:  5.0496
+PRONOUN ACCURACY:  0.1971
+
+
+              precision    recall  f1-score   support
+
+ non_pronoun       0.93      0.99      0.96      8668
+     pronoun       0.69      0.31      0.43       898
+
+    accuracy                           0.92      9566
+   macro avg       0.81      0.65      0.69      9566
+weighted avg       0.91      0.92      0.91      9566
+
+
+
+BLEU = 93.11, 97.3/94.7/92.4/90.3 (BP=0.994, ratio=0.994, hyp_len=231382, ref_len=232728)
+TEXT ACCURACY:  0.4135 7912 19132
+
+
+DOMAIN ACCURACY:
+
+CELESTIALBODY
+ACCURACY:  0.3451
+DISTANCE:  5.1121
+PRONOUN ACCURACY:  0.234
+MEANOFTRANSPORTATION
+ACCURACY:  0.3078
+DISTANCE:  5.3649
+PRONOUN ACCURACY:  0.4479
+POLITICIAN
+ACCURACY:  0.4834
+DISTANCE:  5.1035
+PRONOUN ACCURACY:  0.1385
+ATHLETE
+ACCURACY:  0.4428
+DISTANCE:  4.7606
+PRONOUN ACCURACY:  0.0946
+ARTIST
+ACCURACY:  0.4497
+DISTANCE:  4.8887
+PRONOUN ACCURACY:  0.1163
+----------
+ATTENTION COPY POSCONTEXT
+ACCURACY:  0.36
+DISTANCE:  5.822
+PRONOUN ACCURACY:  0.0011
+
+
+              precision    recall  f1-score   support
+
+ non_pronoun       0.91      1.00      0.95      8668
+     pronoun       0.75      0.00      0.01       898
+
+    accuracy                           0.91      9566
+   macro avg       0.83      0.50      0.48      9566
+weighted avg       0.89      0.91      0.86      9566
+
+
+
+
+BLEU = 92.42, 96.8/93.9/91.5/89.2 (BP=0.996, ratio=0.996, hyp_len=231757, ref_len=232728)
+TEXT ACCURACY:  0.36 6888 19132
+
+
+DOMAIN ACCURACY:
+CELESTIALBODY
+ACCURACY:  0.1819
+DISTANCE:  7.8987
+PRONOUN ACCURACY:  0.0
+MEANOFTRANSPORTATION
+ACCURACY:  0.2349
+DISTANCE:  6.6681
+PRONOUN ACCURACY:  0.0
+POLITICIAN
+ACCURACY:  0.4773
+DISTANCE:  4.8996
+PRONOUN ACCURACY:  0.0043
+ATHLETE
+ACCURACY:  0.4179
+DISTANCE:  5.569
+PRONOUN ACCURACY:  0.0
+ARTIST
+ACCURACY:  0.3957
+DISTANCE:  5.2551
+PRONOUN ACCURACY:  0.0
+----------
+
+Process finished with exit code 0
