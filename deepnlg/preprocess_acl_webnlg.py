@@ -478,9 +478,9 @@ class REGPrecACL:
 
 
 if __name__ == '__main__':
-    # data_path = '/home/rossana/Projects/NeuralREG/webnlg/data/v1.0/en'
-    # write_path = '/home/rossana/Projects/NeuralREG/data/v1.0'
-    # stanford_path = r'/home/rossana/Projects/stanford/stanford-corenlp-full-2018-10-05'
+    # data_path = '/webnlg/data/v1.0/en'
+    # write_path = '/data/v1.0'
+    # stanford_path = r'/stanford/stanford-corenlp-full-2018-10-05'
 
     data_path = sys.argv[1]
     write_path = sys.argv[2]

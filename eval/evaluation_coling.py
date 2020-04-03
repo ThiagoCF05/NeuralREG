@@ -15,12 +15,10 @@ Description:
 
     UPDATE CONSTANT PATHS:
         ORIGINAL
+        ONLYNAMES
         ATTENTION
         ATTENTION_ACL
-        ATTENTION_PRECONTEXT
-        ATTENTION_COPY_CONTEXT
-        ATTENTION_COPY_PRECONTEXT
-        ATTENTION_COPY_POSCONTEXT
+        PROFILEREG
 
         MULTIBLEU
 """
@@ -34,30 +32,36 @@ import numpy as np
 import os
 
 DATA_PATH = '../data/v1.5/'
-EVAL_PATH = 'coling/'
-OUTPUT_PATH = 'stats/coling/v1.5/dev/'
+EVAL_PATH = 'data/'
+OUTPUT_PATH = 'stats/coling/v1.5/'
 
 # ORIGINAL
-ORIGINAL = os.path.join(DATA_PATH, 'dev.json')
+ORIGINAL = os.path.join(DATA_PATH, 'test.json')
 
+# ONLY NAMES RESULTS PATH
+ONLYNAMES = EVAL_PATH + 'onlynames/results/onlynames.json'
 # ATTENTION ACL NAMES RESULTS PATH
-ATTENTION_ACL = EVAL_PATH + 'attention_acl/results/dev_best_1'
+ATTENTION_ACL = EVAL_PATH + 'attention_acl/results/test_1'
 # ATTENTION COPY NAMES RESULTS FOLDER
-ATTENTION_COPY = EVAL_PATH + 'attention/results/dev_best_1'
-# ATTENTION PRECONTEXT RESULTS FOLDER
-ATTENTION_PRECONTEXT = EVAL_PATH + 'attention_precontext/results/dev_best_1'
-# ATTENTION COPY CONTEXT RESULTS FOLDER
-ATTENTION_COPY_CONTEXT = EVAL_PATH + 'attention_copy_context/results/dev_best_1'
-# ATTENTION COPY PRECONTEXT RESULTS FOLDER
-ATTENTION_COPY_PRECONTEXT = EVAL_PATH + 'attention_copy_precontext/results/dev_best_1'
-# ATTENTION COPY POSCONTEXT RESULTS FOLDER
-ATTENTION_COPY_POSCONTEXT = EVAL_PATH + 'attention_copy_poscontext/results/dev_best_1'
+ATTENTION_COPY = EVAL_PATH + 'attention/results/test_1'
+# PROFILEREG
+PROFILEREG = EVAL_PATH + 'profilereg/results/preds.txt'
 
 MULTIBLEU = '../eval/multi-bleu.perl'
 
 
 def load_models():
     original = json.load(open(ORIGINAL, encoding='utf-8'))
+    # y_original = map(lambda x: x['refex'], original)
+    y_original = []
+    for i, row in enumerate(original):
+        refex = [w.lower() for w in row['refex']]
+        refex = ' '.join(refex).strip()
+        y_original.append(refex)
+
+    # ONLY NAMES RESULTS
+    only = json.load(open(ONLYNAMES, encoding='utf-8'))
+    y_only = list(map(lambda x: x['y_pred'], only))
 
     # ATTENTION_ACL RESULTS
     with open(ATTENTION_ACL, encoding='utf-8') as f:
@@ -67,23 +71,11 @@ def load_models():
     with open(ATTENTION_COPY, encoding='utf-8') as f:
         y_attcopy = f.read().lower().split('\n')
 
-    # NEURAL ATTENTION_PRECONTEXT RESULTS
-    with open(ATTENTION_PRECONTEXT, encoding='utf-8') as f:
-        y_attpre = f.read().lower().split('\n')
+    # PROFILEREG RESULTS
+    with open(PROFILEREG, encoding='utf-8') as f:
+        y_profilereg = f.read().lower().split('\n')
 
-    # NEURAL ATTENTION_COPY_CONTEXT RESULTS
-    with open(ATTENTION_COPY_CONTEXT, encoding='utf-8') as f:
-        y_attctxt = f.read().lower().split('\n')
-
-    # NEURAL ATTENTION_COPY_PRECONTEXT RESULTS
-    with open(ATTENTION_COPY_PRECONTEXT, encoding='utf-8') as f:
-        y_attcpre = f.read().lower().split('\n')
-
-    # NEURAL ATTENTION_COPY_POSCONTEXT RESULTS
-    with open(ATTENTION_COPY_POSCONTEXT, encoding='utf-8') as f:
-        y_attcpos = f.read().lower().split('\n')
-
-    return original, y_attacl, y_attcopy, y_attpre, y_attctxt, y_attcpre, y_attcpos
+    return original, y_original, y_only, y_attacl, y_attcopy, y_profilereg
 
 
 def evaluate_references(y_real, y_pred):
@@ -251,13 +243,20 @@ def model_report(model_name, original, y_real, y_pred):
 
 
 def run():
-    original, y_attacl, y_attcopy, y_attprectxt, y_attctxt, y_attcpre, y_attcpos = load_models()
+    original, y_real, y_only, y_attacl, y_attcopy, y_profilereg = load_models()
 
-    y_real = []
-    for i, row in enumerate(original):
-        refex = [w.lower() for w in row['refex']]
-        refex = ' '.join(refex).strip()
-        y_real.append(refex)
+    # ONLY - NAMES ACCURACY, STRING EDIT DISTANCE AND PRONOUN ACCURACY
+    originals, templates, only_distances, only_pron_acc, only_text_acc = model_report('ONLY NAMES', original, y_real,
+                                                                                      y_only)
+    with codecs.open(os.path.join(OUTPUT_PATH, 'only.txt'), 'w', encoding='utf8') as f:
+        f.write('\n'.join(templates).lower())
+
+    only_ref_acc = []
+    for real, pred in zip(y_real, y_only):
+        if real.replace('eos', '').strip() == pred.replace('eos', '').strip():
+            only_ref_acc.append(1)
+        else:
+            only_ref_acc.append(0)
 
     # ATTENTION ACL - NAMES ACCURACY, STRING EDIT DISTANCE AND PRONOUN ACCURACY
     originals, templates, attacl_distances, attacl_pron_acc, attacl_text_acc = model_report('ATTENTION ACL', original,
@@ -286,71 +285,29 @@ def run():
         else:
             attcopy_ref_acc.append(0)
 
-    # ATTENTION PRE CONTEXT - ACCURACY, STRING EDIT DISTANCE AND PRONOUN ACCURACY
-    originals, templates, attprectxt_distances, attprectxt_pron_acc, attprectxt_text_acc = model_report(
-        'ATTENTION PRECONTEXT', original, y_real, y_attprectxt)
+    # PROFILEREG - ACCURACY, STRING EDIT DISTANCE AND PRONOUN ACCURACY
+    originals, templates, profilereg_distances, profilereg_pron_acc, profilereg_text_acc = model_report(
+        'PROFILEREG', original, y_real, y_profilereg)
 
-    with codecs.open(os.path.join(OUTPUT_PATH, 'attprectxt.txt'), 'w', encoding='utf8') as f:
+    with codecs.open(os.path.join(OUTPUT_PATH, 'profilereg.txt'), 'w', encoding='utf8') as f:
         f.write('\n'.join(templates).lower())
 
-    attprectxt_ref_acc = []
-    for real, pred in zip(y_real, y_attprectxt):
+    profilereg_ref_acc = []
+    for real, pred in zip(y_real, y_profilereg):
         if real.replace('eos', '').strip() == pred.replace('eos', '').strip():
-            attprectxt_ref_acc.append(1)
+            profilereg_ref_acc.append(1)
         else:
-            attprectxt_ref_acc.append(0)
-
-    # ATTENTION_COPY_CONTEXT - ACCURACY, STRING EDIT DISTANCE AND PRONOUN ACCURACY
-    originals, templates, attctxt_distances, attctxt_pron_acc, attctxt_text_acc = model_report('ATTENTION COPY CONTEXT',
-                                                                                               original, y_real,
-                                                                                               y_attctxt)
-    with codecs.open(os.path.join(OUTPUT_PATH, 'attctxt.txt'), 'w', encoding='utf8') as f:
-        f.write('\n'.join(templates).lower())
-
-    attctxt_ref_acc = []
-    for real, pred in zip(y_real, y_attctxt):
-        if real.replace('eos', '').strip() == pred.replace('eos', '').strip():
-            attctxt_ref_acc.append(1)
-        else:
-            attctxt_ref_acc.append(0)
-
-    # ATTENTION COPY PRE CONTEXT - ACCURACY, STRING EDIT DISTANCE AND PRONOUN ACCURACY
-    originals, templates, attcpre_distances, attcpre_pron_acc, attcpre_text_acc = model_report(
-        'ATTENTION COPY PRECONTEXT', original, y_real, y_attcpre)
-
-    with codecs.open(os.path.join(OUTPUT_PATH, 'attcpre.txt'), 'w', encoding='utf8') as f:
-        f.write('\n'.join(templates).lower())
-
-    attcpre_ref_acc = []
-    for real, pred in zip(y_real, y_attcpre):
-        if real.replace('eos', '').strip() == pred.replace('eos', '').strip():
-            attcpre_ref_acc.append(1)
-        else:
-            attcpre_ref_acc.append(0)
-
-    # ATTENTION COPY POS CONTEXT - ACCURACY, STRING EDIT DISTANCE AND PRONOUN ACCURACY
-    originals, templates, attcpos_distances, attcpos_pron_acc, attcpos_text_acc = model_report(
-        'ATTENTION COPY POSCONTEXT', original, y_real, y_attcpos)
-
-    with codecs.open(os.path.join(OUTPUT_PATH, 'attcpos.txt'), 'w', encoding='utf8') as f:
-        f.write('\n'.join(templates).lower())
-
-    attcpos_ref_acc = []
-    for real, pred in zip(y_real, y_attcpos):
-        if real.replace('eos', '').strip() == pred.replace('eos', '').strip():
-            attcpos_ref_acc.append(1)
-        else:
-            attcpos_ref_acc.append(0)
+            profilereg_ref_acc.append(0)
 
     # Save files to perform statistical tests in R
     # Reference accuracy file
     resp = np.arange(1, len(y_real) + 1)
     ref_acc = np.concatenate(
-        [[resp], [attacl_ref_acc], [attcopy_ref_acc], [attprectxt_ref_acc], [attctxt_ref_acc], [attcpre_ref_acc], [attcpos_ref_acc]])
+        [[resp], [only_ref_acc], [attacl_ref_acc], [attcopy_ref_acc], [profilereg_ref_acc]])
     ref_acc = ref_acc.transpose().tolist()
 
     with open(os.path.join(OUTPUT_PATH, 'r_ref_acc.csv'), 'w') as f:
-        f.write('resp;attacl;attcopy;attprectxt;attctxt;attcpre;attcpos\n')
+        f.write('resp;onlynames;attentionacl;attentioncopy;profilereg\n')
         for row in ref_acc:
             f.write(';'.join(map(lambda x: str(x), row)))
             f.write('\n')
@@ -358,11 +315,11 @@ def run():
     # Pronoun accuracy
     resp = np.arange(1, len(attcopy_pron_acc) + 1)
     pron_acc = np.concatenate(
-        [[resp], [attacl_pron_acc], [attcopy_pron_acc], [attprectxt_pron_acc], [attctxt_pron_acc], [attcpre_pron_acc], [attcpos_pron_acc]])
+        [[resp], [only_pron_acc], [attacl_pron_acc], [attcopy_pron_acc], [profilereg_pron_acc]])
     pron_acc = pron_acc.transpose().tolist()
 
     with open(os.path.join(OUTPUT_PATH, 'r_pron_acc.csv'), 'w') as f:
-        f.write('resp;attacl;attcopy;attprectxt;attctxt;attcpre;attcpos\n')
+        f.write('resp;onlynames;attentionacl;attentioncopy;profilereg\n')
         for row in pron_acc:
             f.write(';'.join(map(lambda x: str(x), row)))
             f.write('\n')
@@ -370,11 +327,11 @@ def run():
     # Text accuracy
     resp = np.arange(1, len(attcopy_text_acc) + 1)
     pron_acc = np.concatenate(
-        [[resp], [attacl_text_acc], [attcopy_text_acc], [attprectxt_ref_acc], [attctxt_text_acc], [attcpre_text_acc], [attcpos_text_acc]])
+        [[resp], [only_text_acc], [attacl_text_acc], [attcopy_text_acc], [profilereg_text_acc]])
     pron_acc = pron_acc.transpose().tolist()
 
     with open(os.path.join(OUTPUT_PATH, 'r_text_acc.csv'), 'w') as f:
-        f.write('resp;attacl;attcopy;attprectxt;attctxt;attcpre;attcpos\n')
+        f.write('resp;onlynames;attentionacl;attentioncopy;profilereg\n')
         for row in pron_acc:
             f.write(';'.join(map(lambda x: str(x), row)))
             f.write('\n')
@@ -382,12 +339,11 @@ def run():
     # String edit distance
     resp = np.arange(1, len(y_real) + 1)
     r_distances = np.concatenate(
-        [[resp], [attacl_distances], [attcopy_distances], [attprectxt_distances],  [attctxt_distances], [attcpre_distances],
-         [attcpos_distances]])
+        [[resp], [only_distances], [attacl_distances], [attcopy_distances], [profilereg_distances]])
     r_distances = r_distances.transpose().tolist()
 
     with open(os.path.join(OUTPUT_PATH, 'r_distances.csv'), 'w') as f:
-        f.write('resp;attacl;attcopy;attprectxt;attctxt;attcpre;attcpos\n')
+        f.write('resp;onlynames;attentionacl;attentioncopy;profilereg\n')
         for row in r_distances:
             f.write(';'.join(map(lambda x: str(x), row)))
             f.write('\n')
