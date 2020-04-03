@@ -61,7 +61,7 @@ def load_models():
 
     # ONLY NAMES RESULTS
     only = json.load(open(ONLYNAMES, encoding='utf-8'))
-    y_only = list(map(lambda x: x['y_pred'], only))
+    y_only = list(map(lambda x: x['y_pred'].lower().strip(), only))
 
     # ATTENTION_ACL RESULTS
     with open(ATTENTION_ACL, encoding='utf-8') as f:
