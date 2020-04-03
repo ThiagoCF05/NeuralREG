@@ -222,11 +222,7 @@ if __name__ == '__main__':
     # write_path = '/NeuralREG/data/v1.5'
     # stanford_path = r'/stanford/stanford-corenlp-full-2018-10-05'
 
-    data_path = '/home/rossana/Projects/NeuralREG/webnlg/data/v1.5/en'
-    write_path = '/home/rossana/Projects/NeuralREG/data/v1.5'
-    stanford_path = r'/home/rossana/Projects/stanford/stanford-corenlp-full-2018-10-05'
-
-    # data_path = sys.argv[1]
-    # write_path = sys.argv[2]
-    # stanford_path = sys.argv[3]
+    data_path = sys.argv[1]
+    write_path = sys.argv[2]
+    stanford_path = sys.argv[3]
     s = REGPrec(data_path=data_path, write_path=write_path, stanford_path=stanford_path)

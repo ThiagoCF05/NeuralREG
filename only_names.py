@@ -18,6 +18,7 @@ Description:
 
 import json
 
+
 class OnlyNames():
     def __init__(self, in_file, out_file):
         self.references = json.load(open(in_file))
@@ -29,18 +30,18 @@ class OnlyNames():
         results = []
 
         for i, testinst in enumerate(self.references):
-            refex = testinst['refex'].replace('eos', '').strip()
+            refex = ' '.join(testinst['refex']).replace('eos', '').strip()
             entity = testinst['entity']
 
             output = ' '.join(entity.split('_'))
 
-            results.append({'y_real':refex, 'y_pred':output})
+            results.append({'y_real': refex, 'y_pred': output})
 
         json.dump(results, open(self.out_file, 'w'))
 
 
 if __name__ == '__main__':
-    IN_FILE = 'data/v1.0/acl_format/test/data.json'
-    OUT_FILE = 'onlynames.json'
+    IN_FILE = 'data/v1.5/test.json'
+    OUT_FILE = 'eval/data/onlynames/results/onlynames.json'
 
     b = OnlyNames(in_file=IN_FILE, out_file=OUT_FILE)
