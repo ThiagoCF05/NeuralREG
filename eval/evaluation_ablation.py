@@ -35,25 +35,25 @@ import os
 
 DATA_PATH = '../data/v1.5/'
 EVAL_PATH = 'coling/'
-OUTPUT_PATH = 'stats/coling/v1.5/ablation/test_unseen'
+OUTPUT_PATH = 'stats/coling/v1.5/ablation/test'
 
 # ORIGINAL
-ORIGINAL = os.path.join(DATA_PATH, 'test_unseen.json')
+ORIGINAL = os.path.join(DATA_PATH, 'test.json')
 
 # ONLY NAMES RESULTS PATH
-ONLYNAMES = 'eval/onlynames.json'
+ONLYNAMES = 'data/onlynames/results/onlynames.json'
 # ATTENTION ACL NAMES RESULTS PATH
-ATTENTION_ACL = EVAL_PATH + 'attention_acl/results/test_1_unseen'
+ATTENTION_ACL = EVAL_PATH + 'attention_acl/results/test_1'
 # ATTENTION COPY NAMES RESULTS FOLDER
-ATTENTION_COPY = EVAL_PATH + 'attention/results/test_1_unseen'
+ATTENTION_COPY = EVAL_PATH + 'attention/results/test_1'
 # ATTENTION PRECONTEXT RESULTS FOLDER
-ATTENTION_PRECONTEXT = EVAL_PATH + 'attention_precontext/results/test_1_unseen'
+ATTENTION_PRECONTEXT = EVAL_PATH + 'attention_precontext/results/test_1'
 # ATTENTION COPY CONTEXT RESULTS FOLDER
-ATTENTION_COPY_CONTEXT = EVAL_PATH + 'attention_copy_context/results/test_1_unseen'
+ATTENTION_COPY_CONTEXT = EVAL_PATH + 'attention_copy_context/results/test_1'
 # ATTENTION COPY PRECONTEXT RESULTS FOLDER
-ATTENTION_COPY_PRECONTEXT = EVAL_PATH + 'attention_copy_precontext/results/test_1_unseen'
+ATTENTION_COPY_PRECONTEXT = EVAL_PATH + 'attention_copy_precontext/results/test_1'
 # ATTENTION COPY POSCONTEXT RESULTS FOLDER
-ATTENTION_COPY_POSCONTEXT = EVAL_PATH + 'attention_copy_poscontext/results/test_1_unseen'
+ATTENTION_COPY_POSCONTEXT = EVAL_PATH + 'attention_copy_poscontext/results/test_1'
 
 MULTIBLEU = '../eval/multi-bleu.perl'
 
@@ -264,7 +264,7 @@ def run():
         refex = ' '.join(refex).strip()
         y_real.append(refex)
 
-    y_only = list(map(lambda x: x['y_pred'], only))
+    y_only = list(map(lambda x: x['y_pred'].lower().strip(), only))
 
     # ONLY - NAMES ACCURACY, STRING EDIT DISTANCE AND PRONOUN ACCURACY
     originals, templates, only_distances, only_pron_acc, only_text_acc = model_report('ONLY NAMES', original, y_real,
