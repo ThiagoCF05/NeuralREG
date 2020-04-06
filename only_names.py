@@ -1,5 +1,7 @@
 __author__ = 'thiagocastroferreira'
 
+import nltk
+
 """
 Author: Thiago Castro Ferreira
 Date: 12/12/2017
@@ -31,7 +33,9 @@ class OnlyNames():
 
         for i, testinst in enumerate(self.references):
             refex = ' '.join(testinst['refex']).replace('eos', '').strip()
-            entity = testinst['entity']
+            # refex = ' '.join(
+            #     nltk.word_tokenize(testinst[i]['refex'].replace('\'', ' ').replace('\"', ' ').replace('_', ' ')))
+            entity = ' '.join(nltk.word_tokenize(testinst['entity'].replace('\'', ' ').replace('\"', ' ').replace('_', ' ')))
 
             output = ' '.join(entity.split('_'))
 
