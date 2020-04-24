@@ -28,6 +28,7 @@ from sklearn.metrics import classification_report
 
 import codecs
 import json
+import nltk
 import numpy as np
 import os
 
@@ -47,33 +48,43 @@ ATTENTION_COPY = EVAL_PATH + 'attention/results/test_1'
 # PROFILEREG
 PROFILEREG = EVAL_PATH + 'profilereg/results/preds.txt'
 
+# TEST INFO
+TEST_INFO = DATA_PATH + 'test_info.json'
+
 MULTIBLEU = '../eval/multi-bleu.perl'
 
 
 def load_models():
     original = json.load(open(ORIGINAL, encoding='utf-8'))
+    test_info = json.load(open(TEST_INFO, encoding='utf-8'))
+    for i, row in enumerate(original):
+        original[i]['eid'] = test_info[i]['eid']
+        original[i]['lid'] = test_info[i]['lid']
+        original[i]['category'] = test_info[i]['category']
+        original[i]['text'] = ' '.join(test_info[i]['targets'][0]['output'])
+    del test_info
+
     # y_original = map(lambda x: x['refex'], original)
     y_original = []
     for i, row in enumerate(original):
-        refex = [w.lower() for w in row['refex']]
-        refex = ' '.join(refex).strip()
+        refex = ' '.join(row['refex']).lower().strip()
         y_original.append(refex)
 
     # ONLY NAMES RESULTS
     only = json.load(open(ONLYNAMES, encoding='utf-8'))
-    y_only = list(map(lambda x: x['y_pred'].lower().strip(), only))
+    y_only = list(map(lambda x: ' '.join(nltk.word_tokenize(x['y_pred'])).lower().strip(), only))
 
     # ATTENTION_ACL RESULTS
     with open(ATTENTION_ACL, encoding='utf-8') as f:
-        y_attacl = f.read().lower().split('\n')
+        y_attacl = [' '.join(nltk.word_tokenize(w.strip())) for w in f.read().lower().split('\n')]
 
     # ATTENTION COPY RESULTS
     with open(ATTENTION_COPY, encoding='utf-8') as f:
-        y_attcopy = f.read().lower().split('\n')
+        y_attcopy = [' '.join(nltk.word_tokenize(w.strip())) for w in f.read().lower().split('\n')]
 
     # PROFILEREG RESULTS
     with open(PROFILEREG, encoding='utf-8') as f:
-        y_profilereg = f.read().lower().split('\n')
+        y_profilereg = [' '.join(nltk.word_tokenize(w.strip())) for w in f.read().lower().split('\n')]
 
     return original, y_original, y_only, y_attacl, y_attcopy, y_profilereg
 
@@ -185,27 +196,33 @@ def evaluate_text(data, y_pred):
     for i, reference in enumerate(data):
         reference['pred'] = y_pred[i]
 
-    for i, row in enumerate(data):
-        pre_context = ' '.join(row['pre_context']).lower().replace('_', ' ').replace('~', ' ').replace('eos',
-                                                                                                       '').strip()
-        pos_context = ' '.join(row['pos_context']).lower().replace('_', ' ').replace('~', ' ').replace('eos',
-                                                                                                       '').strip()
-        refex = ' '.join(row['refex']).replace('_', ' ').lower().replace('~', ' ').replace('eos', '').strip()
-        reference = row['pred'].strip()
+    text_ids = [w['eid'] for w in data]
+    text_ids = sorted(list(set(text_ids)))
 
-        text = pre_context + ' ' + refex + ' ' + pos_context
-        template = pre_context + ' ' + reference + ' ' + pos_context
+    for text_id in text_ids:
+        eid = text_id
+        references = [w for w in data if w['eid'] == eid]
+        references = sorted(references, key=lambda x: len(x['pre_context']))
 
-        originals.append(text.strip())
-        templates.append(template.strip())
+        pre_context = ' '.join(references[0]['pre_context']).lower().replace('_', ' ').replace('~', ' ').replace('eos', '').strip()
+        pos_context = ' '.join(references[0]['pos_context']).lower().replace('_', ' ').replace('~', ' ').replace('eos', '').strip()
+
+        text = references[0]['text'].lower()
+        template = pre_context + ' ' + references[0]['entity'].strip() + ' ' + pos_context
+
+        for reference in references:
+            entity = reference['entity'] + ' '
+
+            refex = '~'.join(reference['pred'].replace('eos', '').strip().split()) + ' '
+            template = template.replace(entity, refex, 1)
+
+        originals.append(text)
+        templates.append(template.replace('_', ' ').replace('~', ' ').replace('eos', '').strip())
 
     # Original accuracy
-    _num = filter(lambda x: x[0].lower().replace('@', '') == x[1].lower().replace('@', ''), zip(originals, templates))
-    num = len(list(_num))
-
-    dem = len(originals)
+    num, dem = 0, 0
     for original, template in zip(originals, templates):
-        if original.lower().replace('@', '') == template.lower().replace('@', ''):
+        if original.lower().replace('@', '')==template.lower().replace('@', ''):
             num += 1
             text_acc.append(1)
         else:
@@ -235,9 +252,9 @@ def model_report(model_name, original, y_real, y_pred):
     originals, templates, num, dem, text_acc = evaluate_text(original, y_pred)
     print('TEXT ACCURACY: ', str(round(float(num) / dem, 4)), str(num), str(dem))
     print('\n')
-    print('DOMAIN ACCURACY:')
-    domain_evaluate(y_real, y_pred, original)
-    print(10 * '-')
+    # print('DOMAIN ACCURACY:')
+    # domain_evaluate(y_real, y_pred, original)
+    # print(10 * '-')
 
     return originals, templates, edit_distances, pron_acc, text_acc
 
