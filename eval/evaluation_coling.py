@@ -73,6 +73,8 @@ def load_models():
     # ONLY NAMES RESULTS
     only = json.load(open(ONLYNAMES, encoding='utf-8'))
     y_only = list(map(lambda x: ' '.join(nltk.word_tokenize(x['y_pred'])).lower().strip(), only))
+    # SEEN and UNSEEN
+    # y_only = [' '.join(nltk.word_tokenize(w.lower().strip())) for w in only]
 
     # ATTENTION_ACL RESULTS
     with open(ATTENTION_ACL, encoding='utf-8') as f:
