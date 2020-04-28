@@ -14,16 +14,16 @@ if __name__ == '__main__':
     source, texts = [], []
 
     for e in entries:
-        texts.append("{0}\t{1}\t{2}\t{3}\t{4}\t{5}".format(e['eid'], e['lid'], e['row'], e['size'], e['only'],
+        texts.append("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}".format(e['eid'], e['lid'], e['row'], e['size'], 'only', e['only'],
                                                            e['source'].replace('<TRIPLE> ', '').replace('</TRIPLE>',
                                                                                                         '.')))
-        texts.append("{0}\t{1}\t{2}\t{3}\t{4}\t{5}".format(e['eid'], e['lid'], e['row'], e['size'], e['attacl'],
+        texts.append("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}".format(e['eid'], e['lid'], e['row'], e['size'], 'attacl', e['attacl'],
                                                            e['source'].replace('<TRIPLE> ', '').replace('</TRIPLE>',
                                                                                                         '.')))
-        texts.append("{0}\t{1}\t{2}\t{3}\t{4}\t{5}".format(e['eid'], e['lid'], e['row'], e['size'], e['attcopy'],
+        texts.append("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}".format(e['eid'], e['lid'], e['row'], e['size'], 'attcopy', e['attcopy'],
                                                            e['source'].replace('<TRIPLE> ', '').replace('</TRIPLE>',
                                                                                                         '.')))
-        texts.append("{0}\t{1}\t{2}\t{3}\t{4}\t{5}".format(e['eid'], e['lid'], e['row'], e['size'], e['profilereg'],
+        texts.append("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}".format(e['eid'], e['lid'], e['row'], e['size'], 'profilereg', e['profilereg'],
                                                            e['source'].replace('<TRIPLE> ', '').replace('</TRIPLE>',
                                                                                                         '.')))
 
@@ -36,6 +36,6 @@ if __name__ == '__main__':
             f.write('\n')
 
     with open(os.path.join('trials/coling', 'samples.csv'), 'w') as f:
-        f.write('eid\tlid\trow\tsize\ttext\tsource\n')
+        f.write('eid\tlid\trow\tsize\tmodel\ttext\tsource\n')
         for e in texts:
             f.write(e + '\n')
