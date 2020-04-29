@@ -7,12 +7,12 @@ from random import shuffle
 
 if __name__ == '__main__':
 
-    with open('trials/coling/sample-ids.txt', encoding='utf-8') as f:
+    with open('trials/beta/sample-ids.txt', encoding='utf-8') as f:
         ids = f.read().split('\n')
 
-    entries = json.load(open('trials/coling/gold-ids.json', encoding='utf-8'))
-    gold = json.load(open('trials/coling/gold.json', encoding='utf-8'))
-    texts = json.load(open('trials/coling/trials.json', encoding='utf-8'))
+    entries = json.load(open('trials/beta/gold-ids.json', encoding='utf-8'))
+    gold = json.load(open('trials/beta/gold.json', encoding='utf-8'))
+    texts = json.load(open('trials/beta/trials.json', encoding='utf-8'))
 
     entry_ids, samples = [], []
 
@@ -55,4 +55,4 @@ if __name__ == '__main__':
             samples.append(text)
 
     sample_texts = sorted(samples, key=lambda x: float(x['eid'].replace('Id', '')))
-    json.dump(sample_texts, open(os.path.join('trials/coling/', 'samples.json'), 'w'))
+    json.dump(sample_texts, open(os.path.join('trials/beta/', 'samples.json'), 'w'))

@@ -7,10 +7,10 @@ from random import shuffle
 
 if __name__ == '__main__':
 
-    with open('trials/coling/sample-ids.txt', encoding='utf-8') as f:
+    with open('trials/beta/sample-ids.txt', encoding='utf-8') as f:
         ids = f.read().split('\n')
 
-    entries = json.load(open(os.path.join('trials/coling', 'samples.json'), encoding='utf-8'))
+    entries = json.load(open(os.path.join('trials/beta', 'samples.json'), encoding='utf-8'))
     source, texts = [], []
 
     for e in entries:
@@ -29,13 +29,13 @@ if __name__ == '__main__':
 
     shuffle(texts)
 
-    with open(os.path.join('trials/coling', 'samples_c.csv'), 'w') as f:
+    with open(os.path.join('trials/beta', 'samples_c.csv'), 'w') as f:
         f.write('original;only;attacl,attcopy,profilereg\n')
         for e in entries:
             f.write(e['original'] + ';' + e['only'] + ';' + e['attacl'] + ';' + e['attcopy'] + ';' + e['profilereg'])
             f.write('\n')
 
-    with open(os.path.join('trials/coling', 'samples.csv'), 'w') as f:
+    with open(os.path.join('trials/beta', 'samples.csv'), 'w') as f:
         f.write('eid\tlid\trow\tsize\tmodel\ttext\tsource\n')
         for e in texts:
             f.write(e + '\n')

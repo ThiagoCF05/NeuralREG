@@ -16,8 +16,8 @@ import os
 
 DATA_PATH = '../data/v1.5/'
 EVAL_PATH = 'data/'
-OUTPUT_PATH = 'stats/coling/v1.5/'
-GOLD_PATH = '../humaneval/trials/coling/'
+OUTPUT_PATH = 'stats/beta/v1.5/'
+GOLD_PATH = '../humaneval/trials/beta/'
 
 # ORIGINAL
 ORIGINAL = os.path.join(GOLD_PATH, 'gold-ids.json')

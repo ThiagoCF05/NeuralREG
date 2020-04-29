@@ -21,7 +21,7 @@ from tabulate import tabulate
 
 def process_db():
     trials = []
-    with open('trials/coling/trials_results.csv') as f:
+    with open('trials/beta/trials_results.csv') as f:
         csv_file = DictReader(f, delimiter="\t")
         for trial in csv_file:
             trial_ = {'id': trial['eid'], 'size': str(trial['size']), 'model': trial['model'],
@@ -99,7 +99,7 @@ def print_report(trials):
     print(tabulate(table, headers=['model', 'acceptability', 'lexicogrammar', 'adequacy']))
 
     header = "resp;only_fluency;only_grammar;only_adequacy;attacl_fluency;attacl_grammar;attacl_adequacy;attcopy_fluency;attcopy_grammar;attcopy_adequacy;profilereg_fluency;profilereg_grammar;profilereg_adequacy"
-    with open('trials/coling/official_results.csv', 'w') as f:
+    with open('trials/beta/official_results.csv', 'w') as f:
         f.write(header + '\n')
 
         for i, row in enumerate(only_fluency):

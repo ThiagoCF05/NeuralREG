@@ -34,8 +34,8 @@ import numpy as np
 import os
 
 DATA_PATH = '../data/v1.5/'
-EVAL_PATH = 'coling/'
-OUTPUT_PATH = 'stats/coling/v1.5/ablation/test'
+EVAL_PATH = 'beta/'
+OUTPUT_PATH = 'stats/beta/v1.5/ablation/test'
 
 # ORIGINAL
 ORIGINAL = os.path.join(DATA_PATH, 'test.json')

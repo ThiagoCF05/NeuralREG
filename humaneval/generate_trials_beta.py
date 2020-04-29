@@ -19,8 +19,8 @@ __author__ = ''
 import os
 
 DATA_PATH = '../data/v1.5/'
-EVAL_PATH = '../eval/stats/coling/v1.5/'
-OUTPUT_PATH = '../eval/stats/coling/v1.5/'
+EVAL_PATH = '../eval/stats/beta/v1.5/'
+OUTPUT_PATH = '../eval/stats/beta/v1.5/'
 
 # ORIGINAL
 ORIGINAL = os.path.join(DATA_PATH, 'gold-ids.json')
@@ -73,8 +73,8 @@ def load_models():
 
 
 def save_trials(originals, only, attacl, attcopy, profilereg):
-    if not os.path.exists('trials/coling/'):
-        os.mkdir('trials/coling/')
+    if not os.path.exists('trials/beta/'):
+        os.mkdir('trials/beta/')
 
     trials = []
     for i, original in enumerate(originals):
@@ -87,11 +87,11 @@ def save_trials(originals, only, attacl, attcopy, profilereg):
         }
         trials.append(trial)
 
-        with open(os.path.join(OUTPUT_PATH, 'evaluation_coling_c.csv'), 'w') as f:
+        with open(os.path.join(OUTPUT_PATH, 'evaluation_c.csv'), 'w') as f:
             f.write(original + ';' + only[i] + ';' + attacl[i] + ';' + attcopy[i] + ';' + attcopy[i])
             f.write('\n')
 
-        with open(os.path.join(OUTPUT_PATH, 'evaluation_coling_r.csv'), 'w') as f:
+        with open(os.path.join(OUTPUT_PATH, 'evaluation_r.csv'), 'w') as f:
             f.write(original + '\n')
             f.write(only[i] + '\n')
             f.write(attacl[i] + '\n')
@@ -129,9 +129,9 @@ def generate_texts(data, y_pred, fname):
 if __name__ == '__main__':
     original, y_original, y_only, y_attacl, y_attcopy, y_profilereg, y_refs = load_models()
 
-    if not os.path.exists('texts/coling/'):
-        os.mkdir('texts/coling')
+    if not os.path.exists('texts/beta/'):
+        os.mkdir('texts/beta')
 
     trials = save_trials(y_refs, y_only, y_attacl, y_attcopy, y_profilereg)
 
-    json.dump(trials, open(os.path.join('texts/coling/', 'trials.json'), 'w'))
+    json.dump(trials, open(os.path.join('texts/beta/', 'trials.json'), 'w'))

@@ -5,7 +5,7 @@ import json
 from random import shuffle
 
 if __name__ == '__main__':
-    entries = json.load(open('trials/coling/gold.json', encoding='utf-8'))
+    entries = json.load(open('trials/beta/gold.json', encoding='utf-8'))
     entries = list(entries)
 
     sizes = set([e['size'] for e in entries])
