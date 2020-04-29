@@ -623,12 +623,12 @@ if __name__ == '__main__':
         'EARLY_STOP': 10
     }
 
-    coling_path = 'coling'
-    if not os.path.exists(coling_path):
-        os.mkdir(coling_path)
+    beta_path = 'beta'
+    if not os.path.exists(beta_path):
+        os.mkdir(beta_path)
 
     ##### VERSION 1.0 #####
-    path = os.path.join(coling_path, 'attention_copy_poscontext_v1.0/')
+    path = os.path.join(beta_path, 'attention_copy_poscontext_v1.0/')
     logger = Logger(path=path, model_path=os.path.join(path, 'best.dy'), result_path=os.path.join(path, 'results/'))
 
     PATH = 'data/v1.0/'
@@ -641,7 +641,7 @@ if __name__ == '__main__':
     h.test()
 
     ##### VERSION 1.5 #####
-    path = os.path.join(coling_path, 'attention_copy_poscontext/')
+    path = os.path.join(beta_path, 'attention_copy_poscontext/')
     logger = Logger(path=path, model_path=os.path.join(path, 'best.dy'), result_path=os.path.join(path, 'results/'))
 
     PATH = 'data/v1.5/'

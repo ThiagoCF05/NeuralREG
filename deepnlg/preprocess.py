@@ -111,16 +111,16 @@ class REGPrec:
         self.temp_extractor = TemplateExtraction(stanford_path)
         self.corenlp = StanfordCoreNLP(stanford_path)
 
-        self.traindata, self.vocab = self.process(entry_path=os.path.join(data_path, 'train'))
-        self.devdata, _ = self.process(entry_path=os.path.join(data_path, 'dev'))
+        # self.traindata, self.vocab = self.process(entry_path=os.path.join(data_path, 'train'))
+        # self.devdata, _ = self.process(entry_path=os.path.join(data_path, 'dev'))
         self.testdata, _ = self.process(entry_path=os.path.join(data_path, 'test'))
 
         self.corenlp.close()
         self.temp_extractor.close()
 
-        json.dump(self.traindata, open(os.path.join(write_path, 'train.json'), 'w'))
-        json.dump(self.vocab, open(os.path.join(write_path, 'vocab.json'), 'w'))
-        json.dump(self.devdata, open(os.path.join(write_path, 'dev.json'), 'w'))
+        # json.dump(self.traindata, open(os.path.join(write_path, 'train.json'), 'w'))
+        # json.dump(self.vocab, open(os.path.join(write_path, 'vocab.json'), 'w'))
+        # json.dump(self.devdata, open(os.path.join(write_path, 'dev.json'), 'w'))
         json.dump(self.testdata, open(os.path.join(write_path, 'test.json'), 'w'))
 
     def process(self, entry_path):
@@ -218,9 +218,9 @@ class REGPrec:
 
 
 if __name__ == '__main__':
-    # data_path = '/NeuralREG/webnlg/data/v1.5/en'
-    # write_path = '/NeuralREG/data/v1.5'
-    # stanford_path = r'/stanford/stanford-corenlp-full-2018-10-05'
+    # data_path = '../webnlg/data/v1.5/en'
+    # write_path = '../data/v1.5'
+    # stanford_path = r'/home/stanford/stanford-corenlp-full-2018-10-05'
 
     data_path = sys.argv[1]
     write_path = sys.argv[2]

@@ -34,7 +34,7 @@ import os
 
 DATA_PATH = '../data/v1.5/'
 EVAL_PATH = 'data/'
-OUTPUT_PATH = 'stats/coling/v1.5/'
+OUTPUT_PATH = 'stats/beta/v1.5/'
 
 # ORIGINAL
 ORIGINAL = os.path.join(DATA_PATH, 'test.json')

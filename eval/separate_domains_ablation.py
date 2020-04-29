@@ -15,9 +15,9 @@ __author__ = ''
 import os
 
 DATA_PATH = '../data/v1.5/'
-EVAL_PATH = 'coling/'
-OUTPUT_PATH = 'stats/coling/v1.5/ablation/test/'
-GOLD_PATH = '../humaneval/trials/coling/'
+EVAL_PATH = 'beta/'
+OUTPUT_PATH = 'stats/beta/v1.5/ablation/test/'
+GOLD_PATH = '../humaneval/trials/beta/'
 
 # ORIGINAL
 ORIGINAL = os.path.join(GOLD_PATH, 'gold-ids.json')
