@@ -29,11 +29,11 @@ if __name__ == '__main__':
 
     shuffle(texts)
 
-    with open(os.path.join('trials/beta', 'samples_c.csv'), 'w') as f:
-        f.write('original;only;attacl,attcopy,profilereg\n')
-        for e in entries:
-            f.write(e['original'] + ';' + e['only'] + ';' + e['attacl'] + ';' + e['attcopy'] + ';' + e['profilereg'])
-            f.write('\n')
+    # with open(os.path.join('trials/beta', 'samples_c.csv'), 'w') as f:
+    #     f.write('original;only;attacl,attcopy,profilereg\n')
+    #     for e in entries:
+    #         f.write(e['original'] + ';' + e['only'] + ';' + e['attacl'] + ';' + e['attcopy'] + ';' + e['profilereg'])
+    #         f.write('\n')
 
     with open(os.path.join('trials/beta', 'samples.csv'), 'w') as f:
         f.write('eid\tlid\trow\tsize\tmodel\ttext\tsource\n')
