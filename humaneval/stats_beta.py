@@ -55,36 +55,6 @@ def evaluate(evaluations, model):
     return fluency, grammar, adequacy
 
 
-def evaluate_by_seen_domains(evaluations, model):
-    adequacy = [float(x['adequacy']) for x in evaluations if x['category'] not in unseen_domains]
-    grammar = [float(x['lexicogrammar']) for x in evaluations if x['category'] not in unseen_domains]
-    fluency = [float(x['acceptability']) for x in evaluations if x['category'] not in unseen_domains]
-
-    print(model)
-    print('ADEQUACY:', str(round(np.mean(adequacy), 2)), str(round(np.std(adequacy), 2)))
-    print('LEXICOGRAMMAR:', str(round(np.mean(grammar), 2)), str(round(np.std(grammar), 2)))
-    print('ACCEPTABILITY:', str(round(np.mean(fluency), 2)), str(round(np.std(fluency), 2)))
-
-    print(10 * '-')
-
-    return fluency, grammar, adequacy
-
-
-def evaluate_by_unseen_domains(evaluations, model):
-    adequacy = [float(x['adequacy']) for x in evaluations if x['category'] in unseen_domains]
-    grammar = [float(x['lexicogrammar']) for x in evaluations if x['category'] in unseen_domains]
-    fluency = [float(x['acceptability']) for x in evaluations if x['category'] in unseen_domains]
-
-    print(model)
-    print('ADEQUACY:', str(round(np.mean(adequacy), 2)), str(round(np.std(adequacy), 2)))
-    print('LEXICOGRAMMAR:', str(round(np.mean(grammar), 2)), str(round(np.std(grammar), 2)))
-    print('ACCEPTABILITY:', str(round(np.mean(fluency), 2)), str(round(np.std(fluency), 2)))
-
-    print(10 * '-')
-
-    return fluency, grammar, adequacy
-
-
 def evaluate_by_size(trials, model):
     sizes = sorted(list(set(map(lambda x: x['size'], trials))))
 
