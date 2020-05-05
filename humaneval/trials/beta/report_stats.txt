@@ -3,6 +3,16 @@ ADEQUACY: 4.52 0.73
 LEXICOGRAMMAR: 3.79 0.73
 ACCEPTABILITY: 3.83 0.83
 ----------
+ONLY
+ADEQUACY: 4.54 0.65
+LEXICOGRAMMAR: 3.82 0.73
+ACCEPTABILITY: 3.88 0.84
+----------
+ONLY
+ADEQUACY: 4.47 0.91
+LEXICOGRAMMAR: 3.71 0.73
+ACCEPTABILITY: 3.71 0.8
+----------
 SIZE 1:  only
 ACCEPTABILITY: 4.31 0.93
 LEXICOGRAMMAR: 4.38 0.62
@@ -44,6 +54,16 @@ Attention ACL
 ADEQUACY: 3.81 1.33
 LEXICOGRAMMAR: 3.5 0.82
 ACCEPTABILITY: 3.47 1.09
+----------
+Attention ACL
+ADEQUACY: 4.38 0.8
+LEXICOGRAMMAR: 3.72 0.73
+ACCEPTABILITY: 3.81 0.86
+----------
+Attention ACL
+ADEQUACY: 4.38 0.8
+LEXICOGRAMMAR: 3.72 0.73
+ACCEPTABILITY: 3.81 0.86
 ----------
 SIZE 1:  Attention ACL
 ACCEPTABILITY: 3.92 1.11
@@ -87,6 +107,16 @@ ADEQUACY: 4.47 0.81
 LEXICOGRAMMAR: 3.75 0.76
 ACCEPTABILITY: 3.84 0.82
 ----------
+Attention Copy
+ADEQUACY: 4.48 0.81
+LEXICOGRAMMAR: 3.79 0.77
+ACCEPTABILITY: 3.88 0.85
+----------
+Attention Copy
+ADEQUACY: 4.42 0.8
+LEXICOGRAMMAR: 3.66 0.71
+ACCEPTABILITY: 3.74 0.7
+----------
 SIZE 1:  Attention Copy
 ACCEPTABILITY: 4.38 0.84
 LEXICOGRAMMAR: 4.31 0.61
@@ -129,6 +159,16 @@ ADEQUACY: 4.11 0.98
 LEXICOGRAMMAR: 3.69 0.75
 ACCEPTABILITY: 3.72 0.88
 ----------
+ProfileREG
+ADEQUACY: 4.34 0.78
+LEXICOGRAMMAR: 3.8 0.71
+ACCEPTABILITY: 3.93 0.76
+----------
+ProfileREG
+ADEQUACY: 3.42 1.18
+LEXICOGRAMMAR: 3.34 0.74
+ACCEPTABILITY: 3.11 0.93
+----------
 SIZE 1:  ProfileREG
 ACCEPTABILITY: 4.12 0.98
 LEXICOGRAMMAR: 4.19 0.8
@@ -166,9 +206,29 @@ ADEQUACY: 4.33 0.62
 ----------
 --------------------
 
+ALL DOMAINS
 model             acceptability    lexicogrammar    adequacy
 --------------  ---------------  ---------------  ----------
 ONLY                     3.8333           3.7933      4.52
 Attention ACL            3.4733           3.5         3.8133
 Attention Copy           3.84             3.7533      4.4667
 ProfileREG               3.72             3.6867      4.1067
+
+
+SEEN DOMAINS
+model             acceptability    lexicogrammar    adequacy
+--------------  ---------------  ---------------  ----------
+ONLY                     3.875            3.8214      4.5357
+Attention ACL            3.8125           3.7232      4.3839
+Attention Copy           3.875            3.7857      4.4821
+ProfileREG               3.9286           3.8036      4.3393
+
+
+UNSEEN DOMAINS
+model             acceptability    lexicogrammar    adequacy
+--------------  ---------------  ---------------  ----------
+ONLY                     3.7105           3.7105      4.4737
+Attention ACL            3.8125           3.7232      4.3839
+Attention Copy           3.7368           3.6579      4.4211
+ProfileREG               3.1053           3.3421      3.4211
+
