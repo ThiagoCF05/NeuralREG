@@ -61,9 +61,9 @@ LEXICOGRAMMAR: 3.72 0.73
 ACCEPTABILITY: 3.81 0.86
 ----------
 Attention ACL
-ADEQUACY: 4.38 0.8
-LEXICOGRAMMAR: 3.72 0.73
-ACCEPTABILITY: 3.81 0.86
+ADEQUACY: 2.13 1.16
+LEXICOGRAMMAR: 2.84 0.74
+ACCEPTABILITY: 2.47 1.06
 ----------
 SIZE 1:  Attention ACL
 ACCEPTABILITY: 3.92 1.11
@@ -207,28 +207,28 @@ ADEQUACY: 4.33 0.62
 --------------------
 
 ALL DOMAINS
-model             acceptability    lexicogrammar    adequacy
---------------  ---------------  ---------------  ----------
-ONLY                     3.8333           3.7933      4.52
-Attention ACL            3.4733           3.5         3.8133
-Attention Copy           3.84             3.7533      4.4667
-ProfileREG               3.72             3.6867      4.1067
+model             acceptability (mean)    acceptability (lower ci)    acceptability (upper ci)    acceptability (std)    lexicogrammar (mean)    lexicogrammar (lower ci)    lexicogrammar (upper ci)    lexicogrammar (std)    adequacy (mean)    adequacy (lower ci)    adequacy (upper ci)    adequacy (std)
+--------------  ----------------------  --------------------------  --------------------------  ---------------------  ----------------------  --------------------------  --------------------------  ---------------------  -----------------  ---------------------  ---------------------  ----------------
+ONLY                           3.83333                     3.64108                     4.02558                 0.83                   3.79333                     3.62408                     3.96259                 0.7307            4.52                   4.35144                4.68856            0.7277
+Attention ACL                  3.47333                     3.2218                      3.72487                 1.086                  3.5                         3.30899                     3.69101                 0.8246            3.81333                3.50443                4.12223            1.3336
+Attention Copy                 3.84                        3.65072                     4.02928                 0.8171                 3.75333                     3.57757                     3.9291                  0.7588            4.46667                4.28008                4.65325            0.8055
+ProfileREG                     3.72                        3.5161                      3.9239                  0.8803                 3.68667                     3.51357                     3.85977                 0.7473            4.10667                3.8787                 4.33463            0.9842
 
 
 SEEN DOMAINS
-model             acceptability    lexicogrammar    adequacy
---------------  ---------------  ---------------  ----------
-ONLY                     3.875            3.8214      4.5357
-Attention ACL            3.8125           3.7232      4.3839
-Attention Copy           3.875            3.7857      4.4821
-ProfileREG               3.9286           3.8036      4.3393
+model             acceptability (mean)    acceptability (lower ci)    acceptability (upper ci)    acceptability (std)    lexicogrammar (mean)    lexicogrammar (lower ci)    lexicogrammar (upper ci)    lexicogrammar (std)    adequacy (mean)    adequacy (lower ci)    adequacy (upper ci)    adequacy (std)
+--------------  ----------------------  --------------------------  --------------------------  ---------------------  ----------------------  --------------------------  --------------------------  ---------------------  -----------------  ---------------------  ---------------------  ----------------
+ONLY                           3.875                       3.64913                     4.10087                 0.8359                 3.82143                     3.62459                     4.01827                 0.7284            4.53571                4.35907                4.71235            0.6537
+Attention ACL                  3.8125                      3.57909                     4.04591                 0.8638                 3.72321                     3.52722                     3.91921                 0.7253            4.38393                4.16728                4.60058            0.8017
+Attention Copy                 3.875                       3.64484                     4.10516                 0.8517                 3.78571                     3.57693                     3.9945                  0.7726            4.48214                4.26403                4.70025            0.8071
+ProfileREG                     3.92857                     3.72362                     4.13353                 0.7585                 3.80357                     3.61134                     3.9958                  0.7114            4.33929                4.12856                4.55001            0.7798
 
 
 UNSEEN DOMAINS
-model             acceptability    lexicogrammar    adequacy
---------------  ---------------  ---------------  ----------
-ONLY                     3.7105           3.7105      4.4737
-Attention ACL            3.8125           3.7232      4.3839
-Attention Copy           3.7368           3.6579      4.4211
-ProfileREG               3.1053           3.3421      3.4211
-
+model             acceptability (mean)    acceptability (lower ci)    acceptability (upper ci)    acceptability (std)    lexicogrammar (mean)    lexicogrammar (lower ci)    lexicogrammar (upper ci)    lexicogrammar (std)    adequacy (mean)    adequacy (lower ci)    adequacy (upper ci)    adequacy (std)
+--------------  ----------------------  --------------------------  --------------------------  ---------------------  ----------------------  --------------------------  --------------------------  ---------------------  -----------------  ---------------------  ---------------------  ----------------
+ONLY                           3.71053                     3.31441                     4.10665                 0.7999                 3.71053                     3.34845                     4.0726                  0.7312            4.47368                4.02302                4.92435            0.9101
+Attention ACL                  2.47368                     1.95015                     2.99721                 1.0572                 2.84211                     2.47352                     3.21069                 0.7443            2.13158                1.55879                2.70437            1.1567
+Attention Copy                 3.73684                     3.39256                     4.08113                 0.6953                 3.65789                     3.30726                     4.00853                 0.7081            4.42105                4.02536                4.81674            0.7991
+ProfileREG                     3.10526                     2.64675                     3.56377                 0.9259                 3.34211                     2.97352                     3.71069                 0.7443            3.42105                2.83479                4.00732            1.1839
+--------------------
