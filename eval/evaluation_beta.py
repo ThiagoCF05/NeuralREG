@@ -206,8 +206,8 @@ def evaluate_text(data, y_pred):
         references = [w for w in data if w['eid'] == eid]
         references = sorted(references, key=lambda x: len(x['pre_context']))
 
-        pre_context = ' '.join(references[0]['pre_context']).lower().replace('_', ' ').replace('~', ' ').replace('eos', '').strip()
-        pos_context = ' '.join(references[0]['pos_context']).lower().replace('_', ' ').replace('~', ' ').replace('eos', '').strip()
+        pos_context = ' '.join(references[0]['pos_context']).strip()
+        pre_context = ' '.join(references[0]['pre_context']).strip()
 
         text = references[0]['text'].lower()
         template = pre_context + ' ' + references[0]['entity'].strip() + ' ' + pos_context
@@ -219,10 +219,10 @@ def evaluate_text(data, y_pred):
             template = template.replace(entity, refex, 1)
 
         originals.append(text)
-        templates.append(template.replace('_', ' ').replace('~', ' ').replace('eos', '').strip())
+        templates.append(template.lower().replace('_', ' ').replace('~', ' ').replace('eos', '').strip())
 
-    # Original accuracy
     num, dem = 0, 0
+    # Original accuracy
     for original, template in zip(originals, templates):
         if original.lower().replace('@', '')==template.lower().replace('@', ''):
             num += 1
@@ -291,6 +291,9 @@ def run():
             attacl_ref_acc.append(0)
 
     # ATTENTION COPY - NAMES ACCURACY, STRING EDIT DISTANCE AND PRONOUN ACCURACY
+
+
+
     originals, templates, attcopy_distances, attcopy_pron_acc, attcopy_text_acc = model_report('ATTENTION COPY',
                                                                                                original, y_real,
                                                                                                y_attcopy)
