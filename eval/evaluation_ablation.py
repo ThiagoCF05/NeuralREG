@@ -226,8 +226,8 @@ def evaluate_text(data, y_pred):
         references = [w for w in data if w['eid'] == eid]
         references = sorted(references, key=lambda x: len(x['pre_context']))
 
-        pre_context = ' '.join(references[0]['pre_context']).lower().replace('_', ' ').replace('~', ' ').replace('eos', '').strip()
-        pos_context = ' '.join(references[0]['pos_context']).lower().replace('_', ' ').replace('~', ' ').replace('eos', '').strip()
+        pos_context = ' '.join(references[0]['pos_context']).strip()
+        pre_context = ' '.join(references[0]['pre_context']).strip()
 
         text = references[0]['text'].lower()
         template = pre_context + ' ' + references[0]['entity'].strip() + ' ' + pos_context
@@ -238,8 +238,9 @@ def evaluate_text(data, y_pred):
             refex = '~'.join(reference['pred'].replace('eos', '').strip().split()) + ' '
             template = template.replace(entity, refex, 1)
 
+        template = template.lower().replace('^', ' ').replace('@', ' ').replace('"', '').replace('_', ' ').replace('~',' ').replace('eos', '').strip()
         originals.append(text)
-        templates.append(template.replace('_', ' ').replace('~', ' ').replace('eos', '').strip())
+        templates.append(template)
 
     # Original accuracy
     num, dem = 0, 0

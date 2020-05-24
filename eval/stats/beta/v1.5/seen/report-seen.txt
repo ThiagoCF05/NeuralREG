@@ -4,7 +4,7 @@ DISTANCE:  4.3157
 PRONOUN ACCURACY:  0.0
 
 
-              precision    recall  f1-score   support
+
 
  non_pronoun       0.94      1.00      0.97      9072
      pronoun       0.00      0.00      0.00       572
@@ -15,8 +15,8 @@ weighted avg       0.88      0.94      0.91      9644
 
 
 
-BLEU = 61.36, 83.0/67.8/57.0/48.1 (BP=0.979, ratio=0.980, hyp_len=22173, ref_len=22635)
-TEXT ACCURACY:  0.1184 115 971
+BLEU = 66.39, 84.6/71.1/61.2/52.7 (BP=1.000, ratio=1.005, hyp_len=22759, ref_len=22635)
+TEXT ACCURACY:  0.1555 151 971
 
 
 ATTENTION ACL
@@ -37,12 +37,12 @@ weighted avg       0.97      0.97      0.97      9644
 
 
 
-BLEU = 61.62, 83.2/68.2/57.5/48.6 (BP=0.976, ratio=0.977, hyp_len=22109, ref_len=22635)
-TEXT ACCURACY:  0.1195 116 971
+
+BLEU = 70.21, 85.8/73.7/65.6/58.8 (BP=0.999, ratio=0.999, hyp_len=22613, ref_len=22635)
+TEXT ACCURACY:  0.2049 199 971
 
 
 ATTENTION COPY
-
 ACCURACY:  0.7259
 DISTANCE:  2.4962
 PRONOUN ACCURACY:  0.6731
@@ -59,8 +59,8 @@ weighted avg       0.97      0.97      0.97      9644
 
 
 
-BLEU = 61.82, 83.5/68.4/57.8/48.8 (BP=0.976, ratio=0.976, hyp_len=22089, ref_len=22635)
-TEXT ACCURACY:  0.1287 125 971
+BLEU = 71.74, 87.5/75.7/67.6/60.9 (BP=0.993, ratio=0.993, hyp_len=22468, ref_len=22635)
+TEXT ACCURACY:  0.2358 229 971
 
 
 PROFILEREG
@@ -81,5 +81,5 @@ weighted avg       0.98      0.98      0.98      9644
 
 
 
-BLEU = 61.23, 82.5/67.2/56.5/47.6 (BP=0.985, ratio=0.985, hyp_len=22303, ref_len=22635)
-TEXT ACCURACY:  0.104 101 971
+BLEU = 69.11, 85.1/72.8/64.3/57.3 (BP=1.000, ratio=1.003, hyp_len=22709, ref_len=22635)
+TEXT ACCURACY:  0.1658 161 971

@@ -218,13 +218,15 @@ def evaluate_text(data, y_pred):
             refex = '~'.join(reference['pred'].replace('eos', '').strip().split()) + ' '
             template = template.replace(entity, refex, 1)
 
+        template = template.lower().replace('^', ' ').replace('@', ' ').replace('"', '').replace('_', ' ').replace('~', ' ').replace('eos', '').strip()
         originals.append(text)
-        templates.append(template.lower().replace('_', ' ').replace('~', ' ').replace('eos', '').strip())
+        templates.append(template)
 
+    # Original accuracy
     num, dem = 0, 0
     # Original accuracy
     for original, template in zip(originals, templates):
-        if original.lower().replace('@', '')==template.lower().replace('@', ''):
+        if original.lower().replace('@', '') == template.lower().replace('@', ''):
             num += 1
             text_acc.append(1)
         else:
@@ -291,8 +293,6 @@ def run():
             attacl_ref_acc.append(0)
 
     # ATTENTION COPY - NAMES ACCURACY, STRING EDIT DISTANCE AND PRONOUN ACCURACY
-
-
 
     originals, templates, attcopy_distances, attcopy_pron_acc, attcopy_text_acc = model_report('ATTENTION COPY',
                                                                                                original, y_real,
