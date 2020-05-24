@@ -6,8 +6,6 @@ PRONOUN ACCURACY:  0.0
 
 
 
-              precision    recall  f1-score   support
-
  non_pronoun       0.92      1.00      0.96     17740
      pronoun       0.00      0.00      0.00      1470
 
@@ -17,12 +15,12 @@ weighted avg       0.85      0.92      0.89     19210
 
 
 
-BLEU = 61.25, 83.8/68.7/57.6/48.5 (BP=0.967, ratio=0.968, hyp_len=40091, ref_len=41428)
-TEXT ACCURACY:  0.1106 206 1862
+BLEU = 65.48, 84.4/70.5/60.1/51.4 (BP=1.000, ratio=1.000, hyp_len=41443, ref_len=41428)
+TEXT ACCURACY:  0.1359 253 1862
+
 
 
 ATTENTION ACL
-
 ACCURACY:  0.3838
 DISTANCE:  9.8615
 PRONOUN ACCURACY:  0.4048
@@ -39,12 +37,12 @@ weighted avg       0.95      0.95      0.95     19210
 
 
 
-BLEU = 58.14, 79.2/63.5/52.7/43.8 (BP=0.996, ratio=0.996, hyp_len=41283, ref_len=41428)
-TEXT ACCURACY:  0.0628 117 1862
+
+BLEU = 48.10, 66.5/51.9/43.1/35.9 (BP=1.000, ratio=1.098, hyp_len=45506, ref_len=41428)
+TEXT ACCURACY:  0.1074 200 1862
 
 
 ATTENTION COPY
-
 ACCURACY:  0.5935
 DISTANCE:  3.5266
 PRONOUN ACCURACY:  0.4755
@@ -61,12 +59,12 @@ weighted avg       0.95      0.95      0.95     19210
 
 
 
-
-BLEU = 61.05, 84.1/68.8/57.7/48.5 (BP=0.962, ratio=0.963, hyp_len=39891, ref_len=41428)
-TEXT ACCURACY:  0.1117 208 1862
+BLEU = 66.14, 86.1/71.9/62.3/54.5 (BP=0.977, ratio=0.977, hyp_len=40476, ref_len=41428)
+TEXT ACCURACY:  0.1638 305 1862
 
 
 ATTENTION PRECONTEXT
+
 ACCURACY:  0.3977
 DISTANCE:  9.1603
 PRONOUN ACCURACY:  0.5864
@@ -84,8 +82,8 @@ weighted avg       0.95      0.96      0.95     19210
 
 
 
-BLEU = 58.16, 80.2/64.8/53.8/44.8 (BP=0.978, ratio=0.978, hyp_len=40523, ref_len=41428)
-TEXT ACCURACY:  0.0644 120 1862
+BLEU = 50.34, 69.2/54.4/45.2/37.8 (BP=1.000, ratio=1.056, hyp_len=43759, ref_len=41428)
+TEXT ACCURACY:  0.109 203 1862
 
 
 ATTENTION COPY CONTEXT
@@ -105,12 +103,12 @@ weighted avg       0.95      0.95      0.95     19210
 
 
 
-BLEU = 59.36, 84.4/68.1/56.7/47.3 (BP=0.947, ratio=0.949, hyp_len=39306, ref_len=41428)
-TEXT ACCURACY:  0.0865 161 1862
+
+BLEU = 62.13, 86.9/70.5/60.3/52.0 (BP=0.939, ratio=0.941, hyp_len=38968, ref_len=41428)
+TEXT ACCURACY:  0.1294 241 1862
 
 
 ATTENTION COPY PRECONTEXT
-
 ACCURACY:  0.5474
 DISTANCE:  4.0567
 PRONOUN ACCURACY:  0.3184
@@ -128,8 +126,8 @@ weighted avg       0.94      0.95      0.94     19210
 
 
 
-BLEU = 60.66, 83.8/68.4/57.3/48.1 (BP=0.962, ratio=0.963, hyp_len=39893, ref_len=41428)
-TEXT ACCURACY:  0.1069 199 1862
+BLEU = 65.58, 85.1/70.9/61.1/53.1 (BP=0.986, ratio=0.986, hyp_len=40855, ref_len=41428)
+TEXT ACCURACY:  0.1504 280 1862
 
 
 ATTENTION COPY POSCONTEXT
@@ -150,6 +148,5 @@ weighted avg       0.90      0.92      0.89     19210
 
 
 
-BLEU = 60.46, 83.5/68.0/56.9/47.6 (BP=0.965, ratio=0.966, hyp_len=40022, ref_len=41428)
-TEXT ACCURACY:  0.1015 189 1862
-
+BLEU = 64.38, 84.1/69.7/59.7/51.5 (BP=0.988, ratio=0.988, hyp_len=40931, ref_len=41428)
+TEXT ACCURACY:  0.1407 262 1862
