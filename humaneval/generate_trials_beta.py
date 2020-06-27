@@ -112,13 +112,14 @@ def save_trials(data, refs, only, attacl, attcopy, profilereg):
         }
         trials.append(trial)
 
-        if (only[i] != attcopy[i]) and (attacl[i] != attcopy[i]) and (profilereg[i] != attcopy[i]) and (only[i] != refs[i]) and (attacl[i] != refs[i]) and (profilereg[i] != refs[i]):
+        if (only[i] != attcopy[i]) and (attacl[i] != attcopy[i]) and (profilereg[i] != attcopy[i]) and \
+                (only[i] != refs[i]) and (attacl[i] != refs[i]) and (profilereg[i] != refs[i]):
             if trial not in samples:
                 samples.append(trial)
 
     json.dump(trials, open(os.path.join('trials/beta/', 'samples_paper.json'), 'w'))
     with open(os.path.join('trials/beta', 'samples_paper.csv'), 'w') as f:
-        f.write('eid\tlid\tcategory\tsize\toriginal\tonly\tattacl\tattcopy\tprofilereg\n')
+        f.write('eid\tlid\tsize\tcategory\toriginal\tonly\tattacl\tattcopy\tprofilereg\n')
         for e in samples:
             f.write(e['eid'] + '\t' + e['lid'] + '\t' + e['size'] + '\t' + e['category'] + '\t' + e['original']
                     + '\t' + e['only'] + '\t' + e['attacl'] + '\t' + e['attcopy'] + '\t' + e['profilereg'] + '\n')
