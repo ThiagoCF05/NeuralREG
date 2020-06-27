@@ -23,7 +23,7 @@ unseen_domains = ['Artist', 'Politician', 'CelestialBody', 'Athlete', 'MeanOfTra
 def process_db():
     trials = []
     entries = json.load(open('../data/v1.5/test_info.json'))
-    with open('trials/beta/trials_results.csv') as f:
+    with open('trials/beta/trials_results_b.csv') as f:
         csv_file = DictReader(f, delimiter="\t")
         for trial in csv_file:
             category = list(filter(lambda o: o['eid'] == trial['eid'] and
@@ -189,7 +189,7 @@ def print_report(trials):
     header = "resp;only_fluency;only_grammar;only_adequacy;attacl_fluency;attacl_grammar;attacl_adequacy" \
              ";attcopy_fluency;attcopy_grammar;attcopy_adequacy;profilereg_fluency;profilereg_grammar" \
              ";profilereg_adequacy "
-    with open('trials/beta/official_results.csv', 'w') as f:
+    with open('trials/beta/official_results_b.csv', 'w') as f:
         f.write(header + '\n')
 
         for i, row in enumerate(only_fluency):
@@ -203,7 +203,7 @@ def print_report(trials):
             l = map(lambda x: str(x), l)
             f.write(';'.join(l) + '\n')
 
-    with open('trials/beta/official_results_seen.csv', 'w') as f:
+    with open('trials/beta/official_results_b_seen.csv', 'w') as f:
         f.write(header + '\n')
 
         for i, row in enumerate(only_seen_fluency):
@@ -217,7 +217,7 @@ def print_report(trials):
             l = map(lambda x: str(x), l)
             f.write(';'.join(l) + '\n')
 
-    with open('trials/beta/official_results_unseen.csv', 'w') as f:
+    with open('trials/beta/official_results_b_unseen.csv', 'w') as f:
         f.write(header + '\n')
 
         for i, row in enumerate(only_unseen_fluency):
