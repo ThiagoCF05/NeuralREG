@@ -117,8 +117,8 @@ def save_trials(data, refs, only, attacl, attcopy, profilereg):
             if trial not in samples:
                 samples.append(trial)
 
-    json.dump(trials, open(os.path.join('trials/beta/', 'samples_paper.json'), 'w'))
-    with open(os.path.join('trials/beta', 'samples_paper.csv'), 'w') as f:
+    json.dump(trials, open(os.path.join('trials/beta/', 'samples.json'), 'w'))
+    with open(os.path.join('trials/beta', 'samples.csv'), 'w') as f:
         f.write('eid\tlid\tsize\tcategory\toriginal\tonly\tattacl\tattcopy\tprofilereg\n')
         for e in samples:
             f.write(e['eid'] + '\t' + e['lid'] + '\t' + e['size'] + '\t' + e['category'] + '\t' + e['original']
@@ -135,4 +135,4 @@ if __name__ == '__main__':
 
     trials = save_trials(original, y_refs, y_only, y_attacl, y_attcopy, y_profilereg)
 
-    json.dump(trials, open(os.path.join('trials/beta/', 'trials_b.json'), 'w'))
+    json.dump(trials, open(os.path.join('trials/beta/', 'trials.json'), 'w'))
