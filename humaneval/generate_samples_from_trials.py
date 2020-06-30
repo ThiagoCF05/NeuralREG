@@ -11,13 +11,11 @@ if __name__ == '__main__':
         ids = f.read().split('\n')
 
     entries = json.load(open(os.path.join('trials/beta', 'trials_b.json'), encoding='utf-8'))
-    # gold = json.load(open(os.path.join('trials/beta', 'gold.json'), encoding='utf-8'))
 
     source, texts = [], []
 
     for i in ids:
         e = [w for w in entries if w['eid'] == i][0]
-        # g = [w for w in gold if w['eid'] == i and w['category'] == e['category']][0]
 
     # for e in entries:
         texts.append(

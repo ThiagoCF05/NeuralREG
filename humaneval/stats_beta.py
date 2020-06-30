@@ -16,6 +16,9 @@ import numpy as np
 import scipy.stats
 from csv import DictReader
 from tabulate import tabulate
+from numpy.random import seed
+from numpy.random import randn
+from scipy.stats import wilcoxon
 
 unseen_domains = ['Artist', 'Politician', 'CelestialBody', 'Athlete', 'MeanOfTransportation']
 
@@ -23,7 +26,7 @@ unseen_domains = ['Artist', 'Politician', 'CelestialBody', 'Athlete', 'MeanOfTra
 def process_db():
     trials = []
     entries = json.load(open('../data/v1.5/test_info.json'))
-    with open('trials/beta/trials_results_b.csv') as f:
+    with open('trials/beta/trials_results.csv') as f:
         csv_file = DictReader(f, delimiter="\t")
         for trial in csv_file:
             category = list(filter(lambda o: o['eid'] == trial['eid'] and
@@ -65,7 +68,7 @@ def evaluate_by_size(trials, model):
         fluency = [float(x['acceptability']) for x in size_trials]
 
         print('SIZE ' + str(size) + ': ', model)
-        print('ACCEPTABILITY:', str(round(np.mean(fluency), 2)), str(round(np.std(fluency), 2)))
+        print('ACCEPTABILITY/FLUENCY:', str(round(np.mean(fluency), 2)), str(round(np.std(fluency), 2)))
         print('LEXICOGRAMMAR:', str(round(np.mean(grammar), 2)), str(round(np.std(grammar), 2)))
         print('ADEQUACY:', str(round(np.mean(adequacy), 2)), str(round(np.std(adequacy), 2)))
         print(10 * '-')
@@ -77,7 +80,7 @@ def evaluate_confidence_interval(trials, confidence=0.95):
     m, se = np.mean(a), scipy.stats.sem(a)
     h = se * scipy.stats.t.ppf((1 + confidence) / 2., n - 1)
 
-    return m, m - h, m + h
+    return m, h, m + h
 
 
 def evaluate_std_deviation(trials):
@@ -87,6 +90,7 @@ def evaluate_std_deviation(trials):
 def evaluate_trials(fluency, grammar, adequacy, model):
     mean_fluency, ci_lower_fluency, ci_upper_fluency = evaluate_confidence_interval(fluency)
     std_fluency = evaluate_std_deviation(fluency)
+
     mean_grammar, ci_lower_grammar, ci_upper_grammar = evaluate_confidence_interval(grammar)
     std_grammar = evaluate_std_deviation(grammar)
     mean_adequacy, ci_lower_adequacy, ci_upper_adequacy = evaluate_confidence_interval(adequacy)
@@ -96,6 +100,13 @@ def evaluate_trials(fluency, grammar, adequacy, model):
              ci_upper_adequacy, std_adequacy]
 
     return table
+
+
+def apply_wilcoxon_test(test_type, data1, data2, model1, model2):
+    # https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.wilcoxon.html
+
+    w, p = wilcoxon(data1, data2)
+    print('%s between %s and %s: %.3f, p=%.3f' % (test_type, model1, model2, w, p))
 
 
 def print_report(trials):
@@ -186,10 +197,30 @@ def print_report(trials):
     print(tabulate(table_unseen, headers=model_header))
     print(20 * '-' + '\n')
 
+    print('WILCOXON TEST - ALL DOMAINS')
+    apply_wilcoxon_test('Fluency', only_fluency, attcopy_fluency, 'ONLY', 'ATTCOPY')
+    apply_wilcoxon_test('Lexicogrammar', only_grammar, attcopy_grammar, 'ONLY', 'ATTCOPY')
+    apply_wilcoxon_test('Adequacy', only_adequacy, attcopy_adequacy, 'ONLY', 'ATTCOPY')
+    print('\n')
+    apply_wilcoxon_test('Fluency', only_fluency, attcopy_fluency, 'ONLY', 'ATTCOPY')
+    apply_wilcoxon_test('Lexicogrammar', only_grammar, attcopy_grammar, 'ONLY', 'ATTCOPY')
+    apply_wilcoxon_test('Adequacy', only_adequacy, attcopy_adequacy, 'ONLY', 'ATTCOPY')
+    print('\n')
+    print('WILCOXON TEST - SEEN DOMAINS')
+    apply_wilcoxon_test('Fluency', only_seen_fluency, attcopy_seen_fluency, 'ONLY', 'ATTCOPY')
+    apply_wilcoxon_test('Lexicogrammar', only_seen_grammar, attcopy_seen_grammar, 'ONLY', 'ATTCOPY')
+    apply_wilcoxon_test('Adequacy', only_seen_adequacy, attcopy_seen_adequacy, 'ONLY', 'ATTCOPY')
+    print('\n')
+    # print('WILCOXON TEST - UNSEEN DOMAINS')
+    # apply_wilcoxon_test('Fluency', only_unseen_fluency, attcopy_unseen_fluency, 'ONLY', 'ATTCOPY')
+    # apply_wilcoxon_test('Lexicogrammar', only_unseen_grammar, attcopy_unseen_grammar, 'ONLY', 'ATTCOPY')
+    # apply_wilcoxon_test('Adequacy', only_unseen_adequacy, attcopy_unseen_adequacy, 'ONLY', 'ATTCOPY')
+    print(20 * '-' + '\n')
+
     header = "resp;only_fluency;only_grammar;only_adequacy;attacl_fluency;attacl_grammar;attacl_adequacy" \
              ";attcopy_fluency;attcopy_grammar;attcopy_adequacy;profilereg_fluency;profilereg_grammar" \
              ";profilereg_adequacy "
-    with open('trials/beta/official_results_b.csv', 'w') as f:
+    with open('trials/beta/official_results.csv', 'w') as f:
         f.write(header + '\n')
 
         for i, row in enumerate(only_fluency):
@@ -203,7 +234,7 @@ def print_report(trials):
             l = map(lambda x: str(x), l)
             f.write(';'.join(l) + '\n')
 
-    with open('trials/beta/official_results_b_seen.csv', 'w') as f:
+    with open('trials/beta/official_results_seen.csv', 'w') as f:
         f.write(header + '\n')
 
         for i, row in enumerate(only_seen_fluency):
@@ -217,7 +248,7 @@ def print_report(trials):
             l = map(lambda x: str(x), l)
             f.write(';'.join(l) + '\n')
 
-    with open('trials/beta/official_results_b_unseen.csv', 'w') as f:
+    with open('trials/beta/official_results_unseen.csv', 'w') as f:
         f.write(header + '\n')
 
         for i, row in enumerate(only_unseen_fluency):
