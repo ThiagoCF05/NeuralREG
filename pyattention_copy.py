@@ -283,6 +283,7 @@ class NeuralREGCOLING(nn.Module):
       refexes = self.generate(entities, encoded_ent, encoded_pre, encoded_post)
       return refexes.transpose(0, 1)
 
+
 def seq2idx(sequence, w2id, unk='<unk>'):
   result = []
   for w in sequence:
@@ -292,126 +293,127 @@ def seq2idx(sequence, w2id, unk='<unk>'):
       result.append(w2id[unk])
   return torch.tensor(result)
 
+
 def evaluate(model, devdata, batch_size, device):
+  entities = []
+  pre_contexts = []
+  post_contexts = []
+  refexes = []
+
+  pred = []
+  for batch_idx, inp in enumerate(devdata):
+    entities.append(seq2idx(inp['entity'].split('_'), model.w2id))
+    pre_contexts.append(seq2idx(['bos'] + inp['pre_context'], model.w2id))
+    post_contexts.append(seq2idx(inp['pos_context'] + ['eos'], model.w2id))
+    refexes.append(seq2idx(['bos'] + inp['refex'] + ['eos'], model.w2id))
+
+    if (batch_idx+1) % batch_size == 0:
+      # Padded sequence to device
+      pre_contexts = torch.nn.utils.rnn.pad_sequence(pre_contexts, padding_value=model.w2id['pad']).to(device)
+      post_contexts = torch.nn.utils.rnn.pad_sequence(post_contexts, padding_value=model.w2id['eos']).to(device)
+      entities = torch.nn.utils.rnn.pad_sequence(entities, padding_value=model.w2id['eos']).to(device)
+      refexes = torch.nn.utils.rnn.pad_sequence(refexes, padding_value=model.w2id['eos']).to(device)
+
+      # Predict
+      output = model(entities, pre_contexts, post_contexts)
+      pred.extend(output.tolist())
+
+      entities = []
+      pre_contexts = []
+      post_contexts = []
+      refexes = []
+
+  pre_contexts = torch.nn.utils.rnn.pad_sequence(pre_contexts, padding_value=model.w2id['pad']).to(device)
+  post_contexts = torch.nn.utils.rnn.pad_sequence(post_contexts, padding_value=model.w2id['eos']).to(device)
+  entities = torch.nn.utils.rnn.pad_sequence(entities, padding_value=model.w2id['eos']).to(device)
+  refexes = torch.nn.utils.rnn.pad_sequence(refexes, padding_value=model.w2id['eos']).to(device)
+
+  # Predict
+  output = model(entities, pre_contexts, post_contexts)
+  pred.extend(output.tolist())
+
+  results = []
+  acc, num = 0.0, 0.0
+  for i, snt_pred in enumerate(pred):
+    out = [model.id2w[idx] for idx in snt_pred]
+    out = []
+    for idx in snt_pred[1:]:
+      if model.id2w[idx] == 'eos':
+        break
+      out.append(model.id2w[idx])
+    refex = devdata[i]['refex']
+    results.append(' '.join(out))
+    if i < 10:
+      print(' '.join(out), refex)
+    if ' '.join(out) == ' '.join(refex):
+      acc += 1
+  return results, acc / len(pred)
+
+def train(model, traindata, criterion, optimizer, epochs, batch_size, device, early_stop=5):
+  batch_status, max_acc, repeat = 1024, 0, 0
+  model.train()
+  for epoch in range(epochs):
+    losses = []
+    refexes = []
     entities = []
     pre_contexts = []
     post_contexts = []
-    refexes = []
 
-    pred = []
-    for batch_idx, inp in enumerate(devdata):
-        entities.append(seq2idx(inp['entity'].split('_'), model.w2id))
-        pre_contexts.append(seq2idx(['bos'] + inp['pre_context'], model.w2id))
-        post_contexts.append(seq2idx(inp['pos_context'] + ['eos'], model.w2id))
-        refexes.append(seq2idx(['bos'] + inp['refex'] + ['eos'], model.w2id))
+    for batch_idx, inp in enumerate(traindata):
+      entities.append(seq2idx(inp['entity'].split('_'), model.w2id))
+      pre_contexts.append(seq2idx(['bos'] + inp['pre_context'], model.w2id))
+      post_contexts.append(seq2idx(inp['pos_context'] + ['eos'], model.w2id))
+      refexes.append(seq2idx(['bos'] + inp['refex'] + ['eos'], model.w2id))
 
-        if (batch_idx+1) % batch_size == 0:
-            # Padded sequence to device
-            pre_contexts = torch.nn.utils.rnn.pad_sequence(pre_contexts, padding_value=model.w2id['pad']).to(device)
-            post_contexts = torch.nn.utils.rnn.pad_sequence(post_contexts, padding_value=model.w2id['eos']).to(device)
-            entities = torch.nn.utils.rnn.pad_sequence(entities, padding_value=model.w2id['eos']).to(device)
-            refexes = torch.nn.utils.rnn.pad_sequence(refexes, padding_value=model.w2id['eos']).to(device)
+      if (batch_idx+1) % batch_size == 0:
+        # Init
+        optimizer.zero_grad()
 
-            # Predict
-            output = model(entities, pre_contexts, post_contexts)
-            pred.extend(output.tolist())
+        # Padded sequence to device
+        pre_contexts = torch.nn.utils.rnn.pad_sequence(pre_contexts, padding_value=w2id['pad']).to(device)
+        post_contexts = torch.nn.utils.rnn.pad_sequence(post_contexts, padding_value=w2id['eos']).to(device)
+        # entities = torch.tensor(entities).to(device)
+        entities = torch.nn.utils.rnn.pad_sequence(entities, padding_value=model.w2id['eos']).to(device)
+        refexes = torch.nn.utils.rnn.pad_sequence(refexes, padding_value=w2id['eos']).to(device)
 
-            entities = []
-            pre_contexts = []
-            post_contexts = []
-            refexes = []
+        # Predict
+        probs, output = model(entities, pre_contexts, post_contexts, refexes)
 
-    pre_contexts = torch.nn.utils.rnn.pad_sequence(pre_contexts, padding_value=model.w2id['pad']).to(device)
-    post_contexts = torch.nn.utils.rnn.pad_sequence(post_contexts, padding_value=model.w2id['eos']).to(device)
-    entities = torch.nn.utils.rnn.pad_sequence(entities, padding_value=model.w2id['eos']).to(device)
-    refexes = torch.nn.utils.rnn.pad_sequence(refexes, padding_value=model.w2id['eos']).to(device)
+        # Calculate loss
+        loss = 0
+        for l in [criterion(probs[i], output[i]) for i in range(probs.size()[0])]:
+            loss += l
+        # loss /= probs.size()[0]
+        losses.append(float(loss))
 
-    # Predict
-    output = model(entities, pre_contexts, post_contexts)
-    pred.extend(output.tolist())
+        # Backpropagation
+        loss.backward()
+        # torch.nn.utils.clip_grad_norm(model.parameters(), 2.0)
+        optimizer.step()
 
-    results = []
-    acc, num = 0.0, 0.0
-    for i, snt_pred in enumerate(pred):
-        out = [id2w[idx] for idx in snt_pred]
-        out = []
-        for idx in snt_pred[1:]:
-            if id2w[idx] == 'eos':
-                break
-            out.append(id2w[idx])
-        refex = devdata[i]['refex']
-        results.append(' '.join(out))
-        if i < 10:
-          print(' '.join(out), refex)
-        if ' '.join(out) == ' '.join(refex):
-            acc += 1
-    return results, acc / len(pred)
-
-def train(model, traindata, criterion, optimizer, epochs, batch_size, device, early_stop=5):
-    batch_status, max_acc, repeat = 1024, 0, 0
-    model.train()
-    for epoch in range(epochs):
-        losses = []
         refexes = []
         entities = []
         pre_contexts = []
         post_contexts = []
 
-        for batch_idx, inp in enumerate(traindata):
-            entities.append(seq2idx(inp['entity'].split('_'), model.w2id))
-            pre_contexts.append(seq2idx(['bos'] + inp['pre_context'], model.w2id))
-            post_contexts.append(seq2idx(inp['pos_context'] + ['eos'], model.w2id))
-            refexes.append(seq2idx(['bos'] + inp['refex'] + ['eos'], model.w2id))
+      # Display
+      if (batch_idx+1) % batch_status == 0:
+        print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}\tTotal Loss: {:.6f}'.format(
+          epoch, batch_idx+1, len(traindata),
+          100. * batch_idx / len(traindata), float(loss), round(sum(losses) / len(losses), 5)))
+    
+    print()
+    _, acc = evaluate(model, devset, batch_size, 'cuda')
+    print('Accuracy: ', acc)
+    if acc > max_acc:
+      max_acc = acc
+      repeat = 0
+      torch.save(model.state_dict(), 'neuralreg.pt')
+    else:
+      repeat += 1
 
-            if (batch_idx+1) % batch_size == 0:
-                # Init
-                optimizer.zero_grad()
-
-                # Padded sequence to device
-                pre_contexts = torch.nn.utils.rnn.pad_sequence(pre_contexts, padding_value=w2id['pad']).to(device)
-                post_contexts = torch.nn.utils.rnn.pad_sequence(post_contexts, padding_value=w2id['eos']).to(device)
-                # entities = torch.tensor(entities).to(device)
-                entities = torch.nn.utils.rnn.pad_sequence(entities, padding_value=model.w2id['eos']).to(device)
-                refexes = torch.nn.utils.rnn.pad_sequence(refexes, padding_value=w2id['eos']).to(device)
-
-                # Predict
-                probs, output = model(entities, pre_contexts, post_contexts, refexes)
-
-                # Calculate loss
-                loss = 0
-                for l in [criterion(probs[i], output[i]) for i in range(probs.size()[0])]:
-                    loss += l
-                # loss /= probs.size()[0]
-                losses.append(float(loss))
-
-                # Backpropagation
-                loss.backward()
-                # torch.nn.utils.clip_grad_norm(model.parameters(), 2.0)
-                optimizer.step()
-
-                refexes = []
-                entities = []
-                pre_contexts = []
-                post_contexts = []
-
-            # Display
-            if (batch_idx+1) % batch_status == 0:
-                print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}\tTotal Loss: {:.6f}'.format(
-                    epoch, batch_idx+1, len(traindata),
-                    100. * batch_idx / len(traindata), float(loss), round(sum(losses) / len(losses), 5)))
-        
-        print()
-        _, acc = evaluate(model, devset, batch_size, 'cuda')
-        print('Accuracy: ', acc)
-        if acc > max_acc:
-            max_acc = acc
-            repeat = 0
-            torch.save(model.state_dict(), 'neuralreg.pt')
-        else:
-            repeat += 1
-
-        if repeat == early_stop:
-          break
+    if repeat == early_stop:
+      break
 
 if __name__ == '__main__':
   path = 'data/v1.5'
