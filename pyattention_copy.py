@@ -257,7 +257,6 @@ class NeuralREGCOLING(nn.Module):
       words = torch.argmax(logits, 1)
       for j, w in enumerate(words):
         if self.w2id['<unk>'] == int(w):
-          print('wow')
           idx = torch.argmax(attention_weights[j, :, 0], 0)
           refexes[i,j] = entities[idx, j]
         else:
@@ -370,11 +369,11 @@ def train(model, traindata, criterion, optimizer, epochs, batch_size, device, ea
         optimizer.zero_grad()
 
         # Padded sequence to device
-        pre_contexts = torch.nn.utils.rnn.pad_sequence(pre_contexts, padding_value=w2id['pad']).to(device)
-        post_contexts = torch.nn.utils.rnn.pad_sequence(post_contexts, padding_value=w2id['eos']).to(device)
+        pre_contexts = torch.nn.utils.rnn.pad_sequence(pre_contexts, padding_value=model.w2id['pad']).to(device)
+        post_contexts = torch.nn.utils.rnn.pad_sequence(post_contexts, padding_value=model.w2id['eos']).to(device)
         # entities = torch.tensor(entities).to(device)
         entities = torch.nn.utils.rnn.pad_sequence(entities, padding_value=model.w2id['eos']).to(device)
-        refexes = torch.nn.utils.rnn.pad_sequence(refexes, padding_value=w2id['eos']).to(device)
+        refexes = torch.nn.utils.rnn.pad_sequence(refexes, padding_value=model.w2id['eos']).to(device)
 
         # Predict
         probs, output = model(entities, pre_contexts, post_contexts, refexes)
