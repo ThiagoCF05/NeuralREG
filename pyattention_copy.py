@@ -348,7 +348,7 @@ def evaluate(model, devdata, batch_size, device):
       acc += 1
   return results, acc / len(pred)
 
-def train(model, traindata, criterion, optimizer, epochs, batch_size, device, early_stop=5):
+def train(model, traindata, devdata, criterion, optimizer, epochs, batch_size, device, early_stop=5):
   batch_status, max_acc, repeat = 1024, 0, 0
   model.train()
   for epoch in range(epochs):
@@ -402,7 +402,7 @@ def train(model, traindata, criterion, optimizer, epochs, batch_size, device, ea
           100. * batch_idx / len(traindata), float(loss), round(sum(losses) / len(losses), 5)))
     
     print()
-    _, acc = evaluate(model, devset, batch_size, 'cuda')
+    _, acc = evaluate(model, devdata, batch_size, 'cuda')
     print('Accuracy: ', acc)
     if acc > max_acc:
       max_acc = acc
@@ -442,4 +442,4 @@ if __name__ == '__main__':
   model.to('cuda')
   # model.eval()
   # pass
-  train(model, trainset, criterion, optimizer, 32, 64, 'cuda')
+  train(model, trainset, devset, criterion, optimizer, 32, 64, 'cuda')
