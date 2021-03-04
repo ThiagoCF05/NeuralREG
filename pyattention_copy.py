@@ -427,7 +427,6 @@ if __name__ == '__main__':
   id2w = new_vocab['int2token']
 
   vocab = new_vocab['vocab']
-  vocab += ['<unk>', '<mask>', 'bos', 'pad']
 
   id2w = {i:c for i, c in enumerate(vocab)}
   w2id = {c:i for i, c in enumerate(vocab)}
