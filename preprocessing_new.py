@@ -176,7 +176,6 @@ class Preprocessing:
                     template = lex.find('template').text
 
                     if template:
-                        print('{}\r'.format(template))
                         text, template = self.stanford_parse(text, template)
                         references, in_vocab, out_vocab, c_vocab = self.get_refexes(text, template, entity_map, entity_type)
                         data.extend(references)
@@ -196,10 +195,10 @@ class Preprocessing:
         :param template: original template
         :return: Tokenized text and template
         '''
-        text = []
+        text_tok = []
         for snt in nltk.sent_tokenize(text.strip()):
-            text.extend(nltk.word_tokenize(snt)
-        text = ' '.join(text).strip()
+            text_tok.extend(nltk.word_tokenize(snt))
+        text = ' '.join(text_tok).strip()
 
         # out = self.proc.parse_doc(text)
         # text = []
@@ -207,10 +206,10 @@ class Preprocessing:
         #     text.extend(snt['tokens'])
         # text = ' '.join(text).replace('-LRB-', '(').replace('-RRB-', ')').strip()
 
-        temp = []
+        temp_tok = []
         for snt in nltk.sent_tokenize(template.strip()):
-            temp.extend(nltk.word_tokenize(snt))
-        template = ' '.join(temp).strip()
+            temp_tok.extend(nltk.word_tokenize(snt))
+        template = ' '.join(temp_tok).strip()
 
         # out = self.proc.parse_doc(template)
         # temp = []
@@ -259,7 +258,7 @@ class Preprocessing:
         reference = {'sentence':-1, 'pos':-1, 'general_pos':-1, 'tag':tag}
         general_pos = 0
         sentences = nltk.sent_tokenize(template)
-        for i, snt in sentences:
+        for i, snt in enumerate(sentences):
             tokens = nltk.word_tokenize(snt)
             for j, token in enumerate(tokens):
                 # get syntax
@@ -312,8 +311,8 @@ class Preprocessing:
             else:
                 pre_context.append(token)
 
-        pre_context = ' '.join(['EOS'] + pre_context)
-        pos_context = ' '.join(pos_context + ['EOS'])
+        pre_context = ' '.join(pre_context)
+        pos_context = ' '.join(pos_context)
         for tag in entity_map:
             # pre_context = pre_context.replace(tag, entity_map[tag])
             # pos_context = pos_context.replace(tag, entity_map[tag])
@@ -351,7 +350,7 @@ class Preprocessing:
             sentence_statuses[reference['sentence']].append(reference['entity'])
 
             # referential form
-            reg = reference['refex'].replace('eos', '').strip()
+            reg = reference['refex'].strip()
             reference['reftype'] = 'name'
             if reg.lower().strip() in ['he', 'his', 'him', 'she', 'hers', 'her', 'it', 'its', 'we', 'our', 'ours', 'they', 'theirs', 'them']:
                 reference['reftype'] = 'pronoun'
@@ -412,8 +411,8 @@ class Preprocessing:
                         aux = context.replace(tag, 'ENTITY', 1)
                         reference = self.get_reference_info(aux, 'ENTITY')
 
-                        character = ['eos'] + list(refex) + ['eos']
-                        refex = ['eos'] + refex.split() + ['eos']
+                        character = list(refex)
+                        refex = refex.split()
                         row = {
                             'pre_context':pre_context.replace('@', ''),
                             'pos_context':pos_context.replace('@', ''),
