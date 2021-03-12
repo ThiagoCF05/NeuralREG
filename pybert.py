@@ -5,9 +5,8 @@ import torch
 import torch.nn as nn
 
 class REGBERT(nn.Module):
-    def __init__(self, nhead, layers, hidden_size, dropout=0.1, max_len=50, device='cuda'):
+    def __init__(self, max_len=50, device='cuda'):
         super(REGBERT, self).__init__()
-        self.hidden_size = hidden_size
         self.max_len = max_len
         self.device = device
         
@@ -24,8 +23,8 @@ class REGBERT(nn.Module):
         context_tok = self.tokenizer(contexts, padding=True, return_tensors="pt").to(self.device)
 
         # encode
-        entity_enc = self.encoder(**entity_tok)['last_hidden_state']
-        context_enc = self.encoder(**context_tok)['last_hidden_state']
+        entity_enc = self.seq2seq(**entity_tok)['last_hidden_state']
+        context_enc = self.seq2seq(**context_tok)['last_hidden_state']
 
         # get cls of entities encoding
         entity_cls = entity_enc[:, 0, :]
@@ -56,15 +55,15 @@ class REGBERT(nn.Module):
             last_hidden_state = decoded['last_hidden_state']
             past_key_values = decoded['past_key_values']
 
-            logits = torch.matmul(last_hidden_state, lookup.weight.transpose(0, 1))
-            logits = softmax(logits)
+            logits = torch.matmul(last_hidden_state, self.lookup.weight.transpose(0, 1))
+            logits = self.softmax(logits)
             probs.append(logits)
 
         return torch.cat(probs, 1), refex_tok['input_ids'][:, 1:]
 
 
     def generate(self, encoded):
-        batch_size = encoded.size()[1]
+        batch_size = encoded.size()[0]
         cls_id = torch.tensor([self.tokenizer.cls_token_id]).to(self.device)
         words = torch.tensor(batch_size * [cls_id]).unsqueeze(1).to(self.device)
 
@@ -73,14 +72,14 @@ class REGBERT(nn.Module):
         for i in range(self.max_len):
             inp = {
                 'input_ids': words,
-                'token_type_ids': torch.ones((batch_size, 1), dtype=torch.int),
-                'attention_mask': torch.zeros((batch_size, 1), dtype=torch.int),
+                'token_type_ids': torch.ones((batch_size, 1), dtype=torch.int).to(self.device),
+                'attention_mask': torch.zeros((batch_size, 1), dtype=torch.int).to(self.device),
             }
             decoded = self.seq2seq(**inp, encoder_hidden_states=encoded, past_key_values=past_key_values)
             last_hidden_state = decoded['last_hidden_state']
             past_key_values = decoded['past_key_values']
             # softmax
-            logits = self.softmax(torch.matmul(decoded, self.lookup.weight.transpose(0, 1))).squeeze(0)
+            logits = self.softmax(torch.matmul(last_hidden_state, self.lookup.weight.transpose(0, 1)))
 
             words = torch.argmax(logits, 2)
             for j, w in enumerate(words):
@@ -103,9 +102,10 @@ class REGBERT(nn.Module):
 
 def evaluate(model, devdata, batch_size, device):
     entities = []
-    pre_contexts = []
-    post_contexts = []
+    contexts = []
     refexes = []
+
+    batch_status = 512
 
     pred = []
     for batch_idx, inp in enumerate(devdata):
@@ -122,30 +122,31 @@ def evaluate(model, devdata, batch_size, device):
             entities = []
             contexts = []
             refexes = []
+    
+        # Display
+        if (batch_idx+1) % batch_status == 0:
+            print('Evaluation: [{}/{} ({:.0f}%)]'.format(batch_idx+1, \
+                len(devdata), 100. * batch_idx / len(devdata)))
 
     # Predict
-    output = model(entities, contexts)
-    pred.extend(output.tolist())
+    if len(entities) > 0:
+        output = model(entities, contexts)
+        pred.extend(output.tolist())
 
     results = []
     acc, num = 0.0, 0.0
     for i, snt_pred in enumerate(pred):
-        out = [model.id2w[idx] for idx in snt_pred]
-        out = []
-        for idx in snt_pred[1:]:
-            if model.id2w[idx] == 'eos':
-                break
-            out.append(model.id2w[idx])
+        out = model.tokenizer.decode(snt_pred, skip_special_tokens=True)        
         refex = devdata[i]['refex']
-        results.append(' '.join(out))
+        results.append(out)
         if i < 10:
-            print(' '.join(out), refex)
-        if ' '.join(out) == ' '.join(refex):
+            print('Pred: ', out, '/ Real: ', refex)
+        if out == refex:
             acc += 1
     return results, acc / len(pred)
 
 def train(model, traindata, devdata, criterion, optimizer, epochs, batch_size, device, early_stop=5):
-  batch_status, max_acc, repeat = 1024, 0, 0
+  batch_status, max_acc, repeat = 512, 0, 0
   model.train()
   for epoch in range(epochs):
     losses = []
