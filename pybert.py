@@ -16,6 +16,9 @@ class REGBERT(nn.Module):
         config.add_cross_attention = True
         self.seq2seq = BertModel.from_pretrained('bert-base-cased', config=config)
         self.lookup = self.seq2seq.get_input_embeddings()
+        # CLS_ENT + CONTEXT MERGER
+        self.merger = nn.Linear(1536, 768)
+        self.tanh = nn.Tanh()
         self.softmax = nn.LogSoftmax(dim=2)
     
     def encode(self, entities, contexts):
@@ -35,7 +38,9 @@ class REGBERT(nn.Module):
         text_masks = context_enc[idxs[:, 0], idxs[:, 1]]
 
         # sum cls with text masks
-        encoded = text_masks + entity_cls
+        # encoded = text_masks + entity_cls
+        encoded = self.merger(torch.cat([text_masks, entity_cls], 1))
+        encoded = self.tanh(encoded)
         return encoded.unsqueeze(1)
 
 
@@ -72,8 +77,8 @@ class REGBERT(nn.Module):
         for i in range(self.max_len):
             inp = {
                 'input_ids': words,
-                'token_type_ids': torch.ones((batch_size, 1), dtype=torch.int).to(self.device),
-                'attention_mask': torch.zeros((batch_size, 1), dtype=torch.int).to(self.device),
+                'token_type_ids': torch.ones((batch_size, 1)).long().to(self.device),
+                'attention_mask': torch.zeros((batch_size, 1)).long().to(self.device),
             }
             decoded = self.seq2seq(**inp, encoder_hidden_states=encoded, past_key_values=past_key_values)
             last_hidden_state = decoded['last_hidden_state']
@@ -168,10 +173,9 @@ def train(model, traindata, devdata, criterion, optimizer, epochs, batch_size, d
             probs, output = model(entities, contexts, refexes)
 
             # Calculate loss
-            loss = 0
-            for l in [criterion(probs[i], output[i]) for i in range(probs.size()[0])]:
-                loss += l
-            # loss /= probs.size()[0]
+            loss = criterion(probs.view(seq_len*batch, dim), output.reshape(-1))
+            # for l in [criterion(probs[i], output[i]) for i in range(probs.size()[0])]:
+            #     loss += l
             losses.append(float(loss))
 
             # Backpropagation
